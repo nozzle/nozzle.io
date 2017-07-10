@@ -12,6 +12,8 @@
   "dependencies": {
     "axios": "^0.16.2",
     "glamor": "^3.0.0-2",
+    "glamor-reset": "^3.0.0-2",
+    "glamor-server": "^3.0.0-2",
     "glamorous": "^3.23.5",
     "next": "beta",
     "react": "^15.6.1",
@@ -23,7 +25,7 @@
   "main": "index.js",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint": "^4.1.1",
+    "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.0",

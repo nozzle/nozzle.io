@@ -1,6 +1,15 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
+import { css } from 'glamor'
 import { renderStatic } from 'glamor-server'
+
+css.global('html, body, body > div:first-child, #__next, [data-reactroot]', {
+  height: '100%',
+})
+css.global('a', {
+  color: 'initial',
+  textDecoration: 'none',
+})
 
 export default class MyDocument extends Document {
   static async getInitialProps ({ renderPage }) {
@@ -21,10 +30,14 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>With Glamorous</title>
+          <title>Kckrs</title>
+          <link
+            href='https://fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800'
+            rel='stylesheet'
+          />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
-        <body>
+        <body id='skrollr-body'>
           <Main />
           <NextScript />
         </body>

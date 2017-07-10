@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "file-loader": "^0.11.2",
     "glamor": "^3.0.0-2",
     "glamor-reset": "^3.0.0-2",
     "glamor-server": "^3.0.0-2",
@@ -18,7 +19,9 @@
     "next": "beta",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-move": "^1.5.4"
+    "react-move": "^1.5.4",
+    "tinycolor2": "^1.4.1",
+    "url-loader": "^0.5.9"
   },
   "keywords": [],
   "license": "MIT",

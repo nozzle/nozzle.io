@@ -2,3 +2,5 @@ node_modules
 .next
 .cache
 public
+out
+.DS_Store

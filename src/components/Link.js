@@ -1,4 +1,9 @@
-// import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react'
+import Link from 'next/link'
 
-export default Link
+export default ({ to, children, ...rest }) =>
+  (<Link href={to}>
+    <a {...rest}>
+      {children}
+    </a>
+  </Link>)

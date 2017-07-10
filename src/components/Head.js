@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Helmet } from 'react-helmet'
+import Head from 'next/head'
 //
 
-export default Helmet
+export default Head

@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 import glamorous from 'glamorous'
 //
-import Link from 'components/Link'
+import Link from './Link'
 
-import Colors from 'utils/colors'
+import Theme from '../utils/Theme'
 
 const NavbarStyled = glamorous.div({
   display: 'flex',
   alignItems: 'center',
-  background: Colors.primary,
+  background: Theme.colors.primary,
   color: 'white',
 })
 
@@ -43,13 +43,22 @@ const links = [
     path: '/about',
   },
 ]
-export default props =>
-  (<NavbarStyled>
-    {links.map((link, i) =>
-      (<Link key={i} to={link.path}>
-        <NavarLinkStyled>
-          {link.name}
-        </NavarLinkStyled>
-      </Link>)
-    )}
-  </NavbarStyled>)
+
+export default class Navbar extends Component {
+  componentDidMount () {
+    console.log('Navbar Mounted')
+  }
+  render () {
+    return (
+      <NavbarStyled>
+        {links.map((link, i) =>
+          (<Link key={i} to={link.path}>
+            <NavarLinkStyled>
+              {link.name}
+            </NavarLinkStyled>
+          </Link>)
+        )}
+      </NavbarStyled>
+    )
+  }
+}

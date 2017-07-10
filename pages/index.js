@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 //
-import Head from 'components/Head'
-import Page from 'components/Page'
-import Navbar from 'components/Navbar'
+import Head from '../src/components/Head'
+import Page from '../src/components/Page'
 
 export default class Index extends Component {
   render () {
@@ -11,7 +10,6 @@ export default class Index extends Component {
         <Head>
           <title>Welcome!</title>
         </Head>
-        <Navbar />
         You're home!
       </Page>
     )

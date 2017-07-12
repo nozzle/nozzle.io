@@ -4,9 +4,9 @@ const primary = '#0C6A8A'
 
 const colorOptions = {
   primary,
-  primaryLight: Color.mix(primary, 'black', 10).toString(),
-  primaryDark: Color.mix(primary, 'black', 30).toString(),
-  primaryDarker: Color.mix(primary, 'black', 50).toString(),
+  primaryLight: Color(primary).lighten(7).toString(),
+  primaryDark: Color(primary).darken(7).toString(),
+  primaryDarker: Color(primary).darken(14).toString(),
   text: '#333',
   danger: '#F15854',
   success: '#60BD68',
@@ -21,6 +21,7 @@ const colorOptions = {
 }
 
 export default {
+  maxWidth: 1200,
   weights: {
     lighter: 100,
     light: 300,
@@ -73,41 +74,5 @@ export default {
       '#1828bd',
       '#cd82ad',
     ],
-
-    makeData5,
-    makeData10,
-
-    getData5,
-    getData10,
-
-    hashData10,
   },
-}
-
-function makeData5 (i) {
-  return _.range(i).map(d => {
-    return colors.data5[d % 5]
-  })
-}
-
-function makeData10 (i) {
-  return _.range(i).map(d => {
-    return colors.data10[d % 10]
-  })
-}
-
-function getData5 (i) {
-  return colors.data5[i % 5]
-}
-
-function getData10 (i) {
-  return colors.data10[i % 10]
-}
-
-function hashData10 (str) {
-  return colors.data10[Math.floor(hashDecimal(JSON.stringify(str)) * 10)]
-}
-
-function hashDecimal (str) {
-  return Hash.x86.hash32(str) / max32int
 }

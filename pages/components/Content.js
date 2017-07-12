@@ -24,6 +24,7 @@ const PageStyles = glamorous.div({
 const ContentStyled = glamorous.div({
   flexGrow: 99999999,
   overflowY: 'auto',
+  color: Theme.colors.text,
 })
 
 export default class Page extends Component {

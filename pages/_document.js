@@ -7,7 +7,7 @@ css.global('html, body, body > div:first-child, #__next, [data-reactroot]', {
   height: '100%',
 })
 css.global('a', {
-  color: 'initial',
+  color: 'inherit',
   textDecoration: 'none',
 })
 
@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
           />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
-        <body id='skrollr-body'>
+        <body>
           <Main />
           <NextScript />
         </body>

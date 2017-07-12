@@ -22,6 +22,14 @@ const colorOptions = {
 
 export default {
   maxWidth: 1200,
+  sizes: {
+    h1: '3em',
+    h2: '2.5em',
+    h3: '2em',
+    h4: '1.6em',
+    h5: '1.3em',
+    h6: '1em',
+  },
   weights: {
     lighter: 100,
     light: 300,

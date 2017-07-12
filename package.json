@@ -16,6 +16,7 @@
     "glamor-reset": "^3.0.0-2",
     "glamor-server": "^3.0.0-2",
     "glamorous": "^3.23.5",
+    "javascript-detect-element-resize": "^0.5.3",
     "next": "beta",
     "react": "^15.6.1",
     "react-click-outside": "^2.3.1",

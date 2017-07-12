@@ -9,14 +9,15 @@ import Content from './components/Content'
 import Button from './components/Button'
 import Link from './components/Link'
 import NodeGarden from './components/NodeGarden'
-import { H2, H3, H4, H5 } from './components/Heading'
+import { H2, H3, H4, H5, P } from './components/Html'
 
 const Styled = glamorous.div({
   '& .section-1': {
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
-    padding: '100px 10%',
+    overflow: 'hidden',
+    padding: '100px 0',
     position: 'relative',
     background: `radial-gradient(circle at center, ${Theme.colors
       .primaryDarker} 20%, ${Color(Theme.colors.primaryDarker)
@@ -50,6 +51,7 @@ const Styled = glamorous.div({
     },
   },
   '& .section-2': {
+    overflow: 'hidden',
     background: Theme.colors.primary,
     color: '#fff',
     display: 'flex',
@@ -92,6 +94,7 @@ const Styled = glamorous.div({
     },
   },
   '& .section-3': {
+    overflow: 'hidden',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
@@ -137,6 +140,7 @@ const Styled = glamorous.div({
     },
   },
   '& .section-4': {
+    overflow: 'hidden',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
@@ -175,6 +179,7 @@ const Styled = glamorous.div({
     },
   },
   '& .section-5': {
+    overflow: 'hidden',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
@@ -200,6 +205,7 @@ const Styled = glamorous.div({
     },
   },
   '& .section-6': {
+    overflow: 'hidden',
     background: Theme.colors.primaryDark,
     padding: '100px 10%',
     color: '#fff',
@@ -228,6 +234,7 @@ const Styled = glamorous.div({
     },
   },
   '& .section-7': {
+    overflow: 'hidden',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
@@ -254,6 +261,7 @@ const Styled = glamorous.div({
     },
   },
   '& .section-8': {
+    overflow: 'hidden',
     padding: '100px 10%',
     background: Theme.colors.primaryDark,
     '& h3, & h4': {
@@ -451,12 +459,12 @@ export default class Index extends Component {
                 }}
               />
               <div className='left'>
-                <H2 h='1'>Know everything Google knows</H2>
+                <H2>Know everything Google knows</H2>
                 <H4>If you can handle it</H4>
-                <p>
+                <P>
                   If you want access to more enterprise level SERP data than any
                   tool has ever offered, you've come to the right place
-                </p>
+                </P>
                 <Link to='#contact'>
                   <Button color='success'>I'd like a demo!</Button>
                 </Link>

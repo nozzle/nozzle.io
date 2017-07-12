@@ -24,6 +24,7 @@ const PageStyles = glamorous.div({
 const ContentStyled = glamorous.div({
   flexGrow: 99999999,
   overflowY: 'auto',
+  WebkitOverflowScrolling: 'touch',
   color: Theme.colors.text,
 })
 

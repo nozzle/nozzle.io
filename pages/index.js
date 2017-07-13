@@ -283,9 +283,11 @@ const SectionCantAfford = glamorous(Section)(section, layoutRight, {
 const SectionContactUs = glamorous(
   Section
 )(section, layoutDark, angleTopRight, {
-  display: 'block',
   background: Theme.colors.primary,
-  textAlign: 'center',
+  '& .inner': {
+    display: 'block',
+    textAlign: 'center',
+  },
 })
 
 const rankDataImages = [

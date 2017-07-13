@@ -2,31 +2,33 @@ import glamorous from 'glamorous'
 //
 import Theme from '../utils/Theme'
 
-export const H1 = glamorous.h1({
+const margin = { marginBottom: `1rem` }
+const full = ({ full }) => ({
+  width: full && '100%',
+})
+
+export const H1 = glamorous.h1(margin, full, {
   fontSize: Theme.sizes.h1,
-  margin: `0 0 1rem 0`,
 })
-export const H2 = glamorous.h2({
+export const H2 = glamorous.h2(margin, full, {
   fontSize: Theme.sizes.h2,
-  margin: `0 0 1rem 0`,
 })
-export const H3 = glamorous.h3({
+export const H3 = glamorous.h3(margin, full, {
   fontSize: Theme.sizes.h3,
-  margin: `0 0 1rem 0`,
 })
-export const H4 = glamorous.h4({
+export const H4 = glamorous.h4(margin, full, {
   fontSize: Theme.sizes.h4,
-  margin: `0 0 1rem 0`,
 })
-export const H5 = glamorous.h5({
+export const H5 = glamorous.h5(margin, full, {
   fontSize: Theme.sizes.h5,
-  margin: `0 0 1rem 0`,
 })
-export const H6 = glamorous.h6({
+export const H6 = glamorous.h6(margin, full, {
   fontSize: Theme.sizes.h6,
-  margin: `0 0 1rem 0`,
 })
-export const P = glamorous.p({
+export const P = glamorous.p(margin, {
   marginBottom: '.2rem',
-  margin: `0 0 1rem 0`,
+})
+export const Div = glamorous.div(margin)
+export const Img = glamorous.img({
+  maxWidth: '100%',
 })

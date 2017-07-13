@@ -12,7 +12,7 @@ export default glamorous.button(
     fontSize: '15px',
     outline: '0',
     borderRadius: '2px',
-    transition: `all .3s ${Easing.css.easeOutBack}`,
+    transition: `all .2s ${Easing.css.easeOutBack}`,
     cursor: 'pointer',
     textDecoration: 'none',
     background: Theme.colors.primary,

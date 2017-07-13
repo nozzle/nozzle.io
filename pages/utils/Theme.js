@@ -5,6 +5,7 @@ const primary = '#0C6A8A'
 const colorOptions = {
   primary,
   primaryLight: Color(primary).lighten(7).toString(),
+  primaryLighter: Color(primary).lighten(15).toString(),
   primaryDark: Color(primary).darken(7).toString(),
   primaryDarker: Color(primary).darken(14).toString(),
   text: '#333',

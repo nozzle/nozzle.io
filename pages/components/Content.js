@@ -16,9 +16,7 @@ if (typeof window !== 'undefined') {
 const PageStyles = glamorous.div({
   fontFamily: '"Overpass", sans-serif',
   fontWeight: Theme.weights.regular,
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
+  minHeight: '100%',
 })
 
 const ContentStyled = glamorous.div({

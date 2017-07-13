@@ -4,10 +4,10 @@ import { css } from 'glamor'
 import { renderStatic } from 'glamor-server'
 
 css.global('html, body, body > div:first-child, #__next, [data-reactroot]', {
-  height: '100%',
+  minHeight: '100%',
   width: '100%',
-  overflow: 'hidden',
 })
+
 css.global('a', {
   color: 'inherit',
   textDecoration: 'none',

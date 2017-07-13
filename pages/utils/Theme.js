@@ -22,7 +22,7 @@ const colorOptions = {
 }
 
 export default {
-  maxWidth: 1200,
+  maxWidth: 1600,
   sizes: {
     h1: '3rem',
     h2: '2.5rem',

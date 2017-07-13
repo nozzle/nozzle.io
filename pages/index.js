@@ -27,13 +27,23 @@ const belowTablet = `@media(max-width: ${1000}px)`
 
 const Left = props => <div className='left' {...props} />
 const Right = props => <div className='right' {...props} />
+const Section = ({ children, ...rest }) =>
+  (<section {...rest}>
+    <div className='inner'>
+      {children}
+    </div>
+  </section>)
 
 const section = {
   zIndex: 0,
-  padding: '10% 10%',
-  display: 'flex',
-  flexWrap: 'wrap',
-  alignItems: 'center',
+  '& .inner': {
+    maxWidth: Theme.maxWidth,
+    margin: '0 auto',
+    padding: '10% 10%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+  },
   '& img': {
     width: '100%',
   },
@@ -143,7 +153,7 @@ const layoutDark = {
 
 const Centered = glamorous.div({ textAlign: 'center', width: '100%' })
 
-const SectionKnowEverything = glamorous.section(section, layoutLeft, {
+const SectionKnowEverything = glamorous(Section)(section, layoutLeft, {
   position: 'relative',
   background: `radial-gradient(circle at center, ${Theme.colors
     .primaryDarker} 20%, ${Color(Theme.colors.primaryDarker)
@@ -160,29 +170,25 @@ const SectionKnowEverything = glamorous.section(section, layoutLeft, {
     boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
   },
 })
-const SectionTrackAllTheThings = glamorous.section(
-  section,
-  layoutDark,
-  layoutRight,
-  angleRight,
-  {
-    position: 'relative',
-    '& img': {
-      opacity: '1',
-      borderRadius: '5px',
-      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-    },
-    '& .allthethings': {
-      position: 'absolute',
-      right: 0,
-      bottom: 0,
-      width: '400px',
-      opacity: '0.3',
-      zIndex: -1,
-    },
-  }
-)
-const SectionRankData = glamorous.section(section, layoutLeftHalf, {
+const SectionTrackAllTheThings = glamorous(
+  Section
+)(section, layoutDark, layoutRight, angleRight, {
+  position: 'relative',
+  '& img': {
+    opacity: '1',
+    borderRadius: '5px',
+    boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
+  },
+  '& .allthethings': {
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
+    width: '400px',
+    opacity: '0.3',
+    zIndex: -1,
+  },
+})
+const SectionRankData = glamorous(Section)(section, layoutLeftHalf, {
   '& .right': {
     '& img': {
       opacity: '1',
@@ -206,32 +212,28 @@ const SectionRankData = glamorous.section(section, layoutLeftHalf, {
     // },
   },
 })
-const SectionCompetitors = glamorous.section(
-  section,
-  layoutLeft,
-  layoutDark,
-  angleRight,
-  {
-    '& .left': {
-      direction: 'rtl',
-      '& img': {
-        opacity: '1',
-        maxWidth: '940px',
-        width: '160%',
-        borderRadius: '5px',
-        boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
+const SectionCompetitors = glamorous(
+  Section
+)(section, layoutLeft, layoutDark, angleRight, {
+  '& .left': {
+    direction: 'rtl',
+    '& img': {
+      opacity: '1',
+      maxWidth: '940px',
+      width: '160%',
+      borderRadius: '5px',
+      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
+    },
+  },
+  '& .right': {
+    '& p': {
+      '& strong': {
+        color: Theme.colors.primaryLighter,
       },
     },
-    '& .right': {
-      '& p': {
-        '& strong': {
-          color: Theme.colors.primaryLighter,
-        },
-      },
-    },
-  }
-)
-const SectionDataJunkie = glamorous.section(section, layoutRight, {
+  },
+})
+const SectionDataJunkie = glamorous(Section)(section, layoutRight, {
   textAlign: 'center',
   '& .csv, .sql': {
     flex: '1 1 30%',
@@ -251,7 +253,7 @@ const SectionDataJunkie = glamorous.section(section, layoutRight, {
     },
   },
 })
-const SectionSchedules = glamorous.section(section, layoutDark, angleRight, {
+const SectionSchedules = glamorous(Section)(section, layoutDark, angleRight, {
   alignItems: 'center',
   textAlign: 'center',
   '& p': {
@@ -266,7 +268,7 @@ const SectionSchedules = glamorous.section(section, layoutDark, angleRight, {
     boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
   },
 })
-const SectionCantAfford = glamorous.section(section, layoutRight, {
+const SectionCantAfford = glamorous(Section)(section, layoutRight, {
   '& .right': {
     '& img': {
       opacity: '1',
@@ -278,7 +280,9 @@ const SectionCantAfford = glamorous.section(section, layoutRight, {
   },
 })
 
-const SectionContactUs = glamorous.section(section, layoutDark, angleTopRight, {
+const SectionContactUs = glamorous(
+  Section
+)(section, layoutDark, angleTopRight, {
   display: 'block',
   background: Theme.colors.primary,
   textAlign: 'center',

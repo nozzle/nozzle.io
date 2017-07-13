@@ -27,11 +27,11 @@ const trialAnimation = css.keyframes({
 
 const NavbarStyles = glamorous.div(
   {
+    position: 'fixed',
     background: `linear-gradient(to left, ${Theme.colors.primary}, ${Theme
       .colors.primaryLight})`,
     width: '100%',
     zIndex: 1000,
-    flex: '1 0 auto',
     boxShadow: '0 0 20px 0 rgba(0,0,0,.3)',
 
     '& .inner': {

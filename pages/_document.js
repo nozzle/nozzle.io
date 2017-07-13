@@ -12,6 +12,8 @@ css.global('html, body, body > div:first-child, #__next, [data-reactroot]', {
 
 css.global('html, body', {
   background: Theme.colors.primaryDarker,
+  overflowX: 'hidden',
+  overflowY: 'scroll',
 })
 
 css.global('*', {

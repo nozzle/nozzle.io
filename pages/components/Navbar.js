@@ -116,6 +116,7 @@ const NavbarStyles = glamorous.div(
         width: '100%',
         maxHeight: '65vh',
         overflowY: 'scroll',
+        WebkitOverflowScrolling: 'touch',
         background: Theme.colors.primaryDark,
         display: 'flex',
         flexDirection: 'column',

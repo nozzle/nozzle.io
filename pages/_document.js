@@ -2,10 +2,20 @@ import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { css } from 'glamor'
 import { renderStatic } from 'glamor-server'
+//
+import Theme from './utils/Theme'
 
 css.global('html, body, body > div:first-child, #__next, [data-reactroot]', {
   minHeight: '100%',
   width: '100%',
+})
+
+css.global('html, body', {
+  background: Theme.colors.primaryDarker,
+})
+
+css.global('*', {
+  boxSizing: 'border-box',
 })
 
 css.global('a', {

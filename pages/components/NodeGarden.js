@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import raf from 'raf'
 //
 import Color from '../utils/Color'
+
 import HyperResponsive from './HyperResponsive'
 
-class NodeGarden extends Component {
+class NodeGarden extends PureComponent {
   static defaultProps = {
     pixelRatio: (typeof window !== 'undefined' && window.devicePixelRatio) || 1,
   }
@@ -17,13 +18,14 @@ class NodeGarden extends Component {
   componentDidMount () {
     this.update()
   }
-  componentDidUpdate () {
+  componentDidUpdate (nextProps) {
     this.update()
   }
   componentWillUnmount () {
     this.doneAnimating = true
   }
   update () {
+    console.log('update')
     let { width, height, color, pixelRatio } = this.props
 
     width = width * pixelRatio
@@ -72,7 +74,7 @@ class NodeGarden extends Component {
     context.lineWidth = 1.5
 
     if (!this.animating) {
-      this.animate()
+      raf(this.animate)
     }
   }
   animate () {

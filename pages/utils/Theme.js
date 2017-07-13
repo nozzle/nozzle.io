@@ -7,7 +7,7 @@ const colorOptions = {
   primaryLight: Color(primary).lighten(7).toString(),
   primaryLighter: Color(primary).lighten(15).toString(),
   primaryDark: Color(primary).darken(7).toString(),
-  primaryDarker: Color(primary).darken(14).toString(),
+  primaryDarker: Color(primary).darken(15).toString(),
   text: '#333',
   danger: '#F15854',
   success: '#60BD68',

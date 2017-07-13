@@ -6,10 +6,21 @@ import Color from './utils/Color'
 
 import Head from './components/Head'
 import Content from './components/Content'
-import Button from './components/Button'
 import Link from './components/Link'
 import NodeGarden from './components/NodeGarden'
-import { H2, H3, H4, H5, P, Img, Div } from './components/Html'
+import TrialForm from './components/TrialForm'
+import {
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  P,
+  Img,
+  Div,
+  Button,
+  Strong,
+} from './components/Html'
 
 const belowMobile = `@media(max-width: ${700}px)`
 const belowTablet = `@media(max-width: ${1000}px)`
@@ -23,6 +34,9 @@ const section = {
   display: 'flex',
   flexWrap: 'wrap',
   alignItems: 'center',
+  '& img': {
+    width: '100%',
+  },
   [belowMobile]: {
     '& .left, & .right': {
       flex: '1 1 100%',
@@ -54,9 +68,15 @@ const layoutRight = {
   },
 }
 
-// const layoutCenter = {
-//   textAlign: 'center',
-// }
+const layoutLeftHalf = {
+  '& .left': {
+    flex: '1 1 300px',
+    marginRight: 40,
+  },
+  '& .right': {
+    flex: '1 1 300px',
+  },
+}
 
 const angle = {
   position: 'relative',
@@ -104,12 +124,24 @@ const angleRight = {
   },
 }
 
+const angleTopRight = {
+  ...angle,
+  ':after': {
+    display: 'none',
+  },
+  ':before': {
+    top: 0,
+    transform: 'skewY(2deg)',
+    transformOrigin: '100% 0',
+  },
+}
+
 const layoutDark = {
   background: Theme.colors.primaryDarker,
   color: '#fff',
 }
 
-const Centered = glamorous.div({ textAlign: 'center' })
+const Centered = glamorous.div({ textAlign: 'center', width: '100%' })
 
 const SectionKnowEverything = glamorous.section(section, layoutLeft, {
   position: 'relative',
@@ -150,7 +182,7 @@ const SectionTrackAllTheThings = glamorous.section(
     },
   }
 )
-const SectionRankData = glamorous.section(section, layoutLeft, {
+const SectionRankData = glamorous.section(section, layoutLeftHalf, {
   '& .right': {
     '& img': {
       opacity: '1',
@@ -219,21 +251,21 @@ const SectionDataJunkie = glamorous.section(section, layoutRight, {
     },
   },
 })
-const SectionSchedules = glamorous.section(
-  section,
-  layoutLeft,
-  layoutDark,
-  angleRight,
-  {
-    textAlign: 'center',
-    '& img': {
-      width: '900px',
-      maxWidth: '100%',
-      borderRadius: '5px',
-      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-    },
-  }
-)
+const SectionSchedules = glamorous.section(section, layoutDark, angleRight, {
+  alignItems: 'center',
+  textAlign: 'center',
+  '& p': {
+    maxWidth: 900,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  '& img': {
+    width: '900px',
+    maxWidth: '100%',
+    borderRadius: '5px',
+    boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
+  },
+})
 const SectionCantAfford = glamorous.section(section, layoutRight, {
   '& .right': {
     '& img': {
@@ -246,88 +278,41 @@ const SectionCantAfford = glamorous.section(section, layoutRight, {
   },
 })
 
-const SectionContactUs = glamorous.section(section, layoutDark, {
+const SectionContactUs = glamorous.section(section, layoutDark, angleTopRight, {
+  display: 'block',
   background: Theme.colors.primary,
-  '& .left': {
-    '& img': {
-      maxWidth: '140%',
-      width: '140%',
-      borderRadius: '5px',
-      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-    },
-  },
-  '& .hbspt-form': {
-    '& a, & .action input': {
-      color: '#fff',
-    },
-  },
-  '& .phone': {
-    '& a': {
-      color: '#fff',
-    },
-  },
+  textAlign: 'center',
 })
 
-// '@media screen and (max-width: 600px)': {
-//     '& .section-1': {
-//       padding: '70px 0',
-//       '& .right img': {
-//         maxWidth: '115%',
-//       },
-//     },
-//     '& .section-1, & .section-2, & .section-3, & .section-4, & .section-5, & .section-6, & .section-7': {
-//       padding: '70px 0',
-//     },
-//     '& .section-8': {
-//       padding: '70px 0',
-//       '& .-pad': {
-//       },
-//     },
-//     '& .contact-us': {
-//       padding: '50px 20px',
-//     },
-//   },
-//
-//   '@media screen and (max-width: 1000px)': {
-//     '& .section-1 .left': {
-//     },
-//     '& .section-5': {
-//       '& .csv, & .sql, & .main': {
-//         flex: '1 1 100%',
-//       },
-//     },
-//   },
-//
-//   '@media screen and (max-width: 1100px)': {
-//     '& .section-8 .testimonial': {
-//       flex: '1 1 100%',
-//     },
-//   },
-// }
-// )
+const rankDataImages = [
+  '/static/img/rank.png',
+  '/static/img/adrank.png',
+  '/static/img/pixelheight.png',
+]
 
 export default class Index extends Component {
+  constructor () {
+    super()
+    this.state = {
+      rankDataImageIndex: 0,
+      rankDataImage: rankDataImages[0],
+    }
+  }
   componentDidMount () {
-    // scrollr requires window
-    var formChecker = setInterval(function () {
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          target: '.hbspt-form',
-          css: '',
-          portalId: '2030303',
-          formId: '741e3900-e931-47e0-b355-a190fbb6b301',
-          onFormSubmit: function ($form) {
-            window.dataLayer.push({ event: 'trialSubmit' })
-            setTimeout(function () {
-              window.location.pathname = '/l/onboarding/'
-            }, 2000)
-          },
-        })
-        clearInterval(formChecker)
-      }
-    }, 100)
+    this.rankDataImageInterval = window.setInterval(
+      () =>
+        this.setState(state => ({
+          rankDataImageIndex: state.rankDataImageIndex + 1,
+          rankDataImage: rankDataImages[(state.rankDataImageIndex + 1) % 3],
+        })),
+      2000
+    )
+  }
+  componentWillUnmount () {
+    window.clearInterval(this.rankDataImageInterval)
   }
   render () {
+    const { rankDataImage } = this.state
     return (
       <Content>
         <Head>
@@ -394,15 +379,16 @@ export default class Index extends Component {
               <Button color='success'>Start tracking today!</Button>
             </Link>{' '}
             <Link to='/features/#brands'>
-              <Button color='primary-dark'>How does it work?</Button>
+              <Button color='primary'>How does it work?</Button>
             </Link>
           </Right>
         </SectionTrackAllTheThings>
         <SectionRankData>
           <Left>
-            <H2>Rank data you can only find at Nozzle</H2>
-            <H5>
-              <span>Track results by</span> <span className='metric'>Rank</span>
+            <H2 color='primaryDark'>Rank data you can only find at Nozzle</H2>
+            <H5 weight='regular'>
+              Track results by{' '}
+              <Strong>Rank, Ad Adjusted Rank, Pixel Height</Strong> and more!
             </H5>
             <p>
               With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean what
@@ -411,10 +397,9 @@ export default class Index extends Component {
               whether a knowledge graph appeared and even what your prospective
               customer ate for breakfast.
             </p>
-
             <p>
-              We include all this data for <strong>every result</strong> - no
-              extra cost!
+              We include <Strong>over 350+ data points</Strong> for{' '}
+              <Strong>every result on the serp</Strong> - no extra cost!
             </p>
             <ul>
               <li>search volume</li>
@@ -430,17 +415,17 @@ export default class Index extends Component {
             <p />
             <Link to='/features/#data'>
               <Button>See the complete list</Button>
-            </Link>
+            </Link>{' '}
             <Link to='#contact'>
               <Button color='success'>Get the datas!</Button>
             </Link>
           </Left>
           <Right>
-            <Img src='/static/img/adrank.png' />
+            <Img src={rankDataImage} />
+            {rankDataImages.map(img =>
+              <Img key={img} src={img} style={{ display: 'none' }} />
+            )}
           </Right>
-          <Img className='hidden' src='/static/img/rank.png' />
-          <Img className='hidden' src='/static/img/adrank.png' />
-          <Img className='hidden' src='/static/img/pixelheight.png' />
         </SectionRankData>
         <SectionCompetitors>
           <Left>
@@ -450,14 +435,14 @@ export default class Index extends Component {
             <H3>
               Squash your competitors... even the ones you don't know about yet
             </H3>
-            <H5>
-              <span className='topGroupByPrefix'>
-                See share of voice by
-              </span>{' '}
-              <span className='topGroupBy'>Domain</span>
+            <H5 weight='regular'>
+              See share of voice by{' '}
+              <Strong color='primaryLighter'>
+                Domain, Subdomain, URL, and Brand
+              </Strong>
             </H5>
             <p>
-              Nozzle lets you track <strong>unlimited competitors</strong>, no
+              Nozzle lets you track <Strong>unlimited competitors</Strong>, no
               questions asked. Heck, we'll let you track as much as you can
               handle. The SERP is yours to command!
             </p>
@@ -468,7 +453,7 @@ export default class Index extends Component {
             </p>
             <Link to='#contact'>
               <Button color='success'>Show me my competitors!</Button>
-            </Link>
+            </Link>{' '}
             <Link to='/features/#competition'>
               <Button color='primary'>How does it work?</Button>
             </Link>
@@ -514,12 +499,14 @@ export default class Index extends Component {
           <Div>
             <Img src='/static/img/schedules.png' />
           </Div>
-          <Link to='#contact'>
-            <Button color='success'>Give me flexibility, stat!</Button>
-          </Link>{' '}
-          <Link to='/features/#scheduling'>
-            <Button color='primary'>Why does it matter?</Button>
-          </Link>
+          <Centered>
+            <Link to='#contact'>
+              <Button color='success'>Give me flexibility, stat!</Button>
+            </Link>{' '}
+            <Link to='/features/#scheduling'>
+              <Button color='primary'>Why does it matter?</Button>
+            </Link>
+          </Centered>
         </SectionSchedules>
         <SectionCantAfford>
           <Left>
@@ -533,7 +520,7 @@ export default class Index extends Component {
               than your secret santa gift this year. Seriously.
             </p>
             <Link to='/pricing'>
-              <Button>See Our Plans</Button>
+              <Button>See Our Plans & Pricing</Button>
             </Link>{' '}
             <Link to='#contact'>
               <Button color='success'>Try it out!</Button>
@@ -541,15 +528,12 @@ export default class Index extends Component {
           </Left>
         </SectionCantAfford>
         <SectionContactUs className='contact-us' id='contact'>
-          <H2 className='text-center'>Let's start your free trial!</H2>
-          <div className='hbspt-form' />
-          <div className='phone'>
-            <H5>or</H5>
-            <br />
-            <a href='tel:1855NOZZLE1' className='btn btn-primary-dark'>
-              <H3>Call 1-855-NOZZLE1</H3>
-            </a>
-          </div>
+          <H2 full>Let's start your free trial!</H2>
+          <TrialForm />
+          <H6 full>or</H6>
+          <Link to={'tel:1855NOZZLE1'}>
+            <Button color='primaryDark'>Call 1-855-NOZZLE1</Button>
+          </Link>
         </SectionContactUs>
       </Content>
     )

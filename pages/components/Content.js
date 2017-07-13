@@ -4,6 +4,7 @@ import glamorous from 'glamorous'
 //
 import 'glamor-reset'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import Theme from '../utils/Theme'
 
 // Adds server generated styles to glamor cache.
@@ -22,6 +23,7 @@ const PageStyles = glamorous.div({
 const ContentStyled = glamorous.div({
   paddingTop: 50,
   color: Theme.colors.text,
+  background: 'white',
 })
 
 export default class Page extends Component {
@@ -33,6 +35,7 @@ export default class Page extends Component {
         <ContentStyled>
           {children}
         </ContentStyled>
+        <Footer />
       </PageStyles>
     )
   }

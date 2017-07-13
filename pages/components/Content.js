@@ -21,9 +21,10 @@ const PageStyles = glamorous.div({
 })
 
 const ContentStyled = glamorous.div({
-  paddingTop: 50,
+  paddingTop: 55,
   color: Theme.colors.text,
   background: 'white',
+  minHeight: '100vh',
 })
 
 export default class Page extends Component {

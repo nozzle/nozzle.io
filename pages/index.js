@@ -50,6 +50,8 @@ const section = {
   [belowMobile]: {
     '& .left, & .right': {
       flex: '1 1 100%',
+      marginLeft: 0,
+      marginRight: 0,
     },
     '& .left': {
       marginBottom: '2rem',

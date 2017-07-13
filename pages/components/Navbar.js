@@ -41,17 +41,18 @@ const NavbarStyles = glamorous.div(
       alignItems: 'center',
       justifyContent: 'space-between',
       position: 'relative',
+      perspective: '1000px',
     },
 
     '& .logo': {
+      flex: '0 0 auto',
       width: 120,
-      height: 34,
-      margin: '10px 0 9px 15px',
-      backgroundImage: 'url(/static/img/logo-small.svg)',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain',
-      backgroundPosition: 'left center',
+      margin: '10px 0 5px 10px',
       transition: 'all .3s ease',
+      '& img': {
+        width: '100%',
+        height: 'auto',
+      },
     },
 
     '& .menuToggle': {
@@ -106,7 +107,7 @@ const NavbarStyles = glamorous.div(
     '& .links': {
       display: 'flex',
       alignItems: 'center',
-      transition: 'all .15s ease',
+      transition: 'all .3s ease',
       backfaceVisibility: 'hidden',
 
       [belowBreakpoint]: {
@@ -206,7 +207,9 @@ const NavbarStyles = glamorous.div(
     return {
       [belowBreakpoint]: {
         '& .links': {
-          transform: isMenuOpen ? `scaleY(1)` : `scaleY(0)`,
+          pointerEvents: isMenuOpen ? 'all' : 'none',
+          transform: isMenuOpen ? `rotateX(0)` : `rotateX(-20deg)`,
+          opacity: isMenuOpen ? 1 : 0,
         },
         '& .menuToggle': {
           '& > div': {
@@ -269,7 +272,9 @@ export default class Navbar extends Component {
       <ClickOutside onClickOutside={closeMenu}>
         <NavbarStyles isMenuOpen={isMenuOpen}>
           <div className='inner'>
-            <Link className='logo' to='/' />
+            <Link className='logo' to='/'>
+              <img src='/static/img/logo-small.svg' />
+            </Link>
             <div
               className='menuToggle'
               onClick={() =>

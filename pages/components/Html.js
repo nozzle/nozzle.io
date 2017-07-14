@@ -85,14 +85,15 @@ export class Button extends React.Component {
       new mo.Burst({
         left: 0,
         top: 0,
-        radius: { 40: 100 },
+        radius: { 40: 80 },
         count: 15,
 
         children: {
           shape: ['circle'],
-          duration: 500,
+          duration: 800,
           radius: 10,
-          opacity: { '0.8': 0 },
+          opacity: { 1: 0.3 },
+          easing: 'quint.out',
           fill: [
             Theme.colors.primaryDark,
             Theme.colors.primary,
@@ -108,16 +109,18 @@ export class Button extends React.Component {
     const { burst, onMouseDown, ...rest } = this.props
     const handler = e => {
       console.log(e.pageX, e.pageY)
-      window.buttonBurst.tune({
-        x: e.pageX,
-        y: e.pageY,
-        degreeShift: 'rand(-360, 360)',
-      })
-      window.buttonBurst.replay()
+      window.buttonBurst
+        .tune({
+          x: e.pageX,
+          y: e.pageY,
+          degreeShift: 'rand(-360, 360)',
+        })
+        .generate()
+        .replay()
       onMouseDown && onMouseDown(e)
     }
     return burst
-      ? <ButtonStyled {...rest} onMouseDown={handler} onTouchEnd={handler} />
+      ? <ButtonStyled {...rest} onClick={handler} />
       : <ButtonStyled {...rest} />
   }
 }

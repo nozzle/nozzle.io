@@ -18,6 +18,7 @@
     "glamor-server": "^3.0.0-2",
     "glamorous": "^3.23.5",
     "javascript-detect-element-resize": "^0.5.3",
+    "mo-js": "^0.288.1",
     "next": "beta",
     "nprogress": "^0.2.0",
     "react": "^15.6.1",

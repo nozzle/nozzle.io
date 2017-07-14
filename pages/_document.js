@@ -26,6 +26,10 @@ const globalStyles = {
   '#nprogress .bar': {
     background: `white !important`,
   },
+  '[data-name="mojs-shape"]': {
+    zIndex: 99999999,
+    pointerEvents: 'none',
+  },
 }
 
 Object.keys(globalStyles).forEach(selector =>

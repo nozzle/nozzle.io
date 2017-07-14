@@ -5,6 +5,7 @@ export const angle = direction => [
 
     '&:before, &:after': {
       background: 'inherit',
+      pointerEvents: 'none',
       content: '""',
       display: 'block',
       height: '50%',

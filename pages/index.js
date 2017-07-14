@@ -301,7 +301,9 @@ export default class Index extends Component {
               tool has ever offered, you've come to the right place
             </P>
             <Link to='#contact'>
-              <Button color='success'>I'd like a demo!</Button>
+              <Button color='success' burst>
+                I'd like a demo!
+              </Button>
             </Link>
           </Left>
           <Right>
@@ -341,10 +343,14 @@ export default class Index extends Component {
               back and see what was ranking for "Pokemon Go" in 2016. :)
             </p>
             <Link to='#contact'>
-              <Button color='success'>Start tracking today!</Button>
+              <Button color='success' burst>
+                Start tracking today!
+              </Button>
             </Link>{' '}
             <Link to='/features/#brands'>
-              <Button color='primary'>How does it work?</Button>
+              <Button color='primary' burst>
+                How does it work?
+              </Button>
             </Link>
           </Right>
         </SectionTrackAllTheThings>
@@ -379,10 +385,12 @@ export default class Index extends Component {
             </ul>
             <p />
             <Link to='/features/#data'>
-              <Button>See the complete list</Button>
+              <Button burst>See the complete list</Button>
             </Link>{' '}
             <Link to='#contact'>
-              <Button color='success'>Get the datas!</Button>
+              <Button color='success' burst>
+                Get the datas!
+              </Button>
             </Link>
           </Left>
           <Right>
@@ -417,10 +425,14 @@ export default class Index extends Component {
               monitoring them from the start!
             </p>
             <Link to='#contact'>
-              <Button color='success'>Show me my competitors!</Button>
+              <Button color='success' burst>
+                Show me my competitors!
+              </Button>
             </Link>{' '}
             <Link to='/features/#competition'>
-              <Button color='primary'>How does it work?</Button>
+              <Button color='primary' burst>
+                How does it work?
+              </Button>
             </Link>
           </Right>
         </SectionCompetitors>
@@ -438,10 +450,14 @@ export default class Index extends Component {
               tooling when dealing with millions of keywords. )
             </p>
             <Link to='#contact'>
-              <Button color='success'>Fix me up with 1,000 keywords!</Button>
+              <Button color='success' burst>
+                Fix me up with 1,000 keywords!
+              </Button>
             </Link>{' '}
             <Link to='/features/#integration'>
-              <Button color='primary'>Show all integrations</Button>
+              <Button color='primary' burst>
+                Show all integrations
+              </Button>
             </Link>
           </div>
           <div className='sql'>
@@ -466,10 +482,14 @@ export default class Index extends Component {
           </Div>
           <Centered>
             <Link to='#contact'>
-              <Button color='success'>Give me flexibility, stat!</Button>
+              <Button color='success' burst>
+                Give me flexibility, stat!
+              </Button>
             </Link>{' '}
             <Link to='/features/#scheduling'>
-              <Button color='primary'>Why does it matter?</Button>
+              <Button color='primary' burst>
+                Why does it matter?
+              </Button>
             </Link>
           </Centered>
         </SectionSchedules>
@@ -485,10 +505,12 @@ export default class Index extends Component {
               than your secret santa gift this year. Seriously.
             </p>
             <Link to='/pricing'>
-              <Button>See Our Plans & Pricing</Button>
+              <Button burst>See Our Plans & Pricing</Button>
             </Link>{' '}
             <Link to='#contact'>
-              <Button color='success'>Try it out!</Button>
+              <Button color='success' burst>
+                Try it out!
+              </Button>
             </Link>
           </Left>
         </SectionCantAfford>

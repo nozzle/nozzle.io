@@ -4,6 +4,11 @@ import glamorous from 'glamorous'
 import Easing from '../utils/Easing'
 import Theme from '../utils/Theme'
 
+let mo
+if (typeof window !== 'undefined') {
+  mo = require('mo-js')
+}
+
 const margin = { margin: `0 auto 1rem` }
 export const button = {
   display: 'inline-block',
@@ -24,7 +29,7 @@ export const button = {
   },
   ':active': {
     transition: `all .08s ${Easing.css.easeOutBack}`,
-    transform: `none`,
+    transform: `scale(0.9)`,
     boxShadow: `none`,
   },
 }
@@ -70,7 +75,53 @@ export const Div = glamorous.div(margin, full, color, weight)
 export const Img = glamorous.img({
   maxWidth: '100%',
 })
-export const Button = glamorous.button(button, backgroundColor)
+
+// Button
+const ButtonStyled = glamorous.button(button, backgroundColor)
+export class Button extends React.Component {
+  componentDidMount () {
+    window.buttonBurst =
+      window.buttonBurst ||
+      new mo.Burst({
+        left: 0,
+        top: 0,
+        radius: { 40: 100 },
+        count: 15,
+
+        children: {
+          shape: ['circle'],
+          duration: 500,
+          radius: 10,
+          opacity: { '0.8': 0 },
+          fill: [
+            Theme.colors.primaryDark,
+            Theme.colors.primary,
+            // Theme.colors.success,
+            'rgb(233, 233, 233)',
+            'rgb(171, 171, 171)',
+          ],
+          degreeShift: 'rand(-360, 360)',
+        },
+      })
+  }
+  render () {
+    const { burst, onMouseDown, ...rest } = this.props
+    const handler = e => {
+      console.log(e.pageX, e.pageY)
+      window.buttonBurst.tune({
+        x: e.pageX,
+        y: e.pageY,
+        degreeShift: 'rand(-360, 360)',
+      })
+      window.buttonBurst.replay()
+      onMouseDown && onMouseDown(e)
+    }
+    return burst
+      ? <ButtonStyled {...rest} onMouseDown={handler} onTouchEnd={handler} />
+      : <ButtonStyled {...rest} />
+  }
+}
+
 export const Table = glamorous(({ children, ...rest }) =>
   (<div {...rest}>
     <table>

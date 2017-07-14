@@ -8,6 +8,7 @@ import 'glamor-reset'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Theme from '../utils/Theme'
+import ScrollTo from '../utils/ScrollTo'
 
 // Adds server generated styles to glamor cache.
 // Has to run before any `style()` calls
@@ -34,6 +35,18 @@ export default class Page extends Component {
     Router.onRouteChangeStart = () => Nprogress.start()
     Router.onRouteChangeComplete = () => Nprogress.done()
     Router.onRouteChangeError = () => Nprogress.done()
+
+    this.interval =
+      this.interval ||
+      window.setInterval(() => {
+        const els = Array.from(document.querySelectorAll('[id]'))
+        els.forEach(el => {
+          el.scrollIntoView = () => ScrollTo(el)
+        })
+      }, 300)
+  }
+  componentWillUnmount () {
+    window.clearInterval(this.interval)
   }
   render () {
     const { children } = this.props

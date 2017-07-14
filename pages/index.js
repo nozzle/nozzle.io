@@ -519,7 +519,9 @@ export default class Index extends Component {
           <TrialForm />
           <H6 full>or</H6>
           <Link to={'tel:1855NOZZLE1'}>
-            <Button color='primaryDark'>Call 1-855-NOZZLE1</Button>
+            <Button color='primaryDark' burst>
+              Call 1-855-NOZZLE1
+            </Button>
           </Link>
         </SectionContactUs>
       </Content>

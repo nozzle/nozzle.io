@@ -8,6 +8,8 @@ import ClickOutside from './ClickOutside'
 import links from '../utils/Links'
 import Theme from '../utils/Theme'
 
+import { Button } from './Html'
+
 const belowBreakpoint = `@media(max-width: ${700}px)`
 const aboveBreakpoint = `@media(min-width: ${701}px)`
 const toggleSize = 20
@@ -194,14 +196,25 @@ const NavbarStyles = glamorous.div(
     },
 
     '& .trial': {
-      padding: '10px 15px',
       marginLeft: 5,
       marginRight: 5,
-      borderRadius: 2,
-      backgroundColor: Theme.colors.success,
-      color: 'white',
-      boxShadow: '0 2px 10px 0 rgba(0,0,0,.3)',
       animation: `${trialAnimation} 7s infinite`,
+      '& button': {
+        marginBottom: 0,
+        padding: '10px 15px',
+        borderRadius: 2,
+        boxShadow: '0 2px 10px 0 rgba(0,0,0,.3)',
+        transformOrigin: 'right',
+        ':hover': {
+          transform: `scale(1.05)`,
+          boxShadow: `0 10px 20px 0 rgba(0,0,0, .2)`,
+        },
+        ':active': {
+          transition: `all .05s ease-out`,
+          transform: `scale(0.95)`,
+          boxShadow: `none`,
+        },
+      },
     },
   },
   ({ isMenuOpen }) => {
@@ -295,7 +308,9 @@ export default class Navbar extends Component {
                 {links.map(LinkItem)}
               </div>
               <Link className='trial' to='/#contact' onClick={closeMenu}>
-                Start Trial
+                <Button color='success' burst>
+                  Start Trial
+                </Button>
               </Link>
             </div>
           </div>

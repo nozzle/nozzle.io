@@ -27,6 +27,7 @@ const globalStyles = {
     background: `white !important`,
   },
   '[data-name="mojs-shape"]': {
+    position: 'fixed !important',
     zIndex: 99999999,
     pointerEvents: 'none',
   },

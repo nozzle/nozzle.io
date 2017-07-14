@@ -28,7 +28,7 @@ export const button = {
     boxShadow: `0 10px 20px 0 rgba(0,0,0, .2)`,
   },
   ':active': {
-    transition: `all .08s ${Easing.css.easeOutBack}`,
+    transition: `all .05s ease-out`,
     transform: `scale(0.9)`,
     boxShadow: `none`,
   },
@@ -91,15 +91,14 @@ export class Button extends React.Component {
         children: {
           shape: ['circle'],
           duration: 800,
-          radius: 10,
+          radius: 'rand(5, 12)',
+          pathScale: 'rand(.5, 1)',
           opacity: { 1: 0.3 },
           easing: 'quint.out',
           fill: [
-            Theme.colors.primaryDark,
             Theme.colors.primary,
-            // Theme.colors.success,
-            'rgb(233, 233, 233)',
-            'rgb(171, 171, 171)',
+            Theme.colors.primaryLighter,
+            'rgb(210, 210, 210)',
           ],
           degreeShift: 'rand(-360, 360)',
         },
@@ -111,8 +110,8 @@ export class Button extends React.Component {
       console.log(e.pageX, e.pageY)
       window.buttonBurst
         .tune({
-          x: e.pageX,
-          y: e.pageY,
+          x: e.clientX,
+          y: e.clientY,
           degreeShift: 'rand(-360, 360)',
         })
         .generate()

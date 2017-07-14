@@ -4,26 +4,33 @@ import { css } from 'glamor'
 import { renderStatic } from 'glamor-server'
 //
 import Theme from './utils/Theme'
+import NProgressStyles from './css/nprogress'
 
-css.global('html, body, body > div:first-child, #__next, [data-reactroot]', {
-  minHeight: '100%',
-  width: '100%',
-})
+const globalStyles = {
+  'html, body, body > div:first-child, #__next, [data-reactroot]': {
+    minHeight: '100%',
+    width: '100%',
+  },
+  'html, body': {
+    background: Theme.colors.primaryDarker,
+    overflowX: 'hidden',
+    overflowY: 'scroll',
+  },
+  '*': {
+    boxSizing: 'border-box',
+  },
+  a: {
+    color: 'inherit',
+    textDecoration: 'none',
+  },
+  '#nprogress .bar': {
+    background: `white !important`,
+  },
+}
 
-css.global('html, body', {
-  background: Theme.colors.primaryDarker,
-  overflowX: 'hidden',
-  overflowY: 'scroll',
-})
-
-css.global('*', {
-  boxSizing: 'border-box',
-})
-
-css.global('a', {
-  color: 'inherit',
-  textDecoration: 'none',
-})
+Object.keys(globalStyles).forEach(selector =>
+  css.global(selector, globalStyles[selector])
+)
 
 export default class MyDocument extends Document {
   static async getInitialProps ({ renderPage }) {
@@ -31,7 +38,6 @@ export default class MyDocument extends Document {
     const styles = renderStatic(() => page.html)
     return { ...page, ...styles }
   }
-
   constructor (props) {
     super(props)
     const { __NEXT_DATA__, ids } = props
@@ -39,7 +45,6 @@ export default class MyDocument extends Document {
       __NEXT_DATA__.ids = this.props.ids
     }
   }
-
   render () {
     return (
       <html>
@@ -61,6 +66,9 @@ export default class MyDocument extends Document {
             rel='stylesheet'
           />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          <style>
+            {NProgressStyles}
+          </style>
         </Head>
         <body>
           <Main />

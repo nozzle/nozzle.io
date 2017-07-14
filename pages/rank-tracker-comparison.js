@@ -47,6 +47,7 @@ const TableSection = glamorous.section(section)
 
 const header = name =>
   (<tr
+    key={name}
     style={{
       borderTop: name && 'solid 50px transparent',
       fontWeight: Theme.weights.bold,

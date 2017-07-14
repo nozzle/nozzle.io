@@ -47,10 +47,18 @@ export default class HubspotForm extends Component {
     if (typeof document === 'undefined') {
       return
     }
+
+    const scriptSrc = 'https://js.hsforms.net/forms/v2.js'
+
+    if (document.getElementById(scriptSrc)) {
+      return
+    }
+
     const script = document.createElement('script')
 
-    script.src = 'https://js.hsforms.net/forms/v2.js'
+    script.src = scriptSrc
     script.async = true
+    script.id = script.src
 
     document.body.appendChild(script)
   }

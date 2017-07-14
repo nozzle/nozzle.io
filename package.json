@@ -19,6 +19,7 @@
     "glamorous": "^3.23.5",
     "javascript-detect-element-resize": "^0.5.3",
     "next": "beta",
+    "nprogress": "^0.2.0",
     "react": "^15.6.1",
     "react-click-outside": "^2.3.1",
     "react-dom": "^15.6.1",
@@ -38,6 +39,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
-    "gatsby-plugin-glamor": "^1.0.6"
+    "gatsby-plugin-glamor": "^1.0.6",
+    "raw-loader": "^0.5.1"
   }
 }

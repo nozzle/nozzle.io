@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { rehydrate } from 'glamor'
 import glamorous from 'glamorous'
+import Nprogress from 'nprogress'
+import Router from 'next/router'
 //
 import 'glamor-reset'
 import Navbar from './Navbar'
@@ -28,6 +30,11 @@ const ContentStyled = glamorous.div({
 })
 
 export default class Page extends Component {
+  componentDidMount () {
+    Router.onRouteChangeStart = () => Nprogress.start()
+    Router.onRouteChangeComplete = () => Nprogress.done()
+    Router.onRouteChangeError = () => Nprogress.done()
+  }
   render () {
     const { children } = this.props
     return (

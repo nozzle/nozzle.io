@@ -25,7 +25,6 @@ class NodeGarden extends PureComponent {
     this.doneAnimating = true
   }
   update () {
-    console.log('update')
     let { width, height, color, pixelRatio } = this.props
 
     width = width * pixelRatio

@@ -5,9 +5,10 @@ import glamorous from 'glamorous'
 import Theme from '../utils/Theme'
 
 const FooterStyles = glamorous.div({
+  position: 'relative',
   zIndex: 1,
   padding: 20,
-  background: Theme.colors.primaryDarker,
+  background: Theme.colors.primary,
   color: 'white',
   boxShadow: '0 -10px 20px -10px rgba(0,0,0,.3)',
   '& .copyright': {

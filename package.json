@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "classnames": "^2.2.5",
     "file-loader": "^0.11.2",
     "glamor": "^3.0.0-2",
     "glamor-reset": "^3.0.0-2",

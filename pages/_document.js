@@ -53,7 +53,11 @@ export default class MyDocument extends Document {
           </script> */}
           <script src='//www.googletagmanager.com/gtm.js?id=GTM-PPH2PX' />
           <link
-            href='https://fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800'
+            href='//fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800'
+            rel='stylesheet'
+          />
+          <link
+            href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
             rel='stylesheet'
           />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />

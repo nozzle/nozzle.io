@@ -1,3 +1,4 @@
+import React from 'react'
 import glamorous from 'glamorous'
 //
 import Easing from '../utils/Easing'
@@ -33,7 +34,7 @@ const full = ({ full }) => ({
 const backgroundColor = ({ color }) => ({
   background: Theme.colors[color] || color,
 })
-const color = ({ color }) => ({
+export const color = ({ color }) => ({
   color: Theme.colors[color] || color,
 })
 const weight = ({ weight }) => ({
@@ -70,3 +71,70 @@ export const Img = glamorous.img({
   maxWidth: '100%',
 })
 export const Button = glamorous.button(button, backgroundColor)
+export const Table = glamorous(({ children, ...rest }) =>
+  (<div {...rest}>
+    <table>
+      {children}
+    </table>
+  </div>)
+)({
+  maxWidth: '100%',
+  overflowX: 'scroll',
+  border: '1px solid rgba(0,0,0, .1)',
+
+  '& table': {
+    minWidth: '100%',
+    borderCollapse: 'collapse',
+    overflowX: 'auto',
+  },
+
+  '& th, & td': {
+    textOverflow: 'ellipsis',
+    padding: '7px 5px',
+    overflow: 'hidden',
+
+    ':hover': {
+      overflow: 'visible',
+    },
+  },
+
+  '& thead': {
+    '& th, & td': {
+      background: 'white',
+      fontWeight: Theme.weights.bold,
+      color: Theme.colors.darker,
+      borderRight: '1px solid rgba(0,0,0, .05)',
+    },
+
+    '& + tbody': {
+      '& tr:first-child td': {
+        boxShadow: 'inset 0 20px 20px -20px rgba(0,0,0, .2)',
+      },
+    },
+  },
+
+  '& tbody': {
+    '& tr': {
+      borderBottom: 'solid 1px rgba(0,0,0, .05)',
+      '&:last-child': {
+        borderBottom: '0',
+      },
+    },
+
+    '& td': {
+      borderRight: '1px solid rgba(0,0,0, .02)',
+    },
+  },
+
+  '&.-striped': {
+    '& tbody tr:nth-child(even)': {
+      background: 'rgba(0,0,0, .03)',
+    },
+  },
+
+  '&.-highlight': {
+    '& tbody tr:hover': {
+      background: 'rgba(0,0,0, .05)',
+    },
+  },
+})

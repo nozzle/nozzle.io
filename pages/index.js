@@ -3,6 +3,7 @@ import glamorous from 'glamorous'
 //
 import Theme from './utils/Theme'
 import Color from './utils/Color'
+import { angle } from './utils/Styles'
 
 import Head from './components/Head'
 import Content from './components/Content'
@@ -90,64 +91,6 @@ const layoutLeftHalf = {
   },
 }
 
-const angle = {
-  position: 'relative',
-  zIndex: 1,
-
-  '&:before, &:after': {
-    background: 'inherit',
-    content: '""',
-    display: 'block',
-    height: '50%',
-    left: 0,
-    position: 'absolute',
-    right: 0,
-    zIndex: -1,
-  },
-}
-
-// const angleLeft = {
-//   ...angle,
-//   ':before': {
-//     top: 0,
-//     transform: 'skewY(-2deg)',
-//     transformOrigin: '0 0',
-//   },
-//
-//   ':after': {
-//     bottom: 0,
-//     transform: 'skewY(2deg)',
-//     transformOrigin: '0 100%',
-//   },
-// }
-
-const angleRight = {
-  ...angle,
-  ':before': {
-    top: 0,
-    transform: 'skewY(2deg)',
-    transformOrigin: '100% 0',
-  },
-
-  ':after': {
-    bottom: 0,
-    transform: 'skewY(-2deg)',
-    transformOrigin: '100%',
-  },
-}
-
-const angleTopRight = {
-  ...angle,
-  ':after': {
-    display: 'none',
-  },
-  ':before': {
-    top: 0,
-    transform: 'skewY(2deg)',
-    transformOrigin: '100% 0',
-  },
-}
-
 const layoutDark = {
   background: Theme.colors.primaryDarker,
   color: '#fff',
@@ -174,8 +117,11 @@ const SectionKnowEverything = glamorous(Section)(section, layoutLeft, {
 })
 const SectionTrackAllTheThings = glamorous(
   Section
-)(section, layoutDark, layoutRight, angleRight, {
+)(section, layoutDark, layoutRight, angle('right'), {
   position: 'relative',
+  '& .right': {
+    zIndex: 0,
+  },
   '& img': {
     opacity: '1',
     borderRadius: '5px',
@@ -184,10 +130,10 @@ const SectionTrackAllTheThings = glamorous(
   '& .allthethings': {
     position: 'absolute',
     right: 0,
-    bottom: 0,
+    bottom: -10,
     width: '400px',
-    opacity: '0.3',
-    zIndex: -1,
+    opacity: '0.2',
+    zIndex: 0,
   },
 })
 const SectionRankData = glamorous(Section)(section, layoutLeftHalf, {
@@ -216,7 +162,7 @@ const SectionRankData = glamorous(Section)(section, layoutLeftHalf, {
 })
 const SectionCompetitors = glamorous(
   Section
-)(section, layoutLeft, layoutDark, angleRight, {
+)(section, layoutLeft, layoutDark, angle('right'), {
   '& .left': {
     direction: 'rtl',
     '& img': {
@@ -255,21 +201,26 @@ const SectionDataJunkie = glamorous(Section)(section, layoutRight, {
     },
   },
 })
-const SectionSchedules = glamorous(Section)(section, layoutDark, angleRight, {
-  alignItems: 'center',
-  textAlign: 'center',
-  '& p': {
-    maxWidth: 900,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-  '& img': {
-    width: '900px',
-    maxWidth: '100%',
-    borderRadius: '5px',
-    boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-  },
-})
+const SectionSchedules = glamorous(Section)(
+  section,
+  layoutDark,
+  angle('right'),
+  {
+    alignItems: 'center',
+    textAlign: 'center',
+    '& p': {
+      maxWidth: 900,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+    '& img': {
+      width: '900px',
+      maxWidth: '100%',
+      borderRadius: '5px',
+      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
+    },
+  }
+)
 const SectionCantAfford = glamorous(Section)(section, layoutRight, {
   '& .right': {
     '& img': {
@@ -282,15 +233,21 @@ const SectionCantAfford = glamorous(Section)(section, layoutRight, {
   },
 })
 
-const SectionContactUs = glamorous(
-  Section
-)(section, layoutDark, angleTopRight, {
-  background: Theme.colors.primary,
-  '& .inner': {
-    display: 'block',
-    textAlign: 'center',
-  },
-})
+const SectionContactUs = glamorous(Section)(
+  section,
+  layoutDark,
+  angle('right'),
+  {
+    ':after': {
+      display: 'none',
+    },
+    background: Theme.colors.primaryDarker,
+    '& .inner': {
+      display: 'block',
+      textAlign: 'center',
+    },
+  }
+)
 
 const rankDataImages = [
   '/static/img/rank.png',
@@ -324,7 +281,7 @@ export default class Index extends Component {
     return (
       <Content>
         <Head>
-          <title>Welcome!</title>
+          <title>Nozzle - Enterprise SEO Keyword Rank Tracker</title>
         </Head>
         <SectionKnowEverything>
           <NodeGarden
@@ -535,7 +492,7 @@ export default class Index extends Component {
             </Link>
           </Left>
         </SectionCantAfford>
-        <SectionContactUs className='contact-us' id='contact'>
+        <SectionContactUs id='contact'>
           <H2 full>Let's start your free trial!</H2>
           <TrialForm />
           <H6 full>or</H6>

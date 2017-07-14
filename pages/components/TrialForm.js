@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Router from 'next/router'
 //
 import { Div } from './Html'
 import HubspotForm from './HubspotForm'
@@ -12,7 +13,7 @@ export default class TrialForm extends Component {
           onSubmit={form => {
             window.dataLayer.push({ event: 'trialSubmit' })
             setTimeout(function () {
-              window.location.pathname = '/l/onboarding/'
+              Router.push('/onboarding/')
             }, 2000)
           }}
         />

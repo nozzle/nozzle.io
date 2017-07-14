@@ -24,10 +24,11 @@ export default function HyperResponsive (WrappedComponent) {
       this.update()
     }
     componentWillUnmount () {
+      raf.cancel(this.raffed)
       this.resizeListener && window.removeResizeListener(this.el, this.resize)
     }
     resize () {
-      raf(this.update)
+      this.raffed = raf(this.update)
     }
     update (e) {
       this.setState({

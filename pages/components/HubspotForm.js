@@ -54,14 +54,17 @@ export default class HubspotForm extends Component {
 
     document.body.appendChild(script)
   }
+  componentWillUnmount () {
+    window.clearInterval(this.interval)
+  }
   componentDidMount () {
     const { formID, onSubmit } = this.props
     const { formElementID } = this.state
-    const interval = window.setInterval(() => {
+    this.interval = window.setInterval(() => {
       if (!window.hbspt || !window.hbspt.forms) {
         return
       }
-      window.clearInterval(interval)
+      window.clearInterval(this.interval)
       window.hbspt.forms.create({
         target: `#${formElementID}`,
         css: '',

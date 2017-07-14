@@ -33,6 +33,7 @@ const NavbarStyles = glamorous.div(
     width: '100%',
     zIndex: 1000,
     boxShadow: '0 0 20px 0 rgba(0,0,0,.3)',
+    height: 55,
 
     '& .inner': {
       maxWidth: Theme.maxWidth,

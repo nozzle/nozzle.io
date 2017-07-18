@@ -10,6 +10,7 @@ if (typeof window !== 'undefined') {
 }
 
 const margin = { margin: `0 auto 1rem` }
+const inline = { display: 'inline' }
 export const button = {
   display: 'inline-block',
   padding: '15px 20px',
@@ -51,29 +52,46 @@ const text = [color, weight]
 // Components
 
 export const H1 = glamorous.h1(margin, full, text, {
-  fontSize: Theme.sizes.h1,
+  fontSize: `${Theme.sizes.h1}rem`,
+  lineHeight: `${Theme.sizes.h1 * 1.2}rem`,
 })
 export const H2 = glamorous.h2(margin, full, text, {
-  fontSize: Theme.sizes.h2,
+  fontSize: `${Theme.sizes.h2}rem`,
+  lineHeight: `${Theme.sizes.h2 * 1.2}rem`,
 })
 export const H3 = glamorous.h3(margin, full, text, {
-  fontSize: Theme.sizes.h3,
+  fontSize: `${Theme.sizes.h3}rem`,
+  lineHeight: `${Theme.sizes.h3 * 1.2}rem`,
 })
 export const H4 = glamorous.h4(margin, full, text, {
-  fontSize: Theme.sizes.h4,
+  fontSize: `${Theme.sizes.h4}rem`,
+  lineHeight: `${Theme.sizes.h4 * 1.2}rem`,
 })
 export const H5 = glamorous.h5(margin, full, text, {
-  fontSize: Theme.sizes.h5,
+  fontSize: `${Theme.sizes.h5}rem`,
+  lineHeight: `${Theme.sizes.h5 * 1.2}rem`,
 })
 export const H6 = glamorous.h6(margin, full, text, {
-  fontSize: Theme.sizes.h6,
+  fontSize: `${Theme.sizes.h6}rem`,
+  lineHeight: `${Theme.sizes.h6 * 1.2}rem`,
 })
-export const P = glamorous.p(margin, color, weight)
-export const Strong = glamorous.strong(color, weight)
-export const Span = glamorous.span(color, weight)
+export const P = glamorous.p(margin, color, weight, {
+  fontSize: `1rem`,
+  lineHeight: `1.2rem`,
+})
+export const Strong = glamorous.strong(inline, color, weight)
+export const Span = glamorous.span(inline, color, weight)
 export const Div = glamorous.div(margin, full, color, weight)
 export const Img = glamorous.img({
   maxWidth: '100%',
+})
+export const Ul = glamorous.ul(margin, {
+  paddingLeft: 20,
+  listStyleType: 'disc',
+  textAlign: 'left',
+})
+export const Li = glamorous.li(color, {
+  marginBottom: 5,
 })
 
 // Button
@@ -93,12 +111,13 @@ export class Button extends React.Component {
           duration: 800,
           radius: 'rand(5, 12)',
           pathScale: 'rand(.5, 1)',
-          opacity: { 1: 0.3 },
+          opacity: { 1: 0.5 },
           easing: 'quint.out',
           fill: [
-            Theme.colors.primary,
             Theme.colors.primaryLighter,
-            'rgb(210, 210, 210)',
+            Theme.colors.danger,
+            Theme.colors.success,
+            Theme.colors.warning,
           ],
           degreeShift: 'rand(-360, 360)',
         },
@@ -107,7 +126,6 @@ export class Button extends React.Component {
   render () {
     const { burst, onMouseDown, ...rest } = this.props
     const handler = e => {
-      console.log(e.pageX, e.pageY)
       window.buttonBurst
         .tune({
           x: e.clientX,

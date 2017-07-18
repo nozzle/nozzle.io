@@ -17,6 +17,8 @@ import {
   H5,
   H6,
   P,
+  Ul,
+  Li,
   Img,
   Div,
   Button,
@@ -331,23 +333,23 @@ export default class Index extends Component {
           </Left>
           <Right>
             <H2>Track all the things!</H2>
-            <p>
+            <P>
               Most tools just tell you the top ranking page on your domain. We
               monitor your entire brand, including social media profiles and
               unlimited domain matches. There's a difference between knowing
               you're ranking #1 and owning the entire first page!
-            </p>
-            <p>
+            </P>
+            <P>
               Unlimited access doesn't just refer to today's SERP. We keep all
               your data FOREVER, so 3 years from now, you'll be able to look
               back and see what was ranking for "Pokemon Go" in 2016. :)
-            </p>
+            </P>
             <Link to='#contact'>
               <Button color='success' burst>
                 Start tracking today!
               </Button>
             </Link>{' '}
-            <Link to='/features/#brands'>
+            <Link to='/features'>
               <Button color='primary' burst>
                 How does it work?
               </Button>
@@ -361,28 +363,28 @@ export default class Index extends Component {
               Track results by{' '}
               <Strong>Rank, Ad Adjusted Rank, Pixel Height</Strong> and more!
             </H5>
-            <p>
+            <P>
               With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean what
               it used to. Nozzle won’t just tell you where you rank, we’ll tell
               you your ad adjusted rank, how many pixels down the page you are,
               whether a knowledge graph appeared and even what your prospective
               customer ate for breakfast.
-            </p>
-            <p>
+            </P>
+            <P>
               We include <Strong>over 350+ data points</Strong> for{' '}
               <Strong>every result on the serp</Strong> - no extra cost!
-            </p>
-            <ul>
-              <li>search volume</li>
-              <li>estimated traffic</li>
-              <li>social shares</li>
-              <li>Moz PA / DA</li>
-              <li>inbound links</li>
-              <li>product ad pricing</li>
-              <li>sitelinks</li>
-              <li>star ratings</li>
-              <li>but wait, there's more...</li>
-            </ul>
+            </P>
+            <Ul>
+              <Li>search volume</Li>
+              <Li>estimated traffic</Li>
+              <Li>social shares</Li>
+              <Li>Moz PA / DA</Li>
+              <Li>inbound links</Li>
+              <Li>product ad pricing</Li>
+              <Li>sitelinks</Li>
+              <Li>star ratings</Li>
+              <Li>but wait, there's more...</Li>
+            </Ul>
             <p />
             <Link to='/features/#data'>
               <Button burst>See the complete list</Button>
@@ -414,16 +416,16 @@ export default class Index extends Component {
                 Domain, Subdomain, URL, and Brand
               </Strong>
             </H5>
-            <p>
+            <P>
               Nozzle lets you track <Strong>unlimited competitors</Strong>, no
               questions asked. Heck, we'll let you track as much as you can
               handle. The SERP is yours to command!
-            </p>
-            <p>
+            </P>
+            <P>
               If you find a new competitor you haven't been tracking, add them
               and we'll even rewrite history for you. It'll be like you were
               monitoring them from the start!
-            </p>
+            </P>
             <Link to='#contact'>
               <Button color='success' burst>
                 Show me my competitors!
@@ -443,12 +445,12 @@ export default class Index extends Component {
           <div className='main'>
             <H3>A Data Junkie's Paradise</H3>
             <H5>CSV, SQL, API and BigQuery</H5>
-            <p>
+            <P>
               Whether your thing is pivot tables or SQL JOIN's, you can access
               your data the way you're used to. Even better, we keep all your
               data forever, including the raw html. Consider it necessary
               tooling when dealing with millions of keywords. )
-            </p>
+            </P>
             <Link to='#contact'>
               <Button color='success' burst>
                 Fix me up with 1,000 keywords!
@@ -468,7 +470,7 @@ export default class Index extends Component {
           <H2 full>
             Get rankings on <em>your</em> schedule
           </H2>
-          <p>
+          <P>
             Not all keywords are created equal. You're probably paying too much
             to track your long-tail keywords daily or you're only getting weekly
             data for your money making head terms. Say goodbye to those tools
@@ -476,7 +478,7 @@ export default class Index extends Component {
             keywords daily, hourly or even every 5 minutes. Keep an eye on
             thousands more by scheduling them weekly or monthly without breaking
             the bank.
-          </p>
+          </P>
           <Div>
             <Img src='/static/img/schedules.png' />
           </Div>
@@ -500,10 +502,10 @@ export default class Index extends Component {
               No minimum spend, no qualification calls, white-glove onboarding,
               batteries included
             </H5>
-            <p>
+            <P>
               After a free trial, getting started can cost you less per month
               than your secret santa gift this year. Seriously.
-            </p>
+            </P>
             <Link to='/pricing'>
               <Button burst>See Our Plans & Pricing</Button>
             </Link>{' '}

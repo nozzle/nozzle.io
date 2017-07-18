@@ -8,6 +8,7 @@ const colorOptions = {
   primaryLighter: Color(primary).lighten(15).toString(),
   primaryDark: Color(primary).darken(7).toString(),
   primaryDarker: Color(primary).darken(15).toString(),
+  primaryDarkest: Color(primary).darken(20).saturate(100).toString(),
   text: '#333',
   danger: '#F15854',
   success: '#60BD68',
@@ -24,12 +25,12 @@ const colorOptions = {
 export default {
   maxWidth: 1600,
   sizes: {
-    h1: '3rem',
-    h2: '2.5rem',
-    h3: '2rem',
-    h4: '1.6rem',
-    h5: '1.3rem',
-    h6: '1rem',
+    h1: 3,
+    h2: 2.5,
+    h3: 2,
+    h4: 1.6,
+    h5: 1.3,
+    h6: 1.2,
   },
   weights: {
     lighter: 100,

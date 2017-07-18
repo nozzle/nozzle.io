@@ -21,7 +21,7 @@ export default [
       },
       {
         name: 'Scheduling',
-        path: '/features#schedling',
+        path: '/features#scheduling',
       },
       {
         name: 'Data',

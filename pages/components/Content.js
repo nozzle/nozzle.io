@@ -4,7 +4,6 @@ import glamorous from 'glamorous'
 import Nprogress from 'nprogress'
 import Router from 'next/router'
 //
-import 'glamor-reset'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Theme from '../utils/Theme'
@@ -43,7 +42,7 @@ export default class Page extends Component {
         els.forEach(el => {
           el.scrollIntoView = () => ScrollTo(el)
         })
-      }, 300)
+      }, 500)
   }
   componentWillUnmount () {
     window.clearInterval(this.interval)

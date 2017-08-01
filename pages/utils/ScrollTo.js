@@ -3,7 +3,7 @@ import raf from 'raf'
 const ease = t => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t)
 
 const options = {
-  duration: 500,
+  duration: 800,
   easing: 'easeInOut',
   offset: 0,
   context: typeof window !== 'undefined' && window,

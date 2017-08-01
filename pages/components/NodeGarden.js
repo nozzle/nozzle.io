@@ -40,7 +40,7 @@ class NodeGarden extends PureComponent {
     this.nodes = []
     for (let i = 0; i < this.NUM_NODES; i++) {
       const node = {
-        radius: 4,
+        radius: Math.round(Math.random() * 4) + 1,
         x: Math.round(Math.random() * width),
         y: Math.round(Math.random() * height),
         vx: Math.random() * 6 - 3,

@@ -8,9 +8,16 @@ module.exports = {
     return config
   },
   exportPathMap: function () {
-    return {
-      '/': { page: '/' },
-      '/about': { page: '/about' },
+    const posts = {}
+    for (var i = 0; i < 1000; i++) {
+      posts[i] = { page: '/about' }
     }
+    return Object.assign(
+      {
+        '/': { page: '/' },
+        '/about': { page: '/about' },
+      },
+      posts
+    )
   },
 }

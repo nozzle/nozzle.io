@@ -13,10 +13,8 @@ const margin = { margin: `0 auto 1rem` }
 const inline = { display: 'inline' }
 export const button = {
   display: 'inline-block',
-  padding: '15px 20px',
   marginBottom: '5px',
   border: '0',
-  fontSize: '15px',
   outline: '0',
   borderRadius: '2px',
   transition: `all .2s ${Easing.css.easeOutBack}`,
@@ -34,11 +32,27 @@ export const button = {
     boxShadow: `none`,
   },
 }
+export const buttonSize = ({ size = '' }) =>
+  size === 'lg'
+    ? {
+      fontSize: '1.2rem',
+      padding: '1rem 1.4rem',
+    }
+    : size === 'sm'
+      ? {
+        fontSize: '.8rem',
+        padding: '.6rem 1rem',
+      }
+      : {
+        fontSize: '1rem',
+        padding: '.8rem 1.2rem',
+      }
 const full = ({ full }) => ({
   width: full && '100%',
 })
 const backgroundColor = ({ color }) => ({
   background: Theme.colors[color] || color,
+  color: color === 'white' && Theme.colors.text,
 })
 export const color = ({ color }) => ({
   color: Theme.colors[color] || color,
@@ -95,7 +109,7 @@ export const Li = glamorous.li(color, {
 })
 
 // Button
-const ButtonStyled = glamorous.button(button, backgroundColor)
+const ButtonStyled = glamorous.button(button, backgroundColor, buttonSize)
 export class Button extends React.Component {
   componentDidMount () {
     window.buttonBurst =
@@ -141,6 +155,11 @@ export class Button extends React.Component {
       : <ButtonStyled {...rest} />
   }
 }
+export const Input = glamorous.input({
+  borderRadius: 3,
+  border: 'none',
+  padding: '0.3em 0.5em',
+})
 
 export const Table = glamorous(({ children, ...rest }) =>
   (<div {...rest}>

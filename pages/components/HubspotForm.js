@@ -3,7 +3,7 @@ import glamorous from 'glamorous'
 //
 import Theme from '../utils/Theme'
 
-import { button } from './Html'
+import { button, buttonSize } from './Html'
 
 let uid = 0
 
@@ -32,6 +32,7 @@ const Styles = glamorous.div({
   },
   '& [type="submit"]': {
     ...button,
+    ...buttonSize({}),
     backgroundColor: Theme.colors.success,
   },
 })

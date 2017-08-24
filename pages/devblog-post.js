@@ -5,6 +5,8 @@ import { format } from 'date-fns'
 import Theme from './utils/Theme'
 import Data from './utils/Data'
 
+import Icon from './components/Icon'
+import Link from './components/Link'
 import Smackdown from './components/Smackdown'
 // import Link from './components/Link'
 import Head from './components/Head'
@@ -12,7 +14,18 @@ import Content from './components/Content'
 import { Container, Header } from './components/Layout'
 import { H3 } from './components/Html'
 
-const PostContainer = styled(Container)`
+const PostContainer = styled.div`
+  .back {
+    opacity: .6;
+    display: inline-block;
+    margin-bottom: 2rem;
+    transition: all .1s ease-out;
+
+    :hover {
+      opacity: 1;
+    }
+  }
+
   .info {
     font-size: 1.1rem;
     margin-bottom: 1rem;
@@ -36,8 +49,12 @@ const PostContainer = styled(Container)`
 const Post = styled.div`
   margin: 0 auto;
   padding: 0 2rem 2rem;
-  width: 750px;
+  width: 900px;
   max-width: 100%;
+
+  @media screen and (max-width: 1500px) {
+    width: 700px;
+  }
 
   @media screen and (max-width: 600px) {
     padding: 0 1rem 1rem;
@@ -71,6 +88,9 @@ export default class DevblogPost extends Component {
         </Head>
         <PostContainer>
           <Header>
+            <Link to='/devblog' className='back'>
+              <Icon i='arrow-left' /> Back to Devblog
+            </Link>
             <H3>
               {post.fields.title}
             </H3>
@@ -96,9 +116,11 @@ export default class DevblogPost extends Component {
               )}
             </div>
           </Header>
-          <Post>
-            <Smackdown source={post.fields.body} />
-          </Post>
+          <Container>
+            <Post>
+              <Smackdown source={post.fields.body} />
+            </Post>
+          </Container>
         </PostContainer>
       </Content>
     )

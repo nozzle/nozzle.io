@@ -5,7 +5,7 @@ import { javascript } from 'react-smackdown/lib/languages'
 import { atomOneDark } from 'react-smackdown/lib/themes'
 //
 
-import { H3, H4, H5, H6, P, Strong, Img, Pre } from './Html'
+import { H3, H4, H5, H6, P, Img, Pre } from './Html'
 
 const syntax = {
   languages: [

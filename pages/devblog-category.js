@@ -38,26 +38,26 @@ export default class DevblogCategory extends Component {
         <Head>
           <title>Nozzle Dev Blog</title>
         </Head>
+        <Header>
+          <H1>
+            Devblog - {category.fields.title}
+          </H1>
+          <SubMenu>
+            <ul>
+              <li>
+                <Link to='/devblog'>All</Link>
+              </li>
+              {categories.map(category =>
+                (<li key={category.fields.slug}>
+                  <Link to={`/devblog/category/${category.fields.slug}`}>
+                    {category.fields.title}
+                  </Link>
+                </li>)
+              )}
+            </ul>
+          </SubMenu>
+        </Header>
         <BlogContainer>
-          <Header>
-            <H1>
-              Devblog - {category.fields.title}
-            </H1>
-            <SubMenu>
-              <ul>
-                <li>
-                  <Link to='/devblog'>All</Link>
-                </li>
-                {categories.map(category =>
-                  (<li key={category.fields.slug}>
-                    <Link to={`/devblog/category/${category.fields.slug}`}>
-                      {category.fields.title}
-                    </Link>
-                  </li>)
-                )}
-              </ul>
-            </SubMenu>
-          </Header>
           <PostList blog='devblog' posts={posts} />
         </BlogContainer>
       </Content>

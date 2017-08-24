@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import glamorous from 'glamorous'
+import styled, { css } from 'styled-components'
 //
-import Theme from './utils/Theme'
 import Color from './utils/Color'
+import Theme from './utils/Theme'
 import { angle } from './utils/Styles'
 
 import Head from './components/Head'
@@ -37,219 +37,233 @@ const Section = ({ children, ...rest }) =>
     </div>
   </section>)
 
-const section = {
-  zIndex: 0,
-  '& .inner': {
-    maxWidth: Theme.maxWidth,
-    margin: '0 auto',
-    padding: '10% 10%',
-    display: 'flex',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-  },
-  '& img': {
-    width: '100%',
-  },
-  [belowMobile]: {
-    '& .left, & .right': {
-      flex: '1 1 100%',
-      marginLeft: 0,
-      marginRight: 0,
-    },
-    '& .left': {
-      marginBottom: '2rem',
-    },
-  },
-}
+const section = css`
+  z-index: 0;
+  .inner {
+    max-width: ${Theme.maxWidth}px;
+    margin: 0 auto;
+    padding: 10% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  img {
+    width: 100%;
+  }
+  ${belowMobile} {
+    .left, .right {
+      flex: 1 1 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .left {
+      margin-bottom: 2rem;
+    }
+  }
+`
 
-const layoutLeft = {
-  '& .left': {
-    flex: '2 1 200px',
-    textAlign: 'right',
-    marginRight: 40,
-  },
-  '& .right': {
-    flex: '3 1 300px',
-  },
-}
+const layoutLeft = css`
+  .left {
+    flex: 2 1 200px;
+    text-align: right;
+    margin-right: 40px;
+  }
+  .right {
+    flex: 3 1 300px;
+  }
+`
 
-const layoutRight = {
-  '& .left': {
-    flex: '3 1 300px',
-  },
-  '& .right': {
-    marginLeft: 40,
-    flex: '2 1 200px',
-  },
-}
+const layoutRight = css`
+  .left {
+    flex: 3 1 300px;
+  }
+  .right {
+    margin-left: 40px;
+    flex: 2 1 200px;
+  }
+`
 
-const layoutLeftHalf = {
-  '& .left': {
-    flex: '1 1 300px',
-    marginRight: 40,
-  },
-  '& .right': {
-    flex: '1 1 300px',
-  },
-}
+const layoutLeftHalf = css`
+  .left {
+    flex: 1 1 300px;
+    margin-right: 40px;
+  }
+  .right {
+    flex: 1 1 300px;
+  }
+`
 
-const layoutDark = {
-  background: Theme.colors.primaryDarker,
-  color: '#fff',
-}
+const layoutDark = css`
+  background: ${Theme.colors.primaryDarker};
+  color: white;
+`
 
-const Centered = glamorous.div({ textAlign: 'center', width: '100%' })
+const Centered = styled.div`
+  text-align: center;
+  width: 100%;
+`
 
-const SectionKnowEverything = glamorous(Section)(section, layoutLeft, {
-  position: 'relative',
-  background: `radial-gradient(circle at center, ${Theme.colors
+const SectionKnowEverything = styled(Section)`
+  ${section}
+  ${layoutLeft}
+  position: relative;
+  background: radial-gradient(circle at center, ${Theme.colors
     .primaryDarker} 20%, ${Color(Theme.colors.primaryDarker)
-    .darken(10)
-    .toString()})`,
-  color: 'white',
-  '& h4': {
-    color: Theme.colors.primaryLighter,
-  },
-  '& img': {
-    maxWidth: '940px',
-    width: '140%',
-    borderRadius: '5px',
-    boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-  },
-})
-const SectionTrackAllTheThings = glamorous(
-  Section
-)(section, layoutDark, layoutRight, angle('right'), {
-  position: 'relative',
-  '& .right': {
-    zIndex: 0,
-  },
-  '& img': {
-    opacity: '1',
-    borderRadius: '5px',
-    boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-  },
-  '& .allthethings': {
-    position: 'absolute',
-    right: 0,
-    bottom: -10,
-    width: '400px',
-    opacity: '0.2',
-    zIndex: 0,
-  },
-})
-const SectionRankData = glamorous(Section)(section, layoutLeftHalf, {
-  '& .right': {
-    '& img': {
-      opacity: '1',
-      maxWidth: '940px',
-      width: '140%',
-      borderRadius: '5px',
-      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-    },
-  },
-  '& .left': {
-    '& p': {
-      strong: {
-        color: Theme.colors.primaryLighter,
-      },
-    },
-    // '& .metric': {
-    //   display: 'inline-block',
-    // },
-    // '& ul': {
-    //   listStyleType: 'disc',
-    // },
-  },
-})
-const SectionCompetitors = glamorous(
-  Section
-)(section, layoutLeft, layoutDark, angle('right'), {
-  '& .left': {
-    direction: 'rtl',
-    '& img': {
-      opacity: '1',
-      maxWidth: '940px',
-      width: '160%',
-      borderRadius: '5px',
-      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-    },
-  },
-  '& .right': {
-    '& p': {
-      '& strong': {
-        color: Theme.colors.primaryLighter,
-      },
-    },
-  },
-})
-const SectionDataJunkie = glamorous(Section)(section, layoutRight, {
-  textAlign: 'center',
-  '& .csv, .sql': {
-    flex: '1 1 30%',
-  },
-  '& .main': {
-    flex: '1 1 34%',
-    margin: '0 3%',
-  },
-  '& img': {
-    width: '250px',
-    maxWidth: '100%',
-  },
-  [belowTablet]: {
-    '& .csv, & .sql, & .main': {
-      flex: '1 1 100%',
-      marginBottom: '3rem',
-    },
-  },
-})
-const SectionSchedules = glamorous(Section)(
-  section,
-  layoutDark,
-  angle('right'),
-  {
-    alignItems: 'center',
-    textAlign: 'center',
-    '& p': {
-      maxWidth: 900,
-      marginLeft: 'auto',
-      marginRight: 'auto',
-    },
-    '& img': {
-      width: '900px',
-      maxWidth: '100%',
-      borderRadius: '5px',
-      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-    },
+  .darken(10)
+  .toString()});
+  color: white;
+  h4 {
+    color: ${Theme.colors.primaryLighter};
   }
-)
-const SectionCantAfford = glamorous(Section)(section, layoutRight, {
-  '& .right': {
-    '& img': {
-      opacity: '1',
-      maxWidth: '940px',
-      width: '140%',
-      borderRadius: '5px',
-      boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.2)',
-    },
-  },
-})
+  img {
+    max-width: 940px;
+    width: 140%;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+  }
+`
+const SectionTrackAllTheThings = styled(Section)`
+  ${section}
+  ${layoutDark}
+  ${layoutRight}
+  ${angle('right')}
 
-const SectionContactUs = glamorous(Section)(
-  section,
-  layoutDark,
-  angle('right'),
-  {
-    ':after': {
-      display: 'none',
-    },
-    background: Theme.colors.primaryDarker,
-    '& .inner': {
-      display: 'block',
-      textAlign: 'center',
-    },
+  position: relative;
+  .right {
+    z-index: 0;
   }
-)
+  img {
+    opacity: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 0 rgba(0; 0; 0; 0.2);
+  }
+  .allthethings {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    width: 400px;
+    opacity: 0.2;
+    z-index: 0;
+  };
+`
+const SectionRankData = styled(Section)`
+  ${section}
+  ${layoutLeftHalf}
+
+  .right {
+    img {
+      opacity: 1;
+      max-width: 940px;
+      width: 140%;
+      border-radius: 5px;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+  .left {
+    p {
+      strong {
+        color: ${Theme.colors.primaryLighter};
+      }
+    }
+  }
+`
+const SectionCompetitors = styled(Section)`
+  ${section}
+  ${layoutLeft}
+  ${layoutDark}
+  ${angle('right')}
+
+  .left {
+    direction: rtl;
+    img {
+      opacity: 1;
+      max-width: 940px;
+      width: 160%;
+      border-radius: 5px;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+  .right {
+    p {
+      strong {
+        color: ${Theme.colors.primaryLighter};
+      }
+    }
+  }
+`
+const SectionDataJunkie = styled(Section)`
+  ${section}
+  ${layoutRight}
+
+  text-align: center
+  .csv, .sql {
+    flex: 1 1 30%;
+  }
+  .main {
+    flex: 1 1 34%;
+    margin: 0 3%;
+  }
+  img {
+    width: 250px;
+    max-width: 100%;
+  }
+  ${belowTablet} {
+    .csv, .sql, .main {
+      flex: 1 1 100%;
+      margin-bottom: 3rem;
+    }
+  }
+`
+const SectionSchedules = styled(Section)`
+  ${section}
+  ${layoutDark}
+  ${angle('right')}
+
+  align-items: center;
+  text-align: center;
+  p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    width: 900px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+  }
+`
+const SectionCantAfford = styled(Section)`
+  ${section}
+  ${layoutRight}
+
+  .right {
+    img {
+      opacity: 1;
+      max-width: 940px;
+      width: 140%;
+      border-radius: 5px;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+`
+
+const SectionContactUs = styled(Section)`
+  ${section}
+  ${layoutDark}
+  ${angle('right')}
+
+  background: ${Theme.colors.primaryDarker};
+
+  &:after {
+    display: none;
+  }
+
+  .inner {
+    display: block;
+    text-align: center;
+  }
+`
 
 const rankDataImages = [
   '/static/img/rank.png',
@@ -479,9 +493,11 @@ export default class Index extends Component {
             thousands more by scheduling them weekly or monthly without breaking
             the bank.
           </P>
-          <Div>
-            <Img src='/static/img/schedules.png' />
-          </Div>
+          <Centered>
+            <Div>
+              <Img src='/static/img/schedules.png' />
+            </Div>
+          </Centered>
           <Centered>
             <Link to='#contact'>
               <Button color='success' burst>

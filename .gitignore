@@ -4,3 +4,4 @@ node_modules
 public
 out
 .DS_Store
+next.config.js

@@ -1,8 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
+import { Link } from '../../routes'
 
 export default ({ to, children, ...rest }) =>
-  (<Link href={to}>
+  (<Link to={to}>
     <a {...rest}>
       {children}
     </a>

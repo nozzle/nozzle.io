@@ -46,6 +46,10 @@ export default [
     path: '/pricing',
   },
   {
+    name: 'Dev Blog',
+    path: '/devblog',
+  },
+  {
     name: 'About',
     path: '/about',
   },

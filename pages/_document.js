@@ -1,55 +1,46 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-import { css } from 'glamor'
-import { renderStatic } from 'glamor-server'
+import { ServerStyleSheet, injectGlobal } from 'styled-components'
 //
 import Theme from './utils/Theme'
 
-const globalStyles = {
-  'html, body, body > div:first-child, #__next, [data-reactroot]': {
-    minHeight: '100%',
-    width: '100%',
-  },
-  'html, body': {
-    background: Theme.colors.primaryDarker,
-    overflowX: 'hidden',
-    overflowY: 'scroll',
-  },
-  '*': {
-    boxSizing: 'border-box',
-  },
-  a: {
-    color: 'inherit',
-    textDecoration: 'none',
-  },
-  '#nprogress .bar': {
-    background: `white !important`,
-  },
-  '[data-name="mojs-shape"]': {
-    position: 'fixed !important',
-    zIndex: 99999999,
-    pointerEvents: 'none',
-  },
+injectGlobal`{
+  html, body, body > div:first-child, #__next, [data-reactroot] {
+    min-height: 100%,
+    width: 100%,
+  }
+  html, body {
+    background: ${Theme.colors.primaryDarker};
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    font-weight: ${Theme.weights.regular};
+    color: #3d556b;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  #nprogress .bar {
+    background: white !important;
+  }
+  [data-name="mojs-shape"] {
+    position: fixed !important;
+    z-index: 99999999;
+    pointer-events: none;
+  }
 }
-
-Object.keys(globalStyles).forEach(selector =>
-  css.global(selector, globalStyles[selector])
-)
+`
 
 export default class MyDocument extends Document {
-  static async getInitialProps ({ renderPage }) {
-    const page = renderPage()
-    const styles = renderStatic(() => page.html)
-    return { ...page, ...styles }
-  }
-  constructor (props) {
-    super(props)
-    const { __NEXT_DATA__, ids } = props
-    if (ids) {
-      __NEXT_DATA__.ids = this.props.ids
-    }
-  }
   render () {
+    const sheet = new ServerStyleSheet()
+    const main = sheet.collectStyles(<Main />)
+    const styleTags = sheet.getStyleElement()
     return (
       <html>
         <Head>
@@ -61,15 +52,19 @@ export default class MyDocument extends Document {
             rel='stylesheet'
           />
           <link
+            href='https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700'
+            rel='stylesheet'
+          />
+          <link
             href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
             rel='stylesheet'
           />
           <link href='/static/reset.css' rel='stylesheet' />
           <link href='/static/nprogress.css' rel='stylesheet' />
-          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          {styleTags}
         </Head>
         <body>
-          <Main />
+          {main}
           <NextScript />
         </body>
       </html>

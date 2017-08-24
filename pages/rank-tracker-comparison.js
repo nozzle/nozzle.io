@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import glamorous from 'glamorous'
+import styled, { css } from 'styled-components'
 //
 import Theme from './utils/Theme'
 import { angle } from './utils/Styles'
@@ -33,17 +33,20 @@ Competitors.forEach((d, i) => {
 //   }))
 //   .sort((a, b) => a.features[0].sectionOrder - b.features[0].sectionOrder)
 
-const section = {
-  padding: '10% 5%',
-  zIndex: 1,
-}
+const section = css`
+  padding: 10% 5%;
+  z-index: 1;
+`
 
-const SectionWhyAnother = glamorous.section(section, angle('right'), {
-  background: Theme.colors.primaryDarker,
-  color: 'white',
-})
+const SectionWhyAnother = styled.section`
+  ${section};
+  ${angle('right')};
 
-const TableSection = glamorous.section(section)
+  background: ${Theme.colors.primaryDarker};
+  color: white;
+`
+
+const TableSection = styled.section`${section};`
 
 const header = name =>
   (<tr

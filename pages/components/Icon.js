@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import glamorous from 'glamorous'
+import styled from 'styled-components'
 //
 import { color } from './Html'
 
@@ -55,16 +55,12 @@ const icons = {
   globe: 'fa fa-globe',
 }
 
-const IStyled = glamorous.i(
-  {
-    minWidth: '1em',
-    textAlign: 'center',
-  },
-  ({ size }) => ({
-    fontSize: size === 'large' ? '2em' : '1em',
-  }),
-  color
-)
+const IStyled = styled.i`
+  min-width: 1em;
+  text-align: center;
+  font-size: ${props => (props.size === 'large' ? '2em' : '1em')};
+  ${color};
+`
 
 export default function Icon ({ i, className, ...rest }) {
   const icon = icons[i]

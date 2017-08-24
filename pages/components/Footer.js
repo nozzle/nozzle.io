@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
-import glamorous from 'glamorous'
+import styled from 'styled-components'
 //
 // import { H5 } from './Html'
 import Theme from '../utils/Theme'
 
-const FooterStyles = glamorous.div({
-  position: 'relative',
-  zIndex: 1,
-  padding: 20,
-  background: Theme.colors.primary,
-  color: 'white',
-  boxShadow: '0 -10px 20px -10px rgba(0,0,0,.3)',
-  '& .copyright': {
-    textAlign: 'center',
-  },
-})
+const FooterStyles = styled.div`
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background: ${Theme.colors.primary};
+  color: white;
+  box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, .3);
+  .copyright {
+    text-align: center;
+  }
+`
 
 export default class Footer extends Component {
   render () {

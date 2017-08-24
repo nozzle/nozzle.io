@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import glamorous from 'glamorous'
+import styled from 'styled-components'
 //
 import Theme from '../utils/Theme'
 
@@ -7,35 +7,41 @@ import { button, buttonSize } from './Html'
 
 let uid = 0
 
-const Styles = glamorous.div({
-  '& fieldset': {
-    marginLeft: 'auto !important',
-    marginRight: 'auto !important',
-  },
-  '& .field': {
-    margin: '0 0 1rem 0',
-    textAlign: 'left',
-  },
-  '& label': {
-    display: 'inline-block',
-    marginBottom: '.2rem',
-  },
-  '& input': {
-    borderRadius: 3,
-    border: 0,
-    padding: '10px 15px',
-    outline: 'none',
-    maxWidth: '100%',
-    '&[type="text"], &[type="email"], &[type="tel"]': {
-      width: '100% !important',
-    },
-  },
-  '& [type="submit"]': {
-    ...button,
-    ...buttonSize({}),
-    backgroundColor: Theme.colors.success,
-  },
-})
+const Styles = styled.div`
+  fieldset {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .field {
+    margin: 0 0 1rem 0;
+    text-align: left;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: .2rem;
+  }
+
+  input {
+    border-radius: 3px;
+    border: 0;
+    padding: 10px 15px;
+    outline: none;
+    max-width: 100%;
+
+    &[type="text"],
+    &[type="email"],
+    &[type="tel"] {
+      width: 100% !important;
+    }
+  }
+
+  [type="submit"] {
+    ${button};
+    background: ${Theme.colors.success};
+  }
+`
 
 export default class HubspotForm extends Component {
   constructor () {

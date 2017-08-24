@@ -9,7 +9,7 @@ const colorOptions = {
   primaryDark: Color(primary).darken(7).toString(),
   primaryDarker: Color(primary).darken(15).toString(),
   primaryDarkest: Color(primary).darken(20).saturate(100).toString(),
-  text: '#333',
+  text: '#2b3640',
   danger: '#F15854',
   success: '#60BD68',
   warning: '#e4b000',
@@ -42,6 +42,11 @@ export default {
   colors: {
     ...colorOptions,
     options: colorOptions,
+
+    categories: {
+      'Front End': colorOptions.success,
+      Backend: colorOptions.danger,
+    },
 
     vendors: {
       bing: '#ffb900',

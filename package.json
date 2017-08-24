@@ -4,35 +4,48 @@
   "version": "1.0.0",
   "author": "Tanner Linsley <tannerlinsley@gmail.com>",
   "scripts": {
-    "start": "next",
+    "prep": "webpack && yarn download",
+    "download": "babel-node tools/Contentful.js",
+    "prestartssss": "yarn prep",
+    "start": "babel-node ./server.js --watch",
+    "prebuild": "yarn prep",
     "build": "next build && next export",
-    "preview": "yarn build && serve ./out",
+    "serve": "serve ./out",
     "test": "eslint ./pages/ ./src/"
   },
   "dependencies": {
     "axios": "^0.16.2",
     "classnames": "^2.2.5",
-    "file-loader": "^0.11.2",
-    "glamor": "^3.0.0-2",
-    "glamor-reset": "^3.0.0-2",
-    "glamor-server": "^3.0.0-2",
-    "glamorous": "^3.23.5",
+    "contentful": "^4.6.0",
+    "date-fns": "^1.28.5",
     "javascript-detect-element-resize": "^0.5.3",
     "mo-js": "^0.288.1",
-    "next": "beta",
+    "next": "^3.0.6",
+    "next-routes": "^1.0.40",
     "nprogress": "^0.2.0",
     "react": "^15.6.1",
     "react-click-outside": "^2.3.1",
     "react-dom": "^15.6.1",
-    "react-move": "^1.5.4",
-    "tinycolor2": "^1.4.1",
-    "url-loader": "^0.5.9"
+    "react-move": "^1.6.1",
+    "react-smackdown": "^0.6.0",
+    "react-syntax-highlighter": "^5.7.0",
+    "smackdown": "^0.2.0",
+    "styled-components": "2.1.0",
+    "tinycolor2": "^1.4.1"
   },
   "keywords": [],
   "license": "MIT",
   "main": "index.js",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-regenerator-runtime": "^6.5.0",
+    "babel-runtime": "^6.26.0",
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
@@ -40,7 +53,28 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
-    "gatsby-plugin-glamor": "^1.0.6",
-    "raw-loader": "^0.5.1"
+    "express": "^4.15.4",
+    "file-loader": "^0.11.2",
+    "fs-extra": "^4.0.1",
+    "raw-loader": "^0.5.1",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2",
+      "react"
+    ],
+    "plugins": [
+      [
+        "transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }
+      ]
+    ]
   }
 }

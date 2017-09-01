@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 //
-import Theme from './utils/Theme'
-import { angle } from './utils/Styles'
-import { number } from './utils/Format'
+import Theme from '../utils/Theme'
+import { angle } from '../utils/Styles'
+import { number } from '../utils/Format'
 
-import Head from './components/Head'
-import Content from './components/Content'
-import Link from './components/Link'
-import TrialForm from './components/TrialForm'
+import Head from '../components/Head'
+import Content from '../components/Content'
+import Link from '../components/Link'
+import TrialForm from '../components/TrialForm'
 import {
   Button,
   H1,
@@ -20,8 +20,8 @@ import {
   P,
   Span,
   Input,
-} from './components/Html'
-import { Container, Center } from './components/Layout'
+} from '../components/Html'
+import { Container, Center } from '../components/Layout'
 
 const plans = [
   { label: 'Spray As You Go', value: 'spray' },

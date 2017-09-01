@@ -3,7 +3,7 @@ import styled from 'styled-components'
 //
 import Theme from '../utils/Theme'
 
-import { button, buttonSize } from './Html'
+import { button } from './Html'
 
 let uid = 0
 
@@ -23,7 +23,9 @@ const Styles = styled.div`
     margin-bottom: .2rem;
   }
 
-  input {
+  input,
+  textarea {
+    font-size: 1rem;
     border-radius: 3px;
     border: 0;
     padding: 10px 15px;
@@ -35,11 +37,29 @@ const Styles = styled.div`
     &[type="tel"] {
       width: 100% !important;
     }
+
+    &[type="file"] {
+      background: rgba(0, 0, 0, .2);
+    }
+  }
+
+  textarea {
+    font-size: .85rem;
+    padding: 10px;
+    min-height: 100px;
   }
 
   [type="submit"] {
     ${button};
     background: ${Theme.colors.success};
+  }
+
+  legend {
+    font-size: .85rem;
+    line-height: 1rem;
+    padding: .5rem 0;
+    opacity: .7;
+    font-weight: 300;
   }
 `
 

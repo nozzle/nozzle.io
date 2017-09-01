@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 //
-import Color from './utils/Color'
-import Theme from './utils/Theme'
-import { angle } from './utils/Styles'
+import Color from '../utils/Color'
+import Theme from '../utils/Theme'
+import { angle } from '../utils/Styles'
 
-import Head from './components/Head'
-import Content from './components/Content'
-import Link from './components/Link'
-import NodeGarden from './components/NodeGarden'
-import TrialForm from './components/TrialForm'
+import Head from '../components/Head'
+import Content from '../components/Content'
+import Link from '../components/Link'
+import NodeGarden from '../components/NodeGarden'
+import TrialForm from '../components/TrialForm'
 import {
   H2,
   H3,
@@ -23,7 +23,7 @@ import {
   Div,
   Button,
   Strong,
-} from './components/Html'
+} from '../components/Html'
 
 const belowMobile = `@media(max-width: ${700}px)`
 const belowTablet = `@media(max-width: ${1000}px)`
@@ -271,7 +271,7 @@ const rankDataImages = [
   '/static/img/pixelheight.png',
 ]
 
-export default class Index extends Component {
+export default class Home extends Component {
   constructor () {
     super()
     this.state = {
@@ -296,9 +296,7 @@ export default class Index extends Component {
     const { rankDataImage } = this.state
     return (
       <Content>
-        <Head>
-          <title>Nozzle - Enterprise SEO Keyword Rank Tracker</title>
-        </Head>
+        <Head title='Nozzle - Enterprise SEO Keyword Rank Tracker' />
         <SectionKnowEverything>
           <NodeGarden
             color={Color('white').setAlpha(0.1).toString()}

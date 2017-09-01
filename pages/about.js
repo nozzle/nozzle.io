@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 //
-import Theme from './utils/Theme'
+import Theme from '../utils/Theme'
 
-import Link from './components/Link'
-import Head from './components/Head'
-import Content from './components/Content'
+import Link from '../components/Link'
+import Head from '../components/Head'
+import Content from '../components/Content'
 
-import { H1, H2, H3, H4, H6, P, Img } from './components/Html'
+import { H1, H2, H3, H4, H6, P, Img } from '../components/Html'
 
 const densityAnimation = keyframes`
   0%, 100% {
@@ -55,6 +55,15 @@ const delorianAnimation = keyframes`
   80%, 100% {
     transform: translateX(1200px);
     opacity: 0;
+  }
+`
+
+const delorianBehindAnimation = keyframes`
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(70px);
   }
 `
 
@@ -159,6 +168,7 @@ const AboutUsDiv = styled.div`
       width: 100%;
       text-align: center;
       margin-bottom: 10rem;
+      animation: ${delorianBehindAnimation} 4s infinite ease-in-out;
     }
     h2.roads {
       text-align: center;
@@ -371,9 +381,7 @@ export default class About extends Component {
   render () {
     return (
       <Content>
-        <Head>
-          <title>About Us</title>
-        </Head>
+        <Head title='About Us' />
         <AboutUsDiv>
           <section className='intro'>
             <div className='-background' />

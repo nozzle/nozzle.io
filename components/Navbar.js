@@ -252,8 +252,8 @@ const NavbarStyles = styled.div`
 `
 
 const LinkItem = (link, i) =>
-  (<div key={i} className='link'>
-    <Link key={i} to={link.path}>
+  (<div key={i} className='link' itemProp='name'>
+    <Link key={i} to={link.path} itemProp='url'>
       {link.name}
     </Link>
     {link.links &&
@@ -299,7 +299,11 @@ export default class Navbar extends Component {
               </div>
             </div>
             <div className='linkbar'>
-              <div className='links'>
+              <div
+                className='links'
+                itemScope
+                itemType='http://www.schema.org/SiteNavigationElement'
+              >
                 {links.map(LinkItem)}
               </div>
               <Link className='trial' to='/#contact' onClick={closeMenu}>

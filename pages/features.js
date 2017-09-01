@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 //
-import Theme from './utils/Theme'
-import Color from './utils/Color'
-import { angle } from './utils/Styles'
+import Theme from '../utils/Theme'
+import Color from '../utils/Color'
+import { angle } from '../utils/Styles'
 
-import Head from './components/Head'
-import Content from './components/Content'
-import Link from './components/Link'
-import Icon from './components/Icon'
-import TrialForm from './components/TrialForm'
+import Head from '../components/Head'
+import Content from '../components/Content'
+import Link from '../components/Link'
+import Icon from '../components/Icon'
+import TrialForm from '../components/TrialForm'
 import {
   Button,
   H2,
@@ -22,8 +22,8 @@ import {
   Ul,
   Li,
   Img,
-} from './components/Html'
-import { Container, Center } from './components/Layout'
+} from '../components/Html'
+import { Container, Center } from '../components/Layout'
 
 const below900 = '@media screen and (max-width: 900px)'
 
@@ -1220,9 +1220,7 @@ export default class Features extends Component {
   render () {
     return (
       <Content>
-        <Head>
-          <title>Nozzle Features</title>
-        </Head>
+        <Head title='Nozzle Features' />
         <FeaturesNavDiv />
         <SectionBrands id='brands' />
         <SectionCompetition id='competition' />

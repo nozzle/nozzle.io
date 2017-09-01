@@ -2,7 +2,7 @@ import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, injectGlobal } from 'styled-components'
 //
-import Theme from './utils/Theme'
+import Theme from '../utils/Theme'
 
 injectGlobal`{
   html, body, body > div:first-child, #__next, [data-reactroot] {
@@ -36,7 +36,7 @@ injectGlobal`{
 }
 `
 
-export default class MyDocument extends Document {
+export default class CustomDocument extends Document {
   render () {
     const sheet = new ServerStyleSheet()
     const main = sheet.collectStyles(<Main />)

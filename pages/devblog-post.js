@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 //
-import Theme from './utils/Theme'
-import Data from './utils/Data'
+import Theme from '../utils/Theme'
+import Data from '../utils/Data'
+import ReadTime from '../utils/ReadTime'
 
-import Icon from './components/Icon'
-import Link from './components/Link'
-import Smackdown from './components/Smackdown'
-// import Link from './components/Link'
-import Head from './components/Head'
-import Content from './components/Content'
-import { Container, Header } from './components/Layout'
-import { H3 } from './components/Html'
+import Icon from '../components/Icon'
+import Link from '../components/Link'
+import Smackdown from '../components/Smackdown'
+import Head from '../components/Head'
+import Content from '../components/Content'
+import { Container, Header } from '../components/Layout'
+import { H3 } from '../components/Html'
 
 const PostContainer = styled.div`
   .back {
@@ -53,7 +53,11 @@ const Post = styled.div`
   max-width: 100%;
 
   @media screen and (max-width: 1500px) {
-    width: 700px;
+    width: 800px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 650px;
   }
 
   @media screen and (max-width: 600px) {
@@ -79,28 +83,52 @@ export default class DevblogPost extends Component {
   }
   render () {
     const { post } = this.props
+
+    const wordCount = post.fields.body.split(' ').length
+
     return (
       <Content>
-        <Head>
-          <title>
-            {post.fields.title}
-          </title>
-        </Head>
-        <PostContainer>
+        <Head
+          title={`Devblog - ${post.fields.title}`}
+          description={post.fields.body}
+          type='article'
+          path={`/devblog/post/${post.fields.slug}`}
+          images={[post.fields.featuredImage.fields.file.url]}
+          // videos=[]
+          date={post.sys.createdAt}
+          categories={post.fields.category[0].fields.title}
+          tags={post.fields.tags}
+          author={post.fields.author[0].fields.name}
+          // seriesPermalinks={[]}
+          wordCount={wordCount}
+        />
+        <PostContainer itemscope='' itemtype='http://schema.org/BlogPosting'>
           <Header>
             <Link to='/devblog' className='back'>
               <Icon i='arrow-left' /> Back to Devblog
             </Link>
-            <H3>
+            <H3 itemProp='name headline'>
               {post.fields.title}
             </H3>
             <div className='info'>
               {post.fields.author.map(author =>
-                (<span key={author.fields.name}>
-                  {author.fields.name}
+                (<span
+                  itemProp='author'
+                  itemScope=''
+                  itemType='http://schema.org/Person'
+                  key={author.fields.name}
+                >
+                  <span itemProp='name'>
+                    {/* <a itemProp="url" rel="author" /> */}
+                    {author.fields.name}
+                  </span>
                 </span>)
               )}{' '}
-              on {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')}
+              on{' '}
+              <time dateTime={post.sys.createdAt} itemProp='datePublished'>
+                {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')}
+              </time>{' '}
+              &bull; {ReadTime(wordCount)} min read
             </div>
             <div className='categories'>
               {post.fields.category.map(category =>
@@ -117,7 +145,7 @@ export default class DevblogPost extends Component {
             </div>
           </Header>
           <Container>
-            <Post>
+            <Post itemProp='articleBody'>
               <Smackdown source={post.fields.body} />
             </Post>
           </Container>

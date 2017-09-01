@@ -28,9 +28,9 @@
     "react-click-outside": "^2.3.1",
     "react-dom": "^15.6.1",
     "react-move": "^1.6.1",
-    "react-smackdown": "^0.6.0",
+    "react-showdown": "^1.6.0",
+    "react-smackdown": "^0.6.3",
     "react-syntax-highlighter": "^5.7.0",
-    "smackdown": "^0.2.0",
     "styled-components": "2.1.0",
     "tinycolor2": "^1.4.1"
   },
@@ -63,9 +63,15 @@
     "webpack-node-externals": "^1.6.0"
   },
   "babel": {
-    "presets": ["env", "stage-2", "react"],
+    "presets": [
+      "env",
+      "stage-2",
+      "react"
+    ],
     "plugins": [
-      ["codegen"],
+      [
+        "codegen"
+      ],
       [
         "transform-runtime",
         {

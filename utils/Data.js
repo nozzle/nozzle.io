@@ -1,3 +1,3 @@
 export default async function Data () {
-  return require('../../data.json')
+  return require('../data.json')
 }

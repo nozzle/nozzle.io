@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 //
-import Data from './utils/Data'
+import Data from '../utils/Data'
 
-import Link from './components/Link'
-import Head from './components/Head'
-import Content from './components/Content'
-import { Container, Header, SubMenu } from './components/Layout'
-import { H1 } from './components/Html'
-import PostList from './components/PostList'
+import Link from '../components/Link'
+import Head from '../components/Head'
+import Content from '../components/Content'
+import { Container, Header, SubMenu } from '../components/Layout'
+import { H1 } from '../components/Html'
+import PostList from '../components/PostList'
 
 const BlogContainer = styled(Container)`
   background: rgba(0,0,0,.02);
@@ -35,9 +35,7 @@ export default class DevblogCategory extends Component {
     const category = categories.find(d => d.fields.slug === slug)
     return (
       <Content>
-        <Head>
-          <title>Nozzle Dev Blog</title>
-        </Head>
+        <Head title={`Dev Blog ${category.fields.title}`} />
         <Header>
           <H1>
             Devblog - {category.fields.title}

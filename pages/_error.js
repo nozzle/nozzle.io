@@ -1,9 +1,9 @@
 import React from 'react'
 import Error from 'next/error'
 //
-import Content from './components/Content'
+import Content from '../components/Content'
 
-export default class Page extends React.Component {
+export default class CustomError extends React.Component {
   render () {
     return (
       <Content>

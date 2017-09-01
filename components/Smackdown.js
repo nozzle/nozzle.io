@@ -18,74 +18,42 @@ const syntax = {
 }
 
 const standardOverrides = {
-  pre: {
-    component: Pre,
-  },
-  h1: {
-    component: H3,
-  },
-  h2: {
-    component: H4,
-  },
-  h3: {
-    component: H5,
-  },
-  h4: {
-    component: H6,
-  },
-  h5: {
-    component: H6,
-  },
-  h6: {
-    component: H6,
-  },
-  p: {
-    component: P,
-  },
-  img: {
-    component: Img,
-  },
+  pre: Pre,
+  h1: H3,
+  h2: H4,
+  h3: H5,
+  h4: H6,
+  h5: H6,
+  h6: H6,
+  p: P,
+  img: Img,
 }
 
 const microOverrides = {
-  pre: {
-    component: Pre,
-  },
-  h1: {
-    component: P,
-  },
-  h2: {
-    component: P,
-  },
-  h3: {
-    component: P,
-  },
-  h4: {
-    component: P,
-  },
-  h5: {
-    component: P,
-  },
-  h6: {
-    component: P,
-  },
-  p: {
-    component: P,
-  },
-  img: {
-    component: () => null,
-  },
+  pre: Pre,
+  h1: P,
+  h2: P,
+  h3: P,
+  h4: P,
+  h5: P,
+  h6: P,
+  p: P,
+  img: Img,
 }
 
 const El = ({ micro, source, ...rest }) =>
-  console.log(source.replace(/<iframe.+<\/iframe>/, '')) ||
-  <div {...rest}>
+  (<div {...rest}>
     <Smackdown
       syntax={syntax}
-      source={micro ? source.replace(/<iframe.+(<\/iframe>|>)/, '') : source}
-      overrides={micro ? microOverrides : standardOverrides}
+      source={
+        micro
+          ? source.replace(/<iframe.*(<\/iframe>|>)/gm, '').substring(0, 400) +
+            '...'
+          : source
+      }
+      components={micro ? microOverrides : standardOverrides}
     />
-  </div>
+  </div>)
 
 export default styled(El)`
   iframe {

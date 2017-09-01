@@ -9,7 +9,7 @@ if (typeof window !== 'undefined') {
   mo = require('mo-js')
 }
 
-const margin = css`margin: 0 0 1rem;`
+const margin = css`margin: 0 auto 1rem;`
 const inline = css`display: inline;`
 
 export const button = css`
@@ -95,16 +95,24 @@ export const P = styled.p`
   ${margin} ${color} ${weight} font-size: 1rem;
   line-height: 1.2rem;
 `
-export const Strong = styled.strong`${inline} ${color} ${weight};`
+export const Strong = styled.strong`${inline} ${color} font-weight: bold;`
 export const Span = styled.span`${inline} ${color} ${weight};`
 export const Div = styled.div`${margin} ${full} ${color} ${weight};`
-export const Img = styled.img`max-width: 100%;`
+export const Img = styled(({ children, ...rest }) =>
+  <img {...rest} />
+)`max-width: 100%;`
+
 export const Ul = styled.ul`
-  ${margin} padding-left: 20;
+  ${margin} padding-left: 2rem;
   list-style-type: disc;
   text-align: left;
 `
-export const Li = styled.li`${color} margin-bottom: 5;`
+export const Ol = styled.ol`
+  ${margin} padding-left: 2rem;
+  list-style-type: decimal;
+  text-align: left;
+`
+export const Li = styled.li`${color} margin-bottom: .5rem;`
 
 // Button
 const ButtonStyled = styled.button`${button} ${backgroundColor} ${buttonSize};`
@@ -237,3 +245,11 @@ export const Pre = styled.pre`
 `
 
 export const Em = styled.em`font-style: italic;`
+
+export const Iframe = styled.iframe`
+  width: 100%;
+  border: 0;
+  resize: vertical;
+  min-height: 50px;
+  height: 500px;
+`

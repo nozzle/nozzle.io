@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 //
-import Theme from './utils/Theme'
-import { angle } from './utils/Styles'
+import Theme from '../utils/Theme'
+import { angle } from '../utils/Styles'
 
-import Head from './components/Head'
-import Content from './components/Content'
-import Link from './components/Link'
-import Icon from './components/Icon'
-import { H1, H2, P, Strong, Table } from './components/Html'
-import { Container, Center } from './components/Layout'
+import Head from '../components/Head'
+import Content from '../components/Content'
+import Link from '../components/Link'
+import Icon from '../components/Icon'
+import { H1, H2, P, Strong, Table } from '../components/Html'
+import { Container, Center } from '../components/Layout'
 
-import Competitors from './data/competitors'
+import Competitors from '../data/competitors'
 
 const sectionedCompetitors = []
 Competitors.forEach((d, i) => {
@@ -67,13 +67,11 @@ const header = name =>
     <td>Agency Analytics</td>
   </tr>)
 
-export default class About extends Component {
+export default class RankTrackerComparison extends Component {
   render () {
     return (
       <Content>
-        <Head>
-          <title>Why Us? - A rank tracker comparison</title>
-        </Head>
+        <Head title='Why Us? - A rank tracker comparison' />
         <SectionWhyAnother>
           <Container>
             <Center>

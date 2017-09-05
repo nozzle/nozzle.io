@@ -26,7 +26,7 @@ const trialAnimation = keyframes`
   }
 `
 
-const NavbarStyles = styled.div`
+const NavbarStyles = styled.nav`
     position: fixed;
     background: linear-gradient(to left, ${Theme.colors.primary}, ${Theme.colors
   .primaryLight});
@@ -176,13 +176,15 @@ const NavbarStyles = styled.div`
         }
       }
 
-      > a {
-        display: block;
-        padding: 16px 10px;
-        transition: all .2s ease-out;
+      > div {
+        > a {
+          display: block;
+          padding: 16px 10px;
+          transition: all .2s ease-out;
 
-        ${belowBreakpoint} {
-          border-bottom: 1px solid rgba(255,255,255,.05);
+          ${belowBreakpoint} {
+            border-bottom: 1px solid rgba(255,255,255,.05);
+          }
         }
       }
     }
@@ -252,10 +254,12 @@ const NavbarStyles = styled.div`
 `
 
 const LinkItem = (link, i) =>
-  (<div key={i} >
-    <Link key={i} to={link.path} className='link' itemProp='name url'>
-      {link.name}
-    </Link>
+  (<div key={i} className='link'>
+    <div itemProp='name'>
+      <Link key={i} to={link.path} itemProp='url'>
+        {link.name}
+      </Link>
+    </div>
     {link.links &&
       <div className='links-nested'>
         {link.links.map(LinkItem)}

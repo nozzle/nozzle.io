@@ -117,7 +117,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
   exportPathMap: function () {
-    var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {
+    var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
       var paths, _ref2, posts, authors, categories;
 
       return _regenerator2.default.wrap(function _callee$(_context) {
@@ -143,26 +143,26 @@ exports.default = {
 
 
               // Posts
-              posts.forEach(function (post) {
-                paths['/devblog/post/' + post.fields.slug] = {
+              posts.forEach(function (d) {
+                paths['/devblog/post/' + d.fields.slug] = {
                   page: '/devblog-post',
-                  query: { slug: post.fields.slug }
+                  query: { slug: d.fields.slug }
                 };
               });
 
-              // // Categories
-              // categories.forEach(post => {
-              //   paths[`/devblog/category/${post.fields.slug}`] = {
-              //     page: '/post',
-              //     query: { post },
-              //   }
-              // })
-              //
+              // Categories
+              categories.forEach(function (d) {
+                paths['/devblog/category/' + d.fields.slug] = {
+                  page: '/devblog-category',
+                  query: { slug: d.fields.slug }
+                };
+              });
+
               // // Authors
-              // authors.forEach(post => {
-              //   paths[`/devblog/author/${post.fields.slug}`] = {
-              //     page: '/post',
-              //     query: { post },
+              // authors.forEach(d => {
+              //   paths[`/devblog/author/${d.fields.slug}`] = {
+              //     page: '/devblog-author',
+              //     query: { slug: d.fields.slug },
               //   }
               // })
 
@@ -202,7 +202,7 @@ var _asyncToGenerator2 = __webpack_require__(1);
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
 var fetch = function () {
-  var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {
+  var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
     var authors, categories, posts, allData;
     return _regenerator2.default.wrap(function _callee$(_context) {
       while (1) {
@@ -256,7 +256,7 @@ var fetch = function () {
 }();
 
 var fetchAuthors = function () {
-  var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2() {
+  var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
     var _ref3, items;
 
     return _regenerator2.default.wrap(function _callee2$(_context2) {
@@ -288,7 +288,7 @@ var fetchAuthors = function () {
 }();
 
 var fetchCategories = function () {
-  var _ref4 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee3() {
+  var _ref4 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee3() {
     var _ref5, items;
 
     return _regenerator2.default.wrap(function _callee3$(_context3) {
@@ -320,7 +320,7 @@ var fetchCategories = function () {
 }();
 
 var fetchPosts = function () {
-  var _ref6 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee4() {
+  var _ref6 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee4() {
     var _ref7, items;
 
     return _regenerator2.default.wrap(function _callee4$(_context4) {

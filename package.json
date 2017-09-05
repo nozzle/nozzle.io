@@ -1,5 +1,5 @@
 {
-  "name": "kckrs",
+  "name": "nozzle-website",
   "description": "",
   "version": "1.0.0",
   "author": "Tanner Linsley <tannerlinsley@gmail.com>",
@@ -20,18 +20,19 @@
     "contentful": "^4.6.0",
     "date-fns": "^1.28.5",
     "javascript-detect-element-resize": "^0.5.3",
-    "mo-js": "^0.288.1",
-    "next": "^3.0.6",
+    "mo-js": "^0.288.2",
+    "next": "^3.2.1",
     "next-routes": "^1.0.40",
     "nprogress": "^0.2.0",
+    "raf": "^3.3.2",
     "react": "^15.6.1",
     "react-click-outside": "^2.3.1",
     "react-dom": "^15.6.1",
-    "react-move": "^1.6.1",
+    "react-move": "^2.0.0",
     "react-showdown": "^1.6.0",
-    "react-smackdown": "^0.6.3",
+    "react-smackdown": "^0.6.4",
     "react-syntax-highlighter": "^5.7.0",
-    "styled-components": "2.1.0",
+    "styled-components": "^2.1.2",
     "tinycolor2": "^1.4.1"
   },
   "keywords": [],
@@ -64,7 +65,7 @@
   },
   "babel": {
     "presets": [
-      "env",
+      "es2015",
       "stage-2",
       "react"
     ],

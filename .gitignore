@@ -5,3 +5,4 @@ public
 out
 .DS_Store
 next.config.js
+tools/lib.js

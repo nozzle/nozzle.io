@@ -80,41 +80,46 @@ export default function PostList ({ blog, posts }) {
         const wordCount = post.fields.body.split(' ').length
         return (
           <Post to={`/${blog}/post/${post.fields.slug}`} key={post.fields.slug}>
-            <div className='title'>
-              {post.fields.title}
-            </div>
-            <div className='info'>
-              {post.fields.author.map(author =>
-                (<span key={author.fields.name}>
-                  {author.fields.name}
-                </span>)
-              )}{' '}
-              on {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')} &bull;{' '}
-              {ReadTime(wordCount)} min read
-            </div>
-            <div className='categories'>
-              {post.fields.category.map(category =>
-                (<span
-                  className='category'
-                  key={category.fields.slug}
-                  style={{
-                    background: Theme.colors.categories[category.fields.title],
-                  }}
-                >
-                  {category.fields.title}
-                </span>)
-              )}
-            </div>
-            <div className='summary'>
-              <div className='content'>
-                <Smackdown micro source={post.fields.body} />
+            <article>
+              <header>
+                <h2 className='title'>
+                  {post.fields.title}
+                </h2>
+                <div className='info'>
+                  {post.fields.author.map(author =>
+                    (<span key={author.fields.name}>
+                      {author.fields.name}
+                    </span>)
+                  )}{' '}
+                  on {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')}{' '}
+                  &bull; {ReadTime(wordCount)} min read
+                </div>
+                <div className='categories'>
+                  {post.fields.category.map(category =>
+                    (<span
+                      className='category'
+                      key={category.fields.slug}
+                      style={{
+                        background:
+                          Theme.colors.categories[category.fields.title],
+                      }}
+                    >
+                      {category.fields.title}
+                    </span>)
+                  )}
+                </div>
+              </header>
+              <div className='summary'>
+                <div className='content'>
+                  <Smackdown micro source={post.fields.body} />
+                </div>
+                <div className='more'>
+                  <Button size='sm' burst>
+                    Read More
+                  </Button>
+                </div>
               </div>
-              <div className='more'>
-                <Button size='sm' burst>
-                  Read More
-                </Button>
-              </div>
-            </div>
+            </article>
           </Post>
         )
       })}

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Theme from '../../../utils/Theme'
 
 import HubspotForm from '../../../components/HubspotForm'
-import Content from '../../../components/Content'
+import Page from '../../../components/Page'
 import Head from '../../../components/Head'
 import { Container } from '../../../components/Layout'
 import { H1, H4, Ol, Li, Strong } from '../../../components/Html'
@@ -40,7 +40,7 @@ const Styles = styled(Container)`
 `
 
 export default () =>
-  (<Content>
+  (<Page>
     <Head title='Get started with your 2 week free trial!' />
     <Styles>
       <H1>Better Organic Search, Coming Right Up!</H1>
@@ -68,4 +68,4 @@ export default () =>
         }}
       />
     </Styles>
-  </Content>)
+  </Page>)

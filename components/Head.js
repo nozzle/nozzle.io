@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Info from '../utils/Info'
 
 const {
+  siteRoot,
   siteURL,
   siteTitle,
   siteFacebookAdmins,
@@ -38,6 +39,9 @@ export default ({
         <title>
           {title}
         </title>}
+
+      {/* Generic */}
+      {path && <link rel='canonical' href={`${siteRoot}${path}/`} />}
 
       {/* Required Open Graph Info */}
       {title && <meta property='og:title' content={title} />}

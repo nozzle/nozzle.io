@@ -5,7 +5,8 @@ import Data from '../utils/Data'
 
 import Link from '../components/Link'
 import Head from '../components/Head'
-import Content from '../components/Content'
+import Page from '../components/Page'
+import Main from '../components/Main'
 import { Container, Header, SubMenu } from '../components/Layout'
 import { H1 } from '../components/Html'
 import PostList from '../components/PostList'
@@ -32,26 +33,28 @@ export default class Devblog extends Component {
   render () {
     const { posts, categories } = this.props
     return (
-      <Content>
+      <Page>
         <Head title='Nozzle Dev Blog' />
-        <Header>
-          <H1>Devblog</H1>
-          <SubMenu>
-            <ul>
-              {categories.map(category =>
-                (<li key={category.fields.slug}>
-                  <Link to={`/devblog/category/${category.fields.slug}`}>
-                    {category.fields.title}
-                  </Link>
-                </li>)
-              )}
-            </ul>
-          </SubMenu>
-        </Header>
-        <BlogContainer>
-          <PostList blog='devblog' posts={posts} />
-        </BlogContainer>
-      </Content>
+        <Main>
+          <Header>
+            <H1>Devblog</H1>
+            <SubMenu>
+              <ul>
+                {categories.map(category =>
+                  (<li key={category.fields.slug}>
+                    <Link to={`/devblog/category/${category.fields.slug}`}>
+                      {category.fields.title}
+                    </Link>
+                  </li>)
+                )}
+              </ul>
+            </SubMenu>
+          </Header>
+          <BlogContainer>
+            <PostList blog='devblog' posts={posts} />
+          </BlogContainer>
+        </Main>
+      </Page>
     )
   }
 }

@@ -1,9 +1,16 @@
 import React from 'react'
 import { Link } from '../routes'
 
-export default ({ to, children, ...rest }) =>
-  (<Link to={to}>
-    <a {...rest}>
-      {children}
-    </a>
-  </Link>)
+import Info from '../utils/Info'
+
+export default ({ to, children, ...rest }) => {
+  const href = to.substring(0, 1) === '/' ? `${Info.siteRoot}${to}` : to
+
+  return (
+    <Link to={to}>
+      <a href={`${href}`} {...rest}>
+        {children}
+      </a>
+    </Link>
+  )
+}

@@ -234,7 +234,11 @@ export const Table = styled(TableCmp)`
   }
 `
 
-export const Pre = styled.pre`
+export const Pre = styled(({ children, ...rest }) =>
+  (<pre itemType='http://schema.org/Code' {...rest}>
+    {children}
+  </pre>)
+)`
   font-family: Monaco, Courier, monospace;
   font-size: .8rem;
   line-height: 1.1rem;

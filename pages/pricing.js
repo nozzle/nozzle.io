@@ -6,7 +6,8 @@ import { angle } from '../utils/Styles'
 import { number } from '../utils/Format'
 
 import Head from '../components/Head'
-import Content from '../components/Content'
+import Page from '../components/Page'
+import Main from '../components/Main'
 import Link from '../components/Link'
 import TrialForm from '../components/TrialForm'
 import {
@@ -701,17 +702,19 @@ const SectionContactUs = styled(SectionContactUsCmp)`
 export default class Features extends Component {
   render () {
     return (
-      <Content>
+      <Page>
         <Head>
           <title>Nozzle Features</title>
         </Head>
-        <SectionIntro />
-        <SectionPlans id='plans' />
-        <SectionSpray id={plans[0].value} />
-        <SectionFaq id='faq' />
-        <SectionCalculator id='calculator' />
-        <SectionContactUs id='trial' />
-      </Content>
+        <Main>
+          <SectionIntro />
+          <SectionPlans id='plans' />
+          <SectionSpray id={plans[0].value} />
+          <SectionFaq id='faq' />
+          <SectionCalculator id='calculator' />
+          <SectionContactUs id='trial' />
+        </Main>
+      </Page>
     )
   }
 }

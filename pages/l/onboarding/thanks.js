@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 //
-import Content from '../../../components/Content'
+import Page from '../../../components/Page'
 import Head from '../../../components/Head'
 import { Container } from '../../../components/Layout'
 import { H1, P, Iframe } from '../../../components/Html'
@@ -27,7 +27,7 @@ const Styles = styled(Container)`
 `
 
 export default () =>
-  (<Content>
+  (<Page>
     <Head title='Thanks for signing up!' />
     <Styles>
       <H1>Go data robots! GO!</H1>
@@ -39,4 +39,4 @@ export default () =>
 
       <Iframe src='https://calendly.com/derekperkins/onboarding' />
     </Styles>
-  </Content>)
+  </Page>)

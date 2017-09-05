@@ -6,7 +6,8 @@ import Color from '../utils/Color'
 import { angle } from '../utils/Styles'
 
 import Head from '../components/Head'
-import Content from '../components/Content'
+import Page from '../components/Page'
+import Main from '../components/Main'
 import Link from '../components/Link'
 import Icon from '../components/Icon'
 import TrialForm from '../components/TrialForm'
@@ -28,7 +29,7 @@ import { Container, Center } from '../components/Layout'
 const below900 = '@media screen and (max-width: 900px)'
 
 const FeaturesNav = props =>
-  (<div {...props}>
+  (<nav {...props}>
     <div className='inner'>
       <ul data-gumshoe>
         <li>
@@ -54,7 +55,7 @@ const FeaturesNav = props =>
         </li>
       </ul>
     </div>
-  </div>)
+  </nav>)
 
 const FeaturesNavDiv = styled(FeaturesNav)`
   position: fixed;
@@ -1219,18 +1220,20 @@ const SectionContactUs = styled(SectionContactUsCmp)`
 export default class Features extends Component {
   render () {
     return (
-      <Content>
+      <Page>
         <Head title='Nozzle Features' />
-        <FeaturesNavDiv />
-        <SectionBrands id='brands' />
-        <SectionCompetition id='competition' />
-        <SectionScheduling id='scheduling' />
-        <SectionData id='data' />
-        <SectionAgencies id='agencies' />
-        <SectionReputation id='reputation' />
-        <SectionIntegrations id='integrations' />
-        <SectionContactUs id='trial' />
-      </Content>
+        <Main>
+          <FeaturesNavDiv />
+          <SectionBrands id='brands' />
+          <SectionCompetition id='competition' />
+          <SectionScheduling id='scheduling' />
+          <SectionData id='data' />
+          <SectionAgencies id='agencies' />
+          <SectionReputation id='reputation' />
+          <SectionIntegrations id='integrations' />
+          <SectionContactUs id='trial' />
+        </Main>
+      </Page>
     )
   }
 }

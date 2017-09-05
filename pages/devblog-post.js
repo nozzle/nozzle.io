@@ -6,13 +6,19 @@ import Theme from '../utils/Theme'
 import Data from '../utils/Data'
 import ReadTime from '../utils/ReadTime'
 
+import Page from '../components/Page'
+import Head from '../components/Head'
+import Main from '../components/Main'
 import Icon from '../components/Icon'
 import Link from '../components/Link'
 import Smackdown from '../components/Smackdown'
-import Head from '../components/Head'
-import Content from '../components/Content'
 import { Container, Header } from '../components/Layout'
-import { H3 } from '../components/Html'
+import { H1 } from '../components/Html'
+
+const PostH1 = styled(H1)`
+  font-size: ${Theme.sizes.h3}rem;
+  line-height: ${Theme.sizes.h3 * 1.2}rem
+`
 
 const PostContainer = styled.div`
   .back {
@@ -87,7 +93,7 @@ export default class DevblogPost extends Component {
     const wordCount = post.fields.body.split(' ').length
 
     return (
-      <Content>
+      <Page>
         <Head
           title={`Devblog - ${post.fields.title}`}
           description={post.fields.body}
@@ -102,55 +108,58 @@ export default class DevblogPost extends Component {
           // seriesPermalinks={[]}
           wordCount={wordCount}
         />
-        <PostContainer itemScope='' itemType='http://schema.org/BlogPosting'>
-          <Header>
-            <Link to='/devblog' className='back'>
-              <Icon i='arrow-left' /> Back to Devblog
-            </Link>
-            <H3 itemProp='name headline'>
-              {post.fields.title}
-            </H3>
-            <div className='info'>
-              {post.fields.author.map(author =>
-                (<span
-                  itemProp='author'
-                  itemScope=''
-                  itemType='http://schema.org/Person'
-                  key={author.fields.name}
-                >
-                  <span itemProp='name'>
-                    {/* <a itemProp="url" rel="author" /> */}
-                    {author.fields.name}
-                  </span>
-                </span>)
-              )}{' '}
-              on{' '}
-              <time dateTime={post.sys.createdAt} itemProp='datePublished'>
-                {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')}
-              </time>{' '}
-              &bull; {ReadTime(wordCount)} min read
-            </div>
-            <div className='categories'>
-              {post.fields.category.map(category =>
-                (<span
-                  className='category'
-                  key={category.fields.slug}
-                  style={{
-                    background: Theme.colors.categories[category.fields.title],
-                  }}
-                >
-                  {category.fields.title}
-                </span>)
-              )}
-            </div>
-          </Header>
-          <Container>
-            <Post itemProp='articleBody'>
-              <Smackdown source={post.fields.body} />
-            </Post>
-          </Container>
-        </PostContainer>
-      </Content>
+        <Main>
+          <PostContainer itemScope itemType='http://schema.org/BlogPosting'>
+            <Header>
+              <Link to='/devblog' className='back'>
+                <Icon i='arrow-left' /> Back to Devblog
+              </Link>
+              <PostH1 itemProp='name headline'>
+                {post.fields.title}
+              </PostH1>
+              <div className='info'>
+                {post.fields.author.map(author =>
+                  (<span
+                    itemScope
+                    itemProp='author'
+                    itemType='http://schema.org/Person'
+                    key={author.fields.name}
+                  >
+                    <span itemProp='name'>
+                      {/* <a itemProp="url" rel="author" /> */}
+                      {author.fields.name}
+                    </span>
+                  </span>)
+                )}{' '}
+                on
+                <time dateTime={post.sys.updatedAt} itemProp='dateModified'>
+                  {format(new Date(post.sys.updatedAt), 'MMM DD, YYYY')}
+                </time>{' '}
+                &bull; {ReadTime(wordCount)} min read
+                <time dateTime={post.sys.createdAt} itemProp='datePublished' />
+              </div>
+              <div className='categories'>
+                {post.fields.category.map(category =>
+                  (<span
+                    className='category'
+                    key={category.fields.slug}
+                    style={{
+                      background: Theme.colors.categories[category.fields.title],
+                    }}
+                  >
+                    {category.fields.title}
+                  </span>)
+                )}
+              </div>
+            </Header>
+            <Container>
+              <Post itemProp='articleBody'>
+                <Smackdown source={post.fields.body} />
+              </Post>
+            </Container>
+          </PostContainer>
+        </Main>
+      </Page>
     )
   }
 }

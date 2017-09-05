@@ -26,7 +26,7 @@ const trialAnimation = keyframes`
   }
 `
 
-const NavbarStyles = styled.nav`
+const NavbarStyles = styled.header`
     position: fixed;
     background: linear-gradient(to left, ${Theme.colors.primary}, ${Theme.colors
   .primaryLight});
@@ -50,6 +50,9 @@ const NavbarStyles = styled.nav`
       width: 120px;
       margin: 10px 0 5px 10px;
       transition: all .3s ease;
+      span {
+        display: none;
+      }
       img {
         width: 100%;
         height: auto;
@@ -285,8 +288,16 @@ export default class Navbar extends Component {
       <ClickOutside onClickOutside={closeMenu}>
         <NavbarStyles isMenuOpen={isMenuOpen}>
           <div className='inner'>
-            <Link className='logo' to='/'>
-              <img src='/static/img/logo-small.svg' />
+            <Link
+              className='logo'
+              to='/'
+              itemScope
+              itemType='http://schema.org/Organization'
+            >
+              <span itemProp='url' href='https://nozzle.io/'>
+                Home
+              </span>
+              <img src='/static/img/logo-small.svg' itemProp='logo' />
             </Link>
             <div
               className='menuToggle'
@@ -302,7 +313,7 @@ export default class Navbar extends Component {
                 <span />
               </div>
             </div>
-            <div className='linkbar'>
+            <nav className='linkbar'>
               <div
                 className='links'
                 itemScope
@@ -315,7 +326,7 @@ export default class Navbar extends Component {
                   Start Trial
                 </Button>
               </Link>
-            </div>
+            </nav>
           </div>
         </NavbarStyles>
       </ClickOutside>

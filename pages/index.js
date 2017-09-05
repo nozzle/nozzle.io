@@ -6,7 +6,8 @@ import Theme from '../utils/Theme'
 import { angle } from '../utils/Styles'
 
 import Head from '../components/Head'
-import Content from '../components/Content'
+import Page from '../components/Page'
+import Main from '../components/Main'
 import Link from '../components/Link'
 import NodeGarden from '../components/NodeGarden'
 import TrialForm from '../components/TrialForm'
@@ -295,252 +296,255 @@ export default class Home extends Component {
   render () {
     const { rankDataImage } = this.state
     return (
-      <Content>
+      <Page>
         <Head title='Nozzle - Enterprise SEO Keyword Rank Tracker' />
-        <SectionKnowEverything>
-          <NodeGarden
-            color={Color('white').setAlpha(0.1).toString()}
-            style={{
-              position: 'absolute',
-              top: '0px',
-              left: '0px',
-              zIndex: -1,
-            }}
-          />
-          <Left>
-            <H2>Know everything Google knows</H2>
-            <H4>And deal with it.</H4>
-            <P>
-              If you want access to more enterprise level SERP data than any
-              tool has ever offered, you've come to the right place
-            </P>
-            <Link to='#contact'>
-              <Button color='success' burst>
-                I'd like a demo!
-              </Button>
-            </Link>
-          </Left>
-          <Right>
-            <Img src='/static/img/dashboard.png' />
-          </Right>
-        </SectionKnowEverything>
-        <SectionTrackAllTheThings>
-          <Img
-            className='allthethings'
-            src='/static/img/allthethings-white.png'
-          />
-          <Left>
-            <Centered>
-              <H4>Don't just track the top result.</H4>
-            </Centered>
-            <Div>
-              <Img src='/static/img/cnn-small.png' />
-            </Div>
-            <Div>
+        <Main>
+          <SectionKnowEverything>
+            <NodeGarden
+              color={Color('white').setAlpha(0.1).toString()}
+              style={{
+                position: 'absolute',
+                top: '0px',
+                left: '0px',
+                zIndex: -1,
+              }}
+            />
+            <Left>
+              <H2>Know everything Google knows</H2>
+              <H4>And deal with it.</H4>
+              <P>
+                If you want access to more enterprise level SERP data than any
+                tool has ever offered, you've come to the right place
+              </P>
+              <Link to='#contact'>
+                <Button color='success' burst>
+                  I'd like a demo!
+                </Button>
+              </Link>
+            </Left>
+            <Right>
+              <Img src='/static/img/dashboard.png' />
+            </Right>
+          </SectionKnowEverything>
+          <SectionTrackAllTheThings>
+            <Img
+              className='allthethings'
+              src='/static/img/allthethings-white.png'
+            />
+            <Left>
               <Centered>
-                <H4>Get unlimited access to the entire SERP</H4>
+                <H4>Don't just track the top result.</H4>
               </Centered>
-            </Div>
-            <Img src='/static/img/cnn.png' />
-          </Left>
-          <Right>
-            <H2>Track all the things!</H2>
+              <Div>
+                <Img src='/static/img/cnn-small.png' />
+              </Div>
+              <Div>
+                <Centered>
+                  <H4>Get unlimited access to the entire SERP</H4>
+                </Centered>
+              </Div>
+              <Img src='/static/img/cnn.png' />
+            </Left>
+            <Right>
+              <H2>Track all the things!</H2>
+              <P>
+                Most tools just tell you the top ranking page on your domain. We
+                monitor your entire brand, including social media profiles and
+                unlimited domain matches. There's a difference between knowing
+                you're ranking #1 and owning the entire first page!
+              </P>
+              <P>
+                Unlimited access doesn't just refer to today's SERP. We keep all
+                your data FOREVER, so 3 years from now, you'll be able to look
+                back and see what was ranking for "Pokemon Go" in 2016. :)
+              </P>
+              <Link to='#contact'>
+                <Button color='success' burst>
+                  Start tracking today!
+                </Button>
+              </Link>{' '}
+              <Link to='/features'>
+                <Button color='primary' burst>
+                  How does it work?
+                </Button>
+              </Link>
+            </Right>
+          </SectionTrackAllTheThings>
+          <SectionRankData>
+            <Left>
+              <H2 color='primaryDark'>Rank data you can only find at Nozzle</H2>
+              <H5 weight='regular'>
+                Track results by{' '}
+                <Strong>Rank, Ad Adjusted Rank, Pixel Height</Strong> and more!
+              </H5>
+              <P>
+                With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean
+                what it used to. Nozzle won’t just tell you where you rank,
+                we’ll tell you your ad adjusted rank, how many pixels down the
+                page you are, whether a knowledge graph appeared and even what
+                your prospective customer ate for breakfast.
+              </P>
+              <P>
+                We include <Strong>over 350+ data points</Strong> for{' '}
+                <Strong>every result on the serp</Strong> - no extra cost!
+              </P>
+              <Ul>
+                <Li>search volume</Li>
+                <Li>estimated traffic</Li>
+                <Li>social shares</Li>
+                <Li>Moz PA / DA</Li>
+                <Li>inbound links</Li>
+                <Li>product ad pricing</Li>
+                <Li>sitelinks</Li>
+                <Li>star ratings</Li>
+                <Li>but wait, there's more...</Li>
+              </Ul>
+              <p />
+              <Link to='/features/#data'>
+                <Button burst>See the complete list</Button>
+              </Link>{' '}
+              <Link to='#contact'>
+                <Button color='success' burst>
+                  Get the datas!
+                </Button>
+              </Link>
+            </Left>
+            <Right>
+              <Img src={rankDataImage} />
+              {rankDataImages.map(img =>
+                <Img key={img} src={img} style={{ display: 'none' }} />
+              )}
+            </Right>
+          </SectionRankData>
+          <SectionCompetitors>
+            <Left>
+              <Img src='/static/img/groupBy.png' />
+            </Left>
+            <Right>
+              <H3>
+                Squash your competitors... even the ones you don't know about
+                yet
+              </H3>
+              <H5 weight='regular'>
+                See share of voice by{' '}
+                <Strong color='primaryLighter'>
+                  Domain, Subdomain, URL, and Brand
+                </Strong>
+              </H5>
+              <P>
+                Nozzle lets you track <Strong>unlimited competitors</Strong>, no
+                questions asked. Heck, we'll let you track as much as you can
+                handle. The SERP is yours to command!
+              </P>
+              <P>
+                If you find a new competitor you haven't been tracking, add them
+                and we'll even rewrite history for you. It'll be like you were
+                monitoring them from the start!
+              </P>
+              <Link to='#contact'>
+                <Button color='success' burst>
+                  Show me my competitors!
+                </Button>
+              </Link>{' '}
+              <Link to='/features/#competition'>
+                <Button color='primary' burst>
+                  How does it work?
+                </Button>
+              </Link>
+            </Right>
+          </SectionCompetitors>
+          <SectionDataJunkie>
+            <div className='csv'>
+              <Img src='/static/img/csv.png' />
+            </div>
+            <div className='main'>
+              <H3>A Data Junkie's Paradise</H3>
+              <H5>CSV, SQL, API and BigQuery</H5>
+              <P>
+                Whether your thing is pivot tables or SQL JOIN's, you can access
+                your data the way you're used to. Even better, we keep all your
+                data forever, including the raw html. Consider it necessary
+                tooling when dealing with millions of keywords. )
+              </P>
+              <Link to='#contact'>
+                <Button color='success' burst>
+                  Fix me up with 1,000 keywords!
+                </Button>
+              </Link>{' '}
+              <Link to='/features/#integration'>
+                <Button color='primary' burst>
+                  Show all integrations
+                </Button>
+              </Link>
+            </div>
+            <div className='sql'>
+              <Img src='/static/img/sql.png' />
+            </div>
+          </SectionDataJunkie>
+          <SectionSchedules>
+            <H2 full>
+              Get rankings on <em>your</em> schedule
+            </H2>
             <P>
-              Most tools just tell you the top ranking page on your domain. We
-              monitor your entire brand, including social media profiles and
-              unlimited domain matches. There's a difference between knowing
-              you're ranking #1 and owning the entire first page!
+              Not all keywords are created equal. You're probably paying too
+              much to track your long-tail keywords daily or you're only getting
+              weekly data for your money making head terms. Say goodbye to those
+              tools and say hello to your new best friend. Track your most
+              important keywords daily, hourly or even every 5 minutes. Keep an
+              eye on thousands more by scheduling them weekly or monthly without
+              breaking the bank.
             </P>
-            <P>
-              Unlimited access doesn't just refer to today's SERP. We keep all
-              your data FOREVER, so 3 years from now, you'll be able to look
-              back and see what was ranking for "Pokemon Go" in 2016. :)
-            </P>
-            <Link to='#contact'>
-              <Button color='success' burst>
-                Start tracking today!
-              </Button>
-            </Link>{' '}
-            <Link to='/features'>
-              <Button color='primary' burst>
-                How does it work?
+            <Centered>
+              <Div>
+                <Img src='/static/img/schedules.png' />
+              </Div>
+            </Centered>
+            <Centered>
+              <Link to='#contact'>
+                <Button color='success' burst>
+                  Give me flexibility, stat!
+                </Button>
+              </Link>{' '}
+              <Link to='/features/#scheduling'>
+                <Button color='primary' burst>
+                  Why does it matter?
+                </Button>
+              </Link>
+            </Centered>
+          </SectionSchedules>
+          <SectionCantAfford>
+            <Left>
+              <H2>You can't afford to not try Nozzle</H2>
+              <H5>
+                No minimum spend, no qualification calls, white-glove
+                onboarding, batteries included
+              </H5>
+              <P>
+                After a free trial, getting started can cost you less per month
+                than your secret santa gift this year. Seriously.
+              </P>
+              <Link to='/pricing'>
+                <Button burst>See Our Plans & Pricing</Button>
+              </Link>{' '}
+              <Link to='#contact'>
+                <Button color='success' burst>
+                  Try it out!
+                </Button>
+              </Link>
+            </Left>
+          </SectionCantAfford>
+          <SectionContactUs id='contact'>
+            <H2 full>Let's start your free trial!</H2>
+            <TrialForm />
+            <H6 full>or</H6>
+            <Link to={'tel:1855NOZZLE1'}>
+              <Button color='primaryDark' burst>
+                Call 1-855-NOZZLE1
               </Button>
             </Link>
-          </Right>
-        </SectionTrackAllTheThings>
-        <SectionRankData>
-          <Left>
-            <H2 color='primaryDark'>Rank data you can only find at Nozzle</H2>
-            <H5 weight='regular'>
-              Track results by{' '}
-              <Strong>Rank, Ad Adjusted Rank, Pixel Height</Strong> and more!
-            </H5>
-            <P>
-              With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean what
-              it used to. Nozzle won’t just tell you where you rank, we’ll tell
-              you your ad adjusted rank, how many pixels down the page you are,
-              whether a knowledge graph appeared and even what your prospective
-              customer ate for breakfast.
-            </P>
-            <P>
-              We include <Strong>over 350+ data points</Strong> for{' '}
-              <Strong>every result on the serp</Strong> - no extra cost!
-            </P>
-            <Ul>
-              <Li>search volume</Li>
-              <Li>estimated traffic</Li>
-              <Li>social shares</Li>
-              <Li>Moz PA / DA</Li>
-              <Li>inbound links</Li>
-              <Li>product ad pricing</Li>
-              <Li>sitelinks</Li>
-              <Li>star ratings</Li>
-              <Li>but wait, there's more...</Li>
-            </Ul>
-            <p />
-            <Link to='/features/#data'>
-              <Button burst>See the complete list</Button>
-            </Link>{' '}
-            <Link to='#contact'>
-              <Button color='success' burst>
-                Get the datas!
-              </Button>
-            </Link>
-          </Left>
-          <Right>
-            <Img src={rankDataImage} />
-            {rankDataImages.map(img =>
-              <Img key={img} src={img} style={{ display: 'none' }} />
-            )}
-          </Right>
-        </SectionRankData>
-        <SectionCompetitors>
-          <Left>
-            <Img src='/static/img/groupBy.png' />
-          </Left>
-          <Right>
-            <H3>
-              Squash your competitors... even the ones you don't know about yet
-            </H3>
-            <H5 weight='regular'>
-              See share of voice by{' '}
-              <Strong color='primaryLighter'>
-                Domain, Subdomain, URL, and Brand
-              </Strong>
-            </H5>
-            <P>
-              Nozzle lets you track <Strong>unlimited competitors</Strong>, no
-              questions asked. Heck, we'll let you track as much as you can
-              handle. The SERP is yours to command!
-            </P>
-            <P>
-              If you find a new competitor you haven't been tracking, add them
-              and we'll even rewrite history for you. It'll be like you were
-              monitoring them from the start!
-            </P>
-            <Link to='#contact'>
-              <Button color='success' burst>
-                Show me my competitors!
-              </Button>
-            </Link>{' '}
-            <Link to='/features/#competition'>
-              <Button color='primary' burst>
-                How does it work?
-              </Button>
-            </Link>
-          </Right>
-        </SectionCompetitors>
-        <SectionDataJunkie>
-          <div className='csv'>
-            <Img src='/static/img/csv.png' />
-          </div>
-          <div className='main'>
-            <H3>A Data Junkie's Paradise</H3>
-            <H5>CSV, SQL, API and BigQuery</H5>
-            <P>
-              Whether your thing is pivot tables or SQL JOIN's, you can access
-              your data the way you're used to. Even better, we keep all your
-              data forever, including the raw html. Consider it necessary
-              tooling when dealing with millions of keywords. )
-            </P>
-            <Link to='#contact'>
-              <Button color='success' burst>
-                Fix me up with 1,000 keywords!
-              </Button>
-            </Link>{' '}
-            <Link to='/features/#integration'>
-              <Button color='primary' burst>
-                Show all integrations
-              </Button>
-            </Link>
-          </div>
-          <div className='sql'>
-            <Img src='/static/img/sql.png' />
-          </div>
-        </SectionDataJunkie>
-        <SectionSchedules>
-          <H2 full>
-            Get rankings on <em>your</em> schedule
-          </H2>
-          <P>
-            Not all keywords are created equal. You're probably paying too much
-            to track your long-tail keywords daily or you're only getting weekly
-            data for your money making head terms. Say goodbye to those tools
-            and say hello to your new best friend. Track your most important
-            keywords daily, hourly or even every 5 minutes. Keep an eye on
-            thousands more by scheduling them weekly or monthly without breaking
-            the bank.
-          </P>
-          <Centered>
-            <Div>
-              <Img src='/static/img/schedules.png' />
-            </Div>
-          </Centered>
-          <Centered>
-            <Link to='#contact'>
-              <Button color='success' burst>
-                Give me flexibility, stat!
-              </Button>
-            </Link>{' '}
-            <Link to='/features/#scheduling'>
-              <Button color='primary' burst>
-                Why does it matter?
-              </Button>
-            </Link>
-          </Centered>
-        </SectionSchedules>
-        <SectionCantAfford>
-          <Left>
-            <H2>You can't afford to not try Nozzle</H2>
-            <H5>
-              No minimum spend, no qualification calls, white-glove onboarding,
-              batteries included
-            </H5>
-            <P>
-              After a free trial, getting started can cost you less per month
-              than your secret santa gift this year. Seriously.
-            </P>
-            <Link to='/pricing'>
-              <Button burst>See Our Plans & Pricing</Button>
-            </Link>{' '}
-            <Link to='#contact'>
-              <Button color='success' burst>
-                Try it out!
-              </Button>
-            </Link>
-          </Left>
-        </SectionCantAfford>
-        <SectionContactUs id='contact'>
-          <H2 full>Let's start your free trial!</H2>
-          <TrialForm />
-          <H6 full>or</H6>
-          <Link to={'tel:1855NOZZLE1'}>
-            <Button color='primaryDark' burst>
-              Call 1-855-NOZZLE1
-            </Button>
-          </Link>
-        </SectionContactUs>
-      </Content>
+          </SectionContactUs>
+        </Main>
+      </Page>
     )
   }
 }

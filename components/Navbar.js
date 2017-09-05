@@ -252,8 +252,8 @@ const NavbarStyles = styled.div`
 `
 
 const LinkItem = (link, i) =>
-  (<div key={i} className='link' itemProp='name'>
-    <Link key={i} to={link.path} itemProp='url'>
+  (<div key={i} >
+    <Link key={i} to={link.path} className='link' itemProp='name url'>
       {link.name}
     </Link>
     {link.links &&

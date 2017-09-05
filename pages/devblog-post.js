@@ -102,7 +102,7 @@ export default class DevblogPost extends Component {
           // seriesPermalinks={[]}
           wordCount={wordCount}
         />
-        <PostContainer itemscope='' itemtype='http://schema.org/BlogPosting'>
+        <PostContainer itemScope='' itemType='http://schema.org/BlogPosting'>
           <Header>
             <Link to='/devblog' className='back'>
               <Icon i='arrow-left' /> Back to Devblog

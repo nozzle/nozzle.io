@@ -1,8 +1,8 @@
 node_modules
 .next
 .cache
-public
-out
+dist
+.tempdist
 .DS_Store
 next.config.js
 tools/lib.js

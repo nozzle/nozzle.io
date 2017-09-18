@@ -28,7 +28,7 @@
     "react-router-hash-link": "^1.1.0",
     "react-showdown": "^1.6.0",
     "react-smackdown": "^0.6.4",
-    "react-static": "^1.0.3",
+    "react-static": "^1.0.4",
     "react-syntax-highlighter": "^5.7.0",
     "styled-components": "^2.1.2",
     "tinycolor2": "^1.4.1"

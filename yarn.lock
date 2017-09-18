@@ -5626,9 +5626,9 @@ react-smackdown@^0.6.4:
     react-html-parser "^2.0.0"
     react-syntax-highlighter "^5.6.3"
 
-react-static@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-static/-/react-static-1.0.2.tgz#4926a69149d7c512c93b16a2b6edaa403000442f"
+react-static@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-static/-/react-static-1.0.4.tgz#b5d47bfb2f0107b2dbdbb0e2b89dbbfcce5ef179"
   dependencies:
     ascii-json "^0.2.0"
     axios "^0.16.2"

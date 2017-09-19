@@ -46,7 +46,6 @@ export default class Html extends Component {
             rel="stylesheet"
           />
           <link href="/reset.css" rel="stylesheet" />
-          <link href="/nprogress.css" rel="stylesheet" />
           {styleTags}
           <script src="//www.googletagmanager.com/gtm.js?id=GTM-PPH2PX" />
         </head>

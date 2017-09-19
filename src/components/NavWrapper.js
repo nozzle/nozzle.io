@@ -21,7 +21,7 @@ const ContentStyled = styled.div`
 
 const checkScroll = (prev, next) => {
   if (!prev || next.location.pathname !== prev.location.pathname) {
-    setTimeout(() => window.scrollTo(0, 0), 1)
+    window.scrollTo(0, 0)
   }
 }
 

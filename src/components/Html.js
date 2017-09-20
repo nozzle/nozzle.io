@@ -98,9 +98,11 @@ export const P = styled.p`
 export const Strong = styled.strong`${inline} ${color} font-weight: bold;`
 export const Span = styled.span`${inline} ${color} ${weight};`
 export const Div = styled.div`${margin} ${full} ${color} ${weight};`
-export const Img = styled(({ children, ...rest }) =>
-  <img {...rest} />,
-)`max-width: 100%;`
+export const Img = styled(({ children, ...rest }) => <img {...rest} width="500" height="400" />)`
+  max-width: 100%;
+  width: auto;
+  height: auto;
+`
 
 export const Ul = styled.ul`
   ${margin} padding-left: 2rem;
@@ -156,9 +158,7 @@ export class Button extends React.Component {
         .replay()
       onMouseDown && onMouseDown(e)
     }
-    return burst
-      ? <ButtonStyled {...rest} onClick={handler} />
-      : <ButtonStyled {...rest} />
+    return burst ? <ButtonStyled {...rest} onClick={handler} /> : <ButtonStyled {...rest} />
   }
 }
 export const Input = styled.input`

@@ -201,12 +201,15 @@ const AboutUsDiv = styled.div`
         text-align: right;
         padding-right: 50px;
         p {
-          margin-left: auto;
+          margin-right: 0;
         }
       }
       .right {
         text-align: left;
         padding-left: 50px;
+        p {
+          margin-left: 0;
+        }
       }
       h4 {
         margin: 0;

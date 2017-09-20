@@ -390,14 +390,13 @@ export default class About extends Component {
               <div className="-content">
                 <H1>It started with 3 guys who love SEO</H1>
                 <P>
-                  Working at an agency, we set out to find the best tools we
-                  could get. We needed something that could keep up with clients
-                  from Dell down to Bob's Pickles, but nothing lived up to our
-                  wildest SEO dreams. So we created Nozzle, the rank tracker we
-                  couldn't live without.
+                  Working at an agency, we set out to find the best tools we could get. We needed
+                  something that could keep up with clients from Dell down to Bob's Pickles, but
+                  nothing lived up to our wildest SEO dreams. So we created Nozzle, the rank tracker
+                  we couldn't live without.
                 </P>
               </div>
-              <Link className="next" to="#timeline">
+              <Link className="next" to="/about#timeline">
                 <svg
                   width="53px"
                   height="30px"
@@ -405,13 +404,7 @@ export default class About extends Component {
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g
-                    id="Page-1"
-                    stroke="none"
-                    strokeWidth="1"
-                    fill="none"
-                    fillRule="evenodd"
-                  >
+                  <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                     <path
                       d="M3.03204743,3.40265339 L26.4497561,25.9830173 L49.8674649,3.09093941"
                       id="Path-1"
@@ -444,8 +437,8 @@ export default class About extends Component {
                 <div className="right">
                   <H4>July 2012</H4>
                   <P>
-                    At SEO.com, Derek (VP of Tech) and Joe (Lead Developer) are
-                    tasked with evaluating any and all rank tracking software.
+                    At SEO.com, Derek (VP of Tech) and Joe (Lead Developer) are tasked with
+                    evaluating any and all rank tracking software.
                   </P>
                 </div>
               </div>
@@ -454,8 +447,8 @@ export default class About extends Component {
                 <div className="left">
                   <H4>June 2013</H4>
                   <P>
-                    We have by now tried many options including Conductor,
-                    BrightEdge, SEO Clarity, and Moz, but walk away unsatisfied.
+                    We have by now tried many options including Conductor, BrightEdge, SEO Clarity,
+                    and Moz, but walk away unsatisfied.
                   </P>
                 </div>
                 <div className="connector" />
@@ -472,8 +465,8 @@ export default class About extends Component {
                 <div className="right">
                   <H4>April 2014</H4>
                   <P>
-                    Nozzle is incorporated with the goal of building the best
-                    rank tracker in the world.
+                    Nozzle is incorporated with the goal of building the best rank tracker in the
+                    world.
                   </P>
                 </div>
               </div>
@@ -509,8 +502,7 @@ export default class About extends Component {
                 <div className="left">
                   <H4>October 2015</H4>
                   <P>
-                    Nozzle launches multiple scheduling options, the first ever
-                    in the industry.
+                    Nozzle launches multiple scheduling options, the first ever in the industry.
                   </P>
                 </div>
                 <div className="connector" />
@@ -526,10 +518,7 @@ export default class About extends Component {
                 <div className="connector" />
                 <div className="right">
                   <H4>February 2016</H4>
-                  <P>
-                    Nozzle participates in the Techstars Kansas City accelerator
-                    program.
-                  </P>
+                  <P>Nozzle participates in the Techstars Kansas City accelerator program.</P>
                 </div>
               </div>
 
@@ -537,10 +526,9 @@ export default class About extends Component {
                 <div className="left">
                   <H4>March 2016</H4>
                   <P>
-                    Nozzle releases Chart.js 2.0 and trends #1 on Github and
-                    Product Hunt. Developed by our own Tanner Linsley and good
-                    friend Evert Timberg, it's now faster than ever, offers 8
-                    flexible chart types and is even more extensible.
+                    Nozzle releases Chart.js 2.0 and trends #1 on Github and Product Hunt. Developed
+                    by our own Tanner Linsley and good friend Evert Timberg, it's now faster than
+                    ever, offers 8 flexible chart types and is even more extensible.
                   </P>
                   <br />
                   <a
@@ -577,10 +565,9 @@ export default class About extends Component {
                 <div className="right">
                   <H4>May 2016</H4>
                   <P>
-                    Jumpsuit is released and trends #1 on Github and Product
-                    Hunt. Initially developed for Nozzle to utilize React and
-                    Redux, it has become a popular javascript framework for
-                    building web applications with minimal overhead or
+                    Jumpsuit is released and trends #1 on Github and Product Hunt. Initially
+                    developed for Nozzle to utilize React and Redux, it has become a popular
+                    javascript framework for building web applications with minimal overhead or
                     boilerplate.
                   </P>
                   <br />
@@ -605,9 +592,7 @@ export default class About extends Component {
                 </div>
               </div>
 
-              <H2 className="roads">
-                Where we're going, we don't need roads...
-              </H2>
+              <H2 className="roads">Where we're going, we don't need roads...</H2>
 
               <div className="delorianBack">
                 <Img src="/img/about/delorianBack.png" />
@@ -624,10 +609,9 @@ export default class About extends Component {
                   <H3>Derek Perkins</H3>
                   <H6>CEO</H6>
                   <P>
-                    Derek is a go developer. He writes a lot of backend code,
-                    but also does the business side. He is an experienced
-                    entrepreneur, and enjoys the startup battlefield. He enjoys
-                    short walks on the beach and triple-OREO ice cream.{' '}
+                    Derek is a go developer. He writes a lot of backend code, but also does the
+                    business side. He is an experienced entrepreneur, and enjoys the startup
+                    battlefield. He enjoys short walks on the beach and triple-OREO ice cream.{' '}
                   </P>
                 </div>
                 <div className="member joe">
@@ -637,15 +621,13 @@ export default class About extends Component {
                   <H3>Joe Bergevin</H3>
                   <H6>Backend CTO</H6>
                   <P>
-                    Joe has a proven track record in designing tools that
-                    improve efficiency and deliver optimal outcomes for clients
-                    and companies. An innovative designer and developer, Joe has
-                    used a variety of programming languages, most recently
-                    specializing in Go (Golang) and PHP. Joe’s love for
-                    programming dates back to his teenage years when he spent
-                    his spare time in school programming games for his graphic
-                    calculator to share with his friends - earning him the
-                    nickname "TI Joe".
+                    Joe has a proven track record in designing tools that improve efficiency and
+                    deliver optimal outcomes for clients and companies. An innovative designer and
+                    developer, Joe has used a variety of programming languages, most recently
+                    specializing in Go (Golang) and PHP. Joe’s love for programming dates back to
+                    his teenage years when he spent his spare time in school programming games for
+                    his graphic calculator to share with his friends - earning him the nickname "TI
+                    Joe".
                   </P>
                 </div>
                 <div className="member tanner">
@@ -655,16 +637,13 @@ export default class About extends Component {
                   <H3>Tanner Linsley</H3>
                   <H6>Front-End Engineer</H6>
                   <P>
-                    Tanner is obsessive and passionate about Javascript, React,
-                    UI/UX, Data Visualization and all things web. He loves
-                    problem solving and design, and considers Github his
-                    playground. Tanner is always on the edge of the modern
-                    software stack loves developing new solutions, frameworks,
-                    and systems for complex problems. He is a core contributor
-                    to Chart.js, the most popular charting library in the world,
-                    and also wrote Jumpsuit.js, which was initially written for
-                    Nozzle, but now it's used by thousands of people to build
-                    web apps.
+                    Tanner is obsessive and passionate about Javascript, React, UI/UX, Data
+                    Visualization and all things web. He loves problem solving and design, and
+                    considers Github his playground. Tanner is always on the edge of the modern
+                    software stack loves developing new solutions, frameworks, and systems for
+                    complex problems. He is a core contributor to Chart.js, the most popular
+                    charting library in the world, and also wrote Jumpsuit.js, which was initially
+                    written for Nozzle, but now it's used by thousands of people to build web apps.
                   </P>
                 </div>
               </div>

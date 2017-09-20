@@ -68,6 +68,7 @@ export function HashNavLink (props) {
     }
     if (hashFragment !== '') hashLinkScroll()
   }
+
   return (
     <NavLink {...props} onClick={handleClick}>
       {props.children}

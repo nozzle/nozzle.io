@@ -46,8 +46,6 @@ injectGlobal`{
 }
 `
 
-// export default () => <div>Hello</div>
-
 export default () =>
   (<Router>
     <NavWrapper>

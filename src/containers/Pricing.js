@@ -58,7 +58,7 @@ const SectionIntroCmp = props =>
           and views
         </P>
         <P>
-          <Link to="#faq">
+          <Link to="/pricing#faq">
             <Button size="sm" burst>
               Read More
             </Button>
@@ -97,7 +97,7 @@ const SectionPlansCmp = props =>
             <div className="count">4,500 weekly</div>
             <div className="count">18,000 monthly</div>
           </div>
-          <Link to="#trial">
+          <Link to="/pricing#trial">
             <Button color="primaryDarker" burst>
               Start Trial
             </Button>
@@ -124,7 +124,7 @@ const SectionPlansCmp = props =>
             <div className="count">9,500 weekly</div>
             <div className="count">40,000 monthly</div>
           </div>
-          <Link to="#trial">
+          <Link to="/pricing#trial">
             <Button color="success" burst>
               Start Trial
             </Button>
@@ -151,7 +151,7 @@ const SectionPlansCmp = props =>
             <div className="count">50,000 weekly</div>
             <div className="count">200,000 monthly</div>
           </div>
-          <Link to="#trial">
+          <Link to="/pricing#trial">
             <Button color="primaryDarker" burst>
               Start Trial
             </Button>
@@ -178,7 +178,7 @@ const SectionPlansCmp = props =>
             <div className="count">312,500 weekly</div>
             <div className="count">1,250,000 monthly</div>
           </div>
-          <Link to="#trial">
+          <Link to="/pricing#trial">
             <Button color="primaryDark" burst>
               Start Trial
             </Button>
@@ -340,7 +340,7 @@ const SectionSprayCmp = props =>
           <div className="price">$20 (1,000 credits) at a time</div>
           <div className="credit">2¢ / credit - never expires</div>
           <div>
-            <Link to="#trial">
+            <Link to="/pricing#trial">
               <Button color="white" burst>
                 Start Trial
               </Button>

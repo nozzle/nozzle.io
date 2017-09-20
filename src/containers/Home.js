@@ -300,7 +300,7 @@ export default class Home extends Component {
                 If you want access to more enterprise level SERP data than any tool has ever
                 offered, you've come to the right place
               </P>
-              <Link to="#contact">
+              <Link to="/#contact">
                 <Button color="success" burst>
                   I'd like a demo!
                 </Button>
@@ -338,7 +338,7 @@ export default class Home extends Component {
                 so 3 years from now, you'll be able to look back and see what was ranking for
                 "Pokemon Go" in 2016. :)
               </P>
-              <Link to="#contact">
+              <Link to="/#contact">
                 <Button color="success" burst>
                   Start tracking today!
                 </Button>
@@ -381,7 +381,7 @@ export default class Home extends Component {
               <Link to="/features/#data">
                 <Button burst>See the complete list</Button>
               </Link>{' '}
-              <Link to="#contact">
+              <Link to="/#contact">
                 <Button color="success" burst>
                   Get the datas!
                 </Button>
@@ -410,7 +410,7 @@ export default class Home extends Component {
                 If you find a new competitor you haven't been tracking, add them and we'll even
                 rewrite history for you. It'll be like you were monitoring them from the start!
               </P>
-              <Link to="#contact">
+              <Link to="/#contact">
                 <Button color="success" burst>
                   Show me my competitors!
                 </Button>
@@ -434,7 +434,7 @@ export default class Home extends Component {
                 you're used to. Even better, we keep all your data forever, including the raw html.
                 Consider it necessary tooling when dealing with millions of keywords. )
               </P>
-              <Link to="#contact">
+              <Link to="/#contact">
                 <Button color="success" burst>
                   Fix me up with 1,000 keywords!
                 </Button>
@@ -466,7 +466,7 @@ export default class Home extends Component {
               </Div>
             </Centered>
             <Centered>
-              <Link to="#contact">
+              <Link to="/#contact">
                 <Button color="success" burst>
                   Give me flexibility, stat!
                 </Button>
@@ -491,7 +491,7 @@ export default class Home extends Component {
               <Link to="/pricing">
                 <Button burst>See Our Plans & Pricing</Button>
               </Link>{' '}
-              <Link to="#contact">
+              <Link to="/#contact">
                 <Button color="success" burst>
                   Try it out!
                 </Button>

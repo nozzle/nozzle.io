@@ -21,25 +21,25 @@ const FeaturesNav = props =>
     <div className="inner">
       <ul data-gumshoe>
         <li>
-          <Link to="#brands">Brand Monitoring</Link>
+          <Link to="/features#brands">Brand Monitoring</Link>
         </li>
         <li>
-          <Link to="#competition">Competitive Analysis</Link>
+          <Link to="/features#competition">Competitive Analysis</Link>
         </li>
         <li>
-          <Link to="#scheduling">Scheduling</Link>
+          <Link to="/features#scheduling">Scheduling</Link>
         </li>
         <li>
-          <Link to="#data">Data</Link>
+          <Link to="/features#data">Data</Link>
         </li>
         <li>
-          <Link to="#agencies">Agency Tools</Link>
+          <Link to="/features#agencies">Agency Tools</Link>
         </li>
         <li>
-          <Link to="#reputation">Reputation Management</Link>
+          <Link to="/features#reputation">Reputation Management</Link>
         </li>
         <li>
-          <Link to="#integrations">Integrations</Link>
+          <Link to="/features#integrations">Integrations</Link>
         </li>
       </ul>
     </div>
@@ -189,7 +189,7 @@ const SectionBrandsCmp = props =>
         </Ul>
       </div>
       <Center>
-        <Link to="#trial">
+        <Link to="/features#trial">
           <Button color="success" burst>
             Start tracking today!
           </Button>
@@ -415,7 +415,7 @@ const SectionCompetitionCmp = props =>
         </div>
       </div>
       <Center>
-        <Link to="#trial">
+        <Link to="/features#trial">
           <Button color="success" burst>
             Show My Competitors
           </Button>
@@ -505,7 +505,7 @@ const SectionScheduling = styled(props =>
           hourly or even every 5 minutes, but still <Strong>keep an eye on thousands more</Strong>{' '}
           by scheduling them weekly or monthly without breaking the bank.
         </P>
-        <Link to="#trial">
+        <Link to="/features#trial">
           <Button color="success" burst>
             Try Flexible Scheduling
           </Button>
@@ -680,7 +680,7 @@ const SectionDataCmp = props =>
         </div>
       </div>
       <Center>
-        <Link to="#trial">
+        <Link to="/features#trial">
           <Button color="success" burst>
             Get the Datas!
           </Button>
@@ -891,7 +891,7 @@ const SectionAgenciesCmp = props =>
           </Ul>
           <br />
           <br />
-          <Link to="#trial">
+          <Link to="/features#trial">
             <Button color="success" burst>
               Try it out!
             </Button>
@@ -971,7 +971,7 @@ const SectionReputationCmp = props =>
               <Li>Preventative - Catch negative sites before they rank high</Li>
             </Ul>
           </div>
-          <Link to="#trial">
+          <Link to="/features#trial">
             <Button color="success" burst>
               Show My Trends
             </Button>
@@ -1094,7 +1094,7 @@ const SectionIntegrationsCmp = props =>
         </div>
       </div>
       <Center>
-        <Link to="#trial">
+        <Link to="/features#trial">
           <Button color="success" burst>
             Try it out!
           </Button>

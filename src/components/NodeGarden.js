@@ -25,7 +25,8 @@ class NodeGarden extends PureComponent {
     this.doneAnimating = true
   }
   update () {
-    let { width, height, color, pixelRatio } = this.props
+    const { color, pixelRatio } = this.props
+    let { width, height } = this.props
 
     width *= pixelRatio
     height *= pixelRatio
@@ -39,7 +40,7 @@ class NodeGarden extends PureComponent {
     this.speed = 0.0000001
 
     this.nodes = []
-    for (let i = 0; i < this.NUM_NODES; i++) {
+    for (let i = 0; i < this.NUM_NODES; i += 1) {
       const node = {
         radius: Math.round(Math.random() * 4) + 1,
         x: Math.round(Math.random() * width),
@@ -93,12 +94,12 @@ class NodeGarden extends PureComponent {
     const nodes = this.nodes
     this.canvasContext.clearRect(0, 0, this.el.width, this.el.height)
 
-    for (let i = 0; i < this.NUM_NODES; i++) {
+    for (let i = 0; i < this.NUM_NODES; i += 1) {
       nodes[i].update()
       nodes[i].draw()
 
       const node1 = nodes[i]
-      for (let j = i + 1; j < this.NUM_NODES; j++) {
+      for (let j = i + 1; j < this.NUM_NODES; j += 1) {
         const node2 = nodes[j]
 
         const dx = node1.x - node2.x
@@ -126,7 +127,9 @@ class NodeGarden extends PureComponent {
     }
   }
   render () {
-    let { width, height, pixelRatio } = this.props
+    let { width, height } = this.props
+    const { pixelRatio } = this.props
+
     width *= pixelRatio
     height *= pixelRatio
     return (

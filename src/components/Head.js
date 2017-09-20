@@ -23,6 +23,7 @@ export default ({
 }) => {
   const permalink = siteURL ? siteURL + path : ''
   const seriesPermalinks = seriesPaths ? seriesPaths.map(path => siteURL + path) : []
+  return null
   return (
     <Helmet>
       {children}

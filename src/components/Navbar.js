@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react'
 import styled, { keyframes, css } from 'styled-components'
 //
 import Theme from 'utils/Theme'
 
 import Link from './Link'
-import ClickOutside from './ClickOutside'
+// import ClickOutside from './ClickOutside'
 
 import { Button } from './Html'
 
@@ -31,7 +32,7 @@ const NavbarStyles = styled.header`
     width: 100%;
     z-index: 1000;
     box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
-    height: 55px;
+    height: 52px;
 
     .inner {
       max-width: ${Theme.maxWidth}px;
@@ -46,7 +47,7 @@ const NavbarStyles = styled.header`
     .logo {
       flex: 0 0 auto;
       width: 120px;
-      margin: 10px 0 5px 10px;
+      margin: 8px 0 5px 10px;
       transition: all .3s ease;
       span {
         display: none;
@@ -183,8 +184,15 @@ const NavbarStyles = styled.header`
           padding: 16px 10px;
           transition: all .2s ease-out;
 
+          &.active {
+            text-shadow: 0 2px 7px black, 0 0px 50px black;
+          }
+
           ${belowBreakpoint} {
             border-bottom: 1px solid rgba(255,255,255,.05);
+            &.active {
+              background: rgba(0,0,0,.2)
+            }
           }
         }
       }
@@ -314,7 +322,12 @@ const links = [
 const LinkItem = (link, i) =>
   (<div key={i} className="link">
     <div itemProp="name">
-      <Link key={i} to={link.path} itemProp="url">
+      <Link
+        key={i}
+        to={link.path}
+        itemProp="url"
+        activeClassName={link.path === '/' ? '' : 'active'}
+      >
         {link.name}
       </Link>
     </div>
@@ -346,7 +359,7 @@ export default class Navbar extends Component {
             <span itemProp="url" href="https://nozzle.io/">
               Home
             </span>
-            <img src="/img/logo-small.svg" itemProp="logo" />
+            <img src="/img/logo-small.svg" alt="logo" itemProp="logo" />
           </Link>
           <div
             className="menuToggle"

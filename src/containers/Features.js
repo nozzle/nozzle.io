@@ -11,19 +11,7 @@ import Main from 'components/Main'
 import Link from 'components/Link'
 import Icon from 'components/Icon'
 import TrialForm from 'components/TrialForm'
-import {
-  Button,
-  H2,
-  H4,
-  H5,
-  H6,
-  P,
-  Strong,
-  Span,
-  Ul,
-  Li,
-  Img,
-} from 'components/Html'
+import { Button, H2, H4, H5, H6, P, Strong, Span, Ul, Li, Img } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 const below900 = '@media screen and (max-width: 900px)'
@@ -60,7 +48,7 @@ const FeaturesNav = props =>
 const FeaturesNavDiv = styled(FeaturesNav)`
   position: fixed;
   width: 100%;
-  top: 55px;
+  top: 52px;
   left: 0;
   padding: 0;
   transition: all 0.3s ease;
@@ -178,11 +166,10 @@ const SectionBrandsCmp = props =>
         <H4>100% SERP Visibility</H4>
         <P>
           With other tools, you are tied to a single domain, but with Nozzle,{' '}
-          <Strong>you can track as many SERP results as you want.</Strong> We
-          make this easy by using Brands, Properties, and URLs instead of single
-          domains. If that's not enough, we even let you build custom rules to
-          get as specific as you want! These features allow Nozzle to perform
-          powerful competitive analysis between other brands, individual
+          <Strong>you can track as many SERP results as you want.</Strong> We make this easy by
+          using Brands, Properties, and URLs instead of single domains. If that's not enough, we
+          even let you build custom rules to get as specific as you want! These features allow
+          Nozzle to perform powerful competitive analysis between other brands, individual
           properties, and even URLs.
         </P>
       </div>
@@ -192,8 +179,7 @@ const SectionBrandsCmp = props =>
           <Li>
             Track{' '}
             <Strong>
-              external blogs, PR releases, guest posts on external domains,
-              Quora results
+              external blogs, PR releases, guest posts on external domains, Quora results
             </Strong>
           </Li>
           <Li>
@@ -407,10 +393,9 @@ const SectionCompetitionCmp = props =>
         <div className="right">
           <H4>Unlimited competitors for free.</H4>
           <P>
-            As opposed to tracking individual domains, tracking brands makes it
-            easy to monitor their every move. You can do this by{' '}
-            <Strong>brand, property or even URL</Strong> to get aggreggated or
-            detailed comparisons as needed.
+            As opposed to tracking individual domains, tracking brands makes it easy to monitor
+            their every move. You can do this by <Strong>brand, property or even URL</Strong> to get
+            aggreggated or detailed comparisons as needed.
           </P>
         </div>
       </div>
@@ -421,12 +406,11 @@ const SectionCompetitionCmp = props =>
         <div className="right">
           <H4>Share of Voice &amp; Rewriting History</H4>
           <P>
-            Don't know who your competitors are? Just take a look at our
-            share-of-voice dashboard to immediately detect unknown competitors
-            by <Strong>Domain, Subdomain, and URL</Strong>. If you like what you
-            see, add them as a named competitor and we will{' '}
-            <Strong>rewrite all of your historical data</Strong> to include your
-            newfound competition! It's like having a time machine!
+            Don't know who your competitors are? Just take a look at our share-of-voice dashboard to
+            immediately detect unknown competitors by <Strong>Domain, Subdomain, and URL</Strong>.
+            If you like what you see, add them as a named competitor and we will{' '}
+            <Strong>rewrite all of your historical data</Strong> to include your newfound
+            competition! It's like having a time machine!
           </P>
         </div>
       </div>
@@ -458,12 +442,13 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
     color: ${Theme.colors.primaryLighter};
   }
   .one, .two {
+    flex: 1 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     text-align: center;
   }
   .one > div, .two > div {
@@ -477,7 +462,7 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
   @media screen and (min-width: 900px) {
     .one, .two {
       flex-direction: row;
-      flex: 1 1;
+      flex: 1 0 auto;
     }
     .one > div, .two > div {
       flex: 0 0 50%;
@@ -509,19 +494,16 @@ const SectionScheduling = styled(props =>
         <H6>
           Not all keywords are created equal. Thankfully, Nozzle is{' '}
           <Strong>
-            the first and only trank tracker to offer flexible and real-time
-            schedules
-          </Strong>. Instead of forcing you to pay the same price to track your
-          long-tail keywords as your head terms, Nozzle let's you split your
-          keywords into as many different scheduling buckets you want.{' '}
+            the first and only trank tracker to offer flexible and real-time schedules
+          </Strong>. Instead of forcing you to pay the same price to track your long-tail keywords
+          as your head terms, Nozzle let's you split your keywords into as many different scheduling
+          buckets you want.{' '}
         </H6>
         <Img src="/img/schedules.png" className="scheduleImg" />
         <P>
-          This way, you can{' '}
-          <Strong>closely monitor your most important keywords</Strong> daily,
-          hourly or even every 5 minutes, but still{' '}
-          <Strong>keep an eye on thousands more</Strong> by scheduling them
-          weekly or monthly without breaking the bank.
+          This way, you can <Strong>closely monitor your most important keywords</Strong> daily,
+          hourly or even every 5 minutes, but still <Strong>keep an eye on thousands more</Strong>{' '}
+          by scheduling them weekly or monthly without breaking the bank.
         </P>
         <Link to="#trial">
           <Button color="success" burst>
@@ -567,12 +549,10 @@ const SectionDataCmp = props =>
       </div>
       <Center>
         <H6 className="description">
-          Out of the box, Nozzle can show you data you've probably only imagined
-          in your wildest dreams.{' '}
-          <Strong>Ad-adjusted rank, pixel height,</Strong> and even{' '}
-          <Strong> click-to-call phone numbers</Strong> are just a few examples
-          of the immense detail we give you on the SERP. Honestly, we can't wait
-          to see what you can do with it!
+          Out of the box, Nozzle can show you data you've probably only imagined in your wildest
+          dreams. <Strong>Ad-adjusted rank, pixel height,</Strong> and even{' '}
+          <Strong> click-to-call phone numbers</Strong> are just a few examples of the immense
+          detail we give you on the SERP. Honestly, we can't wait to see what you can do with it!
         </H6>
       </Center>
       <div className="boxes">
@@ -609,10 +589,9 @@ const SectionDataCmp = props =>
               <li>Blended Rank</li>
             </ul>
             <P>
-              Blended Rank is expected from any rank tracker, but at Nozzle we
-              don't think that's enough. <Strong>Ad-adjusted Rank</Strong> and{' '}
-              <Strong>Pixels from Top of page</Strong> are new and powerful
-              metrics unique to Nozzle, and will surely put your rank tracking
+              Blended Rank is expected from any rank tracker, but at Nozzle we don't think that's
+              enough. <Strong>Ad-adjusted Rank</Strong> and <Strong>Pixels from Top of page</Strong>{' '}
+              are new and powerful metrics unique to Nozzle, and will surely put your rank tracking
               above your competitors.
             </P>
           </div>
@@ -633,12 +612,9 @@ const SectionDataCmp = props =>
             <div>
               <P>
                 Nozzle takes keyword groups to a whole new level with{' '}
-                <Strong>
-                  group-driven performance dashboards, drill-through, and
-                  comparison
-                </Strong>. If that wasn't cool enough, you can place keywords in{' '}
-                <Strong>as many groups as you want</Strong>, and only pay{' '}
-                <Strong>once</Strong>
+                <Strong>group-driven performance dashboards, drill-through, and comparison</Strong>.
+                If that wasn't cool enough, you can place keywords in{' '}
+                <Strong>as many groups as you want</Strong>, and only pay <Strong>once</Strong>
               </P>
             </div>
           </div>
@@ -657,9 +633,9 @@ const SectionDataCmp = props =>
               <li>Any Location</li>
             </ul>
             <P>
-              To <Strong>understand your audience</Strong>, you need to search
-              like your audience. Want the results from a Bing search at that
-              famous coffee shop in downtown London? We've got them.
+              To <Strong>understand your audience</Strong>, you need to search like your audience.
+              Want the results from a Bing search at that famous coffee shop in downtown London?
+              We've got them.
             </P>
           </div>
         </div>
@@ -677,10 +653,9 @@ const SectionDataCmp = props =>
               <li>App Store, Play Store</li>
             </ul>
             <P>
-              Track your rankings at the deepest level of user engagement with
-              Nozzle's powerful <Strong>device, OS, and platform</Strong>{' '}
-              options. Uncover untapped marketing opportunities and beat the
-              competition from every angle.
+              Track your rankings at the deepest level of user engagement with Nozzle's powerful{' '}
+              <Strong>device, OS, and platform</Strong> options. Uncover untapped marketing
+              opportunities and beat the competition from every angle.
             </P>
           </div>
         </div>
@@ -1070,9 +1045,8 @@ const SectionIntegrationsCmp = props =>
       <Img src="/img/integrations.png" />
       <H2>Integrations &amp; Export</H2>
       <P>
-        We've made sure that all of the data you pay for is truly yours to
-        command. Every data point is ultra-portable and accessible through a
-        variety of providers and exportable data types.
+        We've made sure that all of the data you pay for is truly yours to command. Every data point
+        is ultra-portable and accessible through a variety of providers and exportable data types.
       </P>
       <div className="-boxes">
         <div className="-box">
@@ -1084,10 +1058,7 @@ const SectionIntegrationsCmp = props =>
               </Link>
             </li>
             <li>
-              <Link
-                to="https://www.google.com/analytics/data-studio/"
-                target="_blank"
-              >
+              <Link to="https://www.google.com/analytics/data-studio/" target="_blank">
                 Google Data Studio
               </Link>
             </li>

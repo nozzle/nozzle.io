@@ -1,8 +1,8 @@
 import React from 'react'
 import { Prefetch } from 'react-static'
-import { HashLink as Link } from 'react-router-hash-link'
+import { HashNavLink } from './HashLink'
 
 export default props =>
   (<Prefetch path={props.to}>
-    <Link {...props} />
+    <HashNavLink {...props} />
   </Prefetch>)

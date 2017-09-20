@@ -6,3 +6,4 @@ dist
 .DS_Store
 next.config.js
 tools/lib.js
+yarn-error.log

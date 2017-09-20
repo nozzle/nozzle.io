@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { withRouter } from 'react-router-dom'
+import { Router } from 'react-static'
+import NProgress from 'nprogress'
 //
 import Theme from 'utils/Theme'
 import ScrollTo from 'utils/ScrollTo'
@@ -10,7 +12,7 @@ import Footer from './Footer'
 const PageStyles = styled.div`min-height: 100%;`
 
 const ContentStyled = styled.div`
-  padding-top: 55px;
+  padding-top: 52px;
   color: ${Theme.colors.text};
   background: white;
   min-height: 100vh;
@@ -36,6 +38,13 @@ class Page extends Component {
         })
       }, 500)
     checkScroll()
+    Router.subscribe(loading => {
+      if (loading) {
+        NProgress.start()
+      } else {
+        NProgress.done()
+      }
+    })
   }
   componentDidUpdate (prevProps) {
     checkScroll(prevProps, this.props)

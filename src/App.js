@@ -1,6 +1,7 @@
 import React from 'react'
 import { injectGlobal } from 'styled-components'
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { Router } from 'react-static'
+import { Route, Switch, Redirect } from 'react-router-dom'
 //
 import Theme from 'utils/Theme'
 
@@ -34,6 +35,9 @@ injectGlobal`{
     color: inherit;
     text-decoration: none;
   }
+  #nprogress .bar {
+    background: white !important;
+  }
   [data-name="mojs-shape"] {
     position: fixed !important;
     z-index: 99999999;
@@ -42,14 +46,10 @@ injectGlobal`{
 }
 `
 
-let Router = BrowserRouter
-// If statically rendering, use the static router
-if (process.env.IS_STATIC === 'true') {
-  Router = require('react-router').StaticRouter
-}
+// export default () => <div>Hello</div>
 
-export default ({ URL, context }) =>
-  (<Router location={URL} context={context}>
+export default () =>
+  (<Router>
     <NavWrapper>
       <Switch>
         <Route exact path="/" component={Home} />

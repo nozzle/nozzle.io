@@ -4,18 +4,24 @@ import { AppContainer } from 'react-hot-loader'
 //
 import App from './App'
 
-const render = Comp => {
-  ReactDOM.render(
-    <AppContainer>
-      <Comp />
-    </AppContainer>,
-    document.getElementById('root'),
-  )
-}
+// For static export
+export default <App />
 
-render(App)
+// For dev mode
+if (typeof document !== 'undefined') {
+  const render = () => {
+    ReactDOM.render(
+      <AppContainer>
+        <App />
+      </AppContainer>,
+      document.getElementById('root'),
+    )
+  }
 
-// Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./App', () => render(require('./App').default))
+  render()
+
+  // Hot Module Replacement API
+  if (module.hot) {
+    module.hot.accept('./App', render)
+  }
 }

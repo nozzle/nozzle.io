@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { GetRouteProps } from 'react-static'
+import { getRouteProps } from 'react-static'
 //
 
 import Link from 'components/Link'
@@ -50,4 +50,4 @@ class DevblogCategory extends Component {
   }
 }
 
-export default GetRouteProps(DevblogCategory)
+export default getRouteProps(DevblogCategory)

@@ -1,38 +1,19 @@
 import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
-export default class Html extends Component {
+export default class CustomHtml extends Component {
   render () {
-    const { children, data = {}, scripts } = this.props
-    const {
-      htmlAttributes,
-      bodyAttributes,
-      base,
-      link,
-      meta,
-      noscript,
-      script,
-      style,
-      title,
-      // styleTags,
-    } = data
+    const { Html, Head, Body, children } = this.props
 
     const sheet = new ServerStyleSheet()
     const newChildren = sheet.collectStyles(children)
     const styleTags = sheet.getStyleElement()
 
     return (
-      <html lang="en-US" {...htmlAttributes}>
-        <head>
+      <Html>
+        <Head>
           <title>Nozzle</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          {base}
-          {link}
-          {meta}
-          {noscript}
-          {script}
-          {style}
-          {title}
           <link
             href="//fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800"
             rel="stylesheet"
@@ -49,12 +30,9 @@ export default class Html extends Component {
           <link href="/nprogress.css" rel="stylesheet" />
           {styleTags}
           <script src="//www.googletagmanager.com/gtm.js?id=GTM-PPH2PX" />
-        </head>
-        <body {...bodyAttributes}>
-          {newChildren}
-          {scripts}
-        </body>
-      </html>
+        </Head>
+        <Body>{newChildren}</Body>
+      </Html>
     )
   }
 }

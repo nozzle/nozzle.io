@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { GetRouteProps } from 'react-static'
+import { getRouteProps } from 'react-static'
 //
 
 import Link from 'components/Link'
@@ -59,4 +59,4 @@ class Devblog extends Component {
   }
 }
 
-export default GetRouteProps(Devblog)
+export default getRouteProps(Devblog)

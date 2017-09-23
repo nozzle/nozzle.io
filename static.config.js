@@ -1,27 +1,7 @@
-import { Helmet } from 'react-helmet'
-//
 import Html from './src/Html'
 import Contentful from './tools/Contentful'
 
 export default {
-  // The app (not the index)
-  componentPath: './src/App',
-  // Use react-helmet
-  postRenderData: async () => {
-    const helmet = Helmet.renderStatic()
-    const data = {
-      htmlProps: helmet.htmlAttributes.toComponent(),
-      bodyProps: helmet.bodyAttributes.toComponent(),
-      base: helmet.base.toComponent(),
-      link: helmet.link.toComponent(),
-      meta: helmet.meta.toComponent(),
-      noscript: helmet.noscript.toComponent(),
-      script: helmet.script.toComponent(),
-      style: helmet.style.toComponent(),
-      title: helmet.title.toComponent(),
-    }
-    return data
-  },
   // Custom Html component
   Html,
   // Build your routes dynamically

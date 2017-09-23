@@ -46,8 +46,8 @@ injectGlobal`{
 }
 `
 
-export default () =>
-  (<Router>
+export default () => (
+  <Router>
     <NavWrapper>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -59,4 +59,5 @@ export default () =>
         <Redirect to="/" />
       </Switch>
     </NavWrapper>
-  </Router>)
+  </Router>
+)

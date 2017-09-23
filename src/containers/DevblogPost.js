@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
-import { GetRouteProps } from 'react-static'
+import { getRouteProps } from 'react-static'
 //
 import Theme from 'utils/Theme'
 import ReadTime from 'utils/ReadTime'
@@ -158,4 +158,4 @@ class DevblogPost extends Component {
   }
 }
 
-export default GetRouteProps(DevblogPost)
+export default getRouteProps(DevblogPost)

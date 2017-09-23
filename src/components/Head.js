@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Head } from 'react-static'
 //
 import Info from 'utils/Info'
 
@@ -23,14 +23,10 @@ export default ({
 }) => {
   const permalink = siteURL ? siteURL + path : ''
   const seriesPermalinks = seriesPaths ? seriesPaths.map(path => siteURL + path) : []
-  return null
   return (
-    <Helmet>
+    <Head>
       {children}
-      {title &&
-        <title>
-          {title}
-        </title>}
+      {title && <title>{title}</title>}
 
       {/* Generic */}
       {path && <link rel="canonical" href={`${siteRoot}${path}/`} />}
@@ -53,13 +49,15 @@ export default ({
           .filter(d => d !== permalink)
           .map(serie => <meta key={serie} property="og:see_also" content={serie} />)}
       {author &&
-        author.social &&
-        <meta
-          property="article:author"
-          content={`https://www.facebook.com/${author.social.siteFacebook}`}
-        />}
-      {siteFacebook &&
-        <meta property="article:publisher" content={`https://www.facebook.com/${siteFacebook}`} />}
+        author.social && (
+          <meta
+            property="article:author"
+            content={`https://www.facebook.com/${author.social.siteFacebook}`}
+          />
+        )}
+      {siteFacebook && (
+        <meta property="article:publisher" content={`https://www.facebook.com/${siteFacebook}`} />
+      )}
       {date && <meta property="article:published_time" content={date} />}
       {date && <meta property="article:modified_time" content={date} />}
       {category && <meta property="article:section" content={category} />}
@@ -82,6 +80,6 @@ export default ({
       {title && <meta name="twitter:title" content={title} />}
       {description && <meta name="twitter:description" content={description} />}
       {images && images.length && <meta name="twitter:image" content={images[0]} />}
-    </Helmet>
+    </Head>
   )
 }

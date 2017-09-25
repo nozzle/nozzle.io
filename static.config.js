@@ -2,14 +2,10 @@ import Html from './src/Html'
 import Contentful from './tools/Contentful'
 
 export default {
-  // Custom Html component
+  siteRoot: 'https://nozzle.io',
   Html,
-  // Build your routes dynamically
   getRoutes: async () => {
-    // Get dynamic content from contentful
     const { posts, categories } = await Contentful()
-
-    // Build sitemap
     return [
       {
         path: '/',

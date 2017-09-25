@@ -18,12 +18,11 @@ const belowTablet = `@media(max-width: ${1000}px)`
 
 const Left = props => <div className="left" {...props} />
 const Right = props => <div className="right" {...props} />
-const Section = ({ children, ...rest }) =>
-  (<section {...rest}>
-    <div className="inner">
-      {children}
-    </div>
-  </section>)
+const Section = ({ children, ...rest }) => (
+  <section {...rest}>
+    <div className="inner">{children}</div>
+  </section>
+)
 
 const section = css`
   z-index: 0;
@@ -39,7 +38,8 @@ const section = css`
     width: 100%;
   }
   ${belowMobile} {
-    .left, .right {
+    .left,
+    .right {
       flex: 1 1 100%;
       margin-left: 0;
       margin-right: 0;
@@ -92,14 +92,14 @@ const Centered = styled.div`
 `
 
 const SectionKnowEverything = styled(Section)`
-  ${section}
-  ${layoutLeft}
-  position: relative;
-  background: radial-gradient(circle at center, ${Theme.colors.primaryDarker} 20%, ${Color(
-  Theme.colors.primaryDarker,
-)
-  .darken(10)
-  .toString()});
+  ${section} ${layoutLeft} position: relative;
+  background: radial-gradient(
+    circle at center,
+    ${Theme.colors.primaryDarker} 20%,
+    ${Color(Theme.colors.primaryDarker)
+    .darken(10)
+    .toString()}
+  );
   color: white;
   h4 {
     color: ${Theme.colors.primaryLighter};
@@ -112,12 +112,7 @@ const SectionKnowEverything = styled(Section)`
   }
 `
 const SectionTrackAllTheThings = styled(Section)`
-  ${section}
-  ${layoutDark}
-  ${layoutRight}
-  ${angle('right')}
-
-  position: relative;
+  ${section} ${layoutDark} ${layoutRight} ${angle('right')} position: relative;
   .right {
     z-index: 0;
   }
@@ -133,13 +128,10 @@ const SectionTrackAllTheThings = styled(Section)`
     width: 400px;
     opacity: 0.2;
     z-index: 0;
-  };
+  }
 `
 const SectionRankData = styled(Section)`
-  ${section}
-  ${layoutLeftHalf}
-
-  .right {
+  ${section} ${layoutLeftHalf} .right {
     img {
       opacity: 1;
       max-width: 940px;
@@ -157,12 +149,7 @@ const SectionRankData = styled(Section)`
   }
 `
 const SectionCompetitors = styled(Section)`
-  ${section}
-  ${layoutLeft}
-  ${layoutDark}
-  ${angle('right')}
-
-  .left {
+  ${section} ${layoutLeft} ${layoutDark} ${angle('right')} .left {
     direction: rtl;
     img {
       opacity: 1;
@@ -181,11 +168,7 @@ const SectionCompetitors = styled(Section)`
   }
 `
 const SectionDataJunkie = styled(Section)`
-  ${section}
-  ${layoutRight}
-
-  text-align: center
-  .csv, .sql {
+  ${section} ${layoutRight} text-align: center .csv, .sql {
     flex: 1 1 30%;
   }
   .main {
@@ -197,18 +180,16 @@ const SectionDataJunkie = styled(Section)`
     max-width: 100%;
   }
   ${belowTablet} {
-    .csv, .sql, .main {
+    .csv,
+    .sql,
+    .main {
       flex: 1 1 100%;
       margin-bottom: 3rem;
     }
   }
 `
 const SectionSchedules = styled(Section)`
-  ${section}
-  ${layoutDark}
-  ${angle('right')}
-
-  align-items: center;
+  ${section} ${layoutDark} ${angle('right')} align-items: center;
   text-align: center;
   p {
     max-width: 900px;
@@ -223,10 +204,7 @@ const SectionSchedules = styled(Section)`
   }
 `
 const SectionCantAfford = styled(Section)`
-  ${section}
-  ${layoutRight}
-
-  .right {
+  ${section} ${layoutRight} .right {
     img {
       opacity: 1;
       max-width: 940px;
@@ -238,11 +216,7 @@ const SectionCantAfford = styled(Section)`
 `
 
 const SectionContactUs = styled(Section)`
-  ${section}
-  ${layoutDark}
-  ${angle('right')}
-
-  background: ${Theme.colors.primaryDarker};
+  ${section} ${layoutDark} ${angle('right')} background: ${Theme.colors.primaryDarker};
 
   &:after {
     display: none;
@@ -285,7 +259,9 @@ export default class Home extends Component {
         <Main>
           <SectionKnowEverything>
             <NodeGarden
-              color={Color('white').setAlpha(0.1).toString()}
+              color={Color('white')
+                .setAlpha(0.1)
+                .toString()}
               style={{
                 position: 'absolute',
                 top: '0px',

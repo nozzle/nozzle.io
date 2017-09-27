@@ -20,7 +20,7 @@ const Styles = styled.div`
 
   label {
     display: inline-block;
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
   }
 
   input,
@@ -32,33 +32,33 @@ const Styles = styled.div`
     outline: none;
     max-width: 100%;
 
-    &[type="text"],
-    &[type="email"],
-    &[type="tel"] {
+    &[type='text'],
+    &[type='email'],
+    &[type='tel'] {
       width: 100% !important;
     }
 
-    &[type="file"] {
-      background: rgba(0, 0, 0, .2);
+    &[type='file'] {
+      background: rgba(0, 0, 0, 0.2);
     }
   }
 
   textarea {
-    font-size: .85rem;
+    font-size: 0.85rem;
     padding: 10px;
     min-height: 100px;
   }
 
-  [type="submit"] {
+  [type='submit'] {
     ${button};
     background: ${Theme.colors.success};
   }
 
   legend {
-    font-size: .85rem;
+    font-size: 0.85rem;
     line-height: 1rem;
-    padding: .5rem 0;
-    opacity: .7;
+    padding: 0.5rem 0;
+    opacity: 0.7;
     font-weight: 300;
   }
 `
@@ -67,7 +67,7 @@ export default class HubspotForm extends Component {
   constructor () {
     super()
     this.state = {
-      formElementID: `hubspotForm-${uid++}`,
+      formElementID: `hubspotForm-${(uid += 1)}`,
     }
   }
   componentWillMount () {
@@ -89,9 +89,6 @@ export default class HubspotForm extends Component {
 
     document.body.appendChild(script)
   }
-  componentWillUnmount () {
-    window.clearInterval(this.interval)
-  }
   componentDidMount () {
     const { formID, onSubmit } = this.props
     const { formElementID } = this.state
@@ -108,6 +105,9 @@ export default class HubspotForm extends Component {
         onFormSubmit: e => onSubmit && onSubmit(e),
       })
     }, 50)
+  }
+  componentWillUnmount () {
+    window.clearInterval(this.interval)
   }
   render () {
     const { formElementID } = this.state

@@ -8,6 +8,7 @@ import Theme from 'utils/Theme'
 import ScrollTo from 'utils/ScrollTo'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import ExitIntent from './ExitIntent'
 
 const PageStyles = styled.div`min-height: 100%;`
 
@@ -57,10 +58,9 @@ class Page extends Component {
     return (
       <PageStyles>
         <Navbar />
-        <ContentStyled>
-          {children}
-        </ContentStyled>
+        <ContentStyled>{children}</ContentStyled>
         <Footer />
+        <ExitIntent />
       </PageStyles>
     )
   }

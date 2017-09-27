@@ -1,7 +1,7 @@
 import React from 'react'
 import { injectGlobal } from 'styled-components'
 import { Router } from 'react-static'
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 //
 import Theme from 'utils/Theme'
 

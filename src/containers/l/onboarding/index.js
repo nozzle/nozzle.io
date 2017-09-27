@@ -28,7 +28,7 @@ const Styles = styled(Container)`
     display: inline-block;
     margin: 0 1rem;
     padding: 3rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background: ${Theme.colors.primaryDark};
     color: white;
 
@@ -38,8 +38,8 @@ const Styles = styled(Container)`
   }
 `
 
-export default () =>
-  (<Page>
+export default () => (
+  <Page>
     <Head title="Get started with your 2 week free trial!" />
     <Styles>
       <H1>Better Organic Search, Coming Right Up!</H1>
@@ -63,4 +63,5 @@ export default () =>
         }}
       />
     </Styles>
-  </Page>)
+  </Page>
+)

@@ -8,7 +8,7 @@ import Head from 'components/Head'
 import Page from 'components/Page'
 import Main from 'components/Main'
 
-import { H1, H2, H3, H4, H6, P, Img } from 'components/Html'
+import { H1, H2, H3, H4, H6, P, Img, Button } from 'components/Html'
 
 const densityAnimation = keyframes`
   0%, 100% {
@@ -70,7 +70,7 @@ const delorianBehindAnimation = keyframes`
 
 const AboutUsDiv = styled.div`
   padding-top: 0;
-  background-image: url("/img/about/dot-background.jpg");
+  background-image: url('/img/about/dot-background.jpg');
   background-repeat: repeat-y;
   background-size: 100%;
   .intro {
@@ -83,7 +83,7 @@ const AboutUsDiv = styled.div`
     min-height: 108vh;
     align-items: center;
     justify-content: center;
-    background-image: url("/img/about/aboutus.jpg");
+    background-image: url('/img/about/aboutus.jpg');
     background-size: cover;
     background-position: top;
     color: #fff;
@@ -246,13 +246,13 @@ const AboutUsDiv = styled.div`
       border-radius: 5px;
       background: #fff;
       &.derek .member-image .inner {
-        background-image: url("/img/about/derek.jpg");
+        background-image: url('/img/about/derek.jpg');
       }
       &.joe .member-image .inner {
-        background-image: url("/img/about/joe.jpg");
+        background-image: url('/img/about/joe.jpg');
       }
       &.tanner .member-image .inner {
-        background-image: url("/img/about/tanner.jpg");
+        background-image: url('/img/about/tanner.jpg');
       }
       .member-image {
         position: absolute;
@@ -534,13 +534,9 @@ export default class About extends Component {
                     ever, offers 8 flexible chart types and is even more extensible.
                   </P>
                   <br />
-                  <a
-                    className="github-button"
-                    href="https://github.com/chartjs/chart.js"
-                    aria-label="Star chartjs/chart.js on GitHub"
-                  >
-                    Star
-                  </a>
+                  <Link to={'https://github.com/chartjs/chart.js'}>
+                    <Button size="sm">View Chart.js on Github</Button>
+                  </Link>
                 </div>
                 <div className="connector" />
                 <div className="right">
@@ -574,13 +570,9 @@ export default class About extends Component {
                     boilerplate.
                   </P>
                   <br />
-                  <a
-                    className="github-button"
-                    href="https://github.com/jumpsuit/jumpsuit"
-                    aria-label="Star jumpsuit/jumpsuit on GitHub"
-                  >
-                    Star
-                  </a>
+                  <Link to={'https://github.com/jumpsuit/jumpsuit'}>
+                    <Button size="sm">View Jumpsuit on Github</Button>
+                  </Link>
                 </div>
               </div>
 

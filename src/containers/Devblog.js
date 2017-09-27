@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Switch, Redirect, Route } from 'react-router-dom'
 import { getRouteProps } from 'react-static'
 //
 
@@ -15,9 +15,7 @@ import PostList from 'components/PostList'
 import DevblogPost from 'containers/DevblogPost'
 import DevblogCategory from 'containers/DevblogCategory'
 
-const BlogContainer = styled(Container)`
-  background: rgba(0,0,0,.02);
-`
+const BlogContainer = styled(Container)`background: rgba(0, 0, 0, 0.02);`
 
 class Devblog extends Component {
   render () {
@@ -27,21 +25,21 @@ class Devblog extends Component {
         <Route
           path={match.url}
           exact
-          render={() =>
-            (<Page>
+          render={() => (
+            <Page>
               <Head title="Nozzle Dev Blog" />
               <Main>
                 <Header>
                   <H1>Devblog</H1>
                   <SubMenu>
                     <ul>
-                      {categories.map(category =>
-                        (<li key={category.fields.slug}>
+                      {categories.map(category => (
+                        <li key={category.fields.slug}>
                           <Link to={`/devblog/category/${category.fields.slug}`}>
                             {category.fields.title}
                           </Link>
-                        </li>),
-                      )}
+                        </li>
+                      ))}
                     </ul>
                   </SubMenu>
                 </Header>
@@ -49,7 +47,8 @@ class Devblog extends Component {
                   <PostList blog="devblog" posts={posts} />
                 </BlogContainer>
               </Main>
-            </Page>)}
+            </Page>
+          )}
         />
         <Route path={`${match.url}/post/:slug`} component={DevblogPost} />
         <Route path={`${match.url}/category/:slug`} component={DevblogCategory} />

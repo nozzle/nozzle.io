@@ -18,7 +18,7 @@ export const button = css`
   border: 0;
   outline: 0;
   border-radius: 2px;
-  transition: all .2s ${Easing.css.easeOutBack};
+  transition: all 0.2s ${Easing.css.easeOutBack};
   cursor: pointer;
   text-decoration: none;
   background: ${Theme.colors.primary};
@@ -26,10 +26,10 @@ export const button = css`
   font-size: 1rem;
   &:hover {
     transform: scale(1.1) translateY(5%);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0, .2),
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   }
   &:active {
-    transition: all .05s ease-out;
+    transition: all 0.05s ease-out;
     transform: scale(0.9);
     box-shadow: none;
   }
@@ -37,33 +37,25 @@ export const button = css`
 export const buttonSize = ({ size = '' }) =>
   (size === 'lg'
     ? css`
-      font-size: 1.2rem;
-      padding: 1rem 1.4rem;
-    `
+        font-size: 1.2rem;
+        padding: 1rem 1.4rem;
+      `
     : size === 'sm'
       ? css`
-        font-size: .8rem;
-        padding: .6rem 1rem;
-      `
+          font-size: 0.8rem;
+          padding: 0.6rem 1rem;
+        `
       : css`
-        font-size: 1rem;
-        padding: .8rem 1.2rem;
-      `)
-const full = ({ full }) =>
-  full &&
-  css`
-  width: 100%;
-`
+          font-size: 1rem;
+          padding: 0.8rem 1.2rem;
+        `)
+const full = ({ full }) => full && css`width: 100%;`
 const backgroundColor = ({ color }) => css`
   background: ${Theme.colors[color] || color};
   color: ${color === 'white' && Theme.colors.text};
 `
-export const color = ({ color }) => css`
-  color: ${Theme.colors[color] || color};
-`
-const weight = ({ weight }) => css`
-  font-weight: ${Theme.weights[weight] || weight};
-`
+export const color = ({ color }) => css`color: ${Theme.colors[color] || color};`
+const weight = ({ weight }) => css`font-weight: ${Theme.weights[weight] || weight};`
 
 // Components
 
@@ -98,7 +90,9 @@ export const P = styled.p`
 export const Strong = styled.strong`${inline} ${color} font-weight: bold;`
 export const Span = styled.span`${inline} ${color} ${weight};`
 export const Div = styled.div`${margin} ${full} ${color} ${weight};`
-export const Img = styled(({ children, ...rest }) => <img {...rest} width="500" height="400" />)`
+export const Img = styled(({ children, ...rest }) => (
+  <img alt="" {...rest} width="500" height="400" />
+))`
   max-width: 100%;
   width: auto;
   height: auto;
@@ -166,16 +160,15 @@ export const Input = styled.input`
   border: none;
   padding: 0.3em 0.5em;
 `
-const TableCmp = ({ children, ...rest }) =>
-  (<div {...rest}>
-    <table>
-      {children}
-    </table>
-  </div>)
+const TableCmp = ({ children, ...rest }) => (
+  <div {...rest}>
+    <table>{children}</table>
+  </div>
+)
 export const Table = styled(TableCmp)`
   max-width: 100%;
   overflow-x: scroll;
-  border: 1px solid rgba(0,0,0, .1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   table {
     min-width: 100%;
@@ -183,7 +176,8 @@ export const Table = styled(TableCmp)`
     overflow-x: auto;
   }
 
-  th, td {
+  th,
+  td {
     text-overflow: ellipsis;
     padding: 7px 5px;
     overflow: hidden;
@@ -194,57 +188,58 @@ export const Table = styled(TableCmp)`
   }
 
   thead {
-    th, td {
+    th,
+    td {
       background: white;
       font-weight: ${Theme.weights.bold};
       color: ${Theme.colors.darker};
-      border-right: 1px solid rgba(0,0,0, .05);
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     + tbody {
       tr:first-child td {
-        box-shadow: inset 0 20px 20px -20px rgba(0,0,0, .2);
+        box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.2);
       }
     }
   }
 
   tbody {
     tr {
-      border-bottom: solid 1px rgba(0,0,0, .05);
+      border-bottom: solid 1px rgba(0, 0, 0, 0.05);
       &:last-child {
         border-bottom: 0;
       }
     }
 
     td {
-      border-right: 1px solid rgba(0,0,0, .02);
+      border-right: 1px solid rgba(0, 0, 0, 0.02);
     }
   }
 
   &.-striped {
     tbody tr:nth-child(even) {
-      background: rgba(0,0,0, .03);
+      background: rgba(0, 0, 0, 0.03);
     }
   }
 
   &.-highlight {
     tbody tr:hover {
-      background: rgba(0,0,0, .05);
+      background: rgba(0, 0, 0, 0.05);
     }
   }
 `
 
-export const Pre = styled(({ children, ...rest }) =>
-  (<pre itemType="http://schema.org/Code" {...rest}>
+export const Pre = styled(({ children, ...rest }) => (
+  <pre itemType="http://schema.org/Code" {...rest}>
     {children}
-  </pre>),
-)`
+  </pre>
+))`
   font-family: Monaco, Courier, monospace;
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1.1rem;
   background: #212529 !important;
   margin: 0 auto 1rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   overflow: hidden;
 `
 

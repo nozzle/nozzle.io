@@ -14,7 +14,7 @@ export default class CustomHtml extends Component {
     return (
       <Html>
         <Head>
-          <title>Nozzle</title>
+          <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <script
             dangerouslySetInnerHTML={{

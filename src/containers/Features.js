@@ -16,8 +16,8 @@ import { Container, Center } from 'components/Layout'
 
 const below900 = '@media screen and (max-width: 900px)'
 
-const FeaturesNav = props =>
-  (<nav {...props}>
+const FeaturesNav = props => (
+  <nav {...props}>
     <div className="inner">
       <ul data-gumshoe>
         <li>
@@ -43,7 +43,8 @@ const FeaturesNav = props =>
         </li>
       </ul>
     </div>
-  </nav>)
+  </nav>
+)
 
 const FeaturesNavDiv = styled(FeaturesNav)`
   position: fixed;
@@ -52,7 +53,9 @@ const FeaturesNavDiv = styled(FeaturesNav)`
   left: 0;
   padding: 0;
   transition: all 0.3s ease;
-  background: ${Color(Theme.colors.primaryDarkest).setAlpha(0.9).toString()};
+  background: ${Color(Theme.colors.primaryDarkest)
+    .setAlpha(0.9)
+    .toString()};
   text-align: center;
   z-index: 999;
   overflow: hidden;
@@ -83,15 +86,14 @@ const FeaturesNavDiv = styled(FeaturesNav)`
   ${below900} {
     height: 50px;
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      background:
-        linear-gradient(to right; transparent; transparent 60%; rgba(0; 0; 0; 0.7));
+      background: linear-gradient(to right; transparent; transparent 60%; rgba(0; 0; 0; 0.7));
     }
     .inner {
       height: 200%;
@@ -113,9 +115,7 @@ const FeaturesNavDiv = styled(FeaturesNav)`
   }
 `
 
-const section = css`
-  padding: 10% 20px;
-`
+const section = css`padding: 10% 20px;`
 
 const imageSwapAnimation = keyframes`
   0%, 40% {
@@ -126,8 +126,8 @@ const imageSwapAnimation = keyframes`
   }
 `
 
-const SectionBrandsCmp = props =>
-  (<section {...props}>
+const SectionBrandsCmp = props => (
+  <section {...props}>
     <Container>
       <H2 className="badge">
         <Strong>
@@ -196,17 +196,17 @@ const SectionBrandsCmp = props =>
         </Link>
       </Center>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionBrands = styled(SectionBrandsCmp)`
-  ${section}
-
-  padding-top: 15rem;
+  ${section} padding-top: 15rem;
 
   .badge {
     text-align: center;
     white-space: nowrap;
-    > strong, > span {
+    > strong,
+    > span {
       display: inline-block;
     }
     > strong {
@@ -214,7 +214,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
       padding: 10px 13px 67px;
       margin: 0 10px;
       color: white;
-      box-shadow: 0 5px 30px 0 alpha(black, .2);
+      box-shadow: 0 5px 30px 0 alpha(black, 0.2);
       background: ${Theme.colors.primaryDark};
       border-radius: 5px;
       div {
@@ -255,7 +255,8 @@ const SectionBrands = styled(SectionBrandsCmp)`
     justify-content: space-between;
     margin-bottom: 60px;
   }
-  .domain-wrap, .brand-wrap {
+  .domain-wrap,
+  .brand-wrap {
     z-index: 1;
     flex: 1 1 100%;
     margin: 0px auto;
@@ -263,10 +264,16 @@ const SectionBrands = styled(SectionBrandsCmp)`
     max-width: 600px;
     display: block;
   }
-  .domain-wrap .domain, .brand-wrap .domain, .domain-wrap .brand, .brand-wrap .brand, .domain-wrap .img, .brand-wrap .img {
+  .domain-wrap .domain,
+  .brand-wrap .domain,
+  .domain-wrap .brand,
+  .brand-wrap .brand,
+  .domain-wrap .img,
+  .brand-wrap .img {
     position: relative;
   }
-  .domain-wrap .img img, .brand-wrap .img img {
+  .domain-wrap .img img,
+  .brand-wrap .img img {
     position: absolute;
     top: 0;
     left: 0;
@@ -274,7 +281,8 @@ const SectionBrands = styled(SectionBrandsCmp)`
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
   }
-  .domain-wrap .img img:last-child, .brand-wrap .img img:last-child {
+  .domain-wrap .img img:last-child,
+  .brand-wrap .img img:last-child {
     animation: ${imageSwapAnimation} 4s linear infinite alternate;
   }
   .domain-wrap h4 {
@@ -283,7 +291,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
     margin-bottom: 20px;
   }
   .domain:after {
-    content: "";
+    content: '';
     padding-top: 18.69%;
     display: block;
   }
@@ -303,7 +311,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
       border-radius: 10px;
       padding: 12px 10px 10px;
       :after {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         top: 50%;
@@ -314,7 +322,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
         left: 100%;
       }
       :before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         top: 50%;
@@ -332,7 +340,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
     margin: 0 auto 20px;
   }
   .brand:after {
-    content: "";
+    content: '';
     padding-top: 76.16%;
     display: block;
   }
@@ -355,7 +363,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
       margin-bottom: 20px;
     }
   }
-  @media screen and (min-width: 900px) {;
+  @media screen and (min-width: 900px) {
     > h2 {
       margin-bottom: 60px;
       strong {
@@ -368,7 +376,8 @@ const SectionBrands = styled(SectionBrandsCmp)`
     }
     .images {
       flex-direction: row;
-      .domain-wrap, .brand-wrap {
+      .domain-wrap,
+      .brand-wrap {
         flex: 1 1 40%;
       }
       .vs {
@@ -379,8 +388,8 @@ const SectionBrands = styled(SectionBrandsCmp)`
   }
 `
 
-const SectionCompetitionCmp = props =>
-  (<section {...props}>
+const SectionCompetitionCmp = props => (
+  <section {...props}>
     <Container>
       <H2>
         <Img src="/img/competitorWaves.png" />
@@ -422,13 +431,11 @@ const SectionCompetitionCmp = props =>
         </Link>
       </Center>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionCompetition = styled(SectionCompetitionCmp)`
-  ${section}
-  ${angle('right')}
-
-  background: ${Theme.colors.primaryDarker};
+  ${section} ${angle('right')} background: ${Theme.colors.primaryDarker};
   color: white;
   h2 {
     text-align: center;
@@ -441,7 +448,8 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
   strong {
     color: ${Theme.colors.primaryLighter};
   }
-  .one, .two {
+  .one,
+  .two {
     flex: 1 0 auto;
     display: flex;
     flex-direction: row;
@@ -451,20 +459,24 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
     margin-bottom: 40px;
     text-align: center;
   }
-  .one > div, .two > div {
+  .one > div,
+  .two > div {
     flex: 1 1 100%;
     padding: 20px;
   }
-  .one img, .two img {
+  .one img,
+  .two img {
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 5px;
   }
   @media screen and (min-width: 900px) {
-    .one, .two {
+    .one,
+    .two {
       flex-direction: row;
       flex: 1 0 auto;
     }
-    .one > div, .two > div {
+    .one > div,
+    .two > div {
       flex: 0 0 50%;
     }
     .one .right {
@@ -485,8 +497,8 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
   }
 `
 
-const SectionScheduling = styled(props =>
-  (<section {...props}>
+const SectionScheduling = styled(props => (
+  <section {...props}>
     <Container>
       <Center>
         <Img src="/img/scheduleDots.png" />
@@ -512,11 +524,9 @@ const SectionScheduling = styled(props =>
         </Link>
       </Center>
     </Container>
-  </section>),
-)`
-  ${section}
-
-  img {
+  </section>
+))`
+  ${section} img {
     display: block;
     margin: 0 auto 20px;
     width: 250px;
@@ -536,11 +546,10 @@ const SectionScheduling = styled(props =>
     width: 600px;
     max-width: 100%;
   }
-
 `
 
-const SectionDataCmp = props =>
-  (<section {...props}>
+const SectionDataCmp = props => (
+  <section {...props}>
     <Container>
       <div className="-header">
         <H2 className="-one">Serp</H2>
@@ -687,16 +696,15 @@ const SectionDataCmp = props =>
         </Link>
       </Center>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionData = styled(SectionDataCmp)`
-  ${section}
-  ${angle('right')}
-
-  background: ${Theme.colors.primaryDarker};
+  ${section} ${angle('right')} background: ${Theme.colors.primaryDarker};
   color: white;
   .-header {
-    h2, img {
+    h2,
+    img {
       margin: 0 auto;
       display: block;
       text-align: center;
@@ -801,15 +809,15 @@ const SectionData = styled(SectionDataCmp)`
       position: relative;
       width: 100%;
       :before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: 1;
-        boxShadow:
-          inset 0 40px 40px -40px rgba(0, 0, 0, 0.3), inset 0 -40px 40px -40px rgba(0, 0, 0, 0.3);
+        boxshadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3),
+          inset 0 -40px 40px -40px rgba(0, 0, 0, 0.3);
       }
       img {
         display: block;
@@ -841,7 +849,7 @@ const SectionData = styled(SectionDataCmp)`
       padding: 10px 10px 10px 30px;
       position: relative;
       :before {
-        content: "";
+        content: '';
         position: absolute;
         width: 12px;
         height: 12px;
@@ -873,8 +881,8 @@ const SectionData = styled(SectionDataCmp)`
   }
 `
 
-const SectionAgenciesCmp = props =>
-  (<section {...props}>
+const SectionAgenciesCmp = props => (
+  <section {...props}>
     <Container>
       <Img src="/img/agency.png" />
       <H2>Agency Tools</H2>
@@ -899,12 +907,11 @@ const SectionAgenciesCmp = props =>
         </div>
       </div>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionAgencies = styled(SectionAgenciesCmp)`
-  ${section}
-
-  img {
+  ${section} img {
     display: block;
     margin: 0 auto 20px;
     width: 200px;
@@ -942,7 +949,8 @@ const SectionAgencies = styled(SectionAgenciesCmp)`
   @media screen and (min-width: 900px) {
     .wrap {
       flex-direction: row;
-      .one, .two {
+      .one,
+      .two {
         flex: 1 1 50%;
       }
       .one {
@@ -956,8 +964,8 @@ const SectionAgencies = styled(SectionAgenciesCmp)`
   }
 `
 
-const SectionReputationCmp = props =>
-  (<section {...props}>
+const SectionReputationCmp = props => (
+  <section {...props}>
     <Container>
       <Img src="/img/reputation.png" />
       <H2>Reputation Management</H2>
@@ -982,13 +990,11 @@ const SectionReputationCmp = props =>
         </div>
       </div>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionReputation = styled(SectionReputationCmp)`
-  ${section}
-  ${angle('right')}
-
-  background: ${Theme.colors.primaryDarker};
+  ${section} ${angle('right')} background: ${Theme.colors.primaryDarker};
   color: white;
   img {
     display: block;
@@ -1026,7 +1032,8 @@ const SectionReputation = styled(SectionReputationCmp)`
   @media screen and (min-width: 900px) {
     .wrap {
       flex-direction: row;
-      .one, .two {
+      .one,
+      .two {
         flex: 1 1 50%;
       }
       .one {
@@ -1039,8 +1046,8 @@ const SectionReputation = styled(SectionReputationCmp)`
     }
   }
 `
-const SectionIntegrationsCmp = props =>
-  (<section {...props}>
+const SectionIntegrationsCmp = props => (
+  <section {...props}>
     <Container>
       <Img src="/img/integrations.png" />
       <H2>Integrations &amp; Export</H2>
@@ -1101,13 +1108,11 @@ const SectionIntegrationsCmp = props =>
         </Link>
       </Center>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionIntegrations = styled(SectionIntegrationsCmp)`
-  ${section}
-  ${angle('right')}
-
-  img {
+  ${section} ${angle('right')} img {
     display: block;
     margin: 0 auto 20px;
     width: 150px;
@@ -1161,8 +1166,8 @@ const SectionIntegrations = styled(SectionIntegrationsCmp)`
   }
 `
 
-const SectionContactUsCmp = props =>
-  (<section {...props}>
+const SectionContactUsCmp = props => (
+  <section {...props}>
     <Container>
       <H2 full>Let's start your free trial!</H2>
       <TrialForm />
@@ -1173,13 +1178,11 @@ const SectionContactUsCmp = props =>
         </Button>
       </Link>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionContactUs = styled(SectionContactUsCmp)`
-  ${section}
-  ${angle('right')}
-
-  background: ${Theme.colors.primaryDarker};
+  ${section} ${angle('right')} background: ${Theme.colors.primaryDarker};
   color: white;
   :after {
     display: none;

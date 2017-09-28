@@ -21,7 +21,7 @@ export const button = css`
   transition: all 0.2s ${Easing.css.easeOutBack};
   cursor: pointer;
   text-decoration: none;
-  background: ${Theme.colors.primary};
+  background: ${props => Theme.colors[props.color] || Theme.colors.primary};
   color: white;
   font-size: 1rem;
   &:hover {

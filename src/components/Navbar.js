@@ -49,7 +49,7 @@ const NavbarStyles = styled.header`
       width: 120px;
       margin: 8px 0 5px 10px;
       transition: all .3s ease;
-      span {
+      a.hide {
         display: none;
       }
       img {
@@ -93,7 +93,7 @@ const NavbarStyles = styled.header`
                 left: 50%;
               }
             }
-        `}
+          `}
       }
 
       > div {
@@ -158,10 +158,10 @@ const NavbarStyles = styled.header`
         ${props =>
     props.isMenuOpen &&
           css`
-          pointer-events: all;
-          transform: translateY(0);
-          opacity: 1;
-        `}
+            pointer-events: all;
+            transform: translateY(0);
+            opacity: 1;
+          `}
       }
     }
 
@@ -319,8 +319,8 @@ const links = [
   },
 ]
 
-const LinkItem = (link, i) =>
-  (<div key={i} className="link">
+const LinkItem = (link, i) => (
+  <div key={i} className="link">
     <div itemProp="name">
       <Link
         key={i}
@@ -331,11 +331,9 @@ const LinkItem = (link, i) =>
         {link.name}
       </Link>
     </div>
-    {link.links &&
-      <div className="links-nested">
-        {link.links.map(LinkItem)}
-      </div>}
-  </div>)
+    {link.links && <div className="links-nested">{link.links.map(LinkItem)}</div>}
+  </div>
+)
 
 export default class Navbar extends Component {
   constructor () {
@@ -356,9 +354,9 @@ export default class Navbar extends Component {
       <NavbarStyles isMenuOpen={isMenuOpen}>
         <div className="inner">
           <Link className="logo" to="/" itemScope itemType="http://schema.org/Organization">
-            <span itemProp="url" href="https://nozzle.io/">
+            <a className="hide" itemProp="url" href="https://nozzle.io/">
               Home
-            </span>
+            </a>
             <img src="/img/logo-small.svg" alt="logo" itemProp="logo" />
           </Link>
           <div

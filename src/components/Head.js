@@ -37,7 +37,7 @@ export default ({
       {type && <meta property="og:type" content={type || 'website'} />}
       {path && <meta property="og:url" content={permalink} />}
       {images && images.slice(0, 6).map(d => <meta key={d} property="og:image" content={d} />)}
-      <meta property="og:updated_time" content={date} />
+      {date && <meta property="og:updated_time" content={date} />}
       {audio && <meta property="og:audio" content={audio} />}
       <meta property="og:locale" content="en_US" />
       {siteTitle && <meta property="og:site_name" content={siteTitle} />}
@@ -67,7 +67,7 @@ export default ({
       {siteFacebookAdmins && <meta property="fb:admins" content={siteFacebookAdmins} />}
 
       {/* Schema.org markup */}
-      {title && <meta itemProp="name" content={title} />}
+      {/* {title && <meta itemProp="name" content={title} />} */}
       {description && <meta itemProp="description" content={description} />}
       {images &&
         images.slice(0, 6).map(image => <meta key={image} itemProp="image" content={image} />)}

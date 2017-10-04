@@ -49,7 +49,7 @@ const NavbarStyles = styled.header`
       width: 120px;
       margin: 8px 0 5px 10px;
       transition: all .3s ease;
-      a.hide {
+      .hide {
         display: none;
       }
       img {
@@ -353,10 +353,15 @@ export default class Navbar extends Component {
     return (
       <NavbarStyles isMenuOpen={isMenuOpen}>
         <div className="inner">
-          <Link className="logo" to="/" itemScope itemType="http://schema.org/Organization">
-            <a className="hide" itemProp="url" href="https://nozzle.io/">
-              Home
-            </a>
+          <Link
+            className="logo"
+            to="/"
+            itemScope
+            itemType="http://schema.org/Organization"
+            itemProp="url"
+            href="https://nozzle.io/"
+          >
+            <span className="hide">Home</span>
             <img src="/img/logo-small.svg" alt="logo" itemProp="logo" />
           </Link>
           <div

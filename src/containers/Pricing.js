@@ -44,12 +44,10 @@ const frequencyOptions = [
   },
 ]
 
-const section = css`
-  padding: 1rem 1.5rem;
-`
+const section = css`padding: 1rem 1.5rem;`
 
-const SectionIntroCmp = props =>
-  (<section {...props}>
+const SectionIntroCmp = props => (
+  <section {...props}>
     <Container>
       <Center>
         <H1>Pricing</H1>
@@ -66,14 +64,13 @@ const SectionIntroCmp = props =>
         </P>
       </Center>
     </Container>
-  </section>)
+  </section>
+)
 
-const SectionIntro = styled(SectionIntroCmp)`
-  padding: 8rem 1.5rem 1rem;
-`
+const SectionIntro = styled(SectionIntroCmp)`padding: 8rem 1.5rem 1rem;`
 
-const SectionPlansCmp = props =>
-  (<section {...props}>
+const SectionPlansCmp = props => (
+  <section {...props}>
     <Container>
       <div className="plans">
         <div className="plan" id={plans[1].value}>
@@ -186,7 +183,8 @@ const SectionPlansCmp = props =>
         </div>
       </div>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionPlans = styled(SectionPlansCmp)`
   ${section}
@@ -330,8 +328,8 @@ const SectionPlans = styled(SectionPlansCmp)`
 
 `
 
-const SectionSprayCmp = props =>
-  (<section {...props}>
+const SectionSprayCmp = props => (
+  <section {...props}>
     <Container>
       <Center>
         <H5 className="title">Having commitment issues?</H5>
@@ -349,7 +347,8 @@ const SectionSprayCmp = props =>
         </div>
       </Center>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionSpray = styled(SectionSprayCmp)`
   margin: 5% auto;
@@ -374,8 +373,8 @@ const SectionSpray = styled(SectionSprayCmp)`
   }
 `
 
-const SectionFaqCmp = props =>
-  (<section {...props}>
+const SectionFaqCmp = props => (
+  <section {...props}>
     <Container>
       <Center>
         <H3 className="title">Frequently Answered Questions</H3>
@@ -396,7 +395,8 @@ const SectionFaqCmp = props =>
         </P>
       </div>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionFaq = styled(SectionFaqCmp)`
   padding: 5% 20px;
@@ -545,8 +545,8 @@ class SectionCalculatorCmp extends Component {
                 <div className="label">Frequency</div>
                 <div className="radios">
                   <radiogroup>
-                    {frequencyOptions.map((option, i) =>
-                      (<label key={i}>
+                    {frequencyOptions.map((option, i) => (
+                      <label key={i}>
                         <input
                           type="radio"
                           name={option.value}
@@ -557,21 +557,17 @@ class SectionCalculatorCmp extends Component {
                           checked={frequency === option.value}
                         />{' '}
                         {option.label}
-                      </label>),
-                    )}
+                      </label>
+                    ))}
                   </radiogroup>
                 </div>
               </div>
             </div>
             <div className="right">
-              <div className="amount">
-                {number(totalCredits)}
-              </div>
+              <div className="amount">{number(totalCredits)}</div>
               <div className="suggested">Suggested Plan:</div>
               <div className="suggested-plan">
-                <Link to={`#${suggestedPlan.value}`}>
-                  {suggestedPlan.label}
-                </Link>
+                <Link to={`#${suggestedPlan.value}`}>{suggestedPlan.label}</Link>
               </div>
             </div>
           </div>
@@ -582,9 +578,7 @@ class SectionCalculatorCmp extends Component {
 }
 
 const SectionCalculator = styled(SectionCalculatorCmp)`
-  ${angle('right')}
-
-  padding: 5% 1rem 10%;
+  ${angle('right')} padding: 5% 1rem 10%;
   .title {
     text-align: center;
     margin-bottom: 30px;
@@ -593,7 +587,8 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
     display: flex;
     flex-wrap: wrap;
   }
-  .left, .right {
+  .left,
+  .right {
     flex: 1 1 400px;
     padding: 0 20px;
   }
@@ -609,12 +604,12 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
         width: 50%;
       }
     }
-    input[type="number"] {
+    input[type='number'] {
       font-size: 1em;
       width: 100%;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
     }
-    .frequency  {
+    .frequency {
       align-self: flex-start;
     }
     .radios {
@@ -652,8 +647,8 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
   }
 `
 
-const SectionContactUsCmp = props =>
-  (<section {...props}>
+const SectionContactUsCmp = props => (
+  <section {...props}>
     <Container>
       <H2 full>Let's start your free trial!</H2>
       <TrialForm />
@@ -664,12 +659,11 @@ const SectionContactUsCmp = props =>
         </Button>
       </Link>
     </Container>
-  </section>)
+  </section>
+)
 
 const SectionContactUs = styled(SectionContactUsCmp)`
-  ${angle('right')}
-
-  padding: 10% 2rem;
+  ${angle('right')} padding: 10% 2rem;
   background: ${Theme.colors.primaryDarker};
   color: white;
   &:after {

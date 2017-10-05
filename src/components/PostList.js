@@ -97,7 +97,7 @@ export default function PostList ({ blog, posts }) {
                 <div className="tags">
                   {post.fields.tags.map(tag => (
                     <Link
-                      to={`/devblog/tag/${tag}`}
+                      to={`/devblog/tags/${tag}`}
                       className="tag"
                       key={tag}
                       style={{

@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+/about-us /about
+/devblog/authentication-cookies-vs-jwt-youre-wrong  /devblog/authentication-cookies-vs-jwt
+/devblog/personas/angularian  /devblog/tags/angular
+/devblog/personas/gopher  /devblog/tags/golang

@@ -35,7 +35,7 @@ class Devblog extends Component {
                     <ul>
                       {tags.map(tag => (
                         <li key={tag}>
-                          <Link to={`/devblog/tag/${tag}/`}>{tag}</Link>
+                          <Link to={`/devblog/tags/${tag}/`}>{tag}</Link>
                         </li>
                       ))}
                     </ul>
@@ -48,7 +48,7 @@ class Devblog extends Component {
             </Page>
           )}
         />
-        <Route path={`${match.url}/tag/:slug`} component={DevblogTag} />
+        <Route path={`${match.url}/tags/:slug`} component={DevblogTag} />
         <Route path={`${match.url}/:slug`} component={DevblogPost} />
         <Redirect to={match.url} />
       </Switch>

@@ -48,7 +48,7 @@ export default {
             }
           }),
           ...tags.map(tag => {
-            const path = `/tag/${tag}`
+            const path = `/tags/${tag}`
             return {
               path,
               getProps: async () => {

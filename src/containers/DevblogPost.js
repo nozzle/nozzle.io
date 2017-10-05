@@ -130,7 +130,7 @@ class DevblogPost extends Component {
               <div className="tags">
                 {post.fields.tags.map(tag => (
                   <Link
-                    to={`/devblog/tag/${tag}/`}
+                    to={`/devblog/tags/${tag}/`}
                     className="tag"
                     key={tag}
                     style={{

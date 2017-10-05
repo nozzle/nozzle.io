@@ -29,7 +29,7 @@ class DevblogTag extends Component {
                 </li>
                 {tags.map(tag => (
                   <li key={tag}>
-                    <Link to={`/devblog/tag/${tag}/`}>{tag}</Link>
+                    <Link to={`/devblog/tags/${tag}/`}>{tag}</Link>
                   </li>
                 ))}
               </ul>

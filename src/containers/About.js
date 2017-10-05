@@ -399,7 +399,7 @@ export default class About extends Component {
                   we couldn't live without.
                 </P>
               </div>
-              <Link className="next" to="/about#timeline">
+              <Link className="next" to="/about/#timeline">
                 <svg
                   width="53px"
                   height="30px"

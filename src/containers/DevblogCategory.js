@@ -25,11 +25,11 @@ class DevblogCategory extends Component {
             <SubMenu>
               <ul>
                 <li>
-                  <Link to="/devblog">All</Link>
+                  <Link to="/devblog/">All</Link>
                 </li>
                 {categories.map(category => (
                   <li key={category.fields.slug}>
-                    <Link to={`/devblog/category/${category.fields.slug}`}>
+                    <Link to={`/devblog/category/${category.fields.slug}/`}>
                       {category.fields.title}
                     </Link>
                   </li>

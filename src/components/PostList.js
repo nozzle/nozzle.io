@@ -20,11 +20,11 @@ const Post = styled(Link)`
   max-width: 50rem;
   padding: 3rem;
   margin: 0 auto;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 3rem;
   background: white;
-  border-radius: .5rem;
-  box-shadow: inset 0 0 0 1px #dae4ed, 0 5px 15px -5px rgba(0,0,0,.1);
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0 1px #dae4ed, 0 5px 15px -5px rgba(0, 0, 0, 0.1);
 
   .title {
     font-size: 1.7rem;
@@ -34,17 +34,17 @@ const Post = styled(Link)`
   .info {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    opacity: .7;
+    opacity: 0.7;
   }
 
   .categories {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
 
     .category {
       display: inline-block;
       padding: 0.7rem;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       background: ${Theme.colors.primary};
       color: white;
     }
@@ -79,34 +79,29 @@ export default function PostList ({ blog, posts }) {
       {posts.map(post => {
         const wordCount = post.fields.body.split(' ').length
         return (
-          <Post to={`/${blog}/post/${post.fields.slug}`} key={post.fields.slug}>
+          <Post to={`/${blog}/post/${post.fields.slug}/`} key={post.fields.slug}>
             <article>
               <header>
-                <h2 className="title">
-                  {post.fields.title}
-                </h2>
+                <h2 className="title">{post.fields.title}</h2>
                 <div className="info">
-                  {post.fields.author.map(author =>
-                    (<span key={author.fields.name}>
-                      {author.fields.name}
-                    </span>),
-                  )}{' '}
-                  on {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')}{' '}
-                  &bull; {ReadTime(wordCount)} min read
+                  {post.fields.author.map(author => (
+                    <span key={author.fields.name}>{author.fields.name}</span>
+                  ))}{' '}
+                  on {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')} &bull;{' '}
+                  {ReadTime(wordCount)} min read
                 </div>
                 <div className="categories">
-                  {post.fields.category.map(category =>
-                    (<span
+                  {post.fields.category.map(category => (
+                    <span
                       className="category"
                       key={category.fields.slug}
                       style={{
-                        background:
-                          Theme.colors.categories[category.fields.title],
+                        background: Theme.colors.categories[category.fields.title],
                       }}
                     >
                       {category.fields.title}
-                    </span>),
-                  )}
+                    </span>
+                  ))}
                 </div>
               </header>
               <div className="summary">

@@ -35,7 +35,7 @@ class Devblog extends Component {
                     <ul>
                       {categories.map(category => (
                         <li key={category.fields.slug}>
-                          <Link to={`/devblog/category/${category.fields.slug}`}>
+                          <Link to={`/devblog/category/${category.fields.slug}/`}>
                             {category.fields.title}
                           </Link>
                         </li>

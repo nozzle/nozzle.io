@@ -24,6 +24,7 @@ export default {
       },
       {
         path: '/l/onboarding',
+        noindex: true,
         children: [
           {
             path: '/thanks',

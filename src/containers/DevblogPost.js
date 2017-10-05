@@ -40,23 +40,24 @@ const PostContainer = styled.article`
     opacity: 0.7;
   }
 
-  .categories {
+  .tags {
     font-size: 0.8rem;
     margin-bottom: 1rem;
 
-    .category {
+    .tag {
       display: inline-block;
       padding: 0.7rem;
       border-radius: 0.5rem;
       background: ${Theme.colors.primary};
       color: white;
+      margin: 0 0.3rem 0.3rem 0;
     }
   }
 `
 
 const PostStyles = styled.div`
   margin: 0 auto;
-  padding: 0 2rem 2rem;
+  padding: 2rem;
   width: 900px;
   max-width: 100%;
 
@@ -93,7 +94,6 @@ class DevblogPost extends Component {
           images={[post.fields.featuredImage.fields.file.url]}
           // videos=[]
           date={post.sys.createdAt}
-          categories={post.fields.category[0].fields.title}
           tags={post.fields.tags}
           author={post.fields.author[0].fields.name}
           // seriesPermalinks={[]}
@@ -127,17 +127,18 @@ class DevblogPost extends Component {
                 &bull; {ReadTime(wordCount)} min read
                 <time dateTime={post.sys.createdAt} itemProp="datePublished" />
               </div>
-              <div className="categories">
-                {post.fields.category.map(category => (
-                  <span
-                    className="category"
-                    key={category.fields.slug}
+              <div className="tags">
+                {post.fields.tags.map(tag => (
+                  <Link
+                    to={`/devblog/tag/${tag}/`}
+                    className="tag"
+                    key={tag}
                     style={{
-                      background: Theme.colors.categories[category.fields.title],
+                      background: Theme.colors.tags[tag],
                     }}
                   >
-                    {category.fields.title}
-                  </span>
+                    {tag}
+                  </Link>
                 ))}
               </div>
             </Header>

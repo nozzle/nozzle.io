@@ -18,15 +18,15 @@ export const Center = styled.div`text-align: center;`
 export const Header = styled.div`
   background: ${Theme.colors.primaryDarker};
   color: white;
-  padding: 2rem 2rem 1rem;
-  margin-bottom: 3rem;
+  padding: 2rem;
   text-align: center;
 `
 
 export const SubMenu = styled.div`
   display: block;
   text-align: center;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
+  padding: 2rem 0;
 
   li {
     display: inline-block;
@@ -34,14 +34,14 @@ export const SubMenu = styled.div`
 
   a {
     display: inline-block;
-    background: rgba(0, 0, 0, .4);
-    padding: .7rem;
-    margin: .2rem;
-    border-radius: .3rem;
-    transition: all .2s ease-out;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.7rem;
+    margin: 0.2rem;
+    border-radius: 0.3rem;
+    transition: all 0.2s ease-out;
 
     :hover {
-      background: rgba(255, 255, 255, .1);
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 `
@@ -57,13 +57,13 @@ export const SidebarWrapper = styled(Container)`
 export const Sidebar = styled.div`
   flex: 0 0 250px;
   min-width: 0;
-  border-right: 1px solid rgba(0, 0, 0, .1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 1rem;
 
   a {
     display: block;
-    padding: .7rem .7rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    padding: 0.7rem 0.7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 `
 export const SidebarContent = styled.div`

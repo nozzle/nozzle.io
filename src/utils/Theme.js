@@ -4,11 +4,22 @@ const primary = '#0C6A8A'
 
 const colorOptions = {
   primary,
-  primaryLight: Color(primary).lighten(7).toString(),
-  primaryLighter: Color(primary).lighten(15).toString(),
-  primaryDark: Color(primary).darken(7).toString(),
-  primaryDarker: Color(primary).darken(15).toString(),
-  primaryDarkest: Color(primary).darken(20).saturate(100).toString(),
+  primaryLight: Color(primary)
+    .lighten(7)
+    .toString(),
+  primaryLighter: Color(primary)
+    .lighten(15)
+    .toString(),
+  primaryDark: Color(primary)
+    .darken(7)
+    .toString(),
+  primaryDarker: Color(primary)
+    .darken(15)
+    .toString(),
+  primaryDarkest: Color(primary)
+    .darken(20)
+    .saturate(100)
+    .toString(),
   text: '#2b3640',
   danger: '#F15854',
   success: '#60BD68',
@@ -43,7 +54,7 @@ export default {
     ...colorOptions,
     options: colorOptions,
 
-    categories: {
+    tags: {
       'Front End': colorOptions.success,
       Backend: colorOptions.danger,
     },

@@ -13,32 +13,30 @@ import PostList from 'components/PostList'
 
 const BlogContainer = styled(Container)`background: rgba(0, 0, 0, 0.02);`
 
-class DevblogCategory extends Component {
+class DevblogTag extends Component {
   render () {
-    const { category, categories, categoryPosts } = this.props
+    const { tag, tags, tagPosts } = this.props
     return (
       <Page>
-        <Head title={`${category.fields.title} | Nozzle`} />
+        <Head title={`${tag} | Nozzle`} />
         <Main>
           <Header>
-            <H1>Devblog - {category.fields.title}</H1>
+            <H1>Devblog - {tag}</H1>
             <SubMenu>
               <ul>
                 <li>
                   <Link to="/devblog/">All</Link>
                 </li>
-                {categories.map(category => (
-                  <li key={category.fields.slug}>
-                    <Link to={`/devblog/category/${category.fields.slug}/`}>
-                      {category.fields.title}
-                    </Link>
+                {tags.map(tag => (
+                  <li key={tag}>
+                    <Link to={`/devblog/tag/${tag}/`}>{tag}</Link>
                   </li>
                 ))}
               </ul>
             </SubMenu>
           </Header>
           <BlogContainer>
-            <PostList blog="devblog" posts={categoryPosts} />
+            <PostList blog="devblog" posts={tagPosts} />
           </BlogContainer>
         </Main>
       </Page>
@@ -46,4 +44,4 @@ class DevblogCategory extends Component {
   }
 }
 
-export default getRouteProps(DevblogCategory)
+export default getRouteProps(DevblogTag)

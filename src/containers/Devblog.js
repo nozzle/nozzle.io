@@ -13,13 +13,13 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 
 import DevblogPost from 'containers/DevblogPost'
-import DevblogCategory from 'containers/DevblogCategory'
+import DevblogTag from 'containers/DevblogTag'
 
 const BlogContainer = styled(Container)`background: rgba(0, 0, 0, 0.02);`
 
 class Devblog extends Component {
   render () {
-    const { posts, categories, match } = this.props
+    const { posts, tags, match } = this.props
     return (
       <Switch>
         <Route
@@ -33,11 +33,9 @@ class Devblog extends Component {
                   <H1>Devblog</H1>
                   <SubMenu>
                     <ul>
-                      {categories.map(category => (
-                        <li key={category.fields.slug}>
-                          <Link to={`/devblog/category/${category.fields.slug}/`}>
-                            {category.fields.title}
-                          </Link>
+                      {tags.map(tag => (
+                        <li key={tag}>
+                          <Link to={`/devblog/tag/${tag}/`}>{tag}</Link>
                         </li>
                       ))}
                     </ul>
@@ -50,8 +48,8 @@ class Devblog extends Component {
             </Page>
           )}
         />
+        <Route path={`${match.url}/tag/:slug`} component={DevblogTag} />
         <Route path={`${match.url}/:slug`} component={DevblogPost} />
-        <Route path={`${match.url}/category/:slug`} component={DevblogCategory} />
         <Redirect to={match.url} />
       </Switch>
     )

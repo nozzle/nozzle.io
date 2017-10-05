@@ -13,9 +13,10 @@ import { Button } from './Html'
 const PostListStyled = styled.div`
   display: flex;
   flex-direction: column;
+  padding-top: 2rem;
 `
 
-const Post = styled(Link)`
+const Post = styled.div`
   width: 100%;
   max-width: 50rem;
   padding: 3rem;
@@ -37,16 +38,17 @@ const Post = styled(Link)`
     opacity: 0.7;
   }
 
-  .categories {
+  .tags {
     font-size: 0.8rem;
     margin-bottom: 1rem;
 
-    .category {
+    .tag {
       display: inline-block;
-      padding: 0.7rem;
+      padding: 0.4rem 0.6rem;
       border-radius: 0.5rem;
-      background: ${Theme.colors.primary};
+      background: ${Theme.colors.primaryDark};
       color: white;
+      margin: 0 0.3rem 0.3rem 0;
     }
   }
 
@@ -79,10 +81,12 @@ export default function PostList ({ blog, posts }) {
       {posts.map(post => {
         const wordCount = post.fields.body.split(' ').length
         return (
-          <Post to={`/${blog}/${post.fields.slug}/`} key={post.fields.slug}>
+          <Post key={post.fields.slug}>
             <article>
               <header>
-                <h2 className="title">{post.fields.title}</h2>
+                <h2 className="title">
+                  <Link to={`/${blog}/${post.fields.slug}/`}>{post.fields.title}</Link>
+                </h2>
                 <div className="info">
                   {post.fields.author.map(author => (
                     <span key={author.fields.name}>{author.fields.name}</span>
@@ -90,17 +94,18 @@ export default function PostList ({ blog, posts }) {
                   on {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')} &bull;{' '}
                   {ReadTime(wordCount)} min read
                 </div>
-                <div className="categories">
-                  {post.fields.category.map(category => (
-                    <span
-                      className="category"
-                      key={category.fields.slug}
+                <div className="tags">
+                  {post.fields.tags.map(tag => (
+                    <Link
+                      to={`/devblog/tag/${tag}`}
+                      className="tag"
+                      key={tag}
                       style={{
-                        background: Theme.colors.categories[category.fields.title],
+                        background: Theme.colors.tags[tag],
                       }}
                     >
-                      {category.fields.title}
-                    </span>
+                      {tag}
+                    </Link>
                   ))}
                 </div>
               </header>
@@ -110,7 +115,7 @@ export default function PostList ({ blog, posts }) {
                 </div>
                 <div className="more">
                   <Button size="sm" burst>
-                    Read More
+                    <Link to={`/${blog}/${post.fields.slug}/`}>Read More</Link>
                   </Button>
                 </div>
               </div>

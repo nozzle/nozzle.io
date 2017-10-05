@@ -1,5 +1,6 @@
 // import fs from 'fs-extra'
 import { createClient } from 'contentful'
+import { flatten, uniq } from 'lodash'
 
 const client = createClient({
   space: 'z8uwv83tofbw',
@@ -9,12 +10,12 @@ const client = createClient({
 export default async function fetch () {
   try {
     const authors = await fetchAuthors()
-    const categories = await fetchCategories()
     const posts = await fetchPosts()
+    const tags = uniq(flatten(posts.map(d => d.fields.tags)))
 
     const allData = {
       authors,
-      categories,
+      tags,
       posts,
     }
 
@@ -27,14 +28,6 @@ export default async function fetch () {
 async function fetchAuthors () {
   const { items } = await client.getEntries({
     content_type: '1kUEViTN4EmGiEaaeC6ouY',
-    limit: 1000,
-  })
-  return items
-}
-
-async function fetchCategories () {
-  const { items } = await client.getEntries({
-    content_type: 'devCategory',
     limit: 1000,
   })
   return items

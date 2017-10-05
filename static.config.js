@@ -5,7 +5,7 @@ export default {
   siteRoot: 'https://nozzle.io',
   Html,
   getRoutes: async () => {
-    const { posts, categories } = await Contentful()
+    const { posts, tags } = await Contentful()
     return [
       {
         path: '/',
@@ -35,7 +35,7 @@ export default {
         path: '/devblog/',
         getProps: async () => ({
           posts,
-          categories,
+          tags,
         }),
         children: [
           ...posts.map(d => {
@@ -47,17 +47,13 @@ export default {
               getProps: async () => ({ post: d }),
             }
           }),
-          ...categories.map(d => {
-            const path = `/category/${d.fields.slug}`
+          ...tags.map(tag => {
+            const path = `/tag/${tag}`
             return {
               path,
-              nofollow: d.fields.nofollow,
-              noindex: d.fields.noindex,
               getProps: async () => {
-                const categoryPosts = posts.filter(post =>
-                  post.fields.category.find(cat => cat.fields.slug === d.fields.slug),
-                )
-                return { category: d, categoryPosts, categories }
+                const tagPosts = posts.filter(post => post.fields.tags.includes(tag))
+                return { tag, tagPosts, tags }
               },
             }
           }),

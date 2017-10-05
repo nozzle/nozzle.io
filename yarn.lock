@@ -5121,8 +5121,8 @@ react-smackdown@^0.6.4:
     react-syntax-highlighter "^5.6.3"
 
 react-static@^1.0.21:
-  version "1.0.33"
-  resolved "https://registry.yarnpkg.com/react-static/-/react-static-1.0.33.tgz#680f88cb733e3b4cf3bc434a8cd150b3b0828243"
+  version "1.0.36"
+  resolved "https://registry.yarnpkg.com/react-static/-/react-static-1.0.36.tgz#706218863626ea96b3ebadd87ab3e38ed8ee4a2b"
   dependencies:
     autoprefixer "^7.1.4"
     axios "^0.16.2"

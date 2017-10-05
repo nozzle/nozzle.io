@@ -29,7 +29,7 @@ export default ({
       {title && <title>{title}</title>}
 
       {/* Generic */}
-      {path && <link rel="canonical" href={`${siteRoot}${path}/`} />}
+      {path && <link rel="canonical" href={path} />}
 
       {/* Required Open Graph Info */}
       {title && <meta property="og:title" content={title} />}

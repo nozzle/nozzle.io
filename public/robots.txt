@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /l
+sitemap: https://nozzle.io/sitemap.xml

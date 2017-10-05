@@ -172,11 +172,11 @@ function onExitIntent (cb) {
   if (typeof document === 'undefined') {
     return
   }
-  if (global.localStorage.exitIntent) {
-    return
-  }
   setTimeout(() => {
     document.addEventListener('mouseleave', e => {
+      if (global.localStorage.exitIntent) {
+        return
+      }
       if (e.pageY < 0) {
         global.localStorage.exitIntent = true
         cb(e)

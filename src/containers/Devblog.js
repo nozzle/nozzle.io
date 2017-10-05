@@ -27,7 +27,7 @@ class Devblog extends Component {
           exact
           render={() => (
             <Page>
-              <Head title="Nozzle Dev Blog" />
+              <Head title="Dev Blog | Nozzle" />
               <Main>
                 <Header>
                   <H1>Devblog</H1>

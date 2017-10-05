@@ -49,30 +49,29 @@ const SectionWhyAnother = styled.section`
 
 const TableSection = styled.section`${section};`
 
-const header = name =>
-  (<tr
+const header = name => (
+  <tr
     key={name}
     style={{
       borderTop: name && 'solid 50px transparent',
       fontWeight: Theme.weights.bold,
     }}
   >
-    <td>
-      {name || 'Feature'}
-    </td>
+    <td>{name || 'Feature'}</td>
     <td>Nozzle</td>
     <td>Conductor</td>
     <td>BrightEdge</td>
     <td>STAT</td>
     <td>Moz</td>
     <td>Agency Analytics</td>
-  </tr>)
+  </tr>
+)
 
 export default class RankTrackerComparison extends Component {
   render () {
     return (
       <Page>
-        <Head title="Why Us? - A rank tracker comparison" />
+        <Head title="Why Us? - A rank tracker comparison | Nozzle" />
         <Main>
           <SectionWhyAnother>
             <Container>
@@ -108,54 +107,66 @@ export default class RankTrackerComparison extends Component {
               </Center>
 
               <Table>
-                <thead>
-                  {header()}
-                </thead>
+                <thead>{header()}</thead>
                 <tbody>
                   {sectionedCompetitors.map(
                     feature =>
-                      (feature.isHeader
-                        ? header(feature.name)
-                        : <tr key={feature.name}>
+                      (feature.isHeader ? (
+                        header(feature.name)
+                      ) : (
+                        <tr key={feature.name}>
                           <td>
-                            {feature.featureID
-                              ? <Link to={`/features/#${feature.featureID}`}>
-                                {feature.name}
-                              </Link>
-                              : feature.name}
-                              &nbsp;
+                            {feature.featureID ? (
+                              <Link to={`/features/#${feature.featureID}`}>{feature.name}</Link>
+                            ) : (
+                              feature.name
+                            )}
+                            &nbsp;
                           </td>
                           <td>
-                            {feature.nozzle === true
-                              ? <Icon i="check" color="success" />
-                              : feature.nozzle}
+                            {feature.nozzle === true ? (
+                              <Icon i="check" color="success" />
+                            ) : (
+                              feature.nozzle
+                            )}
                           </td>
                           <td>
-                            {feature.conductor === true
-                              ? <Icon i="check" color="success" />
-                              : feature.conductor}
+                            {feature.conductor === true ? (
+                              <Icon i="check" color="success" />
+                            ) : (
+                              feature.conductor
+                            )}
                           </td>
                           <td>
-                            {feature.brightEdge === true
-                              ? <Icon i="check" color="success" />
-                              : feature.brightEdge}
+                            {feature.brightEdge === true ? (
+                              <Icon i="check" color="success" />
+                            ) : (
+                              feature.brightEdge
+                            )}
                           </td>
                           <td>
-                            {feature.stat === true
-                              ? <Icon i="check" color="success" />
-                              : feature.stat}
+                            {feature.stat === true ? (
+                              <Icon i="check" color="success" />
+                            ) : (
+                              feature.stat
+                            )}
                           </td>
                           <td>
-                            {feature.moz === true
-                              ? <Icon i="check" color="success" />
-                              : feature.moz}
+                            {feature.moz === true ? (
+                              <Icon i="check" color="success" />
+                            ) : (
+                              feature.moz
+                            )}
                           </td>
                           <td>
-                            {feature.agencyAnalytics === 'x'
-                              ? <Icon i="check" color="success" />
-                              : feature.agencyAnalytics}
+                            {feature.agencyAnalytics === 'x' ? (
+                              <Icon i="check" color="success" />
+                            ) : (
+                              feature.agencyAnalytics
+                            )}
                           </td>
-                        </tr>),
+                        </tr>
+                      )),
                   )}
                 </tbody>
               </Table>

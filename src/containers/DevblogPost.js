@@ -19,15 +19,15 @@ import { H1 } from 'components/Html'
 
 const PostH1 = styled(H1)`
   font-size: ${Theme.sizes.h3}rem;
-  line-height: ${Theme.sizes.h3 * 1.2}rem
+  line-height: ${Theme.sizes.h3 * 1.2}rem;
 `
 
 const PostContainer = styled.article`
   .back {
-    opacity: .6;
+    opacity: 0.6;
     display: inline-block;
     margin-bottom: 2rem;
-    transition: all .1s ease-out;
+    transition: all 0.1s ease-out;
 
     :hover {
       opacity: 1;
@@ -37,17 +37,17 @@ const PostContainer = styled.article`
   .info {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    opacity: .7;
+    opacity: 0.7;
   }
 
   .categories {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
 
     .category {
       display: inline-block;
       padding: 0.7rem;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       background: ${Theme.colors.primary};
       color: white;
     }
@@ -79,14 +79,14 @@ const PostStyles = styled.div`
 
 class DevblogPost extends Component {
   render () {
-    const { post, match } = this.props
+    const { post } = this.props
 
     const wordCount = post.fields.body.split(' ').length
 
     return (
       <Page>
         <Head
-          title={`Devblog - ${post.fields.title}`}
+          title={`${post.fields.title} | Nozzle`}
           description={post.fields.body}
           type="article"
           path={`/devblog/post/${post.fields.slug}`}
@@ -105,12 +105,10 @@ class DevblogPost extends Component {
               <Link to="/devblog" className="back">
                 <Icon i="arrow-left" /> Back to Devblog
               </Link>
-              <PostH1 itemProp="name headline">
-                {post.fields.title}
-              </PostH1>
+              <PostH1 itemProp="name headline">{post.fields.title}</PostH1>
               <div className="info">
-                {post.fields.author.map(author =>
-                  (<span
+                {post.fields.author.map(author => (
+                  <span
                     itemScope
                     itemProp="author"
                     itemType="http://schema.org/Person"
@@ -120,8 +118,8 @@ class DevblogPost extends Component {
                       {/* <a itemProp="url" rel="author" /> */}
                       {author.fields.name}
                     </span>
-                  </span>),
-                )}{' '}
+                  </span>
+                ))}{' '}
                 on{' '}
                 <time dateTime={post.sys.updatedAt} itemProp="dateModified">
                   {format(new Date(post.sys.updatedAt), 'MMM DD, YYYY')}
@@ -130,8 +128,8 @@ class DevblogPost extends Component {
                 <time dateTime={post.sys.createdAt} itemProp="datePublished" />
               </div>
               <div className="categories">
-                {post.fields.category.map(category =>
-                  (<span
+                {post.fields.category.map(category => (
+                  <span
                     className="category"
                     key={category.fields.slug}
                     style={{
@@ -139,8 +137,8 @@ class DevblogPost extends Component {
                     }}
                   >
                     {category.fields.title}
-                  </span>),
-                )}
+                  </span>
+                ))}
               </div>
             </Header>
             <Container>

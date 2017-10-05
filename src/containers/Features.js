@@ -1195,7 +1195,7 @@ export default class Features extends Component {
   render () {
     return (
       <Page>
-        <Head title="Nozzle Features" />
+        <Head title="Features | Nozzle" />
         <Main>
           <FeaturesNavDiv />
           <SectionBrands id="brands" />

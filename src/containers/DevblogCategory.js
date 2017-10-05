@@ -11,33 +11,29 @@ import { Container, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 
-const BlogContainer = styled(Container)`
-  background: rgba(0,0,0,.02);
-`
+const BlogContainer = styled(Container)`background: rgba(0, 0, 0, 0.02);`
 
 class DevblogCategory extends Component {
   render () {
     const { category, categories, categoryPosts } = this.props
     return (
       <Page>
-        <Head title={`Dev Blog ${category.fields.title}`} />
+        <Head title={`${category.fields.title} | Nozzle`} />
         <Main>
           <Header>
-            <H1>
-              Devblog - {category.fields.title}
-            </H1>
+            <H1>Devblog - {category.fields.title}</H1>
             <SubMenu>
               <ul>
                 <li>
                   <Link to="/devblog">All</Link>
                 </li>
-                {categories.map(category =>
-                  (<li key={category.fields.slug}>
+                {categories.map(category => (
+                  <li key={category.fields.slug}>
                     <Link to={`/devblog/category/${category.fields.slug}`}>
                       {category.fields.title}
                     </Link>
-                  </li>),
-                )}
+                  </li>
+                ))}
               </ul>
             </SubMenu>
           </Header>

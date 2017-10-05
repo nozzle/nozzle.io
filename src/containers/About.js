@@ -385,7 +385,7 @@ export default class About extends Component {
   render () {
     return (
       <Page>
-        <Head title="About Us" />
+        <Head title="About Us | Nozzle" />
         <Main>
           <AboutUsDiv>
             <section className="intro">

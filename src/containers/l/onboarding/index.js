@@ -40,7 +40,7 @@ const Styles = styled(Container)`
 
 export default () => (
   <Page>
-    <Head title="Get started with your 2 week free trial!" />
+    <Head title="Get started with your 2 week free trial! | Nozzle" />
     <Styles>
       <H1>Better Organic Search, Coming Right Up!</H1>
       <H4>In order to get started with your free 2 week trial:</H4>

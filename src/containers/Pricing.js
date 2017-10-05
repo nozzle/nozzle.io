@@ -678,7 +678,7 @@ export default class Features extends Component {
     return (
       <Page>
         <Head>
-          <title>Nozzle Features</title>
+          <title>Pricing | Nozzle</title>
         </Head>
         <Main>
           <SectionIntro />

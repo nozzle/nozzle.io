@@ -309,10 +309,10 @@ const links = [
     name: 'Pricing',
     path: '/pricing',
   },
-  {
-    name: 'Dev Blog',
-    path: '/devblog',
-  },
+  // {
+  //   name: 'Dev Blog',
+  //   path: '/devblog',
+  // },
   {
     name: 'About',
     path: '/about',

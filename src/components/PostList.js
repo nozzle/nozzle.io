@@ -79,7 +79,7 @@ export default function PostList ({ blog, posts }) {
       {posts.map(post => {
         const wordCount = post.fields.body.split(' ').length
         return (
-          <Post to={`/${blog}/post/${post.fields.slug}/`} key={post.fields.slug}>
+          <Post to={`/${blog}/${post.fields.slug}/`} key={post.fields.slug}>
             <article>
               <header>
                 <h2 className="title">{post.fields.title}</h2>

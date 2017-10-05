@@ -39,7 +39,7 @@ export default {
         }),
         children: [
           ...posts.map(d => {
-            const path = `/post/${d.fields.slug}`
+            const path = `/${d.fields.slug}`
             return {
               path,
               nofollow: d.fields.nofollow,

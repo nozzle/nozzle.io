@@ -50,7 +50,7 @@ class Devblog extends Component {
             </Page>
           )}
         />
-        <Route path={`${match.url}/post/:slug`} component={DevblogPost} />
+        <Route path={`${match.url}/:slug`} component={DevblogPost} />
         <Route path={`${match.url}/category/:slug`} component={DevblogCategory} />
         <Redirect to={match.url} />
       </Switch>

@@ -89,7 +89,7 @@ class DevblogPost extends Component {
           title={`${post.fields.title} | Nozzle`}
           description={post.fields.body}
           type="article"
-          path={`/devblog/post/${post.fields.slug}`}
+          path={`/devblog/${post.fields.slug}`}
           images={[post.fields.featuredImage.fields.file.url]}
           // videos=[]
           date={post.sys.createdAt}
@@ -148,7 +148,7 @@ class DevblogPost extends Component {
             </Container>
           </PostContainer>
           <PostStyles>
-            <Comments path={`/devblog/post/${post.fields.slug}`} title={post.fields.title} />
+            <Comments path={`/devblog/${post.fields.slug}`} title={post.fields.title} />
           </PostStyles>
         </Main>
       </Page>

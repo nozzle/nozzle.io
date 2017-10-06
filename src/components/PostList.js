@@ -111,7 +111,7 @@ export default function PostList ({ blog, posts }) {
               </header>
               <div className="summary">
                 <div className="content">
-                  <Smackdown micro source={post.fields.body} />
+                  <Smackdown micro source={post.fields.shortDescription} />
                 </div>
                 <div className="more">
                   <Button size="sm" burst>

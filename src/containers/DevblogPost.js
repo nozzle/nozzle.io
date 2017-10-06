@@ -88,7 +88,7 @@ class DevblogPost extends Component {
       <Page>
         <Head
           title={`${post.fields.title} | Nozzle`}
-          description={post.fields.body}
+          description={post.fields.shortDescription}
           type="article"
           path={`/devblog/${post.fields.slug}`}
           images={[post.fields.featuredImage.fields.file.url]}

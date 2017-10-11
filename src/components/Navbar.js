@@ -5,7 +5,7 @@ import styled, { keyframes, css } from 'styled-components'
 import Theme from 'utils/Theme'
 
 import Link from './Link'
-// import ClickOutside from './ClickOutside'
+import ClickOutside from './ClickOutside'
 
 import { Button } from './Html'
 
@@ -319,22 +319,6 @@ const links = [
   },
 ]
 
-const LinkItem = (link, i) => (
-  <div key={i} className="link">
-    <div itemProp="name">
-      <Link
-        key={i}
-        to={link.path}
-        itemProp="url"
-        activeClassName={link.path === '/' ? '' : 'active'}
-      >
-        {link.name}
-      </Link>
-    </div>
-    {link.links && <div className="links-nested">{link.links.map(LinkItem)}</div>}
-  </div>
-)
-
 export default class Navbar extends Component {
   constructor () {
     super()
@@ -349,6 +333,23 @@ export default class Navbar extends Component {
       this.setState({
         isMenuOpen: false,
       })
+
+    const LinkItem = (link, i) => (
+      <div key={i} className="link">
+        <div itemProp="name">
+          <Link
+            key={i}
+            to={link.path}
+            itemProp="url"
+            activeClassName={link.path === '/' ? '' : 'active'}
+            onClick={closeMenu}
+          >
+            {link.name}
+          </Link>
+        </div>
+        {link.links && <div className="links-nested">{link.links.map(LinkItem)}</div>}
+      </div>
+    )
 
     return (
       <NavbarStyles isMenuOpen={isMenuOpen}>
@@ -366,10 +367,12 @@ export default class Navbar extends Component {
           </Link>
           <div
             className="menuToggle"
-            onClick={() =>
+            onClick={() => {
               this.setState({
                 isMenuOpen: !isMenuOpen,
-              })}
+              })
+            }}
+            style={{ pointerEvents: isMenuOpen ? 'none' : 'all' }}
           >
             <div>
               <span />
@@ -378,16 +381,29 @@ export default class Navbar extends Component {
               <span />
             </div>
           </div>
-          <nav className="linkbar">
-            <div className="links" itemScope itemType="http://www.schema.org/SiteNavigationElement">
-              {links.map(LinkItem)}
-            </div>
-            <Link className="trial" to="/#contact" onClick={closeMenu}>
-              <Button color="success" burst>
-                Start Trial
-              </Button>
-            </Link>
-          </nav>
+          <ClickOutside onClickOutside={closeMenu}>
+            {useRef => (
+              <nav
+                className="linkbar"
+                ref={el => {
+                  useRef(el)
+                }}
+              >
+                <div
+                  className="links"
+                  itemScope
+                  itemType="http://www.schema.org/SiteNavigationElement"
+                >
+                  {links.map(LinkItem)}
+                </div>
+                <Link className="trial" to="/#contact" onClick={closeMenu}>
+                  <Button color="success" burst>
+                    Start Trial
+                  </Button>
+                </Link>
+              </nav>
+            )}
+          </ClickOutside>
         </div>
       </NavbarStyles>
     )

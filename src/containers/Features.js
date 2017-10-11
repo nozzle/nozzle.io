@@ -643,8 +643,8 @@ const SectionDataCmp = props => (
             </ul>
             <P>
               To <Strong>understand your audience</Strong>, you need to search like your audience.
-              Want the results from a Bing search at that famous coffee shop in downtown London?
-              We've got them.
+              Want the results from a mobile Google search at that famous coffee shop in downtown
+              London? We've got them.
             </P>
           </div>
         </div>
@@ -895,7 +895,7 @@ const SectionAgenciesCmp = props => (
           <Ul className="list">
             <Li>Segment Teams &amp; Clients</Li>
             <Li>Aggregated views and bulk keyword management</Li>
-            <Li>User and Team permissions</Li>
+            <Li>Unlimited users at no extra charge</Li>
           </Ul>
           <br />
           <br />

@@ -76,6 +76,7 @@ export default class HubspotForm extends Component {
     }
 
     const scriptSrc = 'https://js.hsforms.net/forms/v2.js'
+    const jquerySrc = 'https://code.jquery.com/jquery-3.2.1.slim.min.js'
 
     if (document.getElementById(scriptSrc)) {
       return
@@ -88,6 +89,20 @@ export default class HubspotForm extends Component {
     script.id = script.src
 
     document.body.appendChild(script)
+
+    window.setTimeout(() => {
+      if (document.getElementById(jquerySrc)) {
+        return
+      }
+      console.log('boom')
+      const script = document.createElement('script')
+
+      script.src = jquerySrc
+      script.async = true
+      script.id = script.src
+
+      document.body.appendChild(script)
+    }, 2000)
   }
   componentDidMount () {
     const { formID, onSubmit } = this.props
@@ -102,7 +117,9 @@ export default class HubspotForm extends Component {
         css: '',
         portalId: '2030303',
         formId: formID,
-        onFormSubmit: e => onSubmit && onSubmit(e),
+        onFormSubmit: form => {
+          onSubmit && onSubmit(form)
+        },
       })
     }, 50)
   }

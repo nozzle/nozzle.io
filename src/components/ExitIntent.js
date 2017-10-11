@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
+import { withRouter } from 'react-static'
 //
 // import { H5 } from './Html'
 import Theme from 'utils/Theme'
@@ -116,7 +117,7 @@ const ExitIntentStyles = styled.div`
     `};
 `
 
-export default class Footer extends Component {
+class ExitIntent extends Component {
   state = {
     show: false,
   }
@@ -148,7 +149,7 @@ export default class Footer extends Component {
                   show: false,
                 })
                 setTimeout(() => {
-                  window.Router.push('/onboarding/')
+                  this.props.history.push('/l/onboarding/')
                 }, 2000)
               }}
             />
@@ -167,6 +168,8 @@ export default class Footer extends Component {
     )
   }
 }
+
+export default withRouter(ExitIntent)
 
 function onExitIntent (cb) {
   if (typeof document === 'undefined') {

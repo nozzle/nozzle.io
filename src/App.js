@@ -13,6 +13,8 @@ import Features from 'containers/Features'
 import Pricing from 'containers/Pricing'
 import About from 'containers/About'
 import Devblog from 'containers/Devblog'
+import Onboarding from 'containers/Onboarding'
+import OnboardingThanks from 'containers/OnboardingThanks'
 
 injectGlobal`{
   html, body, body, [data-reactroot] {
@@ -56,6 +58,8 @@ export default () => (
         <Route path="/pricing" component={Pricing} />
         <Route path="/about" component={About} />
         <Route path="/devblog" component={Devblog} />
+        <Route path="/l/onboarding/thanks" component={OnboardingThanks} />
+        <Route path="/l/onboarding" component={Onboarding} />
         <Redirect to="/" />
       </Switch>
     </NavWrapper>

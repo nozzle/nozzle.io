@@ -5138,8 +5138,8 @@ react-smackdown@^0.6.4:
     react-syntax-highlighter "^5.6.3"
 
 react-static@^1.0.x:
-  version "1.0.48"
-  resolved "https://registry.yarnpkg.com/react-static/-/react-static-1.0.48.tgz#b376a3ccb1d599cb24ad5c4c9e29337376b2ce61"
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/react-static/-/react-static-1.2.5.tgz#b35c690c8851afa8376f3faaee959a95dee0de5e"
   dependencies:
     autoprefixer "^7.1.4"
     axios "^0.16.2"
@@ -5152,6 +5152,7 @@ react-static@^1.0.x:
     babel-preset-react "^6.24.1"
     babel-preset-stage-0 "^6.24.1"
     babel-preset-stage-1 "^6.24.1"
+    babel-preset-stage-3 "^6.24.1"
     babel-runtime "^6.26.0"
     case-sensitive-paths-webpack-plugin "^2.1.1"
     circular-dependency-plugin "^4.2.1"

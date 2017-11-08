@@ -2,10 +2,10 @@ import React from 'react'
 import { Prefetch } from 'react-static'
 import { HashNavLink } from './HashLink'
 
-export default ({ to, ...rest }) => {
+export default ({ href, to = href, ...rest }) => {
   if (to.charAt(0) !== '/') {
     return (
-      <a href={to} {...rest}>
+      <a href={to} target="_blank" {...rest}>
         {rest.children}
       </a>
     )

@@ -1,6 +1,6 @@
 // import fs from 'fs-extra'
 import { createClient } from 'contentful'
-import { flatten, uniq } from 'lodash'
+import { flatten, uniq, orderBy } from 'lodash'
 
 const client = createClient({
   space: 'z8uwv83tofbw',
@@ -38,5 +38,5 @@ async function fetchPosts () {
     content_type: 'devPost',
     limit: 1000,
   })
-  return items
+  return orderBy(items, [d => d.sys.createdAt], ['desc'])
 }

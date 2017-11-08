@@ -98,6 +98,7 @@ const FeaturesNavDiv = styled(FeaturesNav)`
     .inner {
       height: 200%;
       overflow: scroll;
+      -webkit-overflow-scrolling: touch;
       &::-webkit-scrollbar {
         display: none;
       }

@@ -4,8 +4,6 @@ import { withRouter } from 'react-static'
 import { Div } from './Html'
 import HubspotForm from './HubspotForm'
 
-window.myhistory = history
-
 class TrialForm extends Component {
   render () {
     return (

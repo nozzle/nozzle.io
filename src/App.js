@@ -2,6 +2,7 @@ import React from 'react'
 import { injectGlobal } from 'styled-components'
 import { Router } from 'react-static'
 import { Switch, Route, Redirect } from 'react-router-dom'
+import reset from 'styled-reset'
 //
 import Theme from 'utils/Theme'
 
@@ -16,7 +17,10 @@ import Devblog from 'containers/Devblog'
 import Onboarding from 'containers/Onboarding'
 import OnboardingThanks from 'containers/OnboardingThanks'
 
-injectGlobal`{
+import './css/nprogress.css'
+
+injectGlobal`
+  ${reset};
   html, body, body, [data-reactroot] {
     min-height: 100%;
     width: 100%;
@@ -45,7 +49,6 @@ injectGlobal`{
     z-index: 99999999;
     pointer-events: none;
   }
-}
 `
 
 export default () => (

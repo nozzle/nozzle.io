@@ -1,16 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import Smackdown from 'react-smackdown'
-import { javascript } from 'react-smackdown/lib/languages'
+import { javascript, bash } from 'react-smackdown/lib/languages'
 import { atomOneDark } from 'react-smackdown/lib/themes'
 //
 
+import Theme from 'utils/Theme'
+
+import Link from 'components/Link'
 import { H3, H4, H5, H6, P, Img, Pre } from './Html'
 
 const syntax = {
   languages: [
     { name: 'javascript', syntax: javascript },
     { name: 'html', syntax: javascript },
+    { name: 'bash', syntax: bash },
   ],
   showLineNumbers: true,
   lineNumberStyle: { opacity: 0.5 },
@@ -27,10 +31,11 @@ const standardOverrides = {
   h6: H6,
   p: P,
   img: Img,
+  a: Link,
 }
 
 const microOverrides = {
-  pre: Pre,
+  ...standardOverrides,
   h1: P,
   h2: P,
   h3: P,
@@ -38,49 +43,89 @@ const microOverrides = {
   h5: P,
   h6: P,
   p: P,
-  img: Img,
 }
 
-const El = ({ micro, source, ...rest }) =>
-  (<div {...rest}>
+const El = ({ micro, source, ...rest }) => (
+  <div {...rest}>
     <Smackdown
       syntax={syntax}
       source={
-        micro
-          ? `${source.replace(/<iframe.*(<\/iframe>|>)/gm, '').substring(0, 400)
-          }...`
-          : source
+        micro ? `${source.replace(/<iframe.*(<\/iframe>|>)/gm, '').substring(0, 400)}...` : source
       }
       components={micro ? microOverrides : standardOverrides}
     />
-  </div>)
+  </div>
+)
 
 export default styled(El)`
-  iframe {
-    width: 100%;
-    resize: vertical;
-    border: 0 !important;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bolder;
+    margin-top: 2rem;
   }
-  img {
-    display: block;
-    margin: 1rem auto;
-  }
+
   p {
     font-size: 1.2rem;
     line-height: 2rem;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+    margin-bottom: 1rem;
   }
+
+  a {
+    font-weight: 400;
+    color: ${Theme.colors.primary};
+  }
+
+  iframe {
+    width: 100%;
+    resize: vertical;
+    border: 0 !important;
+  }
+
+  img {
+    display: block;
+    margin: 1rem auto;
+  }
+
   p code {
     display: inline-block;
     font-family: Monaco, Courier, monospace;
-    font-size: .7rem;
-    line-height: .7rem;
-    padding: .4rem .5rem .3rem;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    padding: 0.4rem 0.5rem 0.3rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .2rem;
-    background: rgba(0,0,0,.03);
+    border-radius: 0.2rem;
+    background: rgba(0, 0, 0, 0.03);
     background: #212529;
     color: rgb(202, 210, 224);
+  }
+
+  ul {
+    padding-left: 2rem;
+    list-style-type: disc;
+    margin-bottom: 2rem;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  blockquote * {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    padding: 2rem;
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.8;
   }
 `

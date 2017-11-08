@@ -94,7 +94,6 @@ export default class HubspotForm extends Component {
       if (document.getElementById(jquerySrc)) {
         return
       }
-      console.log('boom')
       const script = document.createElement('script')
 
       script.src = jquerySrc

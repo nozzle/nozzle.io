@@ -18,30 +18,30 @@ const plans = [
   { label: 'Garden Hose', value: 'garden-hose' },
   { label: 'Pressure Washer', value: 'pressure-washer' },
   { label: 'Fire Hose', value: 'fire-hose' },
-  { label: 'Jet Stream', value: 'jet-stream' },
+  { label: 'Jet Stream', value: 'jet-stream' }
 ]
 
 const frequencyOptions = [
   {
     value: 'hourly',
-    label: 'Hourly',
+    label: 'Hourly'
   },
   {
     value: 'daily',
-    label: 'Daily',
+    label: 'Daily'
   },
   {
     value: 'weekly',
-    label: 'Weekly',
+    label: 'Weekly'
   },
   {
     value: 'monthly',
-    label: 'Monthly',
+    label: 'Monthly'
   },
   {
     value: 'onetime',
-    label: 'One-Time Pull',
-  },
+    label: 'One-Time Pull'
+  }
 ]
 
 const section = css`padding: 1rem 1.5rem;`
@@ -415,7 +415,7 @@ class SectionCalculatorCmp extends Component {
       devices: 2,
       languages: 1,
       locations: 1,
-      frequency: 'monthly',
+      frequency: 'monthly'
     }
   }
   render () {
@@ -463,10 +463,10 @@ class SectionCalculatorCmp extends Component {
                     value={keywords}
                     onChange={e =>
                       this.setState({
-                        keywords: e.target.value,
+                        keywords: e.target.value
                       })}
                     css={{
-                      border: !keywords && '2px solid red',
+                      border: !keywords && '2px solid red'
                     }}
                   />
                 </div>
@@ -481,10 +481,10 @@ class SectionCalculatorCmp extends Component {
                     value={engines}
                     onChange={e =>
                       this.setState({
-                        engines: e.target.value,
+                        engines: e.target.value
                       })}
                     css={{
-                      border: !engines && '2px solid red',
+                      border: !engines && '2px solid red'
                     }}
                   />
                 </div>
@@ -499,10 +499,10 @@ class SectionCalculatorCmp extends Component {
                     value={devices}
                     onChange={e =>
                       this.setState({
-                        devices: e.target.value,
+                        devices: e.target.value
                       })}
                     css={{
-                      border: !devices && '2px solid red',
+                      border: !devices && '2px solid red'
                     }}
                   />
                 </div>
@@ -516,10 +516,10 @@ class SectionCalculatorCmp extends Component {
                     value={languages}
                     onChange={e =>
                       this.setState({
-                        languages: e.target.value,
+                        languages: e.target.value
                       })}
                     css={{
-                      border: !languages && '2px solid red',
+                      border: !languages && '2px solid red'
                     }}
                   />
                 </div>
@@ -533,10 +533,10 @@ class SectionCalculatorCmp extends Component {
                     value={locations}
                     onChange={e =>
                       this.setState({
-                        locations: e.target.value,
+                        locations: e.target.value
                       })}
                     css={{
-                      border: !locations && '2px solid red',
+                      border: !locations && '2px solid red'
                     }}
                   />
                 </div>
@@ -544,22 +544,20 @@ class SectionCalculatorCmp extends Component {
               <div className="row frequency">
                 <div className="label">Frequency</div>
                 <div className="radios">
-                  <radiogroup>
-                    {frequencyOptions.map((option, i) => (
-                      <label key={i}>
-                        <input
-                          type="radio"
-                          name={option.value}
-                          onChange={() =>
-                            this.setState({
-                              frequency: option.value,
-                            })}
-                          checked={frequency === option.value}
-                        />{' '}
-                        {option.label}
-                      </label>
-                    ))}
-                  </radiogroup>
+                  {frequencyOptions.map((option, i) => (
+                    <label htmlFor="frequency" key={i}>
+                      <input
+                        type="radio"
+                        name={option.value}
+                        onChange={() =>
+                          this.setState({
+                            frequency: option.value
+                          })}
+                        checked={frequency === option.value}
+                      />{' '}
+                      {option.label}
+                    </label>
+                  ))}
                 </div>
               </div>
             </div>

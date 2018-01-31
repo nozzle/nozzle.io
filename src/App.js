@@ -1,21 +1,12 @@
 import React from 'react'
 import { injectGlobal } from 'styled-components'
 import { Router } from 'react-static'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import Routes from 'react-static-routes'
 import reset from 'styled-reset'
 //
 import Theme from 'utils/Theme'
 
 import NavWrapper from 'components/NavWrapper'
-
-import Home from 'containers/Home'
-import RankTrackerComparison from 'containers/RankTrackerComparison'
-import Features from 'containers/Features'
-import Pricing from 'containers/Pricing'
-import About from 'containers/About'
-import Devblog from 'containers/Devblog'
-import Onboarding from 'containers/Onboarding'
-import OnboardingThanks from 'containers/OnboardingThanks'
 
 import './css/nprogress.css'
 
@@ -54,17 +45,7 @@ injectGlobal`
 export default () => (
   <Router>
     <NavWrapper>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/rank-tracker-comparison" component={RankTrackerComparison} />
-        <Route path="/features" component={Features} />
-        <Route path="/pricing" component={Pricing} />
-        <Route path="/about" component={About} />
-        <Route path="/devblog" component={Devblog} />
-        <Route path="/l/onboarding/thanks" component={OnboardingThanks} />
-        <Route path="/l/onboarding" component={Onboarding} />
-        <Redirect to="/" />
-      </Switch>
+      <Routes />
     </NavWrapper>
   </Router>
 )

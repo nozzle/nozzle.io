@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Smackdown from 'react-smackdown'
-import { javascript, bash } from 'react-smackdown/lib/languages'
-import { atomOneDark } from 'react-smackdown/lib/themes'
+import javascript from 'react-syntax-highlighter/dist/languages/hljs/javascript'
+import bash from 'react-syntax-highlighter/dist/languages/hljs/bash'
+import atomOneDark from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark'
 //
 
 import Theme from 'utils/Theme'
@@ -22,37 +23,37 @@ const syntax = {
 }
 
 const standardOverrides = {
-  pre: Pre,
-  h1: H3,
-  h2: H4,
-  h3: H5,
-  h4: H6,
-  h5: H6,
-  h6: H6,
-  p: P,
-  img: Img,
-  a: Link,
+  pre: { component: Pre },
+  h1: { component: H3 },
+  h2: { component: H4 },
+  h3: { component: H5 },
+  h4: { component: H6 },
+  h5: { component: H6 },
+  h6: { component: H6 },
+  p: { component: P },
+  img: { component: Img },
+  a: { component: Link },
 }
 
 const microOverrides = {
   ...standardOverrides,
-  h1: P,
-  h2: P,
-  h3: P,
-  h4: P,
-  h5: P,
-  h6: P,
-  p: P,
+  h1: { component: P },
+  h2: { component: P },
+  h3: { component: P },
+  h4: { component: P },
+  h5: { component: P },
+  h6: { component: P },
+  p: { component: P },
 }
 
 const El = ({ micro, source, ...rest }) => (
   <div {...rest}>
     <Smackdown
-      syntax={syntax}
       source={
         micro ? `${source.replace(/<iframe.*(<\/iframe>|>)/gm, '').substring(0, 400)}...` : source
       }
-      components={micro ? microOverrides : standardOverrides}
+      syntax={syntax}
+      renderers={micro ? microOverrides : standardOverrides}
     />
   </div>
 )

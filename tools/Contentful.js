@@ -4,7 +4,7 @@ import { flatten, uniq, orderBy } from 'lodash'
 
 const client = createClient({
   space: 'z8uwv83tofbw',
-  accessToken: '1f346953eb0bf8aa1b57c5ac3d1abe12e8b723054e5961d8a71d410e52f6dc8f',
+  accessToken: '1f346953eb0bf8aa1b57c5ac3d1abe12e8b723054e5961d8a71d410e52f6dc8f'
 })
 
 export default async function fetch () {
@@ -16,7 +16,7 @@ export default async function fetch () {
     const allData = {
       authors,
       tags,
-      posts,
+      posts
     }
 
     return allData
@@ -28,7 +28,7 @@ export default async function fetch () {
 async function fetchAuthors () {
   const { items } = await client.getEntries({
     content_type: '1kUEViTN4EmGiEaaeC6ouY',
-    limit: 1000,
+    limit: 1000
   })
   return items
 }
@@ -36,7 +36,7 @@ async function fetchAuthors () {
 async function fetchPosts () {
   const { items } = await client.getEntries({
     content_type: 'devPost',
-    limit: 1000,
+    limit: 1000
   })
   return orderBy(items, [d => d.sys.createdAt], ['desc'])
 }

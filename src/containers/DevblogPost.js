@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
-import { getRouteProps } from 'react-static'
+import { RouteData } from 'react-static'
 //
 import Theme from 'utils/Theme'
 import ReadTime from 'utils/ReadTime'
@@ -78,83 +78,84 @@ const PostStyles = styled.div`
   }
 `
 
-class DevblogPost extends Component {
+export default class DevblogPost extends Component {
   render () {
-    const { post } = this.props
-
-    const wordCount = post.fields.body.split(' ').length
-
     return (
-      <Page>
-        <Head
-          title={`${post.fields.title} | Nozzle`}
-          description={post.fields.shortDescription}
-          type="article"
-          path={`/devblog/${post.fields.slug}`}
-          images={post.fields.featuredImage && [post.fields.featuredImage.fields.file.url]}
-          // videos=[]
-          date={post.sys.createdAt}
-          tags={post.fields.tags}
-          author={post.fields.author[0].fields.name}
-          // seriesPermalinks={[]}
-          wordCount={wordCount}
-        />
-        <Main>
-          <PostContainer itemScope itemType="http://schema.org/BlogPosting">
-            <Header>
-              <Link to="/devblog/" className="back">
-                <Icon i="arrow-left" /> Back to Devblog
-              </Link>
-              <PostH1 itemProp="name headline">{post.fields.title}</PostH1>
-              <div className="info">
-                {post.fields.author.map(author => (
-                  <span
-                    itemScope
-                    itemProp="author"
-                    itemType="http://schema.org/Person"
-                    key={author.fields.name}
-                  >
-                    <span itemProp="name">
-                      {/* <a itemProp="url" rel="author" /> */}
-                      {author.fields.name}
-                    </span>
-                  </span>
-                ))}{' '}
-                on{' '}
-                <time dateTime={post.sys.updatedAt} itemProp="dateModified">
-                  {format(new Date(post.sys.updatedAt), 'MMM DD, YYYY')}
-                </time>{' '}
-                &bull; {ReadTime(wordCount)} min read
-                <time dateTime={post.sys.createdAt} itemProp="datePublished" />
-              </div>
-              <div className="tags">
-                {post.fields.tags.map(tag => (
-                  <Link
-                    to={`/devblog/tags/${tag}/`}
-                    className="tag"
-                    key={tag}
-                    style={{
-                      background: Theme.colors.tags[tag],
-                    }}
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
-            </Header>
-            <Container>
-              <PostStyles itemProp="articleBody">
-                <Smackdown source={post.fields.body} />
-              </PostStyles>
-            </Container>
-          </PostContainer>
-          <PostStyles>
-            <Comments path={`/devblog/${post.fields.slug}`} title={post.fields.title} />
-          </PostStyles>
-        </Main>
-      </Page>
+      <RouteData
+        render={({ post }) => {
+          const wordCount = post.fields.body.split(' ').length.hello
+          return (
+            <Page>
+              <Head
+                title={`${post.fields.title} | Nozzle`}
+                description={post.fields.shortDescription}
+                type="article"
+                path={`/devblog/${post.fields.slug}`}
+                images={post.fields.featuredImage && [post.fields.featuredImage.fields.file.url]}
+                // videos=[]
+                date={post.sys.createdAt}
+                tags={post.fields.tags}
+                author={post.fields.author[0].fields.name}
+                // seriesPermalinks={[]}
+                wordCount={wordCount}
+              />
+              <Main>
+                <PostContainer itemScope itemType="http://schema.org/BlogPosting">
+                  <Header>
+                    <Link to="/devblog/" className="back">
+                      <Icon i="arrow-left" /> Back to Devblog
+                    </Link>
+                    <PostH1 itemProp="name headline">{post.fields.title}</PostH1>
+                    <div className="info">
+                      {post.fields.author.map(author => (
+                        <span
+                          itemScope
+                          itemProp="author"
+                          itemType="http://schema.org/Person"
+                          key={author.fields.name}
+                        >
+                          <span itemProp="name">
+                            {/* <a itemProp="url" rel="author" /> */}
+                            {author.fields.name}
+                          </span>
+                        </span>
+                      ))}{' '}
+                      on{' '}
+                      <time dateTime={post.sys.updatedAt} itemProp="dateModified">
+                        {format(new Date(post.sys.updatedAt), 'MMM DD, YYYY')}
+                      </time>{' '}
+                      &bull; {ReadTime(wordCount)} min read
+                      <time dateTime={post.sys.createdAt} itemProp="datePublished" />
+                    </div>
+                    <div className="tags">
+                      {post.fields.tags.map(tag => (
+                        <Link
+                          to={`/devblog/tags/${tag}/`}
+                          className="tag"
+                          key={tag}
+                          style={{
+                            background: Theme.colors.tags[tag]
+                          }}
+                        >
+                          {tag}
+                        </Link>
+                      ))}
+                    </div>
+                  </Header>
+                  <Container>
+                    <PostStyles itemProp="articleBody">
+                      <Smackdown source={post.fields.body} />
+                    </PostStyles>
+                  </Container>
+                </PostContainer>
+                <PostStyles>
+                  <Comments path={`/devblog/${post.fields.slug}`} title={post.fields.title} />
+                </PostStyles>
+              </Main>
+            </Page>
+          )
+        }}
+      />
     )
   }
 }
-
-export default getRouteProps(DevblogPost)

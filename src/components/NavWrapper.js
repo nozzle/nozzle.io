@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { withRouter } from 'react-router-dom'
-import { Router } from 'react-static'
+import { onLoading } from 'react-static'
 import NProgress from 'nprogress'
 //
 import Theme from 'utils/Theme'
-import ScrollTo from 'utils/ScrollTo'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import ExitIntent from './ExitIntent'
@@ -22,48 +21,27 @@ const ContentStyled = styled.div`
   align-items: stretch;
 `
 
-const checkScroll = (prev, next) => {
-  if (!prev || next.location.pathname !== prev.location.pathname) {
-    window.scrollTo(0, 0)
+export default withRouter(
+  class NavWrapper extends Component {
+    componentDidMount () {
+      onLoading(loading => {
+        if (loading) {
+          NProgress.start()
+        } else {
+          NProgress.done()
+        }
+      })
+    }
+    render () {
+      const { children } = this.props
+      return (
+        <PageStyles>
+          <Navbar />
+          <ContentStyled>{children}</ContentStyled>
+          <Footer />
+          <ExitIntent />
+        </PageStyles>
+      )
+    }
   }
-}
-
-class Page extends Component {
-  componentDidMount () {
-    this.interval =
-      this.interval ||
-      window.setInterval(() => {
-        const els = Array.from(document.querySelectorAll('[id]'))
-        els.forEach(el => {
-          el.scrollIntoView = () => ScrollTo(el)
-        })
-      }, 500)
-    checkScroll()
-    Router.subscribe(loading => {
-      if (loading) {
-        NProgress.start()
-      } else {
-        NProgress.done()
-      }
-    })
-  }
-  componentDidUpdate (prevProps) {
-    checkScroll(prevProps, this.props)
-  }
-  componentWillUnmount () {
-    window.clearInterval(this.interval)
-  }
-  render () {
-    const { children } = this.props
-    return (
-      <PageStyles>
-        <Navbar />
-        <ContentStyled>{children}</ContentStyled>
-        <Footer />
-        <ExitIntent />
-      </PageStyles>
-    )
-  }
-}
-
-export default withRouter(Page)
+)

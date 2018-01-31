@@ -3,61 +3,76 @@ import { ServerStyleSheet } from 'styled-components'
 import Contentful from './tools/Contentful'
 
 export default {
-  siteRoot: 'https://nozzle.io',
+  // siteRoot: 'https://nozzle.io',
+  // preact: true,
   getRoutes: async () => {
     const { posts, tags } = await Contentful()
     return [
       {
         path: '/',
+        component: 'src/containers/Home',
       },
       {
-        path: '/rank-tracker-comparison',
+        path: 'rank-tracker-comparison',
+        component: 'src/containers/RankTrackerComparison',
       },
       {
-        path: '/features',
+        path: 'features',
+        component: 'src/containers/Features',
       },
       {
-        path: '/pricing',
+        path: 'pricing',
+        component: 'src/containers/Pricing',
       },
       {
-        path: '/about',
+        path: 'about',
+        component: 'src/containers/About',
       },
       {
-        path: '/l/onboarding',
+        path: 'l/onboarding',
+        component: 'src/containers/Onboarding',
         noindex: true,
         children: [
           {
-            path: '/thanks',
+            path: 'thanks',
+            component: 'src/containers/OnboardingThanks',
           },
         ],
       },
       {
-        path: '/devblog/',
-        getProps: async () => ({
+        path: 'devblog',
+        component: 'src/containers/Devblog',
+        getData: async () => ({
           posts,
           tags,
         }),
         children: [
           ...posts.map(d => {
-            const path = `/${d.fields.slug}`
+            const path = `${d.fields.slug}`
             return {
               path,
+              component: 'src/containers/DevblogPost',
               nofollow: d.fields.nofollow,
               noindex: d.fields.noindex,
-              getProps: async () => ({ post: d }),
+              getData: async () => ({ post: d }),
             }
           }),
           ...tags.map(tag => {
-            const path = `/tags/${tag}`
+            const path = `tags/${tag}`
             return {
               path,
-              getProps: async () => {
+              component: 'src/containers/DevblogTag',
+              getData: async () => {
                 const tagPosts = posts.filter(post => post.fields.tags.includes(tag))
                 return { tag, tagPosts, tags }
               },
             }
           }),
         ],
+      },
+      {
+        is404: true,
+        component: 'src/containers/NotFound',
       },
     ]
   },

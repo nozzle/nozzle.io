@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { getRouteProps } from 'react-static'
+import { withRouteData } from 'react-static'
 //
 
 import Link from 'components/Link'
@@ -44,4 +44,4 @@ class DevblogTag extends Component {
   }
 }
 
-export default getRouteProps(DevblogTag)
+export default withRouteData(DevblogTag)

@@ -8,8 +8,6 @@ import Theme from 'utils/Theme'
 
 import NavWrapper from 'components/NavWrapper'
 
-import './css/nprogress.css'
-
 injectGlobal`
   ${reset};
   html, body, body, [data-reactroot] {
@@ -31,9 +29,6 @@ injectGlobal`
   a {
     color: inherit;
     text-decoration: none;
-  }
-  #nprogress .bar {
-    background: white !important;
   }
   [data-name="mojs-shape"] {
     position: fixed !important;

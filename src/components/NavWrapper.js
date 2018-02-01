@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { withRouter } from 'react-router-dom'
-import { onLoading } from 'react-static'
-import NProgress from 'nprogress'
 //
 import Theme from 'utils/Theme'
 import Navbar from './Navbar'
@@ -23,15 +21,6 @@ const ContentStyled = styled.div`
 
 export default withRouter(
   class NavWrapper extends Component {
-    componentDidMount () {
-      onLoading(loading => {
-        if (loading) {
-          NProgress.start()
-        } else {
-          NProgress.done()
-        }
-      })
-    }
     render () {
       const { children } = this.props
       return (

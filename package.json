@@ -18,7 +18,6 @@
     "date-fns": "^1.28.5",
     "javascript-detect-element-resize": "^0.5.3",
     "mo-js": "^0.288.2",
-    "nprogress": "^0.2.0",
     "raf": "^3.3.2",
     "react": "16",
     "react-dom": "16",

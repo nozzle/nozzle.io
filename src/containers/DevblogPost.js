@@ -134,7 +134,7 @@ export default class DevblogPost extends Component {
                           className="tag"
                           key={tag}
                           style={{
-                            background: Theme.colors.tags[tag]
+                            background: Theme.colors.tags[tag],
                           }}
                         >
                           {tag}

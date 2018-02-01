@@ -35,7 +35,7 @@ export const button = css`
   }
 `
 export const buttonSize = ({ size = '' }) =>
-  (size === 'lg'
+  size === 'lg'
     ? css`
         font-size: 1.2rem;
         padding: 1rem 1.4rem;
@@ -48,7 +48,7 @@ export const buttonSize = ({ size = '' }) =>
       : css`
           font-size: 1rem;
           padding: 0.8rem 1.2rem;
-        `)
+        `
 const full = ({ full }) => full && css`width: 100%;`
 const backgroundColor = ({ color }) => css`
   background: ${Theme.colors[color] || color};
@@ -60,36 +60,82 @@ const weight = ({ weight }) => css`font-weight: ${Theme.weights[weight] || weigh
 // Components
 
 export const H1 = styled.h1`
-  ${margin} ${full} ${color} ${weight} font-size: ${Theme.sizes.h1}rem;
+  ${margin};
+  ${full};
+  ${color};
+  ${weight};
+  font-size: ${Theme.sizes.h1}rem;
   line-height: ${Theme.sizes.h1 * 1.2}rem;
 `
+
 export const H2 = styled.h2`
-  ${margin} ${full} ${color} ${weight} font-size: ${Theme.sizes.h2}rem;
+  ${margin};
+  ${full};
+  ${color};
+  ${weight};
+  font-size: ${Theme.sizes.h2}rem;
   line-height: ${Theme.sizes.h2 * 1.2}rem;
 `
+
 export const H3 = styled.h3`
-  ${margin} ${full} ${color} ${weight} font-size: ${Theme.sizes.h3}rem;
+  ${margin};
+  ${full};
+  ${color};
+  ${weight};
+  font-size: ${Theme.sizes.h3}rem;
   line-height: ${Theme.sizes.h3 * 1.2}rem;
 `
+
 export const H4 = styled.h4`
-  ${margin} ${full} ${color} ${weight} font-size: ${Theme.sizes.h4}rem;
+  ${margin};
+  ${full};
+  ${color};
+  ${weight};
+  font-size: ${Theme.sizes.h4}rem;
   line-height: ${Theme.sizes.h4 * 1.2}rem;
 `
+
 export const H5 = styled.h5`
-  ${margin} ${full} ${color} ${weight} font-size: ${Theme.sizes.h5}rem;
+  ${margin};
+  ${full};
+  ${color};
+  ${weight};
+  font-size: ${Theme.sizes.h5}rem;
   line-height: ${Theme.sizes.h5 * 1.2}rem;
 `
+
 export const H6 = styled.h6`
-  ${margin} ${full} ${color} ${weight} font-size: ${Theme.sizes.h6}rem;
+  ${margin};
+  ${full};
+  ${color};
+  ${weight};
+  font-size: ${Theme.sizes.h6}rem;
   line-height: ${Theme.sizes.h6 * 1.2}rem;
 `
+
 export const P = styled.p`
-  ${margin} ${color} ${weight} font-size: 1rem;
+  ${margin};
+  ${color};
+  ${weight};
+  font-size: 1rem;
   line-height: 1.2rem;
 `
-export const Strong = styled.strong`${inline} ${color} font-weight: bold;`
-export const Span = styled.span`${inline} ${color} ${weight};`
-export const Div = styled.div`${margin} ${full} ${color} ${weight};`
+
+export const Strong = styled.strong`
+  ${inline};
+  ${color} font-weight: bold;
+`
+export const Span = styled.span`
+  ${inline};
+  ${color};
+  ${weight};
+`
+export const Div = styled.div`
+  ${margin};
+  ${full};
+  ${color};
+  ${weight};
+`
 export const Img = styled(({ children, ...rest }) => (
   <img alt="" {...rest} width="500" height="400" />
 ))`

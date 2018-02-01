@@ -23,27 +23,27 @@ const syntax = {
 }
 
 const standardOverrides = {
-  pre: { component: Pre },
-  h1: { component: H3 },
-  h2: { component: H4 },
-  h3: { component: H5 },
-  h4: { component: H6 },
-  h5: { component: H6 },
-  h6: { component: H6 },
-  p: { component: P },
-  img: { component: Img },
-  a: { component: Link },
+  pre: Pre,
+  h1: H3,
+  h2: H4,
+  h3: H5,
+  h4: H6,
+  h5: H6,
+  h6: H6,
+  p: P,
+  img: Img,
+  a: Link,
 }
 
 const microOverrides = {
   ...standardOverrides,
-  h1: { component: P },
-  h2: { component: P },
-  h3: { component: P },
-  h4: { component: P },
-  h5: { component: P },
-  h6: { component: P },
-  p: { component: P },
+  h1: P,
+  h2: P,
+  h3: P,
+  h4: P,
+  h5: P,
+  h6: P,
+  p: P,
 }
 
 const El = ({ micro, source, ...rest }) => (

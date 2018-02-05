@@ -3,8 +3,8 @@ import { ServerStyleSheet } from 'styled-components'
 import Contentful from './tools/Contentful'
 
 export default {
-  // siteRoot: 'https://nozzle.io',
-  // preact: true,
+  siteRoot: 'https://nozzle.io',
+  preact: true,
   getRoutes: async () => {
     const { posts, tags } = await Contentful()
     return [

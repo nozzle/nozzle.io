@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "react-static start",
+    "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve ./dist -p 3000",
     "test": "eslint ./src/"

@@ -28,7 +28,7 @@
     "react-smackdown": "^0.8.5",
     "react-static": "^5.0.0-beta.7",
     "react-syntax-highlighter": "^7.0.0",
-    "styled-components": "^2.1.2",
+    "styled-components": "^3.1.6",
     "styled-reset": "^0.1.3",
     "tinycolor2": "^1.4.1"
   },

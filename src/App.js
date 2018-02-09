@@ -3,6 +3,7 @@ import { injectGlobal } from 'styled-components'
 import { Router } from 'react-static'
 import Routes from 'react-static-routes'
 import reset from 'styled-reset'
+import { hot } from 'react-hot-loader'
 //
 import Theme from 'utils/Theme'
 
@@ -37,10 +38,10 @@ injectGlobal`
   }
 `
 
-export default () => (
+export default hot(module)(() => (
   <Router>
     <NavWrapper>
       <Routes />
     </NavWrapper>
   </Router>
-)
+))

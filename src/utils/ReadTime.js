@@ -1,3 +1,3 @@
 export default function ReadTime (words) {
-  return Math.max(Math.round(words / 275), 1)
+  return words ? Math.max(Math.round(words / 275), 1) : 1
 }

@@ -25,7 +25,7 @@
     "react-move": "^2.0.0",
     "react-router-dom": "^4.2.2",
     "react-smackdown": "^0.8.5",
-    "react-static": "^5.4.0-beta.0",
+    "react-static": "5.4.0-beta.3",
     "react-syntax-highlighter": "^7.0.0",
     "styled-components": "^3.1.6",
     "styled-reset": "^0.1.3",

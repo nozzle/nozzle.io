@@ -6334,9 +6334,9 @@ react-smackdown@^0.8.7:
     react-syntax-highlighter "^7.0.0"
     showdown "^1.8.6"
 
-react-static@5.4.0-beta.3:
-  version "5.4.0-beta.3"
-  resolved "https://registry.yarnpkg.com/react-static/-/react-static-5.4.0-beta.3.tgz#ded33946b609ab8e3132c35ea14cb4ccfbb890c0"
+react-static@5.5.1:
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/react-static/-/react-static-5.5.1.tgz#f581c3b754827d1ae3113f0e6de5f642ec0fffe9"
   dependencies:
     "@types/react" "^16.0.18"
     "@types/react-helmet" "^5.0.3"

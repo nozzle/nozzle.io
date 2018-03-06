@@ -4,7 +4,6 @@ import Contentful from './tools/Contentful'
 
 export default {
   siteRoot: 'https://nozzle.io',
-  preact: false,
   getRoutes: async () => {
     const { posts, tags } = await Contentful()
     return [

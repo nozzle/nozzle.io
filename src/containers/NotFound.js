@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-//
-// import Theme from 'utils/Theme'
-//
 
 const Styles = styled.div`
   flex: 1 0 auto;

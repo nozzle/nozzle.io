@@ -15,15 +15,14 @@ const syntax = {
   languages: [
     { name: 'javascript', syntax: javascript },
     { name: 'html', syntax: javascript },
-    { name: 'bash', syntax: bash },
+    { name: 'bash', syntax: bash }
   ],
   showLineNumbers: true,
   lineNumberStyle: { opacity: 0.5 },
-  theme: atomOneDark,
+  theme: atomOneDark
 }
 
 const standardOverrides = {
-  pre: Pre,
   h1: H3,
   h2: H4,
   h3: H5,
@@ -32,7 +31,7 @@ const standardOverrides = {
   h6: H6,
   p: P,
   img: Img,
-  a: Link,
+  a: Link
 }
 
 const microOverrides = {
@@ -43,7 +42,7 @@ const microOverrides = {
   h4: P,
   h5: P,
   h6: P,
-  p: P,
+  p: P
 }
 
 const El = ({ micro, source, ...rest }) => (
@@ -128,5 +127,20 @@ export default styled(El)`
     font-style: italic;
     font-weight: 400;
     opacity: 0.8;
+  }
+
+  pre {
+    font-family: Monaco, Courier, monospace;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    background: #212529 !important;
+    margin: 0 auto 1rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+  }
+
+  .react-syntax-highlighter-line-number {
+    pointer-events: none;
+    user-select: none;
   }
 `

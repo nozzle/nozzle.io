@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 import { withRouter } from 'react-static'
+import axios from 'axios'
+import { Form, Text } from 'react-form'
 //
 // import { H5 } from './Html'
 import Theme from 'utils/Theme'
-import HubspotForm from 'components/HubspotForm'
 
 const ExitIntentStyles = styled.div`
   position: fixed;
@@ -51,38 +52,31 @@ const ExitIntentStyles = styled.div`
     margin-bottom: 25px;
   }
 
-  .hs_email {
-    margin-bottom: 20px;
-    label {
-      margin-bottom: 5px;
-      display: block;
-      font-weight: 600;
-    }
-  }
-
-  input[type='email'] {
+  input {
+    font-size: 1.3rem;
+    padding: 1rem;
+    margin: 5px 0 20px;
     display: block;
     width: 100%;
     border: solid 2px rgba(0, 0, 0, 0.17);
   }
 
-  .hs-error-msgs {
-    margin: 5px 0 10px;
-  }
-
-  .hs-button {
+  .button {
     display: block;
     width: 100%;
     background-color: ${Theme.colors.success};
     font-size: 1.3em;
     padding: 12px;
     border-radius: 4px;
+    color: white;
     &:hover {
       transform: none;
-      box-shadow: 0 20px 30px 0 alpha(black, 0.15);
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.15);
     }
   }
+
   .close {
+    padding: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -91,15 +85,15 @@ const ExitIntentStyles = styled.div`
     border-radius: 100px;
     font-size: 1rem;
     border: 0;
-    background: alpha(black, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    box-shadow: 0 3px 10px 0 alpha(black, 0.2);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translate(50%, -50%);
     cursor: pointer;
-    &:hover {
+    :hover {
       background: ${Theme.colors.danger};
     }
   }
@@ -117,15 +111,21 @@ const ExitIntentStyles = styled.div`
     `};
 `
 
+const encode = data =>
+  Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&')
+
 class ExitIntent extends Component {
   state = {
     show: false,
+    submitted: false
   }
-  componentWillMount () {
+  componentDidMount () {
     onExitIntent(() => {
       global.dataLayer.push({ event: 'exitPopup' })
       this.setState({
-        show: true,
+        show: true
       })
     })
   }
@@ -134,25 +134,52 @@ class ExitIntent extends Component {
       <ExitIntentStyles show={this.state.show}>
         <div className="-outer">
           <div className="-inner">
-            <div className="-title">
-              Wait! Our data robots are chomping at their bits to get your free trial started, so
-              don't let them down!
-            </div>
-            <div className="-message">
-              Enter your email below to save them from their electronic sorrow and start your trial!
-            </div>
-            <HubspotForm
-              formID="e336b72f-5a4f-43dc-b4d1-d8c3bbac2067"
-              onSubmit={() => {
-                window.dataLayer.push({ event: 'exitSubmit' })
-                this.setState({
-                  show: false,
-                })
-                setTimeout(() => {
-                  this.props.history.push('/l/onboarding/')
-                }, 2000)
-              }}
-            />
+            {this.state.submitted ? (
+              <div>
+                <div className="-title">Thank you!</div>
+                <div className="-message">We realize</div>
+              </div>
+            ) : (
+              <div>
+                <div className="-title">
+                  Wait! Our data robots are chomping at their bits to get your free trial started,
+                  so don't let them down!
+                </div>
+                <div className="-message">
+                  We will send you information on how to start your trial as soon as possible.
+                </div>
+                <Form
+                  onSubmit={async values => {
+                    window.dataLayer.push({ event: 'exitSubmit' })
+                    try {
+                      await axios.post('/', encode({ 'form-name': 'contact', ...values }), {
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                      })
+                      this.setState({ submitted: true })
+                    } catch (err) {
+                      window.alert('There was a problem submitting your form! Try again or reload the page :)')
+                      this.setState({ submitted: true })
+                    }
+                  }}
+                >
+                  {({ submitForm }) => (
+                    <form name="exitIntent" netlify="true" onSubmit={submitForm}>
+                      <div>
+                        <label>
+                          Email
+                          <Text field="email" name="email" placeholder="johndoe@gmail.com" />
+                        </label>
+                      </div>
+                      <div>
+                        <button className="button" type="submit">
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  )}
+                </Form>
+              </div>
+            )}
           </div>
           <button
             className="close"
@@ -180,7 +207,7 @@ function onExitIntent (cb) {
       if (global.localStorage.exitIntent) {
         return
       }
-      if (e.pageY < 0) {
+      if (e.clientY < 0) {
         global.localStorage.exitIntent = true
         cb(e)
       }

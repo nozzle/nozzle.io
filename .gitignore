@@ -7,3 +7,4 @@ dist
 next.config.js
 tools/lib.js
 yarn-error.log
+.history

@@ -1,23 +1,27 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-static'
+import { ReactTypeformEmbed } from 'react-typeform-embed'
 //
-import { Div } from './Html'
-import HubspotForm from './HubspotForm'
 
 class TrialForm extends Component {
   render () {
     return (
-      <Div full>
-        <HubspotForm
-          formID="741e3900-e931-47e0-b355-a190fbb6b301"
-          onSubmit={() => {
-            window.dataLayer.push({ event: 'trialSubmit' })
-            setTimeout(() => {
-              this.props.history.push('/l/onboarding/')
-            }, 2000)
-          }}
-        />
-      </Div>
+      <ReactTypeformEmbed
+        url="https://annabergevin.typeform.com/to/EzND5O"
+        hideHeaders
+        hideFooter
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '500px',
+          borderRadius: '10px',
+          overflow: 'hidden',
+          margin: '2rem 0'
+        }}
+        onSubmit={() => {
+          window.dataLayer.push({ event: 'trialSubmit' })
+        }}
+      />
     )
   }
 }

@@ -116,7 +116,9 @@ const FeaturesNavDiv = styled(FeaturesNav)`
   }
 `
 
-const section = css`padding: 10% 20px;`
+const section = css`
+  padding: 10% 20px;
+`
 
 const imageSwapAnimation = keyframes`
   0%, 40% {
@@ -215,7 +217,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
       padding: 10px 13px 67px;
       margin: 0 10px;
       color: white;
-      box-shadow: 0 5px 30px 0 alpha(black, 0.2);
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
       background: ${Theme.colors.primaryDark};
       border-radius: 5px;
       div {
@@ -1173,7 +1175,7 @@ const SectionContactUsCmp = props => (
       <H2 full>Let's start your free trial!</H2>
       <TrialForm />
       <H6 full>or</H6>
-      <Link to={'tel:1855NOZZLE1'}>
+      <Link to="tel:1855NOZZLE1">
         <Button color="primaryDark" burst>
           Call 1-855-NOZZLE1
         </Button>

@@ -235,7 +235,7 @@ export default class Home extends Component {
     super()
     this.state = {
       rankDataImageIndex: 0,
-      rankDataImage: rankDataImages[0],
+      rankDataImage: rankDataImages[0]
     }
   }
   componentDidMount () {
@@ -243,9 +243,9 @@ export default class Home extends Component {
       () =>
         this.setState(state => ({
           rankDataImageIndex: state.rankDataImageIndex + 1,
-          rankDataImage: rankDataImages[(state.rankDataImageIndex + 1) % 3],
+          rankDataImage: rankDataImages[(state.rankDataImageIndex + 1) % 3]
         })),
-      2000,
+      2000
     )
   }
   componentWillUnmount () {
@@ -266,7 +266,7 @@ export default class Home extends Component {
                 position: 'absolute',
                 top: '0px',
                 left: '0px',
-                zIndex: -1,
+                zIndex: -1
               }}
             />
             <Left>
@@ -478,7 +478,7 @@ export default class Home extends Component {
             <H2 full>Let's start your free trial!</H2>
             <TrialForm />
             <H6 full>or</H6>
-            <Link to={'tel:1855NOZZLE1'}>
+            <Link to="tel:1855NOZZLE1">
               <Button color="primaryDark" burst>
                 Call 1-855-NOZZLE1
               </Button>

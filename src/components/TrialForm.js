@@ -5,7 +5,7 @@ import { ReactTypeformEmbed } from 'react-typeform-embed'
 
 class TrialForm extends Component {
   render () {
-    return (
+    return typeof document !== 'undefined' ? (
       <ReactTypeformEmbed
         url="https://annabergevin.typeform.com/to/EzND5O"
         hideHeaders
@@ -22,7 +22,7 @@ class TrialForm extends Component {
           window.dataLayer.push({ event: 'trialSubmit' })
         }}
       />
-    )
+    ) : null
   }
 }
 

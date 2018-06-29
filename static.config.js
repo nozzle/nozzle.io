@@ -9,23 +9,23 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/containers/Home',
+        component: 'src/containers/Home'
       },
       {
         path: 'rank-tracker-comparison',
-        component: 'src/containers/RankTrackerComparison',
+        component: 'src/containers/RankTrackerComparison'
       },
       {
         path: 'features',
-        component: 'src/containers/Features',
+        component: 'src/containers/Features'
       },
       {
         path: 'pricing',
-        component: 'src/containers/Pricing',
+        component: 'src/containers/Pricing'
       },
       {
         path: 'about',
-        component: 'src/containers/About',
+        component: 'src/containers/About'
       },
       {
         path: 'l/onboarding',
@@ -34,16 +34,16 @@ export default {
         children: [
           {
             path: 'thanks',
-            component: 'src/containers/OnboardingThanks',
-          },
-        ],
+            component: 'src/containers/OnboardingThanks'
+          }
+        ]
       },
       {
         path: 'devblog',
         component: 'src/containers/Devblog',
         getData: async () => ({
           posts,
-          tags,
+          tags
         }),
         children: [
           ...posts.map(d => {
@@ -53,7 +53,7 @@ export default {
               component: 'src/containers/DevblogPost',
               nofollow: d.fields.nofollow,
               noindex: d.fields.noindex,
-              getData: async () => ({ post: d }),
+              getData: async () => ({ post: d })
             }
           }),
           ...tags.map(tag => {
@@ -64,15 +64,15 @@ export default {
               getData: async () => {
                 const tagPosts = posts.filter(post => post.fields.tags.includes(tag))
                 return { tag, tagPosts, tags }
-              },
+              }
             }
-          }),
-        ],
+          })
+        ]
       },
       {
         is404: true,
-        component: 'src/containers/NotFound',
-      },
+        component: 'src/containers/NotFound'
+      }
     ]
   },
   renderToHtml: (render, Comp, meta) => {
@@ -83,7 +83,9 @@ export default {
   },
   Document: class CustomHtml extends Component {
     render () {
-      const { Html, Head, Body, children, renderMeta } = this.props
+      const {
+        Html, Head, Body, children, renderMeta
+      } = this.props
 
       return (
         <Html>
@@ -98,7 +100,7 @@ export default {
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-PPH2PX');
-                `,
+                `
               }}
             />
             <link
@@ -130,5 +132,5 @@ export default {
         </Html>
       )
     }
-  },
+  }
 }

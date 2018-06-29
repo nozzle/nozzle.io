@@ -152,7 +152,7 @@ class ExitIntent extends Component {
                   onSubmit={async values => {
                     window.dataLayer.push({ event: 'exitSubmit' })
                     try {
-                      await axios.post('/', encode({ 'form-name': 'contact', ...values }), {
+                      await axios.post('/', encode({ 'form-name': 'exitIntent', ...values }), {
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                       })
                       this.setState({ submitted: true })

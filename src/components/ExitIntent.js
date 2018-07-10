@@ -137,7 +137,9 @@ class ExitIntent extends Component {
             {this.state.submitted ? (
               <div>
                 <div className="-title">Thank you!</div>
-                <div className="-message">We realize</div>
+                <div className="-message">
+                  We'll send you your trial information as soon as possible!
+                </div>
               </div>
             ) : (
               <div>

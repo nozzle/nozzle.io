@@ -18,7 +18,7 @@ injectGlobal`
   html, body {
     background: ${Theme.colors.primaryDarker};
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     font-size: 16px;
     font-family: "Overpass", "Helvetica", "Georgia", sans-serif;
     font-weight: ${Theme.weights.regular};

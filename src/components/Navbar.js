@@ -144,7 +144,7 @@ const NavbarStyles = styled.header`
         left: 0;
         width: 100%;
         max-height: 65vh;
-        overflow-y: scroll;
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         background: ${Theme.colors.primaryDark};
         display: flex;
@@ -265,11 +265,11 @@ const NavbarStyles = styled.header`
 const links = [
   {
     name: 'Home',
-    path: '/',
+    path: '/'
   },
   {
     name: 'Why Us?',
-    path: '/rank-tracker-comparison',
+    path: '/rank-tracker-comparison'
   },
   {
     name: 'Features',
@@ -277,37 +277,37 @@ const links = [
     links: [
       {
         name: 'Brand Monitoring',
-        path: '/features#brands',
+        path: '/features#brands'
       },
       {
         name: 'Competitive Analysis',
-        path: '/features#competition',
+        path: '/features#competition'
       },
       {
         name: 'Scheduling',
-        path: '/features#scheduling',
+        path: '/features#scheduling'
       },
       {
         name: 'Data',
-        path: '/features#data',
+        path: '/features#data'
       },
       {
         name: 'Agency Tools',
-        path: '/features#agencies',
+        path: '/features#agencies'
       },
       {
         name: 'Reputation Management',
-        path: '/features#reputation',
+        path: '/features#reputation'
       },
       {
         name: 'Integrations',
-        path: '/features#integrations',
-      },
-    ],
+        path: '/features#integrations'
+      }
+    ]
   },
   {
     name: 'Pricing',
-    path: '/pricing',
+    path: '/pricing'
   },
   // {
   //   name: 'Dev Blog',
@@ -315,15 +315,15 @@ const links = [
   // },
   {
     name: 'About',
-    path: '/about',
-  },
+    path: '/about'
+  }
 ]
 
 export default class Navbar extends Component {
   constructor () {
     super()
     this.state = {
-      isMenuOpen: false,
+      isMenuOpen: false
     }
   }
   render () {
@@ -331,7 +331,7 @@ export default class Navbar extends Component {
 
     const closeMenu = () =>
       this.setState({
-        isMenuOpen: false,
+        isMenuOpen: false
       })
 
     const LinkItem = (link, i) => (
@@ -369,7 +369,7 @@ export default class Navbar extends Component {
             className="menuToggle"
             onClick={() => {
               this.setState({
-                isMenuOpen: !isMenuOpen,
+                isMenuOpen: !isMenuOpen
               })
             }}
             style={{ pointerEvents: isMenuOpen ? 'none' : 'all' }}

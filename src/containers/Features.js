@@ -509,7 +509,7 @@ const SectionScheduling = styled(props => (
         <H6>
           Not all keywords are created equal. Thankfully, Nozzle is{' '}
           <Strong>
-            the first and only trank tracker to offer flexible and real-time schedules
+            the first and only rank tracker to offer flexible and real-time schedules
           </Strong>. Instead of forcing you to pay the same price to track your long-tail keywords
           as your head terms, Nozzle let's you split your keywords into as many different scheduling
           buckets you want.{' '}

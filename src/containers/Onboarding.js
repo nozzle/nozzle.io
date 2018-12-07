@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { withRouter } from 'react-static'
 //
 import Theme from '../utils/Theme'
 
@@ -39,7 +38,7 @@ const Styles = styled(Container)`
   }
 `
 
-export default withRouter(({ history }) => (
+export default () => (
   <Page>
     <Head title="Get started with your 2 week free trial! | Nozzle" />
     <Styles>
@@ -59,10 +58,10 @@ export default withRouter(({ history }) => (
         onSubmit={() => {
           global.dataLayer.push({ event: 'onboardingSubmit' })
           setTimeout(() => {
-            history.push('/l/onboarding/thanks')
+            // history.push('/l/onboarding/thanks')
           }, 1000)
         }}
       />
     </Styles>
   </Page>
-))
+)

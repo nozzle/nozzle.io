@@ -1,15 +1,13 @@
-import React from 'react'
-import { injectGlobal } from 'styled-components'
-import { Router } from 'react-static'
-import Routes from 'react-static-routes'
-import reset from 'styled-reset'
-import { hot } from 'react-hot-loader'
+import React from "react";
+import { Root, Routes } from "react-static";
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 //
-import Theme from 'utils/Theme'
+import Theme from "utils/Theme";
 
-import NavWrapper from 'components/NavWrapper'
+import NavWrapper from "components/NavWrapper";
 
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
   ${reset};
   html, body, body, [data-reactroot] {
     min-height: 100%;
@@ -36,12 +34,13 @@ injectGlobal`
     z-index: 99999999;
     pointer-events: none;
   }
-`
+`;
 
-export default hot(module)(() => (
-  <Router>
+export default () => (
+  <Root>
+    <GlobalStyles />
     <NavWrapper>
       <Routes />
     </NavWrapper>
-  </Router>
-))
+  </Root>
+);

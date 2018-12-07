@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { Component } from 'react'
-import styled, { keyframes, css } from 'styled-components'
+import React, { Component } from "react";
+import styled, { keyframes, css } from "styled-components";
 //
-import Theme from 'utils/Theme'
+import Theme from "utils/Theme";
 
-import Link from './Link'
-import ClickOutside from './ClickOutside'
+import Link from "./Link";
+import ClickOutside from "./ClickOutside";
 
-import { Button } from './Html'
+import { Button } from "./Html";
 
-const belowBreakpoint = `@media(max-width: ${700}px)`
-const aboveBreakpoint = `@media(min-width: ${701}px)`
-const toggleSize = 20
-const toggleBarHeight = Math.round(toggleSize * 0.15)
+const belowBreakpoint = `@media(max-width: ${700}px)`;
+const aboveBreakpoint = `@media(min-width: ${701}px)`;
+const toggleSize = 20;
+const toggleBarHeight = Math.round(toggleSize * 0.15);
 
 const trialAnimation = keyframes`
   0%, 90%, 100% {
@@ -24,11 +24,13 @@ const trialAnimation = keyframes`
   97% {
     transform: rotate(-5deg) scale(1.15);
   }
-`
+`;
 
 const NavbarStyles = styled.header`
     position: fixed;
-    background: linear-gradient(to left, ${Theme.colors.primary}, ${Theme.colors.primaryLight});
+    background: linear-gradient(to left, ${Theme.colors.primary}, ${
+  Theme.colors.primaryLight
+});
     width: 100%;
     z-index: 1000;
     box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
@@ -71,7 +73,7 @@ const NavbarStyles = styled.header`
         display: inline-block;
 
         ${({ isMenuOpen }) =>
-    isMenuOpen &&
+          isMenuOpen &&
           css`
             > div {
               span:nth-child(1) {
@@ -156,7 +158,7 @@ const NavbarStyles = styled.header`
         opacity: 0;
 
         ${props =>
-    props.isMenuOpen &&
+          props.isMenuOpen &&
           css`
             pointer-events: all;
             transform: translateY(0);
@@ -260,96 +262,92 @@ const NavbarStyles = styled.header`
     }
   }
   }
-`
+`;
 
 const links = [
   {
-    name: 'Home',
-    path: '/'
+    name: "Home",
+    path: "/"
   },
   {
-    name: 'Why Us?',
-    path: '/rank-tracker-comparison'
+    name: "Why Us?",
+    path: "/rank-tracker-comparison"
   },
   {
-    name: 'Features',
-    path: '/features',
+    name: "Features",
+    path: "/features",
     links: [
       {
-        name: 'Brand Monitoring',
-        path: '/features#brands'
+        name: "Brand Monitoring",
+        path: "/features#brands"
       },
       {
-        name: 'Competitive Analysis',
-        path: '/features#competition'
+        name: "Competitive Analysis",
+        path: "/features#competition"
       },
       {
-        name: 'Scheduling',
-        path: '/features#scheduling'
+        name: "Scheduling",
+        path: "/features#scheduling"
       },
       {
-        name: 'Data',
-        path: '/features#data'
+        name: "Data",
+        path: "/features#data"
       },
       {
-        name: 'Agency Tools',
-        path: '/features#agencies'
+        name: "Agency Tools",
+        path: "/features#agencies"
       },
       {
-        name: 'Reputation Management',
-        path: '/features#reputation'
+        name: "Reputation Management",
+        path: "/features#reputation"
       },
       {
-        name: 'Integrations',
-        path: '/features#integrations'
+        name: "Integrations",
+        path: "/features#integrations"
       }
     ]
   },
   {
-    name: 'Pricing',
-    path: '/pricing'
+    name: "Pricing",
+    path: "/pricing"
   },
   // {
   //   name: 'Dev Blog',
   //   path: '/devblog',
   // },
   {
-    name: 'About',
-    path: '/about'
+    name: "About",
+    path: "/about"
   }
-]
+];
 
 export default class Navbar extends Component {
-  constructor () {
-    super()
+  constructor() {
+    super();
     this.state = {
       isMenuOpen: false
-    }
+    };
   }
-  render () {
-    const { isMenuOpen } = this.state
+  render() {
+    const { isMenuOpen } = this.state;
 
     const closeMenu = () =>
       this.setState({
         isMenuOpen: false
-      })
+      });
 
     const LinkItem = (link, i) => (
       <div key={i} className="link">
         <div itemProp="name">
-          <Link
-            key={i}
-            to={link.path}
-            itemProp="url"
-            activeClassName={link.path === '/' ? '' : 'active'}
-            onClick={closeMenu}
-          >
+          <Link key={i} to={link.path} itemProp="url" onClick={closeMenu}>
             {link.name}
           </Link>
         </div>
-        {link.links && <div className="links-nested">{link.links.map(LinkItem)}</div>}
+        {link.links && (
+          <div className="links-nested">{link.links.map(LinkItem)}</div>
+        )}
       </div>
-    )
+    );
 
     return (
       <NavbarStyles isMenuOpen={isMenuOpen}>
@@ -370,9 +368,9 @@ export default class Navbar extends Component {
             onClick={() => {
               this.setState({
                 isMenuOpen: !isMenuOpen
-              })
+              });
             }}
-            style={{ pointerEvents: isMenuOpen ? 'none' : 'all' }}
+            style={{ pointerEvents: isMenuOpen ? "none" : "all" }}
           >
             <div>
               <span />
@@ -386,7 +384,7 @@ export default class Navbar extends Component {
               <nav
                 className="linkbar"
                 ref={el => {
-                  useRef(el)
+                  useRef(el);
                 }}
               >
                 <div
@@ -406,6 +404,6 @@ export default class Navbar extends Component {
           </ClickOutside>
         </div>
       </NavbarStyles>
-    )
+    );
   }
 }

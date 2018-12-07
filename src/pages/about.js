@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import styled, { keyframes } from 'styled-components'
+import React, { Component } from "react";
+import styled, { keyframes } from "styled-components";
 //
-import Theme from 'utils/Theme'
+import Theme from "utils/Theme";
 
-import Link from 'components/Link'
-import Head from 'components/Head'
-import Page from 'components/Page'
-import Main from 'components/Main'
+import Link from "components/Link";
+import Head from "components/Head";
+import Page from "components/Page";
+import Main from "components/Main";
 
-import { H1, H2, H3, H4, H6, P, Img, Button } from 'components/Html'
+import { H1, H2, H3, H4, H6, P, Img, Button } from "components/Html";
 
 const densityAnimation = keyframes`
   0%, 100% {
@@ -23,7 +23,7 @@ const densityAnimation = keyframes`
     transform: translateY(150px);
     opacity: 0;
   }
-`
+`;
 
 const destinyAnimation = keyframes`
   0%, 100% {
@@ -38,7 +38,7 @@ const destinyAnimation = keyframes`
     transform: translateY(0px);
     opacity: 1;
   }
-`
+`;
 
 const delorianAnimation = keyframes`
   0%, 20% {
@@ -57,7 +57,7 @@ const delorianAnimation = keyframes`
     transform: translateX(1200px);
     opacity: 0;
   }
-`
+`;
 
 const delorianBehindAnimation = keyframes`
   0%, 100% {
@@ -66,11 +66,11 @@ const delorianBehindAnimation = keyframes`
   50% {
     transform: translateY(70px);
   }
-`
+`;
 
 const AboutUsDiv = styled.div`
   padding-top: 0;
-  background-image: url('/img/about/dot-background.jpg');
+  background-image: url("/img/about/dot-background.jpg");
   background-repeat: repeat-y;
   background-size: 100%;
   .intro {
@@ -83,7 +83,7 @@ const AboutUsDiv = styled.div`
     min-height: 108vh;
     align-items: center;
     justify-content: center;
-    background-image: url('/img/about/aboutus.jpg');
+    background-image: url("/img/about/aboutus.jpg");
     background-size: cover;
     background-position: top;
     color: #fff;
@@ -246,13 +246,13 @@ const AboutUsDiv = styled.div`
       border-radius: 5px;
       background: #fff;
       &.derek .member-image .inner {
-        background-image: url('/img/about/derek.jpg');
+        background-image: url("/img/about/derek.jpg");
       }
       &.joe .member-image .inner {
-        background-image: url('/img/about/joe.jpg');
+        background-image: url("/img/about/joe.jpg");
       }
       &.tanner .member-image .inner {
-        background-image: url('/img/about/tanner.jpg');
+        background-image: url("/img/about/tanner.jpg");
       }
       .member-image {
         position: absolute;
@@ -272,7 +272,7 @@ const AboutUsDiv = styled.div`
           background-size: cover;
           box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
           &:before {
-            content: '';
+            content: "";
             display: block;
             width: 100%;
             padding-top: 100%;
@@ -379,10 +379,10 @@ const AboutUsDiv = styled.div`
       transform: translateY(10px);
     }
   }
-`
+`;
 
 export default class About extends Component {
-  render () {
+  render() {
     return (
       <Page>
         <Head title="About Us | Nozzle" />
@@ -393,10 +393,11 @@ export default class About extends Component {
               <div className="-content">
                 <H1>It started with 3 guys who love SEO</H1>
                 <P>
-                  Working at an agency, we set out to find the best tools we could get. We needed
-                  something that could keep up with clients from Dell down to Bob's Pickles, but
-                  nothing lived up to our wildest SEO dreams. So we created Nozzle, the rank tracker
-                  we couldn't live without.
+                  Working at an agency, we set out to find the best tools we
+                  could get. We needed something that could keep up with clients
+                  from Dell down to Bob's Pickles, but nothing lived up to our
+                  wildest SEO dreams. So we created Nozzle, the rank tracker we
+                  couldn't live without.
                 </P>
               </div>
               <Link className="next" to="/about/#timeline">
@@ -407,7 +408,13 @@ export default class About extends Component {
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                  <g
+                    id="Page-1"
+                    stroke="none"
+                    strokeWidth="1"
+                    fill="none"
+                    fillRule="evenodd"
+                  >
                     <path
                       d="M3.03204743,3.40265339 L26.4497561,25.9830173 L49.8674649,3.09093941"
                       id="Path-1"
@@ -440,8 +447,8 @@ export default class About extends Component {
                 <div className="right">
                   <H4>July 2012</H4>
                   <P>
-                    At SEO.com, Derek (VP of Tech) and Joe (Lead Developer) are tasked with
-                    evaluating any and all rank tracking software.
+                    At SEO.com, Derek (VP of Tech) and Joe (Lead Developer) are
+                    tasked with evaluating any and all rank tracking software.
                   </P>
                 </div>
               </div>
@@ -450,8 +457,8 @@ export default class About extends Component {
                 <div className="left">
                   <H4>June 2013</H4>
                   <P>
-                    We have by now tried many options including Conductor, BrightEdge, SEO Clarity,
-                    and Moz, but walk away unsatisfied.
+                    We have by now tried many options including Conductor,
+                    BrightEdge, SEO Clarity, and Moz, but walk away unsatisfied.
                   </P>
                 </div>
                 <div className="connector" />
@@ -468,8 +475,8 @@ export default class About extends Component {
                 <div className="right">
                   <H4>April 2014</H4>
                   <P>
-                    Nozzle is incorporated with the goal of building the best rank tracker in the
-                    world.
+                    Nozzle is incorporated with the goal of building the best
+                    rank tracker in the world.
                   </P>
                 </div>
               </div>
@@ -484,7 +491,7 @@ export default class About extends Component {
                   <Img
                     src="/img/about/firstCustomer.png"
                     style={{
-                      width: '300px',
+                      width: "300px"
                     }}
                   />
                 </div>
@@ -505,7 +512,8 @@ export default class About extends Component {
                 <div className="left">
                   <H4>October 2015</H4>
                   <P>
-                    Nozzle launches multiple scheduling options, the first ever in the industry.
+                    Nozzle launches multiple scheduling options, the first ever
+                    in the industry.
                   </P>
                 </div>
                 <div className="connector" />
@@ -521,7 +529,10 @@ export default class About extends Component {
                 <div className="connector" />
                 <div className="right">
                   <H4>February 2016</H4>
-                  <P>Nozzle participates in the Techstars Kansas City accelerator program.</P>
+                  <P>
+                    Nozzle participates in the Techstars Kansas City accelerator
+                    program.
+                  </P>
                 </div>
               </div>
 
@@ -529,14 +540,15 @@ export default class About extends Component {
                 <div className="left">
                   <H4>March 2016</H4>
                   <P>
-                    Nozzle releases Chart.js 2.0 and trends #1 on Github and Product Hunt. Developed
-                    by our own Tanner Linsley and good friend Evert Timberg, it's now faster than
-                    ever, offers 8 flexible chart types and is even more extensible.
+                    Nozzle releases Chart.js 2.0 and trends #1 on Github and
+                    Product Hunt. Developed by our own Tanner Linsley and good
+                    friend Evert Timberg, it's now faster than ever, offers 8
+                    flexible chart types and is even more extensible.
                   </P>
                   <br />
-                  <Link to={'https://github.com/chartjs/chart.js'}>
+                  <a href={"https://github.com/chartjs/chart.js"}>
                     <Button size="sm">View Chart.js on Github</Button>
-                  </Link>
+                  </a>
                 </div>
                 <div className="connector" />
                 <div className="right">
@@ -564,15 +576,16 @@ export default class About extends Component {
                 <div className="right">
                   <H4>May 2016</H4>
                   <P>
-                    Jumpsuit is released and trends #1 on Github and Product Hunt. Initially
-                    developed for Nozzle to utilize React and Redux, it has become a popular
-                    javascript framework for building web applications with minimal overhead or
+                    Jumpsuit is released and trends #1 on Github and Product
+                    Hunt. Initially developed for Nozzle to utilize React and
+                    Redux, it has become a popular javascript framework for
+                    building web applications with minimal overhead or
                     boilerplate.
                   </P>
                   <br />
-                  <Link to={'https://github.com/jumpsuit/jumpsuit'}>
+                  <a href={"https://github.com/jumpsuit/jumpsuit"}>
                     <Button size="sm">View Jumpsuit on Github</Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
 
@@ -587,7 +600,9 @@ export default class About extends Component {
                 </div>
               </div>
 
-              <H2 className="roads">Where we're going, we don't need roads...</H2>
+              <H2 className="roads">
+                Where we're going, we don't need roads...
+              </H2>
 
               <div className="delorianBack">
                 <Img src="/img/about/delorianBack.png" />
@@ -604,9 +619,10 @@ export default class About extends Component {
                   <H3>Derek Perkins</H3>
                   <H6>CEO</H6>
                   <P>
-                    Derek is a go developer. He writes a lot of backend code, but also does the
-                    business side. He is an experienced entrepreneur, and enjoys the startup
-                    battlefield. He enjoys short walks on the beach and triple-OREO ice cream.{' '}
+                    Derek is a go developer. He writes a lot of backend code,
+                    but also does the business side. He is an experienced
+                    entrepreneur, and enjoys the startup battlefield. He enjoys
+                    short walks on the beach and triple-OREO ice cream.{" "}
                   </P>
                 </div>
                 <div className="member joe">
@@ -616,13 +632,15 @@ export default class About extends Component {
                   <H3>Joe Bergevin</H3>
                   <H6>Backend CTO</H6>
                   <P>
-                    Joe has a proven track record in designing tools that improve efficiency and
-                    deliver optimal outcomes for clients and companies. An innovative designer and
-                    developer, Joe has used a variety of programming languages, most recently
-                    specializing in Go (Golang) and PHP. Joe’s love for programming dates back to
-                    his teenage years when he spent his spare time in school programming games for
-                    his graphic calculator to share with his friends - earning him the nickname "TI
-                    Joe".
+                    Joe has a proven track record in designing tools that
+                    improve efficiency and deliver optimal outcomes for clients
+                    and companies. An innovative designer and developer, Joe has
+                    used a variety of programming languages, most recently
+                    specializing in Go (Golang) and PHP. Joe’s love for
+                    programming dates back to his teenage years when he spent
+                    his spare time in school programming games for his graphic
+                    calculator to share with his friends - earning him the
+                    nickname "TI Joe".
                   </P>
                 </div>
                 <div className="member tanner">
@@ -632,13 +650,16 @@ export default class About extends Component {
                   <H3>Tanner Linsley</H3>
                   <H6>Front-End Engineer</H6>
                   <P>
-                    Tanner is obsessive and passionate about Javascript, React, UI/UX, Data
-                    Visualization and all things web. He loves problem solving and design, and
-                    considers Github his playground. Tanner is always on the edge of the modern
-                    software stack loves developing new solutions, frameworks, and systems for
-                    complex problems. He is a core contributor to Chart.js, the most popular
-                    charting library in the world, and also wrote Jumpsuit.js, which was initially
-                    written for Nozzle, but now it's used by thousands of people to build web apps.
+                    Tanner is obsessive and passionate about Javascript, React,
+                    UI/UX, Data Visualization and all things web. He loves
+                    problem solving and design, and considers Github his
+                    playground. Tanner is always on the edge of the modern
+                    software stack loves developing new solutions, frameworks,
+                    and systems for complex problems. He is a core contributor
+                    to Chart.js, the most popular charting library in the world,
+                    and also wrote Jumpsuit.js, which was initially written for
+                    Nozzle, but now it's used by thousands of people to build
+                    web apps.
                   </P>
                 </div>
               </div>
@@ -646,6 +667,6 @@ export default class About extends Component {
           </AboutUsDiv>
         </Main>
       </Page>
-    )
+    );
   }
 }

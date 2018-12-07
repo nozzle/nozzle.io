@@ -1,41 +1,43 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-let ReactTypeform
-if (typeof document !== 'undefined') {
-  ReactTypeform = require('react-typeform-embed')
+let typeform;
+if (typeof document !== "undefined") {
+  typeform = require("@typeform/embed");
 }
 //
 
 export default class TrialForm extends Component {
-  state = {
-    ready: false
-  }
-  componentDidMount () {
+  componentDidMount() {
     this.setState({
       ready: true
-    })
+    });
+    typeform.makeWidget(
+      this.el,
+      "https://annabergevin.typeform.com/to/EzND5O", // NOTE: Replace with your typeform URL
+      {
+        hideHeaders: true,
+        hideFooter: true,
+        onSubmit: () => {
+          window.dataLayer.push({ event: "trialSubmit" });
+        }
+      }
+    );
   }
-  render () {
-    if (this.state.ready) {
-      return (
-        <ReactTypeform.ReactTypeformEmbed
-          url="https://annabergevin.typeform.com/to/EzND5O"
-          hideHeaders
-          hideFooter
-          style={{
-            position: 'relative',
-            width: '100%',
-            height: '500px',
-            borderRadius: '10px',
-            overflow: 'hidden',
-            margin: '2rem 0'
-          }}
-          onSubmit={() => {
-            window.dataLayer.push({ event: 'trialSubmit' })
-          }}
-        />
-      )
-    }
-    return null
+  render() {
+    return (
+      <div
+        ref={el => {
+          this.el = el;
+        }}
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "500px",
+          borderRadius: "10px",
+          overflow: "hidden",
+          margin: "2rem 0"
+        }}
+      />
+    );
   }
 }

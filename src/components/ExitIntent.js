@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
-import { withRouter } from 'react-static'
 import axios from 'axios'
 import { Form, Text } from 'react-form'
 //
@@ -116,7 +115,7 @@ const encode = data =>
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&')
 
-class ExitIntent extends Component {
+export default class ExitIntent extends Component {
   state = {
     show: false,
     submitted: false
@@ -197,8 +196,6 @@ class ExitIntent extends Component {
     )
   }
 }
-
-export default withRouter(ExitIntent)
 
 function onExitIntent (cb) {
   if (typeof document === 'undefined') {

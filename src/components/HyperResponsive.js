@@ -1,65 +1,65 @@
-import React, { Component } from 'react'
-import raf from 'raf'
+import React, { Component } from "react";
+import raf from "raf";
+import onResize from "utils/detectElementResize";
 //
-if (typeof window !== 'undefined') {
-  require('javascript-detect-element-resize')
-}
 
-export default function HyperResponsive (WrappedComponent) {
+export default function HyperResponsive(WrappedComponent) {
   return class HyperResponsive extends Component {
-    constructor () {
-      super()
+    constructor() {
+      super();
       this.state = {
         ready: false,
         width: 0,
-        height: 0,
+        height: 0
+      };
+      this.resize = this.resize.bind(this);
+      this.update = this.update.bind(this);
+    }
+    componentDidMount() {
+      if (!this.stopListener) {
+        this.stopListener = onResize(this.el, this.resize);
       }
-      this.resize = this.resize.bind(this)
-      this.update = this.update.bind(this)
+      this.resize();
     }
-    componentDidMount () {
-      if (!this.resizeListener) {
-        this.resizeListener = window.addResizeListener(this.el, this.resize)
-      }
-      this.resize()
-    }
-    componentWillUnmount () {
-      raf.cancel(this.raffed)
-      if (this.resizeListener) {
-        window.removeResizeListener(this.el, this.resize)
+    componentWillUnmount() {
+      raf.cancel(this.raffed);
+      if (this.stopListener) {
+        this.stopListener();
       }
     }
-    resize () {
-      this.raffed = raf(this.update)
+    resize() {
+      this.raffed = raf(this.update);
     }
-    update () {
+    update() {
       if (!this.el) {
-        return
+        return;
       }
       this.setState({
         ready: true,
         width: parseInt(window.getComputedStyle(this.el).width),
-        height: parseInt(window.getComputedStyle(this.el).height),
-      })
+        height: parseInt(window.getComputedStyle(this.el).height)
+      });
     }
-    render () {
-      const { style, ...rest } = this.props
-      const { ready, width, height } = this.state
+    render() {
+      const { style, ...rest } = this.props;
+      const { ready, width, height } = this.state;
       return (
         <div
           className="ResponsiveWrapper"
           ref={el => {
-            this.el = el
+            this.el = el;
           }}
           style={{
-            width: '100%',
-            height: '100%',
-            ...style,
+            width: "100%",
+            height: "100%",
+            ...style
           }}
         >
-          {ready && <WrappedComponent width={width} height={height} {...rest} />}
+          {ready && (
+            <WrappedComponent width={width} height={height} {...rest} />
+          )}
         </div>
-      )
+      );
     }
-  }
+  };
 }

@@ -8,26 +8,6 @@ export default {
     const { posts, tags } = await Contentful()
     return [
       {
-        path: '/',
-        component: 'src/containers/Home'
-      },
-      {
-        path: 'rank-tracker-comparison',
-        component: 'src/containers/RankTrackerComparison'
-      },
-      {
-        path: 'features',
-        component: 'src/containers/Features'
-      },
-      {
-        path: 'pricing',
-        component: 'src/containers/Pricing'
-      },
-      {
-        path: 'about',
-        component: 'src/containers/About'
-      },
-      {
         path: 'l/onboarding',
         component: 'src/containers/Onboarding',
         noindex: true,
@@ -40,7 +20,6 @@ export default {
       },
       {
         path: 'devblog',
-        component: 'src/containers/Devblog',
         getData: async () => ({
           posts,
           tags
@@ -68,10 +47,6 @@ export default {
             }
           })
         ]
-      },
-      {
-        is404: true,
-        component: 'src/containers/NotFound'
       }
     ]
   },

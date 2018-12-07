@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled, { keyframes } from "react-emotion";
+import styled, { keyframes } from "styled-components";
 //
 import Theme from "utils/Theme";
 

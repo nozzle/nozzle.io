@@ -1,7 +1,7 @@
 import React from "react";
 import { Root, Routes } from "react-static";
-import { injectGlobal } from "react-emotion";
-import reset from "emotion-reset";
+import { injectGlobal } from "styled-components";
+import reset from "styled-reset";
 //
 import Theme from "utils/Theme";
 
@@ -38,7 +38,6 @@ injectGlobal`
 
 export default () => (
   <Root>
-    {/* <GlobalStyles /> */}
     <NavWrapper>
       <Routes />
     </NavWrapper>

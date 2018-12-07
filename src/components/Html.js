@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "react-emotion";
+import styled, { css } from "styled-components";
 //
 import Easing from "utils/Easing";
 import Theme from "utils/Theme";

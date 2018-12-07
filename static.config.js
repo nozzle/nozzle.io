@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Contentful from "./tools/Contentful";
 
 export default {
-  plugins: ["react-static-plugin-emotion"],
+  plugins: ["react-static-plugin-styled-components"],
   // siteRoot: "https://nozzle.io",
   getRoutes: async () => {
     const { posts, tags } = await Contentful();

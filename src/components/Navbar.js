@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from "react";
-import styled, { keyframes, css } from "react-emotion";
+import styled, { keyframes, css } from "styled-components";
 //
 import Theme from "utils/Theme";
 

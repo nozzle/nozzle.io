@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "react-emotion";
+import styled from "styled-components";
 import Smackdown from "react-smackdown";
 import javascript from "react-syntax-highlighter/dist/languages/hljs/javascript";
 import bash from "react-syntax-highlighter/dist/languages/hljs/bash";

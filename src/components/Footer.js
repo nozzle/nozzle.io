@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "react-emotion";
+import styled from "styled-components";
 //
 // import { H5 } from './Html'
 import Theme from "utils/Theme";

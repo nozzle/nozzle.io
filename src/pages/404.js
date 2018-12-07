@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "react-emotion";
+import styled from "styled-components";
 
 const Styles = styled("div")`
   flex: 1 0 auto;

@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'react-emotion'
+import React from "react";
+import styled from "styled-components";
 //
-import Theme from '../utils/Theme'
+import Theme from "../utils/Theme";
 
-import HubspotForm from '../components/HubspotForm'
-import Page from '../components/Page'
-import Head from '../components/Head'
-import { Container } from '../components/Layout'
-import { H1, H4, Ol, Li, Strong } from '../components/Html'
+import HubspotForm from "../components/HubspotForm";
+import Page from "../components/Page";
+import Head from "../components/Head";
+import { Container } from "../components/Layout";
+import { H1, H4, Ol, Li, Strong } from "../components/Html";
 
 const Styles = styled(Container)`
   text-align: center;
@@ -36,7 +36,7 @@ const Styles = styled(Container)`
       padding: 1rem;
     }
   }
-`
+`;
 
 export default () => (
   <Page>
@@ -46,22 +46,26 @@ export default () => (
       <H4>In order to get started with your free 2 week trial:</H4>
       <Ol>
         <Li>
-          Fill out this form with your <Strong>Domain</Strong>, <Strong>Competitors</Strong> and{' '}
-          <Strong>Keywords</Strong> you would like to track
+          Fill out this form with your <Strong>Domain</Strong>,{" "}
+          <Strong>Competitors</Strong> and <Strong>Keywords</Strong> you would
+          like to track
         </Li>
         <Li>Schedule 30 minutes when we can walk you through our software</Li>
-        <Li>We'll setup your account and start pulling your data before our meeting</Li>
+        <Li>
+          We'll setup your account and start pulling your data before our
+          meeting
+        </Li>
         <Li>Spend 2 weeks making your friends jealous of your rankings data</Li>
       </Ol>
       <HubspotForm
         formID="8e1e2c8d-2a53-492e-a8e7-583ec635494a"
         onSubmit={() => {
-          global.dataLayer.push({ event: 'onboardingSubmit' })
+          global.dataLayer.push({ event: "onboardingSubmit" });
           setTimeout(() => {
             // history.push('/l/onboarding/thanks')
-          }, 1000)
+          }, 1000);
         }}
       />
     </Styles>
   </Page>
-)
+);

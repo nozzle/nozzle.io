@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled from "react-emotion";
 import { format } from "date-fns";
 import { RouteData } from "react-static";
 //
@@ -22,7 +22,7 @@ const PostH1 = styled(H1)`
   line-height: ${Theme.sizes.h3 * 1.2}rem;
 `;
 
-const PostContainer = styled.article`
+const PostContainer = styled("article")`
   .back {
     opacity: 0.6;
     display: inline-block;
@@ -55,7 +55,7 @@ const PostContainer = styled.article`
   }
 `;
 
-const PostStyles = styled.div`
+const PostStyles = styled("div")`
   margin: 0 auto;
   padding: 2rem;
   width: 900px;

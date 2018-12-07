@@ -1,22 +1,22 @@
-import React from 'react'
-import styled from 'styled-components'
-import { format } from 'date-fns'
+import React from "react";
+import styled from "react-emotion";
+import { format } from "date-fns";
 //
-import Theme from 'utils/Theme'
-import ReadTime from 'utils/ReadTime'
+import Theme from "utils/Theme";
+import ReadTime from "utils/ReadTime";
 
-import Smackdown from './Smackdown'
+import Smackdown from "./Smackdown";
 
-import Link from './Link'
-import { Button } from './Html'
+import Link from "./Link";
+import { Button } from "./Html";
 
-const PostListStyled = styled.div`
+const PostListStyled = styled("div")`
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-`
+`;
 
-const Post = styled.div`
+const Post = styled("div")`
   width: 100%;
   max-width: 50rem;
   padding: 3rem;
@@ -73,26 +73,28 @@ const Post = styled.div`
       width: auto;
     }
   }
-`
+`;
 
-export default function PostList ({ blog, posts }) {
+export default function PostList({ blog, posts }) {
   return (
     <PostListStyled>
       {posts.map(post => {
-        const wordCount = post.fields.body.split(' ').length
+        const wordCount = post.fields.body.split(" ").length;
         return (
           <Post key={post.fields.slug}>
             <article>
               <header>
                 <h2 className="title">
-                  <Link to={`/${blog}/${post.fields.slug}/`}>{post.fields.title}</Link>
+                  <Link to={`/${blog}/${post.fields.slug}/`}>
+                    {post.fields.title}
+                  </Link>
                 </h2>
                 <div className="info">
                   {post.fields.author.map(author => (
                     <span key={author.fields.name}>{author.fields.name}</span>
-                  ))}{' '}
-                  on {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')} &bull;{' '}
-                  {ReadTime(wordCount)} min read
+                  ))}{" "}
+                  on {format(new Date(post.sys.createdAt), "MMM DD, YYYY")}{" "}
+                  &bull; {ReadTime(wordCount)} min read
                 </div>
                 <div className="tags">
                   {post.fields.tags.map(tag => (
@@ -101,7 +103,7 @@ export default function PostList ({ blog, posts }) {
                       className="tag"
                       key={tag}
                       style={{
-                        background: Theme.colors.tags[tag],
+                        background: Theme.colors.tags[tag]
                       }}
                     >
                       {tag}
@@ -121,8 +123,8 @@ export default function PostList ({ blog, posts }) {
               </div>
             </article>
           </Post>
-        )
+        );
       })}
     </PostListStyled>
-  )
+  );
 }

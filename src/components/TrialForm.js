@@ -4,7 +4,6 @@ let typeform;
 if (typeof document !== "undefined") {
   typeform = require("@typeform/embed");
 }
-//
 
 export default class TrialForm extends Component {
   componentDidMount() {

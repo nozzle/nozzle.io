@@ -1,13 +1,13 @@
 import React from "react";
 import { Root, Routes } from "react-static";
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import { injectGlobal } from "react-emotion";
+import reset from "emotion-reset";
 //
 import Theme from "utils/Theme";
 
 import NavWrapper from "components/NavWrapper";
 
-const GlobalStyles = createGlobalStyle`
+injectGlobal`
   ${reset};
   html, body, body, [data-reactroot] {
     min-height: 100%;
@@ -38,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
 
 export default () => (
   <Root>
-    <GlobalStyles />
+    {/* <GlobalStyles /> */}
     <NavWrapper>
       <Routes />
     </NavWrapper>

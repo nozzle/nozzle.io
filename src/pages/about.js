@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from "react-emotion";
 //
 import Theme from "utils/Theme";
 
@@ -68,7 +68,7 @@ const delorianBehindAnimation = keyframes`
   }
 `;
 
-const AboutUsDiv = styled.div`
+const AboutUsDiv = styled("div")`
   padding-top: 0;
   background-image: url("/img/about/dot-background.jpg");
   background-repeat: repeat-y;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from "react-emotion";
 //
 import Theme from "utils/Theme";
 import Color from "utils/Color";
@@ -219,7 +219,8 @@ const SectionBrandsCmp = props => (
 );
 
 const SectionBrands = styled(SectionBrandsCmp)`
-  ${section} padding-top: 15rem;
+  ${section};
+  padding-top: 15rem;
 
   .badge {
     text-align: center;
@@ -456,7 +457,10 @@ const SectionCompetitionCmp = props => (
 );
 
 const SectionCompetition = styled(SectionCompetitionCmp)`
-  ${section} ${angle("right")} background: ${Theme.colors.primaryDarker};
+  ${section};
+  ${angle("right")};
+
+  background: ${Theme.colors.primaryDarker};
   color: white;
   h2 {
     text-align: center;
@@ -551,7 +555,9 @@ const SectionScheduling = styled(props => (
     </Container>
   </section>
 ))`
-  ${section} img {
+  ${section};
+
+  img {
     display: block;
     margin: 0 auto 20px;
     width: 250px;
@@ -733,7 +739,10 @@ const SectionDataCmp = props => (
 );
 
 const SectionData = styled(SectionDataCmp)`
-  ${section} ${angle("right")} background: ${Theme.colors.primaryDarker};
+  ${section};
+  ${angle("right")};
+
+  background: ${Theme.colors.primaryDarker};
   color: white;
   .-header {
     h2,
@@ -842,7 +851,7 @@ const SectionData = styled(SectionDataCmp)`
       position: relative;
       width: 100%;
       :before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -882,7 +891,7 @@ const SectionData = styled(SectionDataCmp)`
       padding: 10px 10px 10px 30px;
       position: relative;
       :before {
-        content: '';
+        content: "";
         position: absolute;
         width: 12px;
         height: 12px;
@@ -944,7 +953,8 @@ const SectionAgenciesCmp = props => (
 );
 
 const SectionAgencies = styled(SectionAgenciesCmp)`
-  ${section} img {
+  ${section};
+  img {
     display: block;
     margin: 0 auto 20px;
     width: 200px;
@@ -1027,7 +1037,10 @@ const SectionReputationCmp = props => (
 );
 
 const SectionReputation = styled(SectionReputationCmp)`
-  ${section} ${angle("right")} background: ${Theme.colors.primaryDarker};
+  ${section};
+  ${angle("right")};
+
+  background: ${Theme.colors.primaryDarker};
   color: white;
   img {
     display: block;
@@ -1149,7 +1162,10 @@ const SectionIntegrationsCmp = props => (
 );
 
 const SectionIntegrations = styled(SectionIntegrationsCmp)`
-  ${section} ${angle("right")} img {
+  ${section};
+  ${angle("right")};
+
+  img {
     display: block;
     margin: 0 auto 20px;
     width: 150px;
@@ -1219,8 +1235,12 @@ const SectionContactUsCmp = props => (
 );
 
 const SectionContactUs = styled(SectionContactUsCmp)`
-  ${section} ${angle("right")} background: ${Theme.colors.primaryDarker};
+  ${section};
+  ${angle("right")};
+
+  background: ${Theme.colors.primaryDarker};
   color: white;
+
   :after {
     display: none;
   }

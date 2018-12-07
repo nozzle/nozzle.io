@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 import { withRouteData } from 'react-static'
 //
 

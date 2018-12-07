@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
-import axios from 'axios'
-import { Form, Text } from 'react-form'
+import React, { Component } from "react";
+import styled, { css } from "react-emotion";
+import axios from "axios";
+import { Form, Text } from "react-form";
 //
-// import { H5 } from './Html'
-import Theme from 'utils/Theme'
+import Theme from "utils/Theme";
 
-const ExitIntentStyles = styled.div`
+const ExitIntentStyles = styled("div")`
   position: fixed;
   top: 0;
   left: 0;
@@ -108,27 +107,27 @@ const ExitIntentStyles = styled.div`
         opacity: 0;
       }
     `};
-`
+`;
 
 const encode = data =>
   Object.keys(data)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&')
+    .join("&");
 
 export default class ExitIntent extends Component {
   state = {
     show: false,
     submitted: false
-  }
-  componentDidMount () {
+  };
+  componentDidMount() {
     onExitIntent(() => {
-      global.dataLayer.push({ event: 'exitPopup' })
+      global.dataLayer.push({ event: "exitPopup" });
       this.setState({
         show: true
-      })
-    })
+      });
+    });
   }
-  render () {
+  render() {
     return (
       <ExitIntentStyles show={this.state.show}>
         <div className="-outer">
@@ -143,32 +142,49 @@ export default class ExitIntent extends Component {
             ) : (
               <div>
                 <div className="-title">
-                  Wait! Our data robots are chomping at their bits to get your free trial started,
-                  so don't let them down!
+                  Wait! Our data robots are chomping at their bits to get your
+                  free trial started, so don't let them down!
                 </div>
                 <div className="-message">
-                  We will send you information on how to start your trial as soon as possible.
+                  We will send you information on how to start your trial as
+                  soon as possible.
                 </div>
                 <Form
                   onSubmit={async values => {
-                    window.dataLayer.push({ event: 'exitSubmit' })
+                    window.dataLayer.push({ event: "exitSubmit" });
                     try {
-                      await axios.post('/', encode({ 'form-name': 'exitIntent', ...values }), {
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-                      })
-                      this.setState({ submitted: true })
+                      await axios.post(
+                        "/",
+                        encode({ "form-name": "exitIntent", ...values }),
+                        {
+                          headers: {
+                            "Content-Type": "application/x-www-form-urlencoded"
+                          }
+                        }
+                      );
+                      this.setState({ submitted: true });
                     } catch (err) {
-                      window.alert('There was a problem submitting your form! Try again or reload the page :)')
-                      this.setState({ submitted: true })
+                      window.alert(
+                        "There was a problem submitting your form! Try again or reload the page :)"
+                      );
+                      this.setState({ submitted: true });
                     }
                   }}
                 >
                   {({ submitForm }) => (
-                    <form name="exitIntent" netlify="true" onSubmit={submitForm}>
+                    <form
+                      name="exitIntent"
+                      netlify="true"
+                      onSubmit={submitForm}
+                    >
                       <div>
                         <label>
                           Email
-                          <Text field="email" name="email" placeholder="johndoe@gmail.com" />
+                          <Text
+                            field="email"
+                            name="email"
+                            placeholder="johndoe@gmail.com"
+                          />
                         </label>
                       </div>
                       <div>
@@ -185,31 +201,31 @@ export default class ExitIntent extends Component {
           <button
             className="close"
             onClick={() => {
-              global.dataLayer.push({ event: 'exitClose' })
-              this.setState({ show: false })
+              global.dataLayer.push({ event: "exitClose" });
+              this.setState({ show: false });
             }}
           >
             &times;
           </button>
         </div>
       </ExitIntentStyles>
-    )
+    );
   }
 }
 
-function onExitIntent (cb) {
-  if (typeof document === 'undefined') {
-    return
+function onExitIntent(cb) {
+  if (typeof document === "undefined") {
+    return;
   }
   setTimeout(() => {
-    document.addEventListener('mouseleave', e => {
+    document.addEventListener("mouseleave", e => {
       if (global.localStorage.exitIntent) {
-        return
+        return;
       }
       if (e.clientY < 0) {
-        global.localStorage.exitIntent = true
-        cb(e)
+        global.localStorage.exitIntent = true;
+        cb(e);
       }
-    })
-  }, 3000)
+    });
+  }, 3000);
 }

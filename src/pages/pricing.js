@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled, { css } from "react-emotion";
 //
 import Theme from "utils/Theme";
 import { angle } from "utils/Styles";
@@ -611,7 +611,8 @@ class SectionCalculatorCmp extends Component {
 }
 
 const SectionCalculator = styled(SectionCalculatorCmp)`
-  ${angle("right")} padding: 5% 1rem 10%;
+  ${angle("right")};
+  padding: 5% 1rem 10%;
   .title {
     text-align: center;
     margin-bottom: 30px;
@@ -696,7 +697,8 @@ const SectionContactUsCmp = props => (
 );
 
 const SectionContactUs = styled(SectionContactUsCmp)`
-  ${angle("right")} padding: 10% 2rem;
+  ${angle("right")};
+  padding: 10% 2rem;
   background: ${Theme.colors.primaryDarker};
   color: white;
   &:after {

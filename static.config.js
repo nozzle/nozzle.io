@@ -1,72 +1,69 @@
-import React, { Component } from 'react'
-import { ServerStyleSheet } from 'styled-components'
-import Contentful from './tools/Contentful'
+import React, { Component } from "react";
+import Contentful from "./tools/Contentful";
 
 export default {
-  siteRoot: 'https://nozzle.io',
+  plugins: ["react-static-plugin-emotion"],
+  // siteRoot: "https://nozzle.io",
   getRoutes: async () => {
-    const { posts, tags } = await Contentful()
+    const { posts, tags } = await Contentful();
     return [
       {
-        path: 'l/onboarding',
-        component: 'src/containers/Onboarding',
+        path: "l/onboarding",
+        component: "src/containers/Onboarding",
         noindex: true,
         children: [
           {
-            path: 'thanks',
-            component: 'src/containers/OnboardingThanks'
+            path: "thanks",
+            component: "src/containers/OnboardingThanks"
           }
         ]
       },
       {
-        path: 'devblog',
+        path: "devblog",
         getData: async () => ({
           posts,
           tags
         }),
         children: [
           ...posts.map(d => {
-            const path = `${d.fields.slug}`
+            const path = `${d.fields.slug}`;
             return {
               path,
-              component: 'src/containers/DevblogPost',
+              component: "src/containers/DevblogPost",
               nofollow: d.fields.nofollow,
               noindex: d.fields.noindex,
               getData: async () => ({ post: d })
-            }
+            };
           }),
           ...tags.map(tag => {
-            const path = `tags/${tag}`
+            const path = `tags/${tag}`;
             return {
               path,
-              component: 'src/containers/DevblogTag',
+              component: "src/containers/DevblogTag",
               getData: async () => {
-                const tagPosts = posts.filter(post => post.fields.tags.includes(tag))
-                return { tag, tagPosts, tags }
+                const tagPosts = posts.filter(post =>
+                  post.fields.tags.includes(tag)
+                );
+                return { tag, tagPosts, tags };
               }
-            }
+            };
           })
         ]
       }
-    ]
-  },
-  renderToHtml: (render, Comp, meta) => {
-    const sheet = new ServerStyleSheet()
-    const html = render(sheet.collectStyles(<Comp />))
-    meta.styleTags = sheet.getStyleElement()
-    return html
+    ];
   },
   Document: class CustomHtml extends Component {
-    render () {
-      const {
-        Html, Head, Body, children, renderMeta
-      } = this.props
+    render() {
+      const { Html, Head, Body, children } = this.props;
 
       return (
         <Html>
           <Head>
             <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
             <script
               dangerouslySetInnerHTML={{
                 __html: `
@@ -90,7 +87,6 @@ export default {
               href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
               rel="stylesheet"
             />
-            {renderMeta.styleTags}
           </Head>
           <Body>
             <noscript>
@@ -99,13 +95,13 @@ export default {
                 src="https://www.googletagmanager.com/ns.html?id=GTM-PPH2PX"
                 height="0"
                 width="0"
-                style={{ display: 'none', visibility: 'hidden' }}
+                style={{ display: "none", visibility: "hidden" }}
               />
             </noscript>
             {children}
           </Body>
         </Html>
-      )
+      );
     }
   }
-}
+};

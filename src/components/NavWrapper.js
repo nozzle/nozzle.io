@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, { Component } from "react";
+import styled from "react-emotion";
 //
-import Theme from 'utils/Theme'
-import Navbar from './Navbar'
-import Footer from './Footer'
-import ExitIntent from './ExitIntent'
+import Theme from "utils/Theme";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import ExitIntent from "./ExitIntent";
 
-const PageStyles = styled.div`
+const PageStyles = styled("div")`
   min-height: 100%;
-`
+`;
 
-const ContentStyled = styled.div`
+const ContentStyled = styled("div")`
   padding-top: 52px;
   color: ${Theme.colors.text};
   background: white;
@@ -18,11 +18,11 @@ const ContentStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-`
+`;
 
 export default class NavWrapper extends Component {
-  render () {
-    const { children } = this.props
+  render() {
+    const { children } = this.props;
     return (
       <PageStyles>
         <Navbar />
@@ -30,6 +30,6 @@ export default class NavWrapper extends Component {
         <Footer />
         <ExitIntent />
       </PageStyles>
-    )
+    );
   }
 }

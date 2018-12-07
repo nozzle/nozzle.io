@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from "react";
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes, css } from "react-emotion";
 //
 import Theme from "utils/Theme";
 
@@ -26,7 +26,7 @@ const trialAnimation = keyframes`
   }
 `;
 
-const NavbarStyles = styled.header`
+const NavbarStyles = styled("header")`
     position: fixed;
     background: linear-gradient(to left, ${Theme.colors.primary}, ${
   Theme.colors.primaryLight

@@ -1,28 +1,41 @@
-import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
+import React, { Component } from "react";
+import styled, { css } from "react-emotion";
 //
-import Color from 'utils/Color'
-import Theme from 'utils/Theme'
-import { angle } from 'utils/Styles'
+import Color from "utils/Color";
+import Theme from "utils/Theme";
+import { angle } from "utils/Styles";
 
-import Head from 'components/Head'
-import Page from 'components/Page'
-import Main from 'components/Main'
-import Link from 'components/Link'
-import NodeGarden from 'components/NodeGarden'
-import TrialForm from 'components/TrialForm'
-import { H2, H3, H4, H5, H6, P, Ul, Li, Img, Div, Button, Strong } from 'components/Html'
+import Head from "components/Head";
+import Page from "components/Page";
+import Main from "components/Main";
+import Link from "components/Link";
+import NodeGarden from "components/NodeGarden";
+import TrialForm from "components/TrialForm";
+import {
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  P,
+  Ul,
+  Li,
+  Img,
+  Div,
+  Button,
+  Strong
+} from "components/Html";
 
-const belowMobile = `@media(max-width: ${700}px)`
-const belowTablet = `@media(max-width: ${1000}px)`
+const belowMobile = `@media(max-width: ${700}px)`;
+const belowTablet = `@media(max-width: ${1000}px)`;
 
-const Left = props => <div className="left" {...props} />
-const Right = props => <div className="right" {...props} />
+const Left = props => <div className="left" {...props} />;
+const Right = props => <div className="right" {...props} />;
 const Section = ({ children, ...rest }) => (
   <section {...rest}>
     <div className="inner">{children}</div>
   </section>
-)
+);
 
 const section = css`
   z-index: 0;
@@ -48,7 +61,7 @@ const section = css`
       margin-bottom: 2rem;
     }
   }
-`
+`;
 
 const layoutLeft = css`
   .left {
@@ -59,7 +72,7 @@ const layoutLeft = css`
   .right {
     flex: 3 1 300px;
   }
-`
+`;
 
 const layoutRight = css`
   .left {
@@ -69,7 +82,7 @@ const layoutRight = css`
     margin-left: 40px;
     flex: 2 1 200px;
   }
-`
+`;
 
 const layoutLeftHalf = css`
   .left {
@@ -79,48 +92,61 @@ const layoutLeftHalf = css`
   .right {
     flex: 1 1 300px;
   }
-`
+`;
 
-const layoutDark = css`
+const layoutDark = `
   background: ${Theme.colors.primaryDarker};
   color: white;
-`
+`;
 
-const Centered = styled.div`
+const Centered = styled("div")`
   text-align: center;
   width: 100%;
-`
+`;
 
 const SectionKnowEverything = styled(Section)`
-  ${section} ${layoutLeft} position: relative;
+  ${section};
+  ${layoutLeft};
+
+  position: relative;
   background: radial-gradient(
     circle at center,
     ${Theme.colors.primaryDarker} 20%,
     ${Color(Theme.colors.primaryDarker)
-    .darken(10)
-    .toString()}
+      .darken(10)
+      .toString()}
   );
   color: white;
+
   h4 {
     color: ${Theme.colors.primaryLighter};
   }
+
   img {
     max-width: 940px;
     width: 140%;
     border-radius: 5px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   }
-`
+`;
 const SectionTrackAllTheThings = styled(Section)`
-  ${section} ${layoutDark} ${layoutRight} ${angle('right')} position: relative;
+  ${section};
+  ${layoutDark};
+  ${layoutRight};
+  ${angle("right")};
+
+  position: relative;
+
   .right {
     z-index: 0;
   }
+
   img {
     opacity: 1;
     border-radius: 5px;
     box-shadow: 0 0 30px 0 rgba(0; 0; 0; 0.2);
   }
+
   .allthethings {
     position: absolute;
     right: 0;
@@ -129,9 +155,11 @@ const SectionTrackAllTheThings = styled(Section)`
     opacity: 0.2;
     z-index: 0;
   }
-`
+`;
 const SectionRankData = styled(Section)`
-  ${section} ${layoutLeftHalf} .right {
+  ${section};
+  ${layoutLeftHalf};
+  .right {
     img {
       opacity: 1;
       max-width: 940px;
@@ -147,9 +175,14 @@ const SectionRankData = styled(Section)`
       }
     }
   }
-`
+`;
 const SectionCompetitors = styled(Section)`
-  ${section} ${layoutLeft} ${layoutDark} ${angle('right')} .left {
+  ${section};
+  ${layoutLeft};
+  ${layoutDark};
+  ${angle("right")};
+
+  .left {
     direction: rtl;
     img {
       opacity: 1;
@@ -166,9 +199,15 @@ const SectionCompetitors = styled(Section)`
       }
     }
   }
-`
+`;
 const SectionDataJunkie = styled(Section)`
-  ${section} ${layoutRight} text-align: center .csv, .sql {
+  ${section};
+  ${layoutRight};
+
+  text-align: center;
+
+  .csv,
+  .sql {
     flex: 1 1 30%;
   }
   .main {
@@ -187,24 +226,33 @@ const SectionDataJunkie = styled(Section)`
       margin-bottom: 3rem;
     }
   }
-`
+`;
 const SectionSchedules = styled(Section)`
-  ${section} ${layoutDark} ${angle('right')} align-items: center;
+  ${section};
+  ${layoutDark};
+  ${angle("right")};
+
+  align-items: center;
   text-align: center;
+
   p {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
   }
+
   img {
     width: 900px;
     max-width: 100%;
     border-radius: 5px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   }
-`
+`;
 const SectionCantAfford = styled(Section)`
-  ${section} ${layoutRight} .right {
+  ${section};
+  ${layoutRight};
+
+  .right {
     img {
       opacity: 1;
       max-width: 940px;
@@ -213,10 +261,14 @@ const SectionCantAfford = styled(Section)`
       box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     }
   }
-`
+`;
 
 const SectionContactUs = styled(Section)`
-  ${section} ${layoutDark} ${angle('right')} background: ${Theme.colors.primaryDarker};
+  ${section};
+  ${layoutDark};
+  ${angle("right")};
+
+  background: ${Theme.colors.primaryDarker};
 
   &:after {
     display: none;
@@ -226,19 +278,23 @@ const SectionContactUs = styled(Section)`
     display: block;
     text-align: center;
   }
-`
+`;
 
-const rankDataImages = ['/img/rank.png', '/img/adrank.png', '/img/pixelheight.png']
+const rankDataImages = [
+  "/img/rank.png",
+  "/img/adrank.png",
+  "/img/pixelheight.png"
+];
 
 export default class Home extends Component {
-  constructor () {
-    super()
+  constructor() {
+    super();
     this.state = {
       rankDataImageIndex: 0,
       rankDataImage: rankDataImages[0]
-    }
+    };
   }
-  componentDidMount () {
+  componentDidMount() {
     this.rankDataImageInterval = window.setInterval(
       () =>
         this.setState(state => ({
@@ -246,26 +302,26 @@ export default class Home extends Component {
           rankDataImage: rankDataImages[(state.rankDataImageIndex + 1) % 3]
         })),
       2000
-    )
+    );
   }
-  componentWillUnmount () {
-    window.clearInterval(this.rankDataImageInterval)
+  componentWillUnmount() {
+    window.clearInterval(this.rankDataImageInterval);
   }
-  render () {
-    const { rankDataImage } = this.state
+  render() {
+    const { rankDataImage } = this.state;
     return (
       <Page>
         <Head title="Nozzle - Enterprise SEO Keyword Rank Tracker" />
         <Main>
           <SectionKnowEverything>
             <NodeGarden
-              color={Color('white')
+              color={Color("white")
                 .setAlpha(0.1)
                 .toString()}
               style={{
-                position: 'absolute',
-                top: '0px',
-                left: '0px',
+                position: "absolute",
+                top: "0px",
+                left: "0px",
                 zIndex: -1
               }}
             />
@@ -273,8 +329,8 @@ export default class Home extends Component {
               <H2>Know everything Google knows</H2>
               <H4>And deal with it.</H4>
               <P>
-                If you want access to more enterprise level SERP data than any tool has ever
-                offered, you've come to the right place
+                If you want access to more enterprise level SERP data than any
+                tool has ever offered, you've come to the right place
               </P>
               <Link to="/#contact">
                 <Button color="success" burst>
@@ -305,20 +361,21 @@ export default class Home extends Component {
             <Right>
               <H2>Track all the things!</H2>
               <P>
-                Most tools just tell you the top ranking page on your domain. We monitor your entire
-                brand, including social media profiles and unlimited domain matches. There's a
-                difference between knowing you're ranking #1 and owning the entire first page!
+                Most tools just tell you the top ranking page on your domain. We
+                monitor your entire brand, including social media profiles and
+                unlimited domain matches. There's a difference between knowing
+                you're ranking #1 and owning the entire first page!
               </P>
               <P>
-                Unlimited access doesn't just refer to today's SERP. We keep all your data FOREVER,
-                so 3 years from now, you'll be able to look back and see what was ranking for
-                "Pokemon Go" in 2016. :)
+                Unlimited access doesn't just refer to today's SERP. We keep all
+                your data FOREVER, so 3 years from now, you'll be able to look
+                back and see what was ranking for "Pokemon Go" in 2016. :)
               </P>
               <Link to="/#contact">
                 <Button color="success" burst>
                   Start tracking today!
                 </Button>
-              </Link>{' '}
+              </Link>{" "}
               <Link to="/features">
                 <Button color="primary" burst>
                   How does it work?
@@ -330,16 +387,18 @@ export default class Home extends Component {
             <Left>
               <H2 color="primaryDark">Rank data you can only find at Nozzle</H2>
               <H5 weight="regular">
-                Track results by <Strong>Rank, Ad Adjusted Rank, Pixel Height</Strong> and more!
+                Track results by{" "}
+                <Strong>Rank, Ad Adjusted Rank, Pixel Height</Strong> and more!
               </H5>
               <P>
-                With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean what it used to. Nozzle
-                won’t just tell you where you rank, we’ll tell you your ad adjusted rank, how many
-                pixels down the page you are, whether a knowledge graph appeared and even what your
-                prospective customer ate for breakfast.
+                With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean
+                what it used to. Nozzle won’t just tell you where you rank,
+                we’ll tell you your ad adjusted rank, how many pixels down the
+                page you are, whether a knowledge graph appeared and even what
+                your prospective customer ate for breakfast.
               </P>
               <P>
-                We include <Strong>over 350+ data points</Strong> for{' '}
+                We include <Strong>over 350+ data points</Strong> for{" "}
                 <Strong>every result on the serp</Strong> - no extra cost!
               </P>
               <Ul>
@@ -356,7 +415,7 @@ export default class Home extends Component {
               <p />
               <Link to="/features/#data">
                 <Button burst>See the complete list</Button>
-              </Link>{' '}
+              </Link>{" "}
               <Link to="/#contact">
                 <Button color="success" burst>
                   Get the datas!
@@ -365,7 +424,9 @@ export default class Home extends Component {
             </Left>
             <Right>
               <Img src={rankDataImage} />
-              {rankDataImages.map(img => <Img key={img} src={img} style={{ display: 'none' }} />)}
+              {rankDataImages.map(img => (
+                <Img key={img} src={img} style={{ display: "none" }} />
+              ))}
             </Right>
           </SectionRankData>
           <SectionCompetitors>
@@ -373,24 +434,31 @@ export default class Home extends Component {
               <Img src="/img/groupBy.png" />
             </Left>
             <Right>
-              <H3>Squash your competitors... even the ones you don't know about yet</H3>
+              <H3>
+                Squash your competitors... even the ones you don't know about
+                yet
+              </H3>
               <H5 weight="regular">
-                See share of voice by{' '}
-                <Strong color="primaryLighter">Domain, Subdomain, URL, and Brand</Strong>
+                See share of voice by{" "}
+                <Strong color="primaryLighter">
+                  Domain, Subdomain, URL, and Brand
+                </Strong>
               </H5>
               <P>
-                Nozzle lets you track <Strong>unlimited competitors</Strong>, no questions asked.
-                Heck, we'll let you track as much as you can handle. The SERP is yours to command!
+                Nozzle lets you track <Strong>unlimited competitors</Strong>, no
+                questions asked. Heck, we'll let you track as much as you can
+                handle. The SERP is yours to command!
               </P>
               <P>
-                If you find a new competitor you haven't been tracking, add them and we'll even
-                rewrite history for you. It'll be like you were monitoring them from the start!
+                If you find a new competitor you haven't been tracking, add them
+                and we'll even rewrite history for you. It'll be like you were
+                monitoring them from the start!
               </P>
               <Link to="/#contact">
                 <Button color="success" burst>
                   Show me my competitors!
                 </Button>
-              </Link>{' '}
+              </Link>{" "}
               <Link to="/features/#competition">
                 <Button color="primary" burst>
                   How does it work?
@@ -406,15 +474,16 @@ export default class Home extends Component {
               <H3>A Data Junkie's Paradise</H3>
               <H5>CSV, SQL, API and BigQuery</H5>
               <P>
-                Whether your thing is pivot tables or SQL JOIN's, you can access your data the way
-                you're used to. Even better, we keep all your data forever, including the raw html.
-                Consider it necessary tooling when dealing with millions of keywords. )
+                Whether your thing is pivot tables or SQL JOIN's, you can access
+                your data the way you're used to. Even better, we keep all your
+                data forever, including the raw html. Consider it necessary
+                tooling when dealing with millions of keywords. )
               </P>
               <Link to="/#contact">
                 <Button color="success" burst>
                   Fix me up with 1,000 keywords!
                 </Button>
-              </Link>{' '}
+              </Link>{" "}
               <Link to="/features/#integration">
                 <Button color="primary" burst>
                   Show all integrations
@@ -430,11 +499,13 @@ export default class Home extends Component {
               Get rankings on <em>your</em> schedule
             </H2>
             <P>
-              Not all keywords are created equal. You're probably paying too much to track your
-              long-tail keywords daily or you're only getting weekly data for your money making head
-              terms. Say goodbye to those tools and say hello to your new best friend. Track your
-              most important keywords daily, hourly or even every 5 minutes. Keep an eye on
-              thousands more by scheduling them weekly or monthly without breaking the bank.
+              Not all keywords are created equal. You're probably paying too
+              much to track your long-tail keywords daily or you're only getting
+              weekly data for your money making head terms. Say goodbye to those
+              tools and say hello to your new best friend. Track your most
+              important keywords daily, hourly or even every 5 minutes. Keep an
+              eye on thousands more by scheduling them weekly or monthly without
+              breaking the bank.
             </P>
             <Centered>
               <Div>
@@ -446,7 +517,7 @@ export default class Home extends Component {
                 <Button color="success" burst>
                   Give me flexibility, stat!
                 </Button>
-              </Link>{' '}
+              </Link>{" "}
               <Link to="/features/#scheduling">
                 <Button color="primary" burst>
                   Why does it matter?
@@ -458,15 +529,16 @@ export default class Home extends Component {
             <Left>
               <H2>You can't afford to not try Nozzle</H2>
               <H5>
-                No minimum spend, no qualification calls, white-glove onboarding, batteries included
+                No minimum spend, no qualification calls, white-glove
+                onboarding, batteries included
               </H5>
               <P>
-                After a free trial, getting started can cost you less per month than your secret
-                santa gift this year. Seriously.
+                After a free trial, getting started can cost you less per month
+                than your secret santa gift this year. Seriously.
               </P>
               <Link to="/pricing">
                 <Button burst>See Our Plans & Pricing</Button>
-              </Link>{' '}
+              </Link>{" "}
               <Link to="/#contact">
                 <Button color="success" burst>
                   Try it out!
@@ -486,6 +558,6 @@ export default class Home extends Component {
           </SectionContactUs>
         </Main>
       </Page>
-    )
+    );
   }
 }

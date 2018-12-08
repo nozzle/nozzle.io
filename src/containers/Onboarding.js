@@ -24,17 +24,11 @@ const Styles = styled(Container)`
     margin-bottom: 3rem;
   }
 
-  form {
+  .form {
     display: inline-block;
-    margin: 0 1rem;
-    padding: 3rem;
-    border-radius: 0.5rem;
-    background: ${Theme.colors.primaryDark};
-    color: white;
-
-    @media screen and (max-width: 700px) {
-      padding: 1rem;
-    }
+    width: 500px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 `;
 
@@ -57,15 +51,17 @@ export default () => (
         </Li>
         <Li>Spend 2 weeks making your friends jealous of your rankings data</Li>
       </Ol>
-      <HubspotForm
-        formID="8e1e2c8d-2a53-492e-a8e7-583ec635494a"
-        onSubmit={() => {
-          global.dataLayer.push({ event: "onboardingSubmit" });
-          setTimeout(() => {
-            // history.push('/l/onboarding/thanks')
-          }, 1000);
-        }}
-      />
+      <div className="form">
+        <HubspotForm
+          formID="8e1e2c8d-2a53-492e-a8e7-583ec635494a"
+          onSubmit={() => {
+            global.dataLayer.push({ event: "onboardingSubmit" });
+            setTimeout(() => {
+              // history.push('/l/onboarding/thanks')
+            }, 1000);
+          }}
+        />
+      </div>
     </Styles>
   </Page>
 );

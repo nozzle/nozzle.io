@@ -3,7 +3,7 @@ import Contentful from "./tools/Contentful";
 
 export default {
   plugins: ["react-static-plugin-styled-components"],
-  // siteRoot: "https://nozzle.io",
+  siteRoot: "https://nozzle.io",
   getRoutes: async () => {
     const { posts, tags } = await Contentful();
     return [

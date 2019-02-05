@@ -37,11 +37,10 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export default () => (
-  <GlobalStyles>
-    <Root>
-      <NavWrapper>
-        <Routes />
-      </NavWrapper>
-    </Root>
-  </GlobalStyles>
+  <Root>
+    <GlobalStyles />
+    <NavWrapper>
+      <Routes />
+    </NavWrapper>
+  </Root>
 );

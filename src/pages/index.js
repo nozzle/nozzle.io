@@ -326,7 +326,7 @@ export default class Home extends Component {
               }}
             />
             <Left>
-              <H2>Know everything Google knows</H2>
+              <H2>Know everything Tanner knows</H2>
               <H4>And deal with it.</H4>
               <P>
                 If you want access to more enterprise level SERP data than any

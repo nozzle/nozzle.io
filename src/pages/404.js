@@ -13,5 +13,8 @@ const Styles = styled("div")`
 `;
 
 export default () => (
-  <Styles>Oh no! It looks like that page doesn't exist :(</Styles>
+  <Styles>
+    You must have followed a leaky pipe somewhere! It looks like that page
+    doesn't exist. Let's get you out of this puddle.{" "}
+  </Styles>
 );

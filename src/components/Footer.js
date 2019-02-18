@@ -3,6 +3,9 @@ import styled from "styled-components";
 //
 // import { H5 } from './Html'
 import Theme from "utils/Theme";
+import Link from "components/Link";
+
+const belowMobile = `@media(max-width: ${700}px)`;
 
 const FooterStyles = styled("div")`
   position: relative;
@@ -11,8 +14,48 @@ const FooterStyles = styled("div")`
   background: ${Theme.colors.primary};
   color: white;
   box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, 0.3);
+
+  ${belowMobile} {
+    .navLinks {
+      padding: 1rem;
+    }
+    .navContainer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .container {
+      display: block;
+    }
+  }
+  .container {
+    diplay: flex;
+    margin-right: 4rem;
+    align-items: baseline;
+  }
+
   .copyright {
-    text-align: center;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    font-size: .75rem;
+    align-self: center;
+  }
+
+  .navContainer {
+    display: inline-block;
+  }
+
+  .navLinks {
+    display: inline-block;
+    text-align: left;
+    margin-right: 1rem;
+
+    :hover {
+      color: #60bd68;
+    }
+  }
+
   }
 `;
 
@@ -20,8 +63,27 @@ export default class Footer extends Component {
   render() {
     return (
       <FooterStyles>
-        <div className="copyright">
-          &copy; {`20${new Date().getYear() - 100}`} Nozzle Corp.
+        <div className="container">
+          <div className="navContainer">
+            <div className="navLinks">
+              <Link to="/about">About Us</Link>
+            </div>
+            <div className="navLinks">
+              <Link to="/pricing">Pricing</Link>
+            </div>
+            <div className="navLinks">
+              <Link to="/features">Features</Link>
+            </div>
+            <div className="navLinks">
+              <Link to="/rank-tracker-comparison">Why Us?</Link>
+            </div>
+            <div className="navLinks">
+              <Link to="/devblog">Dev Blog</Link>
+            </div>
+          </div>
+          <div className="copyright">
+            &copy; {`20${new Date().getYear() - 100}`} Nozzle Corp.
+          </div>
         </div>
       </FooterStyles>
     );

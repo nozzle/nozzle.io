@@ -457,8 +457,9 @@ export default class About extends Component {
                 <div className="left">
                   <H4>June 2013</H4>
                   <P>
-                    We have by now tried many options including Conductor,
-                    BrightEdge, SEO Clarity, and Moz, but walk away unsatisfied.
+                    We have by now tried many SEO monitoring software options
+                    including Conductor, BrightEdge, SEO Clarity, and Moz, but
+                    walk away unsatisfied.
                   </P>
                 </div>
                 <div className="connector" />
@@ -476,7 +477,7 @@ export default class About extends Component {
                   <H4>April 2014</H4>
                   <P>
                     Nozzle is incorporated with the goal of building the best
-                    rank tracker in the world.
+                    rank tracking software in the world.
                   </P>
                 </div>
               </div>

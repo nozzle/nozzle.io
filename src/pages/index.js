@@ -330,7 +330,8 @@ export default class Home extends Component {
               <H4>And deal with it.</H4>
               <P>
                 If you want access to more enterprise level SERP data than any
-                tool has ever offered, you've come to the right place
+                tool has ever offered, you've come to the right place. SEO data
+                nerds drool over our keyword rank tracker.
               </P>
               <Link to="/#contact">
                 <Button color="success" burst>
@@ -502,10 +503,10 @@ export default class Home extends Component {
               Not all keywords are created equal. You're probably paying too
               much to track your long-tail keywords daily or you're only getting
               weekly data for your money making head terms. Say goodbye to those
-              tools and say hello to your new best friend. Track your most
-              important keywords daily, hourly or even every 5 minutes. Keep an
-              eye on thousands more by scheduling them weekly or monthly without
-              breaking the bank.
+              tools and say hello to the rank checker that will become your new
+              best friend. Track your most important keywords daily, hourly or
+              even every 5 minutes. Keep an eye on thousands more by scheduling
+              them weekly or monthly without breaking the bank.
             </P>
             <Centered>
               <Div>

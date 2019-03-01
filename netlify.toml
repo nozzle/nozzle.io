@@ -1,0 +1,14 @@
+# Global settings applied to the whole site.  
+[build]
+  command = "yarn build"
+  publish = "dist"
+
+# Deploy Preview context: All Deploy Previews
+# will inherit these settings.
+[context.deploy-preview]
+  command = "yarn stage"
+
+# Branch deploy context: All deploys that are not in
+# an active Deploy Preview will inherit these settings.
+[context.branch-deploy]
+  command = "yarn stage"

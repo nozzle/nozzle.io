@@ -73,7 +73,7 @@ export default class RankTrackerComparison extends Component {
   render() {
     return (
       <Page>
-        <Head title="Why Us? - A rank tracker comparison | Nozzle" />
+        <Head title="Best SEO Rank Tracker Tool - Keyword Rank Tracking Software - SERP Ranking Tool - Nozzle" />
         <Main>
           <SectionWhyAnother>
             <Container>
@@ -89,12 +89,12 @@ export default class RankTrackerComparison extends Component {
                   years of experience, we know first-hand the pains and
                   challenges that come with rank tracking. There are, literally,
                   hundreds of marketing tools to choose from, and we have
-                  evaluating almost every single one along with their strengths
+                  evaluated almost every single one along with their strengths
                   and weaknesses. Our findings left us wanting and needing more
-                  power and flexibility in a tool that didn{"'"}t exist yet. As
-                  other providers continued to neglect our needs of a modern
-                  rank tracker, we were left with only one choice: Build the
-                  biggest, baddest rank tracker anyone has ever used.
+                  power and flexibility in a ranking tool that didn't exist yet.
+                  As other providers continued to neglect our needs of a modern
+                  keyword rank tracker, we were left with only one choice: Build
+                  the biggest, baddest, seo rank tracker anyone has ever used.
                 </P>
               </Center>
             </Container>

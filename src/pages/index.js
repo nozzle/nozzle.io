@@ -311,7 +311,7 @@ export default class Home extends Component {
     const { rankDataImage } = this.state;
     return (
       <Page>
-        <Head title="Nozzle - Enterprise SEO Keyword Rank Tracker" />
+        <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Nozzle" />
         <Main>
           <SectionKnowEverything>
             <NodeGarden

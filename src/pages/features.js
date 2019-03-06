@@ -1252,7 +1252,7 @@ export default class Features extends Component {
   render() {
     return (
       <Page>
-        <Head title="Features | Nozzle" />
+        <Head title="Search Engine Position Tool - SERP Keyword Tracking Tool - SERP Ranking Tool" />
         <Main>
           <FeaturesNavDiv />
           <SectionBrands id="brands" />

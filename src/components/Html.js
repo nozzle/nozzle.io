@@ -206,7 +206,7 @@ export class Button extends React.Component {
       });
   }
   render() {
-    const { burst, onMouseDown, ...rest } = this.props;
+    const { burst, onClick, ...rest } = this.props;
     const handler = e => {
       window.buttonBurst
         .tune({
@@ -216,7 +216,10 @@ export class Button extends React.Component {
         })
         .generate()
         .replay();
-      onMouseDown && onMouseDown(e);
+
+      if (onClick) {
+        onClick(e);
+      }
     };
     return burst ? (
       <ButtonStyled {...rest} onClick={handler} />

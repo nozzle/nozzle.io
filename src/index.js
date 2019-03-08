@@ -1,30 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
+import React from "react";
+import ReactDOM from "react-dom";
 
 // Your top level component
-import App from './App'
+import App from "./App";
 
 // Export your top level component as JSX (for static rendering)
-export default App
+export default App;
 
 // Render your app
-if (typeof document !== 'undefined') {
-  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
+if (typeof document !== "undefined") {
+  const renderMethod = module.hot
+    ? ReactDOM.render
+    : ReactDOM.hydrate || ReactDOM.render;
+
   const render = Comp => {
-    renderMethod(
-      <AppContainer>
-        <Comp />
-      </AppContainer>,
-      document.getElementById('root')
-    )
-  }
+    renderMethod(<Comp />, document.getElementById("root"));
+  };
 
   // Render!
-  render(App)
+  render(App);
 
-  // webpack Hot Module Replacement API
+  // Hot Module Replacement
   if (module.hot) {
-    module.hot.accept('./App', () => render(require('./App').default))
+    module.hot.accept("./App", () => render(require("./App").default));
   }
 }

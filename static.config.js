@@ -5,7 +5,7 @@ export default {
   plugins: ["react-static-plugin-styled-components"],
   siteRoot: "https://nozzle.io",
   getRoutes: async () => {
-    const { posts, tags } = await Contentful();
+    const { devPosts, devTags, blogPosts, blogTags } = await Contentful();
     return [
       {
         path: "l/onboarding",
@@ -21,11 +21,11 @@ export default {
       {
         path: "devblog",
         getData: async () => ({
-          posts,
-          tags
+          posts: devPosts,
+          tags: devTags
         }),
         children: [
-          ...posts.map(d => {
+          ...devPosts.map(d => {
             const path = `${d.fields.slug}`;
             return {
               path,
@@ -35,16 +35,48 @@ export default {
               getData: async () => ({ post: d })
             };
           }),
-          ...tags.map(tag => {
+          ...devTags.map(tag => {
             const path = `tags/${tag}`;
             return {
               path,
               component: "src/containers/DevblogTag",
               getData: async () => {
-                const tagPosts = posts.filter(post =>
+                const tagPosts = devPosts.filter(post =>
                   post.fields.tags.includes(tag)
                 );
-                return { tag, tagPosts, tags };
+                return { tag, tagPosts, tags: devTags };
+              }
+            };
+          })
+        ]
+      },
+      {
+        path: "blog",
+        getData: async () => ({
+          posts: blogPosts,
+          tags: blogTags
+        }),
+        children: [
+          ...blogPosts.map(d => {
+            const path = `${d.fields.slug}`;
+            return {
+              path,
+              component: "src/containers/DevblogPost",
+              nofollow: d.fields.nofollow,
+              noindex: d.fields.noindex,
+              getData: async () => ({ post: d })
+            };
+          }),
+          ...blogTags.map(tag => {
+            const path = `tags/${tag}`;
+            return {
+              path,
+              component: "src/containers/DevblogTag",
+              getData: async () => {
+                const tagPosts = blogPosts.filter(post =>
+                  post.fields.tags.includes(tag)
+                );
+                return { tag, tagPosts, tags: blogTags };
               }
             };
           })

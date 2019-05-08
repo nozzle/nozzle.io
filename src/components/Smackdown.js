@@ -52,7 +52,7 @@ const El = ({ micro, source, ...rest }) => (
         micro
           ? `${source
               .replace(/<iframe.*(<\/iframe>|>)/gm, "")
-              .substring(0, 400)}...`
+              .substring(0, 200)}...`
           : source
       }
       syntax={syntax}
@@ -78,8 +78,8 @@ export default styled(El)`
   }
 
   p {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-family: "Lato", sans-serif;
     font-weight: 300;
     margin-bottom: 1rem;

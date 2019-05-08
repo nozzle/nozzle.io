@@ -12,30 +12,48 @@ import { Button } from "./Html";
 
 const PostListStyled = styled("div")`
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
   padding-top: 2rem;
+  margin: 0.5rem;
+  width: auto%;
+`;
+
+const PostContainer = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  margin: 0.5rem;
 `;
 
 const Post = styled("div")`
-  width: 100%;
-  max-width: 50rem;
+  width: 32%;
+  height: auto;
+  margin: 0.5rem;
   padding: 3rem;
-  margin: 0 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 3rem;
   background: white;
   border-radius: 0.5rem;
   box-shadow: inset 0 0 0 1px #dae4ed, 0 5px 15px -5px rgba(0, 0, 0, 0.1);
 
+  @media only screen and (max-width: 1250px) {
+    width: 48%;
+  }
+
+  @media only screen and (max-width: 835px) {
+    width: 98%;
+  }
+
   .title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
 
   .info {
-    font-size: 1.1rem;
+    display: flex;
+    font-size: 0.85rem;
     margin-bottom: 1rem;
     opacity: 0.7;
+    justify-content: space-between;
   }
 
   .tags {
@@ -59,9 +77,16 @@ const Post = styled("div")`
       text-align: left;
       margin-bottom: 1rem;
     }
+    .author {
+      display: flex;
+      align-items: center;
 
-    .more {
-      text-align: center;
+      img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 2rem;
+        margin-right: 1rem;
+      }
     }
   }
 
@@ -73,58 +98,106 @@ const Post = styled("div")`
       width: auto;
     }
   }
+
+  .linkStyle {
+    :hover {
+      text-decoration: underline;
+    }
+  }
+
+  .titleImg {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+      max-height: 10rem;
+      max-width: 100%;
+      width: auto;
+    }
+  }
 `;
 
 export default function PostList({ blog, posts }) {
   return (
     <PostListStyled>
-      {posts.map(post => {
-        const wordCount = post.fields.body.split(" ").length;
-        return (
-          <Post key={post.fields.slug}>
-            <article>
-              <header>
-                <h2 className="title">
-                  <Link to={`/${blog}/${post.fields.slug}/`}>
-                    {post.fields.title}
-                  </Link>
-                </h2>
-                <div className="info">
-                  {post.fields.author.map(author => (
-                    <span key={author.fields.name}>{author.fields.name}</span>
-                  ))}{" "}
-                  on {format(new Date(post.sys.createdAt), "MMM DD, YYYY")}{" "}
-                  &bull; {ReadTime(wordCount)} min read
-                </div>
-                <div className="tags">
-                  {post.fields.tags.map(tag => (
-                    <Link
-                      to={`/devblog/tags/${tag}`}
-                      className="tag"
-                      key={tag}
-                      style={{
-                        background: Theme.colors.tags[tag]
-                      }}
-                    >
-                      {tag}
+      <PostContainer>
+        {posts.map(post => {
+          const wordCount = post.fields.body.split(" ").length;
+          return (
+            <Post key={post.fields.slug}>
+              <article>
+                <header>
+                  <div className="titleImg">
+                    <Link to={`/${blog}/${post.fields.slug}/`}>
+                      <img
+                        src={
+                          post.fields.featuredImage && [
+                            post.fields.featuredImage.fields.file.url
+                          ]
+                        }
+                      />
                     </Link>
-                  ))}
+                  </div>
+                  <h2 className="title">
+                    <div className="linkStyle">
+                      <Link to={`/${blog}/${post.fields.slug}/`}>
+                        {post.fields.title}
+                      </Link>
+                    </div>
+                  </h2>
+                  <div className="info">
+                    <div>
+                      {format(new Date(post.sys.createdAt), "MMM DD, YYYY")}{" "}
+                    </div>
+                    <div>{ReadTime(wordCount)} min read</div>
+                  </div>
+                  <div className="tags">
+                    {post.fields.tags.map(tag => (
+                      <Link
+                        to={`/devblog/tags/${tag}`}
+                        className="tag"
+                        key={tag}
+                        style={{
+                          background: Theme.colors.tags[tag]
+                        }}
+                      >
+                        {tag}
+                      </Link>
+                    ))}
+                  </div>
+                </header>
+                <div className="summary">
+                  <div className="content">
+                    <Smackdown micro source={post.fields.shortDescription} />
+                  </div>
+                  <div className="author">
+                    <img src="/img/about/tanner.jpg" alt="Author" />
+                    <div>
+                      {post.fields.author.map(author => (
+                        <span key={author.fields.name}>
+                          {author.fields.name}
+                        </span>
+                      ))}{" "}
+                    </div>
+                  </div>
                 </div>
-              </header>
-              <div className="summary">
-                <div className="content">
-                  <Smackdown micro source={post.fields.shortDescription} />
-                </div>
-                <div className="more">
-                  <Button size="sm" burst>
-                    <Link to={`/${blog}/${post.fields.slug}/`}>Read More</Link>
-                  </Button>
-                </div>
-              </div>
-            </article>
-          </Post>
-        );
-      })}
+              </article>
+            </Post>
+          );
+        })}
+      </PostContainer>
     </PostListStyled>
   );
+}
+
+// Button
+{
+  /*                   <div className="more">
+                    <Button size="sm" burst>
+                      <Link to={`/${blog}/${post.fields.slug}/`}>
+                        Read More
+                      </Link>
+                    </Button>
+                  </div> */
 }

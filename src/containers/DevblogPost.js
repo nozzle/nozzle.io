@@ -15,7 +15,7 @@ import Smackdown from "components/Smackdown";
 import Comments from "components/Comments";
 
 import { Container, Header } from "components/Layout";
-import { H1 } from "components/Html";
+import { H1, Img } from "components/Html";
 
 const PostH1 = styled(H1)`
   font-size: ${Theme.sizes.h3}rem;
@@ -83,6 +83,7 @@ export default class DevblogPost extends Component {
     return (
       <RouteData>
         {({ post }) => {
+          console.log(post);
           const wordCount = post.fields.body.split(" ").length.hello;
           return (
             <Page>
@@ -159,6 +160,7 @@ export default class DevblogPost extends Component {
                   </Header>
                   <Container>
                     <PostStyles itemProp="articleBody">
+                      <Img src={post.fields.featuredImage.fields.file.url} />
                       <Smackdown source={post.fields.body} />
                     </PostStyles>
                   </Container>

@@ -14,12 +14,9 @@ import PostList from "components/PostList";
 const BlogContainer = styled(Container)`
   background: rgba(0, 0, 0, 0.02);
   display: flex;
+  width: 75%;
 `;
-const SideBar = styled("div")``;
 
-const Tags = styled("div")`
-  width: auto;
-`;
 export default class Devblog extends Component {
   render() {
     return (
@@ -29,7 +26,7 @@ export default class Devblog extends Component {
             <Head title="Dev Blog | Nozzle" />
             <Main>
               <Header>
-                <H1>Devblog</H1>
+                <H1>Blog</H1>
                 <SubMenu>
                   <ul>
                     {tags.map(tag => (

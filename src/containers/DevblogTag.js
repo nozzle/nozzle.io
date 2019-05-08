@@ -1,23 +1,23 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { withRouteData } from "react-static";
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { withRouteData } from 'react-static'
 //
 
-import Link from "components/Link";
-import Head from "components/Head";
-import Page from "components/Page";
-import Main from "components/Main";
-import { Container, Header, SubMenu } from "components/Layout";
-import { H1 } from "components/Html";
-import PostList from "components/PostList";
+import Link from 'components/Link'
+import Head from 'components/Head'
+import Page from 'components/Page'
+import Main from 'components/Main'
+import { Container, Header, SubMenu } from 'components/Layout'
+import { H1 } from 'components/Html'
+import PostList from 'components/PostList'
 
 const BlogContainer = styled(Container)`
   background: rgba(0, 0, 0, 0.02);
-`;
+`
 
 class DevblogTag extends Component {
   render() {
-    const { tag, tags, tagPosts } = this.props;
+    const { tag, tags, tagPosts } = this.props
     return (
       <Page>
         <Head title={`${tag} | Nozzle`} />
@@ -42,8 +42,8 @@ class DevblogTag extends Component {
           </BlogContainer>
         </Main>
       </Page>
-    );
+    )
   }
 }
 
-export default withRouteData(DevblogTag);
+export default withRouteData(DevblogTag)

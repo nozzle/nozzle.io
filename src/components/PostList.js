@@ -1,31 +1,31 @@
-import React from "react";
-import styled from "styled-components";
-import { format } from "date-fns";
+import React from 'react'
+import styled from 'styled-components'
+import { format } from 'date-fns'
 //
-import Theme from "utils/Theme";
-import ReadTime from "utils/ReadTime";
+import Theme from 'utils/Theme'
+import ReadTime from 'utils/ReadTime'
 
-import Smackdown from "./Smackdown";
+import Smackdown from './Smackdown'
 
-import Link from "./Link";
-import { Button } from "./Html";
+import Link from './Link'
+import { Button } from './Html'
 
-const PostListStyled = styled("div")`
+const PostListStyled = styled('div')`
   display: flex;
   flex-wrap: nowrap;
   padding-top: 2rem;
   margin: 0.5rem;
   width: auto%;
-`;
+`
 
-const PostContainer = styled("div")`
+const PostContainer = styled('div')`
   display: flex;
   flex-wrap: wrap;
   padding-top: 2rem;
   margin: 0.5rem;
-`;
+`
 
-const Post = styled("div")`
+const Post = styled('div')`
   width: 32%;
   height: auto;
   margin: 0.5rem;
@@ -77,6 +77,11 @@ const Post = styled("div")`
       text-align: left;
       margin-bottom: 1rem;
     }
+    .authors {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
     .author {
       display: flex;
       align-items: center;
@@ -85,7 +90,7 @@ const Post = styled("div")`
         width: 2rem;
         height: 2rem;
         border-radius: 2rem;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
       }
     }
   }
@@ -116,14 +121,14 @@ const Post = styled("div")`
       width: auto;
     }
   }
-`;
+`
 
 export default function PostList({ blog, posts }) {
   return (
     <PostListStyled>
       <PostContainer>
         {posts.map(post => {
-          const wordCount = post.fields.body.split(" ").length;
+          const wordCount = post.fields.body.split(' ').length
           return (
             <Post key={post.fields.slug}>
               <article>
@@ -148,7 +153,7 @@ export default function PostList({ blog, posts }) {
                   </h2>
                   <div className="info">
                     <div>
-                      {format(new Date(post.sys.createdAt), "MMM DD, YYYY")}{" "}
+                      {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')}{' '}
                     </div>
                     <div>{ReadTime(wordCount)} min read</div>
                   </div>
@@ -171,24 +176,34 @@ export default function PostList({ blog, posts }) {
                   <div className="content">
                     <Smackdown micro source={post.fields.shortDescription} />
                   </div>
-                  <div className="author">
-                    <img src="/img/about/tanner.jpg" alt="Author" />
-                    <div>
-                      {post.fields.author.map(author => (
-                        <span key={author.fields.name}>
-                          {author.fields.name}
-                        </span>
-                      ))}{" "}
-                    </div>
+                  <div className="authors">
+                    {post.fields.author.map(author => {
+                      const {
+                        fields: { profilePhoto }
+                      } = author
+
+                      const profilePhotoURL = profilePhoto
+                        ? profilePhoto.fields.file.url
+                        : ''
+
+                      return (
+                        <div className="author" key={author.fields.name}>
+                          {profilePhotoURL ? (
+                            <img src={profilePhotoURL} alt="Author" />
+                          ) : null}
+                          <div>{author.fields.name}</div>
+                        </div>
+                      )
+                    })}{' '}
                   </div>
                 </div>
               </article>
             </Post>
-          );
+          )
         })}
       </PostContainer>
     </PostListStyled>
-  );
+  )
 }
 
 // Button

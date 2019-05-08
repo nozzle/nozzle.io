@@ -75,3 +75,8 @@ export const SidebarContent = styled('div')`
   min-width: 0;
   padding: 1rem 1rem 0;
 `
+
+export const BlogContainer = styled(Container)`
+  background: rgba(0, 0, 0, 0.02);
+  display: flex;
+`

@@ -1,21 +1,14 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { RouteData } from "react-static";
+import React, { Component } from 'react'
+import { RouteData } from 'react-static'
 //
 
-import Link from "components/Link";
-import Head from "components/Head";
-import Page from "components/Page";
-import Main from "components/Main";
-import { Container, Header, SubMenu } from "components/Layout";
-import { H1 } from "components/Html";
-import PostList from "components/PostList";
-
-const BlogContainer = styled(Container)`
-  background: rgba(0, 0, 0, 0.02);
-  display: flex;
-  width: 75%;
-`;
+import Link from 'components/Link'
+import Head from 'components/Head'
+import Page from 'components/Page'
+import Main from 'components/Main'
+import { BlogContainer, Header, SubMenu } from 'components/Layout'
+import { H1 } from 'components/Html'
+import PostList from 'components/PostList'
 
 export default class Devblog extends Component {
   render() {
@@ -23,7 +16,7 @@ export default class Devblog extends Component {
       <RouteData>
         {({ posts, tags }) => (
           <Page>
-            <Head title="Dev Blog | Nozzle" />
+            <Head title="Blog | Nozzle" />
             <Main>
               <Header>
                 <H1>Blog</H1>
@@ -31,19 +24,19 @@ export default class Devblog extends Component {
                   <ul>
                     {tags.map(tag => (
                       <li key={tag}>
-                        <Link to={`/devblog/tags/${tag}/`}>{tag}</Link>
+                        <Link to={`/blog/tags/${tag}/`}>{tag}</Link>
                       </li>
                     ))}
                   </ul>
                 </SubMenu>
               </Header>
               <BlogContainer>
-                <PostList blog="devblog" posts={posts} />
+                <PostList prefix="blog" posts={posts} />
               </BlogContainer>
             </Main>
           </Page>
         )}
       </RouteData>
-    );
+    )
   }
 }

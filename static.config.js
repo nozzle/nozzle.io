@@ -1,92 +1,94 @@
-import React, { Component } from "react";
-import Contentful from "./tools/Contentful";
+import React, { Component } from 'react'
+import Contentful from './tools/Contentful'
 
 export default {
-  plugins: ["react-static-plugin-styled-components"],
-  siteRoot: "https://nozzle.io",
+  plugins: ['react-static-plugin-styled-components'],
+  siteRoot: 'https://nozzle.io',
   getRoutes: async () => {
-    const { devPosts, devTags, blogPosts, blogTags } = await Contentful();
+    const { devPosts, devTags, blogPosts, blogTags } = await Contentful()
+
+    console.log(blogPosts, devPosts)
     return [
       {
-        path: "l/onboarding",
-        component: "src/containers/Onboarding",
+        path: 'l/onboarding',
+        component: 'src/containers/Onboarding',
         noindex: true,
         children: [
           {
-            path: "thanks",
-            component: "src/containers/OnboardingThanks"
+            path: 'thanks',
+            component: 'src/containers/OnboardingThanks'
           }
         ]
       },
       {
-        path: "devblog",
-        getData: async () => ({
-          posts: devPosts,
-          tags: devTags
-        }),
-        children: [
-          ...devPosts.map(d => {
-            const path = `${d.fields.slug}`;
-            return {
-              path,
-              component: "src/containers/DevblogPost",
-              nofollow: d.fields.nofollow,
-              noindex: d.fields.noindex,
-              getData: async () => ({ post: d })
-            };
-          }),
-          ...devTags.map(tag => {
-            const path = `tags/${tag}`;
-            return {
-              path,
-              component: "src/containers/DevblogTag",
-              getData: async () => {
-                const tagPosts = devPosts.filter(post =>
-                  post.fields.tags.includes(tag)
-                );
-                return { tag, tagPosts, tags: devTags };
-              }
-            };
-          })
-        ]
-      },
-      {
-        path: "blog",
+        path: 'blog',
         getData: async () => ({
           posts: blogPosts,
           tags: blogTags
         }),
         children: [
           ...blogPosts.map(d => {
-            const path = `${d.fields.slug}`;
+            const path = `${d.fields.slug}`
             return {
               path,
-              component: "src/containers/DevblogPost",
+              component: 'src/containers/DevblogPost',
               nofollow: d.fields.nofollow,
               noindex: d.fields.noindex,
               getData: async () => ({ post: d })
-            };
+            }
           }),
           ...blogTags.map(tag => {
-            const path = `tags/${tag}`;
+            const path = `tags/${tag}`
             return {
               path,
-              component: "src/containers/DevblogTag",
+              component: 'src/containers/DevblogTag',
               getData: async () => {
                 const tagPosts = blogPosts.filter(post =>
                   post.fields.tags.includes(tag)
-                );
-                return { tag, tagPosts, tags: blogTags };
+                )
+                return { tag, tagPosts, tags: blogTags }
               }
-            };
+            }
+          })
+        ]
+      },
+      {
+        path: 'devblog',
+        getData: async () => ({
+          posts: devPosts,
+          tags: devTags
+        }),
+        children: [
+          ...devPosts.map(d => {
+            const path = `${d.fields.slug}`
+            return {
+              path,
+              component: 'src/containers/DevblogPost',
+              nofollow: d.fields.nofollow,
+              noindex: d.fields.noindex,
+              getData: async () => ({ post: d })
+            }
+          }),
+          ...devTags.map(tag => {
+            const path = `tags/${tag}`
+            return {
+              path,
+              component: 'src/containers/DevblogTag',
+              getData: async () => {
+                const tagPosts = devPosts.filter(post =>
+                  post.fields.tags.includes(tag)
+                )
+                return { tag, tagPosts, tags: devTags }
+              }
+            }
           })
         ]
       }
-    ];
+    ]
   },
   Document: class CustomHtml extends Component {
     render() {
-      const { Html, Head, Body, children } = this.props;
+      const { Html, Head, Body, children } = this.props
 
       return (
         <Html>
@@ -127,13 +129,13 @@ export default {
                 src="https://www.googletagmanager.com/ns.html?id=GTM-PPH2PX"
                 height="0"
                 width="0"
-                style={{ display: "none", visibility: "hidden" }}
+                style={{ display: 'none', visibility: 'hidden' }}
               />
             </noscript>
             {children}
           </Body>
         </Html>
-      );
+      )
     }
   }
-};
+}

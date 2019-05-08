@@ -8,21 +8,21 @@ import ReadTime from 'utils/ReadTime'
 import Smackdown from './Smackdown'
 
 import Link from './Link'
-import { Button } from './Html'
 
 const PostListStyled = styled('div')`
   display: flex;
   flex-wrap: nowrap;
   padding-top: 2rem;
   margin: 0.5rem;
-  width: auto%;
+  width: auto;
 `
 
 const PostContainer = styled('div')`
-  display: flex;
-  flex-wrap: wrap;
+  flex: 1;
   padding-top: 2rem;
   margin: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const Post = styled('div')`
@@ -123,7 +123,7 @@ const Post = styled('div')`
   }
 `
 
-export default function PostList({ blog, posts }) {
+export default function PostList({ prefix, posts }) {
   return (
     <PostListStyled>
       <PostContainer>
@@ -134,7 +134,7 @@ export default function PostList({ blog, posts }) {
               <article>
                 <header>
                   <div className="titleImg">
-                    <Link to={`/${blog}/${post.fields.slug}/`}>
+                    <Link to={`/${prefix}/${post.fields.slug}/`}>
                       <img
                         src={
                           post.fields.featuredImage && [
@@ -146,7 +146,7 @@ export default function PostList({ blog, posts }) {
                   </div>
                   <h2 className="title">
                     <div className="linkStyle">
-                      <Link to={`/${blog}/${post.fields.slug}/`}>
+                      <Link to={`/${prefix}/${post.fields.slug}/`}>
                         {post.fields.title}
                       </Link>
                     </div>

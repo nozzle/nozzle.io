@@ -118,8 +118,8 @@ export default class DevblogPost extends Component {
                   itemType="http://schema.org/BlogPosting"
                 >
                   <Header>
-                    <Link to="/devblog/" className="back">
-                      <Icon i="arrow-left" /> Back to Devblog
+                    <Link to=".." className="back">
+                      <Icon i="arrow-left" /> Back
                     </Link>
                     <PostH1 itemProp="name headline">
                       {post.fields.title}

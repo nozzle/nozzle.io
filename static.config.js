@@ -31,7 +31,7 @@ export default {
             const path = `${d.fields.slug}`
             return {
               path,
-              component: 'src/containers/DevblogPost',
+              component: 'src/containers/Post',
               nofollow: d.fields.nofollow,
               noindex: d.fields.noindex,
               getData: async () => ({ post: d })
@@ -41,7 +41,7 @@ export default {
             const path = `tags/${tag}`
             return {
               path,
-              component: 'src/containers/DevblogTag',
+              component: 'src/containers/Tag',
               getData: async () => {
                 const tagPosts = blogPosts.filter(post =>
                   post.fields.tags.includes(tag)
@@ -63,7 +63,7 @@ export default {
             const path = `${d.fields.slug}`
             return {
               path,
-              component: 'src/containers/DevblogPost',
+              component: 'src/containers/Post',
               nofollow: d.fields.nofollow,
               noindex: d.fields.noindex,
               getData: async () => ({ post: d })
@@ -73,7 +73,7 @@ export default {
             const path = `tags/${tag}`
             return {
               path,
-              component: 'src/containers/DevblogTag',
+              component: 'src/containers/Tag',
               getData: async () => {
                 const tagPosts = devPosts.filter(post =>
                   post.fields.tags.includes(tag)

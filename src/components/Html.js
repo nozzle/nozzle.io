@@ -1,20 +1,20 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React from 'react'
+import styled, { css } from 'styled-components'
 //
-import Easing from "utils/Easing";
-import Theme from "utils/Theme";
+import Easing from 'utils/Easing'
+import Theme from 'utils/Theme'
 
-let mo;
-if (typeof window !== "undefined") {
-  mo = require("mo-js");
+let mo
+if (typeof window !== 'undefined') {
+  mo = require('mo-js')
 }
 
 const margin = css`
   margin: 0 auto 1rem;
-`;
+`
 const inline = css`
   display: inline;
-`;
+`
 
 export const button = props => css`
   display: inline-block;
@@ -37,14 +37,14 @@ export const button = props => css`
     transform: scale(0.9);
     box-shadow: none;
   }
-`;
-export const buttonSize = ({ size = "" }) =>
-  size === "lg"
+`
+export const buttonSize = ({ size = '' }) =>
+  size === 'lg'
     ? css`
         font-size: 1.2rem;
         padding: 1rem 1.4rem;
       `
-    : size === "sm"
+    : size === 'sm'
     ? css`
         font-size: 0.8rem;
         padding: 0.6rem 1rem;
@@ -52,132 +52,132 @@ export const buttonSize = ({ size = "" }) =>
     : css`
         font-size: 1rem;
         padding: 0.8rem 1.2rem;
-      `;
+      `
 const full = ({ full }) =>
   full &&
   css`
     width: 100%;
-  `;
+  `
 const backgroundColor = ({ color }) => css`
   background: ${Theme.colors[color] || color};
-  color: ${color === "white" && Theme.colors.text};
-`;
+  color: ${color === 'white' && Theme.colors.text};
+`
 export const color = ({ color }) =>
   css`
     color: ${Theme.colors[color] || color};
-  `;
+  `
 const weight = ({ weight }) =>
   css`
     font-weight: ${Theme.weights[weight] || weight};
-  `;
+  `
 
 // Components
 
-export const H1 = styled("h1")`
+export const H1 = styled('h1')`
   ${margin};
   ${full};
   ${color};
   ${weight};
   font-size: ${Theme.sizes.h1}rem;
   line-height: ${Theme.sizes.h1 * 1.2}rem;
-`;
+`
 
-export const H2 = styled("h2")`
+export const H2 = styled('h2')`
   ${margin};
   ${full};
   ${color};
   ${weight};
   font-size: ${Theme.sizes.h2}rem;
   line-height: ${Theme.sizes.h2 * 1.2}rem;
-`;
+`
 
-export const H3 = styled("h3")`
+export const H3 = styled('h3')`
   ${margin};
   ${full};
   ${color};
   ${weight};
   font-size: ${Theme.sizes.h3}rem;
   line-height: ${Theme.sizes.h3 * 1.2}rem;
-`;
+`
 
-export const H4 = styled("h4")`
+export const H4 = styled('h4')`
   ${margin};
   ${full};
   ${color};
   ${weight};
   font-size: ${Theme.sizes.h4}rem;
   line-height: ${Theme.sizes.h4 * 1.2}rem;
-`;
+`
 
-export const H5 = styled("h5")`
+export const H5 = styled('h5')`
   ${margin};
   ${full};
   ${color};
   ${weight};
   font-size: ${Theme.sizes.h5}rem;
   line-height: ${Theme.sizes.h5 * 1.2}rem;
-`;
+`
 
-export const H6 = styled("h6")`
+export const H6 = styled('h6')`
   ${margin};
   ${full};
   ${color};
   ${weight};
   font-size: ${Theme.sizes.h6}rem;
   line-height: ${Theme.sizes.h6 * 1.2}rem;
-`;
+`
 
-export const P = styled("p")`
+export const P = styled('p')`
   ${margin};
   ${color};
   ${weight};
   font-size: 1rem;
   line-height: 1.2rem;
-`;
+`
 
-export const Strong = styled("strong")`
+export const Strong = styled('strong')`
   ${inline};
   ${color} font-weight: bold;
-`;
-export const Span = styled("span")`
+`
+export const Span = styled('span')`
   ${inline};
   ${color};
   ${weight};
-`;
-export const Div = styled("div")`
+`
+export const Div = styled('div')`
   ${margin};
   ${full};
   ${color};
   ${weight};
-`;
+`
 export const Img = styled(({ children, ...rest }) => (
   <img alt="" {...rest} width="500" height="400" />
 ))`
   max-width: 100%;
   width: auto;
   height: auto;
-`;
+`
 
-export const Ul = styled("ul")`
+export const Ul = styled('ul')`
   ${margin} padding-left: 2rem;
   list-style-type: disc;
   text-align: left;
-`;
-export const Ol = styled("ol")`
+`
+export const Ol = styled('ol')`
   ${margin} padding-left: 2rem;
   list-style-type: decimal;
   text-align: left;
-`;
-export const Li = styled("li")`
+`
+export const Li = styled('li')`
   ${color} margin-bottom: .5rem;
-`;
+`
 
 // Button
-const ButtonStyled = styled("button")`
+const ButtonStyled = styled('button')`
   ${button};
   ${backgroundColor};
   ${buttonSize};
-`;
+`
 export class Button extends React.Component {
   componentDidMount() {
     window.buttonBurst =
@@ -189,55 +189,55 @@ export class Button extends React.Component {
         count: 15,
 
         children: {
-          shape: ["circle"],
+          shape: ['circle'],
           duration: 800,
-          radius: "rand(5, 12)",
-          pathScale: "rand(.5, 1)",
+          radius: 'rand(5, 12)',
+          pathScale: 'rand(.5, 1)',
           opacity: { 1: 0.5 },
-          easing: "quint.out",
+          easing: 'quint.out',
           fill: [
             Theme.colors.primaryLighter,
             Theme.colors.danger,
             Theme.colors.success,
             Theme.colors.warning
           ],
-          degreeShift: "rand(-360, 360)"
+          degreeShift: 'rand(-360, 360)'
         }
-      });
+      })
   }
   render() {
-    const { burst, onClick, ...rest } = this.props;
+    const { burst, onClick, ...rest } = this.props
     const handler = e => {
       window.buttonBurst
         .tune({
           x: e.clientX,
           y: e.clientY,
-          degreeShift: "rand(-360, 360)"
+          degreeShift: 'rand(-360, 360)'
         })
         .generate()
-        .replay();
+        .replay()
 
       if (onClick) {
-        onClick(e);
+        onClick(e)
       }
-    };
+    }
     return burst ? (
       <ButtonStyled {...rest} onClick={handler} />
     ) : (
       <ButtonStyled {...rest} />
-    );
+    )
   }
 }
-export const Input = styled("input")`
+export const Input = styled('input')`
   border-radius: 3;
   border: none;
   padding: 0.3em 0.5em;
-`;
+`
 const TableCmp = ({ children, ...rest }) => (
   <div {...rest}>
     <table>{children}</table>
   </div>
-);
+)
 export const Table = styled(TableCmp)`
   max-width: 100%;
   overflow-x: scroll;
@@ -300,7 +300,7 @@ export const Table = styled(TableCmp)`
       background: rgba(0, 0, 0, 0.05);
     }
   }
-`;
+`
 
 export const Pre = styled(({ children, ...rest }) => (
   <pre itemType="http://schema.org/Code" {...rest}>
@@ -314,16 +314,16 @@ export const Pre = styled(({ children, ...rest }) => (
   margin: 0 auto 1rem;
   border-radius: 0.2rem;
   overflow: hidden;
-`;
+`
 
-export const Em = styled("em")`
+export const Em = styled('em')`
   font-style: italic;
-`;
+`
 
-export const Iframe = styled("iframe")`
+export const Iframe = styled('iframe')`
   width: 100%;
   border: 0;
   resize: vertical;
   min-height: 50px;
   height: 500px;
-`;
+`

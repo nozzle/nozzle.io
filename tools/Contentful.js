@@ -11,8 +11,14 @@ const client = createClient({
 export default async function fetch() {
   try {
     const authors = await fetchAuthors()
-    const devPosts = await fetchDevPosts()
-    const blogPosts = await fetchBlogPosts()
+    const devPosts = (await fetchDevPosts()).map(d => ({
+      ...d,
+      fields: { ...d.fields, tags: d.fields.tags || [] }
+    }))
+    const blogPosts = (await fetchBlogPosts()).map(d => ({
+      ...d,
+      fields: { ...d.fields, tags: d.fields.tags || [] }
+    }))
     const devTags = uniq(flatten(devPosts.map(d => d.fields.tags)))
     const blogTags = uniq(flatten(blogPosts.map(d => d.fields.tags)))
 

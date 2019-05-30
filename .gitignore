@@ -9,3 +9,5 @@ tools/lib.js
 yarn-error.log
 .history
 tmp
+artifacts
+.vscode

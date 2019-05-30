@@ -1,26 +1,26 @@
-import React from "react";
-import styled from "styled-components";
-import Smackdown from "react-smackdown";
-import javascript from "react-syntax-highlighter/dist/languages/hljs/javascript";
-import bash from "react-syntax-highlighter/dist/languages/hljs/bash";
-import atomOneDark from "react-syntax-highlighter/dist/styles/hljs/atom-one-dark";
+import React from 'react'
+import styled from 'styled-components'
+import Smackdown from 'react-smackdown'
+import javascript from 'react-syntax-highlighter/dist/languages/hljs/javascript'
+import bash from 'react-syntax-highlighter/dist/languages/hljs/bash'
+import atomOneDark from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark'
 //
 
-import Theme from "utils/Theme";
+import Theme from 'utils/Theme'
 
-import Link from "components/Link";
-import { H3, H4, H5, H6, P, Img, Pre } from "./Html";
+import Link from 'components/Link'
+import { H3, H4, H5, H6 } from './Html'
 
 const syntax = {
   languages: [
-    { name: "javascript", syntax: javascript },
-    { name: "html", syntax: javascript },
-    { name: "bash", syntax: bash }
+    { name: 'javascript', syntax: javascript },
+    { name: 'html', syntax: javascript },
+    { name: 'bash', syntax: bash }
   ],
   showLineNumbers: true,
   lineNumberStyle: { opacity: 0.5 },
   theme: atomOneDark
-};
+}
 
 const standardOverrides = {
   h1: H3,
@@ -28,43 +28,39 @@ const standardOverrides = {
   h3: H5,
   h4: H6,
   h5: H6,
-  h6: H6,
-  p: P,
-  img: Img
-  // a: 'a'
-};
+  h6: H6
+}
 
 const microOverrides = {
   ...standardOverrides,
-  h1: P,
-  h2: P,
-  h3: P,
-  h4: P,
-  h5: P,
-  h6: P,
-  p: P
-};
+  h1: H6,
+  h2: H6,
+  h3: H6,
+  h4: H6,
+  h5: H6,
+  h6: H6
+}
 
-const El = ({ micro, source, ...rest }) => (
+const El = ({ micro, source = '', ...rest }) => (
   <div {...rest}>
     <Smackdown
       source={
         micro
           ? `${source
-              .replace(/<iframe.*(<\/iframe>|>)/gm, "")
-              .substring(0, 400)}...`
+              .replace(/<iframe.*(<\/iframe>|>)/gm, '')
+              .substring(0, 200)}...`
           : source
       }
       syntax={syntax}
       renderers={micro ? microOverrides : standardOverrides}
     />
   </div>
-);
+)
 
 export default styled(El)`
   font-size: 1.2rem;
-  line-height: 2rem;
-  font-family: "Lato", sans-serif;
+  line-height: 1.8rem;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
 
   h1,
@@ -78,10 +74,6 @@ export default styled(El)`
   }
 
   p {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
     margin-bottom: 1rem;
   }
 
@@ -98,7 +90,7 @@ export default styled(El)`
 
   img {
     display: block;
-    margin: 1rem auto;
+    margin: 4rem auto;
   }
 
   p code {
@@ -147,4 +139,4 @@ export default styled(El)`
     pointer-events: none;
     user-select: none;
   }
-`;
+`

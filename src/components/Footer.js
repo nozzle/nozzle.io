@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react'
+import styled from 'styled-components'
 //
 // import { H5 } from './Html'
-import Theme from "utils/Theme";
-import Link from "components/Link";
+import Theme from 'utils/Theme'
+import Link from 'components/Link'
 
-const belowMobile = `@media(max-width: ${700}px)`;
+const belowMobile = `@media(max-width: ${700}px)`
 
-const FooterStyles = styled("div")`
+const FooterStyles = styled('div')`
   position: relative;
   z-index: 1;
   padding: 20px;
@@ -57,7 +57,7 @@ const FooterStyles = styled("div")`
   }
 
   }
-`;
+`
 
 export default class Footer extends Component {
   render() {
@@ -78,6 +78,9 @@ export default class Footer extends Component {
               <Link to="/rank-tracker-comparison">Why Us?</Link>
             </div>
             <div className="navLinks">
+              <Link to="/blog">Blog</Link>
+            </div>
+            <div className="navLinks">
               <Link to="/devblog">Dev Blog</Link>
             </div>
           </div>
@@ -86,6 +89,6 @@ export default class Footer extends Component {
           </div>
         </div>
       </FooterStyles>
-    );
+    )
   }
 }

@@ -1,28 +1,36 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { format } from "date-fns";
-import { RouteData } from "react-static";
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { format } from 'date-fns'
+import { RouteData } from 'react-static'
 //
-import Theme from "utils/Theme";
-import ReadTime from "utils/ReadTime";
+import Theme from 'utils/Theme'
+import ReadTime from 'utils/ReadTime'
 
-import Page from "components/Page";
-import Head from "components/Head";
-import Main from "components/Main";
-import Icon from "components/Icon";
-import Link from "components/Link";
-import Smackdown from "components/Smackdown";
-import Comments from "components/Comments";
+import Page from 'components/Page'
+import Head from 'components/Head'
+import Main from 'components/Main'
+import Icon from 'components/Icon'
+import Link from 'components/Link'
+import Smackdown from 'components/Smackdown'
+import Comments from 'components/Comments'
 
-import { Container, Header } from "components/Layout";
-import { H1 } from "components/Html";
+import { Container, Header } from 'components/Layout'
+import { H1, Img } from 'components/Html'
+
+const FeaturedImage = styled(Img)`
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.5rem 1rem -0.3rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+`
 
 const PostH1 = styled(H1)`
   font-size: ${Theme.sizes.h3}rem;
   line-height: ${Theme.sizes.h3 * 1.2}rem;
-`;
+`
 
-const PostContainer = styled("article")`
+const PostContainer = styled('article')`
   .back {
     opacity: 0.6;
     display: inline-block;
@@ -53,9 +61,9 @@ const PostContainer = styled("article")`
       margin: 0 0.3rem 0.3rem 0;
     }
   }
-`;
+`
 
-const PostStyles = styled("div")`
+const PostStyles = styled('div')`
   margin: 0 auto;
   padding: 2rem;
   width: 900px;
@@ -76,14 +84,15 @@ const PostStyles = styled("div")`
       line-height: 1.5rem;
     }
   }
-`;
+`
 
 export default class DevblogPost extends Component {
   render() {
     return (
       <RouteData>
         {({ post }) => {
-          const wordCount = post.fields.body.split(" ").length.hello;
+          console.log(post)
+          const wordCount = post.fields.body.split(' ').length.hello
           return (
             <Page>
               <Head
@@ -128,14 +137,14 @@ export default class DevblogPost extends Component {
                             {author.fields.name}
                           </span>
                         </span>
-                      ))}{" "}
-                      on{" "}
+                      ))}{' '}
+                      on{' '}
                       <time
                         dateTime={post.sys.updatedAt}
                         itemProp="dateModified"
                       >
-                        {format(new Date(post.sys.updatedAt), "MMM DD, YYYY")}
-                      </time>{" "}
+                        {format(new Date(post.sys.updatedAt), 'MMM DD, YYYY')}
+                      </time>{' '}
                       &bull; {ReadTime(wordCount)} min read
                       <time
                         dateTime={post.sys.createdAt}
@@ -159,6 +168,11 @@ export default class DevblogPost extends Component {
                   </Header>
                   <Container>
                     <PostStyles itemProp="articleBody">
+                      {post.fields.featuredImage ? (
+                        <FeaturedImage
+                          src={post.fields.featuredImage.fields.file.url}
+                        />
+                      ) : null}
                       <Smackdown source={post.fields.body} />
                     </PostStyles>
                   </Container>
@@ -171,9 +185,9 @@ export default class DevblogPost extends Component {
                 </PostStyles>
               </Main>
             </Page>
-          );
+          )
         }}
       </RouteData>
-    );
+    )
   }
 }

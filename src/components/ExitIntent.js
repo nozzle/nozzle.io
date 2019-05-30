@@ -4,6 +4,7 @@ import axios from "axios";
 import { Form, Text } from "react-form";
 //
 import Theme from "utils/Theme";
+import encodeFormData from "utils/encodeFormData";
 
 const ExitIntentStyles = styled("div")`
   position: fixed;
@@ -109,11 +110,6 @@ const ExitIntentStyles = styled("div")`
     `};
 `;
 
-const encode = data =>
-  Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join("&");
-
 export default class ExitIntent extends Component {
   state = {
     show: false,
@@ -155,7 +151,10 @@ export default class ExitIntent extends Component {
                     try {
                       await axios.post(
                         "/",
-                        encode({ "form-name": "exitIntent", ...values }),
+                        encodeFormData({
+                          "form-name": "exitIntent",
+                          ...values
+                        }),
                         {
                           headers: {
                             "Content-Type": "application/x-www-form-urlencoded"

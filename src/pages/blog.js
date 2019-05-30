@@ -16,22 +16,22 @@ export default class Devblog extends Component {
       <RouteData>
         {({ posts, tags }) => (
           <Page>
-            <Head title="Dev Blog | Nozzle" />
+            <Head title="Blog | Nozzle" />
             <Main>
               <Header>
-                <H1>Devblog</H1>
+                <H1>Blog</H1>
                 <SubMenu>
                   <ul>
                     {tags.map(tag => (
                       <li key={tag}>
-                        <Link to={`/devblog/tags/${tag}/`}>{tag}</Link>
+                        <Link to={`/blog/tags/${tag}/`}>{tag}</Link>
                       </li>
                     ))}
                   </ul>
                 </SubMenu>
               </Header>
               <BlogContainer>
-                <PostList prefix="devblog" posts={posts} />
+                <PostList prefix="blog" posts={posts} />
               </BlogContainer>
             </Main>
           </Page>

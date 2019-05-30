@@ -90,7 +90,8 @@ export default styled(El)`
 
   img {
     display: block;
-    margin: 4rem auto;
+    max-width: 100%;
+    margin: 2rem auto;
   }
 
   p code {

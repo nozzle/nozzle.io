@@ -91,7 +91,7 @@ export default styled(El)`
   img {
     display: block;
     max-width: 100%;
-    margin: 2rem auto;
+    margin: 2rem auto 4rem;
     box-shadow: 0 0.5rem 1rem -0.3rem rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
   }

@@ -266,7 +266,7 @@ export default function Trial() {
               window.dataLayer.push({ event: 'smxSubmit' })
               try {
                 await axios.post(
-                  '/',
+                  'https://nozzle.io/',
                   encodeFormData({
                     'form-name': 'smx2019',
                     ...values

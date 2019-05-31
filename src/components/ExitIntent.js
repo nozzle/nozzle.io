@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
-import axios from "axios";
-import { Form, Text } from "react-form";
+import React, { Component } from 'react'
+import styled, { css } from 'styled-components'
+import axios from 'axios'
+import { Form, Text } from 'react-form'
 //
-import Theme from "utils/Theme";
-import encodeFormData from "utils/encodeFormData";
+import Theme from 'utils/Theme'
+import encodeFormData from 'utils/encodeFormData'
 
-const ExitIntentStyles = styled("div")`
+const ExitIntentStyles = styled('div')`
   position: fixed;
   top: 0;
   left: 0;
@@ -108,20 +108,20 @@ const ExitIntentStyles = styled("div")`
         opacity: 0;
       }
     `};
-`;
+`
 
 export default class ExitIntent extends Component {
   state = {
     show: false,
     submitted: false
-  };
+  }
   componentDidMount() {
     onExitIntent(() => {
-      global.dataLayer.push({ event: "exitPopup" });
+      global.dataLayer.push({ event: 'exitPopup' })
       this.setState({
         show: true
-      });
-    });
+      })
+    })
   }
   render() {
     return (
@@ -147,26 +147,26 @@ export default class ExitIntent extends Component {
                 </div>
                 <Form
                   onSubmit={async values => {
-                    window.dataLayer.push({ event: "exitSubmit" });
+                    window.dataLayer.push({ event: 'exitSubmit' })
                     try {
                       await axios.post(
-                        "/",
+                        'https://nozzle.io/',,
                         encodeFormData({
-                          "form-name": "exitIntent",
+                          'form-name': 'exitIntent',
                           ...values
                         }),
                         {
                           headers: {
-                            "Content-Type": "application/x-www-form-urlencoded"
+                            'Content-Type': 'application/x-www-form-urlencoded'
                           }
                         }
-                      );
-                      this.setState({ submitted: true });
+                      )
+                      this.setState({ submitted: true })
                     } catch (err) {
                       window.alert(
-                        "There was a problem submitting your form! Try again or reload the page :)"
-                      );
-                      this.setState({ submitted: true });
+                        'There was a problem submitting your form! Try again or reload the page :)'
+                      )
+                      this.setState({ submitted: true })
                     }
                   }}
                 >
@@ -200,31 +200,31 @@ export default class ExitIntent extends Component {
           <button
             className="close"
             onClick={() => {
-              global.dataLayer.push({ event: "exitClose" });
-              this.setState({ show: false });
+              global.dataLayer.push({ event: 'exitClose' })
+              this.setState({ show: false })
             }}
           >
             &times;
           </button>
         </div>
       </ExitIntentStyles>
-    );
+    )
   }
 }
 
 function onExitIntent(cb) {
-  if (typeof document === "undefined") {
-    return;
+  if (typeof document === 'undefined') {
+    return
   }
   setTimeout(() => {
-    document.addEventListener("mouseleave", e => {
+    document.addEventListener('mouseleave', e => {
       if (global.localStorage.exitIntent) {
-        return;
+        return
       }
       if (e.clientY < 0) {
-        global.localStorage.exitIntent = true;
-        cb(e);
+        global.localStorage.exitIntent = true
+        cb(e)
       }
-    });
-  }, 3000);
+    })
+  }, 3000)
 }

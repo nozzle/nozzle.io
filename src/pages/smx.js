@@ -300,7 +300,7 @@ export default function Trial() {
                 <Text
                   field="name"
                   name="name"
-                  placeholder="Enter your name..."
+                  placeholder="Name..."
                   css={`
                     margin: 1rem auto 0;
                     width: 100%;
@@ -315,7 +315,22 @@ export default function Trial() {
                 <Text
                   field="email"
                   name="email"
-                  placeholder="Enter your email address..."
+                  placeholder="Email address..."
+                  css={`
+                    margin: 1rem auto 0;
+                    width: 100%;
+                    font-size: 1.4rem;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: solid 2px rgba(255, 255, 255, 0.2);
+                    border-radius: 0.3rem;
+                    padding: 1rem;
+                    color: white;
+                  `}
+                />
+                <Text
+                  field="twitter"
+                  name="twitter"
+                  placeholder="Twitter handle..."
                   css={`
                     margin: 1rem auto 0;
                     width: 100%;

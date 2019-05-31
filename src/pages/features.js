@@ -1,16 +1,17 @@
-import React, { Component } from "react";
-import styled, { css, keyframes } from "styled-components";
+import React, { Component } from 'react'
+import styled, { css, keyframes } from 'styled-components'
 //
-import Theme from "utils/Theme";
-import Color from "utils/Color";
-import { angle } from "utils/Styles";
+import Theme from 'utils/Theme'
+import Color from 'utils/Color'
+import { angle } from 'utils/Styles'
 
-import Head from "components/Head";
-import Page from "components/Page";
-import Main from "components/Main";
-import Link from "components/Link";
-import Icon from "components/Icon";
-import TrialForm from "components/TrialForm";
+import Head from 'components/Head'
+import Page from 'components/Page'
+import Main from 'components/Main'
+import Link from 'components/Link'
+import Icon from 'components/Icon'
+import TrialForm from 'components/TrialForm'
+
 import {
   Button,
   H2,
@@ -23,10 +24,10 @@ import {
   Ul,
   Li,
   Img
-} from "components/Html";
-import { Container, Center } from "components/Layout";
+} from 'components/Html'
+import { Container, Center } from 'components/Layout'
 
-const below900 = "@media screen and (max-width: 900px)";
+const below900 = '@media screen and (max-width: 900px)'
 
 const FeaturesNav = props => (
   <nav {...props}>
@@ -56,7 +57,7 @@ const FeaturesNav = props => (
       </ul>
     </div>
   </nav>
-);
+)
 
 const FeaturesNavDiv = styled(FeaturesNav)`
   position: fixed;
@@ -98,7 +99,7 @@ const FeaturesNavDiv = styled(FeaturesNav)`
   ${below900} {
     height: 50px;
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -128,11 +129,11 @@ const FeaturesNavDiv = styled(FeaturesNav)`
       padding: 0 10%;
     }
   }
-`;
+`
 
 const section = css`
   padding: 10% 20px;
-`;
+`
 
 const imageSwapAnimation = keyframes`
   0%, 40% {
@@ -141,7 +142,7 @@ const imageSwapAnimation = keyframes`
   60%, 100% {
     opacity: 1;
   }
-`;
+`
 
 const SectionBrandsCmp = props => (
   <section {...props}>
@@ -182,7 +183,7 @@ const SectionBrandsCmp = props => (
       <div className="one">
         <H4>100% SERP Visibility</H4>
         <P>
-          With other tools, you are tied to a single domain, but with Nozzle,{" "}
+          With other tools, you are tied to a single domain, but with Nozzle,{' '}
           <Strong>you can track as many SERP results as you want.</Strong> We
           make this easy by using Brands, Properties, and URLs instead of single
           domains. If that's not enough, we even let you build custom rules to
@@ -195,7 +196,7 @@ const SectionBrandsCmp = props => (
         <H4>Use Cases</H4>
         <Ul>
           <Li>
-            Track{" "}
+            Track{' '}
             <Strong>
               external blogs, PR releases, guest posts on external domains,
               Quora results
@@ -208,7 +209,7 @@ const SectionBrandsCmp = props => (
         </Ul>
       </div>
       <Center>
-        <Link to="/features/#trial">
+        <Link to="/trial">
           <Button color="success" burst>
             Start tracking today!
           </Button>
@@ -216,7 +217,7 @@ const SectionBrandsCmp = props => (
       </Center>
     </Container>
   </section>
-);
+)
 
 const SectionBrands = styled(SectionBrandsCmp)`
   ${section};
@@ -311,7 +312,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
     margin-bottom: 20px;
   }
   .domain:after {
-    content: "";
+    content: '';
     padding-top: 18.69%;
     display: block;
   }
@@ -331,7 +332,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
       border-radius: 10px;
       padding: 12px 10px 10px;
       :after {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         top: 50%;
@@ -342,7 +343,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
         left: 100%;
       }
       :before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         top: 50%;
@@ -360,7 +361,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
     margin: 0 auto 20px;
   }
   .brand:after {
-    content: "";
+    content: '';
     padding-top: 76.16%;
     display: block;
   }
@@ -406,7 +407,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
       }
     }
   }
-`;
+`
 
 const SectionCompetitionCmp = props => (
   <section {...props}>
@@ -423,7 +424,7 @@ const SectionCompetitionCmp = props => (
           <H4>Unlimited competitors for free.</H4>
           <P>
             As opposed to tracking individual domains, tracking brands makes it
-            easy to monitor their every move. You can do this by{" "}
+            easy to monitor their every move. You can do this by{' '}
             <Strong>brand, property or even URL</Strong> to get aggreggated or
             detailed comparisons as needed.
           </P>
@@ -439,14 +440,14 @@ const SectionCompetitionCmp = props => (
             Don't know who your competitors are? Just take a look at our
             share-of-voice dashboard to immediately detect unknown competitors
             by <Strong>Domain, Subdomain, and URL</Strong>. If you like what you
-            see, add them as a named competitor and we will{" "}
+            see, add them as a named competitor and we will{' '}
             <Strong>rewrite all of your historical data</Strong> to include your
             newfound competition! It's like having a time machine!
           </P>
         </div>
       </div>
       <Center>
-        <Link to="/features/#trial">
+        <Link to="/trial">
           <Button color="success" burst>
             Show My Competitors
           </Button>
@@ -454,11 +455,11 @@ const SectionCompetitionCmp = props => (
       </Center>
     </Container>
   </section>
-);
+)
 
 const SectionCompetition = styled(SectionCompetitionCmp)`
   ${section};
-  ${angle("right")};
+  ${angle('right')};
 
   background: ${Theme.colors.primaryDarker};
   color: white;
@@ -520,7 +521,7 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
       text-align: left;
     }
   }
-`;
+`
 
 const SectionScheduling = styled(props => (
   <section {...props}>
@@ -529,24 +530,24 @@ const SectionScheduling = styled(props => (
         <Img src="/img/scheduleDots.png" />
         <H2>Flexible Scheduling</H2>
         <H6>
-          Not all keywords are created equal. Thankfully, Nozzle is{" "}
+          Not all keywords are created equal. Thankfully, Nozzle is{' '}
           <Strong>
             the first and only rank tracker to offer flexible and real-time
             schedules
           </Strong>
           . Instead of forcing you to pay the same price to track your long-tail
           keywords as your head terms, Nozzle let's you split your keywords into
-          as many different scheduling buckets you want.{" "}
+          as many different scheduling buckets you want.{' '}
         </H6>
         <Img src="/img/schedules.png" className="scheduleImg" />
         <P>
-          This way, you can{" "}
+          This way, you can{' '}
           <Strong>closely monitor your most important keywords</Strong> daily,
-          hourly or even every 5 minutes, but still{" "}
+          hourly or even every 5 minutes, but still{' '}
           <Strong>keep an eye on thousands more</Strong> by scheduling them
           weekly or monthly without breaking the bank.
         </P>
-        <Link to="/features/#trial">
+        <Link to="/trial">
           <Button color="success" burst>
             Try Flexible Scheduling
           </Button>
@@ -577,7 +578,7 @@ const SectionScheduling = styled(props => (
     width: 600px;
     max-width: 100%;
   }
-`;
+`
 
 const SectionDataCmp = props => (
   <section {...props}>
@@ -590,8 +591,8 @@ const SectionDataCmp = props => (
       <Center>
         <H6 className="description">
           Out of the box, Nozzle can show you data you've probably only imagined
-          in your wildest dreams.{" "}
-          <Strong>Ad-adjusted rank, pixel height,</Strong> and even{" "}
+          in your wildest dreams.{' '}
+          <Strong>Ad-adjusted rank, pixel height,</Strong> and even{' '}
           <Strong> click-to-call phone numbers</Strong> are just a few examples
           of the immense detail we give you on the SERP. Honestly, we can't wait
           to see what you can do with it!
@@ -612,7 +613,7 @@ const SectionDataCmp = props => (
               <li>Search Volume</li>
             </ul>
             <P>
-              Advanced metrics that go above and beyond to help identify and{" "}
+              Advanced metrics that go above and beyond to help identify and{' '}
               <Strong>assign dollar amounts and revenue to your SEO</Strong>
             </P>
           </div>
@@ -632,7 +633,7 @@ const SectionDataCmp = props => (
             </ul>
             <P>
               Blended Rank is expected from any rank tracker, but at Nozzle we
-              don't think that's enough. <Strong>Ad-adjusted Rank</Strong> and{" "}
+              don't think that's enough. <Strong>Ad-adjusted Rank</Strong> and{' '}
               <Strong>Pixels from Top of page</Strong> are new and powerful
               metrics unique to Nozzle, and will surely put your rank tracking
               above your competitors.
@@ -654,13 +655,13 @@ const SectionDataCmp = props => (
             </ul>
             <div>
               <P>
-                Nozzle takes keyword groups to a whole new level with{" "}
+                Nozzle takes keyword groups to a whole new level with{' '}
                 <Strong>
                   group-driven performance dashboards, drill-through, and
                   comparison
                 </Strong>
-                . If that wasn't cool enough, you can place keywords in{" "}
-                <Strong>as many groups as you want</Strong>, and only pay{" "}
+                . If that wasn't cool enough, you can place keywords in{' '}
+                <Strong>as many groups as you want</Strong>, and only pay{' '}
                 <Strong>once</Strong>
               </P>
             </div>
@@ -701,7 +702,7 @@ const SectionDataCmp = props => (
             </ul>
             <P>
               Track your rankings at the deepest level of user engagement with
-              Nozzle's powerful <Strong>device, OS, and platform</Strong>{" "}
+              Nozzle's powerful <Strong>device, OS, and platform</Strong>{' '}
               options. Uncover untapped marketing opportunities and beat the
               competition from every angle.
             </P>
@@ -721,14 +722,14 @@ const SectionDataCmp = props => (
               <li>Product Listing Ads (PLA)</li>
             </ul>
             <P>
-              Get up close and personal with paid results and{" "}
+              Get up close and personal with paid results and{' '}
               <Strong>discover how they affect</Strong> your results day to day.
             </P>
           </div>
         </div>
       </div>
       <Center>
-        <Link to="/features/#trial">
+        <Link to="/trial">
           <Button color="success" burst>
             Get the Datas!
           </Button>
@@ -736,11 +737,11 @@ const SectionDataCmp = props => (
       </Center>
     </Container>
   </section>
-);
+)
 
 const SectionData = styled(SectionDataCmp)`
   ${section};
-  ${angle("right")};
+  ${angle('right')};
 
   background: ${Theme.colors.primaryDarker};
   color: white;
@@ -851,7 +852,7 @@ const SectionData = styled(SectionDataCmp)`
       position: relative;
       width: 100%;
       :before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -891,7 +892,7 @@ const SectionData = styled(SectionDataCmp)`
       padding: 10px 10px 10px 30px;
       position: relative;
       :before {
-        content: "";
+        content: '';
         position: absolute;
         width: 12px;
         height: 12px;
@@ -921,7 +922,7 @@ const SectionData = styled(SectionDataCmp)`
       margin: 0 1% 20px;
     }
   }
-`;
+`
 
 const SectionAgenciesCmp = props => (
   <section {...props}>
@@ -941,7 +942,7 @@ const SectionAgenciesCmp = props => (
           </Ul>
           <br />
           <br />
-          <Link to="/features/#trial">
+          <Link to="/trial">
             <Button color="success" burst>
               Try it out!
             </Button>
@@ -950,7 +951,7 @@ const SectionAgenciesCmp = props => (
       </div>
     </Container>
   </section>
-);
+)
 
 const SectionAgencies = styled(SectionAgenciesCmp)`
   ${section};
@@ -1005,7 +1006,7 @@ const SectionAgencies = styled(SectionAgenciesCmp)`
       }
     }
   }
-`;
+`
 
 const SectionReputationCmp = props => (
   <section {...props}>
@@ -1022,7 +1023,7 @@ const SectionReputationCmp = props => (
               <Li>Preventative - Catch negative sites before they rank high</Li>
             </Ul>
           </div>
-          <Link to="/features/#trial">
+          <Link to="/trial">
             <Button color="success" burst>
               Show My Trends
             </Button>
@@ -1034,11 +1035,11 @@ const SectionReputationCmp = props => (
       </div>
     </Container>
   </section>
-);
+)
 
 const SectionReputation = styled(SectionReputationCmp)`
   ${section};
-  ${angle("right")};
+  ${angle('right')};
 
   background: ${Theme.colors.primaryDarker};
   color: white;
@@ -1091,7 +1092,7 @@ const SectionReputation = styled(SectionReputationCmp)`
       }
     }
   }
-`;
+`
 const SectionIntegrationsCmp = props => (
   <section {...props}>
     <Container>
@@ -1151,7 +1152,7 @@ const SectionIntegrationsCmp = props => (
         </div>
       </div>
       <Center>
-        <Link to="/features/#trial">
+        <Link to="/trial">
           <Button color="success" burst>
             Try it out!
           </Button>
@@ -1159,11 +1160,11 @@ const SectionIntegrationsCmp = props => (
       </Center>
     </Container>
   </section>
-);
+)
 
 const SectionIntegrations = styled(SectionIntegrationsCmp)`
   ${section};
-  ${angle("right")};
+  ${angle('right')};
 
   img {
     display: block;
@@ -1217,26 +1218,31 @@ const SectionIntegrations = styled(SectionIntegrationsCmp)`
       margin: 0 1% 20px;
     }
   }
-`;
+`
 
 const SectionContactUsCmp = props => (
   <section {...props}>
     <Container>
       <H2 full>Let's start your free trial!</H2>
-      <TrialForm />
-      <H6 full>or</H6>
-      <Link to="tel:1855NOZZLE1">
-        <Button color="primaryDark" burst>
-          Call 1-855-NOZZLE1
+      <Link to="/trial">
+        <Button
+          color="success"
+          css={`
+            font-size: 1.7rem;
+            padding: 1.5rem;
+            border-radius: 0.3rem;
+          `}
+        >
+          Get started!
         </Button>
       </Link>
     </Container>
   </section>
-);
+)
 
 const SectionContactUs = styled(SectionContactUsCmp)`
   ${section};
-  ${angle("right")};
+  ${angle('right')};
 
   background: ${Theme.colors.primaryDarker};
   color: white;
@@ -1246,7 +1252,7 @@ const SectionContactUs = styled(SectionContactUsCmp)`
   }
   display: block;
   text-align: center;
-`;
+`
 
 export default class Features extends Component {
   render() {
@@ -1265,6 +1271,6 @@ export default class Features extends Component {
           <SectionContactUs id="trial" />
         </Main>
       </Page>
-    );
+    )
   }
 }

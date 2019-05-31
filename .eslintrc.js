@@ -1,3 +1,6 @@
 module.exports = {
-  extends: 'react-tools'
+  extends: ['react-app', 'prettier'],
+  rules: {
+    eqeqeq: 0
+  }
 }

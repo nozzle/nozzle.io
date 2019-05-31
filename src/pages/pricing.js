@@ -1,63 +1,51 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import React, { Component } from 'react'
+import styled, { css } from 'styled-components'
 //
-import Theme from "utils/Theme";
-import { angle } from "utils/Styles";
-import { number } from "utils/Format";
+import Theme from 'utils/Theme'
+import { angle } from 'utils/Styles'
+import { number } from 'utils/Format'
 
-import Head from "components/Head";
-import Page from "components/Page";
-import Main from "components/Main";
-import Link from "components/Link";
-import TrialForm from "components/TrialForm";
-import {
-  Button,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  P,
-  Span,
-  Input
-} from "components/Html";
-import { Container, Center } from "components/Layout";
+import Head from 'components/Head'
+import Page from 'components/Page'
+import Main from 'components/Main'
+import Link from 'components/Link'
+import { Button, H1, H2, H3, H4, H5, P, Span, Input } from 'components/Html'
+import { Container, Center } from 'components/Layout'
 
 const plans = [
-  { label: "Spray As You Go", value: "spray" },
-  { label: "Garden Hose", value: "garden-hose" },
-  { label: "Pressure Washer", value: "pressure-washer" },
-  { label: "Fire Hose", value: "fire-hose" },
-  { label: "Jet Stream", value: "jet-stream" }
-];
+  { label: 'Spray As You Go', value: 'spray' },
+  { label: 'Garden Hose', value: 'garden-hose' },
+  { label: 'Pressure Washer', value: 'pressure-washer' },
+  { label: 'Fire Hose', value: 'fire-hose' },
+  { label: 'Jet Stream', value: 'jet-stream' }
+]
 
 const frequencyOptions = [
   {
-    value: "hourly",
-    label: "Hourly"
+    value: 'hourly',
+    label: 'Hourly'
   },
   {
-    value: "daily",
-    label: "Daily"
+    value: 'daily',
+    label: 'Daily'
   },
   {
-    value: "weekly",
-    label: "Weekly"
+    value: 'weekly',
+    label: 'Weekly'
   },
   {
-    value: "monthly",
-    label: "Monthly"
+    value: 'monthly',
+    label: 'Monthly'
   },
   {
-    value: "onetime",
-    label: "One-Time Pull"
+    value: 'onetime',
+    label: 'One-Time Pull'
   }
-];
+]
 
 const section = css`
   padding: 1rem 1.5rem;
-`;
+`
 
 const SectionIntroCmp = props => (
   <section {...props}>
@@ -65,7 +53,7 @@ const SectionIntroCmp = props => (
       <Center>
         <H1>Pricing</H1>
         <P>
-          Only pay <strong>once</strong> for keywords. Gain{" "}
+          Only pay <strong>once</strong> for keywords. Gain{' '}
           <strong>unlimited</strong> competitors and views
         </P>
         <P>
@@ -78,11 +66,11 @@ const SectionIntroCmp = props => (
       </Center>
     </Container>
   </section>
-);
+)
 
 const SectionIntro = styled(SectionIntroCmp)`
   padding: 8rem 1.5rem 1rem;
-`;
+`
 
 const SectionPlansCmp = props => (
   <section {...props}>
@@ -109,7 +97,7 @@ const SectionPlansCmp = props => (
             <div className="count">4,500 weekly</div>
             <div className="count">18,000 monthly</div>
           </div>
-          <Link to="/pricing/#trial">
+          <Link to="/trial">
             <Button color="primaryDarker" burst>
               Start Trial
             </Button>
@@ -136,7 +124,7 @@ const SectionPlansCmp = props => (
             <div className="count">9,500 weekly</div>
             <div className="count">40,000 monthly</div>
           </div>
-          <Link to="/pricing/#trial">
+          <Link to="/trial">
             <Button color="success" burst>
               Start Trial
             </Button>
@@ -163,7 +151,7 @@ const SectionPlansCmp = props => (
             <div className="count">50,000 weekly</div>
             <div className="count">200,000 monthly</div>
           </div>
-          <Link to="/pricing/#trial">
+          <Link to="/trial">
             <Button color="primaryDarker" burst>
               Start Trial
             </Button>
@@ -190,7 +178,7 @@ const SectionPlansCmp = props => (
             <div className="count">312,500 weekly</div>
             <div className="count">1,250,000 monthly</div>
           </div>
-          <Link to="/pricing/#trial">
+          <Link to="/trial">
             <Button color="primaryDark" burst>
               Start Trial
             </Button>
@@ -199,7 +187,7 @@ const SectionPlansCmp = props => (
       </div>
     </Container>
   </section>
-);
+)
 
 const SectionPlans = styled(SectionPlansCmp)`
   ${section}
@@ -341,7 +329,7 @@ const SectionPlans = styled(SectionPlansCmp)`
     }
   }
 
-`;
+`
 
 const SectionSprayCmp = props => (
   <section {...props}>
@@ -353,7 +341,7 @@ const SectionSprayCmp = props => (
           <div className="price">$20 (1,000 credits) at a time</div>
           <div className="credit">2¢ / credit - never expires</div>
           <div>
-            <Link to="/pricing/#trial">
+            <Link to="/trial">
               <Button color="white" burst>
                 Start Trial
               </Button>
@@ -363,7 +351,7 @@ const SectionSprayCmp = props => (
       </Center>
     </Container>
   </section>
-);
+)
 
 const SectionSpray = styled(SectionSprayCmp)`
   margin: 5% auto;
@@ -390,7 +378,7 @@ const SectionSpray = styled(SectionSprayCmp)`
     padding: 5px;
     margin-bottom: 10px;
   }
-`;
+`
 
 const SectionFaqCmp = props => (
   <section {...props}>
@@ -416,7 +404,7 @@ const SectionFaqCmp = props => (
       </div>
     </Container>
   </section>
-);
+)
 
 const SectionFaq = styled(SectionFaqCmp)`
   padding: 5% 20px;
@@ -424,22 +412,22 @@ const SectionFaq = styled(SectionFaqCmp)`
     background: rgba(0, 0, 0, 0.1);
     padding: 40px;
   }
-`;
+`
 
 class SectionCalculatorCmp extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       keywords: 10000,
       engines: 2,
       devices: 2,
       languages: 1,
       locations: 1,
-      frequency: "monthly"
-    };
+      frequency: 'monthly'
+    }
   }
   render() {
-    const props = this.props;
+    const props = this.props
     const {
       keywords,
       engines,
@@ -447,33 +435,33 @@ class SectionCalculatorCmp extends Component {
       languages,
       locations,
       frequency
-    } = this.state;
+    } = this.state
 
-    let totalCredits = keywords * engines * devices * languages * locations;
+    let totalCredits = keywords * engines * devices * languages * locations
     switch (frequency[0].value) {
-      case "hourly":
-        totalCredits *= 30 * 24 * 5;
-        break;
-      case "daily":
-        totalCredits *= 30;
-        break;
-      case "weekly":
-        totalCredits *= 4;
-        break;
+      case 'hourly':
+        totalCredits *= 30 * 24 * 5
+        break
+      case 'daily':
+        totalCredits *= 30
+        break
+      case 'weekly':
+        totalCredits *= 4
+        break
       default:
-        break;
+        break
     }
 
-    let suggestedPlan = plans[4];
+    let suggestedPlan = plans[4]
 
     if (totalCredits <= 9000) {
-      suggestedPlan = plans[0];
+      suggestedPlan = plans[0]
     } else if (totalCredits <= 18000) {
-      suggestedPlan = plans[1];
+      suggestedPlan = plans[1]
     } else if (totalCredits <= 40000) {
-      suggestedPlan = plans[2];
+      suggestedPlan = plans[2]
     } else if (totalCredits <= 200000) {
-      suggestedPlan = plans[3];
+      suggestedPlan = plans[3]
     }
 
     return (
@@ -494,7 +482,7 @@ class SectionCalculatorCmp extends Component {
                       })
                     }
                     css={{
-                      border: !keywords && "2px solid red"
+                      border: !keywords && '2px solid red'
                     }}
                   />
                 </div>
@@ -513,7 +501,7 @@ class SectionCalculatorCmp extends Component {
                       })
                     }
                     css={{
-                      border: !engines && "2px solid red"
+                      border: !engines && '2px solid red'
                     }}
                   />
                 </div>
@@ -532,7 +520,7 @@ class SectionCalculatorCmp extends Component {
                       })
                     }
                     css={{
-                      border: !devices && "2px solid red"
+                      border: !devices && '2px solid red'
                     }}
                   />
                 </div>
@@ -550,7 +538,7 @@ class SectionCalculatorCmp extends Component {
                       })
                     }
                     css={{
-                      border: !languages && "2px solid red"
+                      border: !languages && '2px solid red'
                     }}
                   />
                 </div>
@@ -568,7 +556,7 @@ class SectionCalculatorCmp extends Component {
                       })
                     }
                     css={{
-                      border: !locations && "2px solid red"
+                      border: !locations && '2px solid red'
                     }}
                   />
                 </div>
@@ -587,7 +575,7 @@ class SectionCalculatorCmp extends Component {
                           })
                         }
                         checked={frequency === option.value}
-                      />{" "}
+                      />{' '}
                       {option.label}
                     </label>
                   ))}
@@ -606,12 +594,12 @@ class SectionCalculatorCmp extends Component {
           </div>
         </Container>
       </section>
-    );
+    )
   }
 }
 
 const SectionCalculator = styled(SectionCalculatorCmp)`
-  ${angle("right")};
+  ${angle('right')};
   padding: 5% 1rem 10%;
   .title {
     text-align: center;
@@ -638,7 +626,7 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
         width: 50%;
       }
     }
-    input[type="number"] {
+    input[type='number'] {
       font-size: 1em;
       width: 100%;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
@@ -679,34 +667,45 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
       color: ${Theme.colors.primaryDark};
     }
   }
-`;
+`
 
 const SectionContactUsCmp = props => (
   <section {...props}>
-    <Container>
+    <Container
+      css={`
+        padding: 10rem 0;
+      `}
+    >
       <H2 full>Let's start your free trial!</H2>
-      <TrialForm />
-      <H6 full>or</H6>
-      <a href={"tel:1855NOZZLE1"}>
-        <Button color="primaryDark" burst>
-          Call 1-855-NOZZLE1
+      <Link to="/trial">
+        <Button
+          color="success"
+          css={`
+            font-size: 1.7rem;
+            padding: 1.5rem;
+            border-radius: 0.3rem;
+          `}
+        >
+          Get started!
         </Button>
-      </a>
+      </Link>
     </Container>
   </section>
-);
+)
 
 const SectionContactUs = styled(SectionContactUsCmp)`
-  ${angle("right")};
-  padding: 10% 2rem;
+  ${section};
+  ${angle('right')};
+
   background: ${Theme.colors.primaryDarker};
   color: white;
-  &:after {
+
+  :after {
     display: none;
   }
   display: block;
   text-align: center;
-`;
+`
 
 export default class Features extends Component {
   render() {
@@ -724,6 +723,6 @@ export default class Features extends Component {
           <SectionContactUs id="trial" />
         </Main>
       </Page>
-    );
+    )
   }
 }

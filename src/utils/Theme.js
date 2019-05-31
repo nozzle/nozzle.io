@@ -30,7 +30,7 @@ const colorOptions = {
   light: 'rgba(255, 255, 255, 0.6)',
   dark: 'rgba(0, 0, 0, 0.6)',
   darker: 'rgba(0, 0, 0, 0.8)',
-  black: 'black',
+  black: 'black'
 }
 
 export default {
@@ -41,14 +41,14 @@ export default {
     h3: 2,
     h4: 1.6,
     h5: 1.3,
-    h6: 1.2,
+    h6: 1.2
   },
   weights: {
     lighter: 100,
     light: 300,
     regular: 400,
     bold: 700,
-    bolder: 900,
+    bolder: 900
   },
   colors: {
     ...colorOptions,
@@ -56,7 +56,7 @@ export default {
 
     tags: {
       'Front End': colorOptions.success,
-      Backend: colorOptions.danger,
+      Backend: colorOptions.danger
     },
 
     vendors: {
@@ -67,7 +67,7 @@ export default {
       pinterest: '#910101',
       linkedin: '#1884bb',
       stumbleupon: '#EB4924',
-      yahoo: '#4D1AC2',
+      yahoo: '#4D1AC2'
     },
 
     golf: [
@@ -77,7 +77,7 @@ export default {
       '#FAA43A', // (orange)
       '#fc6868', // (red)
       '#4E4E4E', // (black)
-      '#929292', // (gray)
+      '#929292' // (gray)
     ],
 
     data5: [
@@ -85,7 +85,7 @@ export default {
       '#60BD68', // (green)
       '#DECF3F', // (yellow)
       '#FAA43A', // (orange)
-      '#fc6868', // (red)
+      '#fc6868' // (red)
     ],
 
     data10: [
@@ -98,7 +98,7 @@ export default {
       '#1aaabe',
       '#734fe9',
       '#1828bd',
-      '#cd82ad',
-    ],
-  },
+      '#cd82ad'
+    ]
+  }
 }

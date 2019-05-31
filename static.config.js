@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
 import Contentful from './tools/Contentful'
+import path from 'path'
 
 export default {
-  plugins: ['react-static-plugin-styled-components'],
+  plugins: [
+    [
+      'react-static-plugin-source-filesystem',
+      {
+        location: path.resolve('./src/pages')
+      }
+    ],
+    'react-static-plugin-styled-components',
+    'react-static-plugin-reach-router',
+    'react-static-plugin-sitemap'
+  ],
   siteRoot: 'https://nozzle.io',
   getRoutes: async () => {
     const { devPosts, devTags, blogPosts, blogTags } = await Contentful()
 
-    console.log(blogPosts, devPosts)
     return [
       {
         path: 'l/onboarding',

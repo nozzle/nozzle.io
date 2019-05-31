@@ -1,22 +1,20 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import React, { Component } from 'react'
+import styled, { css } from 'styled-components'
 //
-import Color from "utils/Color";
-import Theme from "utils/Theme";
-import { angle } from "utils/Styles";
+import Color from 'utils/Color'
+import Theme from 'utils/Theme'
+import { angle } from 'utils/Styles'
 
-import Head from "components/Head";
-import Page from "components/Page";
-import Main from "components/Main";
-import Link from "components/Link";
-import NodeGarden from "components/NodeGarden";
-import TrialForm from "components/TrialForm";
+import Head from 'components/Head'
+import Page from 'components/Page'
+import Main from 'components/Main'
+import Link from 'components/Link'
+import NodeGarden from 'components/NodeGarden'
 import {
   H2,
   H3,
   H4,
   H5,
-  H6,
   P,
   Ul,
   Li,
@@ -24,18 +22,18 @@ import {
   Div,
   Button,
   Strong
-} from "components/Html";
+} from 'components/Html'
 
-const belowMobile = `@media(max-width: ${700}px)`;
-const belowTablet = `@media(max-width: ${1000}px)`;
+const belowMobile = `@media(max-width: ${700}px)`
+const belowTablet = `@media(max-width: ${1000}px)`
 
-const Left = props => <div className="left" {...props} />;
-const Right = props => <div className="right" {...props} />;
+const Left = props => <div className="left" {...props} />
+const Right = props => <div className="right" {...props} />
 const Section = ({ children, ...rest }) => (
   <section {...rest}>
     <div className="inner">{children}</div>
   </section>
-);
+)
 
 const section = css`
   z-index: 0;
@@ -61,7 +59,7 @@ const section = css`
       margin-bottom: 2rem;
     }
   }
-`;
+`
 
 const layoutLeft = css`
   .left {
@@ -72,7 +70,7 @@ const layoutLeft = css`
   .right {
     flex: 3 1 300px;
   }
-`;
+`
 
 const layoutRight = css`
   .left {
@@ -82,7 +80,7 @@ const layoutRight = css`
     margin-left: 40px;
     flex: 2 1 200px;
   }
-`;
+`
 
 const layoutLeftHalf = css`
   .left {
@@ -92,17 +90,17 @@ const layoutLeftHalf = css`
   .right {
     flex: 1 1 300px;
   }
-`;
+`
 
 const layoutDark = `
   background: ${Theme.colors.primaryDarker};
   color: white;
-`;
+`
 
-const Centered = styled("div")`
+const Centered = styled('div')`
   text-align: center;
   width: 100%;
-`;
+`
 
 const SectionKnowEverything = styled(Section)`
   ${section};
@@ -128,12 +126,12 @@ const SectionKnowEverything = styled(Section)`
     border-radius: 5px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   }
-`;
+`
 const SectionTrackAllTheThings = styled(Section)`
   ${section};
   ${layoutDark};
   ${layoutRight};
-  ${angle("right")};
+  ${angle('right')};
 
   position: relative;
 
@@ -155,7 +153,7 @@ const SectionTrackAllTheThings = styled(Section)`
     opacity: 0.2;
     z-index: 0;
   }
-`;
+`
 const SectionRankData = styled(Section)`
   ${section};
   ${layoutLeftHalf};
@@ -175,12 +173,12 @@ const SectionRankData = styled(Section)`
       }
     }
   }
-`;
+`
 const SectionCompetitors = styled(Section)`
   ${section};
   ${layoutLeft};
   ${layoutDark};
-  ${angle("right")};
+  ${angle('right')};
 
   .left {
     direction: rtl;
@@ -199,7 +197,7 @@ const SectionCompetitors = styled(Section)`
       }
     }
   }
-`;
+`
 const SectionDataJunkie = styled(Section)`
   ${section};
   ${layoutRight};
@@ -226,11 +224,11 @@ const SectionDataJunkie = styled(Section)`
       margin-bottom: 3rem;
     }
   }
-`;
+`
 const SectionSchedules = styled(Section)`
   ${section};
   ${layoutDark};
-  ${angle("right")};
+  ${angle('right')};
 
   align-items: center;
   text-align: center;
@@ -247,7 +245,7 @@ const SectionSchedules = styled(Section)`
     border-radius: 5px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   }
-`;
+`
 const SectionCantAfford = styled(Section)`
   ${section};
   ${layoutRight};
@@ -261,38 +259,21 @@ const SectionCantAfford = styled(Section)`
       box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     }
   }
-`;
-
-const SectionContactUs = styled(Section)`
-  ${section};
-  ${layoutDark};
-  ${angle("right")};
-
-  background: ${Theme.colors.primaryDarker};
-
-  &:after {
-    display: none;
-  }
-
-  .inner {
-    display: block;
-    text-align: center;
-  }
-`;
+`
 
 const rankDataImages = [
-  "/img/rank.png",
-  "/img/adrank.png",
-  "/img/pixelheight.png"
-];
+  '/img/rank.png',
+  '/img/adrank.png',
+  '/img/pixelheight.png'
+]
 
 export default class Home extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       rankDataImageIndex: 0,
       rankDataImage: rankDataImages[0]
-    };
+    }
   }
   componentDidMount() {
     this.rankDataImageInterval = window.setInterval(
@@ -302,26 +283,26 @@ export default class Home extends Component {
           rankDataImage: rankDataImages[(state.rankDataImageIndex + 1) % 3]
         })),
       2000
-    );
+    )
   }
   componentWillUnmount() {
-    window.clearInterval(this.rankDataImageInterval);
+    window.clearInterval(this.rankDataImageInterval)
   }
   render() {
-    const { rankDataImage } = this.state;
+    const { rankDataImage } = this.state
     return (
       <Page>
         <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Nozzle" />
         <Main>
           <SectionKnowEverything>
             <NodeGarden
-              color={Color("white")
+              color={Color('white')
                 .setAlpha(0.1)
                 .toString()}
               style={{
-                position: "absolute",
-                top: "0px",
-                left: "0px",
+                position: 'absolute',
+                top: '0px',
+                left: '0px',
                 zIndex: -1
               }}
             />
@@ -333,7 +314,7 @@ export default class Home extends Component {
                 tool has ever offered, you've come to the right place. SEO data
                 nerds drool over our keyword rank tracker.
               </P>
-              <Link to="/#contact">
+              <Link to="/trial">
                 <Button color="success" burst>
                   I'd like a demo!
                 </Button>
@@ -372,11 +353,11 @@ export default class Home extends Component {
                 your data FOREVER, so 3 years from now, you'll be able to look
                 back and see what was ranking for "Pokemon Go" in 2016. :)
               </P>
-              <Link to="/#contact">
+              <Link to="/trial">
                 <Button color="success" burst>
                   Start tracking today!
                 </Button>
-              </Link>{" "}
+              </Link>{' '}
               <Link to="/features">
                 <Button color="primary" burst>
                   How does it work?
@@ -388,7 +369,7 @@ export default class Home extends Component {
             <Left>
               <H2 color="primaryDark">Rank data you can only find at Nozzle</H2>
               <H5 weight="regular">
-                Track results by{" "}
+                Track results by{' '}
                 <Strong>Rank, Ad Adjusted Rank, Pixel Height</Strong> and more!
               </H5>
               <P>
@@ -399,7 +380,7 @@ export default class Home extends Component {
                 your prospective customer ate for breakfast.
               </P>
               <P>
-                We include <Strong>over 350+ data points</Strong> for{" "}
+                We include <Strong>over 350+ data points</Strong> for{' '}
                 <Strong>every result on the serp</Strong> - no extra cost!
               </P>
               <Ul>
@@ -416,8 +397,8 @@ export default class Home extends Component {
               <p />
               <Link to="/features/#data">
                 <Button burst>See the complete list</Button>
-              </Link>{" "}
-              <Link to="/#contact">
+              </Link>{' '}
+              <Link to="/trial">
                 <Button color="success" burst>
                   Get the datas!
                 </Button>
@@ -426,7 +407,7 @@ export default class Home extends Component {
             <Right>
               <Img src={rankDataImage} />
               {rankDataImages.map(img => (
-                <Img key={img} src={img} style={{ display: "none" }} />
+                <Img key={img} src={img} style={{ display: 'none' }} />
               ))}
             </Right>
           </SectionRankData>
@@ -440,7 +421,7 @@ export default class Home extends Component {
                 yet
               </H3>
               <H5 weight="regular">
-                See share of voice by{" "}
+                See share of voice by{' '}
                 <Strong color="primaryLighter">
                   Domain, Subdomain, URL, and Brand
                 </Strong>
@@ -455,11 +436,11 @@ export default class Home extends Component {
                 and we'll even rewrite history for you. It'll be like you were
                 monitoring them from the start!
               </P>
-              <Link to="/#contact">
+              <Link to="/trial">
                 <Button color="success" burst>
                   Show me my competitors!
                 </Button>
-              </Link>{" "}
+              </Link>{' '}
               <Link to="/features/#competition">
                 <Button color="primary" burst>
                   How does it work?
@@ -480,11 +461,11 @@ export default class Home extends Component {
                 data forever, including the raw html. Consider it necessary
                 tooling when dealing with millions of keywords. )
               </P>
-              <Link to="/#contact">
+              <Link to="/trial">
                 <Button color="success" burst>
                   Fix me up with 1,000 keywords!
                 </Button>
-              </Link>{" "}
+              </Link>{' '}
               <Link to="/features/#integration">
                 <Button color="primary" burst>
                   Show all integrations
@@ -514,11 +495,11 @@ export default class Home extends Component {
               </Div>
             </Centered>
             <Centered>
-              <Link to="/#contact">
+              <Link to="/trial">
                 <Button color="success" burst>
                   Give me flexibility, stat!
                 </Button>
-              </Link>{" "}
+              </Link>{' '}
               <Link to="/features/#scheduling">
                 <Button color="primary" burst>
                   Why does it matter?
@@ -539,26 +520,16 @@ export default class Home extends Component {
               </P>
               <Link to="/pricing">
                 <Button burst>See Our Plans & Pricing</Button>
-              </Link>{" "}
-              <Link to="/#contact">
+              </Link>{' '}
+              <Link to="/trial">
                 <Button color="success" burst>
                   Try it out!
                 </Button>
               </Link>
             </Left>
           </SectionCantAfford>
-          <SectionContactUs id="contact">
-            <H2 full>Let's start your free trial!</H2>
-            <TrialForm />
-            <H6 full>or</H6>
-            <Link to="tel:1855NOZZLE1">
-              <Button color="primaryDark" burst>
-                Call 1-855-NOZZLE1
-              </Button>
-            </Link>
-          </SectionContactUs>
         </Main>
       </Page>
-    );
+    )
   }
 }

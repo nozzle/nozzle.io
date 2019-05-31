@@ -150,7 +150,7 @@ export default class ExitIntent extends Component {
                     window.dataLayer.push({ event: 'exitSubmit' })
                     try {
                       await axios.post(
-                        'https://nozzle.io/',,
+                        'https://nozzle.io/',
                         encodeFormData({
                           'form-name': 'exitIntent',
                           ...values

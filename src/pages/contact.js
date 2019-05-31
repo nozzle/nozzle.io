@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import axios from "axios";
-import { Form, Text, TextArea } from "react-form";
+import React from 'react'
+import styled from 'styled-components'
+import axios from 'axios'
+import { Form, Text, TextArea } from 'react-form'
 //
-import { Img, Button } from "components/Html";
-import encodeFormData from "utils/encodeFormData";
+import { Img, Button } from 'components/Html'
+import encodeFormData from 'utils/encodeFormData'
 
-const Styles = styled("div")`
+const Styles = styled('div')`
   color: rgba(0, 0, 0, 0.5);
 
   .mainContainer {
@@ -37,7 +37,7 @@ const Styles = styled("div")`
 
     &:before {
       background: inherit;
-      content: "";
+      content: '';
       display: block;
       height: 100%;
       left: 0;
@@ -91,31 +91,31 @@ const Styles = styled("div")`
     margin-top: 2rem;
     vertical-align: baseline;
   }
-`;
+`
 
 export default () => {
-  const [submitted, setSubmitted] = React.useState(false);
+  const [submitted, setSubmitted] = React.useState(false)
 
   const onSubmit = async values => {
-    window.dataLayer.push({ event: "contactSubmit" });
+    window.dataLayer.push({ event: 'contactSubmit' })
     try {
       await axios.post(
-        "/",
-        encodeFormData({ "form-name": "contact", ...values }),
+        '/',
+        encodeFormData({ 'form-name': 'contact', ...values }),
         {
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+            'Content-Type': 'application/x-www-form-urlencoded'
           }
         }
-      );
-      setSubmitted(true);
+      )
+      setSubmitted(true)
     } catch (err) {
       window.alert(
-        "There was a problem submitting your form! Try again or reload the page :)"
-      );
-      setSubmitted(true);
+        'There was a problem submitting your form! Try again or reload the page :)'
+      )
+      setSubmitted(true)
     }
-  };
+  }
 
   return (
     <Styles>
@@ -125,7 +125,7 @@ export default () => {
         ) : (
           <Form onSubmit={onSubmit}>
             {({ submitForm }) => (
-              <form name="exitIntent" netlify="true" onSubmit={submitForm}>
+              <form name="exitIntent" data-netlify="true" onSubmit={submitForm}>
                 <div className="title">
                   <div>Contact Us</div>
                 </div>
@@ -157,5 +157,5 @@ export default () => {
         )}
       </div>
     </Styles>
-  );
-};
+  )
+}

@@ -173,7 +173,7 @@ export default class ExitIntent extends Component {
                   {({ submitForm }) => (
                     <form
                       name="exitIntent"
-                      netlify="true"
+                      data-netlify="true"
                       onSubmit={submitForm}
                     >
                       <div>

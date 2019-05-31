@@ -289,7 +289,7 @@ export default function Trial() {
             {({ submitForm }) => (
               <form
                 name="smx2019"
-                netlify="true"
+                data-netlify="true"
                 onSubmit={submitForm}
                 css={`
                   width: 400px;

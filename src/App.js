@@ -36,11 +36,11 @@ const GlobalStyles = createGlobalStyle`
 
 export default () => (
   <Root>
-    <GlobalStyles />
-    <NavWrapper>
-      <React.Suspense fallback={<em>Loading...</em>}>
+    <React.Suspense fallback={<em>Loading...</em>}>
+      <GlobalStyles />
+      <NavWrapper>
         <Routes />
-      </React.Suspense>
-    </NavWrapper>
+      </NavWrapper>
+    </React.Suspense>
   </Root>
 )

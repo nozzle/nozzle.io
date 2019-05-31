@@ -91,7 +91,6 @@ export default class DevblogPost extends Component {
     return (
       <RouteData>
         {({ post }) => {
-          console.log(post)
           const wordCount = post.fields.body.split(' ').length.hello
           return (
             <Page>

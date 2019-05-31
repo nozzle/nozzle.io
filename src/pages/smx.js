@@ -137,7 +137,7 @@ export default function Trial() {
               css={`
                 width: 80%;
                 max-width: 300px;
-                background: rgba(0, 0, 0, 0.8);
+                background: rgba(0, 0, 0, 0.6);
                 border-radius: 100rem;
               `}
             />
@@ -157,7 +157,7 @@ export default function Trial() {
               css={`
                 width: 80%;
                 max-width: 300px;
-                background: rgba(0, 0, 0, 0.8);
+                background: rgba(0, 0, 0, 0.6);
                 border-radius: 100rem;
               `}
             />

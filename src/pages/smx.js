@@ -342,10 +342,9 @@ export default function Trial() {
                     color: white;
                   `}
                 />
-                <div>
-                  <Button
-                    type="submit"
-                    css={`
+                <Button
+                  type="submit"
+                  css={`
                     color: white;
                     appearance: none;
                     border-radius: 0.4rem;
@@ -356,10 +355,9 @@ export default function Trial() {
                     display: block;
                     text-align: center;
                   `}
-                  >
-                    Submit!
-                  </Button>
-                </div>
+                >
+                  Submit!
+                </Button>
               </form>
             )}
           </Form>

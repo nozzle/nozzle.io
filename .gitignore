@@ -1,13 +1,3 @@
-node_modules
-.next
-.cache
-dist
-.tempdist
-.DS_Store
-next.config.js
-tools/lib.js
-yarn-error.log
 .history
-tmp
-artifacts
-.vscode
+.next
+node_modules

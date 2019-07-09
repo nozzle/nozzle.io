@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 //
-import Page from '../components/Page'
-import Head from '../components/Head'
-import { Container } from '../components/Layout'
-import { H1, P, Iframe } from '../components/Html'
+import Head from 'components/Head'
+import { Container } from 'components/Layout'
+import { H1, P, Iframe } from 'components/Html'
 
 const Styles = styled(Container)`
   text-align: center;

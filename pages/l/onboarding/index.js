@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 //
-import Theme from '../utils/Theme'
 
-import HubspotForm from '../components/HubspotForm'
-import Page from '../components/Page'
-import Head from '../components/Head'
-import { Container } from '../components/Layout'
-import { H1, H4, Ol, Li, Strong } from '../components/Html'
+import HubspotForm from 'components/HubspotForm'
+import Head from 'components/Head'
+import { Container } from 'components/Layout'
+import { H1, H4, Ol, Li, Strong } from 'components/Html'
 
 const Styles = styled(Container)`
   text-align: center;

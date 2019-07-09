@@ -415,7 +415,7 @@ export default class Home extends Component {
           </SectionRankData>
           <SectionCompetitors>
             <Left>
-              <Img src={require('public/img/groupBy.png')} />
+              <Img src={require('public/img/groupby.png')} />
             </Left>
             <Right>
               <H3>

@@ -27,7 +27,7 @@ async function main() {
   )}
 </urlset>`
 
-  fs.writeFileSync(path.resolve(outPath), sitemapXml)
+  fs.writeFileSync(path.resolve(__dirname, '../../', outPath), sitemapXml)
 }
 
 function getPages() {

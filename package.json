@@ -2,7 +2,8 @@
   "scripts": {
     "start": "next",
     "build": "next build",
-    "now-build": "yarn build"
+    "now-build": "yarn build",
+    "prebuild": "babel-node scripts/generateSitemap/"
   },
   "dependencies": {
     "@typeform/embed": "^0.9.4",
@@ -23,7 +24,10 @@
     "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "fs-extra": "^8.1.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.0.0",
     "imagemin-svgo": "^7.0.0"

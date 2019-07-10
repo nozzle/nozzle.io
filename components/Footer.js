@@ -95,6 +95,11 @@ export default class Footer extends Component {
                 <a>Dev Blog</a>
               </Link>
             </div>
+            <div className="navLinks">
+              <Link href="/docs/api">
+                <a>API Docs</a>
+              </Link>
+            </div>
           </div>
           <div className="copyright">
             &copy; {`20${new Date().getYear() - 100}`} Nozzle Corp.

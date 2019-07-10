@@ -21,6 +21,7 @@
     "react-smackdown": "^0.8.8",
     "styled-components": "^4.3.2",
     "styled-reset": "^2.0.16",
+    "swagger-ui-react": "^3.23.0",
     "tinycolor2": "^1.4.1"
   },
   "devDependencies": {

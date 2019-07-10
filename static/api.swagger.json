@@ -1,0 +1,1525 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Nozzle Workspace API",
+    "version": "1.0",
+    "contact": {
+      "name": "Nozzle Corp.",
+      "url": "https://github.com/nozzle",
+      "email": "support@nozzle.io"
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/brands": {
+      "get": {
+        "summary": "List brands.",
+        "operationId": "ListBrands",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesListBrandsResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "post": {
+        "summary": "Create brand.",
+        "operationId": "CreateBrand",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesCreateBrandResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesBrand"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/brands/{brand.id}": {
+      "patch": {
+        "summary": "Update brand.",
+        "operationId": "UpdateBrand",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesUpdateBrandResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "brand.id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesBrand"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/brands/{brand_id}": {
+      "get": {
+        "summary": "Get brand.",
+        "operationId": "GetBrand",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesGetBrandResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "brand_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "delete": {
+        "summary": "Delete brand.",
+        "operationId": "DeleteBrand",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesDeleteBrandResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "brand_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/invite/{invite_id}": {
+      "get": {
+        "summary": "GetInvite will retrieve a single invite by id.",
+        "operationId": "GetInvite",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesGetInviteResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "invite_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/invites": {
+      "get": {
+        "summary": "ListInvites can list all invites by token, workspace, and inviter.",
+        "operationId": "ListInvites",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesListInvitesResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "workspaceId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "inviterId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "post": {
+        "summary": "CreateInvites will create an invite for an existing user or create a new user if one doesn't exist.",
+        "operationId": "CreateInvites",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesCreateInvitesResponse"
+            }
+          }
+        },
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/invites/{invite_id}:activate": {
+      "post": {
+        "summary": "ActivateInvite will set the activated_at timestamp on an invite.",
+        "operationId": "ActivateInvite",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesActivateInviteResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "invite_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/keyword_sources": {
+      "get": {
+        "summary": "List keyword_sources.",
+        "operationId": "ListKeywordSources",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesListKeywordSourcesResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "post": {
+        "summary": "Create keyword_source.",
+        "operationId": "CreateKeywordSource",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesCreateKeywordSourceResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesKeywordSource"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/keyword_sources/{keyword_source.id}": {
+      "patch": {
+        "summary": "Update keyword_source.",
+        "operationId": "UpdateKeywordSource",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesUpdateKeywordSourceResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "keyword_source.id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesKeywordSource"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/keyword_sources/{keyword_source_id}": {
+      "get": {
+        "summary": "Get keyword_source.",
+        "operationId": "GetKeywordSource",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesGetKeywordSourceResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "keyword_source_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "delete": {
+        "summary": "Delete keyword_source.",
+        "operationId": "DeleteKeywordSource",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesDeleteKeywordSourceResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "keyword_source_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/segments": {
+      "get": {
+        "summary": "List segments.",
+        "operationId": "ListSegments",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesListSegmentsResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "post": {
+        "summary": "Create segment.",
+        "operationId": "CreateSegment",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesCreateSegmentResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesSegment"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/segments/{segment.id}": {
+      "patch": {
+        "summary": "Update segment.",
+        "operationId": "UpdateSegment",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesUpdateSegmentResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "segment.id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesSegment"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/segments/{segment_id}": {
+      "get": {
+        "summary": "Get segment.",
+        "operationId": "GetSegment",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesGetSegmentResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "segment_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "delete": {
+        "summary": "Delete segment.",
+        "operationId": "DeleteSegment",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesDeleteSegmentResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "segment_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/teams": {
+      "get": {
+        "summary": "List teams.",
+        "operationId": "ListTeams",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesListTeamsResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "workspaceId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "post": {
+        "summary": "Create team.",
+        "operationId": "CreateTeam",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesCreateTeamResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesTeam"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/teams/{team.id}": {
+      "patch": {
+        "summary": "Update team.",
+        "operationId": "UpdateTeam",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesUpdateTeamResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "team.id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesTeam"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/teams/{team_id}": {
+      "get": {
+        "summary": "Get team.",
+        "operationId": "GetTeam",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesGetTeamResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "team_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "delete": {
+        "summary": "Delete team.",
+        "operationId": "DeleteTeam",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesDeleteTeamResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "team_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/users": {
+      "get": {
+        "summary": "List users.",
+        "operationId": "ListUsers",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesListUsersResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "workspaceId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "post": {
+        "summary": "Create user.",
+        "operationId": "CreateUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesCreateUserResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesUser"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/users/{user.id}": {
+      "patch": {
+        "summary": "Update user.",
+        "operationId": "UpdateUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesUpdateUserResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "user.id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesUser"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/users/{user_id}": {
+      "get": {
+        "summary": "Get user.",
+        "operationId": "GetUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesGetUserResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "delete": {
+        "summary": "Delete user.",
+        "operationId": "DeleteUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesDeleteUserResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/workspaces": {
+      "get": {
+        "summary": "List workspaces.",
+        "operationId": "ListWorkspaces",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesListWorkspacesResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "post": {
+        "summary": "Create workspace.",
+        "operationId": "CreateWorkspace",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesCreateWorkspaceResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesWorkspace"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/workspaces/{workspace.id}": {
+      "patch": {
+        "summary": "Update workspace.",
+        "operationId": "UpdateWorkspace",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesUpdateWorkspaceResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "workspace.id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/workspacesWorkspace"
+            }
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    },
+    "/workspaces/{workspace_id}": {
+      "get": {
+        "summary": "Get workspace.",
+        "operationId": "GetWorkspace",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesGetWorkspaceResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "workspace_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      },
+      "delete": {
+        "summary": "Delete workspace.",
+        "operationId": "DeleteWorkspace",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/workspacesDeleteWorkspaceResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "workspace_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "WorkspacesAPI"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "BrandProperty": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "isCustom": {
+          "type": "boolean",
+          "format": "boolean"
+        }
+      },
+      "description": "Property contains brand property information."
+    },
+    "workspacesActivateInviteResponse": {
+      "type": "object",
+      "properties": {
+        "invite": {
+          "$ref": "#/definitions/workspacesInvite"
+        }
+      }
+    },
+    "workspacesBrand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "versionId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "workspaceId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "teamId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "config": {
+          "type": "string",
+          "format": "byte"
+        },
+        "type": {
+          "type": "string"
+        },
+        "reputationImpact": {
+          "type": "string",
+          "format": "int64"
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BrandProperty"
+          }
+        },
+        "terms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Brand contains brand information."
+    },
+    "workspacesCreateBrandResponse": {
+      "type": "object",
+      "properties": {
+        "brand": {
+          "$ref": "#/definitions/workspacesBrand"
+        }
+      }
+    },
+    "workspacesCreateInvitesResponse": {
+      "type": "object",
+      "properties": {
+        "invite": {
+          "$ref": "#/definitions/workspacesInvite"
+        },
+        "inviteeUser": {
+          "$ref": "#/definitions/workspacesUser"
+        }
+      }
+    },
+    "workspacesCreateKeywordSourceResponse": {
+      "type": "object",
+      "properties": {
+        "keywordSource": {
+          "$ref": "#/definitions/workspacesKeywordSource"
+        }
+      }
+    },
+    "workspacesCreateSegmentResponse": {
+      "type": "object",
+      "properties": {
+        "segment": {
+          "$ref": "#/definitions/workspacesSegment"
+        }
+      }
+    },
+    "workspacesCreateTeamResponse": {
+      "type": "object",
+      "properties": {
+        "team": {
+          "$ref": "#/definitions/workspacesTeam"
+        }
+      }
+    },
+    "workspacesCreateUserResponse": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/workspacesUser"
+        }
+      }
+    },
+    "workspacesCreateWorkspaceResponse": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "$ref": "#/definitions/workspacesWorkspace"
+        }
+      }
+    },
+    "workspacesDeleteBrandResponse": {
+      "type": "object"
+    },
+    "workspacesDeleteKeywordSourceResponse": {
+      "type": "object"
+    },
+    "workspacesDeleteSegmentResponse": {
+      "type": "object"
+    },
+    "workspacesDeleteTeamResponse": {
+      "type": "object"
+    },
+    "workspacesDeleteUserResponse": {
+      "type": "object"
+    },
+    "workspacesDeleteWorkspaceResponse": {
+      "type": "object"
+    },
+    "workspacesGetBrandResponse": {
+      "type": "object",
+      "properties": {
+        "brand": {
+          "$ref": "#/definitions/workspacesBrand"
+        }
+      }
+    },
+    "workspacesGetInviteResponse": {
+      "type": "object",
+      "properties": {
+        "invite": {
+          "$ref": "#/definitions/workspacesInvite"
+        }
+      }
+    },
+    "workspacesGetKeywordSourceResponse": {
+      "type": "object",
+      "properties": {
+        "keywordSource": {
+          "$ref": "#/definitions/workspacesKeywordSource"
+        }
+      }
+    },
+    "workspacesGetSegmentResponse": {
+      "type": "object",
+      "properties": {
+        "segment": {
+          "$ref": "#/definitions/workspacesSegment"
+        }
+      }
+    },
+    "workspacesGetTeamResponse": {
+      "type": "object",
+      "properties": {
+        "team": {
+          "$ref": "#/definitions/workspacesTeam"
+        }
+      }
+    },
+    "workspacesGetUserResponse": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/workspacesUser"
+        }
+      }
+    },
+    "workspacesGetWorkspaceResponse": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "$ref": "#/definitions/workspacesWorkspace"
+        }
+      }
+    },
+    "workspacesInvite": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "token": {
+          "type": "string"
+        },
+        "inviteeUserId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "inviterUserId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "workspaceId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "expiresAt": {
+          "type": "string",
+          "format": "int64"
+        },
+        "activatedAt": {
+          "type": "string",
+          "format": "int64"
+        }
+      },
+      "description": "Invite is a record for an invite."
+    },
+    "workspacesKeywordSource": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "versionId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "workspaceId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "teamId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "config": {
+          "type": "string",
+          "format": "byte"
+        },
+        "type": {
+          "$ref": "#/definitions/workspacesKeywordSourceType"
+        },
+        "schedule": {
+          "type": "string"
+        },
+        "keywordCount": {
+          "type": "string",
+          "format": "int64"
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "KeywordSource contains keyword source information."
+    },
+    "workspacesKeywordSourceType": {
+      "type": "string",
+      "enum": [
+        "TYPE_INVALID",
+        "TYPE_JSON",
+        "TYPE_EXCEL",
+        "TYPE_CITY",
+        "TYPE_BASIC"
+      ],
+      "default": "TYPE_INVALID",
+      "description": "Type is what kind of Keyword Source this is."
+    },
+    "workspacesListBrandsResponse": {
+      "type": "object",
+      "properties": {
+        "brands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/workspacesBrand"
+          }
+        }
+      }
+    },
+    "workspacesListInvitesResponse": {
+      "type": "object",
+      "properties": {
+        "invites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/workspacesInvite"
+          }
+        }
+      }
+    },
+    "workspacesListKeywordSourcesResponse": {
+      "type": "object",
+      "properties": {
+        "keywordSources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/workspacesKeywordSource"
+          }
+        }
+      }
+    },
+    "workspacesListSegmentsResponse": {
+      "type": "object",
+      "properties": {
+        "segments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/workspacesSegment"
+          }
+        }
+      }
+    },
+    "workspacesListTeamsResponse": {
+      "type": "object",
+      "properties": {
+        "teams": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/workspacesTeam"
+          }
+        }
+      }
+    },
+    "workspacesListUsersResponse": {
+      "type": "object",
+      "properties": {
+        "users": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/workspacesUser"
+          }
+        }
+      }
+    },
+    "workspacesListWorkspacesResponse": {
+      "type": "object",
+      "properties": {
+        "workspaces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/workspacesWorkspace"
+          }
+        }
+      }
+    },
+    "workspacesScheduleType": {
+      "type": "string",
+      "enum": [
+        "SCHEDULE_TYPE_INVALID",
+        "SCHEDULE_TYPE_HOURLY",
+        "SCHEDULE_TYPE_DAILY",
+        "SCHEDULE_TYPE_WEEKLY",
+        "SCHEDULE_TYPE_MONTHLY",
+        "SCHEDULE_TYPE_QUARTERLY",
+        "SCHEDULE_TYPE_ANNUALLY"
+      ],
+      "default": "SCHEDULE_TYPE_INVALID",
+      "description": "ScheduleType is an enum for indicating what the default schedule will be."
+    },
+    "workspacesSegment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "versionId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "workspaceId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "teamId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "config": {
+          "type": "string",
+          "format": "byte"
+        },
+        "condition": {
+          "type": "string",
+          "format": "byte"
+        }
+      },
+      "description": "Segment contains segment information."
+    },
+    "workspacesTeam": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "versionId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "workspaceId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        }
+      },
+      "description": "Team contains team information."
+    },
+    "workspacesUpdateBrandResponse": {
+      "type": "object",
+      "properties": {
+        "brand": {
+          "$ref": "#/definitions/workspacesBrand"
+        }
+      }
+    },
+    "workspacesUpdateKeywordSourceResponse": {
+      "type": "object",
+      "properties": {
+        "keywordSource": {
+          "$ref": "#/definitions/workspacesKeywordSource"
+        }
+      }
+    },
+    "workspacesUpdateSegmentResponse": {
+      "type": "object",
+      "properties": {
+        "segment": {
+          "$ref": "#/definitions/workspacesSegment"
+        }
+      }
+    },
+    "workspacesUpdateTeamResponse": {
+      "type": "object",
+      "properties": {
+        "team": {
+          "$ref": "#/definitions/workspacesTeam"
+        }
+      }
+    },
+    "workspacesUpdateUserResponse": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/workspacesUser"
+        }
+      }
+    },
+    "workspacesUpdateWorkspaceResponse": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "$ref": "#/definitions/workspacesWorkspace"
+        }
+      }
+    },
+    "workspacesUser": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "versionId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "lastWorkspaceId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "email": {
+          "type": "string"
+        },
+        "emailVerified": {
+          "type": "boolean",
+          "format": "boolean"
+        },
+        "givenName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "familyName": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "picture": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "workspaces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/workspacesWorkspace"
+          }
+        }
+      },
+      "description": "User contains user information."
+    },
+    "workspacesWorkspace": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "versionId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        }
+      },
+      "description": "The Workspace message contains necessary identifying info for a workspace."
+    }
+  }
+}

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Theme from 'utils/Theme'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import ExitIntent from './ExitIntent'
+// import ExitIntent from './ExitIntent'
 
 const PageStyles = styled('div')`
   min-height: 100%;
@@ -25,7 +25,7 @@ export default function NavWrapper({ children }) {
       <Navbar />
       <ContentStyled>{children}</ContentStyled>
       <Footer />
-      <ExitIntent />
+      {/* <ExitIntent /> */}
     </PageStyles>
   )
 }

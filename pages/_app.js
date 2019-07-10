@@ -2,11 +2,35 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
+import Router from 'next/router'
 //
 import Theme from 'utils/Theme'
 
 import Head from 'components/Head'
 import NavWrapper from 'components/NavWrapper'
+
+Router.events.on('routeChangeStart', (...args) => {
+  console.log('route starts to change', args)
+})
+
+Router.events.on('routeChangeComplete', (...args) => {
+  console.log('route changed completely', args)
+})
+Router.events.on('routeChangeError', (...args) => {
+  console.log(
+    's an error when changing routes, or a route load is cancelled',
+    args
+  )
+})
+Router.events.on('beforeHistoryChange', (...args) => {
+  console.log('changing the browsers history', args)
+})
+Router.events.on('hashChangeStart', (...args) => {
+  console.log('hash will change but not the page', args)
+})
+Router.events.on('hashChangeComplete', (...args) => {
+  console.log('hash has changed but not the page', args)
+})
 
 const GlobalStyles = createGlobalStyle`
   ${reset};

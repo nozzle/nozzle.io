@@ -42,6 +42,41 @@ const frequencyOptions = [
   }
 ]
 
+const faqs = [
+  {
+    q: `What is a credit?`,
+    a: `A credit is used whenever we retrieve data for a keyword-engine-language-device-location combination. This combination is commonly referred to as a SERP (Search Engine Results Page). We pull data for the first 100 results. One credit = top 100 results for each unique search. `
+  },
+  {
+    q: `How many credits do I need?`,
+    a: `The number of credits you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, locations and engines you want to monitor. The pricing plans above give general estimates for the number of credits needed for tracking a single engine and location. Use the calculator on this page to get an idea on how many credits you need.`
+  },
+  {
+    q: `How long are credits good for?`,
+    a: `Credits purchased on the ‘Spray-as-you-go’ plan never expire. Credits purchased on other plans expire at the end of the month.`
+  },
+  {
+    q: `Do I have to sign a contract?`,
+    a: `No. Nozzle plans can be changed or cancelled at any time, effective the next billing period. But, fair warning, access to unprecedented amounts of data is highly addictive. `
+  },
+  {
+    q: `How frequently can I adjust my plan?`,
+    a: `Plan upgrades or downgrades can be made at any time. Upgrades take effect immediately, while downgrades take effect the following billing period. `
+  },
+  {
+    q: `Is there an extra charge for API access?`,
+    a: `No. API access is included. You can also access the data in BigQuery or MySQL.`
+  },
+  {
+    q: `Are there any other charges I should be aware of?`,
+    a: `There are no setup fees, charges for API access, or charges for additional users. The only exception to the one credit = one SERP pricing is for expedited data. SERPs requested under the regular pricing structure are fulfilled by the end of day, but some of our customers need data populated more rapidly. For example, some of our customers need data fulfilled hourly or they place last minute one-time pull data requests that they need as soon as possible. These priority requests are billed at 5 credits per SERP.  `
+  },
+  {
+    q: `Does Nozzle offer custom plans?`,
+    a: `We’re happy to work with you to create a custom plan if what you need doesn’t fall within the standard packages. Give us a call to discuss.`
+  }
+]
+
 const section = css`
   padding: 1rem 1.5rem;
 `
@@ -398,20 +433,13 @@ const SectionFaqCmp = props => (
         <H3 className="title">Frequently Answered Questions</H3>
       </Center>
       <div className="inner">
-        <H5>What is a credit?</H5>
-        <P>
-          A credit is used whenever we retrieve data for a
-          keyword-engine-language-device-location combination. This combination
-          is commonly referred to as a SERP, or, Search Engine Results Page.
-        </P>
-        <br />
-        <H5>Will I ever get charged twice for the same keyword?</H5>
-        <P>
-          Never. Once data for a keyword is retrieved, you can use that data
-          however you please, as many times as you want, forever. This includes
-          unlimited competitors, views, and even reanalyzing past keywords for
-          more insights.
-        </P>
+        {faqs.map(({ q, a }) => (
+          <>
+            <H5>{q}</H5>
+            <P>{a}</P>
+            <br />
+          </>
+        ))}
       </div>
     </Container>
   </section>

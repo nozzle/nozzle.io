@@ -460,10 +460,9 @@ class SectionCalculatorCmp extends Component {
       keywords: {
         weekly: 1000
       },
-      engines: 2,
-      devices: 2,
-      locations: 1,
-      frequency: 'monthly'
+      engines: 1,
+      devices: 1,
+      locations: 1
     }
   }
   render() {

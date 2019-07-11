@@ -159,7 +159,11 @@ export default function PostList({ prefix, posts }) {
                     </div>
                     <div className="tags">
                       {post.fields.tags.map(tag => (
-                        <Link href={`/devblog/tags/${tag}`} key={tag}>
+                        <Link
+                          as={`/${prefix}/tags/${tag}`}
+                          href={`/${prefix}/tags/[tag]`}
+                          key={tag}
+                        >
                           <a
                             className="tag"
                             style={{

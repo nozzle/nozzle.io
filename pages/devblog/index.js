@@ -26,7 +26,10 @@ export default class Devblog extends Component {
               <ul>
                 {tags.map(tag => (
                   <li key={tag}>
-                    <Link href={`/devblog/tags/${tag}/`}>
+                    <Link
+                      as={`/devblog/tags/${tag}`}
+                      href="/devblog/tags/[tag]"
+                    >
                       <a>{tag}</a>
                     </Link>
                   </li>

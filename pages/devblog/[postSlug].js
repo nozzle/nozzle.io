@@ -146,7 +146,11 @@ export default class DevblogPost extends Component {
               </div>
               <div className="tags">
                 {post.fields.tags.map(tag => (
-                  <Link href={`/devblog/tags/${tag}/`} key={tag}>
+                  <Link
+                    as={`/devblog/tags/${tag}`}
+                    href="/devblog/tags/[tag]"
+                    key={tag}
+                  >
                     <a
                       className="tag"
                       style={{

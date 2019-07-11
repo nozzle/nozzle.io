@@ -66,31 +66,6 @@ export default class Footer extends Component {
         <div className="container">
           <div className="navContainer">
             <div className="navLinks">
-              <Link href="/about">
-                <a>About Us</a>
-              </Link>
-            </div>
-            <div className="navLinks">
-              <Link href="/pricing">
-                <a>Pricing</a>
-              </Link>
-            </div>
-            <div className="navLinks">
-              <Link href="/features">
-                <a>Features</a>
-              </Link>
-            </div>
-            <div className="navLinks">
-              <Link href="/rank-tracker-comparison">
-                <a>Why Us?</a>
-              </Link>
-            </div>
-            <div className="navLinks">
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
-            </div>
-            <div className="navLinks">
               <Link href="/devblog">
                 <a>Dev Blog</a>
               </Link>

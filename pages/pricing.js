@@ -570,7 +570,7 @@ class SectionCalculatorCmp extends Component {
                   </div>
                   <div className="suggested">Suggested Plan:</div>
                   <div className="suggested-plan">
-                    <Link href={`/pricing/#${suggestedPlan.value}`}>
+                    <Link href={`/pricing#${suggestedPlan.value}`}>
                       <a>{suggestedPlan.label}</a>
                     </Link>
                   </div>

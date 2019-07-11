@@ -67,13 +67,10 @@ export async function fetchDevPostsByTag(tag) {
 }
 
 export async function fetchBlogPostsByTag(tag) {
-  console.log(tag)
   let { items: posts } = await client.getEntries({
-    content_type: '2wKn6yEnZewu2SCCkus4as'
-    // 'fields.tags[in]': tag
+    content_type: '2wKn6yEnZewu2SCCkus4as',
+    'fields.tags[in]': tag
   })
-
-  console.log(posts)
 
   posts = posts.map(normalizePostTags)
   const tags = getTagsFromPosts(posts)

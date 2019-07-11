@@ -132,7 +132,10 @@ export default function PostList({ prefix, posts }) {
                 <article>
                   <header>
                     <div className="titleImg">
-                      <Link href={`/${prefix}/${post.fields.slug}/`}>
+                      <Link
+                        as={`/${prefix}/${post.fields.slug}/`}
+                        href={`/${prefix}/[postSlug]`}
+                      >
                         <a>
                           <img
                             src={
@@ -146,7 +149,10 @@ export default function PostList({ prefix, posts }) {
                     </div>
                     <h2 className="title">
                       <div className="linkStyle">
-                        <Link href={`/${prefix}/${post.fields.slug}/`}>
+                        <Link
+                          as={`/${prefix}/${post.fields.slug}/`}
+                          href={`/${prefix}/[postSlug]`}
+                        >
                           <a>{post.fields.title}</a>
                         </Link>
                       </div>

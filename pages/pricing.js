@@ -429,50 +429,41 @@ class SectionCalculatorCmp extends Component {
   constructor() {
     super()
     this.state = {
-      keywords: 10000,
+      keywords: {
+        weekly: 1000
+      },
       engines: 2,
       devices: 2,
-      languages: 1,
       locations: 1,
       frequency: 'monthly'
     }
   }
   render() {
     const props = this.props
-    const {
-      keywords,
-      engines,
-      devices,
-      languages,
-      locations,
-      frequency
-    } = this.state
+    const { keywords, engines, devices, locations } = this.state
 
-    let totalCredits = keywords * engines * devices * languages * locations
-    switch (frequency[0].value) {
-      case 'hourly':
-        totalCredits *= 30 * 24 * 5
-        break
-      case 'daily':
-        totalCredits *= 30
-        break
-      case 'weekly':
-        totalCredits *= 4
-        break
-      default:
-        break
-    }
+    let totalKeywords = 0
 
-    let suggestedPlan = plans[4]
+    totalKeywords += (keywords.hourly || 0) * 30 * 24 * 5
+    totalKeywords += (keywords.daily || 0) * 30
+    totalKeywords += (keywords.weekly || 0) * 4
+    totalKeywords += keywords.monthly || 0
+    totalKeywords += keywords.onetime || 0
 
-    if (totalCredits <= 9000) {
-      suggestedPlan = plans[0]
-    } else if (totalCredits <= 18000) {
-      suggestedPlan = plans[1]
-    } else if (totalCredits <= 40000) {
-      suggestedPlan = plans[2]
-    } else if (totalCredits <= 200000) {
+    let totalCredits = totalKeywords * engines * devices * locations
+
+    let suggestedPlan
+
+    if (totalCredits >= 200000) {
+      suggestedPlan = plans[4]
+    } else if (totalCredits >= 40000) {
       suggestedPlan = plans[3]
+    } else if (totalCredits >= 18000) {
+      suggestedPlan = plans[2]
+    } else if (totalCredits >= 500) {
+      suggestedPlan = plans[1]
+    } else {
+      suggestedPlan = plans[0]
     }
 
     return (
@@ -481,23 +472,32 @@ class SectionCalculatorCmp extends Component {
           <H3 className="title">How many credits do I need per month?</H3>
           <div className="inner">
             <div className="left">
-              <div className="row keywords">
-                <label>Keywords</label>
-                <div>
-                  <Input
-                    type="number"
-                    value={keywords}
-                    onChange={e =>
-                      this.setState({
-                        keywords: e.target.value
-                      })
-                    }
-                    css={{
-                      border: !keywords && '2px solid red'
-                    }}
-                  />
+              {frequencyOptions.map(option => (
+                <div className="row keywords" key={option.value}>
+                  <label>{option.label} Keywords</label>
+                  <div>
+                    <Input
+                      type="number"
+                      min="0"
+                      value={keywords[option.value] || ''}
+                      onChange={e =>
+                        e.persist() ||
+                        this.setState(old => ({
+                          ...old,
+                          keywords: {
+                            ...old.keywords,
+                            [option.value]: e.target.value
+                          }
+                        }))
+                      }
+                      css={{
+                        border: !keywords && '2px solid red'
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
+              ))}
+              <hr />
               <div className="row engines">
                 <label>Engines</label>
                 <div>
@@ -536,24 +536,6 @@ class SectionCalculatorCmp extends Component {
                   />
                 </div>
               </div>
-              <div className="row languages">
-                <label>Languages</label>
-                <div>
-                  <Input
-                    type="number"
-                    min="1"
-                    value={languages}
-                    onChange={e =>
-                      this.setState({
-                        languages: e.target.value
-                      })
-                    }
-                    css={{
-                      border: !languages && '2px solid red'
-                    }}
-                  />
-                </div>
-              </div>
               <div className="row locations">
                 <label>Locations</label>
                 <div>
@@ -572,35 +554,30 @@ class SectionCalculatorCmp extends Component {
                   />
                 </div>
               </div>
-              <div className="row frequency">
-                <div className="label">Frequency</div>
-                <div className="radios">
-                  {frequencyOptions.map((option, i) => (
-                    <label htmlFor="frequency" key={i}>
-                      <input
-                        type="radio"
-                        name={option.value}
-                        onChange={() =>
-                          this.setState({
-                            frequency: option.value
-                          })
-                        }
-                        checked={frequency === option.value}
-                      />{' '}
-                      {option.label}
-                    </label>
-                  ))}
-                </div>
-              </div>
             </div>
             <div className="right">
-              <div className="amount">{number(totalCredits)}</div>
-              <div className="suggested">Suggested Plan:</div>
-              <div className="suggested-plan">
-                <Link href={`/pricing/#${suggestedPlan.value}`}>
-                  <a>{suggestedPlan.label}</a>
-                </Link>
-              </div>
+              {suggestedPlan ? (
+                <>
+                  <div className="amount">{number(totalCredits)}</div>
+                  <div
+                    css={`
+                      font-size: 1.5rem;
+                      padding: 0.5rem;
+                      margin-bottom: 1rem;
+                    `}
+                  >
+                    credits
+                  </div>
+                  <div className="suggested">Suggested Plan:</div>
+                  <div className="suggested-plan">
+                    <Link href={`/pricing/#${suggestedPlan.value}`}>
+                      <a>{suggestedPlan.label}</a>
+                    </Link>
+                  </div>
+                </>
+              ) : (
+                <span>Enter your requirements to see a suggested plan</span>
+              )}
             </div>
           </div>
         </Container>
@@ -620,21 +597,22 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
     display: flex;
     flex-wrap: wrap;
   }
-  .left,
-  .right {
-    flex: 1 1 400px;
-    padding: 0 20px;
-  }
   .left {
-    font-size: 1.8em;
+    flex: 0 1 450px;
+    padding: 0 20px;
+    font-size: 1.2em;
     line-height: 2.4em;
     .row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      > div {
-        flex: 0 0 50%;
-        width: 50%;
+      label {
+        flex: 1 0 250px;
+        text-align: right;
+        margin-right: 1rem;
+      }
+      div {
+        flex: 1 0 150px;
       }
     }
     input[type='number'] {
@@ -656,6 +634,8 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
     }
   }
   .right {
+    flex: 1;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -673,7 +653,7 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
     }
     .suggested-plan {
       padding: 10px;
-      font-size: 25px;
+      font-size: 2.5rem;
       font-weight: bold;
       color: ${Theme.colors.primaryDark};
     }

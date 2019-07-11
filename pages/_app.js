@@ -11,6 +11,11 @@ import Theme from 'utils/Theme'
 import Head from 'components/Head'
 import NavWrapper from 'components/NavWrapper'
 
+console.log(
+  `Are you a front-end developer?! Turns out we're always looking for top talent in that area. :)`
+)
+console.log(`Send us your resume at careers@nozzle.io and we'll get in touch!`)
+
 const GlobalStyles = createGlobalStyle`
   ${reset};
   html, body, body, [data-reactroot] {

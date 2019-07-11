@@ -2,3 +2,4 @@
 .next
 node_modules
 public/sitemap.xml
+.DS_Store

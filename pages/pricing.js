@@ -480,16 +480,17 @@ class SectionCalculatorCmp extends Component {
                       type="number"
                       min="0"
                       value={keywords[option.value] || ''}
-                      onChange={e =>
-                        e.persist() ||
+                      onChange={e => {
+                        let value = parseInt(e.target.value)
+                        value = value || ''
                         this.setState(old => ({
                           ...old,
                           keywords: {
                             ...old.keywords,
-                            [option.value]: e.target.value
+                            [option.value]: value
                           }
                         }))
-                      }
+                      }}
                       css={{
                         border: !keywords && '2px solid red'
                       }}

@@ -482,13 +482,13 @@ class SectionCalculatorCmp extends Component {
 
     let suggestedPlan
 
-    if (totalCredits >= 200000) {
+    if (totalCredits > 200000) {
       suggestedPlan = plans[4]
-    } else if (totalCredits >= 40000) {
+    } else if (totalCredits > 40000) {
       suggestedPlan = plans[3]
-    } else if (totalCredits >= 18000) {
+    } else if (totalCredits > 18000) {
       suggestedPlan = plans[2]
-    } else if (totalCredits >= 500) {
+    } else if (totalCredits > 5000) {
       suggestedPlan = plans[1]
     } else {
       suggestedPlan = plans[0]

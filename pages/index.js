@@ -120,10 +120,16 @@ const SectionKnowEverything = styled(Section)`
   }
 
   img {
-    max-width: 940px;
-    width: 140%;
     border-radius: 5px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .right {
+    flex: 2 1 300px;
+    img {
+      max-width: 1500px;
+      width: 220%;
+    }
   }
 `
 const SectionTrackAllTheThings = styled(Section)`
@@ -320,7 +326,7 @@ export default class Home extends Component {
               </Link>
             </Left>
             <Right>
-              <Img src={require('public/img/dashboard.png')} />
+              <Img src={require('public/img/dashboard.jpg')} />
             </Right>
           </SectionKnowEverything>
           <SectionTrackAllTheThings>

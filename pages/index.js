@@ -41,7 +41,6 @@ const section = css`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    overflow-x: hidden;
   }
   img {
     width: 100%;

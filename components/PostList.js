@@ -24,8 +24,8 @@ const PostContainer = styled('div')`
 const Post = styled('div')`
   width: 32%;
   height: auto;
-  margin: 1%;
-  padding: 3rem;
+  margin: 0.5%;
+  padding: 2%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background: white;
   border-radius: 0.5rem;
@@ -108,6 +108,7 @@ const Post = styled('div')`
 
   .titleImg {
     img {
+      border-radius: 0.3rem;
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -130,22 +131,24 @@ export default function PostList({ prefix, posts }) {
               <Post key={post.fields.slug}>
                 <article>
                   <header>
-                    <div className="titleImg">
-                      <Link
-                        as={`/${prefix}/${post.fields.slug}/`}
-                        href={`/${prefix}/[postSlug]`}
-                      >
-                        <a>
-                          <img
-                            src={
-                              post.fields.featuredImage && [
-                                post.fields.featuredImage.fields.file.url
-                              ]
-                            }
-                          />
-                        </a>
-                      </Link>
-                    </div>
+                    {post.fields.featuredImage ? (
+                      <div className="titleImg">
+                        <Link
+                          as={`/${prefix}/${post.fields.slug}/`}
+                          href={`/${prefix}/[postSlug]`}
+                        >
+                          <a>
+                            <img
+                              src={
+                                post.fields.featuredImage && [
+                                  post.fields.featuredImage.fields.file.url
+                                ]
+                              }
+                            />
+                          </a>
+                        </Link>
+                      </div>
+                    ) : null}
                     <h2 className="title">
                       <div className="linkStyle">
                         <Link

@@ -170,10 +170,11 @@ export default function PostList({ prefix, posts }) {
                           key={tag}
                         >
                           <a
+                            tag={tag}
                             className="tag"
                             css={`
                               background: ${props =>
-                                props.theme.colors.tags[tag]};
+                                props.theme.colors.tags[props.tag]};
                             `}
                           >
                             {tag}

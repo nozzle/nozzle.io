@@ -151,9 +151,11 @@ export default class DevblogPost extends Component {
                     key={tag}
                   >
                     <a
+                      tag={tag}
                       className="tag"
                       css={`
-                        background: ${props => props.theme.colors.tags[tag]};
+                        background: ${props =>
+                          props.theme.colors.tags[props.tag]};
                       `}
                     >
                       {tag}

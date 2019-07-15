@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
 //
-import Theme from 'utils/Theme'
 
 import Head from 'components/Head'
 
@@ -132,7 +131,7 @@ const AboutUsDiv = styled('div')`
       padding-bottom: 80px;
       text-align: center;
       font-weight: bold;
-      color: ${Theme.colors.primaryDark};
+      color: ${props => props.theme.colors.primaryDark};
       animation: ${densityAnimation} 6s infinite;
     }
     .delorianSide {
@@ -173,7 +172,7 @@ const AboutUsDiv = styled('div')`
       text-align: center;
       margin: 150px 0 20px;
       font-weight: bold;
-      color: ${Theme.colors.primaryDark};
+      color: ${props => props.theme.colors.primaryDark};
       img {
         width: 400px;
       }
@@ -225,7 +224,7 @@ const AboutUsDiv = styled('div')`
     padding: 20px;
     padding-top: 100px;
     padding-bottom: 100px;
-    background: ${Theme.colors.primaryDark};
+    background: ${props => props.theme.colors.primaryDark};
     h2 {
       color: #fff;
       text-align: center;
@@ -278,7 +277,7 @@ const AboutUsDiv = styled('div')`
         }
       }
       h3 {
-        color: ${Theme.colors.primary};
+        color: ${props => props.theme.colors.primary};
       }
       p {
         line-height: 1.3em;

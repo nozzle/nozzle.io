@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 //
 import Easing from 'utils/Easing'
-import Theme from 'utils/Theme'
 
 const margin = css`
   margin: 0 auto 1rem;
@@ -20,7 +19,8 @@ export const button = props => css`
   transition: all 0.2s ${Easing.css.easeOutBack};
   cursor: pointer;
   text-decoration: none;
-  background: ${Theme.colors[props.color] || Theme.colors.primary};
+  background: ${props =>
+    props.theme.colors[props.color] || props.theme.colors.primary};
   color: white;
   font-size: 1rem;
 
@@ -57,18 +57,18 @@ const full = ({ full }) =>
   `
 
 const backgroundColor = ({ color }) => css`
-  background: ${Theme.colors[color] || color};
-  color: ${color === 'white' && Theme.colors.text};
+  background: ${props => props.theme.colors[color] || color};
+  color: ${props => color === 'white' && props.theme.colors.text};
 `
 
 export const color = ({ color }) =>
   css`
-    color: ${Theme.colors[color] || color};
+    color: ${props => props.theme.colors[color] || color};
   `
 
 const weight = ({ weight }) =>
   css`
-    font-weight: ${Theme.weights[weight] || weight};
+    font-weight: ${props => props.theme.weights[weight] || weight};
   `
 
 // Components
@@ -78,8 +78,8 @@ export const H1 = styled('h1')`
   ${full};
   ${color};
   ${weight};
-  font-size: ${Theme.sizes.h1}rem;
-  line-height: ${Theme.sizes.h1 * 1.2}rem;
+  font-size: ${props => props.theme.sizes.h1}rem;
+  line-height: ${props => props.theme.sizes.h1 * 1.2}rem;
 `
 
 export const H2 = styled('h2')`
@@ -87,8 +87,8 @@ export const H2 = styled('h2')`
   ${full};
   ${color};
   ${weight};
-  font-size: ${Theme.sizes.h2}rem;
-  line-height: ${Theme.sizes.h2 * 1.2}rem;
+  font-size: ${props => props.theme.sizes.h2}rem;
+  line-height: ${props => props.theme.sizes.h2 * 1.2}rem;
 `
 
 export const H3 = styled('h3')`
@@ -96,8 +96,8 @@ export const H3 = styled('h3')`
   ${full};
   ${color};
   ${weight};
-  font-size: ${Theme.sizes.h3}rem;
-  line-height: ${Theme.sizes.h3 * 1.2}rem;
+  font-size: ${props => props.theme.sizes.h3}rem;
+  line-height: ${props => props.theme.sizes.h3 * 1.2}rem;
 `
 
 export const H4 = styled('h4')`
@@ -105,8 +105,8 @@ export const H4 = styled('h4')`
   ${full};
   ${color};
   ${weight};
-  font-size: ${Theme.sizes.h4}rem;
-  line-height: ${Theme.sizes.h4 * 1.2}rem;
+  font-size: ${props => props.theme.sizes.h4}rem;
+  line-height: ${props => props.theme.sizes.h4 * 1.2}rem;
 `
 
 export const H5 = styled('h5')`
@@ -114,8 +114,8 @@ export const H5 = styled('h5')`
   ${full};
   ${color};
   ${weight};
-  font-size: ${Theme.sizes.h5}rem;
-  line-height: ${Theme.sizes.h5 * 1.2}rem;
+  font-size: ${props => props.theme.sizes.h5}rem;
+  line-height: ${props => props.theme.sizes.h5 * 1.2}rem;
 `
 
 export const H6 = styled('h6')`
@@ -123,8 +123,8 @@ export const H6 = styled('h6')`
   ${full};
   ${color};
   ${weight};
-  font-size: ${Theme.sizes.h6}rem;
-  line-height: ${Theme.sizes.h6 * 1.2}rem;
+  font-size: ${props => props.theme.sizes.h6}rem;
+  line-height: ${props => props.theme.sizes.h6 * 1.2}rem;
 `
 
 export const P = styled('p')`
@@ -215,8 +215,8 @@ export const Table = styled(TableCmp)`
     th,
     td {
       background: white;
-      font-weight: ${Theme.weights.bold};
-      color: ${Theme.colors.darker};
+      font-weight: ${props => props.theme.weights.bold};
+      color: ${props => props.theme.colors.darker};
       border-right: 1px solid rgba(0, 0, 0, 0.05);
     }
 

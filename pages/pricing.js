@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 //
-import Theme from 'utils/Theme'
 import { angle } from 'utils/Styles'
 import { number } from 'utils/Format'
 
@@ -273,12 +272,12 @@ const SectionPlans = styled(SectionPlansCmp)`
       min-height: 530px;
       border-radius: 3px 0 0 3px;
       z-index: 2;
-      background: ${Theme.colors.primaryDark};
+      background: ${props => props.theme.colors.primaryDark};
     }
     :nth-child(2) {
       flex: 1 1 27%;
       border-radius: 3px;
-      background: ${Theme.colors.primaryDarker};
+      background: ${props => props.theme.colors.primaryDarker};
       min-height: 570px;
       z-index: 3;
     }
@@ -287,12 +286,12 @@ const SectionPlans = styled(SectionPlansCmp)`
       min-height: 530px;
       border-radius: 0 3px 3px 0;
       z-index: 2;
-      background: ${Theme.colors.primaryDark};
+      background: ${props => props.theme.colors.primaryDark};
     }
     :nth-child(4) {
       flex: 1 1 22%;
       min-height: 490px;
-      background: ${Theme.colors.primary};
+      background: ${props => props.theme.colors.primary};
       border-radius: 0 3px 3px 0;
       z-index: 1;
     }
@@ -403,8 +402,8 @@ const SectionSpray = styled(SectionSprayCmp)`
   margin: 5% auto;
   background: linear-gradient(
     to right,
-    ${Theme.colors.primary},
-    ${Theme.colors.primaryDark}
+    ${props => props.theme.colors.primary},
+    ${props => props.theme.colors.primaryDark}
   );
   display: block;
   width: 500px;
@@ -683,7 +682,7 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
       padding: 10px;
       font-size: 2.5rem;
       font-weight: bold;
-      color: ${Theme.colors.primaryDark};
+      color: ${props => props.theme.colors.primaryDark};
     }
   }
 `
@@ -718,7 +717,7 @@ const SectionContactUs = styled(SectionContactUsCmp)`
   ${section};
   ${angle('right')};
 
-  background: ${Theme.colors.primaryDarker};
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
 
   :after {

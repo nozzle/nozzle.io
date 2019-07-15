@@ -1,14 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import axios from 'axios'
-import Link from 'next/link'
 import { Form, Text } from 'react-form'
 //
 import encodeFormData from 'utils/encodeFormData'
 import { Button } from 'components/Html'
-
-// width: ${Theme.maxWidth}px;
-// max-width: 100%;
 
 function Matrix({ speed = 100, size = 18, ...rest }) {
   const ref = React.useRef()

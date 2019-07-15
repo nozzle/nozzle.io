@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 import Link from 'next/link'
 //
-import Theme from 'utils/Theme'
 import { angle } from 'utils/Styles'
 
 import Head from 'components/Head'
@@ -42,7 +41,7 @@ const SectionWhyAnother = styled('section')`
   ${section};
   ${angle('right')};
 
-  background: ${Theme.colors.primaryDarker};
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
 `
 
@@ -53,10 +52,10 @@ const TableSection = styled('section')`
 const header = name => (
   <tr
     key={name}
-    style={{
-      borderTop: name && 'solid 50px transparent',
-      fontWeight: Theme.weights.bold
-    }}
+    css={`
+      border-top: ${name && 'solid 50px transparent'};
+      font-weight: ${props => props.theme.weights.bold};
+    `}
   >
     <td>{name || 'Feature'}</td>
     <td>Nozzle</td>

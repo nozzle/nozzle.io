@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { format } from 'date-fns'
 import Link from 'next/link'
 //
-import Theme from 'utils/Theme'
 import ReadTime from 'utils/ReadTime'
 
 import Smackdown from './Smackdown'
@@ -61,7 +60,7 @@ const Post = styled('div')`
       display: inline-block;
       padding: 0.4rem 0.6rem;
       border-radius: 0.5rem;
-      background: ${Theme.colors.primaryDark};
+      background: ${props => props.theme.colors.primaryDark};
       color: white;
       margin: 0 0.3rem 0.3rem 0;
     }
@@ -172,9 +171,10 @@ export default function PostList({ prefix, posts }) {
                         >
                           <a
                             className="tag"
-                            style={{
-                              background: Theme.colors.tags[tag]
-                            }}
+                            css={`
+                              background: ${props =>
+                                props.theme.colors.tags[tag]};
+                            `}
                           >
                             {tag}
                           </a>

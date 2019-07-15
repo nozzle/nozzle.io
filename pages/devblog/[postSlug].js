@@ -5,7 +5,6 @@ import { format } from 'date-fns'
 
 import { fetchDevPostBySlug } from '../../contentful'
 
-import Theme from 'utils/Theme'
 import ReadTime from 'utils/ReadTime'
 
 import Head from 'components/Head'
@@ -26,8 +25,8 @@ const FeaturedImage = styled(Img)`
 `
 
 const PostH1 = styled(H1)`
-  font-size: ${Theme.sizes.h3}rem;
-  line-height: ${Theme.sizes.h3 * 1.2}rem;
+  font-size: ${props => props.theme.sizes.h3}rem;
+  line-height: ${props => props.theme.sizes.h3 * 1.2}rem;
 `
 
 const PostContainer = styled('article')`
@@ -56,7 +55,7 @@ const PostContainer = styled('article')`
       display: inline-block;
       padding: 0.7rem;
       border-radius: 0.5rem;
-      background: ${Theme.colors.primary};
+      background: ${props => props.theme.colors.primary};
       color: white;
       margin: 0 0.3rem 0.3rem 0;
     }
@@ -153,9 +152,9 @@ export default class DevblogPost extends Component {
                   >
                     <a
                       className="tag"
-                      style={{
-                        background: Theme.colors.tags[tag]
-                      }}
+                      css={`
+                        background: ${props => props.theme.colors.tags[tag]};
+                      `}
                     >
                       {tag}
                     </a>

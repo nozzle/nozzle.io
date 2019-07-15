@@ -6,8 +6,6 @@ import bash from 'react-syntax-highlighter/dist/languages/hljs/bash'
 import atomOneDark from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark'
 //
 
-import Theme from 'utils/Theme'
-
 import Link from 'next/link'
 import { H3, H4, H5, H6 } from './Html'
 
@@ -79,7 +77,7 @@ export default styled(El)`
 
   a {
     font-weight: 400;
-    color: ${Theme.colors.primary};
+    color: ${props => props.theme.colors.primary};
   }
 
   iframe {

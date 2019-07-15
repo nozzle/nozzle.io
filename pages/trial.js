@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 //
-import Theme from 'utils/Theme'
 import { angle } from 'utils/Styles'
 
 import { H2, H6, Button } from 'components/Html'
@@ -20,7 +19,7 @@ const Section = ({ children, ...rest }) => (
 const SectionContactUs = styled(Section)`
   z-index: 0;
   .inner {
-    max-width: ${Theme.maxWidth}px;
+    max-width: ${props => props.theme.maxWidth}px;
     margin: 0 auto;
     padding: 10% 10%;
     display: flex;
@@ -43,7 +42,7 @@ const SectionContactUs = styled(Section)`
     }
   }
 
-  background: ${Theme.colors.primaryDarker};
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
 
   ${angle('right')};

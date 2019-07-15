@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components'
 import axios from 'axios'
 import { Form, Text } from 'react-form'
 //
-import Theme from 'utils/Theme'
 import encodeFormData from 'utils/encodeFormData'
 
 const ExitIntentStyles = styled('div')`
@@ -41,7 +40,7 @@ const ExitIntentStyles = styled('div')`
     display: block;
     margin-bottom: 25px;
     font-weight: 700;
-    color: ${Theme.colors.primary};
+    color: ${props => props.theme.colors.primary};
   }
 
   .-message {
@@ -63,7 +62,7 @@ const ExitIntentStyles = styled('div')`
   .button {
     display: block;
     width: 100%;
-    background-color: ${Theme.colors.success};
+    background-color: ${props => props.theme.colors.success};
     font-size: 1.3em;
     padding: 12px;
     border-radius: 4px;
@@ -93,7 +92,7 @@ const ExitIntentStyles = styled('div')`
     transform: translate(50%, -50%);
     cursor: pointer;
     :hover {
-      background: ${Theme.colors.danger};
+      background: ${props => props.theme.colors.danger};
     }
   }
 

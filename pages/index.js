@@ -2,13 +2,11 @@ import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 //
 import Color from 'utils/Color'
-import Theme from 'utils/Theme'
 import { angle } from 'utils/Styles'
 
 import Head from 'components/Head'
 
 import Link from 'next/link'
-import NodeGarden from 'components/NodeGarden'
 import {
   H2,
   H3,
@@ -37,7 +35,7 @@ const Section = ({ children, ...rest }) => (
 const section = css`
   z-index: 0;
   .inner {
-    max-width: ${Theme.maxWidth}px;
+    max-width: ${props => props.theme.maxWidth}px;
     margin: 0 auto;
     padding: 10% 10%;
     display: flex;
@@ -91,8 +89,8 @@ const layoutLeftHalf = css`
   }
 `
 
-const layoutDark = `
-  background: ${Theme.colors.primaryDarker};
+const layoutDark = css`
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
 `
 
@@ -108,15 +106,16 @@ const SectionKnowEverything = styled(Section)`
   position: relative;
   background: radial-gradient(
     circle at center,
-    ${Theme.colors.primaryDarker} 20%,
-    ${Color(Theme.colors.primaryDarker)
-      .darken(10)
-      .toString()}
+    ${props => props.theme.colors.primaryDarker} 20%,
+    ${props =>
+      Color(props.theme.colors.primaryDarker)
+        .darken(10)
+        .toString()}
   );
   color: white;
 
   h4 {
-    color: ${Theme.colors.primaryLighter};
+    color: ${props => props.theme.colors.primaryLighter};
   }
 
   img {
@@ -174,7 +173,7 @@ const SectionRankData = styled(Section)`
   .left {
     p {
       strong {
-        color: ${Theme.colors.primaryLighter};
+        color: ${props => props.theme.colors.primaryLighter};
       }
     }
   }
@@ -198,7 +197,7 @@ const SectionCompetitors = styled(Section)`
   .right {
     p {
       strong {
-        color: ${Theme.colors.primaryLighter};
+        color: ${props => props.theme.colors.primaryLighter};
       }
     }
   }
@@ -300,17 +299,6 @@ export default class Home extends Component {
         <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Nozzle" />
         <main>
           <SectionKnowEverything>
-            <NodeGarden
-              color={Color('white')
-                .setAlpha(0.1)
-                .toString()}
-              style={{
-                position: 'absolute',
-                top: '0px',
-                left: '0px',
-                zIndex: -1
-              }}
-            />
             <Left>
               <H2>Know everything Google knows</H2>
               <H4>And deal with it.</H4>

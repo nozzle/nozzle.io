@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 //
-import Theme from 'utils/Theme'
 import Color from 'utils/Color'
 import { angle } from 'utils/Styles'
 
@@ -9,7 +8,6 @@ import Head from 'components/Head'
 
 import Link from 'next/link'
 import Icon from 'components/Icon'
-import TrialForm from 'components/TrialForm'
 
 import {
   Button,
@@ -79,9 +77,10 @@ const FeaturesNavDiv = styled(FeaturesNav)`
   left: 0;
   padding: 0;
   transition: all 0.3s ease;
-  background: ${Color(Theme.colors.primaryDarkest)
-    .setAlpha(0.9)
-    .toString()};
+  background: ${props =>
+    Color(props.theme.colors.primaryDarkest)
+      .setAlpha(0.9)
+      .toString()};
   text-align: center;
   z-index: 999;
   overflow: hidden;
@@ -251,7 +250,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
       margin: 0 10px;
       color: white;
       box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
-      background: ${Theme.colors.primaryDark};
+      background: ${props => props.theme.colors.primaryDark};
       border-radius: 5px;
       div {
         position: absolute;
@@ -262,22 +261,22 @@ const SectionBrands = styled(SectionBrandsCmp)`
         &.line1 {
           top: 56px;
           width: 80%;
-          background: ${Theme.colors.primaryLight};
+          background: ${props => props.theme.colors.primaryLight};
         }
         &.line2 {
           top: 69px;
           width: 40%;
-          background: ${Theme.colors.success};
+          background: ${props => props.theme.colors.success};
         }
         &.line3 {
           top: 81px;
           width: 65%;
-          background: ${Theme.colors.danger};
+          background: ${props => props.theme.colors.danger};
         }
         &.line4 {
           top: 94px;
           width: 20%;
-          background: ${Theme.colors.warning};
+          background: ${props => props.theme.colors.warning};
         }
       }
     }
@@ -478,7 +477,7 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
   ${section};
   ${angle('right')};
 
-  background: ${Theme.colors.primaryDarker};
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
   h2 {
     text-align: center;
@@ -489,7 +488,7 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
     }
   }
   strong {
-    color: ${Theme.colors.primaryLighter};
+    color: ${props => props.theme.colors.primaryLighter};
   }
   .one,
   .two {
@@ -767,7 +766,7 @@ const SectionData = styled(SectionDataCmp)`
   ${section};
   ${angle('right')};
 
-  background: ${Theme.colors.primaryDarker};
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
   .-header {
     h2,
@@ -826,10 +825,10 @@ const SectionData = styled(SectionDataCmp)`
     }
     .-metrics {
       i {
-        color: ${Theme.colors.success};
+        color: ${props => props.theme.colors.success};
       }
       li:before {
-        background-color: ${Theme.colors.success};
+        background-color: ${props => props.theme.colors.success};
       }
     }
     .-data {
@@ -842,10 +841,10 @@ const SectionData = styled(SectionDataCmp)`
     }
     .-keywordGroups {
       i {
-        color: ${Theme.colors.primaryLight};
+        color: ${props => props.theme.colors.primaryLight};
       }
       li:before {
-        background-color: ${Theme.colors.primaryLight};
+        background-color: ${props => props.theme.colors.primaryLight};
       }
     }
     .-globalLocal {
@@ -866,10 +865,10 @@ const SectionData = styled(SectionDataCmp)`
     }
     .-ads {
       i {
-        color: ${Theme.colors.vendors.bing};
+        color: ${props => props.theme.colors.vendors.bing};
       }
       li:before {
-        background-color: ${Theme.colors.vendors.bing};
+        background-color: ${props => props.theme.colors.vendors.bing};
       }
     }
     .-image {
@@ -910,7 +909,7 @@ const SectionData = styled(SectionDataCmp)`
     ul {
       font-size: 1.1rem;
       font-weight: 600;
-      color: ${Theme.colors.text};
+      color: ${props => props.theme.colors.text};
     }
     li {
       padding: 10px 10px 10px 30px;
@@ -1069,7 +1068,7 @@ const SectionReputation = styled(SectionReputationCmp)`
   ${section};
   ${angle('right')};
 
-  background: ${Theme.colors.primaryDarker};
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
   img {
     display: block;
@@ -1226,7 +1225,7 @@ const SectionIntegrations = styled(SectionIntegrationsCmp)`
     padding: 20px;
     text-align: center;
     h5 {
-      color: ${Theme.colors.primaryDarker};
+      color: ${props => props.theme.colors.primaryDarker};
       margin: 0 0 20px;
       border-bottom: 3px solid rgba(0, 0, 0, 0.1);
       padding-bottom: 10px;
@@ -1239,7 +1238,7 @@ const SectionIntegrations = styled(SectionIntegrationsCmp)`
       font-weight: 600;
     }
     a {
-      color: ${Theme.colors.primaryLight};
+      color: ${props => props.theme.colors.primaryLight};
     }
   }
   @media screen and (min-width: 600px) {
@@ -1276,7 +1275,7 @@ const SectionContactUs = styled(SectionContactUsCmp)`
   ${section};
   ${angle('right')};
 
-  background: ${Theme.colors.primaryDarker};
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
 
   :after {

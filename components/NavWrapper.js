@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 //
-import Theme from 'utils/Theme'
 import Navbar from './Navbar'
 import Footer from './Footer'
 // import ExitIntent from './ExitIntent'
@@ -11,7 +10,7 @@ const PageStyles = styled('div')`
 `
 
 const ContentStyled = styled('div')`
-  color: ${Theme.colors.text};
+  color: ${props => props.theme.colors.text};
   background: white;
   min-height: 100vh;
   display: flex;

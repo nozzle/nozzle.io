@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import styled, { keyframes, css } from 'styled-components'
 import Link from 'next/link'
 //
-import Theme from 'utils/Theme'
 import ClickOutside from './ClickOutside'
 
 import { Button } from './Html'
@@ -28,9 +27,8 @@ const trialAnimation = keyframes`
 const NavbarStyles = styled('header')`
   position: sticky;
   top: 0;
-  background: linear-gradient(to left, ${Theme.colors.primary}, ${
-  Theme.colors.primaryLight
-});
+  background: linear-gradient(to left, ${props =>
+    props.theme.colors.primary}, ${props => props.theme.colors.primaryLight});
 
   width: 100%;
   z-index: 1000;
@@ -38,7 +36,7 @@ const NavbarStyles = styled('header')`
   height: 52px;
 
   .inner {
-    max-width: ${Theme.maxWidth}px;
+    max-width: ${props => props.theme.maxWidth}px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -149,11 +147,11 @@ const NavbarStyles = styled('header')`
       max-height: 65vh;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
-      background: ${Theme.colors.primaryDark};
+      background: ${props => props.theme.colors.primaryDark};
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      border-bottom: 5px solid ${Theme.colors.primaryLight};
+      border-bottom: 5px solid ${props => props.theme.colors.primaryLight};
       pointer-events: none;
       transform: translateY(10px);
       opacity: 0;
@@ -219,7 +217,7 @@ const NavbarStyles = styled('header')`
       flex-direction: column;
       align-items: stretch;
       font-size: .8em;
-      background: ${Theme.colors.primaryDark};
+      background: ${props => props.theme.colors.primaryDark};
       box-shadow: inset 0 10px 0 -10px rgba(0,0,0,.3), 0 10px 20px 0 rgba(0,0,0,.3);
       border-radius: 0 0 3px 3px;
       opacity: 0;
@@ -230,7 +228,7 @@ const NavbarStyles = styled('header')`
 
       .link {
         &:hover {
-          background: ${Theme.colors.primary};
+          background: ${props => props.theme.colors.primary};
         }
 
         > a {

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 //
 // import { H5 } from './Html'
-import Theme from 'utils/Theme'
 import Link from 'next/link'
 
 const belowMobile = `@media(max-width: ${700}px)`
@@ -11,7 +10,7 @@ const FooterStyles = styled('div')`
   position: relative;
   z-index: 1;
   padding: 20px;
-  background: ${Theme.colors.primary};
+  background: ${props => props.theme.colors.primary};
   color: white;
   box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, 0.3);
 

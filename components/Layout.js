@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 //
-import Theme from 'utils/Theme'
 
 export const Container = styled('div')`
   flex: 1;
   width: 100%;
-  max-width: ${Theme.maxWidth}px;
+  max-width: ${props => props.theme.maxWidth}px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -20,7 +19,7 @@ export const Center = styled('div')`
 `
 
 export const Header = styled('div')`
-  background: ${Theme.colors.primaryDarker};
+  background: ${props => props.theme.colors.primaryDarker};
   color: white;
   padding: 2rem;
   text-align: center;

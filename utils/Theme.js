@@ -1,3 +1,4 @@
+import React from 'react'
 import Color from './Color'
 
 const primary = '#0C6A8A'
@@ -102,3 +103,5 @@ export default {
     ]
   }
 }
+
+export const ThemeContext = React.createContext()

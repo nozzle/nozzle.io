@@ -86,8 +86,8 @@ const PostStyles = styled('div')`
 `
 
 export default class DevblogPost extends Component {
-  static getInitialProps = async () => {
-    return fetchBlogPostBySlug()
+  static getInitialProps = async (req) => {
+    return fetchBlogPostBySlug(req.query.postSlug)
   }
   render() {
     const { post } = this.props

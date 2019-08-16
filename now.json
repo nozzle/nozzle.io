@@ -1,5 +1,6 @@
 {
   "version": 2,
   "builds": [{ "src": "package.json", "use": "@now/next" }],
-  "alias": "nozzle.io"
+  "alias": "nozzle.io",
+  "routes": [{ "src": "/(.*)/$", "status": 301, "headers": { "Location": "/$1" } }]
 }

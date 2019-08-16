@@ -101,11 +101,7 @@ export default class DevblogPost extends Component {
           description={post.fields.shortDescription}
           type="article"
           path={`/blog/${post.fields.slug}`}
-          images={
-            post.fields.featuredImage && [
-              post.fields.featuredImage.fields.file.url
-            ]
-          }
+          images={post.images}
           // videos=[]
           date={post.sys.createdAt}
           tags={post.fields.tags}

@@ -7,10 +7,33 @@ const client = createClient({
     '1f346953eb0bf8aa1b57c5ac3d1abe12e8b723054e5961d8a71d410e52f6dc8f'
 })
 
-const normalizePostTags = post => ({
-  ...post,
-  fields: { ...post.fields, tags: post.fields.tags || [] }
-})
+
+
+const normalizePost = post => {
+  let images = []
+  
+  if (post.fields.featuredImage) {
+    images.push(post.fields.featuredImage.fields.file.url)
+  }
+  
+  let match
+  
+  const findMarkdownImages = /\!\[.+\]\((.+)\)/gm
+
+  while ((match = findMarkdownImages.exec(post.fields.body)) !== null) {
+    images.push(match[1])
+  }
+
+  images = images.filter((value, index, all) => { 
+    return all.indexOf(value) === index;
+  })
+
+  return {
+    ...post,
+    fields: { ...post.fields, tags: post.fields.tags || [] },
+    images
+  }
+}
 
 const getTagsFromPosts = posts => uniq(flatten(posts.map(d => d.fields.tags)))
 
@@ -28,7 +51,7 @@ export async function fetchDevPosts() {
     limit: 1000
   })
 
-  const posts = items.map(normalizePostTags)
+  const posts = items.map(normalizePost)
 
   return {
     posts: orderBy(posts, [d => d.sys.createdAt], ['desc']),
@@ -42,7 +65,7 @@ export async function fetchBlogPosts() {
     limit: 1000
   })
 
-  const posts = items.map(normalizePostTags)
+  const posts = items.map(normalizePost)
 
   return {
     posts: orderBy(posts, [d => d.sys.createdAt], ['desc']),
@@ -56,7 +79,7 @@ export async function fetchDevPostsByTag(tag) {
     'fields.tags[in]': tag
   })
 
-  posts = posts.map(normalizePostTags)
+  posts = posts.map(normalizePost)
   const tags = getTagsFromPosts(posts)
 
   return {
@@ -72,11 +95,11 @@ export async function fetchBlogPostsByTag(tag) {
     'fields.tags[in]': tag
   })
 
-  posts = posts.map(normalizePostTags)
+  posts = posts.map(normalizePost)
   const tags = getTagsFromPosts(posts)
 
   return {
-    posts: posts.map(normalizePostTags),
+    posts: posts.map(normalizePost),
     tags,
     tag
   }
@@ -91,7 +114,7 @@ export async function fetchBlogPostBySlug(slug) {
   })
 
   return {
-    post: normalizePostTags(post)
+    post: normalizePost(post)
   }
 }
 
@@ -104,6 +127,6 @@ export async function fetchDevPostBySlug(slug) {
   })
 
   return {
-    post: normalizePostTags(post)
+    post: normalizePost(post)
   }
 }

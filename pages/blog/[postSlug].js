@@ -100,7 +100,7 @@ export default class DevblogPost extends Component {
           title={`${post.fields.title} | Nozzle`}
           description={post.fields.shortDescription}
           type="article"
-          path={`/devblog/${post.fields.slug}`}
+          path={`/blog/${post.fields.slug}`}
           images={
             post.fields.featuredImage && [
               post.fields.featuredImage.fields.file.url

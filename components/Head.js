@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Info from 'utils/Info'
 
 const {
-  siteRoot,
   siteURL,
   siteTitle,
   siteFacebookAdmins,

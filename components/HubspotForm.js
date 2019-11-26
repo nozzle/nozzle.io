@@ -38,7 +38,7 @@ export default function HubspotForm ({
       script.id = hubspotSrc
       script.src = hubspotSrc;
       document.body.appendChild(script);
-      script.addEventListener('load', loadForm);
+      script.addEventListener('load', () => loadForm(id, elementId));
     } else {
       loadForm(id, elementId)
     }

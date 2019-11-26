@@ -62,14 +62,6 @@ export default function Trial() {
     <SectionContactUs id="contact">
       <H2 full>Let's start your free trial!</H2>
       <TrialForm />
-      <H6 full>or</H6>
-      <Link href="tel:1855NOZZLE1">
-        <a>
-          <Button color="primaryDark" burst>
-            Call 1-855-NOZZLE1
-          </Button>
-        </a>
-      </Link>
     </SectionContactUs>
   )
 }

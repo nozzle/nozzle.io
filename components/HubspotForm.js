@@ -25,24 +25,21 @@ function loadForm (formId, elementId) {
 export default function HubspotForm ({
   id,
 }) {
-  const elementIdRef = React.useRef()
-  if (!elementIdRef.current) {
-    elementIdRef.current = `HubspotForm-${Date.now()}`
-  }
-
-  const elementId = elementIdRef.current
-
+  const elementRef = React.useRef()
+  
   React.useEffect(() => {
+    elementRef.current.id = `HubspotForm_${Date.now()}`
+
     if (!document.getElementById(hubspotSrc)) {
       const script = document.createElement('script');
       script.id = hubspotSrc
       script.src = hubspotSrc;
       document.body.appendChild(script);
-      script.addEventListener('load', () => loadForm(id, elementId));
+      script.addEventListener('load', () => loadForm(id, elementRef.current.id));
     } else {
-      loadForm(id, elementId)
+      loadForm(id, elementRef.current.id)
     }
-  }, [])
+  }, [elementRef])
 
-  return <Styles id={elementId}/>
+  return <Styles ref={elementRef} />
 }

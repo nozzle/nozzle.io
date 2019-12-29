@@ -9,7 +9,7 @@ const belowMobile = `@media(max-width: ${700}px)`
 const FooterStyles = styled('div')`
   position: relative;
   z-index: 1;
-  padding: 20px;
+  padding: 1rem;
   background: ${props => props.theme.colors.primary};
   color: white;
   box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, 0.3);
@@ -27,6 +27,7 @@ const FooterStyles = styled('div')`
       display: block;
     }
   }
+
   .container {
     diplay: flex;
     margin-right: 4rem;
@@ -36,7 +37,6 @@ const FooterStyles = styled('div')`
   .copyright {
     display: inline-block;
     text-align: right;
-    float: right;
     font-size: .75rem;
     align-self: center;
   }
@@ -63,13 +63,6 @@ export default class Footer extends Component {
     return (
       <FooterStyles>
         <div className="container">
-          <div className="navContainer">
-            <div className="navLinks">
-              <Link href="/devblog">
-                <a>Dev Blog</a>
-              </Link>
-            </div>
-          </div>
           <div className="copyright">
             &copy; {`20${new Date().getYear() - 100}`} Nozzle Corp.
           </div>

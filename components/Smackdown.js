@@ -117,13 +117,15 @@ export default styled(El)`
     font-weight: bold;
   }
 
-  blockquote * {
+  blockquote {
     font-size: 1.5rem;
     line-height: 2.2rem;
-    padding: 2rem;
+    padding: 1rem;
+    margin: 0 0 1rem;
     font-style: italic;
     font-weight: 400;
     opacity: 0.8;
+    border-left: solid 0.3rem rgba(0,0,0,0.1);
   }
 
   pre {

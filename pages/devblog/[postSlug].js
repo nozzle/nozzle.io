@@ -162,11 +162,6 @@ export default class DevblogPost extends Component {
             </Header>
             <Container>
               <PostStyles itemProp="articleBody">
-                {post.fields.featuredImage ? (
-                  <FeaturedImage
-                    src={post.fields.featuredImage.fields.file.url}
-                  />
-                ) : null}
                 <Smackdown source={post.fields.body} />
               </PostStyles>
             </Container>

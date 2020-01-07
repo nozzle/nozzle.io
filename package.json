@@ -5,6 +5,7 @@
     "now-build": "yarn build",
     "prebuild": "babel-node scripts/generateSitemap/"
   },
+  "engines": { "node": "12.x" },
   "dependencies": {
     "@typeform/embed": "^0.9.4",
     "@zeit/next-css": "^1.0.1",

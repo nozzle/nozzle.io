@@ -1,5 +1,5 @@
 import { createClient } from 'contentful'
-import { flatten, uniq, orderBy } from 'lodash'
+import { flatten, uniq, orderBy, sample, sampleSize } from 'lodash'
 
 const client = createClient({
   space: 'z8uwv83tofbw',
@@ -132,8 +132,18 @@ export async function fetchBlogPostBySlug(slug) {
     'fields.slug[in]': slug,
   })
 
+  const category = sample(post.fields.categories)
+
+  const { posts: relatedPosts } = await fetchBlogPostsByCategorySlug(
+    category.fields.slug
+  )
+
   return {
     post: normalizePost(post),
+    relatedPosts: sampleSize(
+      relatedPosts.filter(d => d.sys.id !== post.sys.id),
+      3
+    ),
   }
 }
 

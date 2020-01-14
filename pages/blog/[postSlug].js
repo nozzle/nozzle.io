@@ -14,15 +14,8 @@ import Smackdown from 'components/Smackdown'
 import Comments from 'components/Comments'
 
 import { Container, Header } from 'components/Layout'
-import { H1, Img } from 'components/Html'
-
-const FeaturedImage = styled(Img)`
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  box-shadow: 0 0.5rem 1rem -0.3rem rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-`
+import { H1, H3, Img } from 'components/Html'
+import RelatedPosts from '../../components/RelatedPosts'
 
 const PostH1 = styled(H1)`
   width: 600px;
@@ -92,7 +85,7 @@ export default class DevblogPost extends Component {
     return fetchBlogPostBySlug(req.query.postSlug)
   }
   render() {
-    const { post } = this.props
+    const { post, relatedPosts } = this.props
 
     const wordCount = post.fields.body.split(' ').length.hello
 
@@ -164,6 +157,15 @@ export default class DevblogPost extends Component {
               path={`/blog/${post.fields.slug}`}
               title={post.fields.title}
             />
+            <H3
+              css={`
+                margin-top: 1rem;
+                text-align: center;
+              `}
+            >
+              More Like This
+            </H3>
+            <RelatedPosts posts={relatedPosts} prefix="blog" />
           </PostStyles>
         </main>
       </div>

@@ -22,14 +22,13 @@ const PostContainer = styled('div')`
 `
 
 const Post = styled('div')`
-  width: 32%;
+  flex: 1 0 300px;
   height: auto;
-  margin: 0.5%;
+  margin: 0.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background: white;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
 
   @media only screen and (max-width: 1000px) {
     width: 48%;
@@ -46,6 +45,7 @@ const Post = styled('div')`
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     opacity: 0.9;
     transition: all 0.5s ease;
+    border-radius: 1rem;
 
     > div {
       padding-bottom: 50%;
@@ -233,15 +233,4 @@ export default function PostList({ prefix, posts }) {
       )}
     </PostListStyled>
   )
-}
-
-// Button
-{
-  /*                   <div className="more">
-                    <Button size="sm" burst>
-                      <Link href={`/${blog}/${post.fields.slug}/`}>
-                        Read More
-                      </Link>
-                    </Button>
-                  </div> */
 }

@@ -25,7 +25,8 @@ const FeaturedImage = styled(Img)`
 `
 
 const PostH1 = styled(H1)`
-  max-width: 600px;
+  width: 600px;
+  max-width: 100%;
   font-size: ${props => props.theme.sizes.h3}rem;
   line-height: ${props => props.theme.sizes.h3 * 1.2}rem;
 `

@@ -11,10 +11,6 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import { fetchDevPostsByCategorySlug } from '../../../contentful'
 
-const BlogContainer = styled(Container)`
-  background: rgba(0, 0, 0, 0.02);
-`
-
 export default class DevblogTag extends Component {
   static getInitialProps = async req => {
     return fetchDevPostsByCategorySlug(req.query.categorySlug)
@@ -39,9 +35,9 @@ export default class DevblogTag extends Component {
               </ul>
             </SubMenu>
           </Header>
-          <BlogContainer>
+          <Container>
             <PostList prefix="devblog" posts={posts} />
-          </BlogContainer>
+          </Container>
         </main>
       </div>
     )

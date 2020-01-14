@@ -20,7 +20,7 @@ import {
   Span,
   Ul,
   Li,
-  Img
+  Img,
 } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
@@ -71,7 +71,7 @@ const FeaturesNav = props => (
 )
 
 const FeaturesNavDiv = styled(FeaturesNav)`
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 52px;
   left: 0;

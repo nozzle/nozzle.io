@@ -39,7 +39,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Overpass", "Helvetica", "Georgia", sans-serif;
     font-weight: ${props => props.theme.weights.regular};
     color: #3d556b;
-    overflow-x: hidden;
   }
   * {
     box-sizing: border-box;

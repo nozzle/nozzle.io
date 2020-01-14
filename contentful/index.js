@@ -134,16 +134,25 @@ export async function fetchBlogPostBySlug(slug) {
 
   const category = sample(post.fields.categories)
 
-  const { posts: relatedPosts } = await fetchBlogPostsByCategorySlug(
+  let { posts: relatedPosts } = await fetchBlogPostsByCategorySlug(
     category.fields.slug
   )
 
+  relatedPosts = sampleSize(
+    relatedPosts.filter(d => d.sys.id !== post.sys.id),
+    3
+  )
+
+  const need = 3 - relatedPosts.length
+
+  if (need) {
+    const { posts } = await fetchBlogPosts()
+    relatedPosts = [...relatedPosts, ...sampleSize(posts, need)]
+  }
+
   return {
     post: normalizePost(post),
-    relatedPosts: sampleSize(
-      relatedPosts.filter(d => d.sys.id !== post.sys.id),
-      3
-    ),
+    relatedPosts,
   }
 }
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 //
+import Color from 'utils/Color'
 
 export const Container = styled('div')`
   flex: 1;
@@ -19,7 +20,14 @@ export const Center = styled('div')`
 `
 
 export const Header = styled('div')`
-  background: ${props => props.theme.colors.primaryDarker};
+  background: radial-gradient(
+    circle at center,
+    ${props => props.theme.colors.primaryDarker} 20%,
+    ${props =>
+      Color(props.theme.colors.primaryDarker)
+        .darken(7)
+        .toString()}
+  );
   color: white;
   padding: 2rem;
   text-align: center;
@@ -44,7 +52,7 @@ export const SubMenu = styled('div')`
     transition: all 0.2s ease-out;
 
     :hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: ${props => props.theme.colors.primary};
     }
   }
 `
@@ -76,6 +84,5 @@ export const SidebarContent = styled('div')`
 `
 
 export const BlogContainer = styled(Container)`
-  background: rgba(0, 0, 0, 0.02);
   display: flex;
 `

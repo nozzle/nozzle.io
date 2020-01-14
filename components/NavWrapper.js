@@ -11,7 +11,7 @@ const PageStyles = styled('div')`
 
 const ContentStyled = styled('div')`
   color: ${props => props.theme.colors.text};
-  background: white;
+  background: #f9f9f9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

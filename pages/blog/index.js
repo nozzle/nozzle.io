@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //
 
-import { fetchBlogPosts } from '../../contentful'
+import { fetchBlogPosts, fetchBlogPostsByCategorySlug } from '../../contentful'
 
 import Link from 'next/link'
 import Head from 'components/Head'
@@ -14,20 +14,23 @@ export default class Devblog extends Component {
     return fetchBlogPosts()
   }
   render() {
-    const { posts, tags } = this.props
+    const { posts, categories } = this.props
     return (
       <div>
         <Head title="Blog | Nozzle" />
         <main>
           <Header>
             <H1>Blog</H1>
-            {tags.length ? (
+            {categories.length ? (
               <SubMenu>
                 <ul>
-                  {tags.map(tag => (
-                    <li key={tag}>
-                      <Link href="/blog/tags/[tag]" as={`/blog/tags/${tag}`}>
-                        <a>{tag}</a>
+                  {categories.map(category => (
+                    <li key={category.fields.slug}>
+                      <Link
+                        href="/blog/categories/[category]"
+                        as={`/blog/categories/${category.fields.slug}`}
+                      >
+                        <a>{category.fields.name}</a>
                       </Link>
                     </li>
                   ))}

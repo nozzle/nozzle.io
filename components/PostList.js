@@ -25,69 +25,99 @@ const Post = styled('div')`
   width: 32%;
   height: auto;
   margin: 0.5%;
-  padding: 2%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background: white;
   border-radius: 0.5rem;
-  box-shadow: inset 0 0 0 1px #dae4ed, 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: 1000px) {
     width: 48%;
   }
 
-  @media only screen and (max-width: 835px) {
+  @media only screen and (max-width: 600px) {
     width: 98%;
+  }
+
+  .titleImg {
+    display: block;
+    background-position: top;
+    background-size: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    transition: all 0.5s ease;
+
+    > div {
+      padding-bottom: 50%;
+    }
+  }
+
+  :hover {
+    .titleImg {
+      background-position: center;
+      opacity: 1;
+    }
+  }
+
+  .content {
+    padding: 1.5rem;
   }
 
   .title {
     font-size: 1.5rem;
+    line-height: 1.8rem;
     margin-bottom: 1rem;
   }
 
-  .info {
-    display: flex;
-    font-size: 0.85rem;
+  .date {
+    font-size: 0.9rem;
     margin-bottom: 1rem;
-    opacity: 0.7;
-    justify-content: space-between;
   }
 
-  .tags {
+  .readTime {
     font-size: 0.8rem;
     margin-bottom: 1rem;
-
-    .tag {
-      display: inline-block;
-      padding: 0.4rem 0.6rem;
-      border-radius: 0.5rem;
-      background: ${props => props.theme.colors.primaryDark};
-      color: white;
-      margin: 0 0.3rem 0.3rem 0;
-    }
+    opacity: 0.7;
   }
 
-  .summary {
-    position: relative;
+  .categories {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
 
-    .content {
-      text-align: left;
-      margin-bottom: 1rem;
-    }
-    .authors {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .author {
-      display: flex;
-      align-items: center;
+  .category {
+    display: inline-block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: black;
+    margin: 0 0.3rem 0.3rem 0;
+  }
 
-      img {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 2rem;
-        margin-right: 0.5rem;
-      }
+  .content {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .shortDescription {
+    font-size: rem;
+  }
+
+  .authors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .author {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 2rem;
+      margin-right: 0.5rem;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -105,19 +135,6 @@ const Post = styled('div')`
       text-decoration: underline;
     }
   }
-
-  .titleImg {
-    img {
-      border-radius: 0.3rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 2rem;
-      max-height: 10rem;
-      max-width: 100%;
-      width: auto;
-    }
-  }
 `
 
 export default function PostList({ prefix, posts }) {
@@ -130,70 +147,58 @@ export default function PostList({ prefix, posts }) {
             return (
               <Post key={post.fields.slug}>
                 <article>
-                  <header>
-                    {post.fields.featuredImage ? (
-                      <div className="titleImg">
-                        <Link
-                          as={`/${prefix}/${post.fields.slug}/`}
-                          href={`/${prefix}/[postSlug]`}
-                        >
-                          <a>
-                            <img
-                              src={
-                                post.fields.featuredImage && [
-                                  post.fields.featuredImage.fields.file.url
-                                ]
-                              }
-                            />
-                          </a>
-                        </Link>
-                      </div>
-                    ) : null}
-                    <h2 className="title">
-                      <div className="linkStyle">
-                        <Link
-                          as={`/${prefix}/${post.fields.slug}/`}
-                          href={`/${prefix}/[postSlug]`}
-                        >
-                          <a>{post.fields.title}</a>
-                        </Link>
-                      </div>
-                    </h2>
-                    <div className="info">
-                      <div>
-                        {format(new Date(post.sys.createdAt), 'MMM DD, YYYY')}{' '}
-                      </div>
-                      <div>{ReadTime(wordCount)} min read</div>
-                    </div>
-                    <div className="tags">
-                      {post.fields.tags.map(tag => (
-                        <Link
-                          as={`/${prefix}/tags/${tag}`}
-                          href={`/${prefix}/tags/[tag]`}
-                          key={tag}
-                        >
-                          <a
-                            tag={tag}
-                            className="tag"
-                            css={`
-                              background: ${props =>
-                                props.theme.colors.tags[props.tag]};
-                            `}
+                  {post.fields.featuredImage ? (
+                    <Link
+                      as={`/${prefix}/${post.fields.slug}/`}
+                      href={`/${prefix}/[postSlug]`}
+                    >
+                      <a
+                        className="titleImg"
+                        style={{
+                          backgroundImage: `url(${post.fields.featuredImage.fields.file.url})`,
+                        }}
+                      >
+                        <div />
+                      </a>
+                    </Link>
+                  ) : null}
+                  <div className="content">
+                    <header>
+                      <h2 className="title">
+                        <div className="linkStyle">
+                          <Link
+                            as={`/${prefix}/${post.fields.slug}/`}
+                            href={`/${prefix}/[postSlug]`}
                           >
-                            {tag}
-                          </a>
-                        </Link>
-                      ))}
-                    </div>
-                  </header>
-                  <div className="summary">
-                    <div className="content">
+                            <a>{post.fields.title}</a>
+                          </Link>
+                        </div>
+                      </h2>
+                      <div className="date">
+                        {format(new Date(post.sys.createdAt), 'MMM dd, yyyy')}{' '}
+                      </div>
+                      <div className="readTime">
+                        {ReadTime(wordCount)} min read
+                      </div>
+                      <div className="categories">
+                        {post.fields.categories.map(category => (
+                          <Link
+                            as={`/${prefix}/categories/${category.fields.slug}`}
+                            href={`/${prefix}/categories/[category]`}
+                            key={category.fields.slug}
+                          >
+                            <a className="category">{category.fields.name}</a>
+                          </Link>
+                        ))}
+                      </div>
+                    </header>
+                    <div classname="shortDescription">
                       <Smackdown micro source={post.fields.shortDescription} />
                     </div>
                     <div className="authors">
                       {post.fields.author.map(author => {
                         const {
-                          fields: { profilePhoto }
+                          fields: { profilePhoto },
                         } = author
 
                         const profilePhotoURL = profilePhoto

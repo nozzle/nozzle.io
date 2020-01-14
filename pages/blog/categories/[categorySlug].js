@@ -3,13 +3,13 @@ import styled from 'styled-components'
 //
 
 import Link from 'next/link'
-import Head from 'components/Head'
 import Icon from 'components/Icon'
+import Head from 'components/Head'
 
 import { Container, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
-import { fetchBlogPostsByTag } from '../../../contentful'
+import { fetchBlogPostsByCategorySlug } from '../../../contentful'
 
 const BlogContainer = styled(Container)`
   background: rgba(0, 0, 0, 0.02);
@@ -17,30 +17,28 @@ const BlogContainer = styled(Container)`
 
 export default class DevblogTag extends Component {
   static getInitialProps = async req => {
-    return fetchBlogPostsByTag(req.query.tag)
+    return fetchBlogPostsByCategorySlug(req.query.categorySlug)
   }
   render() {
-    const { tag, tags, posts } = this.props
+    const { category, posts } = this.props
     return (
       <div>
-        <Head title={`${tag} | Nozzle`} />
+        <Head title={`${category.fields.name} | Nozzle`} />
         <main>
           <Header>
-            <H1>Dev Blog - {tag}</H1>
+            <H1>Blog - {category.fields.name}</H1>
             <SubMenu>
               <ul>
-                <li>
-                  <Link href="/devblog/">
-                    <a>
-                      <Icon i="arrow-left" /> Back
-                    </a>
-                  </Link>
-                </li>
+                <Link href="/blog/">
+                  <a>
+                    <Icon i="arrow-left" /> Back
+                  </a>
+                </Link>
               </ul>
             </SubMenu>
           </Header>
           <BlogContainer>
-            <PostList blog="devblog" posts={posts} />
+            <PostList prefix="blog" posts={posts} />
           </BlogContainer>
         </main>
       </div>

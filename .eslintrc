@@ -1,0 +1,9 @@
+{
+  "extends": ["react-app", "prettier"],
+  "rules": {
+    "object-shorthand": [1, "always"],
+    "eqeqeq": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "no-unused-vars": 1
+  }
+}

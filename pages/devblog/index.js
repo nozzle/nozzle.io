@@ -15,7 +15,7 @@ export default class Devblog extends Component {
     return fetchDevPosts()
   }
   render() {
-    const { posts, tags } = this.props
+    const { posts, categories } = this.props
     return (
       <div>
         <Head title="Dev Blog | Nozzle" />
@@ -24,13 +24,13 @@ export default class Devblog extends Component {
             <H1>Devblog</H1>
             <SubMenu>
               <ul>
-                {tags.map(tag => (
-                  <li key={tag}>
+                {categories.map(category => (
+                  <li key={category.fields.slug}>
                     <Link
-                      as={`/devblog/tags/${tag}`}
-                      href="/devblog/tags/[tag]"
+                      as={`/devblog/categories/${category.fields.slug}`}
+                      href="/devblog/categories/[category]"
                     >
-                      <a>{tag}</a>
+                      <a>{category.fields.name}</a>
                     </Link>
                   </li>
                 ))}

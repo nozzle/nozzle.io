@@ -25,6 +25,8 @@ const FeaturedImage = styled(Img)`
 `
 
 const PostH1 = styled(H1)`
+  width: 600px;
+  max-width: 100%;
   font-size: ${props => props.theme.sizes.h3}rem;
   line-height: ${props => props.theme.sizes.h3 * 1.2}rem;
 `
@@ -47,11 +49,11 @@ const PostContainer = styled('article')`
     opacity: 0.7;
   }
 
-  .tags {
+  .categories {
     font-size: 0.8rem;
     margin-bottom: 1rem;
 
-    .tag {
+    .category {
       display: inline-block;
       padding: 0.7rem;
       border-radius: 0.5rem;
@@ -104,7 +106,7 @@ export default class DevblogPost extends Component {
           images={post.images}
           // videos=[]
           date={post.sys.createdAt}
-          tags={post.fields.tags}
+          categories={post.fields.categories}
           author={post.fields.author[0].fields.name}
           // seriesPermalinks={[]}
           wordCount={wordCount}
@@ -134,28 +136,19 @@ export default class DevblogPost extends Component {
                 ))}{' '}
                 on{' '}
                 <time dateTime={post.sys.updatedAt} itemProp="dateModified">
-                  {format(new Date(post.sys.updatedAt), 'MMM DD, YYYY')}
+                  {format(new Date(post.sys.updatedAt), 'MMM dd, yyyy')}
                 </time>{' '}
                 &bull; {ReadTime(wordCount)} min read
                 <time dateTime={post.sys.createdAt} itemProp="datePublished" />
               </div>
-              <div className="tags">
-                {post.fields.tags.map(tag => (
+              <div className="categories">
+                {post.fields.categories.map(category => (
                   <Link
-                    as={`/devblog/tags/${tag}`}
-                    href="/devblog/tags/[tag]"
-                    key={tag}
+                    as={`/devblog/categories/${category.fields.slug}`}
+                    href="/devblog/categories/[category]"
+                    key={category.fields.slug}
                   >
-                    <a
-                      tag={tag}
-                      className="tag"
-                      css={`
-                        background: ${props =>
-                          props.theme.colors.tags[props.tag]};
-                      `}
-                    >
-                      {tag}
-                    </a>
+                    <a className="category">{category.fields.name}</a>
                   </Link>
                 ))}
               </div>

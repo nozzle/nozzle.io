@@ -13,11 +13,11 @@ const syntax = {
   languages: [
     { name: 'javascript', syntax: javascript },
     { name: 'html', syntax: javascript },
-    { name: 'bash', syntax: bash }
+    { name: 'bash', syntax: bash },
   ],
   showLineNumbers: true,
   lineNumberStyle: { opacity: 0.5 },
-  theme: atomOneDark
+  theme: atomOneDark,
 }
 
 const standardOverrides = {
@@ -26,7 +26,7 @@ const standardOverrides = {
   h3: H5,
   h4: H6,
   h5: H6,
-  h6: H6
+  h6: H6,
 }
 
 const microOverrides = {
@@ -36,7 +36,7 @@ const microOverrides = {
   h3: H6,
   h4: H6,
   h5: H6,
-  h6: H6
+  h6: H6,
 }
 
 const El = ({ micro, source = '', ...rest }) => (
@@ -56,8 +56,8 @@ const El = ({ micro, source = '', ...rest }) => (
 )
 
 export default styled(El)`
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1.2em;
+  line-height: 1.5em;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 
@@ -68,11 +68,11 @@ export default styled(El)`
   h5,
   h6 {
     font-weight: bolder;
-    margin-top: 2rem;
+    margin-top: 2em;
   }
 
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
   }
 
   a {
@@ -89,28 +89,28 @@ export default styled(El)`
   img {
     display: block;
     max-width: 100%;
-    margin: 2rem auto 4rem;
-    box-shadow: 0 0.5rem 1rem -0.3rem rgba(0, 0, 0, 0.2);
-    border-radius: 0.25rem;
+    margin: 2em auto 4em;
+    box-shadow: 0 0.5em 1em -0.3em rgba(0, 0, 0, 0.2);
+    border-radius: 0.25em;
   }
 
   p code {
     display: inline-block;
     font-family: Monaco, Courier, monospace;
-    font-size: 0.7rem;
-    line-height: 0.7rem;
-    padding: 0.4rem 0.5rem 0.3rem;
+    font-size: 0.8em;
+    line-height: 0.7em;
+    padding: 0.4em 0.5em 0.3em;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.2rem;
+    border-radius: 0.2em;
     background: rgba(0, 0, 0, 0.03);
     background: #212529;
     color: rgb(202, 210, 224);
   }
 
   ul {
-    padding-left: 2rem;
+    padding-left: 2em;
     list-style-type: disc;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
   }
 
   strong {
@@ -118,23 +118,27 @@ export default styled(El)`
   }
 
   blockquote {
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    padding: 1rem;
-    margin: 0 0 1rem;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    padding: 1em;
+    margin: 0 0 1em;
     font-style: italic;
     font-weight: 400;
     opacity: 0.8;
-    border-left: solid 0.3rem rgba(0,0,0,0.1);
+    border-left: solid 0.3em rgba(0, 0, 0, 0.1);
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   pre {
     font-family: Monaco, Courier, monospace;
-    font-size: 0.8rem;
-    line-height: 1.1rem;
+    font-size: 0.8em;
+    line-height: 1.1em;
     background: #212529 !important;
-    margin: 0 auto 1rem;
-    border-radius: 0.2rem;
+    margin: 0 auto 1em;
+    border-radius: 0.2em;
     overflow: hidden;
   }
 

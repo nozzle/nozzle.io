@@ -363,7 +363,7 @@ export default class Navbar extends Component {
                 <span className="hide">Home</span>
                 <img
                   src={require('public/img/logo-small.svg')}
-                  alt="logo"
+                  alt="Keyword Rank Checker"
                   itemProp="logo"
                 />
               </span>

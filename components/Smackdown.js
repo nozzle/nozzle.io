@@ -7,7 +7,7 @@ import atomOneDark from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark
 //
 
 import Link from 'next/link'
-import { H3, H4, H5, H6 } from './Html'
+import { H1, H2, H3, H4, H5, H6 } from './Html'
 
 const syntax = {
   languages: [
@@ -20,23 +20,25 @@ const syntax = {
   theme: atomOneDark,
 }
 
+const NoRender = () => <br />
+
 const standardOverrides = {
-  h1: H3,
-  h2: H4,
-  h3: H5,
-  h4: H6,
-  h5: H6,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
   h6: H6,
 }
 
 const microOverrides = {
   ...standardOverrides,
-  h1: H6,
-  h2: H6,
-  h3: H6,
-  h4: H6,
-  h5: H6,
-  h6: H6,
+  h1: NoRender,
+  h2: NoRender,
+  h3: NoRender,
+  h4: NoRender,
+  h5: NoRender,
+  h6: NoRender,
 }
 
 const El = ({ micro, source = '', ...rest }) => (

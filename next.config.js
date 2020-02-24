@@ -13,7 +13,7 @@ const baseConfig = {
   webpack(config) {
     config.resolve.modules = [...config.resolve.modules, path.resolve('./')]
     return config
-  }
+  },
 }
 
 module.exports = [withCSS, withFonts, withOptimizedImages].reduce(

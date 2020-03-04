@@ -87,7 +87,7 @@ export default class DevblogPost extends Component {
   render() {
     const { post, relatedPosts } = this.props
 
-    const wordCount = post.fields.body.split(' ').length.hello
+    const wordCount = post.fields.body.split(' ').length
 
     return (
       <div>
@@ -129,7 +129,7 @@ export default class DevblogPost extends Component {
                 ))}{' '}
                 on{' '}
                 <time dateTime={post.sys.updatedAt} itemProp="dateModified">
-                  {format(new Date(post.sys.updatedAt), 'MMM dd, yyyy')}
+                  {format(new Date(post.sys.createdAt), 'MMM dd, yyyy')}
                 </time>{' '}
                 &bull; {ReadTime(wordCount)} min read
                 <time dateTime={post.sys.createdAt} itemProp="datePublished" />

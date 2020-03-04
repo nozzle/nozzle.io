@@ -24,4 +24,4 @@
   - Discuss and/or await approval on your pull request with the site maintainers
   - Maintainers will hopefully merge your branch to master and your changes will automatically go live!
 
-- Pat yourself on the back!
+- Boom you're great!

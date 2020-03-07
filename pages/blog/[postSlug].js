@@ -84,8 +84,9 @@ const Bio = styled('div')`
   flex: 0 0 200px;
   height: auto;
   margin: 0.5rem;
-  border-top: .15rem solid gray;
-  border-bottom: .15rem solid gray;
+  border-top: .15rem solid lightgray;
+  border-bottom: .15rem solid lightgray;
+  padding-top: 1rem;
   
     img {
       width: 10rem;

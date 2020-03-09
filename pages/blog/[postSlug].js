@@ -111,7 +111,7 @@ export default class DevblogPost extends Component {
     return (
       <div>
         <Head
-          title={`${post.fields.title} | Nozzle`}
+          title={`${post.fields.titleTag || post.fields.title} | Nozzle`}
           description={post.fields.shortDescription}
           type="article"
           path={`/blog/${post.fields.slug}`}

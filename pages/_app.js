@@ -52,6 +52,10 @@ const GlobalStyles = createGlobalStyle`
     z-index: 99999999;
     pointer-events: none;
   }
+
+  .twitter-tweet{
+    margin: 0 auto;
+  }
 `
 
 function ThemeProvider({ children }) {

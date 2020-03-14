@@ -171,7 +171,7 @@ const SectionBrandsCmp = props => (
       </H2>
       <div className="images">
         <div className="domain-wrap">
-          <H4>Other Rank Trackers</H4>
+          <H4>Other Search Engine Position Trackers</H4>
           <div className="domain">
             <div className="img">
               <Img src={require('public/img/domainEdit.png')} />
@@ -195,8 +195,8 @@ const SectionBrandsCmp = props => (
       <div className="one">
         <H4>100% SERP Visibility</H4>
         <P>
-          With other tools, you are tied to a single domain, but with Nozzle,{' '}
-          <Strong>you can track as many SERP results as you want.</Strong> We
+          With other SERP tracking tools, you are tied to a single domain, but with Nozzle,{' '}
+          <Strong>you can track as many search engine rank positions as you want.</Strong> We
           make this easy by using Brands, Properties, and URLs instead of single
           domains. If that's not enough, we even let you build custom rules to
           get as specific as you want! These features allow Nozzle to perform
@@ -548,7 +548,7 @@ const SectionScheduling = styled(props => (
         <H6>
           Not all keywords are created equal. Thankfully, Nozzle is{' '}
           <Strong>
-            the first and only rank tracker to offer flexible and real-time
+            the first and only search engine position tool to offer flexible and real-time
             schedules
           </Strong>
           . Instead of forcing you to pay the same price to track your long-tail
@@ -1289,7 +1289,7 @@ export default class Features extends Component {
   render() {
     return (
       <div>
-        <Head title="Search Engine Position Tool - SERP Keyword Tracking Tool - SERP Ranking Tool" />
+        <Head title="Search Engine Position Tracker Tool - SERP Keyword Rank Tracking Tool - SERP Ranking Tools" />
         <main>
           <FeaturesNavDiv />
           <SectionBrands id="brands" />

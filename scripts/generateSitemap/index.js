@@ -14,17 +14,19 @@ async function main() {
 
   const pages = {
     ...staticPages,
-    ...dynamicPages
+    ...dynamicPages,
   }
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
-  ${Object.keys(pages).map(
-    path => `<url>
+  ${Object.keys(pages)
+    .map(
+      path => `<url>
     <loc>${siteRoot}${path}</loc>
     <lastmod>${formatDate(new Date(pages[path].lastModified))}</lastmod>
   </url>`
-  )}
+    )
+    .join('\n')}
 </urlset>`
 
   fs.writeFileSync(path.resolve(__dirname, '../../', outPath), sitemapXml)
@@ -57,7 +59,7 @@ function getPages() {
         // Add this file to `fileObj`
         fileObj[`/${fileName}`] = {
           page: `/${fileName}`,
-          lastModified: fileStat.mtime
+          lastModified: fileStat.mtime,
         }
       }
     })
@@ -74,34 +76,40 @@ async function getDynamicPages() {
   const blogPostsPromise = fetchBlogPosts()
   const devBlogPostsPromise = fetchDevPosts()
 
-  const { posts: blogPosts, tags: blogTags } = await blogPostsPromise
-  const { posts: devBlogPosts, tags: devBlogTags } = await devBlogPostsPromise
+  const {
+    posts: blogPosts,
+    categories: blogCategories,
+  } = await blogPostsPromise
+  const {
+    posts: devBlogPosts,
+    categories: devBlogCategories,
+  } = await devBlogPostsPromise
 
   blogPosts.forEach(blogPost => {
     pages[`/blog/${blogPost.fields.slug}`] = {
       page: `/blog/${blogPost.fields.slug}`,
-      lastModified: blogPost.sys.updatedAt
+      lastModified: blogPost.sys.updatedAt,
     }
   })
 
   devBlogPosts.forEach(blogPost => {
     pages[`/devblog/${blogPost.fields.slug}`] = {
       page: `/devblog/${blogPost.fields.slug}`,
-      lastModified: blogPost.sys.updatedAt
+      lastModified: blogPost.sys.updatedAt,
     }
   })
 
-  blogTags.forEach(tag => {
-    pages[`/blog/tags/${tag}`] = {
-      page: `/blog/tags/${tag}`,
-      lastModified: new Date()
+  blogCategories.forEach(category => {
+    pages[`/blog/categories/${category.fields.slug}`] = {
+      page: `/blog/categories/${category.fields.slug}`,
+      lastModified: new Date(),
     }
   })
 
-  devBlogTags.forEach(tag => {
-    pages[`/blog/tags/${tag}`] = {
-      page: `/devblog/tags/${tag}`,
-      lastModified: new Date()
+  devBlogCategories.forEach(category => {
+    pages[`/devblog/categories/${category.fields.slug}`] = {
+      page: `/devblog/categories/${category.fields.slug}`,
+      lastModified: new Date(),
     }
   })
 

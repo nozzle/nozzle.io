@@ -148,7 +148,10 @@ export default class DevblogPost extends Component {
                 ))}{' '}
                 on{' '}
                 <time dateTime={post.sys.updatedAt} itemProp="dateModified">
-                  {format(new Date(post.sys.createdAt), 'MMM dd, yyyy')}
+                  {format(
+                    new Date(post.fields.date || post.sys.createdAt),
+                    'MMM dd, yyyy'
+                  )}
                 </time>{' '}
                 &bull; {ReadTime(wordCount)} min read
                 <time dateTime={post.sys.createdAt} itemProp="datePublished" />
@@ -173,20 +176,24 @@ export default class DevblogPost extends Component {
           </PostContainer>
           <Container>
             <PostStyles>
-                {post.fields.author.map(author => {
-                  const {
-                    fields: { profilePhoto, biography },
-                  } = author
-                  const profilePhotoURL = profilePhoto ? profilePhoto.fields.file.url : ''
-                  return biography ? (
-                    <div className="author"  key={author.fields.name}>
-                      <Bio>
+              {post.fields.author.map(author => {
+                const {
+                  fields: { profilePhoto, biography },
+                } = author
+                const profilePhotoURL = profilePhoto
+                  ? profilePhoto.fields.file.url
+                  : ''
+                return biography ? (
+                  <div className="author" key={author.fields.name}>
+                    <Bio>
                       {profilePhotoURL ? (
                         <img src={profilePhotoURL} alt="Author" />
                       ) : null}
                       <Smackdown source={biography} />
-                    </Bio></div>) : null
-                })}
+                    </Bio>
+                  </div>
+                ) : null
+              })}
             </PostStyles>
           </Container>
           <PostStyles>

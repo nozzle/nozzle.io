@@ -14,7 +14,7 @@
     "contentful": "^7.13.1",
     "date-fns": "^2.9.0",
     "lodash": "^4.17.15",
-    "next": "^9.1.7",
+    "next": "^9.3.2",
     "next-fonts": "^0.19.0",
     "next-optimized-images": "^2.5.4",
     "raf": "^3.4.1",

@@ -22,7 +22,7 @@ const PostContainer = styled('div')`
 `
 
 const Post = styled('div')`
-  flex: 1 0 300px;
+  flex: 0 1 325px;
   height: auto;
   margin: 0.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);

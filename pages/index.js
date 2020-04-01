@@ -296,7 +296,7 @@ export default class Home extends Component {
     const { rankDataImage } = this.state
     return (
       <div>
-        <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Nozzle" />
+        <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Enterprise Rank Tracking - Nozzle" />
         <main>
           <SectionKnowEverything>
             <Left>

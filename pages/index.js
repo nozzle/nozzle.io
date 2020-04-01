@@ -487,7 +487,7 @@ export default class Home extends Component {
             </P>
             <Centered>
               <Div>
-                <Img src={require('public/img/schedules.png')} alt="Use customized scheduling for each keyword group to track your rankings" />
+                <Img src={require('public/img/schedules.png')} alt="Keyword rank tracker with customized scheduling feature" />
               </Div>
             </Centered>
             <Centered>

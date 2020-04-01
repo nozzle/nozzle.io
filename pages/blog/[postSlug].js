@@ -98,6 +98,53 @@ const Bio = styled('div')`
     }
   }
 `
+const Sidebar = styled('div')`
+  .fab {
+    color: white;
+    width: 3.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0.15rem;
+
+    :hover {
+      opacity: 0.75;
+    }
+  }
+
+  .twitter {
+    background-color: #1da1f2;
+  }
+  .facebook {
+    background-color: #4267b2;
+  }
+  .linkedin {
+    background-color: #2867b2;
+  }
+  .buffer {
+    background-color: lightgray;
+  }
+
+  @media screen and (max-width: 1500px) {
+    position: fixed;
+    padding-top: 5rem;
+    right: 0.75rem;
+
+    .fab {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    position: relative;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-bottom: 1.5rem;
+
+    .fab {
+      display: inline;
+    }
+  }
+`
 
 export default class DevblogPost extends Component {
   static getInitialProps = async req => {
@@ -166,6 +213,56 @@ export default class DevblogPost extends Component {
               </div>
             </Header>
             <Container>
+              <Sidebar>
+                {post.fields.author.map(author => {
+                  return (
+                    <div>
+                      <a
+                        href={
+                          'https://twitter.com/share?url=' +
+                          window.location.href +
+                          '&amp;text=' +
+                          post.fields.title +
+                          '&amp;via=nozzle.io'
+                        }
+                        target="_blank"
+                      >
+                        <Icon className="twitter" i="twitter" />
+                      </a>
+
+                      <a
+                        href={
+                          'http://www.facebook.com/sharer.php?u=' +
+                          window.location.href
+                        }
+                        target="_blank"
+                      >
+                        <Icon className="facebook" i="facebookLetter" />
+                      </a>
+
+                      <a
+                        href={
+                          'https://www.linkedin.com/shareArticle?mini=true&amp;url=' +
+                          window.location.href
+                        }
+                        target="_blank"
+                      >
+                        <Icon className="linkedin" i="linkedin" />
+                      </a>
+
+                      <a
+                        href={
+                          'https://bufferapp.com/add?url=' +
+                          window.location.href
+                        }
+                        target="_blank"
+                      >
+                        <Icon className="buffer" i="buffer" />
+                      </a>
+                    </div>
+                  )
+                })}
+              </Sidebar>
               <PostStyles itemProp="articleBody">
                 <Smackdown source={post.fields.body} />
               </PostStyles>
@@ -173,20 +270,24 @@ export default class DevblogPost extends Component {
           </PostContainer>
           <Container>
             <PostStyles>
-                {post.fields.author.map(author => {
-                  const {
-                    fields: { profilePhoto, biography },
-                  } = author
-                  const profilePhotoURL = profilePhoto ? profilePhoto.fields.file.url : ''
-                  return biography ? (
-                    <div className="author"  key={author.fields.name}>
-                      <Bio>
+              {post.fields.author.map(author => {
+                const {
+                  fields: { profilePhoto, biography },
+                } = author
+                const profilePhotoURL = profilePhoto
+                  ? profilePhoto.fields.file.url
+                  : ''
+                return biography ? (
+                  <div className="author" key={author.fields.name}>
+                    <Bio>
                       {profilePhotoURL ? (
                         <img src={profilePhotoURL} alt="Author" />
                       ) : null}
                       <Smackdown source={biography} />
-                    </Bio></div>) : null
-                })}
+                    </Bio>
+                  </div>
+                ) : null
+              })}
             </PostStyles>
           </Container>
           <PostStyles>

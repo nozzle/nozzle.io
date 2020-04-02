@@ -99,12 +99,18 @@ const Bio = styled('div')`
   }
 `
 const Sidebar = styled('div')`
+  position: fixed;
+  padding-top: 3rem;
+  right: 0.75rem;
+
   .fab {
     color: white;
     width: 3.5rem;
     font-size: 1.5rem;
     padding: 1rem;
     margin: 0.15rem;
+    border-radius: 0.3rem;
+    display: block;
 
     :hover {
       opacity: 0.75;
@@ -122,16 +128,6 @@ const Sidebar = styled('div')`
   }
   .buffer {
     background-color: lightgray;
-  }
-
-  @media screen and (max-width: 1500px) {
-    position: fixed;
-    padding-top: 5rem;
-    right: 0.75rem;
-
-    .fab {
-      display: block;
-    }
   }
 
   @media screen and (max-width: 700px) {
@@ -215,15 +211,17 @@ export default class DevblogPost extends Component {
             <Container>
               <Sidebar>
                 {post.fields.author.map(author => {
+                  const shareURL = encodeURIComponent(window.location.href)
+                  const shareTitle = encodeURIComponent(post.fields.title)
                   return (
                     <div>
                       <a
                         href={
                           'https://twitter.com/share?url=' +
-                          window.location.href +
+                          shareURL +
                           '&amp;text=' +
-                          post.fields.title +
-                          '&amp;via=nozzle.io'
+                          shareTitle +
+                          '&amp;via=nozzleio'
                         }
                         target="_blank"
                       >
@@ -232,8 +230,7 @@ export default class DevblogPost extends Component {
 
                       <a
                         href={
-                          'http://www.facebook.com/sharer.php?u=' +
-                          window.location.href
+                          'http://www.facebook.com/sharer.php?u=' + shareURL
                         }
                         target="_blank"
                       >
@@ -243,7 +240,7 @@ export default class DevblogPost extends Component {
                       <a
                         href={
                           'https://www.linkedin.com/shareArticle?mini=true&amp;url=' +
-                          window.location.href
+                          shareURL
                         }
                         target="_blank"
                       >
@@ -251,10 +248,7 @@ export default class DevblogPost extends Component {
                       </a>
 
                       <a
-                        href={
-                          'https://bufferapp.com/add?url=' +
-                          window.location.href
-                        }
+                        href={'https://bufferapp.com/add?url=' + shareURL}
                         target="_blank"
                       >
                         <Icon className="buffer" i="buffer" />

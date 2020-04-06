@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 //
@@ -98,7 +99,7 @@ const Bio = styled('div')`
     }
   }
 `
-const Sidebar = styled('div')`
+const ShareFabs = styled('div')`
   position: fixed;
   padding-top: 3rem;
   right: 0.75rem;
@@ -142,165 +143,171 @@ const Sidebar = styled('div')`
   }
 `
 
-export default class DevblogPost extends Component {
-  static getInitialProps = async req => {
-    return fetchBlogPostBySlug(req.query.postSlug)
+export async function getServerSideProps(req) {
+  return {
+    props: await fetchBlogPostBySlug(req.query.postSlug),
   }
-  render() {
-    const { post, relatedPosts } = this.props
+}
 
-    const wordCount = post.fields.body.split(' ').length
+export default function BlogPost({ post, relatedPosts }) {
+  const router = useRouter()
+  const wordCount = post.fields.body.split(' ').length
 
-    return (
-      <div>
-        <Head
-          title={`${post.fields.titleTag || post.fields.title} | Nozzle`}
-          description={post.fields.shortDescription}
-          type="article"
-          path={`/blog/${post.fields.slug}`}
-          images={post.images}
-          // videos=[]
-          date={post.sys.createdAt}
-          categories={post.fields.categories}
-          author={post.fields.author[0].fields.name}
-          // seriesPermalinks={[]}
-          wordCount={wordCount}
-        />
-        <main>
-          <PostContainer itemScope itemType="http://schema.org/BlogPosting">
-            <Header>
-              <Link href="/blog">
-                <a className="back">
-                  <Icon i="arrow-left" /> Back
-                </a>
-              </Link>
-              <PostH1 itemProp="name headline">{post.fields.title}</PostH1>
-              <div className="info">
-                {post.fields.author.map(author => (
-                  <span
-                    itemScope
-                    itemProp="author"
-                    itemType="http://schema.org/Person"
-                    key={author.fields.name}
-                  >
-                    <span itemProp="name">
-                      {/* <a itemProp="url" rel="author" /> */}
-                      {author.fields.name}
-                    </span>
+  // `window` does not exist on the server, so we have to use
+  // the next router to make a best guess
+  const [locationHref, setLocationHref] = React.useState(
+    'https://nozzle.io/' + router.asPath
+  )
+
+  // This effect will run only once, after the page mounts in the
+  // browser, thus we can update the locationHref to the real `window.location.href`
+  React.useEffect(() => {
+    setLocationHref(window.location.href)
+  }, [])
+
+  // Then we build the share urls from that
+  const shareURL = encodeURIComponent(locationHref)
+  const shareTitle = encodeURIComponent(post.fields.title)
+
+  return (
+    <div>
+      <Head
+        title={`${post.fields.titleTag || post.fields.title} | Nozzle`}
+        description={post.fields.shortDescription}
+        type="article"
+        path={`/blog/${post.fields.slug}`}
+        images={post.images}
+        // videos=[]
+        date={post.sys.createdAt}
+        categories={post.fields.categories}
+        author={post.fields.author[0].fields.name}
+        // seriesPermalinks={[]}
+        wordCount={wordCount}
+      />
+      <main>
+        <PostContainer itemScope itemType="http://schema.org/BlogPosting">
+          <Header>
+            <Link href="/blog">
+              <a className="back">
+                <Icon i="arrow-left" /> Back
+              </a>
+            </Link>
+            <PostH1 itemProp="name headline">{post.fields.title}</PostH1>
+            <div className="info">
+              {post.fields.author.map(author => (
+                <span
+                  itemScope
+                  itemProp="author"
+                  itemType="http://schema.org/Person"
+                  key={author.fields.name}
+                >
+                  <span itemProp="name">
+                    {/* <a itemProp="url" rel="author" /> */}
+                    {author.fields.name}
                   </span>
-                ))}{' '}
-                on{' '}
-                <time dateTime={post.sys.updatedAt} itemProp="dateModified">
-                  {format(new Date(post.sys.createdAt), 'MMM dd, yyyy')}
-                </time>{' '}
-                &bull; {ReadTime(wordCount)} min read
-                <time dateTime={post.sys.createdAt} itemProp="datePublished" />
-              </div>
-              <div className="categories">
-                {post.fields.categories.map(category => (
-                  <Link
-                    href="/blog/categories/[category]"
-                    as={`/blog/categories/${category.fields.slug}`}
-                    key={category.fields.slug}
-                  >
-                    <a className="category">{category.fields.name}</a>
-                  </Link>
-                ))}
-              </div>
-            </Header>
-            <Container>
-              <Sidebar>
-                {post.fields.author.map(author => {
-                  const shareURL = encodeURIComponent(window.location.href)
-                  const shareTitle = encodeURIComponent(post.fields.title)
-                  return (
-                    <div>
-                      <a
-                        href={
-                          'https://twitter.com/share?url=' +
-                          shareURL +
-                          '&amp;text=' +
-                          shareTitle +
-                          '&amp;via=nozzleio'
-                        }
-                        target="_blank"
-                      >
-                        <Icon className="twitter" i="twitter" />
-                      </a>
-
-                      <a
-                        href={
-                          'http://www.facebook.com/sharer.php?u=' + shareURL
-                        }
-                        target="_blank"
-                      >
-                        <Icon className="facebook" i="facebookLetter" />
-                      </a>
-
-                      <a
-                        href={
-                          'https://www.linkedin.com/shareArticle?mini=true&amp;url=' +
-                          shareURL
-                        }
-                        target="_blank"
-                      >
-                        <Icon className="linkedin" i="linkedin" />
-                      </a>
-
-                      <a
-                        href={'https://bufferapp.com/add?url=' + shareURL}
-                        target="_blank"
-                      >
-                        <Icon className="buffer" i="buffer" />
-                      </a>
-                    </div>
-                  )
-                })}
-              </Sidebar>
-              <PostStyles itemProp="articleBody">
-                <Smackdown source={post.fields.body} />
-              </PostStyles>
-            </Container>
-          </PostContainer>
+                </span>
+              ))}{' '}
+              on{' '}
+              <time dateTime={post.sys.updatedAt} itemProp="dateModified">
+                {format(new Date(post.sys.createdAt), 'MMM dd, yyyy')}
+              </time>{' '}
+              &bull; {ReadTime(wordCount)} min read
+              <time dateTime={post.sys.createdAt} itemProp="datePublished" />
+            </div>
+            <div className="categories">
+              {post.fields.categories.map(category => (
+                <Link
+                  href="/blog/categories/[category]"
+                  as={`/blog/categories/${category.fields.slug}`}
+                  key={category.fields.slug}
+                >
+                  <a className="category">{category.fields.name}</a>
+                </Link>
+              ))}
+            </div>
+          </Header>
           <Container>
-            <PostStyles>
-              {post.fields.author.map(author => {
-                const {
-                  fields: { profilePhoto, biography },
-                } = author
-                const profilePhotoURL = profilePhoto
-                  ? profilePhoto.fields.file.url
-                  : ''
-                return biography ? (
-                  <div className="author" key={author.fields.name}>
-                    <Bio>
-                      {profilePhotoURL ? (
-                        <img src={profilePhotoURL} alt="Author" />
-                      ) : null}
-                      <Smackdown source={biography} />
-                    </Bio>
-                  </div>
-                ) : null
-              })}
+            <ShareFabs>
+              <a
+                href={
+                  'https://twitter.com/share?url=' +
+                  shareURL +
+                  '&amp;text=' +
+                  shareTitle +
+                  '&amp;via=nozzleio'
+                }
+                target="_blank"
+              >
+                <Icon className="twitter" i="twitter" />
+              </a>
+
+              <a
+                href={'http://www.facebook.com/sharer.php?u=' + shareURL}
+                target="_blank"
+              >
+                <Icon className="facebook" i="facebookLetter" />
+              </a>
+
+              <a
+                href={
+                  'https://www.linkedin.com/shareArticle?mini=true&amp;url=' +
+                  shareURL
+                }
+                target="_blank"
+              >
+                <Icon className="linkedin" i="linkedin" />
+              </a>
+
+              <a
+                href={'https://bufferapp.com/add?url=' + shareURL}
+                target="_blank"
+              >
+                <Icon className="buffer" i="buffer" />
+              </a>
+            </ShareFabs>
+            <PostStyles itemProp="articleBody">
+              <Smackdown source={post.fields.body} />
             </PostStyles>
           </Container>
+        </PostContainer>
+        <Container>
           <PostStyles>
-            <Comments
-              path={`/blog/${post.fields.slug}`}
-              title={post.fields.title}
-            />
-            <H3
-              css={`
-                margin-top: 1rem;
-                text-align: center;
-              `}
-            >
-              More Like This
-            </H3>
-            <RelatedPosts posts={relatedPosts} prefix="blog" />
+            {post.fields.author.map(author => {
+              const {
+                fields: { profilePhoto, biography },
+              } = author
+              const profilePhotoURL = profilePhoto
+                ? profilePhoto.fields.file.url
+                : ''
+              return biography ? (
+                <div className="author" key={author.fields.name}>
+                  <Bio>
+                    {profilePhotoURL ? (
+                      <img src={profilePhotoURL} alt="Author" />
+                    ) : null}
+                    <Smackdown source={biography} />
+                  </Bio>
+                </div>
+              ) : null
+            })}
           </PostStyles>
-        </main>
-      </div>
-    )
-  }
+        </Container>
+        <PostStyles>
+          <Comments
+            path={`/blog/${post.fields.slug}`}
+            title={post.fields.title}
+          />
+          <H3
+            css={`
+              margin-top: 1rem;
+              text-align: center;
+            `}
+          >
+            More Like This
+          </H3>
+          <RelatedPosts posts={relatedPosts} prefix="blog" />
+        </PostStyles>
+      </main>
+    </div>
+  )
 }

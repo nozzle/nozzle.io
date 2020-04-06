@@ -19,6 +19,7 @@ const PostContainer = styled('div')`
   margin: 0.5rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `
 
 const Post = styled('div')`

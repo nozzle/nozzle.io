@@ -173,7 +173,9 @@ export default function BlogPost({ post, relatedPosts }) {
     <div>
       <Head
         title={`${post.fields.titleTag || post.fields.title} | Nozzle`}
-        description={post.fields.shortDescription}
+        description={
+          post.fields.metaDescription || post.fields.shortDescription
+        }
         type="article"
         path={`/blog/${post.fields.slug}`}
         images={post.images}

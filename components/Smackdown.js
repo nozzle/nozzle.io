@@ -115,6 +115,12 @@ export default styled(El)`
     margin-bottom: 2em;
   }
 
+  ol {
+    padding-left: 2em;
+    list-style-type: decimal;
+    margin-bottom: 2em;
+  }
+
   strong {
     font-weight: bold;
   }

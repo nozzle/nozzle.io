@@ -52,6 +52,10 @@ const GlobalStyles = createGlobalStyle`
     z-index: 99999999;
     pointer-events: none;
   }
+
+  .twitter-tweet{
+    margin: 0 auto;
+  }
 `
 
 function ThemeProvider({ children }) {
@@ -90,8 +94,9 @@ export default class MyApp extends App {
             href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700"
             rel="stylesheet"
           />
+
           <link
-            href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
             rel="stylesheet"
           />
         </Head>

@@ -387,6 +387,7 @@ export default class Home extends Component {
                 <Li>inbound links</Li>
                 <Li>product ad pricing</Li>
                 <Li>sitelinks</Li>
+                <Li><a href="http://www.thegooglecache.com/canonicalized-url-is-noindex-nofollow.html" target="blank">Canonicalized URL is noindex</a></Li>
                 <Li>star ratings</Li>
                 <Li>but wait, there's more...</Li>
               </Ul>

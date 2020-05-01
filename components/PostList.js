@@ -193,7 +193,7 @@ export default function PostList({ prefix, posts }) {
                         ))}
                       </div>
                     </header>
-                    <div classname="shortDescription">
+                    <div className="shortDescription">
                       <Smackdown micro source={post.fields.shortDescription} />
                     </div>
                     <div className="authors">

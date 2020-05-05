@@ -145,9 +145,21 @@ export async function fetchBlogPostBySlug(slug) {
 
   const need = 3 - relatedPosts.length
 
+  const usedPosts = relatedPosts.map(relatedPosts => {
+    return relatedPosts.sys.id
+  })
+
   if (need) {
     const { posts } = await fetchBlogPosts()
-    relatedPosts = [...relatedPosts, ...sampleSize(posts, need)]
+    relatedPosts = [
+      ...relatedPosts,
+      ...sampleSize(
+        posts.filter(
+          d => usedPosts.includes(d.sys.id) == false && d.sys.id !== post.sys.id
+        ),
+        need
+      ),
+    ]
   }
 
   return {

@@ -18,7 +18,7 @@ import {
   Img,
   Div,
   Button,
-  Strong
+  Strong,
 } from 'components/Html'
 
 const belowMobile = `@media(max-width: ${700}px)`
@@ -107,10 +107,7 @@ const SectionKnowEverything = styled(Section)`
   background: radial-gradient(
     circle at center,
     ${props => props.theme.colors.primaryDarker} 20%,
-    ${props =>
-      Color(props.theme.colors.primaryDarker)
-        .darken(10)
-        .toString()}
+    ${props => Color(props.theme.colors.primaryDarker).darken(10).toString()}
   );
   color: white;
 
@@ -268,7 +265,7 @@ const SectionCantAfford = styled(Section)`
 const rankDataImages = [
   require('public/img/rank.png'),
   require('public/img/adrank.png'),
-  require('public/img/pixelheight.png')
+  require('public/img/pixelheight.png'),
 ]
 
 export default class Home extends Component {
@@ -276,7 +273,7 @@ export default class Home extends Component {
     super()
     this.state = {
       rankDataImageIndex: 0,
-      rankDataImage: rankDataImages[0]
+      rankDataImage: rankDataImages[0],
     }
   }
   componentDidMount() {
@@ -284,7 +281,7 @@ export default class Home extends Component {
       () =>
         this.setState(state => ({
           rankDataImageIndex: state.rankDataImageIndex + 1,
-          rankDataImage: rankDataImages[(state.rankDataImageIndex + 1) % 3]
+          rankDataImage: rankDataImages[(state.rankDataImageIndex + 1) % 3],
         })),
       2000
     )
@@ -295,7 +292,7 @@ export default class Home extends Component {
   render() {
     const { rankDataImage } = this.state
     return (
-      <div>
+      <div style={{ overflow: 'hidden' }}>
         <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Enterprise Rank Tracking - Nozzle" />
         <main>
           <SectionKnowEverything>
@@ -314,7 +311,10 @@ export default class Home extends Component {
               </Link>
             </Left>
             <Right>
-              <Img src={require('public/img/dashboard.jpg')} alt="Enterprise Keyword Rank Tracker Tool Dashboard" />
+              <Img
+                src={require('public/img/dashboard.jpg')}
+                alt="Enterprise Keyword Rank Tracker Tool Dashboard"
+              />
             </Right>
           </SectionKnowEverything>
           <SectionTrackAllTheThings>
@@ -327,14 +327,20 @@ export default class Home extends Component {
                 <H4>Don't just track the top result.</H4>
               </Centered>
               <Div>
-                <Img src={require('public/img/cnn-small.png')} alt="SERP listing for CNN" />
+                <Img
+                  src={require('public/img/cnn-small.png')}
+                  alt="SERP listing for CNN"
+                />
               </Div>
               <Div>
                 <Centered>
                   <H4>Get unlimited access to the entire SERP</H4>
                 </Centered>
               </Div>
-              <Img src={require('public/img/cnn.png')} alt="SERP Result Tracking for CNN" />
+              <Img
+                src={require('public/img/cnn.png')}
+                alt="SERP Result Tracking for CNN"
+              />
             </Left>
             <Right>
               <H2>Track all the things!</H2>
@@ -387,7 +393,14 @@ export default class Home extends Component {
                 <Li>inbound links</Li>
                 <Li>product ad pricing</Li>
                 <Li>sitelinks</Li>
-                <Li><a href="http://www.thegooglecache.com/canonicalized-url-is-noindex-nofollow.html" target="blank">Canonicalized URL is noindex</a></Li>
+                <Li>
+                  <a
+                    href="http://www.thegooglecache.com/canonicalized-url-is-noindex-nofollow.html"
+                    target="blank"
+                  >
+                    Canonicalized URL is noindex
+                  </a>
+                </Li>
                 <Li>star ratings</Li>
                 <Li>but wait, there's more...</Li>
               </Ul>
@@ -402,7 +415,10 @@ export default class Home extends Component {
               </Link>
             </Left>
             <Right>
-              <Img src={rankDataImage} alt="Website Ranking Checker that lists rank, ad adjusted rank, and pixel height" />
+              <Img
+                src={rankDataImage}
+                alt="Website Ranking Checker that lists rank, ad adjusted rank, and pixel height"
+              />
               {rankDataImages.map(img => (
                 <Img key={img} src={img} style={{ display: 'none' }} />
               ))}
@@ -410,7 +426,10 @@ export default class Home extends Component {
           </SectionRankData>
           <SectionCompetitors>
             <Left>
-              <Img src={require('public/img/groupby.png')} alt="Enterprise Ranking Checker Dashboard" />
+              <Img
+                src={require('public/img/groupby.png')}
+                alt="Enterprise Ranking Checker Dashboard"
+              />
             </Left>
             <Right>
               <H3>
@@ -447,7 +466,10 @@ export default class Home extends Component {
           </SectionCompetitors>
           <SectionDataJunkie>
             <div className="csv">
-              <Img src={require('public/img/csv.png')} alt="Download ranking data to CSV" />
+              <Img
+                src={require('public/img/csv.png')}
+                alt="Download ranking data to CSV"
+              />
             </div>
             <div className="main">
               <H3>A Data Junkie's Paradise</H3>
@@ -470,7 +492,10 @@ export default class Home extends Component {
               </Link>
             </div>
             <div className="sql">
-              <Img src={require('public/img/sql.png')} alt="Access your SEO ranking data with SQL" />
+              <Img
+                src={require('public/img/sql.png')}
+                alt="Access your SEO ranking data with SQL"
+              />
             </div>
           </SectionDataJunkie>
           <SectionSchedules>
@@ -488,7 +513,10 @@ export default class Home extends Component {
             </P>
             <Centered>
               <Div>
-                <Img src={require('public/img/schedules.png')} alt="Keyword rank tracker with customized scheduling feature" />
+                <Img
+                  src={require('public/img/schedules.png')}
+                  alt="Keyword rank tracker with customized scheduling feature"
+                />
               </Div>
             </Centered>
             <Centered>

@@ -17,7 +17,10 @@ export default class Devblog extends Component {
     const { posts, categories } = this.props
     return (
       <div>
-        <Head title="Blog | Nozzle" />
+        <Head
+          title="Blog | Nozzle"
+          description="The Nozzle blog provides SEO tips, strategies, and information for ranking better in the SERPs. Don't forget to monitor your keywords with Nozzle too. :)"
+        />
         <main>
           <Header>
             <H1>Blog</H1>

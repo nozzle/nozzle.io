@@ -71,7 +71,10 @@ export default class RankTrackerComparison extends Component {
   render() {
     return (
       <div>
-        <Head title="Best SEO Rank Tracker Tool - Keyword Rank Tracking Software - SERP Ranking Tool - Nozzle" />
+        <Head
+          title="Best SEO Rank Tracker Tool - Keyword Rank Tracking Software - SERP Ranking Tool - Nozzle"
+          description="Keyword rank tracking software for SEOs who need enterprise level data. Come check out the biggest, baddest, seo rank tracker for shozzle. "
+        />
         <main>
           <SectionWhyAnother>
             <Container>

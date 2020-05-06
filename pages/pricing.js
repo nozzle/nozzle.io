@@ -731,9 +731,10 @@ export default class Features extends Component {
   render() {
     return (
       <div>
-        <Head>
-          <title>Pricing | Nozzle</title>
-        </Head>
+        <Head
+          title="Pricing | Nozzle"
+          description="Only pay once per keyword SERP listing. We offer customized scheduling so you can track more phrases without breaking the bank."
+        />
         <main>
           <SectionIntro />
           <SectionPlans id="plans" />

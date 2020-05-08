@@ -43,6 +43,7 @@ const NavbarStyles = styled('header')`
     justify-content: space-between;
     position: relative;
     perspective: 1000px;
+    height: 100%;
   }
 
   .logo {

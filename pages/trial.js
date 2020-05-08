@@ -61,7 +61,14 @@ export default function Trial() {
   return (
     <SectionContactUs id="contact">
       <H2 full>Let's start your free trial!</H2>
-      <HubspotForm id='45956734-db34-4a7b-ad2e-f84f9ba62a2b' />
+      <HubspotForm
+        id="45956734-db34-4a7b-ad2e-f84f9ba62a2b"
+        onFormSubmitted={() => {
+          if (typeof window !== 'undefined') {
+            window.dataLayer.push({ event: 'trialSubmit' })
+          }
+        }}
+      />
     </SectionContactUs>
   )
 }

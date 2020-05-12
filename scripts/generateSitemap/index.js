@@ -10,7 +10,7 @@ run()
 
 async function run() {
   try {
-    main()
+    await main()
   } catch (err) {
     console.log(err)
     process.exit(1)
@@ -18,8 +18,6 @@ async function run() {
 }
 
 async function main() {
-  throw new Error('something bad happened')
-
   const staticPages = getPages()
   const dynamicPages = await getDynamicPages()
 

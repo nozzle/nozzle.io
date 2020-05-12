@@ -211,7 +211,10 @@ export default function BlogPost({ post, relatedPosts }) {
               ))}{' '}
               on{' '}
               <time dateTime={post.sys.updatedAt} itemProp="dateModified">
-                {format(new Date(post.sys.createdAt), 'MMM dd, yyyy')}
+                {format(
+                  new Date(post.fields.date || post.sys.createdAt),
+                  'MMM dd, yyyy'
+                )}
               </time>{' '}
               &bull; {ReadTime(wordCount)} min read
               <time dateTime={post.sys.createdAt} itemProp="datePublished" />

@@ -144,6 +144,14 @@ export default function PostList({ prefix, posts }) {
       {posts.length ? (
         <PostContainer>
           {posts.map(post => {
+            {
+              posts.sort((a, b) =>
+                (a.fields.date || a.sys.createdAt) >
+                (b.fields.date || b.sys.createdAt)
+                  ? -1
+                  : 1
+              )
+            }
             const wordCount = post.fields.body.split(' ').length
             return (
               <Post key={post.fields.slug}>
@@ -176,7 +184,10 @@ export default function PostList({ prefix, posts }) {
                         </div>
                       </h2>
                       <div className="date">
-                        {format(new Date(post.sys.createdAt), 'MMM dd, yyyy')}{' '}
+                        {format(
+                          new Date(post.fields.date || post.sys.createdAt),
+                          'MMM dd, yyyy'
+                        )}{' '}
                       </div>
                       <div className="readTime">
                         {ReadTime(wordCount)} min read

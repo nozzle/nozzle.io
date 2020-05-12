@@ -17,6 +17,7 @@ import Comments from 'components/Comments'
 import { Container, Header } from 'components/Layout'
 import { H1, H3, Img } from 'components/Html'
 import RelatedPosts from '../../components/RelatedPosts'
+import AuthorsAndContributors from '../../components/AuthorsAndContributors'
 
 const PostH1 = styled(H1)`
   width: 600px;
@@ -81,24 +82,6 @@ const PostStyles = styled('div')`
   }
 `
 
-const Bio = styled('div')`
-  flex: 0 0 200px;
-  height: auto;
-  margin: 0.5rem;
-  border-top: .15rem solid lightgray;
-  border-bottom: .15rem solid lightgray;
-  padding-top: 1rem;
-  
-    img {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 5rem;
-      margin-right: 1rem;
-      display: inline-block;
-      float: left;
-    }
-  }
-`
 const ShareFabs = styled('div')`
   position: fixed;
   padding-top: 3rem;
@@ -272,46 +255,24 @@ export default function BlogPost({ post, relatedPosts }) {
             </ShareFabs>
             <PostStyles itemProp="articleBody">
               <Smackdown source={post.fields.body} />
+              <AuthorsAndContributors post={post} />
+
+              <Comments
+                path={`/blog/${post.fields.slug}`}
+                title={post.fields.title}
+              />
+              <H3
+                css={`
+                  margin-top: 1rem;
+                  text-align: center;
+                `}
+              >
+                More Like This
+              </H3>
+              <RelatedPosts posts={relatedPosts} prefix="blog" />
             </PostStyles>
           </Container>
         </PostContainer>
-        <Container>
-          <PostStyles>
-            {post.fields.author.map(author => {
-              const {
-                fields: { profilePhoto, biography },
-              } = author
-              const profilePhotoURL = profilePhoto
-                ? profilePhoto.fields.file.url
-                : ''
-              return biography ? (
-                <div className="author" key={author.fields.name}>
-                  <Bio>
-                    {profilePhotoURL ? (
-                      <img src={profilePhotoURL} alt="Author" />
-                    ) : null}
-                    <Smackdown source={biography} />
-                  </Bio>
-                </div>
-              ) : null
-            })}
-          </PostStyles>
-        </Container>
-        <PostStyles>
-          <Comments
-            path={`/blog/${post.fields.slug}`}
-            title={post.fields.title}
-          />
-          <H3
-            css={`
-              margin-top: 1rem;
-              text-align: center;
-            `}
-          >
-            More Like This
-          </H3>
-          <RelatedPosts posts={relatedPosts} prefix="blog" />
-        </PostStyles>
       </main>
     </div>
   )

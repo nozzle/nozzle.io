@@ -23,10 +23,7 @@ export const Header = styled('div')`
   background: radial-gradient(
     circle at center,
     ${props => props.theme.colors.primaryDarker} 20%,
-    ${props =>
-      Color(props.theme.colors.primaryDarker)
-        .darken(7)
-        .toString()}
+    ${props => Color(props.theme.colors.primaryDarker).darken(7).toString()}
   );
   color: white;
   padding: 2rem;

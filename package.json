@@ -1,10 +1,10 @@
 {
   "scripts": {
     "start": "next",
+    "test": "exit 0",
     "build": "next build",
-    "test": "exit 1",
-    "now-build": "yarn test && yarn build",
-    "prebuild": "babel-node scripts/generateSitemap/"
+    "generateSitemap": "babel-node scripts/generateSitemap/",
+    "now-build": "yarn test && yarn build && yarn generateSitemap"
   },
   "engines": {
     "node": "12.x"

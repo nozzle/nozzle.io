@@ -6,9 +6,20 @@ const siteRoot = 'https://nozzle.io'
 const ignores = ['_app', '_document', '/l/', /[\[\]]/]
 const outPath = './public/sitemap.xml'
 
-main()
+run()
+
+async function run() {
+  try {
+    main()
+  } catch (err) {
+    console.log(err)
+    process.exit(1)
+  }
+}
 
 async function main() {
+  throw new Error('something bad happened')
+
   const staticPages = getPages()
   const dynamicPages = await getDynamicPages()
 

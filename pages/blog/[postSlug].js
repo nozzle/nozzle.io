@@ -254,7 +254,14 @@ export default function BlogPost({ post, relatedPosts }) {
               </a>
             </ShareFabs>
             <PostStyles itemProp="articleBody">
-              <Smackdown source={post.fields.body} />
+              {post.fields.template?.fields.name === 'Tweet List' ? (
+                <>
+                  <Smackdown source={post.fields.body} />
+                  <TweetList tweets={post.fields.tweets} />
+                </>
+              ) : (
+                <Smackdown source={post.fields.body} />
+              )}
               <AuthorsAndContributors post={post} />
 
               <Comments

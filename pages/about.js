@@ -382,7 +382,10 @@ export default class About extends Component {
   render() {
     return (
       <div>
-        <Head title="About Nozzle: SEO Rank Tracking & Monitoring Software - Search Engine Keyword Ranking Software" />
+        <Head
+          title="About Nozzle: SEO Rank Tracking & Monitoring Software - Search Engine Keyword Ranking Software"
+          description="We created Nozzle, the rank tracker we couldn't live without because it didn't exist. Now that it does, come give it a test drive. "
+        />
         <main>
           <AboutUsDiv>
             <section className="intro">

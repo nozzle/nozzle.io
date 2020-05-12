@@ -293,7 +293,10 @@ export default class Home extends Component {
     const { rankDataImage } = this.state
     return (
       <div style={{ overflow: 'hidden' }}>
-        <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Enterprise Rank Tracking - Nozzle" />
+        <Head
+          title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Enterprise Rank Tracking - Nozzle"
+          description=" A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want a rank checker with all the data, give Nozzle a test drive today."
+        />
         <main>
           <SectionKnowEverything>
             <Left>

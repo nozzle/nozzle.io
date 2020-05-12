@@ -1289,7 +1289,10 @@ export default class Features extends Component {
   render() {
     return (
       <div>
-        <Head title="Search Engine Position Tracker Tool - SERP Keyword Rank Tracking Tool - SERP Ranking Tools" />
+        <Head
+          title="Search Engine Position Tracker Tool - SERP Keyword Rank Tracking Tool - SERP Ranking Tools"
+          description="A search engine position tracker with customized scheduling options and unlimited keyword & competitor monitoring. View your SERP position data in your own BI dashboard if that brings you more peace. "
+        />
         <main>
           <FeaturesNavDiv />
           <SectionBrands id="brands" />

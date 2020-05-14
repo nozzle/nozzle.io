@@ -41,7 +41,7 @@ export default function TweetList({ tweets }) {
   const uniqueTags = []
   tweets.forEach(tweet => {
     for (let i = 0; i < tweet.fields.tags.length; i++) {
-      if (uniqueTags.indexOf(tweet.fields.tags[i]) === -1) {
+      if (!uniqueTags.includes(tweet.fields.tags[i])) {
         uniqueTags.push(tweet.fields.tags[i])
       }
     }

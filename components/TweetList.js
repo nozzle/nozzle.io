@@ -82,13 +82,15 @@ export default function TweetList({ tweets }) {
             <blockquote class="twitter-tweet">
               <a href={tweet.fields.tweetUrl}></a>
             </blockquote>
-            <script
-              async
-              src="https://platform.twitter.com/widgets.js"
-              charset="utf-8"
-            ></script>
           </Tweet>
         ))}
+        {
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
+        }
       </div>
     </Container>
   )

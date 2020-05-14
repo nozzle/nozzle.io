@@ -144,14 +144,6 @@ export default function PostList({ prefix, posts }) {
       {posts.length ? (
         <PostContainer>
           {posts.map(post => {
-            {
-              posts.sort((a, b) =>
-                (a.fields.date || a.sys.createdAt) >
-                (b.fields.date || b.sys.createdAt)
-                  ? -1
-                  : 1
-              )
-            }
             const wordCount = post.fields.body.split(' ').length
             return (
               <Post key={post.fields.slug}>

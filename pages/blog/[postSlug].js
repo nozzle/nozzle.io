@@ -18,6 +18,7 @@ import { Container, Header } from 'components/Layout'
 import { H1, H3, Img } from 'components/Html'
 import RelatedPosts from '../../components/RelatedPosts'
 import AuthorsAndContributors from '../../components/AuthorsAndContributors'
+import TweetList from '../../components/TweetList'
 
 const PostH1 = styled(H1)`
   width: 600px;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 //
@@ -19,6 +18,7 @@ import { H1, H3, Img } from 'components/Html'
 import RelatedPosts from '../../components/RelatedPosts'
 import AuthorsAndContributors from '../../components/AuthorsAndContributors'
 import TweetList from '../../components/TweetList'
+import SocialShare from '../../components/SocialShare'
 
 const PostH1 = styled(H1)`
   width: 600px;
@@ -83,50 +83,6 @@ const PostStyles = styled('div')`
   }
 `
 
-const ShareFabs = styled('div')`
-  position: fixed;
-  padding-top: 3rem;
-  right: 0.75rem;
-
-  .fab {
-    color: white;
-    width: 3.5rem;
-    font-size: 1.5rem;
-    padding: 1rem;
-    margin: 0.15rem;
-    border-radius: 0.3rem;
-    display: block;
-
-    :hover {
-      opacity: 0.75;
-    }
-  }
-
-  .twitter {
-    background-color: #1da1f2;
-  }
-  .facebook {
-    background-color: #4267b2;
-  }
-  .linkedin {
-    background-color: #2867b2;
-  }
-  .buffer {
-    background-color: lightgray;
-  }
-
-  @media screen and (max-width: 700px) {
-    position: relative;
-    padding-top: 1.5rem;
-    padding-left: 1rem;
-    padding-bottom: 1.5rem;
-
-    .fab {
-      display: inline;
-    }
-  }
-`
-
 export async function getServerSideProps(req) {
   return {
     props: await fetchBlogPostBySlug(req.query.postSlug),
@@ -134,24 +90,7 @@ export async function getServerSideProps(req) {
 }
 
 export default function BlogPost({ post, relatedPosts }) {
-  const router = useRouter()
   const wordCount = post.fields.body.split(' ').length
-
-  // `window` does not exist on the server, so we have to use
-  // the next router to make a best guess
-  const [locationHref, setLocationHref] = React.useState(
-    'https://nozzle.io/' + router.asPath
-  )
-
-  // This effect will run only once, after the page mounts in the
-  // browser, thus we can update the locationHref to the real `window.location.href`
-  React.useEffect(() => {
-    setLocationHref(window.location.href)
-  }, [])
-
-  // Then we build the share urls from that
-  const shareURL = encodeURIComponent(locationHref)
-  const shareTitle = encodeURIComponent(post.fields.title)
 
   return (
     <div>
@@ -216,44 +155,7 @@ export default function BlogPost({ post, relatedPosts }) {
             </div>
           </Header>
           <Container>
-            <ShareFabs>
-              <a
-                href={
-                  'https://twitter.com/share?url=' +
-                  shareURL +
-                  '&amp;text=' +
-                  shareTitle +
-                  '&amp;via=nozzleio'
-                }
-                target="_blank"
-              >
-                <Icon className="twitter" i="twitter" />
-              </a>
-
-              <a
-                href={'http://www.facebook.com/sharer.php?u=' + shareURL}
-                target="_blank"
-              >
-                <Icon className="facebook" i="facebookLetter" />
-              </a>
-
-              <a
-                href={
-                  'https://www.linkedin.com/shareArticle?mini=true&amp;url=' +
-                  shareURL
-                }
-                target="_blank"
-              >
-                <Icon className="linkedin" i="linkedin" />
-              </a>
-
-              <a
-                href={'https://bufferapp.com/add?url=' + shareURL}
-                target="_blank"
-              >
-                <Icon className="buffer" i="buffer" />
-              </a>
-            </ShareFabs>
+            <SocialShare post={post} />
             <PostStyles itemProp="articleBody">
               {post.fields.template?.fields.name === 'Tweet List' ? (
                 <>

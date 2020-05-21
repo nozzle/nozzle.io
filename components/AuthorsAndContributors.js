@@ -66,6 +66,40 @@ const Contributors = styled('div')`
     height: 2.75rem;
     border-radius: 5rem;
   }
+  .nameBox {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nameBox .name {
+    visibility: hidden;
+    width: 120px;
+    background-color: #2b3640;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .nameBox .name::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+
+  .nameBox:hover .name {
+    visibility: visible;
+  }
 `
 
 export default function AuthorsAndContributors({ post }) {
@@ -115,7 +149,10 @@ export default function AuthorsAndContributors({ post }) {
             return profilePhoto ? (
               <div className="contributor" key={contributor.fields.name}>
                 {profilePhotoURL ? (
-                  <img src={profilePhotoURL} alt="Contributor" />
+                  <div className="nameBox">
+                    <img src={profilePhotoURL} alt="Contributor" />
+                    <div className="name">{contributor.fields.name}</div>
+                  </div>
                 ) : null}
               </div>
             ) : null

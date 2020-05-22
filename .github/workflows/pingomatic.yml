@@ -1,0 +1,11 @@
+name: Ping Pingomatic
+
+on:
+  push:
+    - 'master'
+
+actions: 
+   - action: "Send http request to Pingomatic"
+   type: "HTTP"
+   notification_url: "http://pingomatic.com/ping/?title=nozzle&blogurl=http%3A%2F%2Fnozzle.io&rssurl=http%3A%2F%2F&chk_blogs=on&chk_feedburner=on&chk_tailrank=on&chk_superfeedr=on"
+   method: "POST"

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //
 
-import { fetchBlogPosts, fetchBlogPostsByCategorySlug } from '../../contentful'
+import { fetchBlogPosts } from '../../contentful'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Head from 'components/Head'
@@ -60,16 +60,6 @@ export default class Devblog extends Component {
 
   render() {
     const { posts, categories } = this.props
-
-    posts.length
-      ? posts.sort((a, b) =>
-          (a.fields.date || a.sys.createdAt) >
-          (b.fields.date || b.sys.createdAt)
-            ? -1
-            : 1
-        )
-      : ''
-
     const { currentPage, postsPerPage } = this.state
 
     const indexOfLastPost = currentPage * postsPerPage

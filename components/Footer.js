@@ -1,8 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 //
-// import { H5 } from './Html'
-import Link from 'next/link'
 
 const belowMobile = `@media(max-width: ${700}px)`
 
@@ -58,16 +56,14 @@ const FooterStyles = styled('div')`
   }
 `
 
-export default class Footer extends Component {
-  render() {
-    return (
-      <FooterStyles>
-        <div className="container">
-          <div className="copyright">
-            &copy; {`20${new Date().getYear() - 100}`} Nozzle Corp.
-          </div>
+export default function Footer() {
+  return (
+    <FooterStyles>
+      <div className="container">
+        <div className="copyright">
+          &copy; {`20${new Date().getYear() - 100}`} Nozzle Corp.
         </div>
-      </FooterStyles>
-    )
-  }
+      </div>
+    </FooterStyles>
+  )
 }

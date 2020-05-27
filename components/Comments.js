@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 //
 import Info from 'utils/Info'
 
 const scriptSrc = '//nozzle.disqus.com/embed.js'
 
-const update = props => {
+const update = ({ path, title }) => {
   if (typeof window === 'undefined' || !global.DISQUS) {
     return
   }
-  const { path, title } = props
 
   const permalink = Info.siteRoot + path
 
-  const config = function config () {
+  const config = function config() {
     this.page.url = permalink
     this.page.identifier = permalink
     this.page.title = title
@@ -29,8 +28,8 @@ const update = props => {
   })
 }
 
-export default class Comments extends Component {
-  componentWillMount () {
+export default function Comments({ path, title }) {
+  React.useEffect(() => {
     if (typeof document === 'undefined' || document.getElementById(scriptSrc)) {
       return
     }
@@ -40,17 +39,10 @@ export default class Comments extends Component {
     script.id = scriptSrc
     script.src = scriptSrc
     script.async = true
-    script.onload = () => update(this.props)
+    script.onload = () => update({ path, title })
 
     document.body.appendChild(script)
-  }
-  componentDidMount () {
-    update(this.props)
-  }
-  componentWillReceiveProps (props) {
-    update(props)
-  }
-  render () {
-    return <div id="disqus_thread" />
-  }
+  }, [path, title])
+
+  return <div id="disqus_thread" />
 }

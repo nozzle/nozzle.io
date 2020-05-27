@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { Component } from 'react'
+import React from 'react'
 import styled, { keyframes, css } from 'styled-components'
 import Link from 'next/link'
 //
-import ClickOutside from './ClickOutside'
 
 import { Button } from './Html'
+
+import useClickOutside from '../hooks/useClickOutside'
 
 const belowBreakpoint = `@media(max-width: ${700}px)`
 const aboveBreakpoint = `@media(min-width: ${701}px)`
@@ -266,11 +267,11 @@ const NavbarStyles = styled('header')`
 const links = [
   {
     name: 'Home',
-    path: '/'
+    path: '/',
   },
   {
     name: 'Why Us?',
-    path: '/rank-tracker-comparison'
+    path: '/rank-tracker-comparison',
   },
   {
     name: 'Features',
@@ -278,139 +279,123 @@ const links = [
     links: [
       {
         name: 'Brand Monitoring',
-        path: '/features#brands'
+        path: '/features#brands',
       },
       {
         name: 'Competitive Analysis',
-        path: '/features#competition'
+        path: '/features#competition',
       },
       {
         name: 'Scheduling',
-        path: '/features#scheduling'
+        path: '/features#scheduling',
       },
       {
         name: 'Data',
-        path: '/features#data'
+        path: '/features#data',
       },
       {
         name: 'Agency Tools',
-        path: '/features#agencies'
+        path: '/features#agencies',
       },
       {
         name: 'Reputation Management',
-        path: '/features#reputation'
+        path: '/features#reputation',
       },
       {
         name: 'Integrations',
-        path: '/features#integrations'
-      }
-    ]
+        path: '/features#integrations',
+      },
+    ],
   },
   {
     name: 'Pricing',
-    path: '/pricing'
+    path: '/pricing',
   },
   {
     name: 'Blog',
-    path: '/blog'
+    path: '/blog',
   },
   {
     name: 'About',
-    path: '/about'
-  }
+    path: '/about',
+  },
 ]
 
-export default class Navbar extends Component {
-  constructor() {
-    super()
-    this.state = {
-      isMenuOpen: false
-    }
-  }
-  render() {
-    const { isMenuOpen } = this.state
+export default function Navbar(props) {
+  const [isMenuOpen, setMenuOpen] = React.useState(false)
 
-    const closeMenu = () =>
-      this.setState({
-        isMenuOpen: false
-      })
+  const closeMenu = () => setMenuOpen(false)
 
-    const LinkItem = (link, i) => (
-      <div key={i} className="link">
-        <div itemProp="name">
-          <Link key={i} href={link.path}>
-            <a itemProp="url" onClick={closeMenu}>
-              {link.name}
-            </a>
-          </Link>
-        </div>
-        {link.links && (
-          <div className="links-nested">{link.links.map(LinkItem)}</div>
-        )}
+  const LinkItem = (link, i) => (
+    <div key={i} className="link">
+      <div itemProp="name">
+        <Link key={i} href={link.path}>
+          <a itemProp="url" onClick={closeMenu}>
+            {link.name}
+          </a>
+        </Link>
       </div>
-    )
+      {link.links && (
+        <div className="links-nested">{link.links.map(LinkItem)}</div>
+      )}
+    </div>
+  )
 
-    return (
-      <NavbarStyles isMenuOpen={isMenuOpen}>
-        <div className="inner">
-          <Link href="/">
-            <a
-              className="logo"
-              itemScope
-              itemType="http://schema.org/Organization"
-              itemProp="url"
-            >
-              <span>
-                <span className="hide">Home</span>
-                <img
-                  src={require('public/img/logo-small.svg')}
-                  alt="Keyword Rank Checker"
-                  itemProp="logo"
-                />
-              </span>
+  const linkbarRef = React.useRef()
+
+  useClickOutside(linkbarRef, closeMenu)
+
+  return (
+    <NavbarStyles isMenuOpen={isMenuOpen}>
+      <div className="inner">
+        <Link href="/">
+          <a
+            className="logo"
+            itemScope
+            itemType="http://schema.org/Organization"
+            itemProp="url"
+          >
+            <span>
+              <span className="hide">Home</span>
+              <img
+                src={require('public/img/logo-small.svg')}
+                alt="Keyword Rank Checker"
+                itemProp="logo"
+              />
+            </span>
+          </a>
+        </Link>
+        <div
+          className="menuToggle"
+          onClick={() => {
+            this.setState({
+              isMenuOpen: !isMenuOpen,
+            })
+          }}
+          style={{ pointerEvents: isMenuOpen ? 'none' : 'all' }}
+        >
+          <div>
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+        <nav className="linkbar" ref={linkbarRef}>
+          <div
+            className="links"
+            itemScope
+            itemType="http://www.schema.org/SiteNavigationElement"
+          >
+            {links.map(LinkItem)}
+          </div>
+          <Link href="/trial">
+            <a className="trial" onClick={closeMenu}>
+              <Button color="success">Start Trial</Button>
             </a>
           </Link>
-          <div
-            className="menuToggle"
-            onClick={() => {
-              this.setState({
-                isMenuOpen: !isMenuOpen
-              })
-            }}
-            style={{ pointerEvents: isMenuOpen ? 'none' : 'all' }}
-          >
-            <div>
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <ClickOutside onClickOutside={closeMenu}>
-            {useRef => (
-              <nav
-                className="linkbar"
-                ref={el => {
-                  useRef(el)
-                }}
-              >
-                <div
-                  className="links"
-                  itemScope
-                  itemType="http://www.schema.org/SiteNavigationElement"
-                >
-                  {links.map(LinkItem)}
-                </div>
-                <Link href="/trial">
-                  <a className="trial" onClick={closeMenu}>
-                    <Button color="success">Start Trial</Button>
-                  </a>
-                </Link>
-              </nav>
-            )}
-          </ClickOutside>
-        </div>
-      </NavbarStyles>
-    )
-  }
+        </nav>
+      </div>
+    </NavbarStyles>
+  )
 }

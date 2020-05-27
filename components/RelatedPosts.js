@@ -126,7 +126,6 @@ export default function PostList({ prefix, posts }) {
       {posts.length ? (
         <PostContainer>
           {posts.map(post => {
-            const wordCount = post.fields.body.split(' ').length
             return (
               <Post key={post.fields.slug}>
                 <article>

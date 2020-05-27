@@ -123,7 +123,7 @@ export default function AuthorsAndContributors({ post }) {
             : ''
 
           return biography ? (
-            <AuthorBio>
+            <AuthorBio key={author.sys.id}>
               {profilePhotoURL ? (
                 <AuthorPic src={profilePhotoURL} alt="Author" />
               ) : null}

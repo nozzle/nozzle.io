@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 //
@@ -14,7 +14,7 @@ import Smackdown from 'components/Smackdown'
 import Comments from 'components/Comments'
 
 import { Container, Header } from 'components/Layout'
-import { H1, H3, Img } from 'components/Html'
+import { H1, H3 } from 'components/Html'
 import RelatedPosts from '../../components/RelatedPosts'
 import AuthorsAndContributors from '../../components/AuthorsAndContributors'
 import TweetList from '../../components/TweetList'

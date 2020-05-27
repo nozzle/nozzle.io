@@ -73,6 +73,7 @@ export default function SocialShare({ post }) {
             '&amp;via=nozzleio'
           }
           target="_blank"
+          rel="noreferrer"
         >
           <Icon className="twitter" i="twitter" />
         </a>
@@ -80,6 +81,7 @@ export default function SocialShare({ post }) {
         <a
           href={'http://www.facebook.com/sharer.php?u=' + shareURL}
           target="_blank"
+          rel="noreferrer"
         >
           <Icon className="facebook" i="facebookLetter" />
         </a>
@@ -90,11 +92,16 @@ export default function SocialShare({ post }) {
             shareURL
           }
           target="_blank"
+          rel="noreferrer"
         >
           <Icon className="linkedin" i="linkedin" />
         </a>
 
-        <a href={'https://bufferapp.com/add?url=' + shareURL} target="_blank">
+        <a
+          href={'https://bufferapp.com/add?url=' + shareURL}
+          target="_blank"
+          rel="noreferrer"
+        >
           <Icon className="buffer" i="buffer" />
         </a>
       </ShareFabs>

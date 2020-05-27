@@ -38,25 +38,36 @@ const Tweet = styled('div')`
 `
 
 export default function TweetList({ tweets }) {
-  const uniqueTags = []
-  tweets.forEach(tweet => {
-    for (let i = 0; i < tweet.fields.tags.length; i++) {
-      if (!uniqueTags.includes(tweet.fields.tags[i])) {
-        uniqueTags.push(tweet.fields.tags[i])
-      }
-    }
-  })
-
   const [activeTag, setActiveTag] = React.useState('')
 
-  const filteredTweets = activeTag
-    ? tweets.filter(tweet => tweet.fields.tags.includes(activeTag))
-    : tweets
+  const uniqueTags = []
 
+  tweets.forEach(tweet => {
+    tweet.fields.tags.forEach(tag => {
+      if (!uniqueTags.includes(tag)) {
+        uniqueTags.push(tag)
+      }
+    })
+  })
+
+  // We useMemo on this so it only every computes and changes
+  // when 'activeTag' or 'tweets' change
+  const filteredTweets = React.useMemo(
+    () =>
+      activeTag
+        ? tweets.filter(tweet => tweet.fields.tags.includes(activeTag))
+        : tweets,
+    [activeTag, tweets]
+  )
+
+  // This will only run when 'filteredTweets' changes now
   React.useEffect(() => {
     if (filteredTweets) {
+      //
     }
-    window.twttr.widgets.load()
+    if (window.twttr) {
+      window.twttr.widgets.load()
+    }
   }, [filteredTweets])
 
   return (
@@ -68,6 +79,7 @@ export default function TweetList({ tweets }) {
 
         {uniqueTags.map(tag => (
           <button
+            key={tag}
             className={`${tag === activeTag ? 'activeTag' : ''}`}
             onClick={() => setActiveTag(tag)}
           >
@@ -78,22 +90,15 @@ export default function TweetList({ tweets }) {
 
       <div>
         {filteredTweets.map(tweet => (
-          <div>
+          <div key={tweet.sys.id}>
             {tweet.fields.comments ? tweet.fields.comments : null}
             <Tweet>
-              <blockquote class="twitter-tweet">
-                <a href={tweet.fields.tweetUrl}></a>
+              <blockquote className="twitter-tweet">
+                <a href={tweet.fields.tweetUrl}> </a>
               </blockquote>
             </Tweet>
           </div>
         ))}
-        {
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script>
-        }
       </div>
     </Container>
   )

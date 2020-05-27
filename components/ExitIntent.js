@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 import axios from 'axios'
 import { Form, Text } from 'react-form'
@@ -109,121 +109,108 @@ const ExitIntentStyles = styled('div')`
     `};
 `
 
-export default class ExitIntent extends Component {
-  state = {
-    show: false,
-    submitted: false
-  }
-  componentDidMount() {
-    onExitIntent(() => {
-      global.dataLayer.push({ event: 'exitPopup' })
-      this.setState({
-        show: true
-      })
-    })
-  }
-  render() {
-    return (
-      <ExitIntentStyles show={this.state.show}>
-        <div className="-outer">
-          <div className="-inner">
-            {this.state.submitted ? (
-              <div>
-                <div className="-title">Thank you!</div>
-                <div className="-message">
-                  We'll send you your trial information as soon as possible!
-                </div>
-              </div>
-            ) : (
-              <div>
-                <div className="-title">
-                  Wait! Our data robots are chomping at their bits to get your
-                  free trial started, so don't let them down!
-                </div>
-                <div className="-message">
-                  We will send you information on how to start your trial as
-                  soon as possible.
-                </div>
-                <Form
-                  onSubmit={async values => {
-                    window.dataLayer.push({ event: 'exitSubmit' })
-                    try {
-                      await axios.post(
-                        'https://nozzle.io/',
-                        encodeFormData({
-                          'form-name': 'exitIntent',
-                          ...values
-                        }),
-                        {
-                          headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                          }
-                        }
-                      )
-                      this.setState({ submitted: true })
-                    } catch (err) {
-                      window.alert(
-                        'There was a problem submitting your form! Try again or reload the page :)'
-                      )
-                      this.setState({ submitted: true })
-                    }
-                  }}
-                >
-                  {({ submitForm }) => (
-                    <form
-                      name="exitIntent"
-                      data-netlify="true"
-                      onSubmit={submitForm}
-                    >
-                      <div>
-                        <label>
-                          Email
-                          <Text
-                            field="email"
-                            name="email"
-                            placeholder="johndoe@gmail.com"
-                          />
-                        </label>
-                      </div>
-                      <div>
-                        <button className="button" type="submit">
-                          Submit
-                        </button>
-                      </div>
-                    </form>
-                  )}
-                </Form>
-              </div>
-            )}
-          </div>
-          <button
-            className="close"
-            onClick={() => {
-              global.dataLayer.push({ event: 'exitClose' })
-              this.setState({ show: false })
-            }}
-          >
-            &times;
-          </button>
-        </div>
-      </ExitIntentStyles>
-    )
-  }
-}
+export default function ExitIntent() {
+  const [show, setShow] = React.useState(false)
+  const [submitted, setSubmitted] = React.useState(false)
 
-function onExitIntent(cb) {
-  if (typeof document === 'undefined') {
-    return
-  }
-  setTimeout(() => {
-    document.addEventListener('mouseleave', e => {
-      if (global.localStorage.exitIntent) {
-        return
-      }
-      if (e.clientY < 0) {
-        global.localStorage.exitIntent = true
-        cb(e)
-      }
-    })
-  }, 3000)
+  React.useEffect(() => {
+    setTimeout(() => {
+      document.addEventListener('mouseleave', e => {
+        if (global.localStorage.exitIntent) {
+          return
+        }
+        if (e.clientY < 0) {
+          global.localStorage.exitIntent = true
+          global.dataLayer.push({ event: 'exitPopup' })
+          setShow(true)
+        }
+      })
+    }, 3000)
+  }, [])
+
+  return (
+    <ExitIntentStyles show={show}>
+      <div className="-outer">
+        <div className="-inner">
+          {submitted ? (
+            <div>
+              <div className="-title">Thank you!</div>
+              <div className="-message">
+                We'll send you your trial information as soon as possible!
+              </div>
+            </div>
+          ) : (
+            <div>
+              <div className="-title">
+                Wait! Our data robots are chomping at their bits to get your
+                free trial started, so don't let them down!
+              </div>
+              <div className="-message">
+                We will send you information on how to start your trial as soon
+                as possible.
+              </div>
+              <Form
+                onSubmit={async values => {
+                  window.dataLayer.push({ event: 'exitSubmit' })
+                  try {
+                    await axios.post(
+                      'https://nozzle.io/',
+                      encodeFormData({
+                        'form-name': 'exitIntent',
+                        ...values,
+                      }),
+                      {
+                        headers: {
+                          'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                      }
+                    )
+                    setSubmitted(true)
+                  } catch (err) {
+                    window.alert(
+                      'There was a problem submitting your form! Try again or reload the page :)'
+                    )
+                    setSubmitted(true)
+                  }
+                }}
+              >
+                {({ submitForm }) => (
+                  <form
+                    name="exitIntent"
+                    data-netlify="true"
+                    onSubmit={submitForm}
+                  >
+                    <div>
+                      <label>
+                        Email
+                        <Text
+                          field="email"
+                          name="email"
+                          placeholder="johndoe@gmail.com"
+                        />
+                      </label>
+                    </div>
+                    <div>
+                      <button className="button" type="submit">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                )}
+              </Form>
+            </div>
+          )}
+        </div>
+        <button
+          className="close"
+          onClick={() => {
+            global.dataLayer.push({ event: 'exitClose' })
+            this.setState({ show: false })
+          }}
+        >
+          &times;
+        </button>
+      </div>
+    </ExitIntentStyles>
+  )
 }

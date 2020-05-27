@@ -78,11 +78,14 @@ export default function TweetList({ tweets }) {
 
       <div>
         {filteredTweets.map(tweet => (
-          <Tweet>
-            <blockquote class="twitter-tweet">
-              <a href={tweet.fields.tweetUrl}></a>
-            </blockquote>
-          </Tweet>
+          <div>
+            {tweet.fields.comments ? tweet.fields.comments : null}
+            <Tweet>
+              <blockquote class="twitter-tweet">
+                <a href={tweet.fields.tweetUrl}></a>
+              </blockquote>
+            </Tweet>
+          </div>
         ))}
         {
           <script

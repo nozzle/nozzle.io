@@ -2,10 +2,22 @@ name: Ping Pingomatic
 
 on:
   push:
-    - 'master'
+    branches:
+      - 'master'
 
-actions: 
-   - action: "Send http request to Pingomatic"
-   type: "HTTP"
-   notification_url: "http://pingomatic.com/ping/?title=nozzle&blogurl=http%3A%2F%2Fnozzle.io&rssurl=http%3A%2F%2F&chk_blogs=on&chk_feedburner=on&chk_tailrank=on&chk_superfeedr=on"
-   method: "POST"
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    steps:
+      - name: Get the sources
+        uses: actions/checkout@v2
+      - name: Ping Pingomatic
+        id: ping
+        uses: CamiloGarciaLaRotta/watermelon-http-client@v1
+        with:
+          url: 'http://pingomatic.com/ping/?title=nozzle&blogurl=http%3A%2F%2Fnozzle.io&rssurl=http%3A%2F%2F&chk_blogs=on&chk_feedburner=on&chk_tailrank=on&chk_superfeedr=on'
+          method: post

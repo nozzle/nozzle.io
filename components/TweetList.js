@@ -16,7 +16,7 @@ const Container = styled('div')`
     text-decoration: none;
     transition: background-color 0.3s;
     border: 1px solid #ddd;
-    margin: 0 4px;
+    margin: 0.25rem;
     cursor: pointer;
     border-radius: 5px;
     border-radius: 5px;
@@ -94,7 +94,7 @@ export default function TweetList({ tweets }) {
             {tweet.fields.comments ? tweet.fields.comments : null}
             <Tweet>
               <blockquote className="twitter-tweet">
-                <a href={tweet.fields.tweetUrl}> </a>
+                <a href={tweet.fields.tweetUrl}> {tweet.fields.tweetUrl} </a>
               </blockquote>
             </Tweet>
           </div>

@@ -60,6 +60,15 @@ export default class Devblog extends Component {
 
   render() {
     const { posts, categories } = this.props
+
+    if (posts.length) {
+      posts.sort((a, b) =>
+        (a.fields.date || a.sys.createdAt) > (b.fields.date || b.sys.createdAt)
+          ? -1
+          : 1
+      )
+    }
+
     const { currentPage, postsPerPage } = this.state
 
     const indexOfLastPost = currentPage * postsPerPage

@@ -50,6 +50,8 @@ export default function TweetList({ tweets }) {
     })
   })
 
+  uniqueTags.sort()
+
   // We useMemo on this so it only every computes and changes
   // when 'activeTag' or 'tweets' change
   const filteredTweets = React.useMemo(

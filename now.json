@@ -2,5 +2,20 @@
   "version": 2,
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "alias": "nozzle.io",
-  "routes": [{ "src": "/(.*)/$", "status": 301, "headers": { "Location": "/$1" } }]
+  "routes": [
+    {
+      "src": "/blog/low-cost-pr-for-businesses-a-link-and-brand-building-strategy",
+      "status": 301,
+      "headers": {
+        "Location": "https://nozzle.io/blog/pr-strategies-for-businesses"
+      }
+    },
+    {
+      "src": "/(.*)/$",
+      "status": 301,
+      "headers": {
+        "Location": "/$1"
+      }
+    }
+  ]
 }

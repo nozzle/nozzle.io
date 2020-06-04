@@ -2,15 +2,14 @@
   "version": 2,
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "alias": "nozzle.io",
-
-  "redirects": [
-    {
-      "source": "/blog/low-cost-pr-for-businesses-a-link-and-brand-building-strategy",
-      "destination": "/blog/pr-strategies-for-businesses",
-      "statusCode": 301
-    }
-  ],
   "routes": [
+    {
+      "src": "/blog/low-cost-pr-for-businesses-a-link-and-brand-building-strategy/",
+      "status": 301,
+      "headers": {
+        "Location": "https://nozzle.io/blog/pr-strategies-for-businesses"
+      }
+    },
     {
       "src": "/(.*)/$",
       "status": 301,

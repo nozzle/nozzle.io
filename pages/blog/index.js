@@ -34,7 +34,10 @@ export default function Devblog() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
 
-  const paginate = pageNumber => setCurrentPage(pageNumber)
+  const paginate = pageNumber => {
+    setCurrentPage(pageNumber)
+    window.scrollTo(0, 0)
+  }
 
   return (
     <div>

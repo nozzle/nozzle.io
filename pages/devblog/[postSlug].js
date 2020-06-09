@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 //
@@ -86,87 +86,85 @@ const PostStyles = styled('div')`
     }
   }
 `
-
-export default class DevblogPost extends Component {
-  static getInitialProps = async req => {
-    return fetchDevPostBySlug(req.query.postSlug)
+export async function getServerSideProps(req) {
+  return {
+    props: await fetchDevPostBySlug(req.query.postSlug),
   }
-  render() {
-    const { post } = this.props
+}
 
-    const wordCount = post.fields.body.split(' ').length.hello
+export default function DevBlogPost({ post }) {
+  const wordCount = post.fields.body.split(' ').length
 
-    return (
-      <div>
-        <Head
-          title={`${post.fields.title} | Nozzle`}
-          description={post.fields.shortDescription}
-          type="article"
-          path={`/devblog/${post.fields.slug}`}
-          images={post.images}
-          // videos=[]
-          date={post.sys.createdAt}
-          categories={post.fields.categories}
-          author={post.fields.author[0].fields.name}
-          // seriesPermalinks={[]}
-          wordCount={wordCount}
-        />
-        <main>
-          <PostContainer itemScope itemType="http://schema.org/BlogPosting">
-            <Header>
-              <Link href="/devblog">
-                <a className="back">
-                  <Icon i="arrow-left" /> Back
-                </a>
-              </Link>
-              <PostH1 itemProp="name headline">{post.fields.title}</PostH1>
-              <div className="info">
-                {post.fields.author.map(author => (
-                  <span
-                    itemScope
-                    itemProp="author"
-                    itemType="http://schema.org/Person"
-                    key={author.fields.name}
-                  >
-                    <span itemProp="name">
-                      {/* <a itemProp="url" rel="author" /> */}
-                      {author.fields.name}
-                    </span>
+  return (
+    <div>
+      <Head
+        title={`${post.fields.title} | Nozzle`}
+        description={post.fields.shortDescription}
+        type="article"
+        path={`/devblog/${post.fields.slug}`}
+        images={post.images}
+        // videos=[]
+        date={post.sys.createdAt}
+        categories={post.fields.categories}
+        author={post.fields.author[0].fields.name}
+        // seriesPermalinks={[]}
+        wordCount={wordCount}
+      />
+      <main>
+        <PostContainer itemScope itemType="http://schema.org/BlogPosting">
+          <Header>
+            <Link href="/devblog">
+              <a className="back">
+                <Icon i="arrow-left" /> Back
+              </a>
+            </Link>
+            <PostH1 itemProp="name headline">{post.fields.title}</PostH1>
+            <div className="info">
+              {post.fields.author.map(author => (
+                <span
+                  itemScope
+                  itemProp="author"
+                  itemType="http://schema.org/Person"
+                  key={author.fields.name}
+                >
+                  <span itemProp="name">
+                    {/* <a itemProp="url" rel="author" /> */}
+                    {author.fields.name}
                   </span>
-                ))}{' '}
-                on{' '}
-                <time dateTime={post.sys.updatedAt} itemProp="dateModified">
-                  {format(new Date(post.sys.updatedAt), 'MMM dd, yyyy')}
-                </time>{' '}
-                &bull; {ReadTime(wordCount)} min read
-                <time dateTime={post.sys.createdAt} itemProp="datePublished" />
-              </div>
-              <div className="categories">
-                {post.fields.categories.map(category => (
-                  <Link
-                    as={`/devblog/categories/${category.fields.slug}`}
-                    href="/devblog/categories/[category]"
-                    key={category.fields.slug}
-                  >
-                    <a className="category">{category.fields.name}</a>
-                  </Link>
-                ))}
-              </div>
-            </Header>
-            <Container>
-              <PostStyles itemProp="articleBody">
-                <Smackdown source={post.fields.body} />
-              </PostStyles>
-            </Container>
-          </PostContainer>
-          <PostStyles>
-            <Comments
-              path={`/devblog/${post.fields.slug}`}
-              title={post.fields.title}
-            />
-          </PostStyles>
-        </main>
-      </div>
-    )
-  }
+                </span>
+              ))}{' '}
+              on{' '}
+              <time dateTime={post.sys.updatedAt} itemProp="dateModified">
+                {format(new Date(post.sys.updatedAt), 'MMM dd, yyyy')}
+              </time>{' '}
+              &bull; {ReadTime(wordCount)} min read
+              <time dateTime={post.sys.createdAt} itemProp="datePublished" />
+            </div>
+            <div className="categories">
+              {post.fields.categories.map(category => (
+                <Link
+                  as={`/devblog/categories/${category.fields.slug}`}
+                  href="/devblog/categories/[category]"
+                  key={category.fields.slug}
+                >
+                  <a className="category">{category.fields.name}</a>
+                </Link>
+              ))}
+            </div>
+          </Header>
+          <Container>
+            <PostStyles itemProp="articleBody">
+              <Smackdown source={post.fields.body} />
+            </PostStyles>
+          </Container>
+        </PostContainer>
+        <PostStyles>
+          <Comments
+            path={`/devblog/${post.fields.slug}`}
+            title={post.fields.title}
+          />
+        </PostStyles>
+      </main>
+    </div>
+  )
 }

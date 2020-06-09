@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React from 'react'
 //
 
 import Link from 'next/link'
@@ -10,36 +9,63 @@ import { Container, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import { fetchDevPostsByCategorySlug } from '../../../contentful'
+import Pagination from 'components/Pagination'
 
-export default class DevblogTag extends Component {
-  static getInitialProps = async req => {
-    return fetchDevPostsByCategorySlug(req.query.categorySlug)
+export async function getServerSideProps(req) {
+  const props = await fetchDevPostsByCategorySlug(req.query.categorySlug)
+  return {
+    props,
   }
-  render() {
-    const { category, posts } = this.props
-    return (
-      <div>
-        <Head title={`${category.fields.name} | Nozzle`} />
-        <main>
-          <Header>
-            <H1>Dev Blog - {category.fields.name}</H1>
-            <SubMenu>
-              <ul>
-                <li>
-                  <Link href="/devblog/">
-                    <a>
-                      <Icon i="arrow-left" /> Back
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </SubMenu>
-          </Header>
-          <Container>
-            <PostList prefix="devblog" posts={posts} />
-          </Container>
-        </main>
-      </div>
+}
+
+export default function DevBlogTag({ category, posts }) {
+  const [currentPage, setCurrentPage] = React.useState(1)
+  const postsPerPage = 12
+
+  if (posts.length) {
+    posts.sort((a, b) =>
+      (a.fields.date || a.sys.createdAt) > (b.fields.date || b.sys.createdAt)
+        ? -1
+        : 1
     )
   }
+
+  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
+
+  const paginate = pageNumber => {
+    setCurrentPage(pageNumber)
+    window.scrollTo(0, 0)
+  }
+  return (
+    <div>
+      <Head title={`${category.fields.name} | Nozzle`} />
+      <main>
+        <Header>
+          <H1>Dev Blog - {category.fields.name}</H1>
+          <SubMenu>
+            <ul>
+              <li>
+                <Link href="/devblog/">
+                  <a>
+                    <Icon i="arrow-left" /> Back
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </SubMenu>
+        </Header>
+        <Container>
+          <PostList prefix="devblog" posts={currentPosts} />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
+        </Container>
+      </main>
+    </div>
+  )
 }

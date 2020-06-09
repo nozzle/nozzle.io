@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled, { css, keyframes } from 'styled-components'
 //
 import Color from 'utils/Color'
@@ -78,9 +78,7 @@ const FeaturesNavDiv = styled(FeaturesNav)`
   padding: 0;
   transition: all 0.3s ease;
   background: ${props =>
-    Color(props.theme.colors.primaryDarkest)
-      .setAlpha(0.9)
-      .toString()};
+    Color(props.theme.colors.primaryDarkest).setAlpha(0.9).toString()};
   text-align: center;
   z-index: 999;
   overflow: hidden;
@@ -195,12 +193,15 @@ const SectionBrandsCmp = props => (
       <div className="one">
         <H4>100% SERP Visibility</H4>
         <P>
-          With other SERP tracking tools, you are tied to a single domain, but with Nozzle,{' '}
-          <Strong>you can track as many search engine rank positions as you want.</Strong> We
-          make this easy by using Brands, Properties, and URLs instead of single
-          domains. If that's not enough, we even let you build custom rules to
-          get as specific as you want! These features allow Nozzle to perform
-          powerful competitive analysis between other brands, individual
+          With other SERP tracking tools, you are tied to a single domain, but
+          with Nozzle,{' '}
+          <Strong>
+            you can track as many search engine rank positions as you want.
+          </Strong>{' '}
+          We make this easy by using Brands, Properties, and URLs instead of
+          single domains. If that's not enough, we even let you build custom
+          rules to get as specific as you want! These features allow Nozzle to
+          perform powerful competitive analysis between other brands, individual
           properties, and even URLs.
         </P>
       </div>
@@ -548,8 +549,8 @@ const SectionScheduling = styled(props => (
         <H6>
           Not all keywords are created equal. Thankfully, Nozzle is{' '}
           <Strong>
-            the first and only search engine position tool to offer flexible and real-time
-            schedules
+            the first and only search engine position tool to offer flexible and
+            real-time schedules
           </Strong>
           . Instead of forcing you to pay the same price to track your long-tail
           keywords as your head terms, Nozzle let's you split your keywords into
@@ -1285,26 +1286,24 @@ const SectionContactUs = styled(SectionContactUsCmp)`
   text-align: center;
 `
 
-export default class Features extends Component {
-  render() {
-    return (
-      <div>
-        <Head
-          title="Search Engine Position Tracker Tool - SERP Keyword Rank Tracking Tool - SERP Ranking Tools"
-          description="A search engine position tracker with customized scheduling options and unlimited keyword & competitor monitoring. View your SERP position data in your own BI dashboard if that brings you more peace. "
-        />
-        <main>
-          <FeaturesNavDiv />
-          <SectionBrands id="brands" />
-          <SectionCompetition id="competition" />
-          <SectionScheduling id="scheduling" />
-          <SectionData id="data" />
-          <SectionAgencies id="agencies" />
-          <SectionReputation id="reputation" />
-          <SectionIntegrations id="integrations" />
-          <SectionContactUs id="trial" />
-        </main>
-      </div>
-    )
-  }
+export default function Features() {
+  return (
+    <div>
+      <Head
+        title="Search Engine Position Tracker Tool - SERP Keyword Rank Tracking Tool - SERP Ranking Tools"
+        description="A search engine position tracker with customized scheduling options and unlimited keyword & competitor monitoring. View your SERP position data in your own BI dashboard if that brings you more peace. "
+      />
+      <main>
+        <FeaturesNavDiv />
+        <SectionBrands id="brands" />
+        <SectionCompetition id="competition" />
+        <SectionScheduling id="scheduling" />
+        <SectionData id="data" />
+        <SectionAgencies id="agencies" />
+        <SectionReputation id="reputation" />
+        <SectionIntegrations id="integrations" />
+        <SectionContactUs id="trial" />
+      </main>
+    </div>
+  )
 }

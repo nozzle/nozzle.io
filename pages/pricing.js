@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 //
 import { angle } from 'utils/Styles'
@@ -15,65 +15,65 @@ const plans = [
   { label: 'Garden Hose', value: 'garden-hose' },
   { label: 'Pressure Washer', value: 'pressure-washer' },
   { label: 'Fire Hose', value: 'fire-hose' },
-  { label: 'Jet Stream', value: 'jet-stream' }
+  { label: 'Jet Stream', value: 'jet-stream' },
 ]
 
 const frequencyOptions = [
   {
     value: 'hourly',
-    label: 'Hourly'
+    label: 'Hourly',
   },
   {
     value: 'daily',
-    label: 'Daily'
+    label: 'Daily',
   },
   {
     value: 'weekly',
-    label: 'Weekly'
+    label: 'Weekly',
   },
   {
     value: 'monthly',
-    label: 'Monthly'
+    label: 'Monthly',
   },
   {
     value: 'onetime',
-    label: 'One-Time Pull'
-  }
+    label: 'One-Time Pull',
+  },
 ]
 
 const faqs = [
   {
     q: `What is a credit?`,
-    a: `A credit is used whenever we retrieve data for a keyword-engine-language-device-location combination. This combination is commonly referred to as a SERP (Search Engine Results Page). We pull data for the first 100 results. One credit = top 100 results for each unique search. `
+    a: `A credit is used whenever we retrieve data for a keyword-engine-language-device-location combination. This combination is commonly referred to as a SERP (Search Engine Results Page). We pull data for the first 100 results. One credit = top 100 results for each unique search. `,
   },
   {
     q: `How many credits do I need?`,
-    a: `The number of credits you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, locations and engines you want to monitor. The pricing plans above give general estimates for the number of credits needed for tracking a single engine and location. Use the calculator on this page to get an idea on how many credits you need.`
+    a: `The number of credits you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, locations and engines you want to monitor. The pricing plans above give general estimates for the number of credits needed for tracking a single engine and location. Use the calculator on this page to get an idea on how many credits you need.`,
   },
   {
     q: `How long are credits good for?`,
-    a: `Credits purchased on the ‘Spray-as-you-go’ plan never expire. Credits purchased on other plans expire at the end of the month.`
+    a: `Credits purchased on the ‘Spray-as-you-go’ plan never expire. Credits purchased on other plans expire at the end of the month.`,
   },
   {
     q: `Do I have to sign a contract?`,
-    a: `No. Nozzle plans can be changed or cancelled at any time, effective the next billing period. But, fair warning, access to unprecedented amounts of data is highly addictive. `
+    a: `No. Nozzle plans can be changed or cancelled at any time, effective the next billing period. But, fair warning, access to unprecedented amounts of data is highly addictive. `,
   },
   {
     q: `How frequently can I adjust my plan?`,
-    a: `Plan upgrades or downgrades can be made at any time. Upgrades take effect immediately, while downgrades take effect the following billing period. `
+    a: `Plan upgrades or downgrades can be made at any time. Upgrades take effect immediately, while downgrades take effect the following billing period. `,
   },
   {
     q: `Is there an extra charge for API access?`,
-    a: `No. API access is included. You can also access the data in BigQuery or MySQL.`
+    a: `No. API access is included. You can also access the data in BigQuery or MySQL.`,
   },
   {
     q: `Are there any other charges I should be aware of?`,
-    a: `There are no setup fees, charges for API access, or charges for additional users. The only exception to the one credit = one SERP pricing is for expedited data. SERPs requested under the regular pricing structure are fulfilled by the end of day, but some of our customers need data populated more rapidly. For example, some of our customers need data fulfilled hourly or they place last minute one-time pull data requests that they need as soon as possible. These priority requests are billed at 5 credits per SERP.  `
+    a: `There are no setup fees, charges for API access, or charges for additional users. The only exception to the one credit = one SERP pricing is for expedited data. SERPs requested under the regular pricing structure are fulfilled by the end of day, but some of our customers need data populated more rapidly. For example, some of our customers need data fulfilled hourly or they place last minute one-time pull data requests that they need as soon as possible. These priority requests are billed at 5 credits per SERP.  `,
   },
   {
     q: `Does Nozzle offer custom plans?`,
-    a: `We’re happy to work with you to create a custom plan if what you need doesn’t fall within the standard packages. Give us a call to discuss.`
-  }
+    a: `We’re happy to work with you to create a custom plan if what you need doesn’t fall within the standard packages. Give us a call to discuss.`,
+  },
 ]
 
 const section = css`
@@ -452,165 +452,161 @@ const SectionFaq = styled(SectionFaqCmp)`
   }
 `
 
-class SectionCalculatorCmp extends Component {
-  constructor() {
-    super()
-    this.state = {
-      keywords: {
-        weekly: 1000
-      },
-      engines: 1,
-      devices: 1,
-      locations: 1
-    }
+function SectionCalculatorCmp(props) {
+  const [{ keywords, engines, devices, locations }, setState] = React.useState({
+    keywords: {
+      weekly: 1000,
+    },
+    engines: 1,
+    devices: 1,
+    locations: 1,
+  })
+
+  let totalKeywords = 0
+
+  totalKeywords += (keywords.hourly || 0) * 30 * 24 * 5
+  totalKeywords += (keywords.daily || 0) * 30
+  totalKeywords += (keywords.weekly || 0) * 4
+  totalKeywords += keywords.monthly || 0
+  totalKeywords += keywords.onetime || 0
+
+  let totalCredits = totalKeywords * engines * devices * locations
+
+  let suggestedPlan
+
+  if (totalCredits > 200000) {
+    suggestedPlan = plans[4]
+  } else if (totalCredits > 40000) {
+    suggestedPlan = plans[3]
+  } else if (totalCredits > 18000) {
+    suggestedPlan = plans[2]
+  } else if (totalCredits > 5000) {
+    suggestedPlan = plans[1]
+  } else {
+    suggestedPlan = plans[0]
   }
-  render() {
-    const props = this.props
-    const { keywords, engines, devices, locations } = this.state
 
-    let totalKeywords = 0
-
-    totalKeywords += (keywords.hourly || 0) * 30 * 24 * 5
-    totalKeywords += (keywords.daily || 0) * 30
-    totalKeywords += (keywords.weekly || 0) * 4
-    totalKeywords += keywords.monthly || 0
-    totalKeywords += keywords.onetime || 0
-
-    let totalCredits = totalKeywords * engines * devices * locations
-
-    let suggestedPlan
-
-    if (totalCredits > 200000) {
-      suggestedPlan = plans[4]
-    } else if (totalCredits > 40000) {
-      suggestedPlan = plans[3]
-    } else if (totalCredits > 18000) {
-      suggestedPlan = plans[2]
-    } else if (totalCredits > 5000) {
-      suggestedPlan = plans[1]
-    } else {
-      suggestedPlan = plans[0]
-    }
-
-    return (
-      <section {...props}>
-        <Container>
-          <H3 className="title">How many credits do I need per month?</H3>
-          <div className="inner">
-            <div className="left">
-              {frequencyOptions.map(option => (
-                <div className="row keywords" key={option.value}>
-                  <label>{option.label} Keywords</label>
-                  <div>
-                    <Input
-                      type="number"
-                      min="0"
-                      value={keywords[option.value] || ''}
-                      onChange={e => {
-                        let value = parseInt(e.target.value)
-                        value = value || ''
-                        this.setState(old => ({
-                          ...old,
-                          keywords: {
-                            ...old.keywords,
-                            [option.value]: value
-                          }
-                        }))
-                      }}
-                      css={{
-                        border: !keywords && '2px solid red'
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-              <hr />
-              <div className="row engines">
-                <label>Engines</label>
+  return (
+    <section {...props}>
+      <Container>
+        <H3 className="title">How many credits do I need per month?</H3>
+        <div className="inner">
+          <div className="left">
+            {frequencyOptions.map(option => (
+              <div className="row keywords" key={option.value}>
+                <label>{option.label} Keywords</label>
                 <div>
                   <Input
                     type="number"
-                    min="1"
-                    max="3"
-                    value={engines}
-                    onChange={e =>
-                      this.setState({
-                        engines: e.target.value
-                      })
-                    }
+                    min="0"
+                    value={keywords[option.value] || ''}
+                    onChange={e => {
+                      let value = parseInt(e.target.value)
+                      value = value || ''
+                      setState(old => ({
+                        ...old,
+                        keywords: {
+                          ...old.keywords,
+                          [option.value]: value,
+                        },
+                      }))
+                    }}
                     css={{
-                      border: !engines && '2px solid red'
+                      border: !keywords && '2px solid red',
                     }}
                   />
                 </div>
               </div>
-              <div className="row devices">
-                <label>Devices</label>
-                <div>
-                  <Input
-                    type="number"
-                    min="1"
-                    max="5"
-                    value={devices}
-                    onChange={e =>
-                      this.setState({
-                        devices: e.target.value
-                      })
-                    }
-                    css={{
-                      border: !devices && '2px solid red'
-                    }}
-                  />
-                </div>
-              </div>
-              <div className="row locations">
-                <label>Locations</label>
-                <div>
-                  <Input
-                    type="number"
-                    min="1"
-                    value={locations}
-                    onChange={e =>
-                      this.setState({
-                        locations: e.target.value
-                      })
-                    }
-                    css={{
-                      border: !locations && '2px solid red'
-                    }}
-                  />
-                </div>
+            ))}
+            <hr />
+            <div className="row engines">
+              <label>Engines</label>
+              <div>
+                <Input
+                  type="number"
+                  min="1"
+                  max="3"
+                  value={engines}
+                  onChange={e =>
+                    setState(old => ({
+                      ...old,
+                      engines: e.target.value,
+                    }))
+                  }
+                  css={{
+                    border: !engines && '2px solid red',
+                  }}
+                />
               </div>
             </div>
-            <div className="right">
-              {suggestedPlan ? (
-                <>
-                  <div className="amount">{number(totalCredits)}</div>
-                  <div
-                    css={`
-                      font-size: 1.5rem;
-                      padding: 0.5rem;
-                      margin-bottom: 1rem;
-                    `}
-                  >
-                    credits
-                  </div>
-                  <div className="suggested">Suggested Plan:</div>
-                  <div className="suggested-plan">
-                    <Link href={`/pricing#${suggestedPlan.value}`}>
-                      <a>{suggestedPlan.label}</a>
-                    </Link>
-                  </div>
-                </>
-              ) : (
-                <span>Enter your requirements to see a suggested plan</span>
-              )}
+            <div className="row devices">
+              <label>Devices</label>
+              <div>
+                <Input
+                  type="number"
+                  min="1"
+                  max="5"
+                  value={devices}
+                  onChange={e =>
+                    setState(old => ({
+                      ...old,
+                      devices: e.target.value,
+                    }))
+                  }
+                  css={{
+                    border: !devices && '2px solid red',
+                  }}
+                />
+              </div>
+            </div>
+            <div className="row locations">
+              <label>Locations</label>
+              <div>
+                <Input
+                  type="number"
+                  min="1"
+                  value={locations}
+                  onChange={e =>
+                    setState(old => ({
+                      ...old,
+                      locations: e.target.value,
+                    }))
+                  }
+                  css={{
+                    border: !locations && '2px solid red',
+                  }}
+                />
+              </div>
             </div>
           </div>
-        </Container>
-      </section>
-    )
-  }
+          <div className="right">
+            {suggestedPlan ? (
+              <>
+                <div className="amount">{number(totalCredits)}</div>
+                <div
+                  css={`
+                    font-size: 1.5rem;
+                    padding: 0.5rem;
+                    margin-bottom: 1rem;
+                  `}
+                >
+                  credits
+                </div>
+                <div className="suggested">Suggested Plan:</div>
+                <div className="suggested-plan">
+                  <Link href={`/pricing#${suggestedPlan.value}`}>
+                    <a>{suggestedPlan.label}</a>
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <span>Enter your requirements to see a suggested plan</span>
+            )}
+          </div>
+        </div>
+      </Container>
+    </section>
+  )
 }
 
 const SectionCalculator = styled(SectionCalculatorCmp)`
@@ -727,23 +723,21 @@ const SectionContactUs = styled(SectionContactUsCmp)`
   text-align: center;
 `
 
-export default class Features extends Component {
-  render() {
-    return (
-      <div>
-        <Head
-          title="Pricing | Nozzle"
-          description="Only pay once per keyword SERP listing. We offer customized scheduling so you can track more phrases without breaking the bank."
-        />
-        <main>
-          <SectionIntro />
-          <SectionPlans id="plans" />
-          <SectionSpray id={plans[0].value} />
-          <SectionFaq id="faq" />
-          <SectionCalculator id="calculator" />
-          <SectionContactUs id="trial" />
-        </main>
-      </div>
-    )
-  }
+export default function Features() {
+  return (
+    <div>
+      <Head
+        title="Pricing | Nozzle"
+        description="Only pay once per keyword SERP listing. We offer customized scheduling so you can track more phrases without breaking the bank."
+      />
+      <main>
+        <SectionIntro />
+        <SectionPlans id="plans" />
+        <SectionSpray id={plans[0].value} />
+        <SectionFaq id="faq" />
+        <SectionCalculator id="calculator" />
+        <SectionContactUs id="trial" />
+      </main>
+    </div>
+  )
 }

@@ -7,20 +7,17 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import Pagination from 'components/Pagination'
 
-export default function Devblog() {
-  const [posts, setPosts] = React.useState([])
-  const [currentPage, setCurrentPage] = React.useState(1)
-  const [categories, setCategories] = React.useState([])
-  const postsPerPage = 12
+export async function getServerSideProps(req) {
+  const props = await fetchBlogPosts()
 
-  React.useEffect(() => {
-    const getInitialProps = async () => {
-      const res = await fetchBlogPosts()
-      setPosts(res.posts)
-      setCategories(res.categories)
-    }
-    getInitialProps()
-  }, [])
+  return {
+    props,
+  }
+}
+
+export default function DevBlog({ posts, categories }) {
+  const [currentPage, setCurrentPage] = React.useState(1)
+  const postsPerPage = 12
 
   if (posts.length) {
     posts.sort((a, b) =>

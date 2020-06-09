@@ -54,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
     pointer-events: none;
   }
 
-  .twitter-tweet{
+  .twitter-tweet {
     margin: 0 auto;
   }
 `
@@ -67,47 +67,43 @@ function ThemeProvider({ children }) {
   )
 }
 
-export default class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props
-
-    return (
-      <ThemeProvider>
-        <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Nozzle">
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <ThemeProvider>
+      <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Nozzle">
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
                   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-PPH2PX');
                 `,
-            }}
-          />
-          <link
-            href="//fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700"
-            rel="stylesheet"
-          />
+          }}
+        />
+        <link
+          href="//fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700"
+          rel="stylesheet"
+        />
 
-          <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-            rel="stylesheet"
-          />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          rel="stylesheet"
+        />
 
-          <script src="https://platform.twitter.com/widgets.js" />
-        </Head>
-        <GlobalStyles />
-        <NavWrapper>
-          <Component {...pageProps} />
-        </NavWrapper>
-      </ThemeProvider>
-    )
-  }
+        <script src="https://platform.twitter.com/widgets.js" />
+      </Head>
+      <GlobalStyles />
+      <NavWrapper>
+        <Component {...pageProps} />
+      </NavWrapper>
+    </ThemeProvider>
+  )
 }

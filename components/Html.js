@@ -71,7 +71,7 @@ const weight = ({ weight }) =>
     font-weight: ${props => props.theme.weights[weight] || weight};
   `
 
-// Components
+// Elements
 
 export const H1 = styled('h1')`
   ${margin};

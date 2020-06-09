@@ -1,34 +1,55 @@
-import React, { Component } from 'react'
-//
-
+import React from 'react'
+import { fetchDevPosts } from '../../contentful'
 import Link from 'next/link'
 import Head from 'components/Head'
-
 import { BlogContainer, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
+import Pagination from 'components/Pagination'
 
-import { fetchDevPosts } from '../../contentful'
+export async function getServerSideProps(req) {
+  const props = await fetchDevPosts()
 
-export default class Devblog extends Component {
-  static getInitialProps = async () => {
-    return fetchDevPosts()
+  return {
+    props,
   }
-  render() {
-    const { posts, categories } = this.props
-    return (
-      <div>
-        <Head title="Dev Blog | Nozzle" />
-        <main>
-          <Header>
-            <H1>Devblog</H1>
+}
+
+export default function DevBlog({ posts, categories }) {
+  const [currentPage, setCurrentPage] = React.useState(1)
+  const postsPerPage = 12
+
+  if (posts.length) {
+    posts.sort((a, b) =>
+      (a.fields.date || a.sys.createdAt) > (b.fields.date || b.sys.createdAt)
+        ? -1
+        : 1
+    )
+  }
+
+  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
+
+  const paginate = pageNumber => {
+    setCurrentPage(pageNumber)
+    window.scrollTo(0, 0)
+  }
+
+  return (
+    <div>
+      <Head title="Dev Blog | Nozzle" />
+      <main>
+        <Header>
+          <H1>Blog</H1>
+          {categories.length ? (
             <SubMenu>
               <ul>
                 {categories.map(category => (
                   <li key={category.fields.slug}>
                     <Link
-                      as={`/devblog/categories/${category.fields.slug}`}
                       href="/devblog/categories/[category]"
+                      as={`/devblog/categories/${category.fields.slug}`}
                     >
                       <a>{category.fields.name}</a>
                     </Link>
@@ -36,12 +57,18 @@ export default class Devblog extends Component {
                 ))}
               </ul>
             </SubMenu>
-          </Header>
-          <BlogContainer>
-            <PostList prefix="devblog" posts={posts} />
-          </BlogContainer>
-        </main>
-      </div>
-    )
-  }
+          ) : null}
+        </Header>
+        <BlogContainer>
+          <PostList prefix="devblog" posts={currentPosts} />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
+        </BlogContainer>
+      </main>
+    </div>
+  )
 }

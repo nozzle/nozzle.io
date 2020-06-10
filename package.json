@@ -1,10 +1,10 @@
 {
   "scripts": {
     "start": "next",
-    "test": "exit 0",
+    "test": "cypress run",
     "build": "next build",
     "generateSitemap": "babel-node scripts/generateSitemap/",
-    "now-build": "yarn test && yarn build && yarn generateSitemap"
+    "now-build": "yarn build && yarn generateSitemap && yarn test"
   },
   "engines": {
     "node": "12.x"
@@ -35,6 +35,7 @@
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",
     "babel-plugin-styled-components": "^1.10.7",
+    "cypress": "^4.8.0",
     "eslint": "6.x",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-react-app": "^5.2.1",

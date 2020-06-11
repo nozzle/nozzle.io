@@ -26,8 +26,7 @@
     "styled-components": "^5.0.1",
     "styled-reset": "^4.1.2",
     "swagger-ui-react": "^3.25.0",
-    "tinycolor2": "^1.4.1",
-    "xvfb": "^0.3.0"
+    "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -48,6 +47,7 @@
     "fs-extra": "^9.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
-    "imagemin-svgo": "^7.1.0"
+    "imagemin-svgo": "^7.1.0",
+    "xvfb": "^0.3.0"
   }
 }

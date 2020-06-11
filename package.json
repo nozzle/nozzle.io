@@ -26,7 +26,8 @@
     "styled-components": "^5.0.1",
     "styled-reset": "^4.1.2",
     "swagger-ui-react": "^3.25.0",
-    "tinycolor2": "^1.4.1"
+    "tinycolor2": "^1.4.1",
+    "xvfb": "^0.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

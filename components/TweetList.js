@@ -64,9 +64,6 @@ export default function TweetList({ tweets }) {
 
   // This will only run when 'filteredTweets' changes now
   React.useEffect(() => {
-    if (filteredTweets) {
-      //
-    }
     if (window.twttr) {
       window.twttr.widgets.load()
     }

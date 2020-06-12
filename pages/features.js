@@ -440,7 +440,7 @@ const SectionCompetitionCmp = props => (
           <P>
             As opposed to tracking individual domains, tracking brands makes it
             easy to monitor their every move. You can do this by{' '}
-            <Strong>brand, property or even URL</Strong> to get aggreggated or
+            <Strong>brand, property or even URL</Strong> to get aggregated or
             detailed comparisons as needed.
           </P>
         </div>

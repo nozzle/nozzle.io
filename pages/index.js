@@ -409,9 +409,6 @@ export default function Home() {
               src={rankDataImages[rankDataImageIndex]}
               alt="Website Ranking Checker that lists rank, ad adjusted rank, and pixel height"
             />
-            {rankDataImages.map(img => (
-              <Img key={img} src={img} style={{ display: 'none' }} />
-            ))}
           </Right>
         </SectionRankData>
         <SectionCompetitors>

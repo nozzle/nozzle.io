@@ -368,9 +368,7 @@ export default function Navbar(props) {
         <div
           className="menuToggle"
           onClick={() => {
-            this.setState({
-              isMenuOpen: !isMenuOpen,
-            })
+            setMenuOpen(true)
           }}
           style={{ pointerEvents: isMenuOpen ? 'none' : 'all' }}
         >

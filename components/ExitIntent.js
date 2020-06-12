@@ -205,7 +205,7 @@ export default function ExitIntent() {
           className="close"
           onClick={() => {
             global.dataLayer.push({ event: 'exitClose' })
-            this.setState({ show: false })
+            setShow(false)
           }}
         >
           &times;

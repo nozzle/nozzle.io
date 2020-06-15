@@ -36,6 +36,16 @@ export default function DevBlog({ posts, categories }) {
     window.scrollTo(0, 0)
   }
 
+  const backPage = () => {
+    setCurrentPage(currentPage - 1)
+    window.scrollTo(0, 0)
+  }
+
+  const nextPage = () => {
+    setCurrentPage(currentPage + 1)
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div>
       <Head
@@ -68,6 +78,8 @@ export default function DevBlog({ posts, categories }) {
             postsPerPage={postsPerPage}
             totalPosts={posts}
             paginate={paginate}
+            backPage={backPage}
+            nextPage={nextPage}
             currentPage={currentPage}
           />
         </BlogContainer>

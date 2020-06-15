@@ -38,6 +38,15 @@ export default function BlogTag({ category, posts }) {
     setCurrentPage(pageNumber)
     window.scrollTo(0, 0)
   }
+  const backPage = () => {
+    setCurrentPage(currentPage - 1)
+    window.scrollTo(0, 0)
+  }
+
+  const nextPage = () => {
+    setCurrentPage(currentPage + 1)
+    window.scrollTo(0, 0)
+  }
 
   return (
     <div>
@@ -62,6 +71,8 @@ export default function BlogTag({ category, posts }) {
             totalPosts={posts}
             paginate={paginate}
             currentPage={currentPage}
+            nextPage={nextPage}
+            backPage={backPage}
           />
         </Container>
       </main>

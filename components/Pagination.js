@@ -8,7 +8,7 @@ const Container = styled('ul')`
   width: auto;
   margin: auto;
 
-  li {
+  .page {
     color: black;
     float: left;
     padding: 8px 16px;
@@ -35,6 +35,8 @@ export default function Pagination({
   totalPosts,
   paginate,
   currentPage,
+  backPage,
+  nextPage,
 }) {
   const pageNumbers = []
 
@@ -44,16 +46,30 @@ export default function Pagination({
 
   return (
     <Container>
+      {currentPage > 1 ? (
+        <div className="page" onClick={() => backPage()}>
+          ❮
+        </div>
+      ) : (
+        ' '
+      )}
       {pageNumbers.map(number => (
         <li
           key={number}
           id={number}
           onClick={() => paginate(number)}
-          className={`${currentPage === number ? 'activePage' : ''}`}
+          className={`${currentPage === number ? 'activePage' : ''} page`}
         >
           {number}
         </li>
       ))}
+      {currentPage < pageNumbers.length ? (
+        <div className="page" onClick={() => nextPage()}>
+          ❯
+        </div>
+      ) : (
+        ' '
+      )}
     </Container>
   )
 }

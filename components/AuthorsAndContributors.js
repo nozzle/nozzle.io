@@ -49,11 +49,11 @@ const AuthorPic = styled('img')`
   border-radius: 5rem;
   margin-top: 1rem;
   margin-right: 1rem;
-  margin-bottom: 10rem;
 `
 
 const BioText = styled('div')`
   padding-top: 1rem;
+  overflow: auto;
 `
 
 const Contributors = styled('div')`

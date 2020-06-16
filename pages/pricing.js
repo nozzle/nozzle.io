@@ -527,12 +527,13 @@ function SectionCalculatorCmp(props) {
                   min="1"
                   max="3"
                   value={engines}
-                  onChange={e =>
+                  onChange={e => {
+                    let value = parseInt(e.target.value)
                     setState(old => ({
                       ...old,
-                      engines: e.target.value,
+                      engines: value,
                     }))
-                  }
+                  }}
                   css={{
                     border: !engines && '2px solid red',
                   }}
@@ -547,12 +548,13 @@ function SectionCalculatorCmp(props) {
                   min="1"
                   max="5"
                   value={devices}
-                  onChange={e =>
+                  onChange={e => {
+                    let value = parseInt(e.target.value)
                     setState(old => ({
                       ...old,
-                      devices: e.target.value,
+                      devices: value,
                     }))
-                  }
+                  }}
                   css={{
                     border: !devices && '2px solid red',
                   }}
@@ -566,12 +568,13 @@ function SectionCalculatorCmp(props) {
                   type="number"
                   min="1"
                   value={locations}
-                  onChange={e =>
+                  onChange={e => {
+                    let value = parseInt(e.target.value)
                     setState(old => ({
                       ...old,
-                      locations: e.target.value,
+                      locations: value,
                     }))
-                  }
+                  }}
                   css={{
                     border: !locations && '2px solid red',
                   }}

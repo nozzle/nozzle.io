@@ -45,10 +45,12 @@ const AuthorBio = styled('div')`
 
 const AuthorPic = styled('img')`
   float: left;
-  width: 8rem;
-  border-radius: 5rem;
   margin-top: 1rem;
   margin-right: 1rem;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
 `
 
 const BioText = styled('div')`
@@ -64,7 +66,9 @@ const Contributors = styled('div')`
 
   img {
     height: 2.75rem;
-    border-radius: 5rem;
+    width: 2.75rem;
+    object-fit: cover;
+    border-radius: 50%;
   }
   .nameBox {
     position: relative;

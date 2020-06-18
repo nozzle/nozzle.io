@@ -1,6 +1,6 @@
 describe('Components are showing up in Post', () => {
   it('AuthorsAndContributors Component is rendering', () => {
-    window.cy.visit('/')
+    window.cy.visit('/blog/seo-humor-from-the-twitterverse/')
     window.cy.get('.AuthorsAndContributors__Container-sc-1wovwrc-0')
   })
   it('RelatedPosts Component is rendering', () => {

@@ -4,7 +4,7 @@
     "test": "cypress run",
     "build": "next build",
     "generateSitemap": "babel-node scripts/generateSitemap/",
-    "now-build": "yarn build && yarn generateSitemap && yarn test"
+    "now-build": "yarn build && yarn generateSitemap"
   },
   "engines": {
     "node": "12.x"

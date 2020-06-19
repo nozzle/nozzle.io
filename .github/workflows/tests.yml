@@ -4,19 +4,20 @@ jobs:
   cypress-run:
     runs-on: ubuntu-16.04
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install -g yarn
-    - name: yarn install, and generateSiteMap
-      run: |
-        yarn
-        yarn generateSiteMap
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install dependencies
+         run: yarn
+      - name: GenerateSiteMap
+        run: babel-node scripts/generateSitemap/
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
           start: yarn start
           headless: true
-          config: pageLoadTimeout=100000
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120

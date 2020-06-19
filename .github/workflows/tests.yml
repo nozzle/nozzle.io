@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-
      - name: GitHub Action for Yarn
        uses: Borales/actions-yarn@v2.3.0
        with: 
@@ -14,7 +13,6 @@ jobs:
        -uses: Borales/actions-yarn@v2.3.0
        with:
         cmd: generateSitemap
-
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:

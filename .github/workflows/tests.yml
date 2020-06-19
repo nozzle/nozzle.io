@@ -4,15 +4,16 @@ jobs:
   cypress-run:
     runs-on: ubuntu-16.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-     - name: GitHub Action for Yarn
-       uses: Borales/actions-yarn@v2.3.0
-       with: 
-        cmd: install
-       -uses: Borales/actions-yarn@v2.3.0
-       with:
-        cmd: generateSitemap
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install -g yarn
+    - name: yarn install, and generateSiteMap
+      run: |
+        yarn
+        yarn generateSiteMap
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:

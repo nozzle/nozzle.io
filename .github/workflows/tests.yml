@@ -7,8 +7,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Generate SiteMap
-        run: yarn generateSitemap
+     - name: GitHub Action for Yarn
+       uses: Borales/actions-yarn@v2.3.0
+       with: 
+        cmd: install
+       -uses: Borales/actions-yarn@v2.3.0
+       with:
+        cmd: generateSitemap
 
       - name: Cypress run
         uses: cypress-io/github-action@v1

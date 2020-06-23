@@ -20,6 +20,7 @@
     "next-optimized-images": "^2.5.7",
     "raf": "^3.4.1",
     "react": "^16.13.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.13.1",
     "react-form": "^3.5.7",
     "react-smackdown": "^0.8.8",

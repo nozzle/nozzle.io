@@ -7,6 +7,8 @@ import Head from 'components/Head'
 
 import { H1, H2, H3, H4, H6, P, Img, Button } from 'components/Html'
 
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 const densityAnimation = keyframes`
   0%, 100% {
     transform: translateY(-10px);
@@ -399,7 +401,7 @@ export default function About() {
                 live without.
               </P>
             </div>
-            <Link href="/about/#timeline">
+            <AnchorLink href="#timeline">
               <a className="next">
                 <svg
                   width="53px"
@@ -424,7 +426,7 @@ export default function About() {
                   </g>
                 </svg>
               </a>
-            </Link>
+            </AnchorLink>
           </section>
 
           <section className="timeline" id="timeline">

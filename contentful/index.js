@@ -59,7 +59,7 @@ export async function fetchDevPosts() {
   const posts = items.map(normalizePost)
 
   return {
-    posts: orderBy(posts, [d => d.sys.createdAt], ['desc']),
+    posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories: getCategoriesFromPosts(posts),
   }
 }
@@ -73,7 +73,7 @@ export async function fetchBlogPosts() {
   const posts = items.map(normalizePost)
 
   return {
-    posts: orderBy(posts, [d => d.sys.createdAt], ['desc']),
+    posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories: getCategoriesFromPosts(posts),
   }
 }
@@ -95,7 +95,7 @@ export async function fetchDevPostsByCategorySlug(categorySlug) {
   const categories = getCategoriesFromPosts(posts)
 
   return {
-    posts: orderBy(posts, [d => d.sys.createdAt], ['desc']),
+    posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories,
     category,
   }
@@ -118,7 +118,7 @@ export async function fetchBlogPostsByCategorySlug(categorySlug) {
   const categories = getCategoriesFromPosts(posts)
 
   return {
-    posts: posts.map(normalizePost),
+    posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories,
     category,
   }

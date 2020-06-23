@@ -19,14 +19,6 @@ export default function DevBlog({ posts, categories }) {
   const [currentPage, setCurrentPage] = React.useState(1)
   const postsPerPage = 12
 
-  if (posts.length) {
-    posts.sort((a, b) =>
-      (a.fields.date || a.sys.createdAt) > (b.fields.date || b.sys.createdAt)
-        ? -1
-        : 1
-    )
-  }
-
   const indexOfLastPost = currentPage * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)

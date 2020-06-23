@@ -1,19 +1,25 @@
 name: integration-tests
+
 on: pull_request
+
 jobs:
-  cypress-run:
-    runs-on: ubuntu-16.04
+  test:
+    name: 'node ${{ matrix.node }} ${{ matrix.os }} '
+    runs-on: '${{ matrix.os }}'
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [12, 10]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
-      - name: Install dependencies
-         run: yarn
-      - name: GenerateSiteMap
-        run: babel-node scripts/generateSitemap/
+          node-version: ${{ matrix.node }}
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - run: npm i -g yarn
+      - run: yarn --frozen-lockfile
+      - run: yarn generateSitemap
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:

@@ -23,6 +23,7 @@ import {
   Img,
 } from 'components/Html'
 import { Container, Center } from 'components/Layout'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const below900 = '@media screen and (max-width: 900px)'
 
@@ -31,39 +32,25 @@ const FeaturesNav = props => (
     <div className="inner">
       <ul data-gumshoe>
         <li>
-          <Link href="/features/#brands">
-            <a>Brand Monitoring</a>
-          </Link>
+          <AnchorLink href="#brands">Brand Monitoring</AnchorLink>
         </li>
         <li>
-          <Link href="/features/#competition">
-            <a>Competitive Analysis</a>
-          </Link>
+          <AnchorLink href="#competition">Competitive Analysis</AnchorLink>
         </li>
         <li>
-          <Link href="/features/#scheduling">
-            <a>Scheduling</a>
-          </Link>
+          <AnchorLink href="#scheduling">Scheduling</AnchorLink>
         </li>
         <li>
-          <Link href="/features/#data">
-            <a>Data</a>
-          </Link>
+          <AnchorLink href="#data">Data</AnchorLink>
         </li>
         <li>
-          <Link href="/features/#agencies">
-            <a>Agency Tools</a>
-          </Link>
+          <AnchorLink href="#agencies">Agency Tools</AnchorLink>
         </li>
         <li>
-          <Link href="/features/#reputation">
-            <a>Reputation Management</a>
-          </Link>
+          <AnchorLink href="#reputation">Reputation Management</AnchorLink>
         </li>
         <li>
-          <Link href="/features/#integrations">
-            <a>Integrations</a>
-          </Link>
+          <AnchorLink href="#integrations">Integrations</AnchorLink>
         </li>
       </ul>
     </div>

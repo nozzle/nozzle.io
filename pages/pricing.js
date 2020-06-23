@@ -9,6 +9,7 @@ import Head from 'components/Head'
 import Link from 'next/link'
 import { Button, H1, H2, H3, H4, H5, P, Span, Input } from 'components/Html'
 import { Container, Center } from 'components/Layout'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const plans = [
   { label: 'Spray As You Go', value: 'spray' },
@@ -90,13 +91,11 @@ const SectionIntroCmp = props => (
           <strong>unlimited</strong> competitors and views
         </P>
         <P>
-          <Link href="/pricing/#faq">
-            <a>
-              <Button size="sm" burst>
-                Read More
-              </Button>
-            </a>
-          </Link>
+          <AnchorLink href="#faq">
+            <Button size="sm" burst>
+              Read More
+            </Button>
+          </AnchorLink>
         </P>
       </Center>
     </Container>

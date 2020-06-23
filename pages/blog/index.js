@@ -33,17 +33,17 @@ export default function DevBlog({ posts, categories }) {
 
   const paginate = pageNumber => {
     setCurrentPage(pageNumber)
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const backPage = () => {
     setCurrentPage(currentPage - 1)
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const nextPage = () => {
     setCurrentPage(currentPage + 1)
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (

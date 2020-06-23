@@ -32,7 +32,6 @@ const GlobalStyles = createGlobalStyle`
   html, body, body, [data-reactroot] {
     min-height: 100%;
     width: 100%;
-    scroll-behavior: smooth;
   }
   html, body {
     background: ${props => props.theme.colors.primaryDarker};

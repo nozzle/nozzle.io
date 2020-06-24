@@ -1135,6 +1135,7 @@ const SectionIntegrationsCmp = props => (
               <a
                 href="https://www.google.com/analytics/data-studio/"
                 target="_blank"
+                rel="noreferrer"
               >
                 Google Data Studio
               </a>

@@ -1123,20 +1123,24 @@ const SectionIntegrationsCmp = props => (
           <H5>Business Intelligence</H5>
           <ul>
             <li>
-              <a to="http://www.tableau.com/" target="_blank">
+              <a
+                href="http://www.tableau.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Tableau
               </a>
             </li>
             <li>
               <a
-                to="https://www.google.com/analytics/data-studio/"
+                href="https://www.google.com/analytics/data-studio/"
                 target="_blank"
               >
                 Google Data Studio
               </a>
             </li>
             <li>
-              <a to="https://www.domo.com/" target="_blank">
+              <a href="https://www.domo.com/" target="_blank" rel="noreferrer">
                 Domo
               </a>
             </li>
@@ -1146,12 +1150,16 @@ const SectionIntegrationsCmp = props => (
           <H5>Marketing</H5>
           <ul>
             <li>
-              <a to="http://datarama.com/" target="_blank">
+              <a href="http://datarama.com/" target="_blank" rel="noreferrer">
                 Datarama
               </a>
             </li>
             <li>
-              <a to="https://reportgarden.com/" target="_blank">
+              <a
+                href="https://reportgarden.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Report Garden
               </a>
             </li>

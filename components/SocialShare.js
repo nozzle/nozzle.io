@@ -4,9 +4,16 @@ import { useRouter } from 'next/router'
 import Icon from 'components/Icon'
 
 const ShareFabs = styled('div')`
-  position: fixed;
-  padding-top: 3rem;
-  right: 0.75rem;
+  .top {
+    position: absolute;
+    top: 25rem;
+    right: 0.75rem;
+  }
+  .below {
+    position: fixed;
+    top: 6rem;
+    right: 0.75rem;
+  }
 
   .fab {
     color: white;
@@ -36,10 +43,20 @@ const ShareFabs = styled('div')`
   }
 
   @media screen and (max-width: 700px) {
-    position: relative;
-    padding-top: 1.5rem;
-    padding-left: 1rem;
-    padding-bottom: 1.5rem;
+    .top,
+    .below {
+      top: 0rem;
+      position: relative;
+      padding-top: 1.5rem;
+      padding-left: 1rem;
+      padding-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .facebook {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
 
     .fab {
       display: inline;
@@ -61,9 +78,20 @@ export default function SocialShare({ post }) {
   const shareURL = encodeURIComponent(locationHref)
   const shareTitle = encodeURIComponent(post.fields.title)
 
+  const [scroll, setScroll] = React.useState(false)
+
+  React.useEffect(() => {
+    document.addEventListener('scroll', () => {
+      const scrollCheck = window.scrollY > 300
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck)
+      }
+    })
+  })
+
   return (
-    <div>
-      <ShareFabs>
+    <ShareFabs>
+      <div className={scroll ? 'below' : 'top'}>
         <a
           href={
             'https://twitter.com/share?url=' +
@@ -104,7 +132,7 @@ export default function SocialShare({ post }) {
         >
           <Icon className="buffer" i="buffer" />
         </a>
-      </ShareFabs>
-    </div>
+      </div>
+    </ShareFabs>
   )
 }

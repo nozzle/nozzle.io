@@ -634,10 +634,10 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
       label {
         flex: 1 0 250px;
         text-align: right;
-        margin-right: 1rem;
+        padding-right: 1rem;
       }
       div {
-        flex: 1 0 150px;
+        flex: 1 0 72px;
       }
     }
     input[type='number'] {
@@ -677,6 +677,7 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
       font-size: 20px;
     }
     .suggested-plan {
+      text-align: center;
       padding: 10px;
       font-size: 2.5rem;
       font-weight: bold;

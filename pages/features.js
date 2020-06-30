@@ -117,7 +117,6 @@ const FeaturesNavDiv = styled(FeaturesNav)`
     }
     ul {
       white-space: nowrap;
-      margin-right: 200px;
     }
   }
 
@@ -226,16 +225,21 @@ const SectionBrands = styled(SectionBrandsCmp)`
   padding-top: 15rem;
 
   .badge {
-    text-align: center;
-    white-space: nowrap;
     > strong,
     > span {
       display: inline-block;
     }
+    > span {
+      display: flex;
+      text-align: left;
+      padding-top: 10px;
+    }
+
     > strong {
+      float: left;
       position: relative;
       padding: 10px 13px 67px;
-      margin: 0 10px;
+      margin: 0 5px;
       color: white;
       box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
       background: ${props => props.theme.colors.primaryDark};
@@ -320,7 +324,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
   }
   .vs {
     z-index: 0;
-    flex: 1 1 100%;
+    flex: 0 0 100%;
     margin: 50px 0;
     display: flex;
     align-items: center;
@@ -338,7 +342,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
         display: block;
         position: absolute;
         top: 50%;
-        width: 200px;
+        width: 150px;
         height: 2px;
         background: rgba(0, 0, 0, 0.2);
         transform: translateY(-50%);
@@ -349,7 +353,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
         display: block;
         position: absolute;
         top: 50%;
-        width: 200px;
+        width: 150px;
         height: 2px;
         background: rgba(0, 0, 0, 0.2);
         transform: translateY(-50%);

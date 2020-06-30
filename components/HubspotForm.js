@@ -17,7 +17,7 @@ function loadForm(formId, elementId, options = {}) {
     window.hbspt.forms.create({
       ...options,
       portalId: '2030303',
-      formId: formId,
+      formId,
       target: `#${elementId}`,
     })
   }
@@ -25,13 +25,15 @@ function loadForm(formId, elementId, options = {}) {
 
 export default function HubspotForm({ id, onFormSubmitted }) {
   const elementRef = React.useRef()
+  const submittedRef = React.useRef()
+  submittedRef.current = onFormSubmitted
 
   React.useEffect(() => {
     elementRef.current.id = `HubspotForm_${Date.now()}`
 
     const load = () =>
       loadForm(id, elementRef.current.id, {
-        onFormSubmitted,
+        onFormSubmitted: submittedRef.current,
       })
 
     if (!document.getElementById(hubspotSrc)) {
@@ -43,7 +45,20 @@ export default function HubspotForm({ id, onFormSubmitted }) {
     } else {
       load()
     }
-  }, [elementRef])
+  }, [id])
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.jQuery =
+        window.jQuery ||
+        (selector => {
+          if (typeof selector == 'string') {
+            return document.querySelector(selector)
+          }
+          return selector
+        })
+    }
+  })
 
   return <Styles ref={elementRef} />
 }

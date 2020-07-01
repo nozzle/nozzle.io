@@ -1,0 +1,24 @@
+name: integration-tests
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - run: npm i -g yarn
+      - run: yarn --frozen-lockfile
+      - run: yarn build && yarn generateSitemap
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
+          start: yarn start
+          headless: true
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120

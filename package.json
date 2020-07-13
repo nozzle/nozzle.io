@@ -10,10 +10,14 @@
     "node": "12.x"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@typeform/embed": "^0.9.4",
     "@zeit/next-css": "^1.0.1",
     "contentful": "^7.14.2",
     "date-fns": "^2.11.1",
+    "emotion-theming": "^10.0.27",
     "lodash": "^4.17.15",
     "next": "^9.3.4",
     "next-fonts": "^1.0.3",

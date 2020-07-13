@@ -180,3 +180,19 @@ export async function fetchDevPostBySlug(slug) {
     post: normalizePost(post),
   }
 }
+
+export async function fetchMetrics() {
+  const { items } = await client.getEntries({
+    content_type: 'metrics',
+    limit: 1000,
+  })
+  const metrics = items.map(normalizeMetrics)
+  return {
+    metrics: orderBy(metrics, [d => d.fields.name], ['asc']),
+  }
+}
+const normalizeMetrics = metric => {
+  return {
+    ...metric,
+  }
+}

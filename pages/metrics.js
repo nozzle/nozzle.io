@@ -1,22 +1,15 @@
 import React from 'react'
 import { fetchMetrics } from '../contentful'
-import {
-  ThemeProvider,
-  Stack,
-  Box,
-  Text,
-  Image,
-  Heading,
-} from '@chakra-ui/core'
-
+import { H1, P } from 'components/Html'
 import Head from 'components/Head'
 import { angle } from 'utils/Styles'
 import styled, { css } from 'styled-components'
 import Smackdown from 'components/Smackdown'
-import { Container } from 'components/Layout'
+import { Container, Center } from 'components/Layout'
+import tw from 'tailwind.macro'
 
 const section = css`
-  padding: 7% 15%;
+  padding: 6% 15%;
   z-index: 1;
 `
 const Top = styled('section')`
@@ -25,6 +18,25 @@ const Top = styled('section')`
   background: ${props => props.theme.colors.primaryDarker};
   color: white;
 `
+
+const Box = styled('div')`
+  ${tw`p-5 w-full lg:max-w-full lg:flex mb-5  `}
+`
+const Thumbnail = styled('img')`
+  ${tw`h-48 lg:h-40  rounded-lg shadow-md mb-5`}
+`
+const Text = styled('div')`
+  ${tw` lg:pl-5 flex flex-col leading-normal lg:text-left`}
+`
+
+const Name = styled('div')`
+  ${tw`text-gray-900 font-bold text-3xl mb-2`}
+`
+
+const Description = styled('div')`
+  ${tw`text-gray-700 text-base`}
+`
+
 export async function getServerSideProps(req) {
   const props = await fetchMetrics()
   return {
@@ -32,65 +44,48 @@ export async function getServerSideProps(req) {
   }
 }
 export default function Metrics({ metrics }) {
+  const [appear, setAppear] = React.useState(false)
+
   return (
-    <ThemeProvider>
+    <div>
       <Head title="Metrics | Nozzle" />
       {metrics.length ? (
         <div>
-          <Top>
-            <Heading
-              as="h1"
-              size="2xl"
-              fontWeight="semibold"
-              textAlign="center"
-              pb={3}
-            >
-              Metrics
-            </Heading>
-            <Text textAlign="center">
-              Check out all the cool things your can track with Nozzle! Whether
-              it’s Above the Fold %, Unique URLs, or Click-Through Rate (CTR),
-              Nozzle has you covered.
-            </Text>
-          </Top>
+          <Center>
+            <Top>
+              <H1>Metrics</H1>
+              <P>
+                Check out all the cool things your can track with Nozzle!
+                Whether it’s Above the Fold %, Unique URLs, or Click-Through
+                Rate (CTR), Nozzle has you covered.
+              </P>
+            </Top>
 
-          <Container>
-            <Stack spacing={5}>
-              {metrics.map(metric => {
-                return (
-                  <Box
-                    p={4}
-                    display={{ md: 'flex' }}
-                    key={metric.fields.fieldId}
-                  >
-                    <Box flexShrink="0">
-                      <Image
-                        rounded="lg"
-                        width={{ base: 250, md: 40 }}
-                        border
-                        shadow="md"
+            <Container>
+              <div>
+                {metrics.map(metric => {
+                  return (
+                    <Box key={metric.fields.fieldId}>
+                      <Thumbnail
                         src={metric.fields.thumbnail.fields.file.url}
                         alt={metric.fields.name}
                       />
-                    </Box>
-                    <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
-                      <Heading display="block" as="xl" fontWeight="500">
-                        {metric.fields.name}
-                      </Heading>
-
-                      <Text mt={2} color="gray.500">
-                        <Smackdown source={metric.fields.shortDescription} />
+                      <Text>
+                        <Name>{metric.fields.name}</Name>
+                        <Description>
+                          <Smackdown source={metric.fields.shortDescription} />
+                        </Description>
                       </Text>
                     </Box>
-                  </Box>
-                )
-              })}
-            </Stack>
-          </Container>
+                  )
+                })}
+              </div>
+            </Container>
+          </Center>
         </div>
       ) : (
         ''
       )}
-    </ThemeProvider>
+    </div>
   )
 }

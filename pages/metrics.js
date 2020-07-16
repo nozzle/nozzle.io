@@ -20,7 +20,7 @@ const Top = styled('section')`
 `
 
 const Box = styled('div')`
-  ${tw`p-5 w-full lg:max-w-full lg:flex mb-5  `}
+  ${tw`p-5 w-full lg:max-w-full lg:flex mb-5 pt-16 mt--12`}
 `
 const Thumbnail = styled('img')`
   ${tw`h-48 lg:h-40  rounded-lg shadow-md mb-5`}
@@ -29,8 +29,16 @@ const Text = styled('div')`
   ${tw` lg:pl-5 flex flex-col leading-normal lg:text-left`}
 `
 
-const Name = styled('div')`
-  ${tw`text-gray-900 font-bold text-3xl mb-2`}
+const Name = styled('a')`
+  ${tw`text-gray-900 font-bold text-3xl mb-2 hover:underline`}
+
+  .number {
+    ${tw`inline-block align-top text-sm font-normal pl-1 invisible`}
+  }
+
+  :hover .number {
+    ${tw`visible`}
+  }
 `
 
 const Description = styled('div')`
@@ -44,8 +52,6 @@ export async function getServerSideProps(req) {
   }
 }
 export default function Metrics({ metrics }) {
-  const [appear, setAppear] = React.useState(false)
-
   return (
     <div>
       <Head title="Metrics | Nozzle" />
@@ -63,15 +69,18 @@ export default function Metrics({ metrics }) {
 
             <Container>
               <div>
-                {metrics.map(metric => {
+                {metrics.map((metric, i) => {
                   return (
-                    <Box key={metric.fields.fieldId}>
+                    <Box key={metric.fields.fieldId} id={metric.fields.fieldId}>
                       <Thumbnail
                         src={metric.fields.thumbnail.fields.file.url}
                         alt={metric.fields.name}
                       />
                       <Text>
-                        <Name>{metric.fields.name}</Name>
+                        <Name href={`#${metric.fields.fieldId}`}>
+                          {metric.fields.name}
+                          <div className="number">{i + 1}</div>
+                        </Name>
                         <Description>
                           <Smackdown source={metric.fields.shortDescription} />
                         </Description>

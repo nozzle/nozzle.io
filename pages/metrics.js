@@ -17,6 +17,7 @@ const Top = styled('section')`
   ${angle('left')};
   background: ${props => props.theme.colors.primaryDarker};
   color: white;
+  margin-bottom: 2rem;
 `
 
 const Box = styled('div')`
@@ -68,27 +69,25 @@ export default function Metrics({ metrics }) {
             </Top>
 
             <Container>
-              <div>
-                {metrics.map((metric, i) => {
-                  return (
-                    <Box key={metric.fields.fieldId} id={metric.fields.fieldId}>
-                      <Thumbnail
-                        src={metric.fields.thumbnail.fields.file.url}
-                        alt={metric.fields.name}
-                      />
-                      <Text>
-                        <Name href={`#${metric.fields.fieldId}`}>
-                          {metric.fields.name}
-                          <div className="number">{i + 1}</div>
-                        </Name>
-                        <Description>
-                          <Smackdown source={metric.fields.shortDescription} />
-                        </Description>
-                      </Text>
-                    </Box>
-                  )
-                })}
-              </div>
+              {metrics.map((metric, i) => {
+                return (
+                  <Box key={metric.fields.fieldId} id={metric.fields.fieldId}>
+                    <Thumbnail
+                      src={metric.fields.thumbnail.fields.file.url}
+                      alt={metric.fields.name}
+                    />
+                    <Text>
+                      <Name href={`#${metric.fields.fieldId}`}>
+                        {metric.fields.name}
+                        <div className="number">{i + 1}</div>
+                      </Name>
+                      <Description>
+                        <Smackdown source={metric.fields.shortDescription} />
+                      </Description>
+                    </Text>
+                  </Box>
+                )
+              })}
             </Container>
           </Center>
         </div>

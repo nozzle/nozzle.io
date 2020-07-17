@@ -55,16 +55,17 @@ export async function getServerSideProps(req) {
 export default function Metrics({ metrics }) {
   return (
     <div>
-      <Head title="Metrics | Nozzle" />
+      <Head
+        title="Metrics | Nozzle"
+        description="The definitions of all the metrics from your Nozzle dashboard."
+      />
       {metrics.length ? (
         <div>
           <Center>
             <Top>
               <H1>Metrics</H1>
               <P>
-                Check out all the cool things your can track with Nozzle!
-                Whether it’s Above the Fold %, Unique URLs, or Click-Through
-                Rate (CTR), Nozzle has you covered.
+                The definitions of all the metrics from your Nozzle dashboard.
               </P>
             </Top>
 

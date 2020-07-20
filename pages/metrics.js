@@ -7,6 +7,7 @@ import styled, { css } from 'styled-components'
 import Smackdown from 'components/Smackdown'
 import { Container, Center } from 'components/Layout'
 import tw from 'tailwind.macro'
+
 const section = css`
   padding: 6% 15%;
   z-index: 1;
@@ -16,6 +17,7 @@ const Top = styled('section')`
   ${angle('left')};
   background: ${props => props.theme.colors.primaryDarker};
   color: white;
+
   ${tw`lg:flex mb-4`}
   align-items: center;
   overflow: hidden;
@@ -61,18 +63,22 @@ const Thumbnail = styled('img')`
 const Text = styled('div')`
   ${tw` lg:pl-5 flex flex-col leading-normal lg:text-left`}
 `
+
 const Name = styled('a')`
   ${tw`text-gray-900 font-bold text-3xl mb-2 hover:underline`}
   .number {
     ${tw`inline-block align-top text-sm font-normal pl-1 invisible`}
   }
+
   :hover .number {
     ${tw`visible`}
   }
 `
+
 const Description = styled('div')`
   ${tw`text-gray-700 text-base`}
 `
+
 export async function getServerSideProps(req) {
   const props = await fetchMetrics()
   return {
@@ -88,12 +94,16 @@ export default function Metrics({ metrics }) {
       />
       {metrics.length ? (
         <div>
+
           <Top>
             <Title>
+
+
               <H1>Metrics</H1>
               <P>
                 The definitions of all the metrics from your Nozzle dashboard.
               </P>
+
             </Title>
             <Screenshot>
               <img src="img/metricsScreenshot.png" alt="Nozzle Metrics" />

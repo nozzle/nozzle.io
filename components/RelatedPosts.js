@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import tw from 'tailwind.macro'
 //
 
 const PostListStyled = styled('div')`
@@ -186,8 +187,7 @@ export default function PostList({ prefix, posts }) {
       ) : (
         <div
           css={`
-            margin: 0 auto;
-            text-align: center;
+            ${tw`text-center my-0 mx-auto`}
           `}
         >
           No posts were found.

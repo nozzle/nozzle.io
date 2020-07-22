@@ -11,6 +11,7 @@ import { H1, H2, P, Strong, Table } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 import Competitors from 'data/competitors'
+import tw from 'tailwind.macro'
 
 const sectionedCompetitors = []
 Competitors.forEach((d, i) => {
@@ -80,10 +81,9 @@ export default function RankTrackerComparison() {
             <Center>
               <H2>Why Another Rank Tracker?</H2>
               <P
-                css={{
-                  width: 900,
-                  maxWidth: '100%',
-                }}
+                css={`
+                  ${tw`max-w-full w-900`};
+                `}
               >
                 As life-long marketers and software developers with over 20
                 years of experience, we know first-hand the pains and challenges

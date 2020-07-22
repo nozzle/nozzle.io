@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { Button, H1, H2, H3, H4, H5, P, Span, Input } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import tw from 'tailwind.macro'
 
 const plans = [
   { label: 'Spray As You Go', value: 'spray' },
@@ -587,9 +588,7 @@ function SectionCalculatorCmp(props) {
                 <div className="amount">{number(totalCredits)}</div>
                 <div
                   css={`
-                    font-size: 1.5rem;
-                    padding: 0.5rem;
-                    margin-bottom: 1rem;
+                    ${tw`p-2 mb-4 text-2xl`}
                   `}
                 >
                   credits
@@ -690,7 +689,7 @@ const SectionContactUsCmp = props => (
   <section {...props}>
     <Container
       css={`
-        padding: 10rem 0;
+        ${tw`py-40 px-0`}
       `}
     >
       <H2 full>Let's start your free trial!</H2>
@@ -699,9 +698,7 @@ const SectionContactUsCmp = props => (
           <Button
             color="success"
             css={`
-              font-size: 1.7rem;
-              padding: 1.5rem;
-              border-radius: 0.3rem;
+              ${tw`text-2xl rounded p-6`}
             `}
           >
             Get started!

@@ -19,6 +19,7 @@ import RelatedPosts from '../../components/RelatedPosts'
 import AuthorsAndContributors from '../../components/AuthorsAndContributors'
 import TweetList from '../../components/TweetList'
 import SocialShare from '../../components/SocialShare'
+import tw from 'tailwind.macro'
 
 const PostH1 = styled(H1)`
   width: 600px;
@@ -173,8 +174,7 @@ export default function BlogPost({ post, relatedPosts }) {
               />
               <H3
                 css={`
-                  margin-top: 1rem;
-                  text-align: center;
+                  ${tw`mt-4 text-center`}
                 `}
               >
                 More Like This

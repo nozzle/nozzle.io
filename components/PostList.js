@@ -2,10 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 import Link from 'next/link'
-//
 import ReadTime from 'utils/ReadTime'
-
 import Smackdown from './Smackdown'
+import tw from 'tailwind.macro'
 
 const PostListStyled = styled('div')`
   display: flex;
@@ -228,8 +227,7 @@ export default function PostList({ prefix, posts }) {
       ) : (
         <div
           css={`
-            margin: 0 auto;
-            text-align: center;
+            ${tw`text-center my-0 mx-auto`}
           `}
         >
           No posts were found.

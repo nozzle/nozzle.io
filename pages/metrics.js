@@ -3,21 +3,15 @@ import { fetchMetrics } from '../contentful'
 import { H1, P } from 'components/Html'
 import Head from 'components/Head'
 import { angle } from 'utils/Styles'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Smackdown from 'components/Smackdown'
 import { Container, Center } from 'components/Layout'
 import tw from 'tailwind.macro'
 
-const section = css`
-  padding: 6% 15%;
-  z-index: 1;
-`
 const Top = styled('section')`
-  ${section};
+  padding: 5% 15%;
   ${angle('left')};
-  background: ${props => props.theme.colors.primaryDarker};
-
-  ${tw`lg:flex mb-4 items-center overflow-hidden text-white`}
+  ${tw`lg:flex mb-4 items-center overflow-hidden text-white bg-primaryDarker`}
 `
 const Wrap = styled('div')`
   ${tw`flex flex-no-wrap m-2 w-auto`}
@@ -36,8 +30,7 @@ const Screenshot = styled('div')`
   }
 `
 const Box = styled('div')`
-  ${tw`p-5 lg:flex mb-5 pt-16 mt--12 h-auto`}
-  flex: 1 1 600px;
+  ${tw`p-5 lg:flex mb-5 pt-16 mt--12 h-auto lg:flex-grow lg:flex-shrink-0 lg:w-600`}
 `
 const Thumbnail = styled('img')`
   ${tw`h-48 lg:h-40 rounded-lg shadow-md mb-5`}

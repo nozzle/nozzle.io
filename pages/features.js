@@ -8,6 +8,7 @@ import Head from 'components/Head'
 
 import Link from 'next/link'
 import Icon from 'components/Icon'
+import tw from 'tailwind.macro'
 
 import {
   Button,
@@ -1259,9 +1260,7 @@ const SectionContactUsCmp = props => (
           <Button
             color="success"
             css={`
-              font-size: 1.7rem;
-              padding: 1.5rem;
-              border-radius: 0.3rem;
+              ${tw`text-2xl rounded p-6`}
             `}
           >
             Get started!

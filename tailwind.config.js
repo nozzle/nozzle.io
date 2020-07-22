@@ -1,4 +1,3 @@
-import React from 'react'
 import Color from './utils/Color'
 
 const primary = '#0C6A8A'

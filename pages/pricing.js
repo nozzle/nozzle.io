@@ -535,7 +535,7 @@ function SectionCalculatorCmp(props) {
                     }))
                   }}
                   css={{
-                    border: !engines && '30px solid red',
+                    border: !engines && '2px solid red',
                   }}
                 />
               </div>

@@ -1,6 +1,6 @@
-import Color from './utils/Color'
+let tinycolor = require('tinycolor2')
 
-const primary = '#0C6A8A'
+const primary = tinycolor('#0C6A8A')
 
 module.exports = {
   purge: [],
@@ -8,17 +8,17 @@ module.exports = {
     extend: {
       colors: {
         primary,
-        primaryLight: Color(primary).lighten(7).toString(),
-        primaryLighter: Color(primary).lighten(15).toString(),
-        primaryDark: Color(primary).darken(7).toString(),
-        primaryDarker: Color(primary).darken(15).toString(),
-        primaryDarkest: Color(primary).darken(20).saturate(100).toString(),
+        primaryLight: primary.lighten(7).toString(),
+        primaryLighter: primary.lighten(15).toString(),
+        primaryDark: primary.darken(7).toString(),
+        primaryDarker: primary.darken(15).toString(),
+        primaryDarkest: primary.darken(20).saturate(100).toString(),
         text: '#2b3640',
         danger: '#F15854',
         success: '#60BD68',
         warning: '#e4b000',
         white: 'white',
-        stable: Color.mix(primary, 'black', 40).toString(),
+        stable: tinycolor.mix(primary, 'black', 40).toString(),
         lighter: 'rgba(255, 255, 255, 0.8)',
         light: 'rgba(255, 255, 255, 0.6)',
         dark: 'rgba(0, 0, 0, 0.6)',

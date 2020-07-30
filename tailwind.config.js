@@ -26,8 +26,20 @@ module.exports = {
         black: 'black',
       },
       spacing: {
+        '325': '325px',
+        '400': '400px',
+        '500': '500px',
         '600': '600px',
         '900': '900px',
+      },
+      padding: {
+        '1/2': '50%',
+      },
+      opacity: {
+        '90': '.9',
+      },
+      borderRadius: {
+        xlg: '1rem',
       },
     },
   },

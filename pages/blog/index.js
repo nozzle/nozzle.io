@@ -6,6 +6,7 @@ import { BlogContainer, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import Pagination from 'components/Pagination'
+import FeaturedPosts from 'components/FeaturedPosts'
 
 export async function getServerSideProps(req) {
   const props = await fetchBlogPosts()
@@ -65,6 +66,7 @@ export default function DevBlog({ posts, categories }) {
           ) : null}
         </Header>
         <BlogContainer>
+          <FeaturedPosts prefix="blog" posts={posts} />
           <PostList prefix="blog" posts={currentPosts} />
           <Pagination
             postsPerPage={postsPerPage}

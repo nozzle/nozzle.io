@@ -7,132 +7,94 @@ import Smackdown from './Smackdown'
 import tw from 'tailwind.macro'
 
 const PostListStyled = styled('div')`
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0.5rem;
-  width: auto;
+  ${tw`flex flex-no-wrap m-2 w-auto`}
 `
 
 const PostContainer = styled('div')`
+  ${tw`flex flex-wrap m-2 justify-center `}
   flex: 1;
-  margin: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 `
 
 const Post = styled('div')`
-  flex: 0 1 325px;
-  height: auto;
-  margin: 0.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  ${tw`flex-shrink h-auto w-325 m-2 bg-white rounded-xlg shadow-2xl`}
 
   @media only screen and (max-width: 1000px) {
-    width: 48%;
+    ${tw`w-2/4`}
   }
 
   @media only screen and (max-width: 600px) {
-    width: 98%;
+    ${tw`w-full`}
   }
 
   .titleImg {
-    display: block;
-    background-position: top;
-    background-size: cover;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    opacity: 0.9;
+    ${tw`block bg-top bg-cover shadow-lg opacity-90 rounded-xlg`}
     transition: all 0.5s ease;
-    border-radius: 1rem;
 
     > div {
-      padding-bottom: 50%;
+      ${tw`pb-1/2`}
     }
   }
 
   :hover {
     .titleImg {
-      background-position: center;
-      opacity: 1;
+      ${tw`bg-center opacity-100`}
     }
   }
 
   .content {
-    padding: 1.5rem;
+    ${tw`p-6`}
   }
 
   .title {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-    margin-bottom: 1rem;
+    ${tw`text-2xl leading-7 mb-4`}
   }
 
   .date {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    ${tw`text-sm mb-4`}
   }
 
   .readTime {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-    opacity: 0.7;
+    ${tw`text-sm mb-4 opacity-75`}
   }
 
   .categories {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+    ${tw`text-sm mb-4`}
   }
 
   .category {
-    display: inline-block;
-    padding: 0.4rem 0.6rem;
-    border-radius: 0.5rem;
-    background: rgba(0, 0, 0, 0.2);
-    color: black;
-    margin: 0 0.3rem 0.3rem 0;
+    ${tw`inline-block py-2 px-2 rounded-lg text-black bg-gray-300 mr-1 mb-1`}
   }
 
   .content {
-    text-align: left;
-    margin-bottom: 1rem;
+    ${tw`text-left mb-4`}
   }
 
   .shortDescription {
-    font-size: rem;
+    ${tw`text-base`}
   }
 
   .authors {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    ${tw`flex flex-wrap items-center`}
   }
   .author {
-    display: flex;
-    align-items: center;
+    ${tw`flex items-center`}
 
     img {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 2rem;
-      margin-right: 0.5rem;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+      ${tw`w-8 h-8 rounded-full mr-2 shadow-lg`}
     }
   }
 
   .image {
-    text-align: center;
+    ${tw`text-center`}
+
     img {
-      max-height: 6rem;
-      max-width: 100%;
-      width: auto;
+      ${tw`max-w-full w-auto`}
     }
   }
 
   .linkStyle {
     :hover {
-      text-decoration: underline;
+      ${tw`underline`}
     }
   }
 `

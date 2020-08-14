@@ -160,7 +160,10 @@ const SectionBrandsCmp = props => (
           <div className="domain">
             <div className="img">
               <Img src={require('public/img/domainEdit.png')} />
-              <Img src={require('public/img/cnn-small.png')} />
+              <Img
+                src={require('public/img/cnn-small.png')}
+                alt="SERP listing for CNN other position trackers"
+              />
             </div>
           </div>
         </div>
@@ -172,7 +175,10 @@ const SectionBrandsCmp = props => (
           <div className="brand">
             <div className="img">
               <Img src={require('public/img/brandEdit.png')} />
-              <Img src={require('public/img/cnn.png')} />
+              <Img
+                src={require('public/img/cnn.png')}
+                alt="SERP result for CNN nozzle tracking"
+              />
             </div>
           </div>
         </div>
@@ -425,7 +431,10 @@ const SectionCompetitionCmp = props => (
       </H2>
       <div className="one">
         <div className="left">
-          <Img src={require('public/img/brands.png')} />
+          <Img
+            src={require('public/img/brands.png')}
+            alt="SERP tracking tool detailed competitors analysis"
+          />
         </div>
         <div className="right">
           <H4>Unlimited competitors for free.</H4>
@@ -439,7 +448,10 @@ const SectionCompetitionCmp = props => (
       </div>
       <div className="two">
         <div className="left">
-          <Img src={require('public/img/domains.png')} />
+          <Img
+            src={require('public/img/domains.png')}
+            alt="Unknown competitors analysis with historical data rewriting"
+          />
         </div>
         <div className="right">
           <H4>Share of Voice &amp; Rewriting History</H4>
@@ -551,6 +563,7 @@ const SectionScheduling = styled(props => (
         <Img
           src={require('public/img/schedules.png')}
           className="scheduleImg"
+          alt="Monitor keyword rankings with customized scheduling feature"
         />
         <P>
           This way, you can{' '}
@@ -947,7 +960,10 @@ const SectionAgenciesCmp = props => (
       <H2>Agency Tools</H2>
       <div className="wrap">
         <div className="one">
-          <Img src={require('public/img/teams.png')} />
+          <Img
+            src={require('public/img/teams.png')}
+            alt="Bulk serp tracker for agency management"
+          />
         </div>
         <div className="two">
           <H4>Manage your agency like a boss.</H4>
@@ -1050,7 +1066,10 @@ const SectionReputationCmp = props => (
           </Link>
         </div>
         <div className="two">
-          <Img src={require('public/img/reputationChange.png')} />
+          <Img
+            src={require('public/img/reputationChange.png')}
+            alt="SERP monitoring for reputation management"
+          />
         </div>
       </div>
     </Container>

@@ -196,3 +196,19 @@ const normalizeMetrics = metric => {
     ...metric,
   }
 }
+
+export async function fetchTestimonials() {
+  const { items } = await client.getEntries({
+    content_type: 'testimonial',
+    limit: 1000,
+  })
+  const testimonial = items.map(normalizeTestimonial)
+  return {
+    testimonial,
+  }
+}
+const normalizeTestimonial = testimonial => {
+  return {
+    ...testimonial,
+  }
+}

@@ -281,7 +281,7 @@ export default function Home() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="Enterprise Keyword Rank Tracker Tool - SEO Ranking Checker - Enterprise Keyword Rank Tracking - Nozzle"
+        title="Keyword Rank Tracker Tool - Enterprise SEO Keyword Rank Checker - Google SERP Website Rank Checker - Nozzle"
         description=" A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want a rank checker with all the data, give Nozzle a test drive today."
       />
       <main>

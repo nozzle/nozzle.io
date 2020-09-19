@@ -1308,7 +1308,7 @@ export default function Features() {
   return (
     <div>
       <Head
-        title="Search Engine Position Tracker Tool - SERP Keyword Rank Tracking Tool - SERP Ranking Tools"
+        title="Search Engine Ranking Checker Tool - SERP Rank Tracker - Google Keyword Position Checker - SERP Tool"
         description="A search engine position tracker with customized scheduling options and unlimited keyword & competitor monitoring. View your SERP position data in your own BI dashboard if that brings you more peace. "
       />
       <main>

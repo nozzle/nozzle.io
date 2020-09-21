@@ -359,7 +359,7 @@ export default function Navbar(props) {
               <span className="hide">Home</span>
               <img
                 src={require('public/img/logo-small.svg')}
-                alt="Keyword Rank Checker"
+                alt="Google Keyword Rank Checker Tool"
                 itemProp="logo"
               />
             </span>

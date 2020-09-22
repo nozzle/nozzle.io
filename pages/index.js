@@ -292,7 +292,7 @@ export default function Home() {
             <P>
               If you want access to more enterprise level SERP data than any
               tool has ever offered, you've come to the right place. SEO data
-              nerds drool over our keyword rank tracker.
+              nerds drool over our Google keyword rank tracker tool.
             </P>
             <Link href="/trial">
               <Button color="success" burst>
@@ -319,7 +319,7 @@ export default function Home() {
             <Div>
               <Img
                 src={require('public/img/cnn-small.png')}
-                alt="SERP listing for CNN"
+                alt="Online SERP listing for CNN - SEO keyword rank monitoring"
               />
             </Div>
             <Div>
@@ -329,13 +329,13 @@ export default function Home() {
             </Div>
             <Img
               src={require('public/img/cnn.png')}
-              alt="SERP Result Tracking for CNN"
+              alt="SERP Result Tracking for CNN - keyword rank checking the whole SERP"
             />
           </Left>
           <Right>
             <H2>Track all the things!</H2>
             <P>
-              Most tools just tell you the top ranking page on your domain. We
+              Most keyword rank checker tools just tell you the top ranking page on your website. We
               monitor your entire brand, including social media profiles and
               unlimited domain matches. There's a difference between knowing
               you're ranking #1 and owning the entire first page!
@@ -343,7 +343,7 @@ export default function Home() {
             <P>
               Unlimited access doesn't just refer to today's SERP. We keep all
               your data FOREVER, so 3 years from now, you'll be able to look
-              back and see what was ranking for "Pokemon Go" in 2016.
+              back and see what was ranking for "The Last Dance" in 2020.
             </P>
             <Link href="/trial">
               <Button color="success" burst>
@@ -366,7 +366,7 @@ export default function Home() {
             </H5>
             <P>
               With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean what
-              it used to. Nozzle won’t just tell you where you rank, we’ll tell
+              it used to. Nozzle won’t just tell you where keyword position down the search result page, we’ll tell
               you your ad adjusted rank, how many pixels down the page you are,
               whether a knowledge graph appeared and even what your prospective
               customer ate for breakfast.
@@ -383,14 +383,6 @@ export default function Home() {
               <Li>inbound links</Li>
               <Li>product ad pricing</Li>
               <Li>sitelinks</Li>
-              <Li>
-                <a
-                  href="http://www.thegooglecache.com/canonicalized-url-is-noindex-nofollow.html"
-                  target="blank"
-                >
-                  Canonicalized URL is noindex
-                </a>
-              </Li>
               <Li>star ratings</Li>
               <Li>but wait, there's more...</Li>
             </Ul>
@@ -407,7 +399,7 @@ export default function Home() {
           <Right>
             <Img
               src={rankDataImages[rankDataImageIndex]}
-              alt="Website Ranking Checker that lists rank, ad adjusted rank, and pixel height"
+              alt="Google Website Keyword Rank Checker that lists rank, ad adjusted rank, and pixel height"
             />
           </Right>
         </SectionRankData>
@@ -415,7 +407,7 @@ export default function Home() {
           <Left>
             <Img
               src={require('public/img/groupby.png')}
-              alt="Enterprise Ranking Checker Dashboard"
+              alt="Enterprise Keyword Rank Checker Tool Dashboard"
             />
           </Left>
           <Right>
@@ -454,7 +446,7 @@ export default function Home() {
           <div className="csv">
             <Img
               src={require('public/img/csv.png')}
-              alt="Download ranking data to CSV"
+              alt="Download keywords position data to CSV"
             />
           </div>
           <div className="main">
@@ -480,7 +472,7 @@ export default function Home() {
           <div className="sql">
             <Img
               src={require('public/img/sql.png')}
-              alt="Access your SEO ranking data with SQL"
+              alt="Access your Google search ranking data with SQL"
             />
           </div>
         </SectionDataJunkie>
@@ -492,7 +484,7 @@ export default function Home() {
             Not all keywords are created equal. You're probably paying too much
             to track your long-tail keywords daily or you're only getting weekly
             data for your money making head terms. Say goodbye to those tools
-            and say hello to the rank checker that will become your new best
+            and say hello to the keyword rank checker tool that will become your new best
             friend. Track your most important keywords daily, hourly or even
             every 5 minutes. Keep an eye on thousands more by scheduling them
             weekly or monthly without breaking the bank.
@@ -501,7 +493,7 @@ export default function Home() {
             <Div>
               <Img
                 src={require('public/img/schedules.png')}
-                alt="Keyword rank tracker with customized scheduling feature"
+                alt="SEO keyword rank tracker with customized scheduling feature"
               />
             </Div>
           </Centered>
@@ -522,8 +514,8 @@ export default function Home() {
           <Left>
             <H2>You can't afford to not try Nozzle</H2>
             <H5>
-              No minimum spend, no qualification calls, white-glove onboarding,
-              batteries included
+              A website rank checker with no minimum spend, no qualification calls, white-glove onboarding, &
+              batteries included.
             </H5>
             <P>
               After a free trial, getting started can cost you less per month

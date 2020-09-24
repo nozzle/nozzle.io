@@ -318,8 +318,8 @@ export default function Home() {
             </Centered>
             <Div>
               <Img
-                src={require('public/img/cnn-small.png')}
-                alt="Online SERP listing for CNN - SEO keyword rank monitoring"
+                src={require('public/img/the-matrix-organic-result-listing.JPG')}
+                alt="Online SERP listing for The Matrix - SEO keyword rank monitoring"
               />
             </Div>
             <Div>

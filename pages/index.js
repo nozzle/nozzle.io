@@ -334,7 +334,7 @@ export default function Home() {
             </Div>
             <iframe
               title="Get unlimited access to the entire SERP"
-              src="https://www.youtube.com/embed/Yz1hrFUF1gM"
+              src="https://www.youtube.com/embed/Yz1hrFUF1gM?rel=0"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -370,11 +370,11 @@ export default function Home() {
           <Left>
             <H2 color="primaryDark">Rank data you can only find at Nozzle</H2>
             <H5 weight="regular">
-              Track results by{' '}
-              <Strong>Rank, Ad Adjusted Rank, Pixel Height</Strong> and more!
+              In addition to <Strong>Rank</Strong>, track results by{' '}
+              <Strong>Pixels from Top, Above the Fold %, SERP %</Strong> and more!
             </H5>
             <P>
-              With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean what
+              With up to 4 ads and new SERP features showing up at the top, ranking #1 doesn’t mean what
               it used to. Nozzle won’t just tell you where keyword position down
               the search result page, we’ll tell you your ad adjusted rank, how
               many pixels down the page you are, whether a knowledge graph
@@ -382,14 +382,14 @@ export default function Home() {
               breakfast.
             </P>
             <P>
-              We include <Strong>over 350+ data points</Strong> for{' '}
+              We include <Strong>over 400+ data points</Strong> for{' '}
               <Strong>every result on the serp</Strong> - no extra cost!
             </P>
             <Ul>
               <Li>search volume</Li>
               <Li>estimated traffic</Li>
               <Li>social shares</Li>
-              <Li>Moz PA / DA</Li>
+              <Li>video publisher name</Li>
               <Li>inbound links</Li>
               <Li>product ad pricing</Li>
               <Li>sitelinks</Li>

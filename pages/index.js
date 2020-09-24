@@ -337,7 +337,7 @@ export default function Home() {
               src="https://www.youtube.com/embed/Yz1hrFUF1gM?rel=0"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen="allowFullScreen"
             ></iframe>
           </Left>
           <Right>

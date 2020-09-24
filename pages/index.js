@@ -146,6 +146,11 @@ const SectionTrackAllTheThings = styled(Section)`
     box-shadow: 0 0 30px 0 rgba(0; 0; 0; 0.2);
   }
 
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+
   .allthethings {
     position: absolute;
     right: 0;
@@ -327,18 +332,22 @@ export default function Home() {
                 <H4>Get unlimited access to the entire SERP</H4>
               </Centered>
             </Div>
-            <Img
-              src={require('public/img/cnn.png')}
-              alt="SERP Result Tracking for CNN - keyword rank checking the whole SERP"
-            />
+            <iframe
+              title="Get unlimited access to the entire SERP"
+              src="https://www.youtube.com/embed/Yz1hrFUF1gM"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </Left>
           <Right>
             <H2>Track all the things!</H2>
             <P>
-              Most keyword rank checker tools just tell you the top ranking page on your website. We
-              monitor your entire brand, including social media profiles and
-              unlimited domain matches. There's a difference between knowing
-              you're ranking #1 and owning the entire first page!
+              Most keyword rank checker tools just tell you the top ranking page
+              on your website. We monitor your entire brand, including social
+              media profiles and unlimited domain matches. There's a difference
+              between knowing you're ranking #1 and owning the entire first
+              page!
             </P>
             <P>
               Unlimited access doesn't just refer to today's SERP. We keep all
@@ -366,10 +375,11 @@ export default function Home() {
             </H5>
             <P>
               With 4 ads and rank #0 answer boxes, ranking #1 doesn’t mean what
-              it used to. Nozzle won’t just tell you where keyword position down the search result page, we’ll tell
-              you your ad adjusted rank, how many pixels down the page you are,
-              whether a knowledge graph appeared and even what your prospective
-              customer ate for breakfast.
+              it used to. Nozzle won’t just tell you where keyword position down
+              the search result page, we’ll tell you your ad adjusted rank, how
+              many pixels down the page you are, whether a knowledge graph
+              appeared and even what your prospective customer ate for
+              breakfast.
             </P>
             <P>
               We include <Strong>over 350+ data points</Strong> for{' '}
@@ -484,10 +494,10 @@ export default function Home() {
             Not all keywords are created equal. You're probably paying too much
             to track your long-tail keywords daily or you're only getting weekly
             data for your money making head terms. Say goodbye to those tools
-            and say hello to the keyword rank checker tool that will become your new best
-            friend. Track your most important keywords daily, hourly or even
-            every 5 minutes. Keep an eye on thousands more by scheduling them
-            weekly or monthly without breaking the bank.
+            and say hello to the keyword rank checker tool that will become your
+            new best friend. Track your most important keywords daily, hourly or
+            even every 5 minutes. Keep an eye on thousands more by scheduling
+            them weekly or monthly without breaking the bank.
           </P>
           <Centered>
             <Div>
@@ -514,8 +524,8 @@ export default function Home() {
           <Left>
             <H2>You can't afford to not try Nozzle</H2>
             <H5>
-              A website rank checker with no minimum spend, no qualification calls, white-glove onboarding, &
-              batteries included.
+              A website rank checker with no minimum spend, no qualification
+              calls, white-glove onboarding, & batteries included.
             </H5>
             <P>
               After a free trial, getting started can cost you less per month

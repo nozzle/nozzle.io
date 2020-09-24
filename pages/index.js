@@ -517,10 +517,6 @@ export default function Home() {
               A website rank checker with no minimum spend, no qualification calls, white-glove onboarding, &
               batteries included.
             </H5>
-            <P>
-              After a free trial, getting started can cost you less per month
-              than your secret santa gift this year. Seriously.
-            </P>
             <Link href="/pricing">
               <Button burst>See Our Plans & Pricing</Button>
             </Link>{' '}

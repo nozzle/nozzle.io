@@ -40,6 +40,10 @@ const Name = styled('div')`
 
 const Testimonial = styled('div')`
   ${tw`text-gray-700 text-base`}
+
+  iframe {
+    ${tw`lg:w-500 md:w-500 w-300`}
+  }
 `
 
 export async function getServerSideProps() {

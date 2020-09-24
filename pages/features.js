@@ -1194,7 +1194,7 @@ const SectionIntegrationsCmp = props => (
           <H5>Data</H5>
           <ul>
             <li>API</li>
-            <li>Big Query / MySQL</li>
+            <li>Big Query</li>
             <li>CSV</li>
           </ul>
         </div>

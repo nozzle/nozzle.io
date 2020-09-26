@@ -204,7 +204,7 @@ export async function fetchTestimonials() {
   })
   const testimonial = items.map(normalizeTestimonial)
   return {
-    testimonial,
+    testimonial: orderBy(testimonial, [d => d.fields.orderNumber], ['asc']),
   }
 }
 const normalizeTestimonial = testimonial => {

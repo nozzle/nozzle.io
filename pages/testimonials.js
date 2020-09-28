@@ -9,7 +9,7 @@ import { Container, Center } from 'components/Layout'
 import tw from 'tailwind.macro'
 
 const Top = styled('section')`
-  padding: 7% 5%;
+  padding: 5% 5%;
   ${angle('left')};
   ${tw`text-white bg-primaryDarker`}
 `

@@ -311,6 +311,7 @@ const links = [
     name: 'Pricing',
     path: '/pricing',
   },
+  { name: 'Testimonials', path: '/testimonials' },
   {
     name: 'Blog',
     path: '/blog',

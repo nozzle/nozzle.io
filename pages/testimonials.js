@@ -9,7 +9,7 @@ import { Container, Center } from 'components/Layout'
 import tw from 'tailwind.macro'
 
 const Top = styled('section')`
-  padding: 5% 5%;
+  padding: 4% 5%;
   ${angle('left')};
   ${tw`text-white bg-primaryDarker`}
 `
@@ -63,7 +63,7 @@ export default function Testimonials({ testimonial }) {
         <div>
           <Center>
             <Top>
-              <H1>Testimonials</H1>
+              <H1>Testimonials and Shout-outs</H1>
               <P>Here's what people are saying about Nozzle</P>
             </Top>
           </Center>

@@ -63,7 +63,7 @@ export default function Testimonials({ testimonial }) {
         <div>
           <Center>
             <Top>
-              <H1>Testimonials and Shout-outs</H1>
+              <H1>Testimonials & Shout-outs</H1>
               <P>Here's what people are saying about Nozzle</P>
             </Top>
           </Center>

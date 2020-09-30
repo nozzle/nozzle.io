@@ -212,3 +212,19 @@ const normalizeTestimonial = testimonial => {
     ...testimonial,
   }
 }
+
+export async function fetchSerpFeatures() {
+  const { items } = await client.getEntries({
+    content_type: 'serpFeatures',
+    limit: 1000,
+  })
+  const serpFeature = items.map(normalizeSerpFeature)
+  return {
+    serpFeature: orderBy(serpFeature, [d => d.fields.name], ['asc']),
+  }
+}
+const normalizeSerpFeature = testimonial => {
+  return {
+    ...testimonial,
+  }
+}

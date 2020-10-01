@@ -324,7 +324,7 @@ export default function Home() {
             <Div>
               <Img
                 src={require('public/img/the-matrix-organic-result-listing.JPG')}
-                alt="Online SERP listing for The Matrix - SEO keyword rank monitoring"
+                alt="SERP listing for The Matrix - SEO keyword rank monitoring"
               />
             </Div>
             <Div>
@@ -436,7 +436,7 @@ export default function Home() {
               handle. The SERP is yours to command!
             </P>
             <P>
-              If you find a new online competitor you haven't been tracking, add them
+              If you find a new competitor you haven't been tracking, add them
               and we'll even rewrite history for you. It'll be like you were
               monitoring them from the start!
             </P>

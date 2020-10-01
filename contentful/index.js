@@ -234,8 +234,29 @@ export async function fetchSerpFeatures() {
   }
 }
 
-const normalizeSerpFeature = testimonial => {
+const normalizeSerpFeature = feature => {
   return {
-    ...testimonial,
+    ...feature,
+  }
+}
+
+export async function fetchResultTypesByLabelSlug(labelSlug) {
+  const {
+    items: [category],
+  } = await client.getEntries({
+    content_type: 'serpLabel',
+    'fields.slug.name': labelSlug,
+  })
+
+  let { items: serpFeatures } = await client.getEntries({
+    content_type: 'serpFeatures',
+    'fields.labels.sys.id': category.sys.id,
+  })
+
+  serpFeatures = serpFeatures.map(normalizeSerpFeature)
+
+  return {
+    serpFeatures,
+    category,
   }
 }

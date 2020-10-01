@@ -1,25 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
-import { fetchSerpFeatures } from '../contentful'
+import { fetchSerpFeatures } from '../../contentful'
 import { H1, P } from 'components/Html'
 import Head from 'components/Head'
-import { angle } from 'utils/Styles'
 import styled from 'styled-components'
 import Smackdown from 'components/Smackdown'
-import { Container, Center, SubMenu } from 'components/Layout'
+import { Header, Container, Center, SubMenu } from 'components/Layout'
 import tw from 'tailwind.macro'
 
-const Top = styled('section')`
-  padding: 4% 5%;
-  ${angle('left')};
-  ${tw`text-white bg-primaryDarker`}
-`
 const Wrap = styled('div')`
   ${tw`flex flex-no-wrap m-2 w-auto`}
 `
 const FeatureStyles = styled('div')`
-  ${tw`flex flex-wrap flex-auto m-2 `}
-  justify-content: center;
+  ${tw`flex flex-wrap flex-auto m-2 justify-center `}
 `
 
 const Box = styled('div')`
@@ -56,7 +49,7 @@ export default function SerpFeatures({ serpFeature, labels }) {
       {serpFeature.length ? (
         <div>
           <Center>
-            <Top>
+            <Header>
               <H1>SERP Features</H1>
               <P>
                 All of the features of the SERP that Nozzle can help you
@@ -68,7 +61,7 @@ export default function SerpFeatures({ serpFeature, labels }) {
                     {labels.map(label => (
                       <li key={label.fields.slug}>
                         <Link
-                          href="/result-types/categories/[label]"
+                          href="/result-types/categories/[labels]"
                           as={`/result-types/categories/${label.fields.slug}`}
                         >
                           <a>{label.fields.name}</a>
@@ -78,7 +71,7 @@ export default function SerpFeatures({ serpFeature, labels }) {
                   </ul>
                 </SubMenu>
               ) : null}
-            </Top>
+            </Header>
           </Center>
           <Container>
             <Center>
@@ -99,6 +92,7 @@ export default function SerpFeatures({ serpFeature, labels }) {
                           ? serpFeature.fields.screenshots.map(screenshot => {
                               return (
                                 <Thumbnail
+                                  key={serpFeature.fields.name}
                                   src={screenshot.fields.file.url}
                                   alt={serpFeature.fields.name}
                                 />

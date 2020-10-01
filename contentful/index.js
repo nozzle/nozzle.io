@@ -213,16 +213,27 @@ const normalizeTestimonial = testimonial => {
   }
 }
 
+const getLabelsFromFeatures = features =>
+  uniq(
+    flatten(
+      features.map(d => d.fields.labels),
+      d => d.sys.id
+    ),
+    d => d.sys.id
+  )
+
 export async function fetchSerpFeatures() {
   const { items } = await client.getEntries({
     content_type: 'serpFeatures',
     limit: 1000,
   })
-  const serpFeature = items.map(normalizeSerpFeature)
+  const serpFeatures = items.map(normalizeSerpFeature)
   return {
-    serpFeature: orderBy(serpFeature, [d => d.fields.name], ['asc']),
+    serpFeature: orderBy(serpFeatures, [d => d.fields.name], ['asc']),
+    labels: getLabelsFromFeatures(serpFeatures),
   }
 }
+
 const normalizeSerpFeature = testimonial => {
   return {
     ...testimonial,

@@ -436,7 +436,7 @@ export default function Home() {
               handle. The SERP is yours to command!
             </P>
             <P>
-              If you find a new competitor you haven't been tracking, add them
+              If you find a new online competitor you haven't been tracking, add them
               and we'll even rewrite history for you. It'll be like you were
               monitoring them from the start!
             </P>

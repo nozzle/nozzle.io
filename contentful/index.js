@@ -212,3 +212,51 @@ const normalizeTestimonial = testimonial => {
     ...testimonial,
   }
 }
+
+const getLabelsFromFeatures = features =>
+  uniq(
+    flatten(
+      features.map(d => d.fields.labels),
+      d => d.sys.id
+    ),
+    d => d.sys.id
+  )
+
+export async function fetchSerpFeatures() {
+  const { items } = await client.getEntries({
+    content_type: 'serpFeatures',
+    limit: 1000,
+  })
+  const serpFeatures = items.map(normalizeSerpFeature)
+  return {
+    serpFeature: orderBy(serpFeatures, [d => d.fields.name], ['asc']),
+    labels: getLabelsFromFeatures(serpFeatures),
+  }
+}
+
+const normalizeSerpFeature = feature => {
+  return {
+    ...feature,
+  }
+}
+
+export async function fetchResultTypesByLabelSlug(labelSlug) {
+  const {
+    items: [category],
+  } = await client.getEntries({
+    content_type: 'serpLabel',
+    'fields.slug.name': labelSlug,
+  })
+
+  let { items: serpFeatures } = await client.getEntries({
+    content_type: 'serpFeatures',
+    'fields.labels.sys.id': category.sys.id,
+  })
+
+  serpFeatures = serpFeatures.map(normalizeSerpFeature)
+
+  return {
+    serpFeatures,
+    category,
+  }
+}

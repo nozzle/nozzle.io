@@ -324,7 +324,7 @@ export default function Home() {
             <Div>
               <Img
                 src={require('public/img/the-matrix-organic-result-listing.JPG')}
-                alt="SERP listing for The Matrix - SEO keyword rank monitoring"
+                alt="Online SERP listing for The Matrix - SEO keyword rank monitoring"
               />
             </Div>
             <Div>

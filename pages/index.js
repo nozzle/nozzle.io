@@ -494,7 +494,7 @@ export default function Home() {
             Not all keywords are created equal. You're probably paying too much
             to track your long-tail keywords daily or you're only getting weekly
             data for your money making head terms. Say goodbye to those tools
-            and say hello to the keyword rank checker tool that will become your
+            and say hello to the online keyword rank checker tool that will become your
             new best friend. Track your most important keywords daily, hourly or
             even every 5 minutes. Keep an eye on thousands more by scheduling
             them weekly or monthly without breaking the bank.

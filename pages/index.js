@@ -375,7 +375,7 @@ export default function Home() {
             </H5>
             <P>
               With up to 4 ads and new SERP features showing up at the top, ranking #1 doesn’t mean what
-              it used to. Nozzle won’t just tell you where keyword position down
+              it used to. Nozzle won’t just tell you your keyword position down
               the search result page, we’ll tell you your ad adjusted rank, how
               many pixels down the page you are, whether a knowledge graph
               appeared and even what your prospective customer ate for

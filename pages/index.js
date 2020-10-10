@@ -466,7 +466,7 @@ export default function Home() {
               Whether your thing is pivot tables or SQL JOIN's, you can access
               your data the way you're used to. Even better, we keep all your
               data forever, including the raw html. Consider it necessary
-              tooling when dealing with millions of keywords. )
+              tooling when dealing with millions of keywords. Nozzle truly is an online keyword rank tracker tool built for the ages.
             </P>
             <Link href="/trial">
               <Button color="success" burst>

@@ -335,7 +335,7 @@ export default function Home() {
             <iframe
               title="Get unlimited access to the entire SERP"
               src="https://www.youtube.com/embed/Yz1hrFUF1gM?rel=0"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen="allowFullScreen"
             ></iframe>
@@ -371,15 +371,16 @@ export default function Home() {
             <H2 color="primaryDark">Rank data you can only find at Nozzle</H2>
             <H5 weight="regular">
               In addition to <Strong>Rank</Strong>, track results by{' '}
-              <Strong>Pixels from Top, Above the Fold %, SERP %</Strong> and more!
+              <Strong>Pixels from Top, Above the Fold %, SERP %</Strong> and
+              more!
             </H5>
             <P>
-              With up to 4 ads and new SERP features showing up at the top, ranking #1 doesn’t mean what
-              it used to. Nozzle won’t just tell you where keyword position down
-              the search result page, we’ll tell you your ad adjusted rank, how
-              many pixels down the page you are, whether a knowledge graph
-              appeared and even what your prospective customer ate for
-              breakfast.
+              With up to 4 ads and new SERP features showing up at the top,
+              ranking #1 doesn’t mean what it used to. Nozzle won’t just tell
+              you where keyword position down the search result page, we’ll tell
+              you your ad adjusted rank, how many pixels down the page you are,
+              whether a knowledge graph appeared and even what your prospective
+              customer ate for breakfast.
             </P>
             <P>
               We include <Strong>over 400+ data points</Strong> for{' '}

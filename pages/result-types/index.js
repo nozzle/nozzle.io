@@ -12,17 +12,21 @@ const Wrap = styled('div')`
   ${tw`flex flex-no-wrap m-2 w-auto`}
 `
 const FeatureStyles = styled('div')`
-  ${tw`flex flex-wrap flex-auto m-2 justify-center `}
+  ${tw`w-full justify-center`}
 `
 
 const Box = styled('div')`
-  ${tw`pt-5 lg:flex mb-5  h-auto`}
+  ${tw`lg:flex pt-5  mb-5  h-auto `}
 `
-const Thumbnail = styled('img')`
-  ${tw`h-16 sm:h-24 md:h-32 lg:h-32 xl:h-40 shadow-md mb-5`}
+const Screenshots = styled('div')`
+  ${tw`lg:flex-1 `}
+`
+
+const Screenshot = styled('img')`
+  ${tw`flex w-325 sm:w-325 md:w-325 lg:w-400 xl:w-500 shadow-md mb-5 mr-10 lg:mr-5 mx-auto`}
 `
 const Text = styled('div')`
-  ${tw` lg:mr-10 leading-normal lg:text-left`}
+  ${tw`lg:flex-1 lg:ml-10 leading-normal lg:text-left`}
 `
 
 const Name = styled('div')`
@@ -88,17 +92,21 @@ export default function SerpFeatures({ serpFeature, labels }) {
                             />
                           </Description>
                         </Text>
-                        {serpFeature.fields.screenshots
-                          ? serpFeature.fields.screenshots.map(screenshot => {
+                        {serpFeature.fields.screenshots ? (
+                          <Screenshots>
+                            {serpFeature.fields.screenshots.map(screenshot => {
                               return (
-                                <Thumbnail
+                                <Screenshot
                                   key={serpFeature.fields.name}
                                   src={screenshot.fields.file.url}
                                   alt={serpFeature.fields.name}
                                 />
                               )
-                            })
-                          : ''}
+                            })}
+                          </Screenshots>
+                        ) : (
+                          ''
+                        )}
                       </Box>
                     )
                   })}

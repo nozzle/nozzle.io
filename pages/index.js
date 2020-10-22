@@ -307,7 +307,7 @@ export default function Home() {
           </Left>
           <Right>
             <Img
-              src={require('public/img/dashboard.jpg')}
+              src={require('public/img/dashboard.png')}
               alt="Enterprise Keyword Rank Tracker Tool Dashboard"
             />
           </Right>
@@ -371,15 +371,16 @@ export default function Home() {
             <H2 color="primaryDark">Rank data you can only find at Nozzle</H2>
             <H5 weight="regular">
               In addition to <Strong>Rank</Strong>, track results by{' '}
-              <Strong>Pixels from Top, Above the Fold %, SERP %</Strong> and more!
+              <Strong>Pixels from Top, Above the Fold %, SERP %</Strong> and
+              more!
             </H5>
             <P>
-              With up to 4 ads and new SERP features showing up at the top, ranking #1 doesn’t mean what
-              it used to. Nozzle won’t just tell you your keyword position down
-              the search result page, we’ll tell you your ad adjusted rank, how
-              many pixels down the page you are, whether a knowledge graph
-              appeared and even what your prospective customer ate for
-              breakfast.
+              With up to 4 ads and new SERP features showing up at the top,
+              ranking #1 doesn’t mean what it used to. Nozzle won’t just tell
+              you your keyword position down the search result page, we’ll tell
+              you your ad adjusted rank, how many pixels down the page you are,
+              whether a knowledge graph appeared and even what your prospective
+              customer ate for breakfast.
             </P>
             <P>
               We include <Strong>over 400+ data points</Strong> for{' '}
@@ -466,7 +467,8 @@ export default function Home() {
               Whether your thing is pivot tables or SQL JOIN's, you can access
               your data the way you're used to. Even better, we keep all your
               data forever, including the raw html. Consider it necessary
-              tooling when dealing with millions of keywords. Nozzle truly is an online keyword rank tracker tool built for the ages.
+              tooling when dealing with millions of keywords. Nozzle truly is an
+              online keyword rank tracker tool built for the ages.
             </P>
             <Link href="/trial">
               <Button color="success" burst>
@@ -494,10 +496,10 @@ export default function Home() {
             Not all keywords are created equal. You're probably paying too much
             to track your long-tail keywords daily or you're only getting weekly
             data for your money making head terms. Say goodbye to those tools
-            and say hello to the online keyword rank checker tool that will become your
-            new best friend. Track your most important keywords daily, hourly or
-            even every 5 minutes. Keep an eye on thousands more by scheduling
-            them weekly or monthly without breaking the bank.
+            and say hello to the online keyword rank checker tool that will
+            become your new best friend. Track your most important keywords
+            daily, hourly or even every 5 minutes. Keep an eye on thousands more
+            by scheduling them weekly or monthly without breaking the bank.
           </P>
           <Centered>
             <Div>

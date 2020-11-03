@@ -86,7 +86,7 @@ export default function Paa() {
             Need help finding the right questions to answer on your website?
             Well, the People Also Ask boxes in Google's results pages contain
             the jackpot. Fill out the form and we'll generate a free report that
-            lists all the questions that Google serves up for 200 of your
+            lists all the questions that Google serves up for 25 of your
             keywords.
           </p>
         </Top>

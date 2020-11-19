@@ -39,21 +39,21 @@ const SectionHeader = styled(Section)`
 
 //this is only the test key
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
-// export const getServerSideProps = async ctx => {
-//   //this is only the test key
-//   const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY)
+export const getServerSideProps = async ctx => {
+  //this is only the test key
+  const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY)
 
-//   let paymentIntent = await stripe.paymentIntents.create({
-//     amount: 10000,
-//     currency: 'usd',
-//   })
+  let paymentIntent = await stripe.paymentIntents.create({
+    amount: 10000,
+    currency: 'usd',
+  })
 
-//   return {
-//     props: {
-//       paymentIntent,
-//     },
-//   }
-// }
+  return {
+    props: {
+      paymentIntent,
+    },
+  }
+}
 
 export default function Checkout({ paymentIntent }) {
   return (

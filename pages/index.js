@@ -335,7 +335,7 @@ export default function Home() {
             <iframe
               title="Get unlimited access to the entire SERP"
               src="https://www.youtube.com/embed/Yz1hrFUF1gM?rel=0"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen="allowFullScreen"
             ></iframe>

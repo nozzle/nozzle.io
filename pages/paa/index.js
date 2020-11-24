@@ -103,12 +103,8 @@ const SectionFreeTrial = styled(Section)`
 `
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
-export async function getServerSideProps(ctx) {
-  const res = await fetch(
-    `${process.env.NODE_ENV === 'development' ? 'http://' : 'https://'}${
-      ctx.req.headers['x-forwarded-host'] || ctx.req.headers.host
-    }/api/checkout`
-  )
+export async function getServerSideProps() {
+  const res = await fetch('https://nozzle.io/api/checkout')
 
   const json = await res.json()
   return {

@@ -12,12 +12,8 @@ export default async (req, res) => {
         quantity: 1,
       },
     ],
-    success_url: `${
-      process.env.NODE_ENV === 'development' ? 'http://' : 'https://'
-    }${req.headers['x-forwarded-host'] || req.headers.host}/success`,
-    cancel_url: `${
-      process.env.NODE_ENV === 'development' ? 'http://' : 'https://'
-    }${req.headers['x-forwarded-host'] || req.headers.host}/paa`,
+    success_url: 'https://nozzle.io/paa/success',
+    cancel_url: 'https://nozzle.io/paa',
   })
 
   res.json({ id: session.id })

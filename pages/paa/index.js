@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { useRouter } from 'next/router'
 import { loadStripe } from '@stripe/stripe-js'
 
 //
@@ -103,17 +102,6 @@ const SectionFreeTrial = styled(Section)`
 `
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
-export async function getServerSideProps() {
-  const res = await fetch('https://nozzle.io/api/checkout')
-
-  const json = await res.json()
-  return {
-    props: {
-      session: json.id,
-    },
-  }
-}
-
 export default function PaaDashBoard({ session }) {
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState('')
@@ -126,10 +114,19 @@ export default function PaaDashBoard({ session }) {
 
   const handleClick = async () => {
     setLoading(true)
+
+    const res = await fetch('../api/checkout')
+
+    if (res.statusCode === 500) {
+      console.error(res.message)
+      return
+    }
+    const json = await res.json()
+
     const stripe = await stripePromise
 
     const { error } = await stripe.redirectToCheckout({
-      sessionId: session,
+      sessionId: json.id,
     })
     if (error) setError(error.message)
     setLoading(false)

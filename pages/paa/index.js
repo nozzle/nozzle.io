@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { useRouter } from 'next/router'
+import { loadStripe } from '@stripe/stripe-js'
 
 //
 
@@ -100,10 +101,26 @@ const SectionFreeTrial = styled(Section)`
   display: block;
   text-align: center;
 `
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
-export default function PaaDashBoard() {
-  const router = useRouter()
+export async function getServerSideProps(ctx) {
+  const res = await fetch(
+    `${process.env.NODE_ENV === 'development' ? 'http://' : 'https://'}${
+      ctx.req.headers['x-forwarded-host'] || ctx.req.headers.host
+    }/api/checkout`
+  )
+
+  const json = await res.json()
+  return {
+    props: {
+      session: json.id,
+    },
+  }
+}
+
+export default function PaaDashBoard({ session }) {
   const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState('')
 
   const buyButtonValue = loading ? (
     <i className="fas fa-spinner fa-spin"></i>
@@ -111,9 +128,15 @@ export default function PaaDashBoard() {
     'Buy Now'
   )
 
-  const handleClick = () => {
+  const handleClick = async () => {
     setLoading(true)
-    router.push('paa/checkout')
+    const stripe = await stripePromise
+
+    const { error } = await stripe.redirectToCheckout({
+      sessionId: session,
+    })
+    if (error) setError(error.message)
+    setLoading(false)
   }
 
   return (
@@ -158,8 +181,16 @@ export default function PaaDashBoard() {
           </div>
           <div className="right">
             <Img
-              src="img/PaaDeliverable.JPG"
+              src="img/PAA_Deliverable.JPG"
               alt="PAA deliverable list of questions"
+            />
+            <Img
+              src="img/PAA_DeliverableDailyPercentage.JPG"
+              alt="PAA deliverable graph of daily percentage"
+            />
+            <Img
+              src="img/PAA_DeliverableDrillDown.JPG"
+              alt="PAA deliverable list of questions drilled down"
             />
           </div>
         </SectionKnowWhatQuestions>

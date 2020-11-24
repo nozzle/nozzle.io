@@ -100,7 +100,9 @@ const SectionFreeTrial = styled(Section)`
   display: block;
   text-align: center;
 `
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+const stripePromise = loadStripe(
+  `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
+)
 
 export default function PaaDashBoard({ session }) {
   const [loading, setLoading] = React.useState(false)
@@ -178,11 +180,11 @@ export default function PaaDashBoard({ session }) {
               alt="PAA deliverable list of questions"
             />
             <Img
-              src="img/PAA_DeliverableDailyPercentage.JPG"
+              src="img/PAA_DeliverableDailyPercentage.jpg"
               alt="PAA deliverable graph of daily percentage"
             />
             <Img
-              src="img/PAA_DeliverableDrillDown.JPG"
+              src="img/PAA_DeliverableDrillDown.jpg"
               alt="PAA deliverable list of questions drilled down"
             />
           </div>

@@ -15,10 +15,10 @@ export default async (req, res) => {
     ],
     success_url: `${
       process.env.NODE_ENV === 'development' ? 'http://' : 'https://'
-    }${req.headers['x-forwarded-host'] || req.headers.host}/success`,
+    }${req.headers.host}/success`,
     cancel_url: `${
       process.env.NODE_ENV === 'development' ? 'http://' : 'https://'
-    }${req.headers['x-forwarded-host'] || req.headers.host}/paa`,
+    }${req.headers.host}/paa`,
   })
 
   res.json({ id: session.id })

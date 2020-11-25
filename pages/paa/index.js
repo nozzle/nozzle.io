@@ -103,6 +103,20 @@ const SectionFreeTrial = styled(Section)`
 const stripePromise = loadStripe(
   `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
 )
+export async function getServerSideProps(ctx) {
+  const res = await fetch(
+    `${process.env.NODE_ENV === 'development' ? 'http://' : 'https://'}${
+      ctx.req.headers['x-forwarded-host'] || ctx.req.headers.host
+    }/api/checkout`
+  )
+
+  const json = await res.json()
+  return {
+    props: {
+      session: json.id,
+    },
+  }
+}
 
 export default function PaaDashBoard({ session }) {
   const [loading, setLoading] = React.useState(false)
@@ -117,18 +131,10 @@ export default function PaaDashBoard({ session }) {
   const handleClick = async () => {
     setLoading(true)
 
-    const res = await fetch('../api/checkout')
-
-    if (res.statusCode === 500) {
-      console.error(res.message)
-      return
-    }
-    const json = await res.json()
-
     const stripe = await stripePromise
 
     const { error } = await stripe.redirectToCheckout({
-      sessionId: json.id,
+      sessionId: session,
     })
     if (error) setError(error.message)
     setLoading(false)

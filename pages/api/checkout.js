@@ -1,4 +1,6 @@
-const stripe = require('stripe')(`${process.env.STRIPE_SECRET_KEY}`)
+import Stripe from 'stripe'
+
+const stripe = Stripe(`${process.env.STRIPE_SECRET_KEY}`)
 
 export default async (req, res) => {
   const session = await stripe.checkout.sessions.create({
@@ -6,7 +8,8 @@ export default async (req, res) => {
     mode: 'payment',
     line_items: [
       {
-        price: 'price_1HpToe4HQ2O7mN7VAtS276BD',
+        //this is a test key
+        price: 'price_1Hqlo04HQ2O7mN7VTK3TsUag',
         quantity: 1,
       },
     ],

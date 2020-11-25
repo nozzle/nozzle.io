@@ -103,7 +103,7 @@ const SectionFreeTrial = styled(Section)`
 const stripePromise = loadStripe(
   `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
 )
-export async function getServerSideProps(ctx) {
+export async function getInitialProps(ctx) {
   const res = await fetch(
     `${process.env.NODE_ENV === 'development' ? 'http://' : 'https://'}${
       ctx.req.headers['x-forwarded-host'] || ctx.req.headers.host

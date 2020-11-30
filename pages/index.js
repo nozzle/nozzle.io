@@ -132,7 +132,6 @@ const SectionTrackAllTheThings = styled(Section)`
   ${section};
   ${layoutDark};
   ${layoutRight};
-  ${angle('right')};
 
   position: relative;
 
@@ -231,6 +230,36 @@ const SectionDataJunkie = styled(Section)`
     }
   }
 `
+const SectionCustomers = styled(Section)`
+  z-index: 0;
+  .inner {
+    max-width: ${props => props.theme.maxWidth}px;
+    margin: 0 auto;
+    padding: 2% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 150px;
+    margin: 2rem;
+    -webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%);
+    opacity: 0.6;
+  }
+
+  .bigLogo {
+    width: 100px;
+  }
+
+  ${belowMobile} {
+    img {
+      margin: 0;
+      padding: 0.5rem;
+    }
+  }
+`
 const SectionSchedules = styled(Section)`
   ${section};
   ${layoutDark};
@@ -312,6 +341,33 @@ export default function Home() {
             />
           </Right>
         </SectionKnowEverything>
+        <SectionCustomers>
+          <Img src={require('public/img/mayoClinic.png')} alt="Mayo Clinic" />
+
+          <Img src={require('public/img/homeDepot.png')} alt="Home Depot" />
+
+          <Img
+            src={require('public/img/apartmentsdotcom.png')}
+            alt="Apartments.com"
+          />
+
+          <Img
+            src={require('public/img/bankrate.svg')}
+            alt="Bankrate"
+            className="bigLogo"
+          />
+
+          <Img
+            src={require('public/img/turo.png')}
+            alt="Turo"
+            className="bigLogo"
+          />
+          <Img
+            src={require('public/img/locomotiveAgency.png')}
+            className="bigLogo"
+            alt="Locomotive Agency"
+          />
+        </SectionCustomers>
         <SectionTrackAllTheThings>
           <Img
             className="allthethings"
@@ -335,7 +391,7 @@ export default function Home() {
             <iframe
               title="Get unlimited access to the entire SERP"
               src="https://www.youtube.com/embed/Yz1hrFUF1gM?rel=0"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen="allowFullScreen"
             ></iframe>

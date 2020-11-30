@@ -235,7 +235,7 @@ const SectionCustomers = styled(Section)`
   .inner {
     max-width: ${props => props.theme.maxWidth}px;
     margin: 0 auto;
-    padding: 2% 5%;
+    padding: 0% 5%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -244,19 +244,21 @@ const SectionCustomers = styled(Section)`
 
   img {
     width: 150px;
-    margin: 2rem;
+    margin: 1.25rem;
     -webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%);
     opacity: 0.6;
   }
 
   .bigLogo {
     width: 100px;
+    max-width: 90px;
   }
 
-  ${belowMobile} {
+  ${belowTablet} {
     img {
-      margin: 0;
-      padding: 0.5rem;
+      margin: 0.2rem;
+      width: 100px;
+      flex: 1;
     }
   }
 `

@@ -9,7 +9,7 @@ export default async (req, res) => {
     line_items: [
       {
         //this is a test key
-        price: process.env.TEST_STRIPE_PRICE_ID,
+        price: process.env.NEXT_PUBLIC_TEST_STRIPE_PRICE_ID,
         quantity: 1,
       },
     ],

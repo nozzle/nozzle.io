@@ -1,6 +1,6 @@
 import Stripe from 'stripe'
 
-const stripe = Stripe(`${process.env.TEST_STRIPE_SECRET_KEY}`)
+const stripe = Stripe(`${process.env.STRIPE_SECRET_KEY}`)
 
 export default async (req, res) => {
   const session = await stripe.checkout.sessions.create({
@@ -9,7 +9,7 @@ export default async (req, res) => {
     line_items: [
       {
         //this is a test key
-        price: process.env.NEXT_PUBLIC_TEST_STRIPE_PRICE_ID,
+        price: `${process.env.NEXT_PUBLIC_STRIPE_PRICE_ID}`,
         quantity: 1,
       },
     ],

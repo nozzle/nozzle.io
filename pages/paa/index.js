@@ -132,7 +132,7 @@ const SectionFreeTrial = styled(Section)`
 `
 
 const stripePromise = loadStripe(
-  `${process.env.NEXT_PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY}`
+  `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
 )
 export async function getServerSideProps(ctx) {
   const testimonials = await fetchPaaTestimonials()
@@ -183,7 +183,7 @@ export default function PaaDashBoard({ session, testimonials }) {
         <SectionTitle>
           <Container>
             <Center>
-              <H1>PAA Dashboard</H1>
+              <H1>PAA Expansion Deliverable</H1>
               <P>It's something you want, that only Nozzle has.</P>
             </Center>
           </Container>
@@ -216,12 +216,12 @@ export default function PaaDashBoard({ session, testimonials }) {
               alt="PAA deliverable list of questions"
             />
             <Img
-              src="img/PAA_DeliverableDailyPercentage.jpg"
-              alt="PAA deliverable graph of daily percentage"
-            />
-            <Img
               src="img/PAA_DeliverableDrillDown.jpg"
               alt="PAA deliverable list of questions drilled down"
+            />
+            <Img
+              src="img/PAA_DeliverableDailyPercentage.jpg"
+              alt="PAA deliverable graph of daily percentage"
             />
           </div>
         </SectionKnowWhatQuestions>

@@ -212,3 +212,19 @@ const normalizeTestimonial = testimonial => {
     ...testimonial,
   }
 }
+
+export async function fetchPaaTestimonials() {
+  const { items } = await client.getEntries({
+    content_type: 'paaDeliverableTestimonial',
+    limit: 1000,
+  })
+  const testimonial = items.map(normalizePaaTestimonial)
+  return {
+    testimonial: orderBy(testimonial, [d => d.fields.orderNumber], ['asc']),
+  }
+}
+const normalizePaaTestimonial = testimonial => {
+  return {
+    ...testimonial,
+  }
+}

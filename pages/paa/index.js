@@ -1,17 +1,17 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { fetchPaaTestimonials } from '../../contentful'
 import { loadStripe } from '@stripe/stripe-js'
-
 //
-
 import { angle } from 'utils/Styles'
 import Head from 'components/Head'
 
 import Link from 'next/link'
-import { H1, H2, H5, P, Img, Button } from 'components/Html'
+import { H1, H2, H6, P, Img, Button } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 const belowMobile = `@media(max-width: ${700}px)`
+const belowTablet = `@media(max-width: ${1000}px)`
 
 const Section = ({ children, ...rest }) => (
   <section {...rest}>
@@ -67,6 +67,40 @@ const SectionTitle = styled(Section)`
   display: block;
   text-align: center;
 `
+const SectionTestimonials = styled(Section)`
+  ${section};
+  ${angle('right')};
+  text-align: center;
+  background: ${props => props.theme.colors.primaryDarker};
+  color: white;
+  .title {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .testimonial {
+    flex: 1 1 30%;
+  }
+
+  .company {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 150px;
+    max-width: 100%;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  ${belowTablet} {
+    .testimonial {
+      flex: 1 1 100%;
+      margin-bottom: 3rem;
+    }
+  }
+`
 
 const SectionKnowWhatQuestions = styled(Section)`
   ${section};
@@ -92,18 +126,16 @@ const SectionKnowWhatQuestions = styled(Section)`
 
 const SectionFreeTrial = styled(Section)`
   ${section};
-  ${angle('left')};
-
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
-
   display: block;
   text-align: center;
+  margin-top: 2rem;
 `
+
 const stripePromise = loadStripe(
-  `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
+  `${process.env.NEXT_PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY}`
 )
 export async function getServerSideProps(ctx) {
+  const testimonials = await fetchPaaTestimonials()
   const res = await fetch(
     `${process.env.NODE_ENV === 'development' ? 'http://' : 'https://'}${
       ctx.req.headers.host
@@ -114,11 +146,12 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       session: json.id,
+      testimonials: testimonials.testimonial,
     },
   }
 }
 
-export default function PaaDashBoard({ session }) {
+export default function PaaDashBoard({ session, testimonials }) {
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState('')
 
@@ -169,15 +202,12 @@ export default function PaaDashBoard({ session }) {
             </P>
             <P>
               All we need from you is the keywords that you want to track. Then
-              the Nozzle magic happens. We give you a report of the top
-              questions that people ask about your keywords according to
-              Google's Peoples Also Ask boxes. We will also show you how many
-              times those questions appear. This kind of data is unparalleled
-              right now and can give you the competitive edge you need to
-              outrank your competitors.
+              the Nozzle magic happens. We give you a report of all the
+              questions that that Google serves up in the People Also Ask boxes.
+              We will also show you how many times each questioned appeared
+              across your whole keyword set.
             </P>
             <br />
-
             <Button onClick={handleClick}>{buyButtonValue}</Button>
           </div>
           <div className="right">
@@ -195,14 +225,36 @@ export default function PaaDashBoard({ session }) {
             />
           </div>
         </SectionKnowWhatQuestions>
+
+        <SectionTestimonials>
+          <H2 className="title">What People Are Saying</H2>
+
+          {testimonials.map(testimonial => {
+            return (
+              <div className="testimonial" key={testimonial.fields.name}>
+                <Img
+                  src={
+                    testimonial.fields.image
+                      ? testimonial.fields.image.fields.file.url
+                      : 'img/blankPerson.png'
+                  }
+                  alt={testimonial.fields.name}
+                />
+                <H6>{testimonial.fields.name}</H6>
+                <div className="company">{testimonial.fields.companyName}</div>
+                <P>"{testimonial.fields.testimonial}"</P>
+              </div>
+            )
+          })}
+        </SectionTestimonials>
         <SectionFreeTrial>
           <Container>
             <Center>
               <H2>Not Quite Ready For All That Power?</H2>
-              <H5>
-                Try our free report that list all the questions that Google
-                serves up for 25 of your keywords!
-              </H5>
+              <H6>
+                Try our free report that will show you the top 10 questions that
+                Google serves up for your list of 500 keywords!
+              </H6>
               <Link href="paa/trial">
                 <Button color="success" burst>
                   Try it out!

@@ -255,18 +255,16 @@ export default function PaaDashBoard({ testimonials }) {
           <Container>
             <Center>
               <H1>PAA Expansion Deliverable</H1>
-              <P>It's something you want, that only Nozzle has.</P>
+              <P>Know What Questions To Answer On Your Website.</P>
             </Center>
           </Container>
         </SectionTitle>
         <SectionKnowWhatQuestions>
           <div className="left">
-            <H2 color="primaryDark">
-              Know What Questions To Ask On Your Website
-            </H2>
+            <H2 color="primaryDark">Your Very Own Golden-Egg Laying Goose</H2>
             <P>
               The People Also Ask boxes can provide just as much value as a
-              golden egg laying goose. Nozzle can extract all that golden
+              golden-egg laying goose. Nozzle can extract all that golden
               goodness using the PAA Expansion Method and deliver a list of all
               the most important questions that you should answer on your
               website.

@@ -1,13 +1,12 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { fetchPaaTestimonials } from '../../contentful'
-import { loadStripe } from '@stripe/stripe-js'
 //
 import { angle } from 'utils/Styles'
 import Head from 'components/Head'
 
 import Link from 'next/link'
-import { H1, H2, H6, P, Img, Button } from 'components/Html'
+import { H1, H2, H4, H5, H6, P, Span, Img, Button } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 const belowMobile = `@media(max-width: ${700}px)`
@@ -114,6 +113,10 @@ const SectionKnowWhatQuestions = styled(Section)`
       box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     }
   }
+  .link {
+    color: ${props => props.theme.colors.primaryLighter};
+    text-decoration: underline;
+  }
 
   ${belowMobile} {
     .right {
@@ -124,59 +127,127 @@ const SectionKnowWhatQuestions = styled(Section)`
   }
 `
 
-const SectionFreeTrial = styled(Section)`
-  ${section};
-  display: block;
-  text-align: center;
-  margin-top: 2rem;
+const SectionAction = styled(Section)`
+   ${section}
+
+  .plans {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+  }
+  .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    align-self: center;
+    h4 {
+      margin: 2rem 1rem;
+    }
+    button {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 0;
+      padding: 1rem;
+      width: 100%;
+      border-radius: 0;
+      transition: all 0.15s ease-out !important;
+      :hover {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+    :first-child {
+      flex: 1 1 24%;
+      min-height: 300px;
+      border-radius: 3px 0 0 3px;
+      z-index: 2;
+      background: ${props => props.theme.colors.primaryDark};
+    }
+    :nth-child(2) {
+      flex: 1 1 27%;
+      border-radius: 3px;
+      background: ${props => props.theme.colors.primaryDarker};
+      min-height: 400px;
+      z-index: 3;
+    }
+   
+    .plan-inner {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      font-size: 0.9em;
+      transition: all 0.3s ease-out;
+      h5, p: ;
+        margin: 0;
+      }
+    }
+    .title {
+      padding: 0 20px;
+      font-weight: bold;
+    }
+    .row {
+      padding: 7px 0;
+      border-bottom: solid 2px rgba(255, 255, 255, 0.07);
+      :last-child {
+        border-bottom: none;
+      }
+    }
+    
+    .price {
+      font-size: 12px;
+      
+    }
+    .price-number {
+      font-size: 30px;
+    }
+   
+  }
+  @media screen and (max-width: 900px) {
+    .plan {
+      flex: 1 1 48% !important;
+      min-height: auto !important;
+      border-radius: 5px;
+      margin: 0 1% 10px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .plan {
+      flex: 1 1 100% !important;
+      margin: 0 0 10px;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    .plan:hover button {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+  }
+
+  }
 `
 
-const stripePromise = loadStripe(
-  `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
-)
 export async function getServerSideProps(ctx) {
   const testimonials = await fetchPaaTestimonials()
-  const res = await fetch(
-    `${process.env.NODE_ENV === 'development' ? 'http://' : 'https://'}${
-      ctx.req.headers.host
-    }/api/checkout`
-  )
 
-  const json = await res.json()
   return {
     props: {
-      session: json.id,
       testimonials: testimonials.testimonial,
     },
   }
 }
 
-export default function PaaDashBoard({ session, testimonials }) {
-  const [loading, setLoading] = React.useState(false)
-  const [error, setError] = React.useState('')
-
-  const buyButtonValue = loading ? (
-    <i className="fas fa-spinner fa-spin"></i>
-  ) : (
-    'Buy Now'
-  )
-
-  const handleClick = async () => {
-    setLoading(true)
-
-    const stripe = await stripePromise
-
-    const { error } = await stripe.redirectToCheckout({
-      sessionId: session,
-    })
-    if (error) setError(error.message)
-    setLoading(false)
-  }
-
+export default function PaaDashBoard({ testimonials }) {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="PAA Dashboard | Nozzle"
+        title="PAA Expansion Deliverable | Nozzle"
         description="Find the right questions to answer on your website"
       />
       <main>
@@ -194,21 +265,35 @@ export default function PaaDashBoard({ session, testimonials }) {
               Know What Questions To Ask On Your Website
             </H2>
             <P>
-              Need help finding the right questions to answer on your website?
-              Well, the People Also Ask boxes in Google's results pages contain
-              the jackpot. Fill out the form and we'll generate a report that
-              lists all the questions that Google serves up for up to 500 of
-              your keywords.
+              The People Also Ask boxes can provide just as much value as a
+              golden egg laying goose. Nozzle can extract all that golden
+              goodness using the PAA Expansion Method and deliver a list of all
+              the most important questions that you should answer on your
+              website.
             </P>
             <P>
-              All we need from you is the keywords that you want to track. Then
-              the Nozzle magic happens. We give you a report of all the
-              questions that that Google serves up in the People Also Ask boxes.
-              We will also show you how many times each questioned appeared
-              across your whole keyword set.
+              Play around with this{' '}
+              <a
+                href="https://datastudio.google.com/u/0/reporting/81e73d89-0a3d-49d6-a726-69ad97d76383/page/T6hmB"
+                target="blank"
+              >
+                <span className="link">PAA Expansion Deliverable example </span>
+              </a>{' '}
+              to get a feel for what golden eggs lay in store for you.
+            </P>
+            <P>
+              Make sure to choose different keyword groups from the dropdown to
+              see each topic's golden egg.
+            </P>
+            <P>
+              {' '}
+              You can expect to obtain a list of 200-800 unique questions in
+              your PAA Expansion Deliverable depending on what industry you are
+              in. The list will be sorted from most to least SERP appearances
+              helping you to know which questions Google thinks your target
+              audience is asking the most.
             </P>
             <br />
-            <Button onClick={handleClick}>{buyButtonValue}</Button>
           </div>
           <div className="right">
             <Img
@@ -247,22 +332,57 @@ export default function PaaDashBoard({ session, testimonials }) {
             )
           })}
         </SectionTestimonials>
-        <SectionFreeTrial>
+        <SectionAction>
           <Container>
-            <Center>
-              <H2>Not Quite Ready For All That Power?</H2>
-              <H6>
-                Try our free report that will show you the top 10 questions that
-                Google serves up for your list of 500 keywords!
-              </H6>
-              <Link href="paa/trial">
-                <Button color="success" burst>
-                  Try it out!
-                </Button>
-              </Link>
-            </Center>
+            <div className="plans">
+              <div className="plan">
+                <H4 className="title">Not Quite Ready For All That?</H4>
+                <div className="price">
+                  <H5>
+                    <Span className="price-number">Free</Span>
+                  </H5>
+                </div>
+                <div className="plan-inner">
+                  <div className="row ">
+                    <H5>
+                      {' '}
+                      Try our free report that will show you the top 10
+                      questions that Google serves up for your list of 500
+                      keywords!
+                    </H5>
+                  </div>
+                </div>
+                <Link href="paa/trial">
+                  <Button color="primaryDarker" burst>
+                    Try it out!
+                  </Button>
+                </Link>
+              </div>
+              <div className="plan">
+                <H4 className="title">Let's Get You Started!</H4>
+                <div className="price">
+                  <H5>
+                    <Span className="price-number">$200</Span>
+                  </H5>
+                </div>
+                <div className="plan-inner">
+                  <div className="row">
+                    <H5>
+                      Purchase a list of 200-800 unique questions that your
+                      customers are asking! Start changing the way you see your
+                      customers and their concerns today!
+                    </H5>
+                  </div>
+                </div>
+                <Link href="paa/checkout">
+                  <Button color="success" burst>
+                    Buy Now!
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </Container>
-        </SectionFreeTrial>
+        </SectionAction>
       </main>
     </div>
   )

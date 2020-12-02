@@ -60,7 +60,10 @@ export default function Success() {
   return (
     <SectionThanks>
       <H2 full>Thank you for your purchase!</H2>
-      <P> We will get your PAA Dashboard to you as soon as possible!</P>
+      <P>
+        {' '}
+        We will get your PAA Expansion Deliverable to you as soon as possible!
+      </P>
       <Link href="/paa">
         <a className="back">
           <Icon i="arrow-left" /> Back

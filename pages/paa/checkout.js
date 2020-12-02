@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
+import { loadStripe } from '@stripe/stripe-js'
 //
 import { angle } from 'utils/Styles'
 
@@ -58,22 +59,45 @@ const SectionContactUs = styled(Section)`
   }
 `
 
-export default function Trial() {
+const stripePromise = loadStripe(
+  `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
+)
+export async function getServerSideProps(ctx) {
+  const res = await fetch(
+    `${process.env.NODE_ENV === 'development' ? 'http://' : 'https://'}${
+      ctx.req.headers.host
+    }/api/checkout`
+  )
+
+  const json = await res.json()
+  return {
+    props: {
+      session: json.id,
+    },
+  }
+}
+export default function CheckoutForm({ session }) {
+  const [error, setError] = React.useState('')
+
+  const handleClick = async () => {
+    const stripe = await stripePromise
+
+    const { error } = await stripe.redirectToCheckout({
+      sessionId: session,
+    })
+    if (error) setError(error.message)
+  }
   return (
     <SectionContactUs id="contact">
-      <H2 full>Let's get you a Free PAA Expansion Deliverable!</H2>
+      <H2 full>Let's get you your PAA Expansion Deliverable!</H2>
       <Link href="/paa">
         <a className="back">
           <Icon i="arrow-left" /> Back
         </a>
       </Link>
       <HubspotForm
-        id="44c49959-c2db-4936-9c35-c5899e31b6b2"
-        onFormSubmitted={() => {
-          if (typeof window !== 'undefined') {
-            window.dataLayer.push({ event: 'trialSubmit' })
-          }
-        }}
+        id="7fbecb66-9cbd-47f3-b2af-e21297d7e48e"
+        onFormSubmitted={handleClick}
       />
     </SectionContactUs>
   )

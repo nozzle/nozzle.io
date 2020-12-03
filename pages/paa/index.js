@@ -284,7 +284,7 @@ export default function PaaDashBoard({ testimonials }) {
             <P>
               The People Also Ask boxes can provide just as much value as a
               golden egg-laying goose. Your target audience is asking these
-              specific questions... <em>give them the answers.</em>
+              specific questions... <u>give them the answers.</u>
             </P>
             <P>
               Nozzle can extract <u>every last industry-related question</u> from the
@@ -302,14 +302,14 @@ export default function PaaDashBoard({ testimonials }) {
               in Data Studio for that tingley, excited feeling.
             </P>
             <P>
-              For the full effect, choose different keyword groups or type in
-              words in the filters to the right. Also, click on a question on
+              For the full effect, choose different keyword groups from the drop down or type in
+              certain words in the filter on the right. Also, click on a question on
               page 2 of the deliverable to see which phrases served up that
               specific question and where the demo site ranks for those phrases.
             </P>
             <P>
               {' '}
-              You can expect to obtain a list of <strong>200-800 unique questions</strong> in
+              You can expect to obtain a list of <u>200-800 unique questions</u> in
               your PAA Expansion Deliverable depending on what industry you are
               in. 
             </P>

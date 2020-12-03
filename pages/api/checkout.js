@@ -6,9 +6,9 @@ export default async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     mode: 'payment',
+    allow_promotion_codes: true,
     line_items: [
       {
-        //this is a test key
         price: `${process.env.NEXT_PUBLIC_STRIPE_PRICE_ID}`,
         quantity: 1,
       },

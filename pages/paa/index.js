@@ -255,7 +255,7 @@ export default function PaaDashBoard({ testimonials }) {
           <Container>
             <Center>
               <H1>Generate Months of Content Ideas Without a Brainstorming Session</H1>
-              <P>Know what the actual questions are that your target audience is asking.</P>
+              <P>A list of the ACTUAL questions your target audience is asking.</P>
             </Center>
           </Container>
         </SectionTitle>

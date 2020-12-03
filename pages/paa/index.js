@@ -6,7 +6,19 @@ import { angle } from 'utils/Styles'
 import Head from 'components/Head'
 
 import Link from 'next/link'
-import { H1, H2, H4, H5, H6, P, Span, Img, Button } from 'components/Html'
+import {
+  H1,
+  H2,
+  H4,
+  H5,
+  H6,
+  P,
+  Ul,
+  Li,
+  Span,
+  Img,
+  Button,
+} from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 const belowMobile = `@media(max-width: ${700}px)`
@@ -164,7 +176,7 @@ const SectionAction = styled(Section)`
     }
     :first-child {
       flex: 1 1 24%;
-      min-height: 300px;
+      min-height: 400px;
       border-radius: 3px 0 0 3px;
       z-index: 2;
       background: ${props => props.theme.colors.primaryDark};
@@ -173,7 +185,7 @@ const SectionAction = styled(Section)`
       flex: 1 1 27%;
       border-radius: 3px;
       background: ${props => props.theme.colors.primaryDarker};
-      min-height: 400px;
+      min-height: 500px;
       z-index: 3;
     }
    
@@ -254,21 +266,30 @@ export default function PaaDashBoard({ testimonials }) {
         <SectionTitle>
           <Container>
             <Center>
-              <H1>Generate Months of Content Ideas Without a Brainstorming Session</H1>
-              <P>A list of the ACTUAL questions your target audience is asking.</P>
+              <H1>
+                Generate Months of Content Ideas Without a Brainstorming Session
+              </H1>
+              <P>
+                A list of the ACTUAL questions your target audience is asking.
+              </P>
             </Center>
           </Container>
         </SectionTitle>
         <SectionKnowWhatQuestions>
           <div className="left">
-            <H2 color="primaryDark">Are you ready to compile a list of all the PAA questions Google serves up for your industry?</H2>
+            <H2 color="primaryDark">
+              Are you ready to compile a list of all the PAA questions Google
+              serves up for your industry?
+            </H2>
             <P>
               The People Also Ask boxes can provide just as much value as a
-              golden egg-laying goose. Your target audience is asking these specific questions... give them the answers.
+              golden egg-laying goose. Your target audience is asking these
+              specific questions... give them the answers.
             </P>
             <P>
-              Nozzle can extract every last industry-related question from the SERPs 
-              using the PAA Expansion Method to give your content team all the ammo it needs for weeks on end.
+              Nozzle can extract every last industry-related question from the
+              SERPs using the PAA Expansion Method to give your content team all
+              the ammo it needs for weeks on end.
             </P>
             <P>
               Play around with this{' '}
@@ -281,9 +302,10 @@ export default function PaaDashBoard({ testimonials }) {
               in Data Studio for that tingley, excited feeling.
             </P>
             <P>
-              For the full effect, choose different keyword groups or type in words in the filters to the right. 
-              Also, click on a question on page 2 of the deliverable to see which phrases served up that specific 
-              question and where the demo site ranks for those phrases.
+              For the full effect, choose different keyword groups or type in
+              words in the filters to the right. Also, click on a question on
+              page 2 of the deliverable to see which phrases served up that
+              specific question and where the demo site ranks for those phrases.
             </P>
             <P>
               {' '}
@@ -336,7 +358,7 @@ export default function PaaDashBoard({ testimonials }) {
           <Container>
             <div className="plans">
               <div className="plan">
-                <H4 className="title">Not Quite Ready For All That?</H4>
+                <H4 className="title">Garden Hose</H4>
                 <div className="price">
                   <H5>
                     <Span className="price-number">Free</Span>
@@ -344,12 +366,23 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row ">
-                    <H5>
-                      {' '}
-                      Try our free report that will show you the top 10
-                      questions that Google serves up for your list of 500
-                      keywords!
-                    </H5>
+                    <Ul>
+                      <Li>
+                        A list of the top 10 questions related to your industry
+                      </Li>
+                      <Li>
+                        A drill down of your ranking URLs and where they rank
+                        for the phrases that generate each of those 10 questions
+                      </Li>
+                      <Li>
+                        The total number of unique questions that your keyword
+                        set returns
+                      </Li>
+                      <Li>
+                        The percentage of time PAA boxes show up for your whole
+                        keyword set and each of your keyword groups
+                      </Li>
+                    </Ul>
                   </div>
                 </div>
                 <Link href="paa/trial">
@@ -359,7 +392,7 @@ export default function PaaDashBoard({ testimonials }) {
                 </Link>
               </div>
               <div className="plan">
-                <H4 className="title">Let's Get You Started!</H4>
+                <H4 className="title">Fire Hose</H4>
                 <div className="price">
                   <H5>
                     <Span className="price-number">$200</Span>
@@ -367,11 +400,29 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row">
-                    <H5>
-                      Purchase a list of 200-800 unique questions that your
-                      customers are asking! Start changing the way you see your
-                      customers and their concerns today!
-                    </H5>
+                    <H5>What You'll Get:</H5>
+                    <Ul>
+                      <Li>
+                        A list of ALL the questions related to your industry
+                        (typically several hundred)
+                      </Li>
+                      <Li>
+                        A drill down of your ranking URLs and where they rank
+                        for the phrases that generate the PAA questions
+                      </Li>
+                      <Li>
+                        The total number of unique questions that your keyword
+                        set returns
+                      </Li>
+                      <Li>
+                        The percentage of time PAA boxes show up for your whole
+                        keyword set and each of your keyword groups
+                      </Li>
+                      <Li>
+                        The ability to filter by phrase or keyword group to see
+                        the best questions related to all your topics/categories
+                      </Li>
+                    </Ul>
                   </div>
                 </div>
                 <Link href="paa/checkout">

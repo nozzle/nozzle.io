@@ -369,7 +369,7 @@ export default function PaaDashBoard({ testimonials }) {
                     <H5>What You'll Get:</H5>
                     <Ul>
                       <Li>
-                        A list of the top 10 questions related to your industry
+                        A list of the <u>top 10 questions</u> related to your industry
                       </Li>
                       <Li>
                         A drill down of your ranking URLs and where they rank
@@ -404,7 +404,7 @@ export default function PaaDashBoard({ testimonials }) {
                     <H5>What You'll Get:</H5>
                     <Ul>
                       <Li>
-                        A list of ALL the questions related to your industry
+                        A list of <u>ALL the questions</u> related to your industry
                         (typically several hundred)
                       </Li>
                       <Li>

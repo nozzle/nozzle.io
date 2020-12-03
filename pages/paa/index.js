@@ -254,7 +254,7 @@ export default function PaaDashBoard({ testimonials }) {
         <SectionTitle>
           <Container>
             <Center>
-              <H1>Generate Months of Content Ideas Without Even Lifting a Finger</H1>
+              <H1>Generate Months of Content Ideas Without a Brainstorming Session</H1>
               <P>Know what the actual questions are that your target audience is asking.</P>
             </Center>
           </Container>

@@ -278,13 +278,13 @@ export default function PaaDashBoard({ testimonials }) {
         <SectionKnowWhatQuestions>
           <div className="left">
             <H2 color="primaryDark">
-              Are you ready to compile a list of all the PAA questions Google
+              Are you ready to compile a list of <u>all the PAA questions</u> Google
               serves up for your industry?
             </H2>
             <P>
               The People Also Ask boxes can provide just as much value as a
               golden egg-laying goose. Your target audience is asking these
-              specific questions... give them the answers.
+              specific questions... <i>give them the answers.</i>
             </P>
             <P>
               Nozzle can extract every last industry-related question from the
@@ -309,7 +309,7 @@ export default function PaaDashBoard({ testimonials }) {
             </P>
             <P>
               {' '}
-              You can expect to obtain a list of <b>200-800</b> unique questions in
+              You can expect to obtain a list of <strong>200-800 unique questions</strong> in
               your PAA Expansion Deliverable depending on what industry you are
               in. 
             </P>

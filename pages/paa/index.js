@@ -254,20 +254,21 @@ export default function PaaDashBoard({ testimonials }) {
         <SectionTitle>
           <Container>
             <Center>
-              <H1>PAA Expansion Deliverable</H1>
-              <P>Know What Questions To Answer On Your Website.</P>
+              <H1>Generate Months of Content Ideas Without Even Lifting a Finger</H1>
+              <P>Know what the actual questions are that your target audience is asking.</P>
             </Center>
           </Container>
         </SectionTitle>
         <SectionKnowWhatQuestions>
           <div className="left">
-            <H2 color="primaryDark">Your Very Own Golden Egg-Laying Goose</H2>
+            <H2 color="primaryDark">Are you ready to compile a list of all the PAA questions Google serves up for your industry?</H2>
             <P>
               The People Also Ask boxes can provide just as much value as a
-              golden egg-laying goose. Nozzle can extract all that golden
-              goodness using the PAA Expansion Method and deliver a list of all
-              the most important questions that you should answer on your
-              website.
+              golden egg-laying goose. Your target audience is asking these specific questions... so give them the answers.
+            </P>
+            <P>
+              Nozzle can extract every last industry related question from the SERPs 
+              using the PAA Expansion Method to give the ammo your content team needs for weeks on end.
             </P>
             <P>
               Play around with this{' '}
@@ -277,11 +278,12 @@ export default function PaaDashBoard({ testimonials }) {
               >
                 <span className="link">PAA Expansion Deliverable example </span>
               </a>{' '}
-              to get a feel for what golden eggs lay in store for you.
+              in Data Studio for that tingley, excited feeling.
             </P>
             <P>
-              Make sure to choose different keyword groups from the dropdown to
-              see each topic's golden egg.
+              For the full effect, choose different keyword groups or type in words in the filters to the right. 
+              Also, click on a question on page 2 of the deliverable to see which phrases served up that specific 
+              question and where the demo site ranks for those phrases.
             </P>
             <P>
               {' '}

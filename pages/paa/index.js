@@ -297,7 +297,7 @@ export default function PaaDashBoard({ testimonials }) {
                 href="https://datastudio.google.com/u/0/reporting/81e73d89-0a3d-49d6-a726-69ad97d76383/page/T6hmB"
                 target="blank"
               >
-                <span className="link">PAA Expansion Deliverable example </span>
+                <span className="link">PAA Expansion Deliverable example</span>
               </a>{' '}
               in Data Studio for that tingley, excited feeling.
             </P>
@@ -309,11 +309,11 @@ export default function PaaDashBoard({ testimonials }) {
             </P>
             <P>
               {' '}
-              You can expect to obtain a list of 200-800 unique questions in
+              You can expect to obtain a list of <b>200-800</b> unique questions in
               your PAA Expansion Deliverable depending on what industry you are
-              in. The list will be sorted from most to least SERP appearances
-              helping you to know which questions Google thinks your target
-              audience is asking the most.
+              in. 
+            </P>
+            <P><u>Treat yo' self today</u> and click below to get either the Free or Full PAA Expansion Deliverable. 
             </P>
             <br />
           </div>

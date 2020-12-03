@@ -264,11 +264,11 @@ export default function PaaDashBoard({ testimonials }) {
             <H2 color="primaryDark">Are you ready to compile a list of all the PAA questions Google serves up for your industry?</H2>
             <P>
               The People Also Ask boxes can provide just as much value as a
-              golden egg-laying goose. Your target audience is asking these specific questions... so give them the answers.
+              golden egg-laying goose. Your target audience is asking these specific questions... give them the answers.
             </P>
             <P>
-              Nozzle can extract every last industry related question from the SERPs 
-              using the PAA Expansion Method to give the ammo your content team needs for weeks on end.
+              Nozzle can extract every last industry-related question from the SERPs 
+              using the PAA Expansion Method to give your content team all the ammo it needs for weeks on end.
             </P>
             <P>
               Play around with this{' '}

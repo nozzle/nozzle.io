@@ -267,7 +267,7 @@ export default function PaaDashBoard({ testimonials }) {
           <Container>
             <Center>
               <H1>
-                Generate Months of Content Ideas Without a Brainstorming Session
+                Generate Months of Content Ideas Without any Brainstorming Sessions
               </H1>
               <P>
                 A list of the ACTUAL questions your target audience is asking.
@@ -278,18 +278,18 @@ export default function PaaDashBoard({ testimonials }) {
         <SectionKnowWhatQuestions>
           <div className="left">
             <H2 color="primaryDark">
-              Are you ready to compile a list of <u>all the PAA questions</u> Google
+              Are you ready to compile a list of all the PAA questions Google
               serves up for your industry?
             </H2>
             <P>
               The People Also Ask boxes can provide just as much value as a
               golden egg-laying goose. Your target audience is asking these
-              specific questions... <i>give them the answers.</i>
+              specific questions... <em>give them the answers.</em>
             </P>
             <P>
-              Nozzle can extract every last industry-related question from the
+              Nozzle can extract <u>every last industry-related question</u> from the
               SERPs using the PAA Expansion Method to give your content team all
-              the ammo it needs for weeks on end.
+              the ammo it needs for months on end.
             </P>
             <P>
               Play around with this{' '}

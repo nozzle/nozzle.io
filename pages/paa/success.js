@@ -133,6 +133,7 @@ export default function Success() {
           <H1 full>Thank you for your purchase!</H1>
           <P>
             {' '}
+
             Your PAA Expansion Deliverable will be delivered to you within{' '}
             <u>1-2 business days</u>.
           </P>{' '}
@@ -144,6 +145,7 @@ export default function Success() {
           <P>
             In fact, we are a full SERP monitoring tool which means we have A.
             Lot. Of. Data.
+
           </P>
         </SectionThanks>
 

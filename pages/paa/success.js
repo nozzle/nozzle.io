@@ -138,7 +138,7 @@ export default function Success() {
           </P>
           <P>
             In the meantime, learn what else you can do with
-            Nozzle since we are not your average rank checker. 
+            Nozzle since we are not your average rank checker tool. 
           </P>
           <P>In fact, we are a
             full SERP monitoring tool which means we have A. Lot. Of. Data.
@@ -146,7 +146,7 @@ export default function Success() {
         </SectionThanks>
 
         <Example>
-          <H2>For Example: </H2>
+          <H3>For Example: </H3>
           <div className="left">
             <H4>
               Find which competitors own the most top 3, top 5, or top 10

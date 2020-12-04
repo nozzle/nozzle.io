@@ -133,8 +133,8 @@ export default function Success() {
           <H1 full>Thank you for your purchase!</H1>
           <P>
             {' '}
-            Your PAA Expansion Deliverable will be delivered to you within 1-2
-            business days. 
+            Your PAA Expansion Deliverable will be delivered to you within <u>1-2
+            business days</u>. 
           </P>
           <P>
             In the meantime, learn what else you can do with

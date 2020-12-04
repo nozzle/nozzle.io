@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import Head from 'components/Head'
-import { H2, H4, P, Img } from 'components/Html'
+import { H1, H2, H4, P, Img, Button } from 'components/Html'
 
 const belowMobile = `@media(max-width: ${700}px)`
 
@@ -25,11 +25,7 @@ const section = css`
   img {
     width: 100%;
   }
-  h4 {
-    :hover {
-      transform: scale(1.15);
-    }
-  }
+
   ${belowMobile} {
     .left,
     .right {
@@ -54,13 +50,14 @@ const layout = css`
 `
 
 const SectionThanks = styled(Section)`
-  ${section};
-
   z-index: 0;
   .inner {
     max-width: ${props => props.theme.maxWidth}px;
     margin: 0 auto;
-    padding: 8% 10%;
+    padding-top: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -87,11 +84,9 @@ const SectionThanks = styled(Section)`
 const Example = styled(Section)`
   ${section};
   ${layout};
-  :nth-child(2n) {
-    ${
-      '' /* background: ${props => props.theme.colors.primaryDark};
-    color: white; */
-    }
+
+  h2 {
+    width: 100%;
   }
 
   .right {
@@ -104,19 +99,24 @@ const Example = styled(Section)`
     }
   }
   .left {
-    text-align: center;
     padding-right: 1rem;
+
+    h4 {
+      margin-bottom: 2rem;
+    }
   }
 
   ${belowMobile} {
+    text-align: center;
+
     .right {
       img {
         width: 100%;
       }
     }
     .left {
-      text-align: center;
-      padding-right: 0;
+      margin: 0 auto;
+      margin-bottom: 2rem;
     }
   }
 `
@@ -130,72 +130,90 @@ export default function Success() {
       />
       <main>
         <SectionThanks>
-          <H2 full>Thank you for your purchase!</H2>
+          <H1 full>Thank you for your purchase!</H1>
           <P>
             {' '}
             Your PAA Expansion Deliverable will be delivered to you within 1-2
             business days. In the meantime, learn what else you can do with
             Nozzle since we are not your average rank checker. In fact, we are a
-            full SERP monitoring tool which means we have A. Lot. Of. Data. For
-            example:
+            full SERP monitoring tool which means we have A. Lot. Of. Data.
           </P>
         </SectionThanks>
 
         <Example>
+          <H2>For Example: </H2>
           <div className="left">
             <H4>
-              <a
-                href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
-                target="blank"
-              >
-                Find which competitors own the most top 3, top 5, or top 10
-                rankings for each of your keyword groups.
-              </a>
+              Find which competitors own the most top 3, top 5, or top 10
+              rankings for each of your keyword groups.
             </H4>
+            <a
+              href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
+              target="blank"
+            >
+              <Button>Learn More</Button>
+            </a>
           </div>
           <div className="right">
-            <Img
-              src="../img/topCompetitors.gif"
-              alt="PAA deliverable list of questions"
-            />
+            <a
+              href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
+              target="blank"
+            >
+              <Img
+                src="../img/topCompetitors.gif"
+                alt="PAA deliverable list of questions"
+              />
+            </a>
           </div>
         </Example>
         <Example>
           <div className="left">
             <H4>
-              <a
-                href="https://nozzle.io/blog/track-serp-rankings-for-an-unlimited-amount-of-competitors-with-nozzle"
-                target="blank"
-              >
-                We know who all of your competitors are and you can analyze
-                their rankings just as in depth as your own.
-              </a>
+              We know who all of your competitors are and you can analyze their
+              rankings just as in depth as your own.
             </H4>
+            <a
+              href="https://nozzle.io/blog/track-serp-rankings-for-an-unlimited-amount-of-competitors-with-nozzle"
+              target="blank"
+            >
+              <Button>Learn More</Button>
+            </a>
           </div>
           <div className="right">
-            <Img
-              src="../img/monitorCompetitors.gif"
-              alt="PAA deliverable list of questions drilled down"
-            />
+            <a
+              href="https://nozzle.io/blog/track-serp-rankings-for-an-unlimited-amount-of-competitors-with-nozzle"
+              target="blank"
+            >
+              <Img
+                src="../img/monitorCompetitors.gif"
+                alt="PAA deliverable list of questions drilled down"
+              />
+            </a>
           </div>
         </Example>
         <Example>
           <div className="left">
             <H4>
-              <a
-                href="https://nozzle.io/blog/pixels-from-top-a-nozzle-feature"
-                target="blank"
-              >
-                Monitor your exact position in the SERPs in terms of Pixels from
-                Top in addition to keeping track of your rank.
-              </a>
+              Monitor your exact position in the SERPs in terms of Pixels from
+              Top in addition to keeping track of your rank.
             </H4>
+            <a
+              href="https://nozzle.io/blog/pixels-from-top-a-nozzle-feature"
+              target="blank"
+            >
+              <Button>Learn More</Button>
+            </a>
           </div>
           <div className="right">
-            <Img
-              src="../img/pixelsFromtop.png"
-              alt="PAA deliverable graph of daily percentage"
-            />
+            <a
+              href="https://nozzle.io/blog/pixels-from-top-a-nozzle-feature"
+              target="blank"
+            >
+              <Img
+                src="../img/pixelsFromtop.png"
+                alt="PAA deliverable graph of daily percentage"
+              />
+            </a>
           </div>
         </Example>
       </main>

@@ -25,7 +25,7 @@ describe('SiteMap and robots.txt ', () => {
       .readFile('public/robots.txt')
       .should(
         'eq',
-        'User-agent: *\nDisallow: /l\nsitemap: https://nozzle.io/sitemap.xml'
+        'User-agent: *\nDisallow: /l\nDisallow: /paa/success\nsitemap: https://nozzle.io/sitemap.xml'
       )
   })
 })

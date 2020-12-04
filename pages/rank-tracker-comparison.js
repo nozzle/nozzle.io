@@ -64,7 +64,6 @@ const header = name => (
     <td>BrightEdge</td>
     <td>STAT</td>
     <td>Moz</td>
-    <td>Agency Analytics</td>
   </tr>
 )
 
@@ -161,13 +160,6 @@ export default function RankTrackerComparison() {
                           <Icon i="check" color="success" />
                         ) : (
                           feature.moz
-                        )}
-                      </td>
-                      <td>
-                        {feature.agencyAnalytics === 'x' ? (
-                          <Icon i="check" color="success" />
-                        ) : (
-                          feature.agencyAnalytics
                         )}
                       </td>
                     </tr>

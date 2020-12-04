@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import Head from 'components/Head'
-import { H1, H2, H4, P, Img, Button } from 'components/Html'
+import { H1, H3, H4, P, Img, Button } from 'components/Html'
 
 const belowMobile = `@media(max-width: ${700}px)`
 
@@ -85,7 +85,7 @@ const Example = styled(Section)`
   ${section};
   ${layout};
 
-  h2 {
+  h3 {
     width: 100%;
   }
 
@@ -133,15 +133,19 @@ export default function Success() {
           <H1 full>Thank you for your purchase!</H1>
           <P>
             {' '}
-            Your PAA Expansion Deliverable will be delivered to you within <u>1-2
-            business days</u>. 
+
+            Your PAA Expansion Deliverable will be delivered to you within{' '}
+            <u>1-2 business days</u>.
+          </P>{' '}
+          <P>
+            {' '}
+            In the meantime, learn what else you can do with Nozzle since we are
+            not your average rank checker tool.
           </P>
           <P>
-            In the meantime, learn what else you can do with
-            Nozzle since we are not your average rank checker tool. 
-          </P>
-          <P>In fact, we are a
-            full SERP monitoring tool which means we have A. Lot. Of. Data.
+            In fact, we are a full SERP monitoring tool which means we have A.
+            Lot. Of. Data.
+
           </P>
         </SectionThanks>
 

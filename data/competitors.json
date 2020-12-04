@@ -8,8 +8,8 @@
     "conductor": 50,
     "brightEdge": 50,
     "stat": 100,
-    "moz": 50,
-    "agencyAnalytics": 50
+    "moz": 50
+   
   },
   {
     "section": "Search Engines",
@@ -20,8 +20,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+   
   },
   {
     "section": "Search Engines",
@@ -32,20 +32,20 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+   
   },
   {
     "section": "Search Engines",
     "sectionOrder": 1,
     "name": "Yahoo",
     "type": "data",
-    "nozzle": true,
+    "nozzle": "",
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+    
   },
   {
     "section": "Search Engines",
@@ -56,32 +56,32 @@
     "conductor": true,
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Search Engines",
     "sectionOrder": 1,
     "name": "Yandex",
     "type": "data",
-    "nozzle": true,
+    "nozzle": "",
     "conductor": true,
     "brightEdge": true,
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Search Engines",
     "sectionOrder": 1,
     "name": "Baidu",
     "type": "data",
-    "nozzle": true,
+    "nozzle": "",
     "conductor": true,
     "brightEdge": true,
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Search Types",
@@ -92,8 +92,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+  
   },
   {
     "section": "Search Types",
@@ -104,8 +104,20 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+    
+  },
+  {
+    "section": "Search Types",
+    "sectionOrder": 2,
+    "name": "Desktop",
+    "type": "data",
+    "nozzle": true,
+    "conductor": true,
+    "brightEdge": true,
+    "stat": true,
+    "moz": true
+    
   },
   {
     "section": "Search Types",
@@ -116,8 +128,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": ""
+    "moz": true
+    
   },
   {
     "section": "Monitoring",
@@ -128,8 +140,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+   
   },
   {
     "section": "Monitoring",
@@ -140,8 +152,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+   
   },
   {
     "section": "Monitoring",
@@ -152,8 +164,8 @@
     "conductor": 1,
     "brightEdge": 1,
     "stat": 1,
-    "moz": 1,
-    "agencyAnalytics": 1
+    "moz": 1
+    
   },
   {
     "section": "Monitoring",
@@ -164,8 +176,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Schedule",
@@ -176,8 +188,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Schedule",
@@ -188,8 +200,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Schedule",
@@ -200,8 +212,8 @@
     "conductor": "Limited",
     "brightEdge": "Limited",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": "90 Day Retention"
+    "moz": ""
+    
   },
   {
     "section": "Schedule",
@@ -212,8 +224,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": ""
+    "moz": true
+    
   },
   {
     "section": "Schedule",
@@ -224,8 +236,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Schedule",
@@ -236,8 +248,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Schedule",
@@ -248,8 +260,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Schedule",
@@ -260,8 +272,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Keyword Level Data",
@@ -272,8 +284,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+   
   },
   {
     "section": "Keyword Level Data",
@@ -284,8 +296,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+    
   },
   {
     "section": "Keyword Level Data",
@@ -296,8 +308,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+    
   },
   {
     "section": "Result Level Data",
@@ -308,8 +320,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": true,
-    "agencyAnalytics": "On Demand"
+    "moz": true
+    
   },
   {
     "section": "Result Level Data",
@@ -320,8 +332,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": true,
-    "agencyAnalytics": "On Demand"
+    "moz": true
+    
   },
   {
     "section": "Result Level Data",
@@ -332,8 +344,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Result Level Data",
@@ -344,8 +356,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Result Level Data",
@@ -356,8 +368,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Result Level Data",
@@ -368,8 +380,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Result Level Data",
@@ -380,8 +392,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+   
   },
   {
     "section": "Competitive Analysis",
@@ -392,8 +404,8 @@
     "conductor": "Extra",
     "brightEdge": "Extra",
     "stat": "Extra",
-    "moz": "Limited",
-    "agencyAnalytics": "None"
+    "moz": "Limited"
+    
   },
   {
     "section": "Competitive Analysis",
@@ -404,8 +416,8 @@
     "conductor": true,
     "brightEdge": "",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+   
   },
   {
     "section": "Competitive Analysis",
@@ -416,8 +428,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Competitive Analysis",
@@ -428,8 +440,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+   
   },
   {
     "section": "Dashboards / Reports",
@@ -440,8 +452,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+   
   },
   {
     "section": "Dashboards / Reports",
@@ -452,8 +464,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": true
+    "moz": ""
+    
   },
   {
     "section": "Dashboards / Reports",
@@ -464,8 +476,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+    
   },
   {
     "section": "Data Integration",
@@ -476,8 +488,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+    
   },
   {
     "section": "Data Integration",
@@ -488,8 +500,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+   
   },
   {
     "section": "Data Integration",
@@ -500,8 +512,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+   
   },
   {
     "section": "Data Integration",
@@ -512,8 +524,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": "",
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
   {
     "section": "Multi-User / Client Support",
@@ -524,8 +536,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": true,
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+    
   },
   {
     "section": "Multi-User / Client Support",
@@ -536,21 +548,10 @@
     "conductor": "",
     "brightEdge": "",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": ""
+    "moz": ""
+    
   },
-  {
-    "section": "Multi-User / Client Support",
-    "sectionOrder": 10,
-    "name": "White Label Support",
-    "type": "agencies",
-    "nozzle": true,
-    "conductor": "",
-    "brightEdge": "",
-    "stat": "",
-    "moz": "",
-    "agencyAnalytics": true
-  },
+  
   {
     "section": "Multi-User / Client Support",
     "sectionOrder": 10,
@@ -560,8 +561,8 @@
     "conductor": "",
     "brightEdge": "",
     "stat": true,
-    "moz": "",
-    "agencyAnalytics": true
+    "moz": ""
+   
   },
   {
     "section": "Multi-User / Client Support",
@@ -572,8 +573,8 @@
     "conductor": "Unlimited",
     "brightEdge": "Unlimited",
     "stat": "Unlimited",
-    "moz": "Unlimited",
-    "agencyAnalytics": "Unlimited"
+    "moz": "Unlimited"
+    
   },
   {
     "section": "Other",
@@ -584,8 +585,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": "",
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+    
   },
   {
     "section": "Other",
@@ -596,8 +597,8 @@
     "conductor": true,
     "brightEdge": true,
     "stat": "",
-    "moz": true,
-    "agencyAnalytics": true
+    "moz": true
+   
   },
   {
     "section": "Other",
@@ -608,7 +609,7 @@
     "conductor": true,
     "brightEdge": true,
     "stat": "",
-    "moz": true,
-    "agencyAnalytics": "Limited"
+    "moz": true
+    
   }
 ]

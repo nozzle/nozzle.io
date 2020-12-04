@@ -134,8 +134,13 @@ export default function Success() {
           <P>
             {' '}
             Your PAA Expansion Deliverable will be delivered to you within 1-2
-            business days. In the meantime, learn what else you can do with
-            Nozzle since we are not your average rank checker. In fact, we are a
+            business days. 
+          </P>
+          <P>
+            In the meantime, learn what else you can do with
+            Nozzle since we are not your average rank checker. 
+          </P>
+          <P>In fact, we are a
             full SERP monitoring tool which means we have A. Lot. Of. Data.
           </P>
         </SectionThanks>

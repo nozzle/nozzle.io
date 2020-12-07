@@ -125,6 +125,7 @@ const Example = styled(Section)`
 export default function Success() {
   const router = useRouter()
   const { free } = router.query
+  const { contact } = router.query
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
@@ -136,12 +137,16 @@ export default function Success() {
           <H1 full>
             {free
               ? 'Thanks for your interest in pure awesomeness!'
+              : contact
+              ? 'Thanks for your interest in pure awesomeness to the nth power!'
               : 'Thank you for your purchase!'}
           </H1>
           <P>
-            {' '}
-            Your {free ? 'Free' : ''} PAA Expansion Deliverable will be
-            delivered to you within <u>1-2 business days</u>.
+            {contact
+              ? "We'll be in touch shortly to discuss discounted pricing for your specific needs."
+              : free
+              ? 'Your Free PAA Expansion Deliverable will be delivered to you within <u>1-2 business days</u>.'
+              : 'Your PAA Expansion Deliverable will be delivered to you within <u>1-2 business days</u>.'}{' '}
           </P>{' '}
           <P>
             {' '}

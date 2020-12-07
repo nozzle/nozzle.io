@@ -306,7 +306,7 @@ export default function PaaDashBoard({ testimonials }) {
               >
                 <span className="link">PAA Expansion Deliverable example</span>
               </a>{' '}
-              in Data Studio for that tingley, excited feeling.
+              in Data Studio for that tingly, excited feeling.
             </P>
             <P>
               For the full effect, choose different keyword groups from the drop

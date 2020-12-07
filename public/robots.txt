@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /l
-Disallow: /paa/success
+Disallow: /paa/success*
 sitemap: https://nozzle.io/sitemap.xml

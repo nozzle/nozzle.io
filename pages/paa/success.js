@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { useRouter } from 'next/router'
 
 import Head from 'components/Head'
 import { H1, H3, H4, P, Img, Button } from 'components/Html'
@@ -122,20 +123,25 @@ const Example = styled(Section)`
 `
 
 export default function Success() {
+  const router = useRouter()
+  const { free } = router.query
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="Payment Successful | Nozzle"
+        title="Success | Nozzle"
         description="Thank you for your purchase of the PAA Expansion Deliverable"
       />
       <main>
         <SectionThanks>
-          <H1 full>Thank you for your purchase!</H1>
+          <H1 full>
+            {free
+              ? 'Thanks for your interest in pure awesomeness!'
+              : 'Thank you for your purchase!'}
+          </H1>
           <P>
             {' '}
-
-            Your PAA Expansion Deliverable will be delivered to you within{' '}
-            <u>1-2 business days</u>.
+            Your {free ? 'Free' : ''} PAA Expansion Deliverable will be
+            delivered to you within <u>1-2 business days</u>.
           </P>{' '}
           <P>
             {' '}
@@ -145,7 +151,6 @@ export default function Success() {
           <P>
             In fact, we are a full SERP monitoring tool which means we have A.
             Lot. Of. Data.
-
           </P>
         </SectionThanks>
 

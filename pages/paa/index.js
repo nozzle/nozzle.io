@@ -176,7 +176,7 @@ const SectionAction = styled(Section)`
     }
     :first-child {
       flex: 1 1 24%;
-      min-height: 400px;
+      min-height: 475px;
       border-radius: 3px 0 0 3px;
       z-index: 2;
       background: ${props => props.theme.colors.primaryDark};
@@ -185,9 +185,15 @@ const SectionAction = styled(Section)`
       flex: 1 1 27%;
       border-radius: 3px;
       background: ${props => props.theme.colors.primaryDarker};
-      min-height: 500px;
+      min-height: 525px;
       z-index: 3;
     }
+    :nth-child(3) {
+      flex: 1 1 24%;
+      min-height: 475px;
+      border-radius: 0 3px 3px 0;
+      z-index: 3;
+      background: ${props => props.theme.colors.primaryDark};
    
     .plan-inner {
       padding: 20px;
@@ -267,7 +273,8 @@ export default function PaaDashBoard({ testimonials }) {
           <Container>
             <Center>
               <H1>
-                Generate Months of Content Ideas Without any Brainstorming Sessions
+                Generate Months of Content Ideas Without any Brainstorming
+                Sessions
               </H1>
               <P>
                 A list of the ACTUAL questions your target audience is asking.
@@ -287,9 +294,9 @@ export default function PaaDashBoard({ testimonials }) {
               specific questions... <u>give them the answers.</u>
             </P>
             <P>
-              Nozzle can extract <u>every last industry-related question</u> from the
-              SERPs using the PAA Expansion Method to give your content team all
-              the ammo it needs for months on end.
+              Nozzle can extract <u>every last industry-related question</u>{' '}
+              from the SERPs using the PAA Expansion Method to give your content
+              team all the ammo it needs for months on end.
             </P>
             <P>
               Play around with this{' '}
@@ -302,18 +309,23 @@ export default function PaaDashBoard({ testimonials }) {
               in Data Studio for that tingley, excited feeling.
             </P>
             <P>
-              For the full effect, choose different keyword groups from the drop down or type in
-              certain words in the filter on the right. Also, click on a question on
-              page 2 of the deliverable to see which phrases served up that
-              specific question and where the demo site ranks for those phrases.
+              For the full effect, choose different keyword groups from the drop
+              down or type in certain words in the filter on the right. Also,
+              click on a question on page 2 of the deliverable to see which
+              phrases served up that specific question and where the demo site
+              ranks for those phrases.
             </P>
             <P>
               {' '}
-              You can expect to obtain a list of <u>200-800 unique questions</u> in
-              your PAA Expansion Deliverable depending on what industry you are
-              in. 
+              You can expect to obtain a list of <u>
+                200-800 unique questions
+              </u>{' '}
+              in your PAA Expansion Deliverable depending on what industry you
+              are in.
             </P>
-            <P><u>Treat yo' self today</u> and click below to get either the Free or Full PAA Expansion Deliverable. 
+            <P>
+              <u>Treat yo' self today</u> and click below to get either the Free
+              or Full PAA Expansion Deliverable.
             </P>
             <br />
           </div>
@@ -369,7 +381,8 @@ export default function PaaDashBoard({ testimonials }) {
                     <H5>What You'll Get:</H5>
                     <Ul>
                       <Li>
-                        A list of the <u>top 10 questions</u> related to your industry
+                        A list of the <u>top 10 questions</u> related to your
+                        industry
                       </Li>
                       <Li>
                         A drill down of your ranking URLs and where they rank
@@ -382,6 +395,10 @@ export default function PaaDashBoard({ testimonials }) {
                       <Li>
                         The percentage of time PAA boxes show up for your whole
                         keyword set and each of your keyword groups
+                      </Li>
+                      <Li>
+                        Easily upgrade to the Fire Hose full version when you
+                        are ready
                       </Li>
                     </Ul>
                   </div>
@@ -404,8 +421,8 @@ export default function PaaDashBoard({ testimonials }) {
                     <H5>What You'll Get:</H5>
                     <Ul>
                       <Li>
-                        A list of <u>ALL the questions</u> related to your industry
-                        (typically several hundred)
+                        A list of <u>ALL the questions</u> related to your
+                        industry (typically several hundred)
                       </Li>
                       <Li>
                         A drill down of your ranking URLs and where they rank
@@ -429,6 +446,29 @@ export default function PaaDashBoard({ testimonials }) {
                 <Link href="paa/checkout">
                   <Button color="success" burst>
                     Buy Now!
+                  </Button>
+                </Link>
+              </div>
+              <div className="plan">
+                <H4 className="title">Jet Stream (Bulk Orders)</H4>
+                <div className="price">
+                  <H5>
+                    <Span className="price-number">Custom Pricing</Span>
+                  </H5>
+                </div>
+                <div className="plan-inner">
+                  <div className="row">
+                    <H5>What You'll Get:</H5>
+                    <Ul>
+                      <Li>Same as everything in Fire Hose</Li>
+                      <Li>Discounted pricing per deliverable purchased</Li>
+                      <Li>Custom logo for branded reporting</Li>
+                    </Ul>
+                  </div>
+                </div>
+                <Link href="paa/contact">
+                  <Button color="primaryDarker" burst>
+                    Contact Us
                   </Button>
                 </Link>
               </div>

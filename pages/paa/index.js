@@ -176,7 +176,7 @@ const SectionAction = styled(Section)`
     }
     :first-child {
       flex: 1 1 24%;
-      min-height: 450px;
+      min-height: 475px;
       border-radius: 3px 0 0 3px;
       z-index: 2;
       background: ${props => props.theme.colors.primaryDark};
@@ -185,12 +185,12 @@ const SectionAction = styled(Section)`
       flex: 1 1 27%;
       border-radius: 3px;
       background: ${props => props.theme.colors.primaryDarker};
-      min-height: 500px;
+      min-height: 525px;
       z-index: 3;
     }
     :nth-child(3) {
       flex: 1 1 24%;
-      min-height: 450px;
+      min-height: 475px;
       border-radius: 0 3px 3px 0;
       z-index: 3;
       background: ${props => props.theme.colors.primaryDark};
@@ -395,6 +395,10 @@ export default function PaaDashBoard({ testimonials }) {
                       <Li>
                         The percentage of time PAA boxes show up for your whole
                         keyword set and each of your keyword groups
+                      </Li>
+                      <Li>
+                        Easily upgrade to the Fire Hose full version when you
+                        are ready
                       </Li>
                     </Ul>
                   </div>

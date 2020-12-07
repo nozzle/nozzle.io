@@ -457,7 +457,7 @@ export default function PaaDashBoard({ testimonials }) {
                     <H5>What You'll Get:</H5>
                     <Ul>
                       <Li>Same as everything in Fire Hose</Li>
-                      <Li>Discounted Pricing der deliverable purchased</Li>
+                      <Li>Discounted pricing per deliverable purchased</Li>
                       <Li>Custom logo for branded reporting</Li>
                     </Ul>
                   </div>

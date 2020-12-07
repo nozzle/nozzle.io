@@ -135,10 +135,8 @@ export default function Success() {
       <main>
         <SectionThanks>
           <H1 full>
-            {free
+            {free || contact
               ? 'Thanks for your interest in pure awesomeness!'
-              : contact
-              ? 'Thanks for your interest in pure awesomeness to the nth power!'
               : 'Thank you for your purchase!'}
           </H1>
           <P>

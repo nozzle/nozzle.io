@@ -301,7 +301,7 @@ export default function PaaDashBoard({ testimonials }) {
             <P>
               Play around with this{' '}
               <a
-                href="https://datastudio.google.com/u/0/reporting/81e73d89-0a3d-49d6-a726-69ad97d76383/page/T6hmB"
+                href="https://datastudio.google.com/u/1/reporting/c603c6cc-2137-49b7-a161-735bf238f46d/page/T6hmB"
                 target="blank"
               >
                 <span className="link">PAA Expansion Deliverable example</span>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
 //
@@ -59,6 +60,8 @@ const SectionContactUs = styled(Section)`
 `
 
 export default function Trial() {
+  const router = useRouter()
+
   return (
     <SectionContactUs id="contact">
       <H2 full>Let's get you a Free PAA Expansion Deliverable!</H2>
@@ -72,6 +75,7 @@ export default function Trial() {
         onFormSubmitted={() => {
           if (typeof window !== 'undefined') {
             window.dataLayer.push({ event: 'trialSubmit' })
+            router.push('../paa/success?free=true')
           }
         }}
       />

@@ -294,11 +294,10 @@ export default function PaaDashBoard({ testimonials }) {
               What you'll get:
             </P>
             <P>
-           
-                -200-800 questions from the People Also Ask boxes related to your specific keyword list</li>
-                -The ability to filter by keyword group</li>
-                -A drill down of your ranking URLs and where they rank for the phrases that generated the questions</li>
-                -The percentage of time PAA boxes show up for your whole keyword set and each of your keyword groups</li>
+                - 200-800 questions from the People Also Ask boxes related to your specific keyword list</li>
+                - The ability to filter by keyword group</li>
+                - A drill down of your ranking URLs and where they rank for the phrases that generated the questions</li>
+                - The percentage of time PAA boxes show up for your whole keyword set and each of your keyword groups</li>
             </P>
     
     

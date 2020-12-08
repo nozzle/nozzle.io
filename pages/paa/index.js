@@ -286,8 +286,19 @@ export default function PaaDashBoard({ testimonials }) {
           <div className="left">
             <H2 color="primaryDark">
               Are you ready to compile a list of all the PAA questions Google
-              serves up for your industry?
+              serves up for your unique keyword list?
             </H2>
+            <P>Get a free or paid version of this deliverable below.
+              What you'll get: 
+              <ul>
+                <li>200-800 questions from the People Also Ask boxes related to your specific keyword list
+                <li>The ability to filter by keyword group
+                <li>A drill down of your ranking URLs and where they rank for the phrases that generated the questions
+                <li>The percentage of time PAA boxes show up for your whole keyword set and each of your keyword groups
+              </ul>
+            </P>
+    
+    
             <P>
               The People Also Ask boxes can provide just as much value as a
               golden egg-laying goose. Your target audience is asking these

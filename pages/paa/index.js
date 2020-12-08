@@ -294,13 +294,21 @@ export default function PaaDashBoard({ testimonials }) {
               What you'll get:
             </P>
             <P>
-                - 200-800 questions from the People Also Ask boxes related to your specific keyword list</li>
-                - The ability to filter by keyword group</li>
-                - A drill down of your ranking URLs and where they rank for the phrases that generated the questions</li>
-                - The percentage of time PAA boxes show up for your whole keyword set and each of your keyword groups</li>
+              <Ul>
+                <Li>
+                  200-800 questions from the People Also Ask boxes related to your specific keyword list
+                </Li>
+                <Li>
+                  The ability to filter by keyword group
+                </Li>
+                <Li>
+                  A drill down of your ranking URLs and where they rank for the phrases that generated the questions
+                </Li>
+                <Li>
+                  The percentage of time PAA boxes show up for your whole keyword set and each of your keyword groups
+                </Li>
+               </Ul>
             </P>
-    
-    
             <P>
               The People Also Ask boxes can provide just as much value as a
               golden egg-laying goose. Your target audience is asking these
@@ -350,10 +358,6 @@ export default function PaaDashBoard({ testimonials }) {
             <Img
               src="img/PAA_DeliverableDrillDown.jpg"
               alt="PAA deliverable list of questions drilled down"
-            />
-            <Img
-              src="img/PAA_DeliverableDailyPercentage.jpg"
-              alt="PAA deliverable graph of daily percentage"
             />
           </div>
         </SectionKnowWhatQuestions>

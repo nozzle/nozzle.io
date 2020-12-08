@@ -367,9 +367,10 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row ">
-                
-
-  Give us 500 keywords and we'll send you your deliverable highlighting the top 10 questions for your keyword list.
+          
+  <P>
+                    Give us 500 keywords and we'll send you your deliverable highlighting the top 10 questions for your keyword list.
+</P>
                     
                   </div>
                 </div>

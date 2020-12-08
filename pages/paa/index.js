@@ -309,45 +309,17 @@ export default function PaaDashBoard({ testimonials }) {
                 </Li>
                </Ul>
             </P>
+            
             <P>
-              The People Also Ask boxes can provide just as much value as a
-              golden egg-laying goose. Your target audience is asking these
-              specific questions... <u>give them the answers.</u>
-            </P>
-            <P>
-              Nozzle can extract <u>every last industry-related question</u>{' '}
-              from the SERPs using the PAA Expansion Method to give your content
-              team all the ammo it needs for months on end.
-            </P>
-            <P>
-              Play around with this{' '}
+             {' '}
               <a
                 href="https://datastudio.google.com/u/1/reporting/c603c6cc-2137-49b7-a161-735bf238f46d/page/T6hmB"
                 target="blank"
               >
-                <span className="link">PAA Expansion Deliverable example</span>
+                <span className="link">Click to view a PAA Expansion Deliverable example in Data Studio.</span>
               </a>{' '}
-              in Data Studio for that tingly, excited feeling.
             </P>
-            <P>
-              For the full effect, choose different keyword groups from the drop
-              down or type in certain words in the filter on the right. Also,
-              click on a question on page 2 of the deliverable to see which
-              phrases served up that specific question and where the demo site
-              ranks for those phrases.
-            </P>
-            <P>
-              {' '}
-              You can expect to obtain a list of <u>
-                200-800 unique questions
-              </u>{' '}
-              in your PAA Expansion Deliverable depending on what industry you
-              are in.
-            </P>
-            <P>
-              <u>Treat yo' self today</u> and click below to get either the Free
-              or Full PAA Expansion Deliverable.
-            </P>
+           
             <br />
           </div>
           <div className="right">

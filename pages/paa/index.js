@@ -367,11 +367,11 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row ">
-          
-  <P>
-                    Give us 500 keywords and we'll send you your deliverable highlighting the top 10 questions for your keyword list.
-</P>
-                    
+                    <Ul>
+                      <Li>
+                          Give us 500 keywords and we'll send you your deliverable highlighting the top 10 questions for your keyword list
+                      </Li>
+                    </Ul>
                   </div>
                 </div>
                 <Link href="paa/trial">
@@ -389,27 +389,9 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row">
-                    <H5>What You'll Get:</H5>
                     <Ul>
                       <Li>
-                        A list of <u>ALL the questions</u> related to your
-                        industry (typically several hundred)
-                      </Li>
-                      <Li>
-                        A drill down of your ranking URLs and where they rank
-                        for the phrases that generate the PAA questions
-                      </Li>
-                      <Li>
-                        The total number of unique questions that your keyword
-                        set returns
-                      </Li>
-                      <Li>
-                        The percentage of time PAA boxes show up for your whole
-                        keyword set and each of your keyword groups
-                      </Li>
-                      <Li>
-                        The ability to filter by phrase or keyword group to see
-                        the best questions related to all your topics/categories
+                          Give us 500 keywords and we'll send you your deliverable with ALL the questions that your list generated in the SERPs (typically several hundred)
                       </Li>
                     </Ul>
                   </div>
@@ -431,9 +413,7 @@ export default function PaaDashBoard({ testimonials }) {
                   <div className="row">
                     <H5>What You'll Get:</H5>
                     <Ul>
-                      <Li>Same as everything in Fire Hose</Li>
                       <Li>Discounted pricing per deliverable purchased</Li>
-                      <Li>Custom logo for branded reporting</Li>
                     </Ul>
                   </div>
                 </div>

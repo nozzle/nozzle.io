@@ -367,29 +367,10 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row ">
-                    <H5>What You'll Get:</H5>
-                    <Ul>
-                      <Li>
-                        A list of the <u>top 10 questions</u> related to your
-                        industry
-                      </Li>
-                      <Li>
-                        A drill down of your ranking URLs and where they rank
-                        for the phrases that generate each of those 10 questions
-                      </Li>
-                      <Li>
-                        The total number of unique questions that your keyword
-                        set returns
-                      </Li>
-                      <Li>
-                        The percentage of time PAA boxes show up for your whole
-                        keyword set and each of your keyword groups
-                      </Li>
-                      <Li>
-                        Easily upgrade to the Fire Hose full version when you
-                        are ready
-                      </Li>
-                    </Ul>
+                
+
+  Give us 500 keywords and we'll send you your deliverable highlighting the top 10 questions for your keyword list.
+                    
                   </div>
                 </div>
                 <Link href="paa/trial">

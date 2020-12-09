@@ -146,7 +146,7 @@ const SectionAction = styled(Section)`
     display: flex;
     margin-top: 30px;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
   }
   .plan {
     display: flex;
@@ -176,7 +176,7 @@ const SectionAction = styled(Section)`
     }
     :first-child {
       flex: 1 1 24%;
-      min-height: 475px;
+      min-height: 400px;
       border-radius: 3px 0 0 3px;
       z-index: 2;
       background: ${props => props.theme.colors.primaryDark};
@@ -185,12 +185,12 @@ const SectionAction = styled(Section)`
       flex: 1 1 27%;
       border-radius: 3px;
       background: ${props => props.theme.colors.primaryDarker};
-      min-height: 525px;
+      min-height: 450px;
       z-index: 3;
     }
     :nth-child(3) {
       flex: 1 1 24%;
-      min-height: 475px;
+      min-height: 400px;
       border-radius: 0 3px 3px 0;
       z-index: 3;
       background: ${props => props.theme.colors.primaryDark};
@@ -211,7 +211,7 @@ const SectionAction = styled(Section)`
       font-weight: bold;
     }
     .row {
-      padding: 7px 0;
+      padding: 0px 8px;
       border-bottom: solid 2px rgba(255, 255, 255, 0.07);
       :last-child {
         border-bottom: none;
@@ -367,11 +367,9 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row ">
-                    <Ul>
-                      <Li>
+                    <P>
                           Give us 500 keywords and we'll send you your deliverable highlighting the top 10 questions for your keyword list
-                      </Li>
-                    </Ul>
+                      </P>
                   </div>
                 </div>
                 <Link href="paa/trial">
@@ -389,11 +387,9 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row">
-                    <Ul>
-                      <Li>
+                    <P>
                           Give us 500 keywords and we'll send you your deliverable with ALL the questions that your list generated in the SERPs (typically several hundred)
-                      </Li>
-                    </Ul>
+                     </P>
                   </div>
                 </div>
                 <Link href="paa/checkout">
@@ -411,9 +407,9 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row">
-                    <Ul>
-                      <Li>Discounted pricing per deliverable purchased</Li>
-                    </Ul>
+                    <P>
+                      Discounted pricing per deliverable purchased
+                   </P>
                   </div>
                 </div>
                 <Link href="paa/contact">

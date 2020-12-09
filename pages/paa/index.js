@@ -277,7 +277,7 @@ export default function PaaDashBoard({ testimonials }) {
                 Sessions
               </H1>
               <P>
-                A list of the ACTUAL questions your target audience is asking.
+                A huge list of the ACTUAL questions your target audience is asking.
               </P>
             </Center>
           </Container>

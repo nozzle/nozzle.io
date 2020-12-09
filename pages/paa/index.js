@@ -411,7 +411,6 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row">
-                    <H5>What You'll Get:</H5>
                     <Ul>
                       <Li>Discounted pricing per deliverable purchased</Li>
                     </Ul>

@@ -324,7 +324,7 @@ export default function PaaDashBoard({ testimonials }) {
           </div>
           <div className="right">
             <Img
-              src="img/PAA_Deliverable.JPG"
+              src="img/PAA Expansion Deliverable Page one with 500 keywords.jpg"
               alt="PAA deliverable list of questions"
             />
             <Img

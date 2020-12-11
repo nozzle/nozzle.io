@@ -125,6 +125,7 @@ const SectionKnowWhatQuestions = styled(Section)`
       box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     }
   }
+
   .link {
     color: ${props => props.theme.colors.primaryLighter};
     text-decoration: underline;
@@ -262,6 +263,20 @@ export async function getServerSideProps(ctx) {
 }
 
 export default function PaaDashBoard({ testimonials }) {
+  React.useEffect(() => {
+    const script1 = document.createElement('script')
+    const script2 = document.createElement('script')
+
+    script1.src = 'https://fast.wistia.com/embed/medias/ggfgo9uxfs.jsonp'
+    script1.async = true
+
+    script2.src = 'https://fast.wistia.com/assets/external/E-v1.js'
+    script2.async = true
+
+    document.body.appendChild(script1)
+    document.body.appendChild(script2)
+  }, [])
+
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
@@ -277,7 +292,8 @@ export default function PaaDashBoard({ testimonials }) {
                 Sessions
               </H1>
               <P>
-                A huge list of the ACTUAL questions your target audience is asking.
+                A huge list of the ACTUAL questions your target audience is
+                asking.
               </P>
             </Center>
           </Container>
@@ -288,49 +304,45 @@ export default function PaaDashBoard({ testimonials }) {
               Are you ready to compile a list of all the PAA questions Google
               serves up for your unique keyword list?
             </H2>
-            <P>Get a free or paid version of this deliverable below.
-            </P>
-            <P>
-              What you'll get:
-            </P>
+            <P>Get a free or paid version of this deliverable below.</P>
+            <P>What you'll get:</P>
             <P>
               <Ul>
                 <Li>
-                  200-800 questions from the People Also Ask boxes related to your specific keyword list
+                  200-800 questions from the People Also Ask boxes related to
+                  your specific keyword list
+                </Li>
+                <Li>The ability to filter by keyword group</Li>
+                <Li>
+                  A drill down of your ranking URLs and where they rank for the
+                  phrases that generated the questions
                 </Li>
                 <Li>
-                  The ability to filter by keyword group
+                  The percentage of time PAA boxes show up for your whole
+                  keyword set and each of your keyword groups
                 </Li>
-                <Li>
-                  A drill down of your ranking URLs and where they rank for the phrases that generated the questions
-                </Li>
-                <Li>
-                  The percentage of time PAA boxes show up for your whole keyword set and each of your keyword groups
-                </Li>
-               </Ul>
+              </Ul>
             </P>
-            
+
             <P>
-             {' '}
+              {' '}
               <a
                 href="https://datastudio.google.com/u/1/reporting/c603c6cc-2137-49b7-a161-735bf238f46d/page/T6hmB"
                 target="blank"
               >
-                <span className="link">Click to view a PAA Expansion Deliverable example in Data Studio.</span>
+                <span className="link">
+                  Click to view a PAA Expansion Deliverable example in Data
+                  Studio.
+                </span>
               </a>{' '}
             </P>
-           
+
             <br />
           </div>
           <div className="right">
-            <Img
-              src="img/PAA Expansion Deliverable Page one with 500 keywords.jpg"
-              alt="PAA deliverable list of questions"
-            />
-            <Img
-              src="img/PAA_DeliverableDrillDown.jpg"
-              alt="PAA deliverable list of questions drilled down"
-            />
+            <div>
+              <div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />
+            </div>
           </div>
         </SectionKnowWhatQuestions>
 
@@ -368,8 +380,9 @@ export default function PaaDashBoard({ testimonials }) {
                 <div className="plan-inner">
                   <div className="row ">
                     <P>
-                          Give us 500 keywords and we'll send you your deliverable highlighting the top 10 questions for your keyword list
-                      </P>
+                      Give us 500 keywords and we'll send you your deliverable
+                      highlighting the top 10 questions for your keyword list
+                    </P>
                   </div>
                 </div>
                 <Link href="paa/trial">
@@ -388,8 +401,10 @@ export default function PaaDashBoard({ testimonials }) {
                 <div className="plan-inner">
                   <div className="row">
                     <P>
-                          Give us 500 keywords and we'll send you your deliverable with ALL the questions that your list generated in the SERPs (typically several hundred)
-                     </P>
+                      Give us 500 keywords and we'll send you your deliverable
+                      with ALL the questions that your list generated in the
+                      SERPs (typically several hundred)
+                    </P>
                   </div>
                 </div>
                 <Link href="paa/checkout">
@@ -407,9 +422,7 @@ export default function PaaDashBoard({ testimonials }) {
                 </div>
                 <div className="plan-inner">
                   <div className="row">
-                    <P>
-                      Discounted pricing per deliverable purchased
-                   </P>
+                    <P>Discounted pricing per deliverable purchased</P>
                   </div>
                 </div>
                 <Link href="paa/contact">

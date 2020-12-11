@@ -5,6 +5,7 @@ import { angle } from 'utils/Styles'
 import { number } from 'utils/Format'
 
 import Head from 'components/Head'
+import Icon from 'components/Icon'
 
 import Link from 'next/link'
 import { Button, H1, H2, H3, H4, H5, P, Span, Input } from 'components/Html'
@@ -13,11 +14,15 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import tw from 'tailwind.macro'
 
 const plans = [
-  { label: 'Spray As You Go', value: 'spray' },
-  { label: 'Garden Hose', value: 'garden-hose' },
-  { label: 'Pressure Washer', value: 'pressure-washer' },
-  { label: 'Fire Hose', value: 'fire-hose' },
-  { label: 'Jet Stream', value: 'jet-stream' },
+  { label: 'Custom', value: 'custom' },
+  { label: 'Basic', value: 'basic' },
+  { label: 'Advanced', value: 'advanced' },
+  { label: 'Pro', value: 'pro' },
+  { label: 'Pro Plus', value: 'pro-plus' },
+  { label: 'Business Basic', value: 'business-basic' },
+  { label: 'Business Advanced', value: 'business-advanced' },
+  { label: 'Business Pro', value: 'business-pro' },
+  { label: 'Enterprise', value: 'enterprise' },
 ]
 
 const frequencyOptions = [
@@ -45,16 +50,16 @@ const frequencyOptions = [
 
 const faqs = [
   {
-    q: `What is a credit?`,
-    a: `A credit is used whenever we retrieve data for a keyword-engine-language-device-location combination. This combination is commonly referred to as a SERP (Search Engine Results Page). We pull data for the first 100 results. One credit = top 100 results for each unique search. `,
+    q: `What is a pull?`,
+    a: `A pull is used whenever we retrieve data for a keyword-engine-language-device-location combination. This combination is commonly referred to as a SERP (Search Engine Results Page). We pull data for the first 100 results. One pull = top 100 results for each unique search. `,
   },
   {
-    q: `How many credits do I need?`,
-    a: `The number of credits you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, locations and engines you want to monitor. The pricing plans above give general estimates for the number of credits needed for tracking a single engine and location. Use the calculator on this page to get an idea on how many credits you need.`,
+    q: `How many pulls do I need?`,
+    a: `The number of pulls you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, locations and engines you want to monitor. The pricing plans above give general estimates for the number of pulls needed for tracking a single engine and location. Use the calculator on this page to get an idea on how many pulls you need.`,
   },
   {
-    q: `How long are credits good for?`,
-    a: `Credits purchased on the ‘Spray-as-you-go’ plan never expire. Credits purchased on other plans expire at the end of the month.`,
+    q: `How long are pulls good for?`,
+    a: `Pulls purchased on the Custom plan never expire. Pulls purchased on other plans expire at the end of the month.`,
   },
   {
     q: `Do I have to sign a contract?`,
@@ -70,7 +75,7 @@ const faqs = [
   },
   {
     q: `Are there any other charges I should be aware of?`,
-    a: `There are no setup fees, charges for API access, or charges for additional users. The only exception to the one credit = one SERP pricing is for expedited data. SERPs requested under the regular pricing structure are fulfilled by the end of day, but some of our customers need data populated more rapidly. For example, some of our customers need data fulfilled hourly or they place last minute one-time pull data requests that they need as soon as possible. These priority requests are billed at 5 credits per SERP.  `,
+    a: `There are no setup fees, charges for API access, or charges for additional users. The only exception to the one pull = one SERP pricing is for expedited data. SERPs requested under the regular pricing structure are fulfilled by the end of day, but some of our customers need data populated more rapidly. For example, some of our customers need data fulfilled hourly or they place last minute one-time pull data requests that they need as soon as possible. These priority requests are billed at 5 pulls per SERP.  `,
   },
   {
     q: `Does Nozzle offer custom plans?`,
@@ -92,9 +97,10 @@ const SectionIntroCmp = props => (
           <strong>unlimited</strong> competitors and views
         </P>
         <P>
-          <AnchorLink href="#faq">
+          {' '}
+          <AnchorLink href="#calculator">
             <Button size="sm" burst>
-              Read More
+              How many pulls do i need?
             </Button>
           </AnchorLink>
         </P>
@@ -176,11 +182,7 @@ function SectionPlansCmp(props) {
                   $7.27 Per Thousand Priority Pulls
                 </small>
               </div>
-              <div className="plan-inner">
-                <div className="count">Up to 50 Teams</div>
-                <div className="count">Full Access to Nozzle Dataset</div>
-                <div className="count">BigQuery Access</div>
-              </div>
+              <div className="plan-inner"></div>
               <Link href="/trial">
                 <a>
                   <Button color="primaryDarker" burst>
@@ -215,15 +217,7 @@ function SectionPlansCmp(props) {
                   $7.14 Per Thousand Priority Pulls
                 </small>
               </div>
-              <div className="plan-inner">
-                <div className="count">Unlimited Teams</div>
-                <div className="count">Full Access to Nozzle Dataset</div>
-                <div className="count">
-                  Full Access to Nozzle Library of Data Studio Reports
-                </div>
-                <div className="count">1 hr/month service tickets</div>
-                <div className="count">BigQuery Access</div>
-              </div>
+              <div className="plan-inner"></div>
               <Link href="/trial">
                 <a>
                   <Button color="success" burst>
@@ -258,17 +252,7 @@ function SectionPlansCmp(props) {
                   $6.67 Per Thousand Priority Pulls
                 </small>
               </div>
-              <div className="plan-inner">
-                <div className="count">Unlimited Teams</div>
-                <div className="count">Full Access to Nozzle Dataset</div>
-                <div className="count">
-                  Full Access to Nozzle Library of Data Studio Reports
-                </div>
-                <div className="count">2 hours support</div>
-                <div className="count">API Access</div>
-                <div className="count">Monthly Strategy Mtgs.</div>
-                <div className="count">BigQuery Access</div>
-              </div>
+              <div className="plan-inner"></div>
               <Link href="/trial">
                 <a>
                   <Button color="primaryDarker" burst>
@@ -303,19 +287,7 @@ function SectionPlansCmp(props) {
                   $5.71 Per Thousand Priority Pulls
                 </small>
               </div>
-              <div className="plan-inner">
-                <div className="count">Unlimited Teams</div>
-                <div className="count">Full Access to Nozzle Dataset</div>
-                <div className="count">
-                  Full Access to Nozzle Library of Data Studio Reports
-                </div>
-                <div className="count">Rollover Pulls</div>
-                <div className="count">Branded Data Studio Reports</div>
-                <div className="count">5 hours support</div>
-                <div className="count">API Access</div>
-                <div className="count">Monthly Strategy Mtgs.</div>
-                <div className="count">BigQuery Access</div>
-              </div>
+              <div className="plan-inner"></div>
               <Link href="/trial">
                 <a>
                   <Button color="primaryDark" burst>
@@ -353,11 +325,7 @@ function SectionPlansCmp(props) {
                   $9.80 Per Thousand Priority Pulls
                 </small>
               </div>
-              <div className="plan-inner">
-                <div className="count">Up to 3 Teams</div>
-                <div className="count">For new freelancers</div>
-                <div className="count">Full Dashboard Access</div>
-              </div>
+              <div className="plan-inner"></div>
               <Link href="/trial">
                 <a>
                   <Button color="primaryDarker" burst>
@@ -392,10 +360,7 @@ function SectionPlansCmp(props) {
                   $9.00 Per Thousand Priority Pulls
                 </small>
               </div>
-              <div className="plan-inner">
-                <div className="count">Up to 5 Teams</div>
-                <div className="count">Full Dashboard Access</div>
-              </div>
+              <div className="plan-inner"></div>
               <Link href="/trial">
                 <a>
                   <Button color="success" burst>
@@ -430,10 +395,7 @@ function SectionPlansCmp(props) {
                   $8.30 Per Thousand Priority Pulls
                 </small>
               </div>
-              <div className="plan-inner">
-                <div className="count">Up to 10 Teams</div>
-                <div className="count">Full Dashboard Access</div>
-              </div>
+              <div className="plan-inner"></div>
               <Link href="/trial">
                 <a>
                   <Button color="primaryDarker" burst>
@@ -468,10 +430,7 @@ function SectionPlansCmp(props) {
                   $7.68 Per Thousand Priority Pulls
                 </small>
               </div>
-              <div className="plan-inner">
-                <div className="count">Up to 20 Teams</div>
-                <div className="count">BigQuery Access</div>
-              </div>
+              <div className="plan-inner"></div>
               <Link href="/trial">
                 <a>
                   <Button color="primaryDark" burst>
@@ -495,6 +454,8 @@ const SectionPlans = styled(SectionPlansCmp)`
     margin-top: 30px;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   .plan {
     display: flex;
@@ -524,7 +485,7 @@ const SectionPlans = styled(SectionPlansCmp)`
     }
     :first-child {
       flex: 1 1 24%;
-      min-height: 630px;
+      min-height: 430px;
       border-radius: 3px 0 0 3px;
       z-index: 2;
       background: ${props => props.theme.colors.primaryDark};
@@ -533,23 +494,24 @@ const SectionPlans = styled(SectionPlansCmp)`
       flex: 1 1 27%;
       border-radius: 3px;
       background: ${props => props.theme.colors.primaryDarker};
-      min-height: 670px;
+      min-height: 470px;
       z-index: 3;
     }
     :nth-child(3) {
       flex: 1 1 24%;
-      min-height: 630px;
+      min-height: 430px;
       border-radius: 0 3px 3px 0;
       z-index: 2;
       background: ${props => props.theme.colors.primaryDark};
     }
     :nth-child(4) {
       flex: 1 1 22%;
-      min-height: 590px;
+      min-height: 390px;
       background: ${props => props.theme.colors.primary};
       border-radius: 0 3px 3px 0;
       z-index: 1;
     }
+    
     .plan-inner {
       padding: 20px;
       display: flex;
@@ -567,30 +529,30 @@ const SectionPlans = styled(SectionPlansCmp)`
     }
 
     .plan-filters {
-      display: flex
+      display: flex 
+    }
+    
+    .next-button {
+      color: gray;
       
     }
 
     .plan-filter {
       flex: 1;
+      
       button{
           border: solid 2px ${props => props.theme.colors.primary};
+          margin-right:.25rem;
       }
       
         .on{
           background: ${props => props.theme.colors.primary};
-          
         }
 
         .off{
           background: white;
-          color: ${props => props.theme.colors.primary};
-          
+          color: ${props => props.theme.colors.primary}; 
         }
-       
-      
-
-     
     }
 
     .row {
@@ -600,7 +562,7 @@ const SectionPlans = styled(SectionPlansCmp)`
         border-bottom: none;
       }
     }
-    .percredit {
+    .perPull {
       font-size: 16px;
     }
     .price {
@@ -657,14 +619,14 @@ const SectionPlans = styled(SectionPlansCmp)`
 
 `
 
-const SectionSprayCmp = props => (
+const SectionCustomPlan = props => (
   <section {...props}>
     <Container>
       <Center>
         <H5 className="title">Can't find what you want?</H5>
         <div className="inner">
           <H3>Custom Plan</H3>
-          <div className="credit">Call us for a quote</div>
+          <div className="pull">Call us for a quote</div>
           <div>
             <Link href="/trial">
               <a>
@@ -680,7 +642,7 @@ const SectionSprayCmp = props => (
   </section>
 )
 
-const SectionSpray = styled(SectionSprayCmp)`
+const SectionCustom = styled(SectionCustomPlan)`
   margin: 5% auto;
   background: linear-gradient(
     to right,
@@ -701,7 +663,7 @@ const SectionSpray = styled(SectionSprayCmp)`
   .price {
     padding: 5px;
   }
-  .credit {
+  .pull {
     padding: 5px;
     margin-bottom: 10px;
   }
@@ -715,11 +677,11 @@ const SectionFaqCmp = props => (
       </Center>
       <div className="inner">
         {faqs.map(({ q, a }) => (
-          <>
+          <div key={q}>
             <H5>{q}</H5>
             <P>{a}</P>
             <br />
-          </>
+          </div>
         ))}
       </div>
     </Container>
@@ -752,17 +714,25 @@ function SectionCalculatorCmp(props) {
   totalKeywords += keywords.monthly || 0
   totalKeywords += keywords.onetime || 0
 
-  let totalCredits = totalKeywords * engines * devices * locations
+  let totalPulls = totalKeywords * engines * devices * locations
 
   let suggestedPlan
 
-  if (totalCredits > 200000) {
+  if (totalPulls > 3500000) {
+    suggestedPlan = plans[8]
+  } else if (totalPulls > 1500000) {
+    suggestedPlan = plans[7]
+  } else if (totalPulls > 725000) {
+    suggestedPlan = plans[6]
+  } else if (totalPulls > 275000) {
+    suggestedPlan = plans[5]
+  } else if (totalPulls > 130000) {
     suggestedPlan = plans[4]
-  } else if (totalCredits > 40000) {
+  } else if (totalPulls > 60000) {
     suggestedPlan = plans[3]
-  } else if (totalCredits > 18000) {
+  } else if (totalPulls > 21000) {
     suggestedPlan = plans[2]
-  } else if (totalCredits > 5000) {
+  } else if (totalPulls > 10000) {
     suggestedPlan = plans[1]
   } else {
     suggestedPlan = plans[0]
@@ -771,7 +741,7 @@ function SectionCalculatorCmp(props) {
   return (
     <section {...props}>
       <Container>
-        <H3 className="title">How many credits do I need per month?</H3>
+        <H3 className="title">How many pulls do I need per month?</H3>
         <div className="inner">
           <div className="left">
             {frequencyOptions.map(option => (
@@ -867,13 +837,13 @@ function SectionCalculatorCmp(props) {
           <div className="right">
             {suggestedPlan ? (
               <>
-                <div className="amount">{number(totalCredits)}</div>
+                <div className="amount">{number(totalPulls)}</div>
                 <div
                   css={`
                     ${tw`p-2 mb-4 text-2xl`}
                   `}
                 >
-                  credits
+                  pulls
                 </div>
                 <div className="suggested">Suggested Plan:</div>
                 <div className="suggested-plan">
@@ -1015,7 +985,7 @@ export default function Features() {
       <main>
         <SectionIntro />
         <SectionPlans id="plans" />
-        <SectionSpray id={plans[0].value} />
+        <SectionCustom id={plans[0].value} />
         <SectionFaq id="faq" />
         <SectionCalculator id="calculator" />
         <SectionContactUs id="trial" />

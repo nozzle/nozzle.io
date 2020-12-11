@@ -24,6 +24,8 @@ const icons = {
   clock: 'far fa-clock',
   'circle-full': 'far fa-dot-circle',
   'chevron-right': 'fas fa-angle-right',
+  'chevron-circle-right': 'fas fa-chevron-circle-right',
+  'chevron-circle-left': 'fas fa-chevron-circle-left',
   tags: 'fas fa-tags',
   check: 'fas fa-check-circle',
   x: 'fas fa-times-circle',

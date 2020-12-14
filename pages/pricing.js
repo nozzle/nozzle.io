@@ -13,6 +13,8 @@ import { Container, Center } from 'components/Layout'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import tw from 'tailwind.macro'
 
+const belowTablet = `@media(max-width: ${1000}px)`
+
 const plans = [
   { label: 'Custom', value: 'custom' },
   { label: 'Basic', value: 'basic' },
@@ -155,289 +157,307 @@ function SectionPlansCmp(props) {
           </div>
         </Center>
         {enterprise ? (
-          <div className="plans">
-            <div className="plan" id={plans[1].value}>
-              <H4 className="title">Business Basic</H4>
-              <div className="price">
-                {monthly ? (
-                  <>
-                    <H5>
-                      <Span className="price-number">$1,199</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed monthly</small>
-                  </>
-                ) : (
-                  <>
-                    <H5>
-                      {' '}
-                      <Span className="price-number">$999</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed yearly</small>
-                  </>
-                )}
-                <small className="billed-monthly">
-                  $3.63 Per Thousand Pulls
-                </small>
-                <small className="billed-monthly">
-                  $7.27 Per Thousand Priority Pulls
-                </small>
+          <div className="container">
+            <div className="plans">
+              <div className="plan" id={plans[1].value}>
+                <H4 className="title">Business Basic</H4>
+                <div className="price">
+                  {monthly ? (
+                    <>
+                      <H5>
+                        <Span className="price-number">$1,199</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed monthly</small>
+                    </>
+                  ) : (
+                    <>
+                      <H5>
+                        {' '}
+                        <Span className="price-number">$999</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed yearly</small>
+                    </>
+                  )}
+                  <small className="billed-monthly">
+                    $3.63 Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $7.27 Per Thousand Priority Pulls
+                  </small>
+                </div>
+                <div className="plan-inner"></div>
+                <Link href="/trial">
+                  <a>
+                    <Button color="primaryDarker" burst>
+                      Start Trial
+                    </Button>
+                  </a>
+                </Link>
               </div>
-              <div className="plan-inner"></div>
-              <Link href="/trial">
-                <a>
-                  <Button color="primaryDarker" burst>
-                    Start Trial
-                  </Button>
-                </a>
-              </Link>
+              <div className="plan" id={plans[2].value}>
+                <H4 className="title">Business Advanced</H4>
+                <div className="price">
+                  {monthly ? (
+                    <>
+                      <H5>
+                        <Span className="price-number">$2,999</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed monthly</small>
+                    </>
+                  ) : (
+                    <>
+                      <H5>
+                        {' '}
+                        <Span className="price-number">$2,499</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed yearly</small>
+                    </>
+                  )}
+                  <small className="billed-monthly">
+                    $3.57 Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $7.14 Per Thousand Priority Pulls
+                  </small>
+                </div>
+                <div className="plan-inner"></div>
+                <Link href="/trial">
+                  <a>
+                    <Button color="success" burst>
+                      Start Trial
+                    </Button>
+                  </a>
+                </Link>
+              </div>
+              <div className="plan" id={plans[3].value}>
+                <H4 className="title">Business Pro</H4>
+                <div className="price">
+                  {monthly ? (
+                    <>
+                      <H5>
+                        <Span className="price-number">$5,999</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed monthly</small>
+                    </>
+                  ) : (
+                    <>
+                      <H5>
+                        {' '}
+                        <Span className="price-number">$4,999</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed yearly</small>
+                    </>
+                  )}
+                  <small className="billed-monthly">
+                    $3.33 Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $6.67 Per Thousand Priority Pulls
+                  </small>
+                </div>
+                <div className="plan-inner"></div>
+                <Link href="/trial">
+                  <a>
+                    <Button color="primaryDarker" burst>
+                      Start Trial
+                    </Button>
+                  </a>
+                </Link>
+              </div>
+              <div className="plan" id={plans[4].value}>
+                <H4 className="title">Enterprise</H4>
+                <div className="price">
+                  {monthly ? (
+                    <>
+                      <H5>
+                        <Span className="price-number">$11,999</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed monthly</small>
+                    </>
+                  ) : (
+                    <>
+                      <H5>
+                        {' '}
+                        <Span className="price-number">$9,999</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed yearly</small>
+                    </>
+                  )}
+                  <small className="billed-monthly">
+                    $2.86 Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $5.71 Per Thousand Priority Pulls
+                  </small>
+                </div>
+                <div className="plan-inner"></div>
+                <Link href="/trial">
+                  <a>
+                    <Button color="primaryDark" burst>
+                      Start Trial
+                    </Button>
+                  </a>
+                </Link>
+              </div>
             </div>
-            <div className="plan" id={plans[2].value}>
-              <H4 className="title">Business Advanced</H4>
-              <div className="price">
-                {monthly ? (
-                  <>
-                    <H5>
-                      <Span className="price-number">$2,999</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed monthly</small>
-                  </>
-                ) : (
-                  <>
-                    <H5>
-                      {' '}
-                      <Span className="price-number">$2,499</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed yearly</small>
-                  </>
-                )}
-                <small className="billed-monthly">
-                  $3.57 Per Thousand Pulls
-                </small>
-                <small className="billed-monthly">
-                  $7.14 Per Thousand Priority Pulls
-                </small>
-              </div>
-              <div className="plan-inner"></div>
-              <Link href="/trial">
-                <a>
-                  <Button color="success" burst>
-                    Start Trial
-                  </Button>
-                </a>
-              </Link>
-            </div>
-            <div className="plan" id={plans[3].value}>
-              <H4 className="title">Business Pro</H4>
-              <div className="price">
-                {monthly ? (
-                  <>
-                    <H5>
-                      <Span className="price-number">$5,999</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed monthly</small>
-                  </>
-                ) : (
-                  <>
-                    <H5>
-                      {' '}
-                      <Span className="price-number">$4,999</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed yearly</small>
-                  </>
-                )}
-                <small className="billed-monthly">
-                  $3.33 Per Thousand Pulls
-                </small>
-                <small className="billed-monthly">
-                  $6.67 Per Thousand Priority Pulls
-                </small>
-              </div>
-              <div className="plan-inner"></div>
-              <Link href="/trial">
-                <a>
-                  <Button color="primaryDarker" burst>
-                    Start Trial
-                  </Button>
-                </a>
-              </Link>
-            </div>
-            <div className="plan" id={plans[4].value}>
-              <H4 className="title">Enterprise</H4>
-              <div className="price">
-                {monthly ? (
-                  <>
-                    <H5>
-                      <Span className="price-number">$11,999</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed monthly</small>
-                  </>
-                ) : (
-                  <>
-                    <H5>
-                      {' '}
-                      <Span className="price-number">$9,999</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed yearly</small>
-                  </>
-                )}
-                <small className="billed-monthly">
-                  $2.86 Per Thousand Pulls
-                </small>
-                <small className="billed-monthly">
-                  $5.71 Per Thousand Priority Pulls
-                </small>
-              </div>
-              <div className="plan-inner"></div>
-              <Link href="/trial">
-                <a>
-                  <Button color="primaryDark" burst>
-                    Start Trial
-                  </Button>
-                </a>
-              </Link>
+            <div className="arrow-button prev">
+              <Icon
+                i="chevron-circle-left"
+                size="large"
+                onClick={() => setEnterprise(false)}
+              />
             </div>
           </div>
         ) : (
-          <div className="plans">
-            <div className="plan" id={plans[1].value}>
-              <H4 className="title"> Basic</H4>
-              <div className="price">
-                {monthly ? (
-                  <>
-                    <H5>
-                      <Span className="price-number">$59</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed monthly</small>
-                  </>
-                ) : (
-                  <>
-                    <H5>
-                      {' '}
-                      <Span className="price-number">$49</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed yearly</small>
-                  </>
-                )}
-                <small className="billed-monthly">
-                  $4.90 Per Thousand Pulls
-                </small>
-                <small className="billed-monthly">
-                  $9.80 Per Thousand Priority Pulls
-                </small>
+          <div className="container">
+            <div className="plans">
+              <div className="plan" id={plans[1].value}>
+                <H4 className="title"> Basic</H4>
+                <div className="price">
+                  {monthly ? (
+                    <>
+                      <H5>
+                        <Span className="price-number">$59</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed monthly</small>
+                    </>
+                  ) : (
+                    <>
+                      <H5>
+                        {' '}
+                        <Span className="price-number">$49</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed yearly</small>
+                    </>
+                  )}
+                  <small className="billed-monthly">
+                    $4.90 Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $9.80 Per Thousand Priority Pulls
+                  </small>
+                </div>
+                <div className="plan-inner"></div>
+                <Link href="/trial">
+                  <a>
+                    <Button color="primaryDarker" burst>
+                      Start Trial
+                    </Button>
+                  </a>
+                </Link>
               </div>
-              <div className="plan-inner"></div>
-              <Link href="/trial">
-                <a>
-                  <Button color="primaryDarker" burst>
-                    Start Trial
-                  </Button>
-                </a>
-              </Link>
+              <div className="plan" id={plans[2].value}>
+                <H4 className="title">Advanced</H4>
+                <div className="price">
+                  {monthly ? (
+                    <>
+                      <H5>
+                        <Span className="price-number">$119</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed monthly</small>
+                    </>
+                  ) : (
+                    <>
+                      <H5>
+                        {' '}
+                        <Span className="price-number">$99</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed yearly</small>
+                    </>
+                  )}
+                  <small className="billed-monthly">
+                    $4.50 Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $9.00 Per Thousand Priority Pulls
+                  </small>
+                </div>
+                <div className="plan-inner"></div>
+                <Link href="/trial">
+                  <a>
+                    <Button color="success" burst>
+                      Start Trial
+                    </Button>
+                  </a>
+                </Link>
+              </div>
+              <div className="plan" id={plans[3].value}>
+                <H4 className="title">Pro</H4>
+                <div className="price">
+                  {monthly ? (
+                    <>
+                      <H5>
+                        <Span className="price-number">$299</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed monthly</small>
+                    </>
+                  ) : (
+                    <>
+                      <H5>
+                        {' '}
+                        <Span className="price-number">$249</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed yearly</small>
+                    </>
+                  )}
+                  <small className="billed-monthly">
+                    $4.15 Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $8.30 Per Thousand Priority Pulls
+                  </small>
+                </div>
+                <div className="plan-inner"></div>
+                <Link href="/trial">
+                  <a>
+                    <Button color="primaryDarker" burst>
+                      Start Trial
+                    </Button>
+                  </a>
+                </Link>
+              </div>
+              <div className="plan" id={plans[4].value}>
+                <H4 className="title">Pro Plus</H4>
+                <div className="price">
+                  {monthly ? (
+                    <>
+                      <H5>
+                        <Span className="price-number">$599</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed monthly</small>
+                    </>
+                  ) : (
+                    <>
+                      <H5>
+                        {' '}
+                        <Span className="price-number">$499</Span> / mo{' '}
+                      </H5>
+                      <small className="billed-yearly">billed yearly</small>
+                    </>
+                  )}
+                  <small className="billed-monthly">
+                    $3.84 Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $7.68 Per Thousand Priority Pulls
+                  </small>
+                </div>
+                <div className="plan-inner"></div>
+                <Link href="/trial">
+                  <a>
+                    <Button color="primaryDark" burst>
+                      Start Trial
+                    </Button>
+                  </a>
+                </Link>
+              </div>
             </div>
-            <div className="plan" id={plans[2].value}>
-              <H4 className="title">Advanced</H4>
-              <div className="price">
-                {monthly ? (
-                  <>
-                    <H5>
-                      <Span className="price-number">$119</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed monthly</small>
-                  </>
-                ) : (
-                  <>
-                    <H5>
-                      {' '}
-                      <Span className="price-number">$99</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed yearly</small>
-                  </>
-                )}
-                <small className="billed-monthly">
-                  $4.50 Per Thousand Pulls
-                </small>
-                <small className="billed-monthly">
-                  $9.00 Per Thousand Priority Pulls
-                </small>
-              </div>
-              <div className="plan-inner"></div>
-              <Link href="/trial">
-                <a>
-                  <Button color="success" burst>
-                    Start Trial
-                  </Button>
-                </a>
-              </Link>
-            </div>
-            <div className="plan" id={plans[3].value}>
-              <H4 className="title">Pro</H4>
-              <div className="price">
-                {monthly ? (
-                  <>
-                    <H5>
-                      <Span className="price-number">$299</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed monthly</small>
-                  </>
-                ) : (
-                  <>
-                    <H5>
-                      {' '}
-                      <Span className="price-number">$249</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed yearly</small>
-                  </>
-                )}
-                <small className="billed-monthly">
-                  $4.15 Per Thousand Pulls
-                </small>
-                <small className="billed-monthly">
-                  $8.30 Per Thousand Priority Pulls
-                </small>
-              </div>
-              <div className="plan-inner"></div>
-              <Link href="/trial">
-                <a>
-                  <Button color="primaryDarker" burst>
-                    Start Trial
-                  </Button>
-                </a>
-              </Link>
-            </div>
-            <div className="plan" id={plans[4].value}>
-              <H4 className="title">Pro Plus</H4>
-              <div className="price">
-                {monthly ? (
-                  <>
-                    <H5>
-                      <Span className="price-number">$599</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed monthly</small>
-                  </>
-                ) : (
-                  <>
-                    <H5>
-                      {' '}
-                      <Span className="price-number">$499</Span> / mo{' '}
-                    </H5>
-                    <small className="billed-yearly">billed yearly</small>
-                  </>
-                )}
-                <small className="billed-monthly">
-                  $3.84 Per Thousand Pulls
-                </small>
-                <small className="billed-monthly">
-                  $7.68 Per Thousand Priority Pulls
-                </small>
-              </div>
-              <div className="plan-inner"></div>
-              <Link href="/trial">
-                <a>
-                  <Button color="primaryDark" burst>
-                    Start Trial
-                  </Button>
-                </a>
-              </Link>
+            <div className="arrow-button next">
+              <Icon
+                i="chevron-circle-right"
+                size="large"
+                onClick={() => setEnterprise(true)}
+              />
             </div>
           </div>
         )}
@@ -454,9 +474,40 @@ const SectionPlans = styled(SectionPlansCmp)`
     margin-top: 30px;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    padding-left: 2.05rem;
+    padding-right: 2.05rem;
   }
+
+  .container{
+    position: relative;
+  }
+
+  .arrow-button{
+    z-index: 9;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    color: gray;
+    font-size: 25px;
+    transition: 0.2s ease;
+    
+    :hover{
+      transform: scale(1.1);
+    }
+
+    ${belowTablet}{
+        display: none;
+      }
+    }
+
+    .next{
+      right: 0;
+    }
+
+    .prev{
+      left:0;
+    }
+
   .plan {
     display: flex;
     flex-direction: column;
@@ -511,7 +562,6 @@ const SectionPlans = styled(SectionPlansCmp)`
       border-radius: 0 3px 3px 0;
       z-index: 1;
     }
-    
     .plan-inner {
       padding: 20px;
       display: flex;

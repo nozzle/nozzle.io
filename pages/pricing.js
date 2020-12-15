@@ -44,10 +44,6 @@ const frequencyOptions = [
     value: 'monthly',
     label: 'Monthly',
   },
-  {
-    value: 'onetime',
-    label: 'One-Time Pull',
-  },
 ]
 
 const faqs = [
@@ -747,24 +743,82 @@ const SectionFaq = styled(SectionFaqCmp)`
 `
 
 function SectionCalculatorCmp(props) {
-  const [{ keywords, engines, devices, locations }, setState] = React.useState({
-    keywords: {
-      weekly: 1000,
+  const [rows, setRows] = React.useState([
+    {
+      name: '',
+      keywords: {
+        hourly: '',
+        daily: '',
+        weekly: 1000,
+        monthly: '',
+      },
+      devices: 1,
+      locations: 1,
     },
-    engines: 1,
-    devices: 1,
-    locations: 1,
+  ])
+
+  const handleChange = index => e => {
+    const { dataset, name, value } = e.target
+    const changedRows = [...rows]
+
+    dataset.nested === 'nested'
+      ? (changedRows[index] = {
+          ...changedRows[index],
+          keywords: {
+            ...changedRows[index].keywords,
+            [name]: value,
+          },
+        })
+      : (changedRows[index] = {
+          ...changedRows[index],
+          [name]: value,
+        })
+    setRows([...changedRows])
+  }
+
+  const addRow = () => {
+    const item = {
+      name: '',
+      keywords: {
+        hourly: '',
+        daily: '',
+        weekly: '',
+        monthly: '',
+      },
+      devices: 1,
+      locations: 1,
+    }
+    setRows([...rows, item])
+  }
+
+  const deleteRow = index => () => {
+    const rowsArray = [...rows]
+    const newRows = rowsArray.filter((row, i) => i !== index)
+    setRows(newRows)
+  }
+
+  let totalHourly = 0
+  let totalDaily = 0
+  let totalWeekly = 0
+  let totalMonthly = 0
+  let totalDevices = 0
+  let totalLocations = 0
+  let totalPulls = 0
+
+  rows.forEach(row => {
+    let keywords = 0
+    totalHourly += parseInt(row.keywords.hourly)
+    totalDaily += parseInt(row.keywords.daily)
+    totalWeekly += parseInt(row.keywords.weekly)
+    totalMonthly += parseInt(row.keywords.monthly)
+    totalDevices += parseInt(row.devices)
+    totalLocations += parseInt(row.locations)
+    keywords += parseInt(row.keywords.hourly || 0) * 30 * 24 * 5
+    keywords += parseInt(row.keywords.daily || 0) * 30
+    keywords += parseInt(row.keywords.weekly || 0) * 4
+    keywords += parseInt(row.keywords.monthly || 0)
+    totalPulls += keywords * parseInt(row.devices) * parseInt(row.locations)
   })
-
-  let totalKeywords = 0
-
-  totalKeywords += (keywords.hourly || 0) * 30 * 24 * 5
-  totalKeywords += (keywords.daily || 0) * 30
-  totalKeywords += (keywords.weekly || 0) * 4
-  totalKeywords += keywords.monthly || 0
-  totalKeywords += keywords.onetime || 0
-
-  let totalPulls = totalKeywords * engines * devices * locations
 
   let suggestedPlan
 
@@ -793,101 +847,107 @@ function SectionCalculatorCmp(props) {
       <Container>
         <H3 className="title">How many pulls do I need per month?</H3>
         <div className="inner">
-          <div className="left">
-            {frequencyOptions.map(option => (
-              <div className="row keywords" key={option.value}>
-                <label>{option.label} Keywords</label>
-                <div>
-                  <Input
-                    type="number"
-                    min="0"
-                    value={keywords[option.value] || ''}
-                    onChange={e => {
-                      let value = parseInt(e.target.value)
-                      value = value || ''
-                      setState(old => ({
-                        ...old,
-                        keywords: {
-                          ...old.keywords,
-                          [option.value]: value,
-                        },
-                      }))
-                    }}
-                    css={{
-                      border: !keywords && '2px solid red',
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-            <hr />
-            <div className="row engines">
-              <label>Engines</label>
-              <div>
-                <Input
-                  type="number"
-                  min="1"
-                  max="3"
-                  value={engines}
-                  onChange={e => {
-                    let value = parseInt(e.target.value)
-                    setState(old => ({
-                      ...old,
-                      engines: value,
-                    }))
-                  }}
-                  css={{
-                    border: !engines && '2px solid red',
-                  }}
-                />
-              </div>
-            </div>
-            <div className="row devices">
-              <label>Devices</label>
-              <div>
-                <Input
-                  type="number"
-                  min="1"
-                  max="5"
-                  value={devices}
-                  onChange={e => {
-                    let value = parseInt(e.target.value)
-                    setState(old => ({
-                      ...old,
-                      devices: value,
-                    }))
-                  }}
-                  css={{
-                    border: !devices && '2px solid red',
-                  }}
-                />
-              </div>
-            </div>
-            <div className="row locations">
-              <label>Locations</label>
-              <div>
-                <Input
-                  type="number"
-                  min="1"
-                  value={locations}
-                  onChange={e => {
-                    let value = parseInt(e.target.value)
-                    setState(old => ({
-                      ...old,
-                      locations: value,
-                    }))
-                  }}
-                  css={{
-                    border: !locations && '2px solid red',
-                  }}
-                />
-              </div>
-            </div>
+          <div className="top">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Team/Project</th>
+                  <th>Hourly Keywords</th>
+                  <th>Daily Keywords</th>
+                  <th>Weekly Keywords</th>
+                  <th>Monthly Keywords</th>
+                  <th>Devices</th>
+                  <th>Locations</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((item, index) => (
+                  <tr key={index}>
+                    <td>
+                      {rows.length > 1 ? (
+                        <Icon
+                          i="x"
+                          onClick={deleteRow(index)}
+                          className="delete"
+                        />
+                      ) : (
+                        ''
+                      )}
+                    </td>
+                    <td>
+                      <Input
+                        type="text"
+                        name="name"
+                        value={rows[index].name}
+                        onChange={handleChange(index)}
+                      />
+                    </td>
+                    {frequencyOptions.map(option => (
+                      <td className="row keywords" key={option.value}>
+                        <Input
+                          name={option.value}
+                          type="number"
+                          value={rows[index].keywords[option.value]}
+                          min="0"
+                          data-nested="nested"
+                          onChange={handleChange(index)}
+                        />
+                      </td>
+                    ))}
+                    <td>
+                      <Input
+                        type="number"
+                        name="devices"
+                        value={rows[index].devices}
+                        min="1"
+                        max="5"
+                        onChange={handleChange(index)}
+                      />
+                    </td>
+                    <td>
+                      <Input
+                        type="number"
+                        name="locations"
+                        value={rows[index].locations}
+                        min="1"
+                        onChange={handleChange(index)}
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td className="center">
+                    <Icon i="plus" onClick={addRow} className="add" />
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <th>Totals</th>
+                  <td>{totalHourly || ''}</td>
+                  <td>{totalDaily || ''}</td>
+                  <td>{totalWeekly || ''}</td>
+                  <td>{totalMonthly || ''}</td>
+                  <td>{totalDevices || ''}</td>
+                  <td>{totalLocations || ''}</td>
+                </tr>
+              </tfoot>
+            </table>
           </div>
-          <div className="right">
+          <div className="bottom">
             {suggestedPlan ? (
               <>
                 <div className="amount">{number(totalPulls)}</div>
+
                 <div
                   css={`
                     ${tw`p-2 mb-4 text-2xl`}
@@ -923,46 +983,70 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
     display: flex;
     flex-wrap: wrap;
   }
-  .left {
-    flex: 0 1 450px;
-    padding: 0 20px;
-    font-size: 1.2em;
-    line-height: 2.4em;
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      label {
-        flex: 1 0 250px;
-        text-align: right;
-        padding-right: 1rem;
-      }
-      div {
-        flex: 1 0 72px;
+
+  th,
+  td {
+    padding: 0.75rem;
+    :nth-child(2) {
+      border-right: 2px solid ${props => props.theme.colors.primary};
+    }
+    :nth-child(6) {
+      border-right: 2px solid ${props => props.theme.colors.primary};
+    }
+    :nth-child(7) {
+      border-right: 2px solid ${props => props.theme.colors.primary};
+    }
+    :last-child {
+      width: 2rem;
+    }
+  }
+
+  tfoot {
+    font-weight: bold;
+    font-size: 1.25rem;
+    tr {
+      :last-child {
+        border-top: 2px solid ${props => props.theme.colors.primary};
       }
     }
-    input[type='number'] {
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .add {
+    text-align: center;
+    color: ${props => props.theme.colors.success};
+    :hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .delete {
+    color: ${props => props.theme.colors.danger};
+    :hover {
+      transform: scale(1.1);
+    }
+  }
+  .top {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+
+    input[type='number'],
+    input[type='text'] {
       font-size: 1em;
       width: 100%;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
     }
-    .frequency {
-      align-self: flex-start;
-    }
-    .radios {
-      font-size: 0.8em;
-      line-height: 1.5em;
-      margin-top: 17px;
-      margin-bottom: 1rem;
-    }
-    label {
-      display: block;
-    }
   }
-  .right {
+  .bottom {
+    margin: 0 auto;
     flex: 1;
     padding: 0 20px;
     display: flex;
+    min-height: 20rem;
+    max-width: 60rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;

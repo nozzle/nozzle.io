@@ -14,17 +14,38 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import tw from 'tailwind.macro'
 
 const belowTablet = `@media(max-width: ${1000}px)`
+const belowMobile = `@media(max-width: ${700}px)`
 
 const plans = [
   { label: 'Custom', value: 'custom' },
-  { label: 'Basic', value: 'basic' },
-  { label: 'Advanced', value: 'advanced' },
-  { label: 'Pro', value: 'pro' },
-  { label: 'Pro Plus', value: 'pro-plus' },
-  { label: 'Business Basic', value: 'business-basic' },
-  { label: 'Business Advanced', value: 'business-advanced' },
-  { label: 'Business Pro', value: 'business-pro' },
-  { label: 'Enterprise', value: 'enterprise' },
+  { label: 'Basic', value: 'basic', monthly: '59', annually: '49' },
+  { label: 'Advanced', value: 'advanced', monthly: '199', annually: '99' },
+  { label: 'Pro', value: 'pro', monthly: '299', annually: '249' },
+  { label: 'Pro Plus', value: 'pro-plus', monthly: '599', annually: '499' },
+  {
+    label: 'Business Basic',
+    value: 'business-basic',
+    monthly: '1,199',
+    annually: '999',
+  },
+  {
+    label: 'Business Advanced',
+    value: 'business-advanced',
+    monthly: '2,999',
+    annually: '2,499',
+  },
+  {
+    label: 'Business Pro',
+    value: 'business-pro',
+    monthly: '5,999',
+    annually: '4,999',
+  },
+  {
+    label: 'Enterprise',
+    value: 'enterprise',
+    monthly: '11,999',
+    annually: '9,999',
+  },
 ]
 
 const frequencyOptions = [
@@ -181,7 +202,11 @@ function SectionPlansCmp(props) {
                     $7.27 Per Thousand Priority Pulls
                   </small>
                 </div>
-                <div className="plan-inner"></div>
+                <div className="plan-inner">
+                  <small className="billed-monthly">
+                    275,000 Pulls Included
+                  </small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDarker" burst>
@@ -216,7 +241,11 @@ function SectionPlansCmp(props) {
                     $7.14 Per Thousand Priority Pulls
                   </small>
                 </div>
-                <div className="plan-inner"></div>
+                <div className="plan-inner">
+                  <small className="billed-monthly">
+                    725,000 Pulls Included
+                  </small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="success" burst>
@@ -251,7 +280,12 @@ function SectionPlansCmp(props) {
                     $6.67 Per Thousand Priority Pulls
                   </small>
                 </div>
-                <div className="plan-inner"></div>
+                <div className="plan-inner">
+                  {' '}
+                  <small className="billed-monthly">
+                    1,500,000 Pulls Included
+                  </small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDarker" burst>
@@ -286,7 +320,12 @@ function SectionPlansCmp(props) {
                     $5.71 Per Thousand Priority Pulls
                   </small>
                 </div>
-                <div className="plan-inner"></div>
+                <div className="plan-inner">
+                  {' '}
+                  <small className="billed-monthly">
+                    3,500,000 Pulls Included
+                  </small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDark" burst>
@@ -333,7 +372,12 @@ function SectionPlansCmp(props) {
                     $9.80 Per Thousand Priority Pulls
                   </small>
                 </div>
-                <div className="plan-inner"></div>
+                <div className="plan-inner">
+                  {' '}
+                  <small className="billed-monthly">
+                    10,000 Pulls Included
+                  </small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDarker" burst>
@@ -368,7 +412,12 @@ function SectionPlansCmp(props) {
                     $9.00 Per Thousand Priority Pulls
                   </small>
                 </div>
-                <div className="plan-inner"></div>
+                <div className="plan-inner">
+                  {' '}
+                  <small className="billed-monthly">
+                    21,000 Pulls Included
+                  </small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="success" burst>
@@ -403,7 +452,12 @@ function SectionPlansCmp(props) {
                     $8.30 Per Thousand Priority Pulls
                   </small>
                 </div>
-                <div className="plan-inner"></div>
+                <div className="plan-inner">
+                  {' '}
+                  <small className="billed-monthly">
+                    60,000 Pulls Included
+                  </small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDarker" burst>
@@ -438,7 +492,12 @@ function SectionPlansCmp(props) {
                     $7.68 Per Thousand Priority Pulls
                   </small>
                 </div>
-                <div className="plan-inner"></div>
+                <div className="plan-inner">
+                  {' '}
+                  <small className="billed-monthly">
+                    130,000 Pulls Included
+                  </small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDark" burst>
@@ -807,10 +866,10 @@ function SectionCalculatorCmp(props) {
 
   rows.forEach(row => {
     let keywords = 0
-    totalHourly += parseInt(row.keywords.hourly)
-    totalDaily += parseInt(row.keywords.daily)
-    totalWeekly += parseInt(row.keywords.weekly)
-    totalMonthly += parseInt(row.keywords.monthly)
+    totalHourly += parseInt(row.keywords.hourly || 0)
+    totalDaily += parseInt(row.keywords.daily || 0)
+    totalWeekly += parseInt(row.keywords.weekly || 0)
+    totalMonthly += parseInt(row.keywords.monthly || 0)
     totalDevices += parseInt(row.devices)
     totalLocations += parseInt(row.locations)
     keywords += parseInt(row.keywords.hourly || 0) * 30 * 24 * 5
@@ -836,10 +895,8 @@ function SectionCalculatorCmp(props) {
     suggestedPlan = plans[3]
   } else if (totalPulls > 21000) {
     suggestedPlan = plans[2]
-  } else if (totalPulls > 10000) {
-    suggestedPlan = plans[1]
   } else {
-    suggestedPlan = plans[0]
+    suggestedPlan = plans[1]
   }
 
   return (
@@ -957,9 +1014,15 @@ function SectionCalculatorCmp(props) {
                 </div>
                 <div className="suggested">Suggested Plan:</div>
                 <div className="suggested-plan">
-                  <Link href={`/pricing#${suggestedPlan.value}`}>
+                  <AnchorLink href={'#intro'}>
                     <a>{suggestedPlan.label}</a>
-                  </Link>
+                  </AnchorLink>
+                </div>
+                <div className="pricing">
+                  ${suggestedPlan.annually}/mo Billed Annually
+                </div>
+                <div className="pricing">
+                  ${suggestedPlan.monthly}/mo Billed Monthly
                 </div>
               </>
             ) : (
@@ -1030,6 +1093,7 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
     }
   }
   .top {
+    overflow-x: auto;
     margin: 0 auto;
     margin-bottom: 3rem;
 
@@ -1067,6 +1131,10 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
       font-size: 2.5rem;
       font-weight: bold;
       color: ${props => props.theme.colors.primaryDark};
+    }
+
+    .pricing {
+      margin: 0.25rem;
     }
   }
 `
@@ -1117,11 +1185,11 @@ export default function Features() {
         description="Only pay once per keyword SERP listing. We offer customized scheduling so you can track more phrases without breaking the bank."
       />
       <main>
-        <SectionIntro />
+        <SectionIntro id="intro" />
         <SectionPlans id="plans" />
         <SectionCustom id={plans[0].value} />
-        <SectionFaq id="faq" />
         <SectionCalculator id="calculator" />
+        <SectionFaq id="faq" />
         <SectionContactUs id="trial" />
       </main>
     </div>

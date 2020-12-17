@@ -301,7 +301,7 @@ export default function PaaDashBoard({ testimonials }) {
         <SectionKnowWhatQuestions>
           <div className="left">
             <H2 color="primaryDark">
-              Are you ready to compile a list of all the PAA questions Google
+              Are you ready to compile a list of all the People Also Ask (PAA) questions Google
               serves up for your unique keyword list?
             </H2>
             <P>Get a free or paid version of this deliverable below.</P>

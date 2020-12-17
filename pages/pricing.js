@@ -604,7 +604,7 @@ const SectionPlans = styled(SectionPlansCmp)`
 
     .plan-filters {
       display: flex;
-      width: 50rem;
+      max-width: 50rem;
       margin: 0 auto;
       margin-bottom: 1rem;
     }

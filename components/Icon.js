@@ -10,6 +10,7 @@ const icons = {
   brand: 'fas fa-suitcase',
   cog: 'fas fa-cog',
   help: 'far fa-question-circle',
+  undo: 'fas fa-undo-alt',
   user: 'far fa-user-circle',
   'user-add': 'fas fa-user-plus',
   laptop: 'fas fa-laptop',

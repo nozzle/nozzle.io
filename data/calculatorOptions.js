@@ -273,3 +273,17 @@ export const largerSite = [
     locations: 1,
   },
 ]
+
+export const reset = [
+  {
+    name: '',
+    keywords: {
+      hourly: '',
+      daily: '',
+      weekly: 1000,
+      monthly: '',
+    },
+    devices: 1,
+    locations: 1,
+  },
+]

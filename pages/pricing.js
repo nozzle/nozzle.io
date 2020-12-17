@@ -18,7 +18,7 @@ const belowTablet = `@media(max-width: ${1000}px)`
 const belowMobile = `@media(max-width: ${700}px)`
 
 const plans = [
-  { label: 'Custom', value: 'custom' },
+  { label: 'Enterprise', value: 'enterprise' },
   { label: 'Basic', value: 'basic', monthly: '59', annually: '49' },
   { label: 'Advanced', value: 'advanced', monthly: '199', annually: '99' },
   { label: 'Pro', value: 'pro', monthly: '299', annually: '249' },
@@ -282,11 +282,14 @@ function SectionPlansCmp(props) {
                 </Link>
               </div>
               <div className="plan" id={plans[4].value}>
-                <H4 className="title">Custom Plan</H4>
+                <H4 className="title">Enterprise</H4>
                 <div className="price">
-                  <H5>Call us for a quote</H5>
+                  <H5>Need a custom plan?</H5>
                 </div>
-                <div className="plan-inner"> </div>
+                <div className="plan-inner">
+                  {' '}
+                  <small className="billed-monthly">Call Us For A Quote</small>
+                </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDark" burst>
@@ -594,18 +597,20 @@ const SectionPlans = styled(SectionPlansCmp)`
       font-weight: bold;
     }
 
-    .plan-filters {
-      display: flex 
-    }
-    
-    .next-button {
+     .next-button {
       color: gray;
       
     }
 
+    .plan-filters {
+      display: flex;
+      width: 50rem;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+
     .plan-filter {
       flex: 1;
-      
       button{
           border: solid 2px ${props => props.theme.colors.primary};
           margin-right:.25rem;
@@ -713,19 +718,16 @@ const SectionFaq = styled(SectionFaqCmp)`
 `
 
 function SectionCalculatorCmp(props) {
-  const [rows, setRows] = React.useState([
-    {
-      name: '',
-      keywords: {
-        hourly: '',
-        daily: '',
-        weekly: 1000,
-        monthly: '',
-      },
-      devices: 1,
-      locations: 1,
-    },
-  ])
+  const [rows, setRows] = React.useState(presets.reset)
+  const [dirty, setDirty] = React.useState(false)
+
+  React.useEffect(() => {
+    if (rows == presets.reset) {
+      setDirty(false)
+    } else {
+      setDirty(true)
+    }
+  }, [setDirty, rows])
 
   const handleChange = index => e => {
     const { dataset, name, value } = e.target
@@ -820,6 +822,14 @@ function SectionCalculatorCmp(props) {
         </P>
         <div className="inner">
           <div className="presets">
+            {dirty ? (
+              <Button color="gray" onClick={() => setRows(presets.reset)}>
+                <Icon i="undo" /> Reset
+              </Button>
+            ) : (
+              ''
+            )}
+
             <Button onClick={() => setRows(presets.smallSMBAgency)}>
               Small SMB Agency
             </Button>
@@ -943,9 +953,7 @@ function SectionCalculatorCmp(props) {
                 </div>
                 <div className="suggested">Suggested Plan:</div>
                 <div className="suggested-plan">
-                  <AnchorLink href={'#intro'}>
-                    <a>{suggestedPlan.label}</a>
-                  </AnchorLink>
+                  <AnchorLink href={'#intro'}>{suggestedPlan.label}</AnchorLink>
                 </div>
                 {suggestedPlan == plans[0] ? (
                   <>
@@ -986,6 +994,7 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
   .presets {
     margin: 0 auto;
     margin-bottom: 2rem;
+    text-align: center;
     button {
       margin: 1rem;
     }
@@ -1037,7 +1046,6 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
     }
   }
   .top {
-    overflow-x: auto;
     margin: 0 auto;
     margin-bottom: 3rem;
 
@@ -1046,6 +1054,101 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
       font-size: 1em;
       width: 100%;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    }
+    ${belowMobile} {
+      table,
+      thead,
+      tbody,
+      tfoot,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+      th,
+      td {
+        border-right: none;
+        :last-child {
+          width: auto;
+        }
+      }
+
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      tbody {
+        tr {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          border-radius: 0.5rem;
+          margin-bottom: 1rem;
+        }
+
+        td:nth-of-type(2):before {
+          content: 'Team/Project';
+        }
+        td:nth-of-type(3):before {
+          content: 'Hourly Keywords';
+        }
+        td:nth-of-type(4):before {
+          content: 'Daily Keywords';
+        }
+        td:nth-of-type(5):before {
+          content: 'Weekly Keywords';
+        }
+        td:nth-of-type(6):before {
+          content: 'Monthly Keywords';
+        }
+        td:nth-of-type(7):before {
+          content: 'Devices';
+        }
+        td:nth-of-type(8):before {
+          content: 'Locations';
+        }
+      }
+      tfoot {
+        text-align: center;
+        tr:nth-of-type(1) {
+          td:nth-of-type(3) {
+            display: none;
+          }
+          td:nth-of-type(4) {
+            display: none;
+          }
+          td:nth-of-type(5) {
+            display: none;
+          }
+          td:nth-of-type(6) {
+            display: none;
+          }
+          td:nth-of-type(7) {
+            display: none;
+          }
+        }
+        tr:nth-of-type(2) {
+          td:nth-of-type(2):before {
+            content: 'Hourly Keywords: ';
+          }
+          td:nth-of-type(3):before {
+            content: 'Daily Keywords: ';
+          }
+          td:nth-of-type(4):before {
+            content: 'Weekly Keywords: ';
+          }
+          td:nth-of-type(5):before {
+            content: 'Monthly Keywords: ';
+          }
+          td:nth-of-type(6):before {
+            content: 'Devices: ';
+          }
+          td:nth-of-type(7):before {
+            content: 'Locations: ';
+          }
+        }
+      }
     }
   }
   .bottom {

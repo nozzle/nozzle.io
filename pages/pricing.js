@@ -18,28 +18,101 @@ const belowTablet = `@media(max-width: ${1000}px)`
 const belowMobile = `@media(max-width: ${700}px)`
 
 const plans = [
-  { label: 'Enterprise', value: 'enterprise' },
-  { label: 'Basic', value: 'basic', monthly: '59', annually: '49' },
-  { label: 'Advanced', value: 'advanced', monthly: '199', annually: '99' },
-  { label: 'Pro', value: 'pro', monthly: '299', annually: '249' },
-  { label: 'Pro Plus', value: 'pro-plus', monthly: '599', annually: '499' },
+  {
+    label: 'Enterprise',
+    value: 'enterprise',
+    monthly: 11999,
+    annually: 9999,
+    monthlyOverage: 3.43,
+    annualOverage: 2.86,
+    pulls: 3500000,
+    totalPrice: 0,
+    totalMonthlyOverage: 0,
+    totalAnnualOverage: 0,
+  },
+  {
+    label: 'Basic',
+    value: 'basic',
+    monthly: 49,
+    annually: 59,
+    monthlyOverage: 5.88,
+    annualOverage: 4.9,
+    pulls: 10000,
+    totalPrice: 0,
+    totalMonthlyOverage: 0,
+    totalAnnualOverage: 0,
+  },
+  {
+    label: 'Advanced',
+    value: 'advanced',
+    monthly: 119,
+    annually: 99,
+    pulls: 21000,
+    monthlyOverage: 5.66,
+    annualOverage: 4.71,
+    totalPrice: 0,
+    totalMonthlyOverage: 0,
+    totalAnnualOverage: 0,
+  },
+  {
+    label: 'Pro',
+    value: 'pro',
+    monthly: 299,
+    annually: 249,
+    pulls: 60000,
+    monthlyOverage: 4.98,
+    annualOverage: 4.15,
+    totalPrice: 0,
+    totalMonthlyOverage: 0,
+    totalAnnualOverage: 0,
+  },
+  {
+    label: 'Pro Plus',
+    value: 'pro-plus',
+    monthly: 599,
+    annually: 499,
+    pulls: 130000,
+    monthlyOverage: 4.61,
+    annualOverage: 3.84,
+    totalPrice: 0,
+    totalMonthlyOverage: 0,
+    totalAnnualOverage: 0,
+  },
   {
     label: 'Business Basic',
     value: 'business-basic',
-    monthly: '1,199',
-    annually: '999',
+    monthly: 1199,
+    annually: 999,
+    pulls: 275000,
+    monthlyOverage: 4.36,
+    annualOverage: 3.63,
+    totalPrice: 0,
+    totalMonthlyOverage: 0,
+    totalAnnualOverage: 0,
   },
   {
     label: 'Business Advanced',
     value: 'business-advanced',
-    monthly: '2,999',
-    annually: '2,499',
+    monthly: 2999,
+    annually: 2499,
+    pulls: 725000,
+    monthlyOverage: 4.14,
+    annualOverage: 3.45,
+    totalPrice: 0,
+    totalMonthlyOverage: 0,
+    totalAnnualOverage: 0,
   },
   {
     label: 'Business Pro',
     value: 'business-pro',
-    monthly: '5,999',
-    annually: '4,999',
+    monthly: 5999,
+    annually: 4999,
+    pulls: 1500000,
+    monthlyOverage: 4.0,
+    annualOverage: 3.33,
+    totalPrice: 0,
+    totalMonthlyOverage: 0,
+    totalAnnualOverage: 0,
   },
 ]
 
@@ -183,15 +256,16 @@ function SectionPlansCmp(props) {
                     </>
                   )}
                   <small className="billed-monthly">
-                    $3.63 Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $7.27 Per Thousand Priority Pulls
+                    275,000 Pulls Included
                   </small>
                 </div>
                 <div className="plan-inner">
+                  <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    275,000 Pulls Included
+                    ${monthly ? 4.36 : 3.63} Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $7.27 Per Thousand Priority Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -221,16 +295,18 @@ function SectionPlansCmp(props) {
                       <small className="billed-yearly">billed yearly</small>
                     </>
                   )}
+
                   <small className="billed-monthly">
-                    $3.57 Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $7.14 Per Thousand Priority Pulls
+                    725,000 Pulls Included
                   </small>
                 </div>
                 <div className="plan-inner">
+                  <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    725,000 Pulls Included
+                    ${monthly ? 4.14 : 3.45} Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $7.14 Per Thousand Priority Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -261,16 +337,16 @@ function SectionPlansCmp(props) {
                     </>
                   )}
                   <small className="billed-monthly">
-                    $3.33 Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $6.67 Per Thousand Priority Pulls
+                    1,500,000 Pulls Included
                   </small>
                 </div>
                 <div className="plan-inner">
-                  {' '}
+                  <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    1,500,000 Pulls Included
+                    ${monthly ? '4.00' : 3.33} Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $6.67 Per Thousand Priority Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -288,12 +364,14 @@ function SectionPlansCmp(props) {
                 </div>
                 <div className="plan-inner">
                   {' '}
-                  <small className="billed-monthly">Call Us For A Quote</small>
+                  <small className="billed-monthly">
+                    Contact Us For A Quote
+                  </small>
                 </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDark" burst>
-                      Start Trial
+                      Request a Quote
                     </Button>
                   </a>
                 </Link>
@@ -330,16 +408,16 @@ function SectionPlansCmp(props) {
                     </>
                   )}
                   <small className="billed-monthly">
-                    $4.90 Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $9.80 Per Thousand Priority Pulls
+                    10,000 Pulls Included
                   </small>
                 </div>
                 <div className="plan-inner">
-                  {' '}
+                  <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    10,000 Pulls Included
+                    ${monthly ? 5.88 : '4.90'} Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $9.80 Per Thousand Priority Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -370,16 +448,16 @@ function SectionPlansCmp(props) {
                     </>
                   )}
                   <small className="billed-monthly">
-                    $4.50 Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $9.00 Per Thousand Priority Pulls
+                    21,000 Pulls Included
                   </small>
                 </div>
                 <div className="plan-inner">
-                  {' '}
+                  <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    21,000 Pulls Included
+                    ${monthly ? 5.66 : 4.71} Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $9.00 Per Thousand Priority Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -408,18 +486,18 @@ function SectionPlansCmp(props) {
                       </H5>
                       <small className="billed-yearly">billed yearly</small>
                     </>
-                  )}
+                  )}{' '}
                   <small className="billed-monthly">
-                    $4.15 Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $8.30 Per Thousand Priority Pulls
+                    60,000 Pulls Included
                   </small>
                 </div>
                 <div className="plan-inner">
-                  {' '}
+                  <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    60,000 Pulls Included
+                    ${monthly ? 4.98 : 4.15} Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $8.30 Per Thousand Priority Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -450,16 +528,16 @@ function SectionPlansCmp(props) {
                     </>
                   )}
                   <small className="billed-monthly">
-                    $3.84 Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $7.68 Per Thousand Priority Pulls
+                    130,000 Pulls Included
                   </small>
                 </div>
                 <div className="plan-inner">
-                  {' '}
+                  <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    130,000 Pulls Included
+                    ${monthly ? 4.61 : 3.84} Per Thousand Pulls
+                  </small>
+                  <small className="billed-monthly">
+                    $7.68 Per Thousand Priority Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -792,25 +870,20 @@ function SectionCalculatorCmp(props) {
     totalPulls += keywords * parseInt(row.devices) * parseInt(row.locations)
   })
 
-  let suggestedPlan
+  plans.forEach((plan, i) => {
+    plan.totalPrice = plan.monthly
+    plan.totalMonthlyOverage = 0
+    plan.totalAnnualOverage = 0
 
-  if (totalPulls > 3500000) {
-    suggestedPlan = plans[0]
-  } else if (totalPulls > 1500000) {
-    suggestedPlan = plans[7]
-  } else if (totalPulls > 725000) {
-    suggestedPlan = plans[6]
-  } else if (totalPulls > 275000) {
-    suggestedPlan = plans[5]
-  } else if (totalPulls > 130000) {
-    suggestedPlan = plans[4]
-  } else if (totalPulls > 60000) {
-    suggestedPlan = plans[3]
-  } else if (totalPulls > 21000) {
-    suggestedPlan = plans[2]
-  } else {
-    suggestedPlan = plans[1]
-  }
+    if (totalPulls > plan.pulls) {
+      plan.totalMonthlyOverage = (totalPulls - plan.pulls) * plan.monthlyOverage
+      plan.totalAnnualOverage = (totalPulls - plan.pulls) * plan.annualOverage
+      plan.totalPrice += plan.totalMonthlyOverage
+    }
+  })
+  let suggestedPlan = plans.reduce((res, obj) => {
+    return obj.totalPrice < res.totalPrice ? obj : res
+  })
 
   return (
     <section {...props}>
@@ -962,10 +1035,20 @@ function SectionCalculatorCmp(props) {
                 ) : (
                   <>
                     <div className="pricing">
-                      ${suggestedPlan.annually}/mo Billed Annually
+                      ${suggestedPlan.annually}/mo Billed Annually{' '}
+                      {suggestedPlan.totalAnnualOverage > 0
+                        ? `+ ${suggestedPlan.totalAnnualOverage.toFixed(
+                            2
+                          )} in Overage Charges`
+                        : ''}
                     </div>
                     <div className="pricing">
                       ${suggestedPlan.monthly}/mo Billed Monthly
+                      {suggestedPlan.totalMonthlyOverage > 0
+                        ? `+ ${suggestedPlan.totalMonthlyOverage.toFixed(
+                            2
+                          )} in Overage Charges`
+                        : ''}
                     </div>
                   </>
                 )}

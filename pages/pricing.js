@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import * as presets from 'data/calculatorOptions'
 //
 import { angle } from 'utils/Styles'
 import { number } from 'utils/Format'
@@ -39,12 +40,6 @@ const plans = [
     value: 'business-pro',
     monthly: '5,999',
     annually: '4,999',
-  },
-  {
-    label: 'Enterprise',
-    value: 'enterprise',
-    monthly: '11,999',
-    annually: '9,999',
   },
 ]
 
@@ -114,14 +109,6 @@ const SectionIntroCmp = props => (
         <P>
           Only pay <strong>once</strong> for keywords. Gain{' '}
           <strong>unlimited</strong> competitors and views
-        </P>
-        <P>
-          {' '}
-          <AnchorLink href="#calculator">
-            <Button size="sm" burst>
-              How many pulls do i need?
-            </Button>
-          </AnchorLink>
         </P>
       </Center>
     </Container>
@@ -295,37 +282,11 @@ function SectionPlansCmp(props) {
                 </Link>
               </div>
               <div className="plan" id={plans[4].value}>
-                <H4 className="title">Enterprise</H4>
+                <H4 className="title">Custom Plan</H4>
                 <div className="price">
-                  {monthly ? (
-                    <>
-                      <H5>
-                        <Span className="price-number">$11,999</Span> / mo{' '}
-                      </H5>
-                      <small className="billed-yearly">billed monthly</small>
-                    </>
-                  ) : (
-                    <>
-                      <H5>
-                        {' '}
-                        <Span className="price-number">$9,999</Span> / mo{' '}
-                      </H5>
-                      <small className="billed-yearly">billed yearly</small>
-                    </>
-                  )}
-                  <small className="billed-monthly">
-                    $2.86 Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $5.71 Per Thousand Priority Pulls
-                  </small>
+                  <H5>Call us for a quote</H5>
                 </div>
-                <div className="plan-inner">
-                  {' '}
-                  <small className="billed-monthly">
-                    3,500,000 Pulls Included
-                  </small>
-                </div>
+                <div className="plan-inner"> </div>
                 <Link href="/trial">
                   <a>
                     <Button color="primaryDark" burst>
@@ -724,56 +685,6 @@ const SectionPlans = styled(SectionPlansCmp)`
 
 `
 
-const SectionCustomPlan = props => (
-  <section {...props}>
-    <Container>
-      <Center>
-        <H5 className="title">Can't find what you want?</H5>
-        <div className="inner">
-          <H3>Custom Plan</H3>
-          <div className="pull">Call us for a quote</div>
-          <div>
-            <Link href="/trial">
-              <a>
-                <Button color="white" burst>
-                  Start Trial
-                </Button>
-              </a>
-            </Link>
-          </div>
-        </div>
-      </Center>
-    </Container>
-  </section>
-)
-
-const SectionCustom = styled(SectionCustomPlan)`
-  margin: 5% auto;
-  background: linear-gradient(
-    to right,
-    ${props => props.theme.colors.primary},
-    ${props => props.theme.colors.primaryDark}
-  );
-  display: block;
-  width: 500px;
-  max-width: 95%;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  border-radius: 5px;
-  margin-top: 60px;
-  h3 {
-    margin: 10px 0;
-  }
-  .price {
-    padding: 5px;
-  }
-  .pull {
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-`
-
 const SectionFaqCmp = props => (
   <section {...props}>
     <Container>
@@ -882,7 +793,7 @@ function SectionCalculatorCmp(props) {
   let suggestedPlan
 
   if (totalPulls > 3500000) {
-    suggestedPlan = plans[8]
+    suggestedPlan = plans[0]
   } else if (totalPulls > 1500000) {
     suggestedPlan = plans[7]
   } else if (totalPulls > 725000) {
@@ -903,7 +814,25 @@ function SectionCalculatorCmp(props) {
     <section {...props}>
       <Container>
         <H3 className="title">How many pulls do I need per month?</H3>
+        <P className="title">
+          Not sure where to start? Try using one of our preset options to find
+          the right plan for you.
+        </P>
         <div className="inner">
+          <div className="presets">
+            <Button onClick={() => setRows(presets.smallSMBAgency)}>
+              Small SMB Agency
+            </Button>
+            <Button onClick={() => setRows(presets.largerAgency)}>
+              Larger Agency
+            </Button>
+            <Button onClick={() => setRows(presets.largeSiteMultipleLocations)}>
+              Large Site Tracking Multiple Locations
+            </Button>
+            <Button onClick={() => setRows(presets.largerSite)}>
+              Larger Site
+            </Button>
+          </div>
           <div className="top">
             <table>
               <thead>
@@ -1018,12 +947,20 @@ function SectionCalculatorCmp(props) {
                     <a>{suggestedPlan.label}</a>
                   </AnchorLink>
                 </div>
-                <div className="pricing">
-                  ${suggestedPlan.annually}/mo Billed Annually
-                </div>
-                <div className="pricing">
-                  ${suggestedPlan.monthly}/mo Billed Monthly
-                </div>
+                {suggestedPlan == plans[0] ? (
+                  <>
+                    <div className="pricing">Call us for a quote</div>
+                  </>
+                ) : (
+                  <>
+                    <div className="pricing">
+                      ${suggestedPlan.annually}/mo Billed Annually
+                    </div>
+                    <div className="pricing">
+                      ${suggestedPlan.monthly}/mo Billed Monthly
+                    </div>
+                  </>
+                )}
               </>
             ) : (
               <span>Enter your requirements to see a suggested plan</span>
@@ -1040,11 +977,18 @@ const SectionCalculator = styled(SectionCalculatorCmp)`
   padding: 5% 1rem 10%;
   .title {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .inner {
     display: flex;
     flex-wrap: wrap;
+  }
+  .presets {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    button {
+      margin: 1rem;
+    }
   }
 
   th,
@@ -1187,7 +1131,6 @@ export default function Features() {
       <main>
         <SectionIntro id="intro" />
         <SectionPlans id="plans" />
-        <SectionCustom id={plans[0].value} />
         <SectionCalculator id="calculator" />
         <SectionFaq id="faq" />
         <SectionContactUs id="trial" />

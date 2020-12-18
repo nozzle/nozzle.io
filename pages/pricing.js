@@ -23,24 +23,20 @@ const plans = [
     value: 'enterprise',
     monthly: 11999,
     annually: 9999,
-    monthlyOverage: 3.43,
-    annualOverage: 2.86,
+    overage: 3.43,
     pulls: 3500000,
     totalPrice: 0,
-    totalMonthlyOverage: 0,
-    totalAnnualOverage: 0,
+    totalOverage: 0,
   },
   {
     label: 'Basic',
     value: 'basic',
-    monthly: 49,
-    annually: 59,
-    monthlyOverage: 5.88,
-    annualOverage: 4.9,
+    monthly: 59,
+    annually: 49,
+    overage: 5.88,
     pulls: 10000,
     totalPrice: 0,
-    totalMonthlyOverage: 0,
-    totalAnnualOverage: 0,
+    totalOverage: 0,
   },
   {
     label: 'Advanced',
@@ -48,11 +44,9 @@ const plans = [
     monthly: 119,
     annually: 99,
     pulls: 21000,
-    monthlyOverage: 5.66,
-    annualOverage: 4.71,
+    overage: 5.66,
     totalPrice: 0,
-    totalMonthlyOverage: 0,
-    totalAnnualOverage: 0,
+    totalOverage: 0,
   },
   {
     label: 'Pro',
@@ -60,11 +54,9 @@ const plans = [
     monthly: 299,
     annually: 249,
     pulls: 60000,
-    monthlyOverage: 4.98,
-    annualOverage: 4.15,
+    overage: 4.98,
     totalPrice: 0,
-    totalMonthlyOverage: 0,
-    totalAnnualOverage: 0,
+    totalOverage: 0,
   },
   {
     label: 'Pro Plus',
@@ -72,11 +64,9 @@ const plans = [
     monthly: 599,
     annually: 499,
     pulls: 130000,
-    monthlyOverage: 4.61,
-    annualOverage: 3.84,
+    overage: 4.61,
     totalPrice: 0,
-    totalMonthlyOverage: 0,
-    totalAnnualOverage: 0,
+    totalOverage: 0,
   },
   {
     label: 'Business Basic',
@@ -84,11 +74,9 @@ const plans = [
     monthly: 1199,
     annually: 999,
     pulls: 275000,
-    monthlyOverage: 4.36,
-    annualOverage: 3.63,
+    overage: 4.36,
     totalPrice: 0,
-    totalMonthlyOverage: 0,
-    totalAnnualOverage: 0,
+    totalOverage: 0,
   },
   {
     label: 'Business Advanced',
@@ -96,11 +84,9 @@ const plans = [
     monthly: 2999,
     annually: 2499,
     pulls: 725000,
-    monthlyOverage: 4.14,
-    annualOverage: 3.45,
+    overage: 4.14,
     totalPrice: 0,
-    totalMonthlyOverage: 0,
-    totalAnnualOverage: 0,
+    totalOverage: 0,
   },
   {
     label: 'Business Pro',
@@ -108,11 +94,9 @@ const plans = [
     monthly: 5999,
     annually: 4999,
     pulls: 1500000,
-    monthlyOverage: 4.0,
-    annualOverage: 3.33,
+    overage: 4.0,
     totalPrice: 0,
-    totalMonthlyOverage: 0,
-    totalAnnualOverage: 0,
+    totalOverage: 0,
   },
 ]
 
@@ -262,10 +246,7 @@ function SectionPlansCmp(props) {
                 <div className="plan-inner">
                   <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    ${monthly ? 4.36 : 3.63} Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $7.27 Per Thousand Priority Pulls
+                    ${plans[5].overage} Per 1,000 Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -303,10 +284,7 @@ function SectionPlansCmp(props) {
                 <div className="plan-inner">
                   <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    ${monthly ? 4.14 : 3.45} Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $7.14 Per Thousand Priority Pulls
+                    ${plans[6].overage} Per 1,000 Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -343,10 +321,7 @@ function SectionPlansCmp(props) {
                 <div className="plan-inner">
                   <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    ${monthly ? '4.00' : 3.33} Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $6.67 Per Thousand Priority Pulls
+                    ${plans[7].overage}.00 Per 1,000 Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -414,10 +389,7 @@ function SectionPlansCmp(props) {
                 <div className="plan-inner">
                   <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    ${monthly ? 5.88 : '4.90'} Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $9.80 Per Thousand Priority Pulls
+                    ${plans[1].overage} Per 1,000 Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -454,10 +426,7 @@ function SectionPlansCmp(props) {
                 <div className="plan-inner">
                   <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    ${monthly ? 5.66 : 4.71} Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $9.00 Per Thousand Priority Pulls
+                    ${plans[2].overage} Per 1,000 Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -494,10 +463,7 @@ function SectionPlansCmp(props) {
                 <div className="plan-inner">
                   <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    ${monthly ? 4.98 : 4.15} Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $8.30 Per Thousand Priority Pulls
+                    ${plans[3].overage} Per 1,000 Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -534,10 +500,7 @@ function SectionPlansCmp(props) {
                 <div className="plan-inner">
                   <small>Overage Pricing:</small>
                   <small className="billed-monthly">
-                    ${monthly ? 4.61 : 3.84} Per Thousand Pulls
-                  </small>
-                  <small className="billed-monthly">
-                    $7.68 Per Thousand Priority Pulls
+                    ${plans[4].overage} Per 1,000 Pulls
                   </small>
                 </div>
                 <Link href="/trial">
@@ -872,13 +835,11 @@ function SectionCalculatorCmp(props) {
 
   plans.forEach((plan, i) => {
     plan.totalPrice = plan.monthly
-    plan.totalMonthlyOverage = 0
-    plan.totalAnnualOverage = 0
+    plan.totalOverage = 0
 
     if (totalPulls > plan.pulls) {
-      plan.totalMonthlyOverage = (totalPulls - plan.pulls) * plan.monthlyOverage
-      plan.totalAnnualOverage = (totalPulls - plan.pulls) * plan.annualOverage
-      plan.totalPrice += plan.totalMonthlyOverage
+      plan.totalOverage = ((totalPulls - plan.pulls) / 1000) * plan.overage
+      plan.totalPrice += plan.totalOverage
     }
   })
   let suggestedPlan = plans.reduce((res, obj) => {
@@ -913,7 +874,7 @@ function SectionCalculatorCmp(props) {
               Large Site Tracking Multiple Locations
             </Button>
             <Button onClick={() => setRows(presets.largerSite)}>
-              Larger Site
+              Enterprise
             </Button>
           </div>
           <div className="top">
@@ -1036,16 +997,16 @@ function SectionCalculatorCmp(props) {
                   <>
                     <div className="pricing">
                       ${suggestedPlan.annually}/mo Billed Annually{' '}
-                      {suggestedPlan.totalAnnualOverage > 0
-                        ? `+ ${suggestedPlan.totalAnnualOverage.toFixed(
+                      {suggestedPlan.totalOverage > 0
+                        ? `+ $${suggestedPlan.totalOverage.toFixed(
                             2
                           )} in Overage Charges`
                         : ''}
                     </div>
                     <div className="pricing">
-                      ${suggestedPlan.monthly}/mo Billed Monthly
-                      {suggestedPlan.totalMonthlyOverage > 0
-                        ? `+ ${suggestedPlan.totalMonthlyOverage.toFixed(
+                      ${suggestedPlan.monthly}/mo Billed Monthly{' '}
+                      {suggestedPlan.totalOverage > 0
+                        ? `+ $${suggestedPlan.totalOverage.toFixed(
                             2
                           )} in Overage Charges`
                         : ''}

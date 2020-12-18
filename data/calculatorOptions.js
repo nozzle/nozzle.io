@@ -279,11 +279,11 @@ export const reset = [
     name: '',
     keywords: {
       hourly: '',
-      daily: '',
-      weekly: 1000,
+      daily: 100,
+      weekly: 500,
       monthly: '',
     },
-    devices: 1,
+    devices: 2,
     locations: 1,
   },
 ]

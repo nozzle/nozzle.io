@@ -301,8 +301,8 @@ export default function PaaDashBoard({ testimonials }) {
         <SectionKnowWhatQuestions>
           <div className="left">
             <H2 color="primaryDark">
-              Are you ready to compile a list of all the People Also Ask (PAA) questions Google
-              serves up for your unique keyword list?
+              Are you ready to compile a list of all the People Also Ask (PAA)
+              questions Google serves up for your unique keyword list?
             </H2>
             <P>Get a free or paid version of this deliverable below.</P>
             <P>What you'll get:</P>
@@ -380,8 +380,9 @@ export default function PaaDashBoard({ testimonials }) {
                 <div className="plan-inner">
                   <div className="row ">
                     <P>
-                      Give us 500 keywords and we'll send you your deliverable
-                      highlighting the top 10 questions for your keyword list
+                      Give us up to 500 keywords and we'll send you your
+                      deliverable highlighting the top 10 questions for your
+                      keyword list
                     </P>
                   </div>
                 </div>
@@ -395,15 +396,15 @@ export default function PaaDashBoard({ testimonials }) {
                 <H4 className="title">Fire Hose</H4>
                 <div className="price">
                   <H5>
-                    <Span className="price-number">$200</Span>
+                    <Span className="price-number">$79</Span>
                   </H5>
                 </div>
                 <div className="plan-inner">
                   <div className="row">
                     <P>
-                      Give us 500 keywords and we'll send you your deliverable
-                      with ALL the questions that your list generated in the
-                      SERPs (typically several hundred)
+                      Give us up to 500 keywords and we'll send you your
+                      deliverable with ALL the questions that your list
+                      generated in the SERPs (typically several hundred)
                     </P>
                   </div>
                 </div>

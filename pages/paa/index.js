@@ -120,9 +120,10 @@ const SectionKnowWhatQuestions = styled(Section)`
     img {
       opacity: 1;
       max-width: 940px;
-      width: 110%;
+      width: 100%;
       border-radius: 5px;
       box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
     }
   }
 
@@ -340,6 +341,7 @@ export default function PaaDashBoard({ testimonials }) {
             <br />
           </div>
           <div className="right">
+            <Img src="img/paaBox.jpg" />
             <div>
               <div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />
             </div>

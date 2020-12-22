@@ -238,7 +238,8 @@ const frequencyOptions = [
 
 function PricingCalculator(props) {
   const plans = props.plans
-  console.log(plans)
+  const monthly = props.monthly
+
   const [rows, setRows] = React.useState(presets.reset)
   const [dirty, setDirty] = React.useState(false)
 
@@ -475,22 +476,25 @@ function PricingCalculator(props) {
                   </>
                 ) : (
                   <>
-                    <div className="pricing">
-                      ${suggestedPlan.annually}/mo Billed Annually{' '}
-                      {suggestedPlan.totalOverage > 0
-                        ? `+ $${suggestedPlan.totalOverage.toFixed(
-                            2
-                          )} in Overage Charges`
-                        : ''}
-                    </div>
-                    <div className="pricing">
-                      ${suggestedPlan.monthly}/mo Billed Monthly{' '}
-                      {suggestedPlan.totalOverage > 0
-                        ? `+ $${suggestedPlan.totalOverage.toFixed(
-                            2
-                          )} in Overage Charges`
-                        : ''}
-                    </div>
+                    {monthly ? (
+                      <div className="pricing">
+                        ${suggestedPlan.monthly}/mo Billed Monthly{' '}
+                        {suggestedPlan.totalOverage > 0
+                          ? `+ $${suggestedPlan.totalOverage.toFixed(
+                              2
+                            )} in Overage Charges`
+                          : ''}
+                      </div>
+                    ) : (
+                      <div className="pricing">
+                        ${suggestedPlan.annually}/mo Billed Annually{' '}
+                        {suggestedPlan.totalOverage > 0
+                          ? `+ $${suggestedPlan.totalOverage.toFixed(
+                              2
+                            )} in Overage Charges`
+                          : ''}
+                      </div>
+                    )}
                   </>
                 )}
               </>
@@ -503,6 +507,6 @@ function PricingCalculator(props) {
     </section>
   )
 }
-export default function Calculator({ plans }) {
-  return <SectionCalculator plans={plans} />
+export default function Calculator({ plans, monthly }) {
+  return <SectionCalculator plans={plans} monthly={monthly} />
 }

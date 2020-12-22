@@ -218,6 +218,8 @@ const SectionContactUs = styled(SectionContactUsCmp)`
 `
 
 export default function Pricing() {
+  const [monthly, setMonthly] = React.useState(false)
+  const [enterprise, setEnterprise] = React.useState(false)
   return (
     <div>
       <Head
@@ -226,8 +228,15 @@ export default function Pricing() {
       />
       <main>
         <SectionIntro id="intro" />
-        <PricingPlans plans={plans} id="plans" />
-        <PricingCalculator plans={plans} id="calculator" />
+        <PricingPlans
+          plans={plans}
+          monthly={monthly}
+          setMonthly={value => setMonthly(value)}
+          enterprise={enterprise}
+          setEnterprise={value => setEnterprise(value)}
+          id="plans"
+        />
+        <PricingCalculator plans={plans} monthly={monthly} id="calculator" />
         <SectionFaq id="faq" />
         <SectionContactUs id="trial" />
       </main>

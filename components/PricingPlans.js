@@ -10,8 +10,10 @@ const belowTablet = `@media(max-width: ${1000}px)`
 
 function SectionPlansCmp(props) {
   const plans = props.plans
-  const [monthly, setMonthly] = React.useState(false)
-  const [enterprise, setEnterprise] = React.useState(false)
+  const monthly = props.monthly
+  const setMonthly = props.setMonthly
+  const enterprise = props.enterprise
+  const setEnterprise = props.setEnterprise
 
   return (
     <section {...props}>
@@ -606,6 +608,20 @@ const SectionPlans = styled(SectionPlansCmp)`
   }
 
 `
-export default function PricingPlans({ plans }) {
-  return <SectionPlans plans={plans} />
+export default function PricingPlans({
+  plans,
+  monthly,
+  setMonthly,
+  enterprise,
+  setEnterprise,
+}) {
+  return (
+    <SectionPlans
+      plans={plans}
+      monthly={monthly}
+      setMonthly={setMonthly}
+      enterprise={enterprise}
+      setEnterprise={setEnterprise}
+    />
+  )
 }

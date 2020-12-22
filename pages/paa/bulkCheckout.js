@@ -6,7 +6,7 @@ import { loadStripe } from '@stripe/stripe-js'
 //
 import { angle } from 'utils/Styles'
 
-import { H2 } from 'components/Html'
+import { H2, P } from 'components/Html'
 
 import HubspotForm from 'components/HubspotForm'
 
@@ -90,6 +90,10 @@ export default function BulkCheckoutForm({ session }) {
   return (
     <SectionContactUs id="contact">
       <H2 full>Let's get you your 10 PAA Expansion Deliverables!</H2>
+      <P>
+        After you fill out the form, we'll be in touch shortly to collect your
+        keywords for your 10 deliverables.
+      </P>
       <Link href="/paa">
         <a className="back">
           <Icon i="arrow-left" /> Back
@@ -97,7 +101,7 @@ export default function BulkCheckoutForm({ session }) {
       </Link>
 
       <HubspotForm
-        id="7fbecb66-9cbd-47f3-b2af-e21297d7e48e"
+        id="969a003b-0ce4-494d-b54e-8cb71d856f8d"
         onFormSubmitted={handleClick}
       />
     </SectionContactUs>

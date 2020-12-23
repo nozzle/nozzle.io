@@ -1,83 +1,83 @@
 export const smallSMBAgency = [
   {
-    name: 'Website A',
+    name: 'Client A',
     keywords: {
       hourly: '0',
-      daily: '100',
-      weekly: '500',
-      monthly: '2000',
+      daily: '450',
+      weekly: '1000',
+      monthly: '5000',
     },
-    devices: 1,
+    devices: 2,
     locations: 1,
   },
   {
-    name: 'Website B',
+    name: 'Client B',
     keywords: {
       hourly: '0',
       daily: '200',
-      weekly: '1000',
+      weekly: '4000',
       monthly: '0',
     },
-    devices: 1,
+    devices: 2,
     locations: 1,
   },
   {
-    name: 'Website B',
+    name: 'Client B - 2nd KW Group',
     keywords: {
       hourly: '0',
       daily: '0',
       weekly: '0',
-      monthly: '1200',
+      monthly: '3000',
     },
-    devices: 2,
+    devices: 1,
     locations: 1,
   },
   {
-    name: 'Website C',
+    name: 'Client C',
     keywords: {
       hourly: '0',
       daily: '40',
-      weekly: '200',
+      weekly: '700',
       monthly: '0',
     },
-    devices: 2,
+    devices: 1,
     locations: 1,
   },
   {
-    name: 'Website C',
+    name: 'Client C - 2nd KW Group',
     keywords: {
       hourly: '0',
       daily: '0',
       weekly: '0',
       monthly: '1000',
     },
-    devices: 1,
+    devices: 2,
     locations: 1,
   },
   {
-    name: 'Website D',
+    name: 'Client D',
     keywords: {
       hourly: '0',
       daily: '75',
       weekly: '0',
-      monthly: '1000',
+      monthly: '500',
     },
     devices: 2,
     locations: 1,
   },
   {
-    name: 'Website D',
+    name: 'Client D - Multi Location',
     keywords: {
       hourly: '0',
       daily: '0',
       weekly: '0',
-      monthly: '100',
+      monthly: '250',
     },
-    devices: 1,
+    devices: 2,
     locations: 25,
   },
   {
-    name: 'Website E',
+    name: 'Client E',
     keywords: {
       hourly: '0',
       daily: '100',
@@ -88,7 +88,7 @@ export const smallSMBAgency = [
     locations: 1,
   },
   {
-    name: 'Website F',
+    name: 'Client F',
     keywords: {
       hourly: '0',
       daily: '25',
@@ -98,22 +98,11 @@ export const smallSMBAgency = [
     devices: 1,
     locations: 1,
   },
-  {
-    name: 'Website G',
-    keywords: {
-      hourly: '0',
-      daily: '50',
-      weekly: '0',
-      monthly: '250',
-    },
-    devices: 1,
-    locations: 1,
-  },
 ]
 
 export const largerAgency = [
   {
-    name: 'Website A',
+    name: 'Client A',
     keywords: {
       hourly: '0',
       daily: '500',
@@ -124,18 +113,7 @@ export const largerAgency = [
     locations: 1,
   },
   {
-    name: 'Website B',
-    keywords: {
-      hourly: '0',
-      daily: '400',
-      weekly: '1000',
-      monthly: '2000',
-    },
-    devices: 2,
-    locations: 1,
-  },
-  {
-    name: 'Website C',
+    name: 'Client B',
     keywords: {
       hourly: '0',
       daily: '350',
@@ -146,10 +124,10 @@ export const largerAgency = [
     locations: 1,
   },
   {
-    name: 'Website D',
+    name: 'Client C',
     keywords: {
       hourly: '0',
-      daily: '40',
+      daily: '100',
       weekly: '0',
       monthly: '0',
     },
@@ -157,7 +135,7 @@ export const largerAgency = [
     locations: 1,
   },
   {
-    name: 'Website D',
+    name: 'Client C - 2nd KW Group',
     keywords: {
       hourly: '0',
       daily: '0',
@@ -168,56 +146,34 @@ export const largerAgency = [
     locations: 1,
   },
   {
-    name: 'Website E',
+    name: 'Client D',
     keywords: {
       hourly: '0',
-      daily: '75',
-      weekly: '500',
-      monthly: '0',
+      daily: '25',
+      weekly: '0',
+      monthly: '100',
     },
     devices: 2,
-    locations: 1,
+    locations: 16,
   },
   {
-    name: 'Website F',
+    name: '20 Clients - 1 Device',
     keywords: {
       hourly: '0',
-      daily: '200',
-      weekly: '1000',
-      monthly: '0',
+      daily: '2000',
+      weekly: '0',
+      monthly: '20000',
     },
     devices: 1,
     locations: 1,
   },
   {
-    name: 'Website G',
+    name: '35 Clients - 2 Devices',
     keywords: {
       hourly: '0',
-      daily: '300',
+      daily: '2500',
       weekly: '0',
-      monthly: '0',
-    },
-    devices: 2,
-    locations: 1,
-  },
-  {
-    name: 'Website H',
-    keywords: {
-      hourly: '0',
-      daily: '50',
-      weekly: '600',
-      monthly: '0',
-    },
-    devices: 1,
-    locations: 1,
-  },
-  {
-    name: '50 sites combined',
-    keywords: {
-      hourly: '0',
-      daily: '5000',
-      weekly: '0',
-      monthly: '50000',
+      monthly: '25000',
     },
     devices: 2,
     locations: 1,
@@ -226,7 +182,7 @@ export const largerAgency = [
 
 export const largeSiteMultipleLocations = [
   {
-    name: 'Country Targeted',
+    name: 'Country Targeted KWs',
     keywords: {
       hourly: '0',
       daily: '5000',
@@ -240,12 +196,12 @@ export const largeSiteMultipleLocations = [
     name: 'All Geo Locations',
     keywords: {
       hourly: '0',
-      daily: '100',
+      daily: '75',
       weekly: '0',
       monthly: '0',
     },
     devices: 2,
-    locations: 500,
+    locations: 350,
   },
 ]
 
@@ -262,10 +218,10 @@ export const largerSite = [
     locations: 1,
   },
   {
-    name: 'Important List',
+    name: 'Most Important KWs',
     keywords: {
       hourly: '0',
-      daily: '5000',
+      daily: '20000',
       weekly: '0',
       monthly: '0',
     },
@@ -279,9 +235,9 @@ export const reset = [
     name: '',
     keywords: {
       hourly: '',
-      daily: 100,
+      daily: 200,
       weekly: 500,
-      monthly: '',
+      monthly: '2500',
     },
     devices: 2,
     locations: 1,

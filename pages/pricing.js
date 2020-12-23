@@ -149,7 +149,7 @@ const SectionIntroCmp = props => (
 )
 
 const SectionIntro = styled(SectionIntroCmp)`
-  padding: 8rem 1.5rem 1rem;
+  padding: 6rem 1.5rem 1rem;
 `
 
 const SectionFaqCmp = props => (

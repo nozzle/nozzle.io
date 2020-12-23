@@ -13,7 +13,7 @@ const belowMobile = `@media(max-width: ${700}px)`
 
 const SectionCalculator = styled(PricingCalculator)`
   ${angle('right')};
-  padding: 5% 1rem 10%;
+  padding: 5% 1rem 5%;
   .title {
     text-align: center;
     margin-bottom: 20px;

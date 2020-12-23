@@ -224,7 +224,7 @@ export default function Pricing() {
     <div>
       <Head
         title="Pricing | Nozzle"
-        description="Only pay once per keyword SERP listing. We offer customized scheduling so you can track more phrases without breaking the bank."
+        description="We offer customized scheduling so you can track more phrases without breaking the bank. Access BigQuery for free. Track unlimited keywords and unlimited competitors."
       />
       <main>
         <SectionIntro id="intro" />

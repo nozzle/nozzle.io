@@ -21,7 +21,6 @@ function SectionPlansCmp(props) {
         <Center>
           <div className="plan-filters">
             <div className="plan-filter">
-              <P>How do you want to pay?</P>
               <Button
                 className={monthly ? 'on' : 'off'}
                 onClick={() => setMonthly(true)}
@@ -36,7 +35,6 @@ function SectionPlansCmp(props) {
               </Button>
             </div>
             <div className="plan-filter">
-              <P>Are you a SMB or Enterprise?</P>
               <Button
                 className={enterprise ? 'off' : 'on'}
                 onClick={() => setEnterprise(false)}

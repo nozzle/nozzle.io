@@ -102,11 +102,15 @@ const faqs = [
   },
   {
     q: `How many pulls do I need?`,
-    a: `The number of pulls you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, locations and engines you want to monitor. The pricing plans above give general estimates for the number of pulls needed for tracking a single engine and location. Use the calculator on this page to get an idea on how many pulls you need.`,
+    a: `The number of pulls you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, and locations you want to monitor. Use the calculator above to figure out how many pulls you will need for your specific situation.`,
   },
   {
     q: `How long are pulls good for?`,
-    a: `Pulls purchased on the Custom plan never expire. Pulls purchased on other plans expire at the end of the month.`,
+    a: `Pulls expire at the end of the month.`,
+  },
+  {
+    q: `What are overage charges and when are they billed?`,
+    a: `Each plan comes with a total number of pulls included each month. Overage charges are accrued when you exceed your plan’s monthly limit. If you exceed your number of pulls in a given month, we charge you for those in arrears.`,
   },
   {
     q: `Do I have to sign a contract?`,
@@ -118,7 +122,7 @@ const faqs = [
   },
   {
     q: `Is there an extra charge for API access?`,
-    a: `No. API access is included. You can also access the data in BigQuery or MySQL.`,
+    a: `No. API access is included. You can also access the data in BigQuery.`,
   },
   {
     q: `Are there any other charges I should be aware of?`,
@@ -139,10 +143,6 @@ const SectionIntroCmp = props => (
     <Container>
       <Center>
         <H1>Pricing</H1>
-        <P>
-          Only pay <strong>once</strong> for keywords. Gain{' '}
-          <strong>unlimited</strong> competitors and views
-        </P>
       </Center>
     </Container>
   </section>

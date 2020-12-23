@@ -352,7 +352,7 @@ function PricingCalculator(props) {
               Larger Agency
             </Button>
             <Button onClick={() => setRows(presets.largeSiteMultipleLocations)}>
-              Large Site Tracking Multiple Locations
+              Multi-Location
             </Button>
             <Button onClick={() => setRows(presets.largerSite)}>
               Enterprise

@@ -468,7 +468,7 @@ export default function Home() {
           <Right>
             <Img
               src={rankDataImages[rankDataImageIndex]}
-              alt="Google Website Keyword Rank Checker that lists rank, ad adjusted rank, and pixel height"
+              alt="Google Website Keyword Rank Tracker that lists rank, ad adjusted rank, and pixel height"
             />
           </Right>
         </SectionRankData>

@@ -42,9 +42,6 @@ const SectionContactUs = styled(Section)`
     }
   }
 
-  ${'' /* background: ${props => props.theme.colors.primaryDarker};
-  color: white; */}
-
   ${angle('right')};
 
   &:after {

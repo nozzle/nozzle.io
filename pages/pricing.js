@@ -156,7 +156,7 @@ const SectionFaqCmp = props => (
   <section {...props}>
     <Container>
       <Center>
-        <H3 className="title">Frequently Answered Questions</H3>
+        <H3 className="title">Frequently Asked Questions</H3>
       </Center>
       <div className="inner">
         {faqs.map(({ q, a }) => (

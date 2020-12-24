@@ -4,25 +4,11 @@ import styled, { css } from 'styled-components'
 import { angle } from 'utils/Styles'
 import Head from 'components/Head'
 
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  P,
-  Ul,
-  Li,
-  Span,
-  Img,
-  Button,
-} from 'components/Html'
+import { H1, H2, H3, P, Ul, Li, Img } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 import HubspotForm from 'components/HubspotForm'
 
 const belowMobile = `@media(max-width: ${700}px)`
-const belowTablet = `@media(max-width: ${1000}px)`
 
 const Section = ({ children, ...rest }) => (
   <section {...rest}>
@@ -89,37 +75,22 @@ const SectionProjects = styled(Section)`
     margin-bottom: 2rem;
   }
 
-  .testimonial {
-    flex: 1 1 30%;
-  }
-
-  .company {
-    font-style: italic;
-    margin-bottom: 1rem;
-  }
-
-  img {
-    width: 150px;
-    max-width: 100%;
-    border-radius: 9999px;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  }
-  ${belowTablet} {
-    .testimonial {
-      flex: 1 1 100%;
-      margin-bottom: 3rem;
+  li {
+    :hover {
+      text-decoration: underline;
     }
   }
 `
 
-const SectionKnowWhatQuestions = styled(Section)`
+const SectionMain = styled(Section)`
   ${section};
   ${layout};
   .right {
     img {
       max-width: 940px;
       width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -137,7 +108,7 @@ const SectionKnowWhatQuestions = styled(Section)`
   }
 `
 
-const SectionAction = styled(Section)`
+const SectionForm = styled(Section)`
   ${section}
 
   .intro {
@@ -149,8 +120,8 @@ export default function Research() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="PAA Expansion Deliverable | Nozzle"
-        description="Find the right questions to answer on your website"
+        title="Research | Nozzle"
+        description="Use Nozzle data to do amazing research."
       />
       <main>
         <SectionTitle>
@@ -164,7 +135,7 @@ export default function Research() {
             </Center>
           </Container>
         </SectionTitle>
-        <SectionKnowWhatQuestions>
+        <SectionMain>
           <div className="left">
             <H3 color="primaryDark">
               We are happy to provide data to SEO publishers writing articles on
@@ -197,9 +168,9 @@ export default function Research() {
             <br />
           </div>
           <div className="right">
-            <Img src="img/logo-blue.png" />
+            <Img src="img/research.png" />
           </div>
-        </SectionKnowWhatQuestions>
+        </SectionMain>
 
         <SectionProjects>
           <H2 className="title">Research projects that used Nozzle data:</H2>
@@ -216,15 +187,9 @@ export default function Research() {
                 Internal Link Optimization with TIPR
               </a>
             </Li>
-            <Ul>
-              <Li>
-                Slide 32 of his slide deck or the 6:08 mark of his Tech SEO
-                Boost presentation
-              </Li>
-            </Ul>
           </Ul>
         </SectionProjects>
-        <SectionAction>
+        <SectionForm>
           <P className="intro">
             To set up your own Nozzle Research Workspace, fill out the form
             below. You’ll be able to add in any keywords that you want to track
@@ -240,7 +205,7 @@ export default function Research() {
               }
             }}
           />
-        </SectionAction>
+        </SectionForm>
       </main>
     </div>
   )

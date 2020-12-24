@@ -320,6 +320,10 @@ const links = [
     name: 'About',
     path: '/about',
   },
+  {
+    name: 'Research',
+    path: '/nozzle-research',
+  },
 ]
 
 export default function Navbar(props) {

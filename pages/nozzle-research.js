@@ -178,13 +178,14 @@ export default function Research() {
           <Ul>
             <Li>
               <a href="https://searchengineland.com/brand-reputation-and-the-impact-of-google-serp-selections-345005">
-                Brand reputation and the impact of Google SERP selections
+                Brand reputation and the impact of Google SERP selections by JR
+                Oakes
               </a>
             </Li>
 
             <Li>
               <a href="https://www.kevin-indig.com/blog/internal-link-optimization-with-tipr/">
-                Internal Link Optimization with TIPR
+                Internal Link Optimization with TIPR by Kevin Indig
               </a>
             </Li>
           </Ul>

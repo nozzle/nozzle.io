@@ -6,13 +6,13 @@ describe('Components are showing up in Post', () => {
   it('RelatedPosts Component is rendering', () => {
     window.cy.get('.RelatedPosts__Post-gudoks-2').should('have.length', 3)
   })
-  it('Tweets are centered and shown as embeds', () => {
-    //Each tweet has class of twitter-tweet which centers it
-    window.cy.get('.twitter-tweet').should('have.length', 39)
+  // it('Tweets are centered and shown as embeds', () => {
+  //   //Each tweet has class of twitter-tweet which centers it
+  //   window.cy.get('.twitter-tweet').should('have.length', 39)
 
-    //Each tweet is shown as a embedded tweet
-    // window.cy.get('.twitter-tweet-rendered').should('have.length', 39)
-  })
+  //   //Each tweet is shown as a embedded tweet
+  //   // window.cy.get('.twitter-tweet-rendered').should('have.length', 39)
+  // })
 })
 
 describe('SiteMap and robots.txt ', () => {

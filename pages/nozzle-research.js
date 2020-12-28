@@ -1,9 +1,9 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
-//
-import { angle } from 'utils/Styles'
-import Head from 'components/Head'
 
+import styled, { css } from 'styled-components'
+import { angle } from 'utils/Styles'
+
+import Head from 'components/Head'
 import { H1, H2, H3, P, Ul, Li, Img } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 import HubspotForm from 'components/HubspotForm'
@@ -54,27 +54,20 @@ const layout = css`
 
 const SectionTitle = styled(Section)`
   ${section};
-
   background: ${props => props.theme.colors.primaryDarker};
   color: white;
-
-  :after {
-    display: none;
-  }
   display: block;
-  text-align: center;
 `
+
 const SectionProjects = styled(Section)`
   ${section};
   ${angle('right')};
-  text-align: center;
   background: ${props => props.theme.colors.primaryDarker};
   color: white;
   .title {
     width: 100%;
     margin-bottom: 2rem;
   }
-
   li {
     :hover {
       text-decoration: underline;
@@ -91,19 +84,6 @@ const SectionMain = styled(Section)`
       width: 100%;
       border-radius: 5px;
       box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  .link {
-    color: ${props => props.theme.colors.primaryLighter};
-    text-decoration: underline;
-  }
-
-  ${belowMobile} {
-    .right {
-      img {
-        width: 100%;
-      }
     }
   }
 `
@@ -164,14 +144,12 @@ export default function Research() {
               </Li>
               <Li>Etc.</Li>
             </Ul>
-
             <br />
           </div>
           <div className="right">
             <Img src="img/research.png" />
           </div>
         </SectionMain>
-
         <SectionProjects>
           <H2 className="title">Research projects that used Nozzle data:</H2>
 

@@ -1,17 +1,38 @@
 import React from 'react'
+import styled from 'styled-components'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import tw from 'tailwind.macro'
+
 import * as presets from 'data/calculatorOptions'
+import { number } from 'utils/Format'
+import { angle } from 'utils/Styles'
+
 import { Container } from 'components/Layout'
 import { Button, H3, P, Input } from 'components/Html'
 import Icon from 'components/Icon'
-import { number } from 'utils/Format'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import tw from 'tailwind.macro'
-import { angle } from 'utils/Styles'
-import styled from 'styled-components'
 
 const belowMobile = `@media(max-width: ${700}px)`
 
-const SectionCalculator = styled(PricingCalculator)`
+const frequencyOptions = [
+  {
+    value: 'hourly',
+    label: 'Hourly',
+  },
+  {
+    value: 'daily',
+    label: 'Daily',
+  },
+  {
+    value: 'weekly',
+    label: 'Weekly',
+  },
+  {
+    value: 'monthly',
+    label: 'Monthly',
+  },
+]
+
+const CalculatorStyles = styled('div')`
   ${angle('right')};
   padding: 5% 1rem 5%;
   .title {
@@ -217,26 +238,7 @@ const SectionCalculator = styled(PricingCalculator)`
   }
 `
 
-const frequencyOptions = [
-  {
-    value: 'hourly',
-    label: 'Hourly',
-  },
-  {
-    value: 'daily',
-    label: 'Daily',
-  },
-  {
-    value: 'weekly',
-    label: 'Weekly',
-  },
-  {
-    value: 'monthly',
-    label: 'Monthly',
-  },
-]
-
-function PricingCalculator(props) {
+export default function PricingCalculator(props) {
   const plans = props.plans
   const monthly = props.monthly
 
@@ -328,7 +330,7 @@ function PricingCalculator(props) {
   })
 
   return (
-    <section {...props}>
+    <CalculatorStyles>
       <Container>
         <H3 className="title">How many pulls do I need per month?</H3>
         <P className="title">
@@ -504,9 +506,6 @@ function PricingCalculator(props) {
           </div>
         </div>
       </Container>
-    </section>
+    </CalculatorStyles>
   )
-}
-export default function Calculator({ plans, monthly }) {
-  return <SectionCalculator plans={plans} monthly={monthly} />
 }

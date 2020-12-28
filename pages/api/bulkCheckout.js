@@ -9,13 +9,13 @@ export default async (req, res) => {
     allow_promotion_codes: true,
     line_items: [
       {
-        price: `${process.env.NEXT_PUBLIC_PAA_PRICE_ID}`,
+        price: `${process.env.NEXT_PUBLIC_BULK_PRICE_ID}`,
         quantity: 1,
       },
     ],
     success_url: `${
       process.env.NODE_ENV === 'development' ? 'http://' : 'https://'
-    }${req.headers.host}/paa/success`,
+    }${req.headers.host}/paa/success?bulk=true`,
     cancel_url: `${
       process.env.NODE_ENV === 'development' ? 'http://' : 'https://'
     }${req.headers.host}/paa`,

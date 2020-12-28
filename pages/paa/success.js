@@ -126,6 +126,7 @@ export default function Success() {
   const router = useRouter()
   const { free } = router.query
   const { contact } = router.query
+  const { bulk } = router.query
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
@@ -135,16 +136,32 @@ export default function Success() {
       <main>
         <SectionThanks>
           <H1 full>
-            {free || contact
+            {free || contact || bulk
               ? 'Thanks for your interest in pure awesomeness!'
               : 'Thank you for your purchase!'}
           </H1>
           <P>
-            {contact
-              ? "We'll be in touch shortly to discuss discounted pricing for your specific needs."
-              : free
-              ? 'Your Free PAA Expansion Deliverable will be delivered to you within <u>1-2 business days</u>.'
-              : 'Your PAA Expansion Deliverable will be delivered to you within <u>1-2 business days</u>.'}{' '}
+            {contact ? (
+              <span>
+                We'll be in touch shortly to discuss discounted pricing for your
+                specific needs.
+              </span>
+            ) : bulk ? (
+              <span>
+                We'll reach out shortly to collect the keywords for your 10
+                deliverables.
+              </span>
+            ) : free ? (
+              <span>
+                Your Free PAA Expansion Deliverable will be delivered to you
+                within <u>1-2 business days</u>.
+              </span>
+            ) : (
+              <span>
+                Your PAA Expansion Deliverable will be delivered to you within{' '}
+                <u>1-2 business days</u>.
+              </span>
+            )}{' '}
           </P>{' '}
           <P>
             {' '}

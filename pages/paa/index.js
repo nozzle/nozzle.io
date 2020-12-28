@@ -417,10 +417,10 @@ export default function PaaDashBoard({ testimonials }) {
                 </Link>
               </div>
               <div className="plan">
-                <H4 className="title">Jet Stream (Bulk Orders)</H4>
+                <H4 className="title">Order 10 Deliverables</H4>
                 <div className="price">
                   <H5>
-                    <Span className="price-number">Custom Pricing</Span>
+                    <Span className="price-number">$499</Span>
                   </H5>
                 </div>
                 <div className="plan-inner">
@@ -428,9 +428,9 @@ export default function PaaDashBoard({ testimonials }) {
                     <P>Discounted pricing per deliverable purchased</P>
                   </div>
                 </div>
-                <Link href="paa/contact">
+                <Link href="paa/bulkCheckout">
                   <Button color="primaryDarker" burst>
-                    Contact Us
+                    Buy Now!
                   </Button>
                 </Link>
               </div>

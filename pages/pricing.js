@@ -2,15 +2,14 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 //
 import { angle } from 'utils/Styles'
+import Link from 'next/link'
+import tw from 'tailwind.macro'
 
 import Head from 'components/Head'
 import PricingCalculator from 'components/PricingCalculator'
 import PricingPlans from 'components/PricingPlans'
-
-import Link from 'next/link'
 import { Button, H1, H2, H3, H5, P } from 'components/Html'
 import { Container, Center } from 'components/Layout'
-import tw from 'tailwind.macro'
 
 const plans = [
   {
@@ -134,44 +133,11 @@ const faqs = [
   },
 ]
 
-const section = css`
-  padding: 1rem 1.5rem;
-`
-
-const SectionIntroCmp = props => (
-  <section {...props}>
-    <Container>
-      <Center>
-        <H1>Pricing</H1>
-      </Center>
-    </Container>
-  </section>
-)
-
-const SectionIntro = styled(SectionIntroCmp)`
+const SectionIntro = styled('div')`
   padding: 6rem 1.5rem 1rem;
 `
 
-const SectionFaqCmp = props => (
-  <section {...props}>
-    <Container>
-      <Center>
-        <H3 className="title">Frequently Asked Questions</H3>
-      </Center>
-      <div className="inner">
-        {faqs.map(({ q, a }) => (
-          <div key={q}>
-            <H5>{q}</H5>
-            <P>{a}</P>
-            <br />
-          </div>
-        ))}
-      </div>
-    </Container>
-  </section>
-)
-
-const SectionFaq = styled(SectionFaqCmp)`
+const SectionFaq = styled('div')`
   padding: 5% 20px;
   .inner {
     background: rgba(0, 0, 0, 0.1);
@@ -179,55 +145,31 @@ const SectionFaq = styled(SectionFaqCmp)`
   }
 `
 
-const SectionContactUsCmp = props => (
-  <section {...props}>
-    <Container
-      css={`
-        ${tw`py-40 px-0`}
-      `}
-    >
-      <H2 full>Let's start your free trial!</H2>
-      <Link href="/trial">
-        <a>
-          <Button
-            color="success"
-            css={`
-              ${tw`text-2xl rounded p-6`}
-            `}
-          >
-            Get started!
-          </Button>
-        </a>
-      </Link>
-    </Container>
-  </section>
-)
-
-const SectionContactUs = styled(SectionContactUsCmp)`
-  ${section};
+const SectionContactUs = styled('div')`
   ${angle('right')};
 
   background: ${props => props.theme.colors.primaryDarker};
   color: white;
-
-  :after {
-    display: none;
-  }
   display: block;
-  text-align: center;
 `
 
 export default function Pricing() {
   const [monthly, setMonthly] = React.useState(false)
   const [enterprise, setEnterprise] = React.useState(false)
   return (
-    <div>
+    <>
       <Head
         title="Pricing | Nozzle"
         description="We offer customized scheduling so you can track more phrases without breaking the bank. Access BigQuery for free. Track unlimited keywords and unlimited competitors."
       />
       <main>
-        <SectionIntro id="intro" />
+        <SectionIntro id="intro">
+          <Container>
+            <Center>
+              <H1>Pricing</H1>
+            </Center>
+          </Container>
+        </SectionIntro>
         <PricingPlans
           plans={plans}
           monthly={monthly}
@@ -237,9 +179,44 @@ export default function Pricing() {
           id="plans"
         />
         <PricingCalculator plans={plans} monthly={monthly} id="calculator" />
-        <SectionFaq id="faq" />
-        <SectionContactUs id="trial" />
+        <SectionFaq id="faq">
+          <Container>
+            <Center>
+              <H3 className="title">Frequently Asked Questions</H3>
+            </Center>
+            <div className="inner">
+              {faqs.map(({ q, a }) => (
+                <div key={q}>
+                  <H5>{q}</H5>
+                  <P>{a}</P>
+                  <br />
+                </div>
+              ))}
+            </div>
+          </Container>
+        </SectionFaq>
+        <SectionContactUs id="trial">
+          <Container
+            css={`
+              ${tw`py-40 px-0`}
+            `}
+          >
+            <Center>
+              <H2 full>Let's start your free trial!</H2>
+              <Link href="/trial">
+                <Button
+                  color="success"
+                  css={`
+                    ${tw`text-2xl rounded p-6`}
+                  `}
+                >
+                  Get started!
+                </Button>
+              </Link>
+            </Center>
+          </Container>
+        </SectionContactUs>
       </main>
-    </div>
+    </>
   )
 }

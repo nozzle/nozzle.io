@@ -15,7 +15,7 @@ export default async (req, res) => {
     ],
     success_url: `${
       process.env.NODE_ENV === 'development' ? 'http://' : 'https://'
-    }${req.headers.host}/success`,
+    }${req.headers.host}/paa/success`,
     cancel_url: `${
       process.env.NODE_ENV === 'development' ? 'http://' : 'https://'
     }${req.headers.host}/paa`,

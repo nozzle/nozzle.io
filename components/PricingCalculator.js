@@ -35,21 +35,31 @@ const frequencyOptions = [
 const CalculatorStyles = styled('div')`
   ${angle('right')};
   padding: 5% 1rem 5%;
-  .title {
-    text-align: center;
-    margin-bottom: 20px;
+`
+const Title = styled(H3)`
+  margin-bottom: 20px;
+`
+const SubTitle = styled(P)`
+  margin-bottom: 20px;
+`
+const Inner = styled('div')`
+  display: flex;
+  flex-wrap: wrap;
+`
+const Presets = styled('div')`
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  button {
+    margin: 1rem;
   }
-  .inner {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .presets {
-    margin: 0 auto;
-    margin-bottom: 2rem;
+`
+const Top = styled('div')`
+  margin: 0 auto;
+  margin-bottom: 3rem;
+
+  .center {
     text-align: center;
-    button {
-      margin: 1rem;
-    }
   }
 
   th,
@@ -79,174 +89,164 @@ const CalculatorStyles = styled('div')`
     }
   }
 
-  .center {
-    text-align: center;
+  input[type='number'],
+  input[type='text'] {
+    font-size: 1em;
+    width: 100%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
   }
 
-  .add {
-    text-align: center;
-    color: ${props => props.theme.colors.success};
-    :hover {
-      transform: scale(1.1);
+  ${belowMobile} {
+    table,
+    thead,
+    tbody,
+    tfoot,
+    th,
+    td,
+    tr {
+      display: block;
     }
-  }
+    th,
+    td {
+      border-right: none;
+      :last-child {
+        width: auto;
+      }
+    }
 
-  .delete {
-    color: ${props => props.theme.colors.danger};
-    :hover {
-      transform: scale(1.1);
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
     }
-  }
-  .top {
-    margin: 0 auto;
-    margin-bottom: 3rem;
 
-    input[type='number'],
-    input[type='text'] {
-      font-size: 1em;
-      width: 100%;
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
-    }
-    ${belowMobile} {
-      table,
-      thead,
-      tbody,
-      tfoot,
-      th,
-      td,
+    tbody {
       tr {
-        display: block;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
       }
-      th,
-      td {
-        border-right: none;
-        :last-child {
-          width: auto;
+
+      td:nth-of-type(2):before {
+        content: 'Team/Project';
+      }
+      td:nth-of-type(3):before {
+        content: 'Hourly Keywords';
+      }
+      td:nth-of-type(4):before {
+        content: 'Daily Keywords';
+      }
+      td:nth-of-type(5):before {
+        content: 'Weekly Keywords';
+      }
+      td:nth-of-type(6):before {
+        content: 'Monthly Keywords';
+      }
+      td:nth-of-type(7):before {
+        content: 'Devices';
+      }
+      td:nth-of-type(8):before {
+        content: 'Locations';
+      }
+    }
+
+    tfoot {
+      text-align: center;
+      tr:nth-of-type(1) {
+        td:nth-of-type(3) {
+          display: none;
+        }
+        td:nth-of-type(4) {
+          display: none;
+        }
+        td:nth-of-type(5) {
+          display: none;
+        }
+        td:nth-of-type(6) {
+          display: none;
+        }
+        td:nth-of-type(7) {
+          display: none;
         }
       }
 
-      thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-
-      tbody {
-        tr {
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          border-radius: 0.5rem;
-          margin-bottom: 1rem;
-        }
-
+      tr:nth-of-type(2) {
         td:nth-of-type(2):before {
-          content: 'Team/Project';
+          content: 'Hourly Keywords: ';
         }
         td:nth-of-type(3):before {
-          content: 'Hourly Keywords';
+          content: 'Daily Keywords: ';
         }
         td:nth-of-type(4):before {
-          content: 'Daily Keywords';
+          content: 'Weekly Keywords: ';
         }
         td:nth-of-type(5):before {
-          content: 'Weekly Keywords';
+          content: 'Monthly Keywords: ';
         }
         td:nth-of-type(6):before {
-          content: 'Monthly Keywords';
+          content: 'Devices: ';
         }
         td:nth-of-type(7):before {
-          content: 'Devices';
-        }
-        td:nth-of-type(8):before {
-          content: 'Locations';
+          content: 'Locations: ';
         }
       }
-      tfoot {
-        text-align: center;
-        tr:nth-of-type(1) {
-          td:nth-of-type(3) {
-            display: none;
-          }
-          td:nth-of-type(4) {
-            display: none;
-          }
-          td:nth-of-type(5) {
-            display: none;
-          }
-          td:nth-of-type(6) {
-            display: none;
-          }
-          td:nth-of-type(7) {
-            display: none;
-          }
-        }
-        tr:nth-of-type(2) {
-          td:nth-of-type(2):before {
-            content: 'Hourly Keywords: ';
-          }
-          td:nth-of-type(3):before {
-            content: 'Daily Keywords: ';
-          }
-          td:nth-of-type(4):before {
-            content: 'Weekly Keywords: ';
-          }
-          td:nth-of-type(5):before {
-            content: 'Monthly Keywords: ';
-          }
-          td:nth-of-type(6):before {
-            content: 'Devices: ';
-          }
-          td:nth-of-type(7):before {
-            content: 'Locations: ';
-          }
-        }
-      }
-    }
-  }
-  .bottom {
-    margin: 0 auto;
-    flex: 1;
-    padding: 0 20px;
-    display: flex;
-    min-height: 20rem;
-    max-width: 60rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #e7e7e7;
-    border-radius: 5px;
-    padding: 20px;
-    .amount {
-      font-size: 3.8em;
-      font-weight: 900;
-    }
-    .suggested {
-      padding: 20px 20px 5px;
-      font-size: 20px;
-    }
-    .suggested-plan {
-      text-align: center;
-      padding: 10px;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: ${props => props.theme.colors.primaryDark};
-    }
-
-    .pricing {
-      margin: 0.25rem;
     }
   }
 `
+const Bottom = styled('div')`
+  margin: 0 auto;
+  flex: 1;
+  padding: 0 20px;
+  display: flex;
+  min-height: 20rem;
+  max-width: 60rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #e7e7e7;
+  border-radius: 5px;
+  padding: 20px;
+`
+const TotalPulls = styled('div')`
+  font-size: 3.8em;
+  font-weight: 900;
+`
+const Suggested = styled('div')`
+  padding: 20px 20px 5px;
+  font-size: 20px;
+`
+const SuggestedPlan = styled('div')`
+  text-align: center;
+  padding: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: ${props => props.theme.colors.primaryDark};
+`
+const Pricing = styled('div')`
+  margin: 0.25rem;
+`
 
-export default function PricingCalculator(props) {
-  const plans = props.plans
-  const monthly = props.monthly
+const AddIcon = styled(Icon)`
+  text-align: center;
+  color: ${props => props.theme.colors.success};
+  :hover {
+    transform: scale(1.1);
+  }
+`
+const DeleteIcon = styled(Icon)`
+  color: ${props => props.theme.colors.danger};
+  :hover {
+    transform: scale(1.1);
+  }
+`
 
-  const [rows, setRows] = React.useState(presets.reset)
+export default function PricingCalculator({ plans, monthly }) {
+  const [rows, setRows] = React.useState(presets.original)
   const [dirty, setDirty] = React.useState(false)
 
   React.useEffect(() => {
-    if (rows == presets.reset) {
+    if (rows == presets.original) {
       setDirty(false)
     } else {
       setDirty(true)
@@ -332,15 +332,15 @@ export default function PricingCalculator(props) {
   return (
     <CalculatorStyles>
       <Container>
-        <H3 className="title">How many pulls do I need per month?</H3>
-        <P className="title">
+        <Title>How many pulls do I need per month?</Title>
+        <SubTitle>
           Not sure where to start? Try using one of our preset options to find
           the right plan for you.
-        </P>
-        <div className="inner">
-          <div className="presets">
+        </SubTitle>
+        <Inner>
+          <Presets>
             {dirty ? (
-              <Button color="gray" onClick={() => setRows(presets.reset)}>
+              <Button color="gray" onClick={() => setRows(presets.original)}>
                 <Icon i="undo" /> Reset
               </Button>
             ) : (
@@ -359,8 +359,8 @@ export default function PricingCalculator(props) {
             <Button onClick={() => setRows(presets.largerSite)}>
               Enterprise
             </Button>
-          </div>
-          <div className="top">
+          </Presets>
+          <Top>
             <table>
               <thead>
                 <tr>
@@ -379,11 +379,7 @@ export default function PricingCalculator(props) {
                   <tr key={index}>
                     <td>
                       {rows.length > 1 ? (
-                        <Icon
-                          i="x"
-                          onClick={deleteRow(index)}
-                          className="delete"
-                        />
+                        <DeleteIcon i="x" onClick={deleteRow(index)} />
                       ) : (
                         ''
                       )}
@@ -434,7 +430,7 @@ export default function PricingCalculator(props) {
                 <tr>
                   <td></td>
                   <td className="center">
-                    <Icon i="plus" onClick={addRow} className="add" />
+                    <AddIcon i="plus" onClick={addRow} />
                   </td>
                   <td></td>
                   <td></td>
@@ -455,11 +451,11 @@ export default function PricingCalculator(props) {
                 </tr>
               </tfoot>
             </table>
-          </div>
-          <div className="bottom">
+          </Top>
+          <Bottom>
             {suggestedPlan ? (
               <>
-                <div className="amount">{number(totalPulls)}</div>
+                <TotalPulls>{number(totalPulls)}</TotalPulls>
 
                 <div
                   css={`
@@ -468,34 +464,34 @@ export default function PricingCalculator(props) {
                 >
                   pulls
                 </div>
-                <div className="suggested">Suggested Plan:</div>
-                <div className="suggested-plan">
+                <Suggested>Suggested Plan:</Suggested>
+                <SuggestedPlan>
                   <AnchorLink href={'#intro'}>{suggestedPlan.label}</AnchorLink>
-                </div>
+                </SuggestedPlan>
                 {suggestedPlan == plans[0] ? (
                   <>
-                    <div className="pricing">Call us for a quote</div>
+                    <Pricing>Call us for a quote</Pricing>
                   </>
                 ) : (
                   <>
                     {monthly ? (
-                      <div className="pricing">
+                      <Pricing>
                         ${suggestedPlan.monthly}/mo Billed Monthly{' '}
                         {suggestedPlan.totalOverage > 0
                           ? `+ $${suggestedPlan.totalOverage.toFixed(
                               2
                             )} in Overage Charges`
                           : ''}
-                      </div>
+                      </Pricing>
                     ) : (
-                      <div className="pricing">
+                      <Pricing>
                         ${suggestedPlan.annually}/mo Billed Annually{' '}
                         {suggestedPlan.totalOverage > 0
                           ? `+ $${suggestedPlan.totalOverage.toFixed(
                               2
                             )} in Overage Charges`
                           : ''}
-                      </div>
+                      </Pricing>
                     )}
                   </>
                 )}
@@ -503,8 +499,8 @@ export default function PricingCalculator(props) {
             ) : (
               <span>Enter your requirements to see a suggested plan</span>
             )}
-          </div>
-        </div>
+          </Bottom>
+        </Inner>
       </Container>
     </CalculatorStyles>
   )

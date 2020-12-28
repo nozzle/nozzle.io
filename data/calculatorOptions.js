@@ -230,7 +230,7 @@ export const largerSite = [
   },
 ]
 
-export const reset = [
+export const original = [
   {
     name: '',
     keywords: {

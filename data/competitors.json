@@ -28,7 +28,7 @@
     "sectionOrder": 1,
     "name": "Bing",
     "type": "data",
-    "nozzle": true,
+    "nozzle": "",
     "conductor": true,
     "brightEdge": true,
     "stat": true,
@@ -314,42 +314,6 @@
   {
     "section": "Result Level Data",
     "sectionOrder": 6,
-    "name": "Domain / Page Authority",
-    "type": "data",
-    "nozzle": true,
-    "conductor": "",
-    "brightEdge": "",
-    "stat": "",
-    "moz": true
-    
-  },
-  {
-    "section": "Result Level Data",
-    "sectionOrder": 6,
-    "name": "Inbound Links",
-    "type": "data",
-    "nozzle": true,
-    "conductor": "",
-    "brightEdge": "",
-    "stat": "",
-    "moz": true
-    
-  },
-  {
-    "section": "Result Level Data",
-    "sectionOrder": 6,
-    "name": "Social Shares",
-    "type": "data",
-    "nozzle": true,
-    "conductor": "",
-    "brightEdge": "",
-    "stat": "",
-    "moz": ""
-    
-  },
-  {
-    "section": "Result Level Data",
-    "sectionOrder": 6,
     "name": "Pixels from top of page",
     "type": "data",
     "nozzle": true,
@@ -362,19 +326,7 @@
   {
     "section": "Result Level Data",
     "sectionOrder": 6,
-    "name": "Sentiment Analysis",
-    "type": "data",
-    "nozzle": true,
-    "conductor": "",
-    "brightEdge": "",
-    "stat": "",
-    "moz": ""
-    
-  },
-  {
-    "section": "Result Level Data",
-    "sectionOrder": 6,
-    "name": "Page 1 HTML",
+    "name": "Raw HTML",
     "type": "data",
     "nozzle": true,
     "conductor": "",
@@ -382,18 +334,6 @@
     "stat": true,
     "moz": ""
     
-  },
-  {
-    "section": "Result Level Data",
-    "sectionOrder": 6,
-    "name": "Visibility Score",
-    "type": "data",
-    "nozzle": true,
-    "conductor": true,
-    "brightEdge": true,
-    "stat": "",
-    "moz": ""
-   
   },
   {
     "section": "Competitive Analysis",

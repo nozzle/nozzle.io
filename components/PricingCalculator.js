@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 import * as presets from 'data/calculatorOptions'
 import { number } from 'utils/Format'

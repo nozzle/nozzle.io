@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 //
 
 const PostListStyled = styled('div')`

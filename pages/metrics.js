@@ -6,41 +6,41 @@ import { angle } from 'utils/Styles'
 import styled from 'styled-components'
 import Smackdown from 'components/Smackdown'
 import { Container, Center } from 'components/Layout'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 const Top = styled('section')`
   padding: 5% 15%;
   ${angle('left')};
-  ${tw`lg:flex mb-4 items-center overflow-hidden text-white bg-primaryDarker`}
+  ${tw`lg:(flex) mb-4 items-center overflow-hidden text-white bg-primaryDarker`}
 `
 const Wrap = styled('div')`
-  ${tw`flex flex-no-wrap m-2 w-auto`}
+  ${tw`flex flex-nowrap m-2 w-auto`}
 `
 const MetricStyles = styled('div')`
   ${tw`flex flex-wrap flex-auto m-2 justify-center`}
 `
 const Title = styled('div')`
-  ${tw`lg:w-1/3 lg:text-right lg:pr-10 text-center`};
+  ${tw`lg:w-1/3 lg:(text-right pr-10) text-center`};
 `
 const Screenshot = styled('div')`
-  ${tw`lg:w-1/2`}
+  ${tw`lg:(w-1/2)`}
   img {
     ${tw`rounded-md max-w-screen-xl`}
     width: 200%;
   }
 `
 const Box = styled('div')`
-  ${tw`p-5 lg:flex mb-5 pt-16 mt--12 h-auto lg:flex-grow lg:flex-shrink-0 lg:w-600`}
+  ${tw`p-5 mb-5 pt-16 mt--12 h-auto lg:(flex flex-grow flex-shrink-0 w-600)`}
 `
 const Thumbnail = styled('img')`
-  ${tw`h-48 lg:h-40 rounded-lg shadow-md mb-5`}
+  ${tw`h-48 lg:(h-40) rounded-lg shadow-md mb-5`}
 `
 const Text = styled('div')`
-  ${tw` lg:pl-5 flex flex-col leading-normal lg:text-left`}
+  ${tw`flex flex-col leading-normal lg:(text-left pl-5)`}
 `
 
 const Name = styled('a')`
-  ${tw`text-gray-900 font-bold text-3xl mb-2 hover:underline`}
+  ${tw`text-gray-900 font-bold text-3xl mb-2 hover:(underline)`}
 
   .number {
     ${tw`inline-block align-top text-sm font-normal pl-1 invisible`}

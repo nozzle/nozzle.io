@@ -19,7 +19,7 @@ import RelatedPosts from '../../components/RelatedPosts'
 import AuthorsAndContributors from '../../components/AuthorsAndContributors'
 import TweetList from '../../components/TweetList'
 import SocialShare from '../../components/SocialShare'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 const PostH1 = styled(H1)`
   width: 600px;

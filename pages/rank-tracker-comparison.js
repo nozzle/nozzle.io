@@ -11,7 +11,7 @@ import { H1, H2, P, Strong, Table } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 import Competitors from 'data/competitors'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 const sectionedCompetitors = []
 Competitors.forEach((d, i) => {

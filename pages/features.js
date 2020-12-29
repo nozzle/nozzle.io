@@ -8,7 +8,7 @@ import Head from 'components/Head'
 
 import Link from 'next/link'
 import Icon from 'components/Icon'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 import {
   Button,

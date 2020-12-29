@@ -1,9 +1,9 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 //
 import { angle } from 'utils/Styles'
 import Link from 'next/link'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 import Head from 'components/Head'
 import PricingCalculator from 'components/PricingCalculator'

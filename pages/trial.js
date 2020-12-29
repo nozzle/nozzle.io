@@ -1,11 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 //
 import { angle } from 'utils/Styles'
 
-import { H2, H6, Button } from 'components/Html'
-
+import { H2 } from 'components/Html'
 import HubspotForm from 'components/HubspotForm'
 
 const belowMobile = `@media(max-width: ${700}px)`

@@ -59,65 +59,50 @@ const FeaturesNav = props => (
 )
 
 const FeaturesNavDiv = styled(FeaturesNav)`
-  position: sticky;
-  width: 100%;
+  ${tw`sticky w-full left-0 p-0 text-center overflow-hidden`}
   top: 52px;
-  left: 0;
-  padding: 0;
-  transition: all 0.3s ease;
   background: ${props =>
     Color(props.theme.colors.primaryDarkest).setAlpha(0.9).toString()};
-  text-align: center;
   z-index: 999;
-  overflow: hidden;
+
   .inner {
-    position: relative;
+    ${tw`relative overflow-hidden`}
     height: 200%;
-    overflow: hidden;
   }
   ul {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
+    ${tw`m-0 p-0 inline-block`}
   }
   li {
-    display: inline-block;
+    ${tw`inline-block`}
     a {
-      color: #fff;
+      ${tw`block opacity-100 text-white transition-all`}
       padding: 17px 10px;
-      display: block;
-      transition: all 0.2s ease;
-      opacity: 1;
     }
   }
   + * {
-    padding-top: 50px;
+    ${tw`pt-12`}
   }
 
   ${below900} {
-    height: 50px;
+    ${tw`h-12`}
     &:after {
+      ${tw`absolute top-0 left-0 w-full h-full pointer-events-none`}
       content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
       background: linear-gradient(
         to right; transparent; transparent 60%; rgba(0; 0; 0; 0.7)
       );
     }
     .inner {
+      ${tw`overflow-scroll`}
       height: 200%;
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
       &::-webkit-scrollbar {
-        display: none;
+        ${tw`hidden`}
       }
     }
     ul {
-      white-space: nowrap;
+      ${tw`whitespace-nowrap`}
     }
   }
 
@@ -134,10 +119,11 @@ const section = css`
 
 const imageSwapAnimation = keyframes`
   0%, 40% {
-    opacity: 0;
+    ${tw`opacity-0`}
+    
   }
   60%, 100% {
-    opacity: 1;
+    ${tw`opacity-100`}
   }
 `
 
@@ -229,74 +215,52 @@ const SectionBrandsCmp = props => (
 
 const SectionBrands = styled(SectionBrandsCmp)`
   ${section};
-  padding-top: 15rem;
+  ${tw`pt-60`}
 
   .badge {
     > strong,
     > span {
-      display: inline-block;
+      ${tw`inline-block`}
     }
     > span {
-      display: flex;
-      text-align: left;
-      padding-top: 10px;
+      ${tw`flex text-left pt-3`}
     }
 
     > strong {
-      float: left;
-      position: relative;
+      ${tw`float-left relative text-white shadow-xl bg-primaryDark rounded`}
       padding: 10px 13px 67px;
       margin: 0 5px;
-      color: white;
-      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
-      background: ${props => props.theme.colors.primaryDark};
-      border-radius: 5px;
+
       div {
-        position: absolute;
-        height: 10px;
-        left: 10px;
+        ${tw`absolute h-2.5 left-2.5 rounded`}
         z-index: 1;
-        border-radius: 3px;
+
         &.line1 {
-          top: 56px;
-          width: 80%;
-          background: ${props => props.theme.colors.primaryLight};
+          ${tw`top-14 w-4/5 bg-primaryLight`}
         }
         &.line2 {
+          ${tw`w-2/5 bg-success`}
           top: 69px;
-          width: 40%;
-          background: ${props => props.theme.colors.success};
         }
         &.line3 {
-          top: 81px;
-          width: 65%;
-          background: ${props => props.theme.colors.danger};
+          ${tw`w-2/3 bg-danger`}
+          top: 82px;
         }
         &.line4 {
-          top: 94px;
-          width: 20%;
-          background: ${props => props.theme.colors.warning};
+          ${tw`w-1/5 bg-warning`}
+          top: 95px;
         }
       }
     }
   }
   .images {
-    padding-top: 60px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 60px;
+    ${tw`pt-14 flex flex-row justify-between flex-wrap items-center mb-14`}
   }
   .domain-wrap,
   .brand-wrap {
+    ${tw`mx-auto w-full block max-w-xl`}
     z-index: 1;
     flex: 1 1 100%;
-    margin: 0px auto;
-    width: 100%;
-    max-width: 600px;
-    display: block;
   }
   .domain-wrap .domain,
   .brand-wrap .domain,
@@ -304,119 +268,88 @@ const SectionBrands = styled(SectionBrandsCmp)`
   .brand-wrap .brand,
   .domain-wrap .img,
   .brand-wrap .img {
-    position: relative;
+    ${tw`relative`}
   }
   .domain-wrap .img img,
   .brand-wrap .img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    ${tw`absolute top-0 left-0 w-full shadow-xl rounded-lg`}
   }
   .domain-wrap .img img:last-child,
   .brand-wrap .img img:last-child {
     animation: ${imageSwapAnimation} 4s linear infinite alternate;
   }
   .domain-wrap h4 {
-    color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    margin-bottom: 20px;
+    ${tw`text-center mb-4 text-gray-500`}
   }
   .domain:after {
     content: '';
     padding-top: 18.69%;
-    display: block;
+    ${tw`block`}
   }
   .vs {
-    z-index: 0;
+    ${tw`z-0 flex items-center justify-center text-white text-xl font-bold leading-none`}
     flex: 0 0 100%;
     margin: 50px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: bolder;
-    color: #fff;
+
     span {
-      position: relative;
+      ${tw`relative rounded-lg `}
       background: rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
       padding: 12px 10px 10px;
       :after {
+        ${tw`block absolute top-1/2 w-36 h-0.5 left-full`}
         content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        width: 150px;
-        height: 2px;
         background: rgba(0, 0, 0, 0.2);
         transform: translateY(-50%);
-        left: 100%;
       }
       :before {
+        ${tw`block absolute top-1/2 w-36 h-0.5 right-full`}
         content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        width: 150px;
-        height: 2px;
         background: rgba(0, 0, 0, 0.2);
         transform: translateY(-50%);
-        right: 100%;
       }
     }
   }
   .brand-wrap > img {
-    display: block;
-    width: 200px;
+    ${tw`block w-48`}
     margin: 0 auto 20px;
   }
   .brand:after {
+    ${tw`block`}
     content: '';
     padding-top: 76.16%;
-    display: block;
   }
   .one {
-    display: block;
-    margin: 0 auto;
+    ${tw`block mx-auto max-w-full text-center mb-8`}
     width: 700px;
-    max-width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
   }
   .two {
-    display: block;
-    margin: 0 auto;
+    ${tw`block mx-auto max-w-full text-center mb-8`}
     width: 500px;
-    max-width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
     h4 {
-      margin-bottom: 20px;
+      ${tw`mb-5`}
     }
   }
   @media screen and (min-width: 900px) {
     > h2 {
-      margin-bottom: 60px;
+      ${tw`mb-14`}
+
       strong {
-        display: inline-block;
+        ${tw`inline-block`}
         margin: 0 10px;
       }
       span {
-        display: inline-block;
+        ${tw`inline-block`}
       }
     }
     .images {
-      flex-direction: row;
+      ${tw`flex-row`}
       .domain-wrap,
       .brand-wrap {
         flex: 1 1 40%;
       }
       .vs {
+        ${tw`mt-24`}
         flex: 1 1 10%;
-        margin-top: 100px;
       }
     }
   }
@@ -481,45 +414,35 @@ const SectionCompetitionCmp = props => (
 const SectionCompetition = styled(SectionCompetitionCmp)`
   ${section};
   ${angle('right')};
-
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
+  ${tw`bg-primaryDarker text-white`}
   h2 {
-    text-align: center;
+    ${tw`text-center`}
     margin: 0 0 50px;
     img {
-      width: 250px;
-      margin-bottom: 20px;
+      ${tw`w-64 mb-5`}
     }
   }
   strong {
-    color: ${props => props.theme.colors.primaryLighter};
+    ${tw`text-primaryLighter`}
   }
   .one,
   .two {
+    ${tw`flex flex-row flex-wrap items-center justify-center text-center mb-10`}
     flex: 1 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    text-align: center;
   }
   .one > div,
   .two > div {
+    ${tw`p-5`}
     flex: 1 1 100%;
-    padding: 20px;
   }
   .one img,
   .two img {
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    ${tw`shadow-2xl rounded`}
   }
   @media screen and (min-width: 900px) {
     .one,
     .two {
-      flex-direction: row;
+      ${tw`flex-row`}
       flex: 1 0 auto;
     }
     .one > div,
@@ -527,24 +450,24 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
       flex: 0 0 50%;
     }
     .one .right {
-      text-align: left;
+      ${tw`text-left`}
     }
     .one .left {
-      text-align: right;
+      ${tw`text-right`}
     }
     .two {
-      text-align: right;
+      ${tw`text-right`}
       > .right {
-        order: -1;
+        ${tw`order-first`}
       }
     }
     .two .left {
-      text-align: left;
+      ${tw`text-left`}
     }
   }
 `
 
-const SectionScheduling = styled(props => (
+const SectionSchedulingCmp = props => (
   <section {...props}>
     <Container>
       <Center>
@@ -582,28 +505,28 @@ const SectionScheduling = styled(props => (
       </Center>
     </Container>
   </section>
-))`
+)
+const SectionScheduling = styled(SectionSchedulingCmp)`
   ${section};
 
   img {
-    display: block;
+    ${tw`block w-64`}
     margin: 0 auto 20px;
-    width: 250px;
   }
   h2 {
-    text-align: center;
+    ${tw`text-center`}
     margin: 0 0 3rem;
   }
   h6 {
+    ${tw`max-w-full`}
     width: 800px;
-    max-width: 100%;
   }
   .scheduleImg {
     width: 750px;
   }
   p {
+    ${tw`max-w-full`}
     width: 600px;
-    max-width: 100%;
   }
 `
 
@@ -771,86 +694,65 @@ const SectionDataCmp = props => (
 const SectionData = styled(SectionDataCmp)`
   ${section};
   ${angle('right')};
+  ${tw`bg-primaryDarker text-white`}
 
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
   .-header {
     h2,
     img {
-      margin: 0 auto;
-      display: block;
-      text-align: center;
+      ${tw`mx-auto block text-center`}
     }
-    h2 {
-      .-one {
-        font-size: 120px;
-        font-weight: bolder;
-        text-transform: uppercase;
-        line-height: 90px;
-        margin-bottom: 5px;
-      }
-      .-two {
-        margin-bottom: 30px;
-      }
-    }
+
     img {
-      width: 230px;
+      ${tw`w-56`}
     }
   }
   .description {
+    ${tw`max-w-2xl`}
     margin: 0 auto 40px;
-    max-width: 700px;
   }
   .boxes {
-    display: flex;
-    flex-wrap: wrap;
+    ${tw`flex flex-wrap`}
   }
   .box {
+    ${tw`mb-5 bg-white rounded flex flex-col flex-wrap`}
     flex: 1 1 100%;
-    margin-bottom: 20px;
-    background: #fff;
     color: initial;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+
     h4 {
+      ${tw`p-2.5 font-bold text-center text-gray-700 border-b border-solid border-gray-200`}
       margin: 10px 0 0;
-      padding: 10px;
-      font-weight: bold;
-      color: rgba(0, 0, 0, 0.7);
-      text-align: center;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
       i {
-        margin-right: 10px;
+        ${tw`mr-2`}
+
         :before {
+          ${tw`inline-block`}
           transform: scale(1.3);
-          display: inline-block;
         }
       }
     }
     .-metrics {
       i {
-        color: ${props => props.theme.colors.success};
+        ${tw`text-success`}
       }
       li:before {
-        background-color: ${props => props.theme.colors.success};
+        ${tw`bg-success`}
       }
     }
     .-data {
       i {
-        color: #ff4a4a;
+        ${tw`text-danger`}
       }
       li:before {
-        background-color: #ff4a4a;
+        ${tw`bg-danger`}
       }
     }
     .-keywordGroups {
       i {
-        color: ${props => props.theme.colors.primaryLight};
+        ${tw`text-primaryLight`}
       }
       li:before {
-        background-color: ${props => props.theme.colors.primaryLight};
+        ${tw`bg-primaryLight`}
       }
     }
     .-globalLocal {
@@ -871,37 +773,28 @@ const SectionData = styled(SectionDataCmp)`
     }
     .-ads {
       i {
-        color: ${props => props.theme.colors.vendors.bing};
+        ${tw`text-bing`}
       }
       li:before {
-        background-color: ${props => props.theme.colors.vendors.bing};
+        ${tw`bg-bing`}
       }
     }
     .-image {
-      position: relative;
-      width: 100%;
+      ${tw`relative w-full`}
+
       :before {
         content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        ${tw`absolute inset-0`}
         z-index: 1;
         boxshadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3),
           inset 0 -40px 40px -40px rgba(0, 0, 0, 0.3);
       }
       img {
-        display: block;
-        margin: 0 auto;
-        z-index: 0;
+        ${tw`block mx-auto z-0`}
       }
     }
     .content {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
+      ${tw`flex flex-row flex-wrap items-start`}
       justify-content: stretch;
       padding: 20px 10px;
       > * {
@@ -909,25 +802,18 @@ const SectionData = styled(SectionDataCmp)`
       }
     }
     p {
-      margin: 0;
+      ${tw`m-0`}
       padding: 10px 10px 0 0;
     }
     ul {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: ${props => props.theme.colors.text};
+      ${tw`text-lg font-semibold text-text`}
     }
     li {
+      ${tw`relative`}
       padding: 10px 10px 10px 30px;
-      position: relative;
       :before {
         content: '';
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        left: 10px;
-        top: 50%;
-        border-radius: 50px;
+        ${tw`absolute w-3 h-3 left-3 top-1/2 rounded`}
         transform: translateY(-50%);
       }
     }
@@ -990,53 +876,46 @@ const SectionAgenciesCmp = props => (
 const SectionAgencies = styled(SectionAgenciesCmp)`
   ${section};
   img {
-    display: block;
+    ${tw`block w-52`}
     margin: 0 auto 20px;
-    width: 200px;
   }
   h2 {
-    text-align: center;
+    ${tw`text-center`}
     margin: 0 0 70px;
   }
   .wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    ${tw`flex flex-col items-center justify-center`}
   }
   .one {
+    ${tw`text-center`}
     margin: 0 0 70px;
-    text-align: center;
     img {
-      width: 400px;
-      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-      border-radius: 7px;
+      ${tw`w-96 shadow-2xl rounded`}
     }
   }
   .two {
-    font-size: 1.2em;
-    text-align: center;
+    ${tw`text-xl text-center`}
+
     h4 {
       margin: 0 0 20px;
     }
     ul {
-      display: inline-block;
-      text-align: left;
+      ${tw`inline-block text-left`}
     }
   }
   @media screen and (min-width: 900px) {
     .wrap {
-      flex-direction: row;
+      ${tw`flex-row`}
+
       .one,
       .two {
         flex: 1 1 50%;
       }
       .one {
-        margin: 0;
+        ${tw`m-0`}
       }
       .two {
-        padding: 20px;
-        text-align: left;
+        ${tw`text-left p-5`}
       }
     }
   }
@@ -1079,55 +958,47 @@ const SectionReputationCmp = props => (
 const SectionReputation = styled(SectionReputationCmp)`
   ${section};
   ${angle('right')};
+  ${tw`bg-primaryDarker text-white`}
 
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
   img {
-    display: block;
+    ${tw`block w-80`}
     margin: 0 auto 20px;
-    width: 350px;
   }
   h2 {
-    text-align: center;
+    ${tw`text-center`}
     margin: 0 0 70px;
   }
   .wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    ${tw`flex flex-col items-center justify-center`}
   }
   .one {
-    text-align: center;
+    ${tw`text-center`}
     margin: 0 0 70px;
     h4 {
       margin: 0 0 30px;
     }
     ul {
-      display: inline-block;
+      ${tw`inline-block`}
     }
   }
   .two {
-    text-align: center;
+    ${tw`text-center`}
     img {
-      width: 400px;
-      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-      border-radius: 7px;
+      ${tw`w-96 shadow-2xl rounded`}
     }
   }
   @media screen and (min-width: 900px) {
     .wrap {
-      flex-direction: row;
+      ${tw`flex-row`}
       .one,
       .two {
         flex: 1 1 50%;
       }
       .one {
-        padding: 20px;
-        text-align: right;
+        ${tw`p-5 text-right`}
       }
       .two {
-        margin: 0;
+        ${tw`m-0`}
       }
     }
   }
@@ -1217,49 +1088,38 @@ const SectionIntegrations = styled(SectionIntegrationsCmp)`
   ${angle('right')};
 
   img {
-    display: block;
+    ${tw`block w-36`}
     margin: 0 auto 20px;
-    width: 150px;
   }
   h2 {
-    text-align: center;
+    ${tw`text-center`}
     margin: 0 0 30px;
   }
   p {
-    display: block;
+    ${tw`block text-lg max-w-full leading-none text-center`}
     margin: 0 auto 40px;
-    font-size: 1.2em;
     width: 800px;
-    max-width: 100%;
   }
   .-boxes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 1.2em;
+    ${tw`flex flex-row flex-wrap text-xl`}
   }
   .-box {
+    ${tw`bg-white shadow-2xl p-5 text-center`}
     flex: 1 1 100%;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     margin: 0 0 20px;
-    padding: 20px;
-    text-align: center;
+
     h5 {
-      color: ${props => props.theme.colors.primaryDarker};
+      ${tw`text-primaryDarker pb-2.5 border-b-2 border-solid border-gray-200`}
       margin: 0 0 20px;
-      border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-      padding-bottom: 10px;
     }
     ul {
-      display: inline-block;
+      ${tw`inline-block`}
     }
     li {
-      margin-bottom: 10px;
-      font-weight: 600;
+      ${tw`mb-2 font-semibold`}
     }
     a {
-      color: ${props => props.theme.colors.primaryLight};
+      ${tw`text-primaryLight`}
     }
   }
   @media screen and (min-width: 600px) {
@@ -1293,15 +1153,11 @@ const SectionContactUsCmp = props => (
 const SectionContactUs = styled(SectionContactUsCmp)`
   ${section};
   ${angle('right')};
-
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
+  ${tw`bg-primaryDarker text-white block text-center`}
 
   :after {
-    display: none;
+    ${tw`hidden`}
   }
-  display: block;
-  text-align: center;
 `
 
 export default function Features() {

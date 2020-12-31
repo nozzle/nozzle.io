@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import tw from 'twin.macro'
 //
 
 import Head from 'components/Head'
@@ -67,34 +68,20 @@ const delorianBehindAnimation = keyframes`
 `
 
 const AboutUsDiv = styled('div')`
-  padding-top: 0;
+  ${tw`pt-0 bg-repeat-y bg-cover`}
   background-image: url('public/img/about/dot-background.jpg');
-  background-repeat: repeat-y;
-  background-size: 100%;
+
   .intro {
+    ${tw`relative text-center flex flex-col items-center justify-center bg-cover bg-top text-white `}
     z-index: 1;
-    position: relative;
-    text-align: center;
     padding: 150px 40px 250px;
-    display: flex;
-    flex-direction: column;
     min-height: 108vh;
-    align-items: center;
-    justify-content: center;
     background-image: url(${require('public/img/about/aboutus.jpg')});
-    background-size: cover;
-    background-position: top;
-    color: #fff;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
     text-shadow: 0 4px 20px #000;
     .-background {
-      z-index: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      ${tw`z-0 absolute inset-0 `}
       background-color: rgba(0, 0, 0, 0.4);
     }
     .-content {
@@ -104,89 +91,62 @@ const AboutUsDiv = styled('div')`
       margin: 0 0 10px;
     }
     p {
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.4em;
+      ${tw`mx-auto leading-6 max-w-2xl`}
     }
     .next {
-      position: absolute;
-      bottom: 20%;
-      left: 50%;
-      width: 0;
-      height: 0;
+      ${tw`absolute bottom-1/4 left-1/2 w-0 h-0 `}
       animation: arrow-bounce 1s infinite;
       animation-timing-function: ease-out;
       svg {
-        width: 60px;
-        max-width: 60px !important;
+        ${tw`w-16`}
         transform: translate(-50%, -50%);
         filter: drop-shadow(0 2px 5px #000);
       }
     }
   }
   .timeline {
-    z-index: 0;
-    position: relative;
+    ${tw`z-0 relative`}
     .density {
-      padding-top: 200px;
-      padding-bottom: 80px;
-      text-align: center;
-      font-weight: bold;
-      color: ${props => props.theme.colors.primaryDark};
+      ${tw`pt-52 pb-20 text-center font-bold text-primaryDark`}
       animation: ${densityAnimation} 6s infinite;
     }
     .delorianSide {
-      position: relative;
+      ${tw`relative w-full text-center h-0`}
       z-index: 1;
-      width: 100%;
-      text-align: center;
-      height: 0;
       animation: ${delorianAnimation} 6s infinite linear;
       div {
-        height: 0;
+        ${tw`h-0`}
       }
       img {
-        width: 400px;
+        ${tw`w-96`}
         transform: translateY(-50%);
       }
     }
     .destiny {
-      z-index: 0;
-      padding-top: 20px;
-      margin-bottom: 270px;
+      ${tw`z-0 pt-5 mb-64`}
       animation: ${destinyAnimation} 6s infinite;
 
       h2 {
-        text-align: center;
-        font-weight: bold;
-        color: rgba(0, 0, 0, 0.5);
+        ${tw`text-center font-bold text-gray-500`}
         transform: translateY(120px);
       }
     }
     .delorianBack {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 10rem;
+      ${tw`w-full text-center mb-40`}
       animation: ${delorianBehindAnimation} 4s infinite ease-in-out;
     }
     h2.roads {
-      text-align: center;
+      ${tw`text-center font-bold text-primaryDark`}
       margin: 150px 0 20px;
-      font-weight: bold;
-      color: ${props => props.theme.colors.primaryDark};
+
       img {
-        width: 400px;
+        ${tw`w-96`}
       }
     }
     .event {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      max-width: 1200px;
+      ${tw`flex flex-wrap items-center justify-center relative text-xl max-w-6xl`}
       margin: 0 auto 150px;
-      position: relative;
-      font-size: 1.2em;
+
       &:nth-child(odd) .connector {
         transform-origin: left;
         background: rgba(0, 0, 0, 0.4);
@@ -196,53 +156,46 @@ const AboutUsDiv = styled('div')`
         flex: 1 1 50%;
       }
       .left {
-        text-align: right;
-        padding-right: 50px;
+        ${tw`text-right pr-12`}
+
         p {
-          margin-right: 0;
+          ${tw`mr-0`}
         }
       }
       .right {
-        text-align: left;
-        padding-left: 50px;
+        ${tw`text-left pl-12`}
+
         p {
-          margin-left: 0;
+          ${tw`ml-0`}
         }
       }
       h4 {
-        margin: 0;
-        font-weight: 600;
+        ${tw`m-0 font-semibold`}
       }
       p {
-        max-width: 350px;
+        ${tw`max-w-xs`}
       }
       img {
-        width: 400px;
+        ${tw`w-96`}
       }
     }
   }
   .team {
-    padding: 20px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background: ${props => props.theme.colors.primaryDark};
+    ${tw`p-5 py-24 bg-primaryDark`}
+
     h2 {
-      color: #fff;
-      text-align: center;
+      ${tw`text-white text-center`}
       margin: 0 0 30px;
     }
     .inner {
-      display: flex;
-      flex-wrap: wrap;
+      ${tw`flex flex-wrap`}
     }
     .member {
+      ${tw`relative text-center rounded bg-white`}
       flex: 1 1 31%;
       margin: 18% 1% 20px;
-      position: relative;
       padding: 120px 20px 20px;
-      text-align: center;
-      border-radius: 5px;
-      background: #fff;
+
       &.derek .member-image .inner {
         background-image: url(${require('public/img/about/derek.jpg')});
       }
@@ -253,48 +206,36 @@ const AboutUsDiv = styled('div')`
         background-image: url(${require('public/img/about/tanner.jpg')});
       }
       .member-image {
-        position: absolute;
-        left: 50%;
-        top: 70px;
+        ${tw`absolute left-1/2 top-16 h-0`}
         transform: translate(-50%, 0);
         width: 70%;
-        height: 0;
         .inner {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          margin: 0 auto;
-          border-radius: 500px;
-          border: solid 5px #fff;
-          background-position: center;
-          background-size: cover;
-          box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+          ${tw`absolute bottom-0 w-full mx-auto rounded-full border-solid border-4 border-white bg-center bg-cover shadow-2xl`}
           &:before {
+            ${tw`block w-full`}
             content: '';
-            display: block;
-            width: 100%;
             padding-top: 100%;
           }
         }
       }
       h3 {
-        color: ${props => props.theme.colors.primary};
+        ${tw`text-primary`}
       }
       p {
-        line-height: 1.3em;
+        ${tw`leading-5`}
       }
     }
   }
 
   @media screen and (max-width: 700px) {
     .timeline .event .connector {
-      display: none;
+      ${tw`hidden`}
     }
   }
 
   @media screen and (max-width: 700px) {
     .timeline .event:nth-child(odd) .right {
-      order: -1;
+      ${tw`order-first`}
     }
   }
 
@@ -302,35 +243,31 @@ const AboutUsDiv = styled('div')`
     .timeline .event {
       .left,
       .right {
+        ${tw`p-0! text-center! transform-none!`}
         flex: 1 1 100%;
-        padding: 0 !important;
-        transform: none !important;
-        text-align: center !important;
       }
       .left p,
       .right p {
-        margin-left: auto;
-        margin-right: auto;
+        ${tw`mx-auto`}
       }
       .left img,
       .right img {
-        margin-bottom: 20px;
+        ${tw`mb-5`}
       }
     }
   }
 
   @media screen and (max-width: 900px) {
     .team .member {
+      ${tw`transform-none!`}
       flex: 1 1 100%;
       margin: 150px 0 20px;
-      transform: none !important;
     }
   }
 
   @media screen and (max-width: 900px) {
     .team .member .member-image {
-      top: 100px;
-      width: 200px;
+      ${tw`top-24 w-52`}
     }
   }
 

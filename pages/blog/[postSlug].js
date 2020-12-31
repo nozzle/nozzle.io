@@ -22,50 +22,39 @@ import SocialShare from '../../components/SocialShare'
 import tw from 'twin.macro'
 
 const PostH1 = styled(H1)`
+  ${tw`max-w-full`}
   width: 600px;
-  max-width: 100%;
   font-size: ${props => props.theme.sizes.h3}rem;
   line-height: ${props => props.theme.sizes.h3 * 1.2}rem;
 `
 
 const PostContainer = styled('article')`
   .back {
-    opacity: 0.6;
-    display: inline-block;
-    margin-bottom: 2rem;
+    ${tw`opacity-60 inline-block mb-8`}
     transition: all 0.1s ease-out;
 
     :hover {
-      opacity: 1;
+      ${tw`opacity-100`}
     }
   }
 
   .info {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    opacity: 0.7;
+    ${tw`text-lg mb-4 opacity-70 leading-none`}
   }
 
   .categories {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+    ${tw`text-sm mb-4 leading-none`}
 
     .category {
-      display: inline-block;
-      padding: 0.7rem;
-      border-radius: 0.5rem;
-      background: ${props => props.theme.colors.primary};
-      color: white;
+      ${tw`inline-block p-3 rounded-xl bg-primary text-white`}
       margin: 0 0.3rem 0.3rem 0;
     }
   }
 `
 
 const PostStyles = styled('div')`
-  margin: 0 auto;
-  padding: 2rem;
+  ${tw`mx-auto p-8 max-w-full`}
   width: 900px;
-  max-width: 100%;
 
   @media screen and (max-width: 1500px) {
     width: 800px;
@@ -78,8 +67,7 @@ const PostStyles = styled('div')`
   @media screen and (max-width: 600px) {
     padding: 0 1rem 1rem;
     p {
-      font-size: 1rem;
-      line-height: 1.5rem;
+      ${tw`text-base`}
     }
   }
 `

@@ -134,23 +134,20 @@ const faqs = [
 ]
 
 const SectionIntro = styled('div')`
-  padding: 6rem 1.5rem 1rem;
+  ${tw`pt-24 pb-4 px-4`}
 `
 
 const SectionFaq = styled('div')`
   padding: 5% 20px;
   .inner {
+    ${tw`p-10`}
     background: rgba(0, 0, 0, 0.1);
-    padding: 40px;
   }
 `
 
 const SectionContactUs = styled('div')`
   ${angle('right')};
-
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
-  display: block;
+  ${tw`bg-primaryDarker text-white block`}
 `
 
 export default function Pricing() {

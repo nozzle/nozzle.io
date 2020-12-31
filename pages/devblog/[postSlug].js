@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 import { format } from 'date-fns'
 //
 
@@ -14,61 +15,42 @@ import Smackdown from 'components/Smackdown'
 import Comments from 'components/Comments'
 
 import { Container, Header } from 'components/Layout'
-import { H1, Img } from 'components/Html'
-
-const FeaturedImage = styled(Img)`
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  box-shadow: 0 0.5rem 1rem -0.3rem rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-`
+import { H1 } from 'components/Html'
 
 const PostH1 = styled(H1)`
+  ${tw`max-w-full `}
   width: 600px;
-  max-width: 100%;
   font-size: ${props => props.theme.sizes.h3}rem;
   line-height: ${props => props.theme.sizes.h3 * 1.2}rem;
 `
 
 const PostContainer = styled('article')`
   .back {
-    opacity: 0.6;
-    display: inline-block;
-    margin-bottom: 2rem;
+    ${tw`opacity-60 inline-block mb-8`}
     transition: all 0.1s ease-out;
 
     :hover {
-      opacity: 1;
+      ${tw`opacity-100`}
     }
   }
 
   .info {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    opacity: 0.7;
+    ${tw`text-lg leading-none mb-4 opacity-70`}
   }
 
   .categories {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+    ${tw`text-sm mb-4 leading-none`}
 
     .category {
-      display: inline-block;
-      padding: 0.7rem;
-      border-radius: 0.5rem;
-      background: ${props => props.theme.colors.primary};
-      color: white;
+      ${tw`inline-block p-3 rounded-xl bg-primary text-white`}
       margin: 0 0.3rem 0.3rem 0;
     }
   }
 `
 
 const PostStyles = styled('div')`
-  margin: 0 auto;
-  padding: 2rem;
+  ${tw`mx-auto p-8 max-w-full`}
   width: 900px;
-  max-width: 100%;
 
   @media screen and (max-width: 1500px) {
     width: 800px;
@@ -81,8 +63,7 @@ const PostStyles = styled('div')`
   @media screen and (max-width: 600px) {
     padding: 0 1rem 1rem;
     p {
-      font-size: 1rem;
-      line-height: 1.5rem;
+      ${tw`text-base`}
     }
   }
 `

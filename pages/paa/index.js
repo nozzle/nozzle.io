@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import tw from 'twin.macro'
 import { fetchPaaTestimonials } from '../../contentful'
 //
 import { angle } from 'utils/Styles'
@@ -31,35 +32,31 @@ const Section = ({ children, ...rest }) => (
 )
 
 const section = css`
-  z-index: 0;
+  ${tw`z-0`}
   .inner {
+    ${tw`mx-auto flex flex-wrap items-center`}
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
     padding: 5% 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
   }
   img {
-    width: 100%;
+    ${tw`w-full`}
   }
   ${belowMobile} {
     .left,
     .right {
+      ${tw`mx-0`}
       flex: 1 1 100%;
-      margin-left: 0;
-      margin-right: 0;
     }
     .left {
-      margin-bottom: 2rem;
+      ${tw`mb-8`}
     }
   }
 `
 
 const layout = css`
   .left {
+    ${tw`mr-10`}
     flex: 1 1 300px;
-    margin-right: 40px;
   }
   .right {
     flex: 1 1 300px;
@@ -68,25 +65,20 @@ const layout = css`
 
 const SectionTitle = styled(Section)`
   ${section};
-
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
+  ${tw`bg-primaryDarker text-white`}
 
   :after {
-    display: none;
+    ${tw`hidden`}
   }
-  display: block;
-  text-align: center;
+  ${tw`block text-center`}
 `
 const SectionTestimonials = styled(Section)`
   ${section};
   ${angle('right')};
-  text-align: center;
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
+  ${tw`text-center bg-primaryDarker text-white`}
+
   .title {
-    width: 100%;
-    margin-bottom: 4rem;
+    ${tw`w-full mb-16`}
   }
 
   .testimonial {
@@ -94,21 +86,16 @@ const SectionTestimonials = styled(Section)`
   }
 
   .company {
-    font-style: italic;
-    margin-bottom: 1rem;
+    ${tw`italic mb-4`}
   }
 
   img {
-    width: 150px;
-    max-width: 100%;
-    border-radius: 9999px;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    ${tw`max-w-full rounded-full mb-8 shadow-lg w-40`}
   }
   ${belowTablet} {
     .testimonial {
+      ${tw`mb-12`}
       flex: 1 1 100%;
-      margin-bottom: 3rem;
     }
   }
 `
@@ -118,24 +105,18 @@ const SectionKnowWhatQuestions = styled(Section)`
   ${layout};
   .right {
     img {
-      opacity: 1;
-      max-width: 940px;
-      width: 100%;
-      border-radius: 5px;
-      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-      margin-bottom: 1rem;
+      ${tw`opacity-100 w-full rounded shadow-2xl mb-4 max-w-4xl`}
     }
   }
 
   .link {
-    color: ${props => props.theme.colors.primaryLighter};
-    text-decoration: underline;
+    ${tw`text-primaryLighter underline`}
   }
 
   ${belowMobile} {
     .right {
       img {
-        width: 100%;
+        ${tw`w-0`}
       }
     }
   }
@@ -145,95 +126,68 @@ const SectionAction = styled(Section)`
    ${section}
 
   .plans {
-    display: flex;
-    margin-top: 30px;
-    flex-direction: row;
-    flex-wrap: wrap;
+    ${tw`flex flex-row flex-wrap mt-7`}
+   
   }
   .plan {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: white;
-    text-align: center;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    ${tw`flex flex-col text-white text-center shadow-2xl justify-between overflow-hidden self-center`}
     transition: all 0.4s ease-out;
-    align-self: center;
     h4 {
       margin: 2rem 1rem;
     }
     button {
-      text-align: center;
-      font-size: 1.2em;
-      margin: 0;
-      padding: 1rem;
-      width: 100%;
-      border-radius: 0;
+      ${tw`text-center m-0 p-4 w-full text-xl rounded-none leading-none`}
+
       transition: all 0.15s ease-out !important;
       :hover {
-        transform: none;
-        box-shadow: none;
+        ${tw`transform-none shadow-none`}
       }
     }
     :first-child {
+      ${tw`rounded-l bg-primaryDark`}
       flex: 1 1 24%;
       min-height: 400px;
-      border-radius: 3px 0 0 3px;
       z-index: 2;
-      background: ${props => props.theme.colors.primaryDark};
     }
     :nth-child(2) {
+      ${tw`rounded bg-primaryDarker`}
       flex: 1 1 27%;
-      border-radius: 3px;
-      background: ${props => props.theme.colors.primaryDarker};
       min-height: 450px;
       z-index: 3;
     }
     :nth-child(3) {
+      ${tw`rounded-r bg-primaryDark`}
       flex: 1 1 24%;
       min-height: 400px;
-      border-radius: 0 3px 3px 0;
       z-index: 3;
-      background: ${props => props.theme.colors.primaryDark};
    
     .plan-inner {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      font-size: 0.9em;
+      ${tw`p-5 flex justify-between flex-col text-sm`}
       transition: all 0.3s ease-out;
       h5, p: ;
-        margin: 0;
+        ${tw`m-0`}
       }
     }
     .title {
+      ${tw`font-bold`}
       padding: 0 20px;
-      font-weight: bold;
     }
     .row {
       padding: 0px 8px;
-      border-bottom: solid 2px rgba(255, 255, 255, 0.07);
-      :last-child {
-        border-bottom: none;
-      }
     }
     
-    .price {
-      font-size: 12px;
-      
-    }
+
     .price-number {
-      font-size: 30px;
+      ${tw`text-3xl`}
+      
     }
    
   }
   @media screen and (max-width: 900px) {
     .plan {
+      ${tw`rounded`}
       flex: 1 1 48% !important;
       min-height: auto !important;
-      border-radius: 5px;
       margin: 0 1% 10px;
     }
   }
@@ -245,8 +199,7 @@ const SectionAction = styled(Section)`
   }
   @media screen and (min-width: 900px) {
     .plan:hover button {
-      padding-top: 1.25rem;
-      padding-bottom: 1.25rem;
+      ${tw`py-5`}
     }
   }
 
@@ -374,11 +327,9 @@ export default function PaaDashBoard({ testimonials }) {
             <div className="plans">
               <div className="plan">
                 <H4 className="title">Garden Hose</H4>
-                <div className="price">
-                  <H5>
-                    <Span className="price-number">Free</Span>
-                  </H5>
-                </div>
+                <H5>
+                  <Span className="price-number">Free</Span>
+                </H5>
                 <div className="plan-inner">
                   <div className="row ">
                     <P>
@@ -396,11 +347,9 @@ export default function PaaDashBoard({ testimonials }) {
               </div>
               <div className="plan">
                 <H4 className="title">Fire Hose</H4>
-                <div className="price">
-                  <H5>
-                    <Span className="price-number">$79</Span>
-                  </H5>
-                </div>
+                <H5>
+                  <Span className="price-number">$79</Span>
+                </H5>
                 <div className="plan-inner">
                   <div className="row">
                     <P>
@@ -418,11 +367,9 @@ export default function PaaDashBoard({ testimonials }) {
               </div>
               <div className="plan">
                 <H4 className="title">Order 10 Deliverables</H4>
-                <div className="price">
-                  <H5>
-                    <Span className="price-number">$499</Span>
-                  </H5>
-                </div>
+                <H5>
+                  <Span className="price-number">$499</Span>
+                </H5>
                 <div className="plan-inner">
                   <div className="row">
                     <P>Discounted pricing per deliverable purchased</P>

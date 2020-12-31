@@ -41,9 +41,7 @@ const section = css`
 const SectionWhyAnother = styled('section')`
   ${section};
   ${angle('right')};
-
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
+  ${tw`bg-primaryDarker text-white`}
 `
 
 const TableSection = styled('section')`

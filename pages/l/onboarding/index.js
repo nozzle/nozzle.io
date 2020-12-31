@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 //
 
 import HubspotForm from 'components/HubspotForm'
@@ -8,24 +9,23 @@ import { Container } from 'components/Layout'
 import { H1, H4, Ol, Li, Strong } from 'components/Html'
 
 const Styles = styled(Container)`
-  text-align: center;
+  ${tw`text-center`}
 
   h1 {
     padding: 3rem 1rem;
   }
 
   h4 {
-    margin-bottom: 2rem;
+    ${tw`mb-8`}
   }
 
   ol {
-    margin-bottom: 3rem;
+    ${tw`mb-12`}
   }
 
   .form {
-    display: inline-block;
+    ${tw`inline-block mx-auto`}
     width: 500px;
-    margin: 0 auto;
     padding: 0 1rem;
   }
 `

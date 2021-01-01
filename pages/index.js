@@ -490,7 +490,7 @@ export default function Home() {
               </Strong>
             </H5>
             <P>
-              Nozzle lets you track <Strong>unlimited competitors</Strong>, no
+              Nozzle is a full <a href="https://nozzle.io/features>serp monitoring tool</a> that lets you track <Strong>unlimited competitors</Strong>, no
               questions asked. Heck, we'll let you track as much as you can
               handle. The SERP is yours to command!
             </P>

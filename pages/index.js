@@ -43,6 +43,9 @@ const section = css`
   img {
     ${tw`w-full`}
   }
+  a {
+    ${tw`underline text-primaryLighter font-bold`}
+  }
   ${belowMobile} {
     .left,
     .right {
@@ -444,9 +447,11 @@ export default function Home() {
               </Strong>
             </H5>
             <P>
-              Nozzle is a full <a href="https://nozzle.io/features">serp monitoring tool</a> that lets you track <Strong>unlimited competitors</Strong>, no
-              questions asked. Heck, we'll let you track as much as you can
-              handle. The SERP is yours to command!
+              Nozzle is a full{' '}
+              <Link href="/features">serp monitoring tool</Link> that lets you
+              track <Strong>unlimited competitors</Strong>, no questions asked.
+              Heck, we'll let you track as much as you can handle. The SERP is
+              yours to command!
             </P>
             <P>
               If you find a new competitor you haven't been tracking, add them

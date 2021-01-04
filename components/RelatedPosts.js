@@ -1,34 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 //
 
 const PostListStyled = styled('div')`
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0.5rem;
-  width: auto;
+  ${tw`flex flex-nowrap m-2 w-auto`}
 `
 
 const PostContainer = styled('div')`
-  flex: 1;
-  margin: 0.5rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  ${tw`flex flex-wrap flex-1 m-2 justify-center `}
 `
 
 const Post = styled('div')`
+  ${tw`flex flex-col h-auto m-2 border-b border-solid border-gray-100 bg-white rounded-2xl shadow-xl`}
   flex: 0 0 200px;
-  height: auto;
-  margin: 0.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
 
   @media only screen and (max-width: 1000px) {
     width: 48%;
@@ -39,9 +25,7 @@ const Post = styled('div')`
   }
 
   article {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    ${tw`flex flex-1 flex-col `}
     align-items: space-between;
 
     > * {
@@ -50,14 +34,9 @@ const Post = styled('div')`
   }
 
   .titleImg {
+    ${tw`block bg-top bg-cover shadow-xl opacity-90 rounded-2xl`}
     flex: 0;
-    display: block;
-    background-position: top;
-    background-size: cover;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    opacity: 0.9;
     transition: all 0.5s ease;
-    border-radius: 1rem;
 
     > div {
       padding-bottom: 50%;
@@ -66,57 +45,40 @@ const Post = styled('div')`
 
   :hover {
     .titleImg {
-      background-position: center;
-      opacity: 1;
+      ${tw`bg-center opacity-100`}
     }
   }
 
   .content {
+    ${tw`p-4 flex flex-col justify-between items-center`}
     flex: 1 0 auto;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .title {
-    font-size: 1rem;
-    line-height: 1.2rem;
-    margin-bottom: 1rem;
-    text-align: center;
+    ${tw`text-base leading-5 mb-4 text-center`}
   }
 
   .authors {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    ${tw`flex flex-wrap items-center`}
   }
   .author {
-    display: flex;
-    align-items: center;
+    ${tw`flex items-center`}
 
     img {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 2rem;
-      margin-right: 0.5rem;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+      ${tw`w-8 h-8 rounded-full mr-2 shadow-2xl`}
     }
   }
 
   .image {
-    text-align: center;
+    ${tw`text-center`}
     img {
-      max-height: 6rem;
-      max-width: 100%;
-      width: auto;
+      ${tw`max-h-24 max-w-full w-auto`}
     }
   }
 
   .linkStyle {
     :hover {
-      text-decoration: underline;
+      ${tw`underline`}
     }
   }
 `

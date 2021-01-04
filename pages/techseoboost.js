@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 //
 import { angle } from 'utils/Styles'
 
-import { H2, H6, Button } from 'components/Html'
+import { H2 } from 'components/Html'
 
 import HubspotForm from 'components/HubspotForm'
-
-const belowMobile = `@media(max-width: ${700}px)`
 
 const Section = ({ children, ...rest }) => (
   <section {...rest}>
@@ -16,43 +15,23 @@ const Section = ({ children, ...rest }) => (
 )
 
 const SectionContactUs = styled(Section)`
-  z-index: 0;
+  ${angle('right')};
+  ${tw`z-0`}
   .inner {
+    ${tw`flex flex-wrap items-center mx-auto min-h-screen`}
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
     padding: 10% 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    min-height: 100vh;
   }
   img {
-    width: 100%;
+    ${tw`w-full`}
   }
-  ${belowMobile} {
-    .left,
-    .right {
-      flex: 1 1 100%;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .left {
-      margin-bottom: 2rem;
-    }
-  }
-
-  ${'' /* background: ${props => props.theme.colors.primaryDarker};
-  color: white; */}
-
-  ${angle('right')};
 
   &:after {
-    display: none;
+    ${tw`hidden`}
   }
 
   .inner {
-    display: block;
-    text-align: center;
+    ${tw`block text-center`}
   }
 `
 
@@ -60,7 +39,7 @@ export default function TechSeoBoost() {
   return (
     <SectionContactUs id="contact">
       <H2 full>Let's start your free trial!</H2>
-      <HubspotForm id='55cbcbd8-a0ab-4ff8-ad20-c33669bdab2c' />
+      <HubspotForm id="55cbcbd8-a0ab-4ff8-ad20-c33669bdab2c" />
     </SectionContactUs>
   )
 }

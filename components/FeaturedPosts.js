@@ -4,30 +4,24 @@ import { format } from 'date-fns'
 import Link from 'next/link'
 import ReadTime from 'utils/ReadTime'
 import Smackdown from './Smackdown'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 const PostListStyled = styled('div')`
-  ${tw`flex flex-no-wrap w-auto`}
+  ${tw`flex flex-nowrap w-auto`}
 `
 
 const PostContainer = styled('div')`
-  ${tw``}
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  ${tw`flex flex-wrap justify-center`}
 
   :after {
+    ${tw`table clear-both`}
     content: '';
-    display: table;
-    clear: both;
   }
 `
 
 const Post = styled('div')`
-  ${tw`bg-white rounded-xlg shadow-2xl m-2`}
-  float: left;
-  width: 31%;
-  height: auto;
+  ${tw`bg-white rounded-xlg shadow-2xl m-2 float-left h-auto`}
+  width: 30%;
 
   @media only screen and (max-width: 900px) {
     ${tw``}

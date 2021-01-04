@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 import Smackdown from 'react-smackdown'
 import javascript from 'react-syntax-highlighter/dist/languages/hljs/javascript'
 import bash from 'react-syntax-highlighter/dist/languages/hljs/bash'
 import atomOneDark from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark'
 //
 
-import Link from 'next/link'
 import { H1, H2, H3, H4, H5, H6 } from './Html'
 
 const syntax = {
@@ -58,10 +58,8 @@ const El = ({ micro, source = '', ...rest }) => (
 )
 
 export default styled(El)`
-  font-size: 1.2em;
-  line-height: 1.5em;
+  ${tw`text-lg font-light `}
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
 
   h1,
   h2,
@@ -69,31 +67,24 @@ export default styled(El)`
   h4,
   h5,
   h6 {
-    font-weight: bolder;
-    margin-top: 2em;
+    ${tw`font-medium  mt-8`}
   }
 
   p {
-    margin-bottom: 1em;
+    ${tw`mb-4`}
   }
 
   a {
-    font-weight: 400;
-    color: ${props => props.theme.colors.primary};
+    ${tw`font-normal text-primary`}
   }
 
   iframe {
-    width: 100%;
-    resize: vertical;
-    border: 0 !important;
+    ${tw`w-full resize-y border-0!`}
   }
 
   img {
-    display: block;
-    max-width: 100%;
+    ${tw`block max-w-full shadow-xl rounded`}
     margin: 2em auto 4em;
-    box-shadow: 0 0.5em 1em -0.3em rgba(0, 0, 0, 0.2);
-    border-radius: 0.25em;
   }
 
   p code {
@@ -110,48 +101,39 @@ export default styled(El)`
   }
 
   ul {
-    padding-left: 2em;
-    list-style-type: disc;
-    margin-bottom: 2em;
+    ${tw`pl-8 list-disc mb-8 `}
   }
 
   ol {
-    padding-left: 2em;
-    list-style-type: decimal;
-    margin-bottom: 2em;
+    ${tw`pl-8 list-decimal mb-8`}
   }
 
   strong {
-    font-weight: bold;
+    ${tw`font-bold`}
   }
 
   blockquote {
+    ${tw`p-4 italic font-normal opacity-80 `}
     font-size: 1.1em;
     line-height: 1.5em;
-    padding: 1em;
     margin: 0 0 1em;
-    font-style: italic;
-    font-weight: 400;
-    opacity: 0.8;
     border-left: solid 0.3em rgba(0, 0, 0, 0.1);
 
     > *:last-child {
-      margin-bottom: 0;
+      ${tw`mb-0`}
     }
   }
 
   pre {
+    ${tw`rounded-sm overflow-hidden`}
     font-family: Monaco, Courier, monospace;
     font-size: 0.8em;
     line-height: 1.1em;
     background: #212529 !important;
     margin: 0 auto 1em;
-    border-radius: 0.2em;
-    overflow: hidden;
   }
 
   .react-syntax-highlighter-line-number {
-    pointer-events: none;
-    user-select: none;
+    ${tw`pointer-events-none select-none`}
   }
 `

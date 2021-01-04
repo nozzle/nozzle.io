@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 
 import Link from 'next/link'
 import { number } from 'utils/Format'
@@ -14,105 +15,72 @@ const StyledPlans = styled('div')`
   padding: 1rem 1.5rem;
 `
 const PlanFilters = styled('div')`
-  display: flex;
-  max-width: 50rem;
-  margin: 0 auto;
-  margin-bottom: 1rem;
+  ${tw`flex mx-auto mb-4 max-w-3xl`}
 `
 const PlanFilter = styled('div')`
-  flex: 1;
-      button{
-          border: solid 2px ${props => props.theme.colors.primary};
-          margin-right:.25rem;
-      }
-      
-        .on{
-          background: ${props => props.theme.colors.primary};
-        }
+  ${tw`flex-1`}
+  button {
+    ${tw`border-2 border-solid border-primary mr-1`}
+  }
+  .on {
+    ${tw`bg-primary`}
+  }
 
-        .off{
-          background: white;
-          color: ${props => props.theme.colors.primary}; 
-        }
-      }
+  .off {
+    ${tw`bg-white text-primary`}
+  }
 `
 
 const PlansContainer = styled('div')`
-  position: relative;
+  ${tw`relative`}
 `
 const Plans = styled('div')`
-  display: flex;
-  margin-top: 30px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-left: 2.05rem;
-  padding-right: 2.05rem;
+  ${tw`flex flex-row flex-wrap px-8 mt-7 `}
 `
 const Plan = styled('div')`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: white;
-  text-align: center;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  ${tw`flex flex-col justify-between text-white text-center shadow-2xl overflow-hidden self-center`}
   transition: all 0.4s ease-out;
-  align-self: center;
 
   button {
-    text-align: center;
-    font-size: 1.2em;
-    margin: 0;
-    padding: 1rem;
-    width: 100%;
-    border-radius: 0;
+    ${tw`text-center text-lg leading-none m-0 p-4 w-full rounded-none`}
     transition: all 0.15s ease-out !important;
     :hover {
-      transform: none;
-      box-shadow: none;
+      ${tw`transform-none shadow-none`}
     }
   }
   :first-child {
+    ${tw`bg-primaryDark rounded-l`}
     flex: 1 1 24%;
     min-height: 430px;
-    border-radius: 3px 0 0 3px;
     z-index: 2;
-    background: ${props => props.theme.colors.primaryDark};
   }
   :nth-child(2) {
+    ${tw`bg-primaryDarker rounded`}
     flex: 1 1 27%;
-    border-radius: 3px;
-    background: ${props => props.theme.colors.primaryDarker};
     min-height: 470px;
     z-index: 3;
   }
   :nth-child(3) {
+    ${tw`bg-primaryDark rounded-r`}
     flex: 1 1 24%;
     min-height: 430px;
-    border-radius: 0 3px 3px 0;
     z-index: 2;
-    background: ${props => props.theme.colors.primaryDark};
   }
   :nth-child(4) {
+    ${tw`bg-primary rounded-r`}
     flex: 1 1 22%;
     min-height: 390px;
-    background: ${props => props.theme.colors.primary};
-    border-radius: 0 3px 3px 0;
     z-index: 1;
   }
   .plan-inner {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    font-size: 0.9em;
+    ${tw`flex p-5 justify-between flex-col text-sm leading-none `}
     transition: all 0.3s ease-out;
   }
 
   @media screen and (max-width: 900px) {
+    ${tw`rounded`}
     flex: 1 1 48% !important;
     min-height: auto !important;
-    border-radius: 5px;
     margin: 0 1% 10px;
   }
 
@@ -123,44 +91,32 @@ const Plan = styled('div')`
 
   @media screen and (min-width: 900px) {
     :hover button {
-      padding-top: 1.25rem;
-      padding-bottom: 1.25rem;
+      ${tw`py-5`}
     }
   }
 `
 const Title = styled(H4)`
-  font-weight: bold;
+  ${tw`font-bold`}
   padding: 0 20px;
   margin: 2rem 1rem;
 `
 const Price = styled('div')`
-  font-size: 12px;
-  padding: 10px;
+  ${tw`text-xs leading-none p-2.5`}
 `
 const PriceNumber = styled(Span)`
-  font-size: 30px;
+  ${tw`text-3xl leading-none`}
 `
 const Small = styled('small')`
-  opacity: 0.6;
-  margin-top: 10px;
-  display: block;
-  font-size: 14px;
+  ${tw`opacity-60 mt-2.5 block text-sm leading-none`}
 `
 const SmallBold = styled('small')`
-  opacity: 0.7;
-  font-weight: bold;
-  margin-top: 10px;
-  display: block;
-  font-size: 14px;
+  ${tw`opacity-70 font-bold mt-2.5 block text-sm leading-none`}
 `
 
 const BackButton = styled('div')`
+  ${tw`cursor-pointer absolute text-gray-500 text-2xl leading-none`}
   z-index: 9;
-  cursor: pointer;
-  position: absolute;
   top: 45%;
-  color: gray;
-  font-size: 25px;
   transition: 0.2s ease;
 
   :hover {
@@ -168,17 +124,13 @@ const BackButton = styled('div')`
   }
 
   ${belowTablet} {
-    display: none;
+    ${tw`hidden`}
   }
 `
 const NextButton = styled('div')`
-  right: 0;
+  ${tw`right-0 cursor-pointer absolute text-gray-500 text-2xl leading-none`}
   z-index: 9;
-  cursor: pointer;
-  position: absolute;
   top: 45%;
-  color: gray;
-  font-size: 25px;
   transition: 0.2s ease;
 
   :hover {
@@ -186,7 +138,7 @@ const NextButton = styled('div')`
   }
 
   ${belowTablet} {
-    display: none;
+    ${tw`hidden`}
   }
 `
 

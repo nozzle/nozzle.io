@@ -11,7 +11,7 @@ import { H1, H2, P, Strong, Table } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 import Competitors from 'data/competitors'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 const sectionedCompetitors = []
 Competitors.forEach((d, i) => {
@@ -41,9 +41,7 @@ const section = css`
 const SectionWhyAnother = styled('section')`
   ${section};
   ${angle('right')};
-
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
+  ${tw`bg-primaryDarker text-white`}
 `
 
 const TableSection = styled('section')`

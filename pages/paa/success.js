@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import tw from 'twin.macro'
 import { useRouter } from 'next/router'
 
 import Head from 'components/Head'
@@ -14,36 +15,32 @@ const Section = ({ children, ...rest }) => (
 )
 
 const section = css`
-  z-index: 0;
+  ${tw`z-0`}
   .inner {
+    ${tw`mx-auto flex flex-wrap items-center`}
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
     padding: 5% 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
   }
   img {
-    width: 100%;
+    ${tw`w-full`}
   }
 
   ${belowMobile} {
     .left,
     .right {
+      ${tw`mx-0`}
       flex: 1 1 100%;
-      margin-left: 0;
-      margin-right: 0;
     }
     .left {
-      margin-bottom: 2rem;
+      ${tw`mb-8`}
     }
   }
 `
 
 const layout = css`
   .left {
+    ${tw`mr-10`}
     flex: 1 1 300px;
-    margin-right: 40px;
   }
   .right {
     flex: 1 1 300px;
@@ -51,34 +48,28 @@ const layout = css`
 `
 
 const SectionThanks = styled(Section)`
-  z-index: 0;
+  ${tw`z-0`}
   .inner {
+    ${tw`mx-auto flex flex-wrap items-center`}
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
     padding-top: 8%;
     padding-left: 10%;
     padding-right: 10%;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
   }
 
   ${belowMobile} {
     .left,
     .right {
+      ${tw`mx-0`}
       flex: 1 1 100%;
-      margin-left: 0;
-      margin-right: 0;
     }
     .left {
-      margin-bottom: 2rem;
+      ${tw`mb-8`}
     }
   }
 
   .inner {
-    display: block;
-    text-align: center;
+    ${tw`block text-center`}
   }
 `
 
@@ -87,37 +78,33 @@ const Example = styled(Section)`
   ${layout};
 
   h3 {
-    width: 100%;
+    ${tw`w-full`}
   }
 
   .right {
     img {
-      opacity: 1;
-      max-width: 940px;
+      ${tw`opacity-100 rounded shadow-2xl max-w-4xl`}
       width: 110%;
-      border-radius: 5px;
-      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     }
   }
   .left {
-    padding-right: 1rem;
+    ${tw`pr-4`}
 
     h4 {
-      margin-bottom: 2rem;
+      ${tw`mb-8`}
     }
   }
 
   ${belowMobile} {
-    text-align: center;
+    ${tw`text-center`}
 
     .right {
       img {
-        width: 100%;
+        ${tw`w-full`}
       }
     }
     .left {
-      margin: 0 auto;
-      margin-bottom: 2rem;
+      ${tw`mx-auto mb-8`}
     }
   }
 `

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
+import tw from 'twin.macro'
 //
 import { angle } from 'utils/Styles'
 
@@ -19,43 +20,32 @@ const Section = ({ children, ...rest }) => (
 )
 
 const SectionContactUs = styled(Section)`
-  z-index: 0;
+  ${angle('right')};
+  ${tw`z-0`}
+
   .inner {
+    ${tw`mx-auto flex flex-wrap items-center min-h-screen`}
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
     padding: 10% 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    min-height: 100vh;
   }
 
   ${belowMobile} {
     .left,
     .right {
+      ${tw`mx-0`}
       flex: 1 1 100%;
-      margin-left: 0;
-      margin-right: 0;
     }
     .left {
-      margin-bottom: 2rem;
+      ${tw`mb-8`}
     }
   }
 
-  ${
-    '' /* background: ${props => props.theme.colors.primaryDarker};
-  color: white; */
-  }
-
-  ${angle('right')};
-
   &:after {
-    display: none;
+    ${tw`hidden`}
   }
 
   .inner {
-    display: block;
-    text-align: center;
+    ${tw`block text-center`}
   }
 `
 

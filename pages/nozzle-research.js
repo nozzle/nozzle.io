@@ -2,6 +2,7 @@ import React from 'react'
 
 import styled, { css } from 'styled-components'
 import { angle } from 'utils/Styles'
+import tw from 'twin.macro'
 
 import Head from 'components/Head'
 import { H1, H2, H3, P, Ul, Li, Img } from 'components/Html'
@@ -17,27 +18,23 @@ const Section = ({ children, ...rest }) => (
 )
 
 const section = css`
-  z-index: 0;
+  ${tw`z-0`}
   .inner {
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
     padding: 5% 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    ${tw`mx-auto flex flex-wrap items-center`}
   }
   img {
-    width: 100%;
+    ${tw`w-full`}
   }
   ${belowMobile} {
     .left,
     .right {
       flex: 1 1 100%;
-      margin-left: 0;
-      margin-right: 0;
+      ${tw`ml-0 mr-0`}
     }
     .left {
-      margin-bottom: 2rem;
+      ${tw`mb-8`}
     }
   }
 `
@@ -45,7 +42,7 @@ const section = css`
 const layout = css`
   .left {
     flex: 1 1 300px;
-    margin-right: 40px;
+    ${tw`mr-10`}
   }
   .right {
     flex: 1 1 300px;
@@ -54,24 +51,18 @@ const layout = css`
 
 const SectionTitle = styled(Section)`
   ${section};
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
-  display: block;
+  ${tw`bg-primaryDarker text-white block`}
 `
 
 const SectionProjects = styled(Section)`
   ${section};
   ${angle('right')};
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
+  ${tw`bg-primaryDarker text-white`}
   .title {
-    width: 100%;
-    margin-bottom: 2rem;
+    ${tw`w-full text-center mb-8`}
   }
   li {
-    :hover {
-      text-decoration: underline;
-    }
+    ${tw`hover:(underline)`}
   }
 `
 
@@ -80,10 +71,7 @@ const SectionMain = styled(Section)`
   ${layout};
   .right {
     img {
-      max-width: 940px;
-      width: 100%;
-      border-radius: 5px;
-      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+      ${tw`w-full max-w-4xl rounded shadow-2xl`}
     }
   }
 `
@@ -92,7 +80,7 @@ const SectionForm = styled(Section)`
   ${section}
 
   .intro {
-    margin-top: 1rem;
+    ${tw`mt-4`}
   }
 `
 

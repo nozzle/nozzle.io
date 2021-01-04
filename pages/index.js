@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import tw from 'twin.macro'
 //
 import Color from 'utils/Color'
 import { angle } from 'utils/Styles'
@@ -33,27 +34,23 @@ const Section = ({ children, ...rest }) => (
 )
 
 const section = css`
-  z-index: 0;
+  ${tw`z-0`}
   .inner {
+    ${tw`mx-auto flex flex-wrap items-center`}
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
     padding: 10% 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
   }
   img {
-    width: 100%;
+    ${tw`w-full`}
   }
   ${belowMobile} {
     .left,
     .right {
       flex: 1 1 100%;
-      margin-left: 0;
-      margin-right: 0;
+      ${tw`mx-0`}
     }
     .left {
-      margin-bottom: 2rem;
+      ${tw`mb-8`}
     }
   }
 `
@@ -61,8 +58,7 @@ const section = css`
 const layoutLeft = css`
   .left {
     flex: 2 1 200px;
-    text-align: right;
-    margin-right: 40px;
+    ${tw`text-right mr-10`}
   }
   .right {
     flex: 3 1 300px;
@@ -74,7 +70,7 @@ const layoutRight = css`
     flex: 3 1 300px;
   }
   .right {
-    margin-left: 40px;
+    ${tw`ml-10`}
     flex: 2 1 200px;
   }
 `
@@ -82,7 +78,7 @@ const layoutRight = css`
 const layoutLeftHalf = css`
   .left {
     flex: 1 1 300px;
-    margin-right: 40px;
+    ${tw`mr-10`}
   }
   .right {
     flex: 1 1 300px;
@@ -90,34 +86,30 @@ const layoutLeftHalf = css`
 `
 
 const layoutDark = css`
-  background: ${props => props.theme.colors.primaryDarker};
-  color: white;
+  ${tw`bg-primaryDarker text-white`}
 `
 
 const Centered = styled('div')`
-  text-align: center;
-  width: 100%;
+  ${tw`text-center w-full`}
 `
 
 const SectionKnowEverything = styled(Section)`
   ${section};
   ${layoutLeft};
+  ${tw`relative text-white`}
 
-  position: relative;
   background: radial-gradient(
     circle at center,
     ${props => props.theme.colors.primaryDarker} 20%,
     ${props => Color(props.theme.colors.primaryDarker).darken(10).toString()}
   );
-  color: white;
 
   h4 {
-    color: ${props => props.theme.colors.primaryLighter};
+    ${tw`text-primaryLighter`}
   }
 
   img {
-    border-radius: 5px;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    ${tw`rounded shadow-2xl`}
   }
 
   .right {
@@ -132,31 +124,22 @@ const SectionTrackAllTheThings = styled(Section)`
   ${section};
   ${layoutDark};
   ${layoutRight};
-
-  position: relative;
+  ${tw`relative`}
 
   .right {
-    z-index: 0;
+    ${tw`z-0`}
   }
 
   img {
-    opacity: 1;
-    border-radius: 5px;
-    box-shadow: 0 0 30px 0 rgba(0; 0; 0; 0.2);
+    ${tw`opacity-100 rounded shadow-2xl`}
   }
 
   iframe {
-    width: 100%;
-    height: 400px;
+    ${tw`w-full h-96`}
   }
 
   .allthethings {
-    position: absolute;
-    right: 0;
-    bottom: -10px;
-    width: 400px;
-    opacity: 0.2;
-    z-index: 0;
+    ${tw`absolute right-0 -bottom-1 opacity-20 z-0 w-96`}
   }
 `
 const SectionRankData = styled(Section)`
@@ -164,17 +147,14 @@ const SectionRankData = styled(Section)`
   ${layoutLeftHalf};
   .right {
     img {
-      opacity: 1;
-      max-width: 940px;
+      ${tw`opacity-100 rounded shadow-2xl max-w-4xl`}
       width: 140%;
-      border-radius: 5px;
-      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     }
   }
   .left {
     p {
       strong {
-        color: ${props => props.theme.colors.primaryLighter};
+        ${tw`text-primaryLighter`}
       }
     }
   }
@@ -188,17 +168,14 @@ const SectionCompetitors = styled(Section)`
   .left {
     direction: rtl;
     img {
-      opacity: 1;
-      max-width: 940px;
+      ${tw`opacity-100 max-w-4xl rounded shadow-2xl`}
       width: 160%;
-      border-radius: 5px;
-      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     }
   }
   .right {
     p {
       strong {
-        color: ${props => props.theme.colors.primaryLighter};
+        ${tw`text-primaryLighter`}
       }
     }
   }
@@ -218,46 +195,38 @@ const SectionDataJunkie = styled(Section)`
     margin: 0 3%;
   }
   img {
-    width: 250px;
-    max-width: 100%;
+    ${tw`w-64 max-w-full`}
   }
   ${belowTablet} {
     .csv,
     .sql,
     .main {
       flex: 1 1 100%;
-      margin-bottom: 3rem;
+      ${tw`mb-12`}
     }
   }
 `
 const SectionCustomers = styled(Section)`
-  z-index: 0;
+  ${tw`z-0`}
   .inner {
+    ${tw`mx-auto flex flex-wrap items-center justify-center`}
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
     padding: 0% 5%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
 
   img {
-    width: 150px;
-    margin: 1.25rem;
+    ${tw`w-40 m-5 opacity-60`}
     -webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%);
-    opacity: 0.6;
   }
 
   .bigLogo {
-    width: 100px;
+    ${tw`w-24`}
     max-width: 90px;
   }
 
   ${belowTablet} {
     img {
-      margin: 0.2rem;
-      width: 100px;
+      ${tw`m-1 w-24`}
       flex: 1;
     }
   }
@@ -267,35 +236,20 @@ const SectionSchedules = styled(Section)`
   ${layoutDark};
   ${angle('right')};
 
-  align-items: center;
-  text-align: center;
+  ${tw`items-center text-center`}
 
   p {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    ${tw`max-w-4xl mx-auto`}
   }
 
   img {
+    ${tw`max-w-full rounded shadow-2xl`}
     width: 900px;
-    max-width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   }
 `
 const SectionCantAfford = styled(Section)`
   ${section};
   ${layoutRight};
-
-  .right {
-    img {
-      opacity: 1;
-      max-width: 940px;
-      width: 140%;
-      border-radius: 5px;
-      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-    }
-  }
 `
 
 export default function Home() {

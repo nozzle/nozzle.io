@@ -1,5 +1,6 @@
 import React from 'react'
 import App from 'next/app'
+import tw from 'twin.macro'
 import {
   createGlobalStyle,
   ThemeProvider as StyledThemeProvider,
@@ -30,31 +31,28 @@ if (typeof document !== 'undefined') {
 const GlobalStyles = createGlobalStyle`
   ${reset};
   html, body, body, [data-reactroot] {
-    min-height: 100%;
-    width: 100%;
+    ${tw`min-h-full w-full`}
+   
   }
   html, body {
-    background: ${props => props.theme.colors.primaryDarker};
-    font-size: 16px;
+    ${tw`bg-primaryDarker text-base leading-none font-normal`}
     font-family: "Overpass", "Helvetica", "Georgia", sans-serif;
-    font-weight: ${props => props.theme.weights.regular};
     color: #3d556b;
   }
   * {
-    box-sizing: border-box;
+    ${tw`box-border`}
   }
   a {
+     ${tw`no-underline`}
     color: inherit;
-    text-decoration: none;
   }
   [data-name="mojs-shape"] {
-    position: fixed !important;
+     ${tw`fixed! pointer-events-none`}
     z-index: 99999999;
-    pointer-events: none;
   }
 
   .twitter-tweet {
-    margin: 0 auto;
+     ${tw`mx-auto`}
   }
 `
 

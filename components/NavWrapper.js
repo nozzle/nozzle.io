@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 //
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -10,12 +11,8 @@ const PageStyles = styled('div')`
 `
 
 const ContentStyled = styled('div')`
-  color: ${props => props.theme.colors.text};
+  ${tw`flex flex-col items-stretch min-h-screen text-text`}
   background: #f9f9f9;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
 `
 
 export default function NavWrapper({ children }) {

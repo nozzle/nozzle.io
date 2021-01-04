@@ -4,10 +4,10 @@ import { format } from 'date-fns'
 import Link from 'next/link'
 import ReadTime from 'utils/ReadTime'
 import Smackdown from './Smackdown'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 const PostListStyled = styled('div')`
-  ${tw`flex flex-no-wrap m-2 w-auto`}
+  ${tw`flex flex-nowrap m-2 w-auto`}
 `
 
 const PostContainer = styled('div')`

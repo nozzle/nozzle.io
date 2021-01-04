@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 
 const Styles = styled.div`
-  width: 100%;
+  ${tw`w-full`}
   margin: 2rem 0;
 
   iframe {
-    width: 100% !important;
+    ${tw`w-full!`}
   }
 `
 

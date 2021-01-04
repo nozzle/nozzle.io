@@ -1,22 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 //
 import Head from 'components/Head'
 import { Container } from 'components/Layout'
 import { H1, P, Iframe } from 'components/Html'
 
 const Styles = styled(Container)`
-  text-align: center;
+  ${tw`text-center`}
 
   h1 {
     padding: 3rem 1rem;
   }
 
   p {
+    ${tw`max-w-full mb-16`}
     width: 600px;
-    max-width: 100%;
     padding: 0 1rem;
-    margin-bottom: 4rem;
   }
 
   iframe {

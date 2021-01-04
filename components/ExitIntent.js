@@ -1,110 +1,68 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import tw from 'twin.macro'
 import axios from 'axios'
 import { Form, Text } from 'react-form'
 //
 import encodeFormData from 'utils/encodeFormData'
 
 const ExitIntentStyles = styled('div')`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${tw`fixed inset-0 flex items-center justify-center`}
   z-index: 99999999;
   background: rgba(0, 0, 0, 0.6);
   transition: all 0.4s ease;
 
   .-outer {
-    position: relative;
+    ${tw`relative rounded bg-white shadow-lg `}
     width: 500px;
     max-width: 95%;
     max-height: 95%;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.15s ease-out;
   }
 
   .-inner {
-    overflow: scroll;
-    padding: 20px;
+    ${tw`overflow-scroll p-5`}
   }
 
   .-title {
-    font-size: 1.7em;
-    text-align: center;
-    display: block;
-    margin-bottom: 25px;
-    font-weight: 700;
-    color: ${props => props.theme.colors.primary};
+    ${tw`text-2xl leading-none text-center block mb-6 font-bold text-primary`}
   }
 
   .-message {
-    font-size: 1.2em;
-    text-align: center;
-    display: block;
-    margin-bottom: 25px;
+    ${tw`text-xl leading-none text-center block mb-6`}
   }
 
   input {
-    font-size: 1.3rem;
-    padding: 1rem;
+    ${tw`text-xl leading-none p-4 block w-full`}
     margin: 5px 0 20px;
-    display: block;
-    width: 100%;
     border: solid 2px rgba(0, 0, 0, 0.17);
   }
 
   .button {
-    display: block;
-    width: 100%;
-    background-color: ${props => props.theme.colors.success};
-    font-size: 1.3em;
-    padding: 12px;
-    border-radius: 4px;
-    color: white;
+    ${tw`block w-full bg-success text-xl leading-none p-3 rounded text-white`}
+
     &:hover {
-      transform: none;
-      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.15);
+      ${tw`transform-none shadow-2xl`}
     }
   }
 
   .close {
-    padding: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 100px;
-    font-size: 1rem;
-    border: 0;
+    ${tw`p-0 absolute top-0 right-0 w-7 h-7 rounded-xl text-base leading-none border-0 text-white shadow-2xl flex items-center justify-center cursor-pointer`}
     background: rgba(0, 0, 0, 0.7);
-    color: white;
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transform: translate(50%, -50%);
-    cursor: pointer;
     :hover {
-      background: ${props => props.theme.colors.danger};
+      ${tw`bg-danger`}
     }
   }
 
   ${props =>
     !props.show &&
     css`
-      background: transparent;
-      pointer-events: none;
+      ${tw`bg-transparent pointer-events-none`}
 
       .-outer {
+        ${tw`opacity-0`}
         transform: scale(0.8);
-        opacity: 0;
       }
     `};
 `

@@ -11,23 +11,17 @@ const PostListStyled = styled('div')`
 `
 
 const PostContainer = styled('div')`
-  ${tw``}
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  ${tw`flex flex-wrap justify-center`}
 
   :after {
+    ${tw`table clear-both`}
     content: '';
-    display: table;
-    clear: both;
   }
 `
 
 const Post = styled('div')`
-  ${tw`bg-white rounded-xlg shadow-2xl m-2`}
-  float: left;
-  width: 31%;
-  height: auto;
+  ${tw`bg-white rounded-xlg shadow-2xl m-2 float-left h-auto`}
+  width: 30%;
 
   @media only screen and (max-width: 900px) {
     ${tw``}

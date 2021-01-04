@@ -1,32 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 
 const Container = styled('ul')`
-  padding-top: 1rem;
-  display: block;
-  padding-bottom: 4rem;
-  width: auto;
-  margin: auto;
+  ${tw`pt-4 block pb-16 w-auto m-auto`}
 
   .page {
-    color: black;
-    float: left;
+    ${tw`text-black float-left no-underline cursor-pointer rounded border border-solid border-gray-300`}
     padding: 8px 16px;
-    text-decoration: none;
     transition: background-color 0.3s;
-    border: 1px solid #ddd;
     margin: 0 4px;
-    cursor: pointer;
-    border-radius: 5px;
-    border-radius: 5px;
 
     :hover {
-      background-color: #ddd;
+      ${tw`bg-gray-300`}
     }
   }
 
   .activePage {
-    background: #ddd;
+    ${tw`bg-gray-300`}
   }
 `
 

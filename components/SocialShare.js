@@ -1,65 +1,50 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 import { useRouter } from 'next/router'
 import Icon from 'components/Icon'
 
 const ShareFabs = styled('div')`
   .top {
-    position: absolute;
-    top: 25rem;
-    right: 0.75rem;
+    ${tw`absolute top-96 right-3`}
   }
   .below {
-    position: fixed;
-    top: 6rem;
-    right: 0.75rem;
+    ${tw`fixed top-24 right-3`}
   }
 
   .fab {
-    color: white;
-    width: 3.5rem;
-    font-size: 1.5rem;
-    padding: 1rem;
-    margin: 0.15rem;
-    border-radius: 0.3rem;
-    display: block;
+    ${tw`text-white w-14 text-2xl leading-none p-4 m-0.5 rounded block `}
 
     :hover {
-      opacity: 0.75;
+      ${tw`opacity-70`}
     }
   }
 
   .twitter {
-    background-color: #1da1f2;
+    ${tw`bg-twitter`}
   }
   .facebook {
-    background-color: #4267b2;
+    ${tw`bg-facebook`}
   }
   .linkedin {
-    background-color: #2867b2;
+    ${tw`bg-linkedin`}
   }
   .buffer {
-    background-color: lightgray;
+    ${tw`bg-gray-300`}
   }
 
   @media screen and (max-width: 700px) {
     .top,
     .below {
-      top: 0rem;
-      position: relative;
-      padding-top: 1.5rem;
-      padding-left: 1rem;
-      padding-bottom: 1.5rem;
-      text-align: center;
+      ${tw`top-0 relative py-6 pl-4 text-center`};
     }
 
     .facebook {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      ${tw`px-5`}
     }
 
     .fab {
-      display: inline;
+      ${tw`inline`}
     }
   }
 `

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import tw from 'twin.macro'
 //
 import Easing from 'utils/Easing'
 
@@ -7,53 +8,45 @@ const margin = css`
   margin: 0 auto 1rem;
 `
 const inline = css`
-  display: inline;
+  ${tw`inline`}
 `
 
 export const button = props => css`
-  display: inline-block;
-  margin-bottom: 5px;
-  border: 0;
-  outline: 0;
-  border-radius: 2px;
+  ${tw`inline-block mb-1 border-0 outline-none rounded-sm cursor-pointer no-underline text-white text-base leading-none`}
   transition: all 0.2s ${Easing.css.easeOutBack};
-  cursor: pointer;
-  text-decoration: none;
   background: ${props =>
     props.theme.colors[props.color] || props.theme.colors.primary};
-  color: white;
-  font-size: 1rem;
 
   &:hover {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    ${tw`shadow-2xl`}
   }
 
   &:active {
+    ${tw`shadow-none`}
     transition: all 0.05s ease-out;
-    box-shadow: none;
   }
 `
 
 export const buttonSize = ({ size = '' }) =>
   size === 'lg'
     ? css`
-        font-size: 1.2rem;
+        ${tw`text-lg leading-none`}
         padding: 1rem 1.4rem;
       `
     : size === 'sm'
     ? css`
-        font-size: 0.8rem;
+        ${tw`text-sm leading-none`}
         padding: 0.6rem 1rem;
       `
     : css`
-        font-size: 1rem;
+        ${tw`text-base leading-none`}
         padding: 0.8rem 1.2rem;
       `
 
 const full = ({ full }) =>
   full &&
   css`
-    width: 100%;
+    ${tw`w-full`}
   `
 
 const backgroundColor = ({ color }) => css`
@@ -131,13 +124,13 @@ export const P = styled('p')`
   ${margin};
   ${color};
   ${weight};
-  font-size: 1rem;
-  line-height: 1.2rem;
+  ${tw`text-base leading-5`}
 `
 
 export const Strong = styled('strong')`
   ${inline};
-  ${color} font-weight: bold;
+  ${color}
+  ${tw`font-bold`}
 `
 export const Span = styled('span')`
   ${inline};
@@ -153,23 +146,20 @@ export const Div = styled('div')`
 export const Img = styled(({ children, ...rest }) => (
   <img alt="" {...rest} width="500" height="400" />
 ))`
-  max-width: 100%;
-  width: auto;
-  height: auto;
+  ${tw`max-w-full w-auto h-auto`}
 `
 
 export const Ul = styled('ul')`
-  ${margin} padding-left: 2rem;
-  list-style-type: disc;
-  text-align: left;
+  ${margin}
+  ${tw`pl-8 list-disc text-left`}
 `
 export const Ol = styled('ol')`
-  ${margin} padding-left: 2rem;
-  list-style-type: decimal;
-  text-align: left;
+  ${margin}
+  ${tw`pl-8 list-decimal text-left`}
 `
 export const Li = styled('li')`
-  ${color} margin-bottom: .5rem;
+  ${color}
+  ${tw`mb-2`}
 `
 
 // Button
@@ -180,8 +170,7 @@ export const Button = styled('button')`
 `
 
 export const Input = styled('input')`
-  border-radius: 3;
-  border: none;
+  ${tw`rounded-sm border-none`}
   padding: 0.3em 0.5em;
 `
 const TableCmp = ({ children, ...rest }) => (
@@ -190,33 +179,28 @@ const TableCmp = ({ children, ...rest }) => (
   </div>
 )
 export const Table = styled(TableCmp)`
-  max-width: 100%;
-  overflow-x: scroll;
+  ${tw`max-w-full overflow-x-scroll`}
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   table {
-    min-width: 100%;
-    border-collapse: collapse;
-    overflow-x: auto;
+    ${tw`min-w-full border-collapse overflow-x-auto`}
   }
 
   th,
   td {
-    text-overflow: ellipsis;
+    ${tw`overflow-ellipsis overflow-hidden`}
     padding: 7px 5px;
-    overflow: hidden;
 
     &:hover {
-      overflow: visible;
+      ${tw`overflow-visible`}
     }
   }
 
   thead {
     th,
     td {
-      background: white;
+      ${tw`bg-white text-darker`}
       font-weight: ${props => props.theme.weights.bold};
-      color: ${props => props.theme.colors.darker};
       border-right: 1px solid rgba(0, 0, 0, 0.05);
     }
 
@@ -268,13 +252,11 @@ export const Pre = styled(({ children, ...rest }) => (
 `
 
 export const Em = styled('em')`
-  font-style: italic;
+  ${tw`italic`}
 `
 
 export const Iframe = styled('iframe')`
-  width: 100%;
-  border: 0;
-  resize: vertical;
+  ${tw`w-full border-0 resize-y `}
   min-height: 50px;
   height: 500px;
 `

@@ -1,100 +1,68 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 import Smackdown from 'components/Smackdown'
 
 const Container = styled('div')`
-  position: relative;
-  margin-top: 3rem;
+  ${tw`relative my-12 p-4 rounded-xl`}
   background: #e8e8e8;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin-bottom: 3rem;
 `
 
 const Heading = styled('div')`
-  font-size: 2.5rem;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
+  ${tw`text-4xl pl-4 py-4 leading-none`}
 
   @media screen and (max-width: 1000px) {
-    padding-top: 1rem;
-    font-size: 2rem;
+    ${tw`text-3xl`}
   }
 
   @media screen and (max-width: 600px) {
-    font-size: 1.5rem;
+    ${tw`text-2xl`}
   }
 `
 
 const AuthorBio = styled('div')`
-  position: relative;
-  padding: 1rem;
-  border-radius: 1rem;
+  ${tw`relative p-4 rounded-xl`}
   background: #f9f9f9;
 
   .authorName {
-    font-size: 2rem;
-    padding-bottom: 1rem;
+    ${tw`text-4xl pb-4 leading-none`}
 
     @media screen and (max-width: 600px) {
-      font-size: 1.5rem;
+      ${tw`text-2xl`}
     }
   }
 `
 
 const AuthorPic = styled('img')`
-  float: left;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  object-fit: cover;
-  border-radius: 50%;
-  height: 8rem;
-  width: 8rem;
+  ${tw`float-left mt-4 mr-4 object-cover rounded-full h-32 w-32 `}
 `
 
 const BioText = styled('div')`
-  padding-top: 1rem;
-  overflow: auto;
+  ${tw`pt-4 overflow-auto`}
 `
 
 const Contributors = styled('div')`
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1.5rem;
+  ${tw`absolute top-0 right-0 p-6`}
 
   img {
-    height: 2.75rem;
-    width: 2.75rem;
-    object-fit: cover;
-    border-radius: 50%;
+    ${tw`h-11 w-11 object-cover rounded-full`}
   }
   .nameBox {
-    position: relative;
-    display: inline-block;
+    ${tw`relative inline-block`}
   }
 
   .nameBox .name {
-    visibility: hidden;
-    width: 120px;
+    ${tw`invisible w-28 text-white text-center rounded absolute left-1/2`}
     background-color: #2b3640;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
     padding: 5px 0;
-    position: absolute;
     z-index: 1;
     bottom: 120%;
-    left: 50%;
     margin-left: -60px;
   }
 
   .nameBox .name::after {
+    ${tw`absolute top-full left-1/2`}
     content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
@@ -102,7 +70,7 @@ const Contributors = styled('div')`
   }
 
   .nameBox:hover .name {
-    visibility: visible;
+    ${tw`visible`}
   }
 `
 

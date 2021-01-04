@@ -37,62 +37,58 @@ const CalculatorStyles = styled('div')`
   padding: 5% 1rem 5%;
 `
 const Title = styled(H3)`
-  margin-bottom: 20px;
+  ${tw`mb-5`}
 `
 const SubTitle = styled(P)`
-  margin-bottom: 20px;
+  ${tw`mb-5`}
 `
 const Inner = styled('div')`
-  display: flex;
-  flex-wrap: wrap;
+  ${tw`flex flex-wrap`}
 `
 const Presets = styled('div')`
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  text-align: center;
+  ${tw`mx-auto mb-8 text-center`}
+
   button {
-    margin: 1rem;
+    ${tw`m-4`}
   }
 `
 const Top = styled('div')`
-  margin: 0 auto;
-  margin-bottom: 3rem;
+  ${tw`mx-auto mb-12`}
 
   .center {
-    text-align: center;
+    ${tw`text-center`}
   }
 
   th,
   td {
-    padding: 0.75rem;
+    ${tw`p-3`}
     :nth-child(2) {
-      border-right: 2px solid ${props => props.theme.colors.primary};
+      ${tw`border-r-2 border-solid border-primary`}
     }
     :nth-child(6) {
-      border-right: 2px solid ${props => props.theme.colors.primary};
+      ${tw`border-r-2 border-solid border-primary`}
     }
     :nth-child(7) {
-      border-right: 2px solid ${props => props.theme.colors.primary};
+      ${tw`border-r-2 border-solid border-primary`}
     }
     :last-child {
-      width: 2rem;
+      ${tw`w-8`}
     }
   }
 
   tfoot {
-    font-weight: bold;
-    font-size: 1.25rem;
+    ${tw`font-bold text-xl leading-none`}
+
     tr {
       :last-child {
-        border-top: 2px solid ${props => props.theme.colors.primary};
+        ${tw`border-t-2 border-solid border-primary`}
       }
     }
   }
 
   input[type='number'],
   input[type='text'] {
-    font-size: 1em;
-    width: 100%;
+    ${tw`text-base leading-none w-full`}
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
   }
 
@@ -104,28 +100,35 @@ const Top = styled('div')`
     th,
     td,
     tr {
-      display: block;
+      ${tw`block`}
     }
     th,
     td {
-      border-right: none;
+      :nth-child(2) {
+        ${tw`border-r-0`}
+      }
+      :nth-child(6) {
+        ${tw`border-r-0`}
+      }
+      :nth-child(7) {
+        ${tw`border-r-0`}
+      }
       :last-child {
-        width: auto;
+        ${tw`w-auto`}
       }
     }
 
     thead tr {
-      position: absolute;
+      ${tw`absolute`}
       top: -9999px;
       left: -9999px;
     }
 
     tbody {
       tr {
+        ${tw`rounded-lg mb-4`}
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
       }
 
       td:nth-of-type(2):before {
@@ -152,22 +155,22 @@ const Top = styled('div')`
     }
 
     tfoot {
-      text-align: center;
+      ${tw`text-center`}
       tr:nth-of-type(1) {
         td:nth-of-type(3) {
-          display: none;
+          ${tw`hidden`}
         }
         td:nth-of-type(4) {
-          display: none;
+          ${tw`hidden`}
         }
         td:nth-of-type(5) {
-          display: none;
+          ${tw`hidden`}
         }
         td:nth-of-type(6) {
-          display: none;
+          ${tw`hidden`}
         }
         td:nth-of-type(7) {
-          display: none;
+          ${tw`hidden`}
         }
       }
 
@@ -195,47 +198,34 @@ const Top = styled('div')`
   }
 `
 const Bottom = styled('div')`
-  margin: 0 auto;
-  flex: 1;
+  ${tw`mx-auto flex flex-1 flex-col justify-center items-center rounded p-5`}
   padding: 0 20px;
-  display: flex;
   min-height: 20rem;
   max-width: 60rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: #e7e7e7;
-  border-radius: 5px;
-  padding: 20px;
 `
 const TotalPulls = styled('div')`
-  font-size: 3.8em;
-  font-weight: 900;
+  ${tw`text-6xl font-black leading-none`}
 `
 const Suggested = styled('div')`
+  ${tw`text-xl leading-none`}
   padding: 20px 20px 5px;
-  font-size: 20px;
 `
 const SuggestedPlan = styled('div')`
-  text-align: center;
-  padding: 10px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: ${props => props.theme.colors.primaryDark};
+  ${tw`text-center p-2.5 text-4xl leading-none font-bold text-primaryDark `}
 `
 const Pricing = styled('div')`
-  margin: 0.25rem;
+  ${tw`m-1`}
 `
 
 const AddIcon = styled(Icon)`
-  text-align: center;
-  color: ${props => props.theme.colors.success};
+  ${tw`text-center text-success`}
   :hover {
     transform: scale(1.1);
   }
 `
 const DeleteIcon = styled(Icon)`
-  color: ${props => props.theme.colors.danger};
+  ${tw`text-danger`}
   :hover {
     transform: scale(1.1);
   }

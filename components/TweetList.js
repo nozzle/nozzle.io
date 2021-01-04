@@ -1,40 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 
 const Heading = styled('div')`
-  font-size: 2.5rem;
-  text-align: center;
-  padding: 1rem;
+  ${tw`text-4xl leading-none text-center p-4`}
 `
 
 const Container = styled('div')`
-  text-align: center;
+  ${tw`text-center`}
 
   button {
-    color: black;
+    ${tw`text-black no-underline m-1 cursor-pointer rounded border border-solid border-gray-300`}
     padding: 8px 16px;
-    text-decoration: none;
     transition: background-color 0.3s;
-    border: 1px solid #ddd;
-    margin: 0.25rem;
-    cursor: pointer;
-    border-radius: 5px;
-    border-radius: 5px;
 
     :hover {
-      background-color: #ddd;
+      ${tw`bg-gray-300`}
     }
 
     :focus {
-      outline: 0;
+      ${tw`outline-none`}
     }
   }
   .activeTag {
-    background-color: #ddd;
+    ${tw`bg-gray-300`}
   }
 `
 const Tweet = styled('div')`
-  padding: 0.5rem;
+  ${tw`p-2`}
 `
 
 export default function TweetList({ tweets }) {

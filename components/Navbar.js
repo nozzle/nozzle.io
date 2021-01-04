@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react'
 import styled, { keyframes, css } from 'styled-components'
+import tw from 'twin.macro'
 import Link from 'next/link'
 //
 
@@ -26,25 +27,17 @@ const trialAnimation = keyframes`
 `
 
 const NavbarStyles = styled('header')`
-  position: sticky;
-  top: 0;
+${tw`sticky top-0 w-full shadow-sm`}
+
   background: linear-gradient(to left, ${props =>
     props.theme.colors.primary}, ${props => props.theme.colors.primaryLight});
-
-  width: 100%;
   z-index: 1000;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
   height: 52px;
 
   .inner {
+    ${tw`mx-auto flex items-center justify-between relative h-full`}
     max-width: ${props => props.theme.maxWidth}px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
     perspective: 1000px;
-    height: 100%;
   }
 
   .logo {
@@ -53,25 +46,19 @@ const NavbarStyles = styled('header')`
     margin: 8px 0 5px 10px;
     transition: all .3s ease;
     .hide {
-      display: none;
+      ${tw`hidden`}
     }
     img {
-      width: 100%;
-      height: auto;
+      ${tw`w-full h-auto`}
     }
   }
 
   .menuToggle {
-    flex-basis: auto;
-    width: auto;
-    overflow: hidden;
-    flex-grow: 0;
-    flex-shrink: 0;
-    display: none;
-    padding: 10px;
+    ${tw`w-auto overflow-hidden flex-grow-0 flex-shrink-0 hidden p-2.5`}
+  
 
     ${belowBreakpoint} {
-      display: inline-block;
+      ${tw`inline-block`}
 
       ${({ isMenuOpen }) =>
         isMenuOpen &&
@@ -100,18 +87,13 @@ const NavbarStyles = styled('header')`
     }
 
     > div {
-      position: relative;
+      ${tw`relative`}
       height: ${toggleSize}px;
       width: ${toggleSize * 1.5}px;
       span {
-        display: block;
-        position: absolute;
+        ${tw`block absolute w-full bg-white opacity-100 left-0`}
         height: ${toggleBarHeight}px;
-        width: 100%;
-        background: white;
         border-radius: ${toggleBarHeight}px;
-        opacity: 1;
-        left: 0;
         transform: rotate(0deg);
         transition: .15s ease-in-out;
       }
@@ -131,59 +113,48 @@ const NavbarStyles = styled('header')`
   }
 
   .linkbar {
-    display: flex;
-    align-items: center;
+    ${tw`flex items-center`}
+  
   }
 
   .links {
-    display: flex;
-    align-items: center;
+    ${tw`flex items-center`}
     transition: all .3s ease;
     backface-visibility: hidden;
 
     ${belowBreakpoint} {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
+      ${tw`absolute top-full left-0 w-full overflow-y-auto bg-primaryDark flex flex-col items-stretch pointer-events-none opacity-0 `}
       max-height: 65vh;
-      overflow-y: auto;
       -webkit-overflow-scrolling: touch;
-      background: ${props => props.theme.colors.primaryDark};
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
       border-bottom: 5px solid ${props => props.theme.colors.primaryLight};
-      pointer-events: none;
       transform: translateY(10px);
-      opacity: 0;
+
 
       ${props =>
         props.isMenuOpen &&
         css`
+          ${tw`opacity-100`}
           pointer-events: all;
           transform: translateY(0);
-          opacity: 1;
         `}
     }
   }
 
   .link {
-    color: white;
-    position: relative;
+    ${tw`text-white relative`}
     transition: all .1s ease-out;
 
     &:hover {
       .links-nested {
+        ${tw`opacity-100`}
         pointer-events: all;
-        opacity: 1;
         transform: translateY(0);
       }
     }
 
     > div {
       > a {
-        display: block;
+        ${tw`block`}
         padding: 16px 10px;
         transition: all .2s ease-out;
 
@@ -207,30 +178,20 @@ const NavbarStyles = styled('header')`
 
   .links-nested {
     ${belowBreakpoint} {
-      position: relative;
-      margin-left: 40px;
+      ${tw`relative ml-10`}
     }
     ${aboveBreakpoint} {
-      position: absolute;
-      top: 100%;
-      left: 0;
+      ${tw`absolute top-full left-0 flex flex-col items-stretch bg-primaryDark opacity-0 pointer-events-none overflow-hidden`}
       width: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
       font-size: .8em;
-      background: ${props => props.theme.colors.primaryDark};
       box-shadow: inset 0 10px 0 -10px rgba(0,0,0,.3), 0 10px 20px 0 rgba(0,0,0,.3);
       border-radius: 0 0 3px 3px;
-      opacity: 0;
-      pointer-events: none;
       transition: all .15s ease-out;
-      transform: translateY(10px);
-      overflow: hidden;
+      transform: translateY(10px);   
 
       .link {
         &:hover {
-          background: ${props => props.theme.colors.primary};
+          ${tw`bg-primary`}
         }
 
         > a {
@@ -241,14 +202,11 @@ const NavbarStyles = styled('header')`
   }
 
   .trial {
-    margin-left: 5px;
-    margin-right: 5px;
+    ${tw`mx-1`}
     animation: ${trialAnimation} 7s infinite;
     button {
-      margin-bottom: 0;
+      ${tw`mb-0 rounded-sm shadow-lg`}
       padding: 10px 15px;
-      border-radius: 2px;
-      box-shadow: 0 2px 10px 0 rgba(0,0,0,.3);
       transform-origin: right;
       &:hover {
         transform: scale(1.05);

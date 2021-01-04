@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 //
 import { color } from './Html'
 
@@ -63,8 +64,8 @@ const icons = {
 }
 
 const IStyled = styled('i')`
+  ${tw`text-center`}
   min-width: 1em;
-  text-align: center;
   font-size: ${props => (props.size === 'large' ? '2em' : '1em')};
   ${color};
 `

@@ -9,9 +9,8 @@ import { Container, Center } from 'components/Layout'
 import tw from 'twin.macro'
 
 const Top = styled('section')`
-  padding: 4% 5%;
   ${angle('left')};
-  ${tw`text-white bg-primaryDarker`}
+  ${tw`text-white bg-primaryDarker py-4/100 px-5/100`}
 `
 const Wrap = styled('div')`
   ${tw`flex flex-nowrap m-2 w-auto`}
@@ -42,7 +41,7 @@ const Testimonial = styled('div')`
   ${tw`text-gray-700 text-base`}
 
   iframe {
-    ${tw`w-300 md:(w-500)`}
+    ${tw`w-80 md:(w-125)`}
   }
 `
 

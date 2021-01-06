@@ -27,12 +27,12 @@ const trialAnimation = keyframes`
 `
 
 const NavbarStyles = styled('header')`
-${tw`sticky top-0 w-full shadow-sm`}
+${tw`sticky top-0 w-full shadow-sm h-13`}
 
   background: linear-gradient(to left, ${props =>
     props.theme.colors.primary}, ${props => props.theme.colors.primaryLight});
   z-index: 1000;
-  height: 52px;
+
 
   .inner {
     ${tw`mx-auto flex items-center justify-between relative h-full`}

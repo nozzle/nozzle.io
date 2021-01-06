@@ -36,9 +36,7 @@ const Section = ({ children, ...rest }) => (
 const section = css`
   ${tw`z-0`}
   .inner {
-    ${tw`mx-auto flex flex-wrap items-center`}
-    max-width: ${props => props.theme.maxWidth}px;
-    padding: 10% 10%;
+    ${tw`mx-auto flex flex-wrap items-center p-1/10 max-w-default`}
   }
   img {
     ${tw`w-full`}
@@ -49,8 +47,7 @@ const section = css`
   ${belowMobile} {
     .left,
     .right {
-      flex: 1 1 100%;
-      ${tw`mx-0`}
+      ${tw`mx-0 flex-100`}
     }
     .left {
       ${tw`mb-8`}
@@ -80,11 +77,10 @@ const layoutRight = css`
 
 const layoutLeftHalf = css`
   .left {
-    flex: 1 1 300px;
-    ${tw`mr-10`}
+    ${tw`mr-10 flex-300`}
   }
   .right {
-    flex: 1 1 300px;
+    ${tw`flex-300`}
   }
 `
 
@@ -186,16 +182,15 @@ const SectionCompetitors = styled(Section)`
 const SectionDataJunkie = styled(Section)`
   ${section};
   ${layoutRight};
-
-  text-align: center;
+  ${tw`text-center`}
 
   .csv,
   .sql {
     flex: 1 1 30%;
   }
   .main {
+    ${tw`mx-3/100`}
     flex: 1 1 34%;
-    margin: 0 3%;
   }
   img {
     ${tw`w-64 max-w-full`}
@@ -204,17 +199,14 @@ const SectionDataJunkie = styled(Section)`
     .csv,
     .sql,
     .main {
-      flex: 1 1 100%;
-      ${tw`mb-12`}
+      ${tw`flex-100 mb-12`}
     }
   }
 `
 const SectionCustomers = styled(Section)`
   ${tw`z-0`}
   .inner {
-    ${tw`mx-auto flex flex-wrap items-center justify-center`}
-    max-width: ${props => props.theme.maxWidth}px;
-    padding: 0% 5%;
+    ${tw`mx-auto flex flex-wrap items-center justify-center max-w-default py-0 px-5/100`}
   }
 
   img {
@@ -229,8 +221,7 @@ const SectionCustomers = styled(Section)`
 
   ${belowTablet} {
     img {
-      ${tw`m-1 w-24`}
-      flex: 1;
+      ${tw`m-1 w-24 flex-grow`}
     }
   }
 `

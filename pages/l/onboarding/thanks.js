@@ -10,17 +10,15 @@ const Styles = styled(Container)`
   ${tw`text-center`}
 
   h1 {
-    padding: 3rem 1rem;
+    ${tw`py-12 px-4`}
   }
 
   p {
-    ${tw`max-w-full mb-16`}
-    width: 600px;
-    padding: 0 1rem;
+    ${tw`max-w-full mb-16 px-4 w-150`}
   }
 
   iframe {
-    min-height: 850px;
+    ${tw`min-h-212`}
   }
 `
 

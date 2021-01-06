@@ -13,6 +13,11 @@ module.exports = {
         primaryDark: Color(primary).darken(7).toString(),
         primaryDarker: Color(primary).darken(15).toString(),
         primaryDarkest: Color(primary).darken(20).saturate(100).toString(),
+        subNav: Color(primary)
+          .darken(20)
+          .saturate(100)
+          .setAlpha(0.9)
+          .toString(),
         text: '#2b3640',
         danger: '#F15854',
         success: '#60BD68',
@@ -42,13 +47,50 @@ module.exports = {
         900: '900px',
       },
       padding: {
+        '4/100': '4%',
+        '5/100': '5%',
+        '8/100': '8%',
+        '1/10': '10%',
+        '3/20': '15%',
+        '1/5': '20%',
+        '3/10': '30%',
+        '2/5': '40%',
         '1/2': '50%',
       },
-      opacity: {
-        90: '.9',
+      margin: {
+        '1/100': '1%',
+        '3/100': '3%',
       },
-      borderRadius: {
-        xlg: '1rem',
+      minHeight: {
+        212: '53rem',
+      },
+      maxWidth: {
+        default: '1400px',
+      },
+      zIndex: {
+        1: 1,
+      },
+      borderWidth: {
+        50: '50px',
+      },
+      flex: {
+        100: '1 1 100%',
+        300: '1 1 300px',
+      },
+      width: {
+        125: '31.25rem',
+        150: '37.5rem',
+        162: '40.5rem',
+        200: '50rem',
+        225: '56.25rem',
+        '3/10': '30%',
+        double: '200%',
+      },
+      height: {
+        13: '3.25rem',
+      },
+      inset: {
+        13: '3.25rem',
       },
     },
   },

@@ -20,9 +20,7 @@ const Section = ({ children, ...rest }) => (
 const section = css`
   ${tw`z-0`}
   .inner {
-    max-width: ${props => props.theme.maxWidth}px;
-    padding: 5% 10%;
-    ${tw`mx-auto flex flex-wrap items-center`}
+    ${tw`max-w-default py-5/100 px-1/10 mx-auto flex flex-wrap items-center`}
   }
   img {
     ${tw`w-full`}
@@ -30,8 +28,7 @@ const section = css`
   ${belowMobile} {
     .left,
     .right {
-      flex: 1 1 100%;
-      ${tw`ml-0 mr-0`}
+      ${tw`ml-0 mr-0 flex-100`}
     }
     .left {
       ${tw`mb-8`}
@@ -41,11 +38,10 @@ const section = css`
 
 const layout = css`
   .left {
-    flex: 1 1 300px;
-    ${tw`mr-10`}
+    ${tw`mr-10 flex-300`}
   }
   .right {
-    flex: 1 1 300px;
+    ${tw`flex-300`}
   }
 `
 

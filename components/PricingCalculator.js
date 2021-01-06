@@ -34,7 +34,7 @@ const frequencyOptions = [
 
 const CalculatorStyles = styled('div')`
   ${angle('right')};
-  padding: 5% 1rem 5%;
+  ${tw`py-5/100 px-4`}
 `
 const Title = styled(H3)`
   ${tw`mb-5`}
@@ -88,7 +88,7 @@ const Top = styled('div')`
 
   input[type='number'],
   input[type='text'] {
-    ${tw`text-base leading-none w-full`}
+    ${tw`text-base leading-none w-full `}
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
   }
 
@@ -119,9 +119,7 @@ const Top = styled('div')`
     }
 
     thead tr {
-      ${tw`absolute`}
-      top: -9999px;
-      left: -9999px;
+      ${tw`hidden`}
     }
 
     tbody {
@@ -198,11 +196,9 @@ const Top = styled('div')`
   }
 `
 const Bottom = styled('div')`
-  ${tw`mx-auto flex flex-1 flex-col justify-center items-center rounded p-5`}
-  padding: 0 20px;
+  ${tw`mx-auto flex flex-1 flex-col justify-center items-center rounded p-5 px-5 bg-gray-200`}
   min-height: 20rem;
   max-width: 60rem;
-  background: #e7e7e7;
 `
 const TotalPulls = styled('div')`
   ${tw`text-6xl font-black leading-none`}

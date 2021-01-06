@@ -17,9 +17,7 @@ const Section = ({ children, ...rest }) => (
 const section = css`
   ${tw`z-0`}
   .inner {
-    ${tw`mx-auto flex flex-wrap items-center`}
-    max-width: ${props => props.theme.maxWidth}px;
-    padding: 5% 10%;
+    ${tw`mx-auto flex flex-wrap items-center max-w-default py-5/100 px-1/10`}
   }
   img {
     ${tw`w-full`}
@@ -28,8 +26,7 @@ const section = css`
   ${belowMobile} {
     .left,
     .right {
-      ${tw`mx-0`}
-      flex: 1 1 100%;
+      ${tw`mx-0 flex-100`}
     }
     .left {
       ${tw`mb-8`}
@@ -39,29 +36,23 @@ const section = css`
 
 const layout = css`
   .left {
-    ${tw`mr-10`}
-    flex: 1 1 300px;
+    ${tw`mr-10 flex-300`}
   }
   .right {
-    flex: 1 1 300px;
+    ${tw`flex-300`}
   }
 `
 
 const SectionThanks = styled(Section)`
   ${tw`z-0`}
   .inner {
-    ${tw`mx-auto flex flex-wrap items-center`}
-    max-width: ${props => props.theme.maxWidth}px;
-    padding-top: 8%;
-    padding-left: 10%;
-    padding-right: 10%;
+    ${tw`mx-auto flex flex-wrap items-center max-w-default px-1/10 pt-8/100`}
   }
 
   ${belowMobile} {
     .left,
     .right {
-      ${tw`mx-0`}
-      flex: 1 1 100%;
+      ${tw`mx-0 flex-100`}
     }
     .left {
       ${tw`mb-8`}
@@ -83,8 +74,7 @@ const Example = styled(Section)`
 
   .right {
     img {
-      ${tw`opacity-100 rounded shadow-2xl max-w-4xl`}
-      width: 110%;
+      ${tw`opacity-100 rounded shadow-2xl max-w-4xl w-full`}
     }
   }
   .left {

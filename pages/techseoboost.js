@@ -18,9 +18,7 @@ const SectionContactUs = styled(Section)`
   ${angle('right')};
   ${tw`z-0`}
   .inner {
-    ${tw`flex flex-wrap items-center mx-auto min-h-screen`}
-    max-width: ${props => props.theme.maxWidth}px;
-    padding: 10% 10%;
+    ${tw`flex flex-wrap items-center mx-auto min-h-screen max-w-default p-1/10`}
   }
   img {
     ${tw`w-full`}

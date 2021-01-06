@@ -138,10 +138,9 @@ const SectionIntro = styled('div')`
 `
 
 const SectionFaq = styled('div')`
-  padding: 5% 20px;
+  ${tw`py-5/100 px-5`}
   .inner {
-    ${tw`p-10`}
-    background: rgba(0, 0, 0, 0.1);
+    ${tw`p-10 bg-gray-200`}
   }
 `
 

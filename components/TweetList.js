@@ -10,8 +10,7 @@ const Container = styled('div')`
   ${tw`text-center`}
 
   button {
-    ${tw`text-black no-underline m-1 cursor-pointer rounded border border-solid border-gray-300`}
-    padding: 8px 16px;
+    ${tw`text-black no-underline m-1 cursor-pointer rounded border border-solid border-gray-300 py-2 px-4`}
     transition: background-color 0.3s;
 
     :hover {

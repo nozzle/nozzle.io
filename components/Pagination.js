@@ -6,14 +6,8 @@ const Container = styled('ul')`
   ${tw`pt-4 block pb-16 w-auto m-auto`}
 
   .page {
-    ${tw`text-black float-left no-underline cursor-pointer rounded border border-solid border-gray-300`}
-    padding: 8px 16px;
+    ${tw`text-black float-left no-underline cursor-pointer rounded border border-solid border-gray-300 py-2 px-4 mx-1 my-0 hover:(bg-gray-300)`}
     transition: background-color 0.3s;
-    margin: 0 4px;
-
-    :hover {
-      ${tw`bg-gray-300`}
-    }
   }
 
   .activePage {

@@ -13,11 +13,7 @@ const ShareFabs = styled('div')`
   }
 
   .fab {
-    ${tw`text-white w-14 text-2xl leading-none p-4 m-0.5 rounded block `}
-
-    :hover {
-      ${tw`opacity-70`}
-    }
+    ${tw`text-white w-14 text-2xl leading-none p-4 m-0.5 rounded block hover:(opacity-70)`}
   }
 
   .twitter {

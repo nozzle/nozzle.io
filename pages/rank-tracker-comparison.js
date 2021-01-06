@@ -34,8 +34,7 @@ Competitors.forEach((d, i) => {
 //   .sort((a, b) => a.features[0].sectionOrder - b.features[0].sectionOrder)
 
 const section = css`
-  padding: 10% 5%;
-  z-index: 1;
+  ${tw`py-1/10 px-5/100 z-1`}
 `
 
 const SectionWhyAnother = styled('section')`
@@ -52,8 +51,8 @@ const header = name => (
   <tr
     key={name}
     css={`
+      ${tw`font-bold`}
       border-top: ${name && 'solid 50px transparent'};
-      font-weight: ${props => props.theme.weights.bold};
     `}
   >
     <td>{name || 'Feature'}</td>

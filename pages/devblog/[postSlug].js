@@ -42,8 +42,7 @@ const PostContainer = styled('article')`
     ${tw`text-sm mb-4 leading-none`}
 
     .category {
-      ${tw`inline-block p-3 rounded-xl bg-primary text-white`}
-      margin: 0 0.3rem 0.3rem 0;
+      ${tw`inline-block p-3 rounded-xl bg-primary text-white mr-1.5 mb-1.5`}
     }
   }
 `
@@ -61,7 +60,7 @@ const PostStyles = styled('div')`
   }
 
   @media screen and (max-width: 600px) {
-    padding: 0 1rem 1rem;
+    ${tw`px-4 pb-4`}
     p {
       ${tw`text-base`}
     }

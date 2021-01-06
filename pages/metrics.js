@@ -9,9 +9,8 @@ import { Container, Center } from 'components/Layout'
 import tw from 'twin.macro'
 
 const Top = styled('section')`
-  padding: 5% 15%;
   ${angle('left')};
-  ${tw`lg:(flex) mb-4 items-center overflow-hidden text-white bg-primaryDarker`}
+  ${tw`lg:(flex) mb-4 items-center overflow-hidden text-white bg-primaryDarker py-5/100 px-3/20`}
 `
 const Wrap = styled('div')`
   ${tw`flex flex-nowrap m-2 w-auto`}
@@ -25,8 +24,7 @@ const Title = styled('div')`
 const Screenshot = styled('div')`
   ${tw`lg:(w-1/2)`}
   img {
-    ${tw`rounded-md max-w-screen-xl`}
-    width: 200%;
+    ${tw`rounded-md max-w-screen-xl w-double`}
   }
 `
 const Box = styled('div')`

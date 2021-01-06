@@ -12,7 +12,7 @@ import Icon from 'components/Icon'
 const belowTablet = `@media(max-width: ${1000}px)`
 
 const StyledPlans = styled('div')`
-  padding: 1rem 1.5rem;
+  ${tw`py-4 px-6`}
 `
 const PlanFilters = styled('div')`
   ${tw`flex mx-auto mb-4 max-w-3xl`}

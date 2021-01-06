@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 const Styles = styled.div`
-  ${tw`w-full`}
-  margin: 2rem 0;
+  ${tw`w-full my-8 mx-0`}
 
   iframe {
     ${tw`w-full!`}

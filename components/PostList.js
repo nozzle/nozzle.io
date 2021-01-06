@@ -11,12 +11,11 @@ const PostListStyled = styled('div')`
 `
 
 const PostContainer = styled('div')`
-  ${tw`flex flex-wrap m-2 justify-center `}
-  flex: 1;
+  ${tw`flex flex-wrap m-2 justify-center flex-grow `}
 `
 
 const Post = styled('div')`
-  ${tw`flex-shrink h-auto w-325 m-2 bg-white rounded-xlg shadow-2xl`}
+  ${tw`flex-shrink h-auto w-325 m-2 bg-white rounded-xl shadow-2xl`}
 
   @media only screen and (max-width: 1000px) {
     ${tw`w-2/4`}
@@ -27,7 +26,7 @@ const Post = styled('div')`
   }
 
   .titleImg {
-    ${tw`block bg-top bg-cover shadow-lg opacity-90 rounded-xlg`}
+    ${tw`block bg-top bg-cover shadow-lg opacity-90 rounded-xl`}
     transition: all 0.5s ease;
 
     > div {

@@ -24,16 +24,13 @@ const SectionContactUs = styled(Section)`
   ${tw`z-0`}
 
   .inner {
-    ${tw`mx-auto flex flex-wrap items-center min-h-screen`}
-    max-width: ${props => props.theme.maxWidth}px;
-    padding: 10% 10%;
+    ${tw`mx-auto flex flex-wrap items-center min-h-screen max-w-default p-1/10`}
   }
 
   ${belowMobile} {
     .left,
     .right {
-      ${tw`mx-0`}
-      flex: 1 1 100%;
+      ${tw`mx-0 flex-100`}
     }
     .left {
       ${tw`mb-8`}

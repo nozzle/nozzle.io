@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { css, keyframes } from 'styled-components'
 //
-import Color from 'utils/Color'
 import { angle } from 'utils/Styles'
 
 import Head from 'components/Head'
@@ -59,10 +58,7 @@ const FeaturesNav = props => (
 )
 
 const FeaturesNavDiv = styled(FeaturesNav)`
-  ${tw`sticky w-full left-0 p-0 text-center overflow-hidden`}
-  top: 52px;
-  background: ${props =>
-    Color(props.theme.colors.primaryDarkest).setAlpha(0.9).toString()};
+  ${tw`sticky w-full left-0 p-0 text-center overflow-hidden bg-subNav top-13`}
   z-index: 999;
 
   .inner {
@@ -75,8 +71,7 @@ const FeaturesNavDiv = styled(FeaturesNav)`
   li {
     ${tw`inline-block`}
     a {
-      ${tw`block opacity-100 text-white transition-all`}
-      padding: 17px 10px;
+      ${tw`block opacity-100 text-white transition-all py-4 px-2.5`}
     }
   }
   + * {
@@ -95,7 +90,6 @@ const FeaturesNavDiv = styled(FeaturesNav)`
     .inner {
       ${tw`overflow-scroll`}
       height: 200%;
-      overflow: scroll;
       -webkit-overflow-scrolling: touch;
       &::-webkit-scrollbar {
         ${tw`hidden`}
@@ -108,13 +102,13 @@ const FeaturesNavDiv = styled(FeaturesNav)`
 
   @media screen and (min-width: 1300px) {
     .subNav {
-      padding: 0 10%;
+      ${tw`px-1/10`}
     }
   }
 `
 
 const section = css`
-  padding: 10% 20px;
+  ${tw`py-1/10 px-5`}
 `
 
 const imageSwapAnimation = keyframes`
@@ -227,13 +221,10 @@ const SectionBrands = styled(SectionBrandsCmp)`
     }
 
     > strong {
-      ${tw`float-left relative text-white shadow-xl bg-primaryDark rounded`}
-      padding: 10px 13px 67px;
-      margin: 0 5px;
+      ${tw`float-left relative text-white shadow-xl bg-primaryDark rounded pt-2.5 px-3 pb-16 mx-1`}
 
       div {
-        ${tw`absolute h-2.5 left-2.5 rounded`}
-        z-index: 1;
+        ${tw`absolute h-2.5 left-2.5 rounded z-1`}
 
         &.line1 {
           ${tw`top-14 w-4/5 bg-primaryLight`}
@@ -258,9 +249,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
   }
   .domain-wrap,
   .brand-wrap {
-    ${tw`mx-auto w-full block max-w-xl`}
-    z-index: 1;
-    flex: 1 1 100%;
+    ${tw`mx-auto w-full block max-w-xl z-1 flex-100`}
   }
   .domain-wrap .domain,
   .brand-wrap .domain,
@@ -287,31 +276,26 @@ const SectionBrands = styled(SectionBrandsCmp)`
     ${tw`block`}
   }
   .vs {
-    ${tw`z-0 flex items-center justify-center text-white text-xl font-bold leading-none`}
+    ${tw`z-0 flex items-center justify-center text-white text-xl font-bold leading-none my-12`}
     flex: 0 0 100%;
-    margin: 50px 0;
 
     span {
-      ${tw`relative rounded-lg `}
-      background: rgba(0, 0, 0, 0.6);
-      padding: 12px 10px 10px;
+      ${tw`relative rounded-lg pt-3 px-2.5 pb-2.5 bg-gray-600`}
+
       :after {
-        ${tw`block absolute top-1/2 w-36 h-0.5 left-full`}
+        ${tw`block absolute top-1/2 w-36 h-0.5 left-full bg-gray-300`}
         content: '';
-        background: rgba(0, 0, 0, 0.2);
         transform: translateY(-50%);
       }
       :before {
-        ${tw`block absolute top-1/2 w-36 h-0.5 right-full`}
+        ${tw`block absolute top-1/2 w-36 h-0.5 right-full bg-gray-300`}
         content: '';
-        background: rgba(0, 0, 0, 0.2);
         transform: translateY(-50%);
       }
     }
   }
   .brand-wrap > img {
-    ${tw`block w-48`}
-    margin: 0 auto 20px;
+    ${tw`block w-48 mx-auto mb-5`}
   }
   .brand:after {
     ${tw`block`}
@@ -334,8 +318,7 @@ const SectionBrands = styled(SectionBrandsCmp)`
       ${tw`mb-14`}
 
       strong {
-        ${tw`inline-block`}
-        margin: 0 10px;
+        ${tw`inline-block mx-2.5`}
       }
       span {
         ${tw`inline-block`}
@@ -416,8 +399,8 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
   ${angle('right')};
   ${tw`bg-primaryDarker text-white`}
   h2 {
-    ${tw`text-center`}
-    margin: 0 0 50px;
+    ${tw`text-center pb-12`}
+
     img {
       ${tw`w-64 mb-5`}
     }
@@ -432,8 +415,7 @@ const SectionCompetition = styled(SectionCompetitionCmp)`
   }
   .one > div,
   .two > div {
-    ${tw`p-5`}
-    flex: 1 1 100%;
+    ${tw`p-5 flex-100`}
   }
   .one img,
   .two img {
@@ -510,12 +492,10 @@ const SectionScheduling = styled(SectionSchedulingCmp)`
   ${section};
 
   img {
-    ${tw`block w-64`}
-    margin: 0 auto 20px;
+    ${tw`block w-64 mx-auto mb-5`}
   }
   h2 {
-    ${tw`text-center`}
-    margin: 0 0 3rem;
+    ${tw`text-center mb-12`}
   }
   h6 {
     ${tw`max-w-full`}
@@ -707,20 +687,17 @@ const SectionData = styled(SectionDataCmp)`
     }
   }
   .description {
-    ${tw`max-w-2xl`}
-    margin: 0 auto 40px;
+    ${tw`max-w-2xl mx-auto mb-10`}
   }
   .boxes {
     ${tw`flex flex-wrap`}
   }
   .box {
-    ${tw`mb-5 bg-white rounded flex flex-col flex-wrap`}
-    flex: 1 1 100%;
+    ${tw`mb-5 bg-white rounded flex flex-col flex-wrap flex-100`}
     color: initial;
 
     h4 {
-      ${tw`p-2.5 font-bold text-center text-gray-700 border-b border-solid border-gray-200`}
-      margin: 10px 0 0;
+      ${tw`p-2.5 font-bold text-center text-gray-700 border-b border-solid border-gray-200 mt-2.5 mx-0 mb-0`}
 
       i {
         ${tw`mr-2`}
@@ -784,8 +761,7 @@ const SectionData = styled(SectionDataCmp)`
 
       :before {
         content: '';
-        ${tw`absolute inset-0`}
-        z-index: 1;
+        ${tw`absolute inset-0 z-1`}
         boxshadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3),
           inset 0 -40px 40px -40px rgba(0, 0, 0, 0.3);
       }
@@ -794,23 +770,21 @@ const SectionData = styled(SectionDataCmp)`
       }
     }
     .content {
-      ${tw`flex flex-row flex-wrap items-start`}
+      ${tw`flex flex-row flex-wrap items-start py-5 px-2.5`}
       justify-content: stretch;
-      padding: 20px 10px;
       > * {
         flex: 1 1 50%;
       }
     }
     p {
-      ${tw`m-0`}
-      padding: 10px 10px 0 0;
+      ${tw`m-0 pt-2.5 pr-2.5`}
     }
     ul {
       ${tw`text-lg font-semibold text-text`}
     }
     li {
-      ${tw`relative`}
-      padding: 10px 10px 10px 30px;
+      ${tw`relative pt-2.5 px-2.5 pb-7`}
+
       :before {
         content: '';
         ${tw`absolute w-3 h-3 left-3 top-1/2 rounded`}
@@ -820,21 +794,21 @@ const SectionData = styled(SectionDataCmp)`
   }
   @media screen and (max-width: 400px) {
     .box .content > * {
-      flex: 1 1 100%;
+      ${tw`flex-100`}
     }
   }
 
   @media screen and (min-width: 700px) {
     .box {
+      ${tw`mx-1/100 mb-5`}
       flex: 1 1 48%;
-      margin: 0 1% 20px;
     }
   }
 
   @media screen and (min-width: 1200px) {
     .box {
+      ${tw`mx-1/100 mb-5`}
       flex: 1 1 31%;
-      margin: 0 1% 20px;
     }
   }
 `
@@ -876,8 +850,7 @@ const SectionAgenciesCmp = props => (
 const SectionAgencies = styled(SectionAgenciesCmp)`
   ${section};
   img {
-    ${tw`block w-52`}
-    margin: 0 auto 20px;
+    ${tw`block w-52 mx-auto mb-5`}
   }
   h2 {
     ${tw`text-center`}
@@ -897,7 +870,7 @@ const SectionAgencies = styled(SectionAgenciesCmp)`
     ${tw`text-xl text-center`}
 
     h4 {
-      margin: 0 0 20px;
+      ${tw`mb-5`}
     }
     ul {
       ${tw`inline-block text-left`}
@@ -961,8 +934,7 @@ const SectionReputation = styled(SectionReputationCmp)`
   ${tw`bg-primaryDarker text-white`}
 
   img {
-    ${tw`block w-80`}
-    margin: 0 auto 20px;
+    ${tw`block w-80 mx-auto mb-5`}
   }
   h2 {
     ${tw`text-center`}
@@ -975,7 +947,7 @@ const SectionReputation = styled(SectionReputationCmp)`
     ${tw`text-center`}
     margin: 0 0 70px;
     h4 {
-      margin: 0 0 30px;
+      ${tw`mb-7`}
     }
     ul {
       ${tw`inline-block`}
@@ -1088,29 +1060,23 @@ const SectionIntegrations = styled(SectionIntegrationsCmp)`
   ${angle('right')};
 
   img {
-    ${tw`block w-36`}
-    margin: 0 auto 20px;
+    ${tw`block w-36 mt-0 mx-auto mb-5`}
   }
   h2 {
-    ${tw`text-center`}
-    margin: 0 0 30px;
+    ${tw`text-center mt-0 mx-0 mb-7`}
   }
   p {
-    ${tw`block text-lg max-w-full leading-none text-center`}
-    margin: 0 auto 40px;
+    ${tw`block text-lg max-w-full leading-none text-center mt-0 mx-auto mb-10`}
     width: 800px;
   }
   .-boxes {
     ${tw`flex flex-row flex-wrap text-xl`}
   }
   .-box {
-    ${tw`bg-white shadow-2xl p-5 text-center`}
-    flex: 1 1 100%;
-    margin: 0 0 20px;
+    ${tw`bg-white shadow-2xl p-5 text-center flex-100 mt-0 mx-0 mb-5`}
 
     h5 {
-      ${tw`text-primaryDarker pb-2.5 border-b-2 border-solid border-gray-200`}
-      margin: 0 0 20px;
+      ${tw`text-primaryDarker pb-2.5 border-b-2 border-solid border-gray-200 mt-0 mx-0 mb-5`}
     }
     ul {
       ${tw`inline-block`}
@@ -1124,8 +1090,7 @@ const SectionIntegrations = styled(SectionIntegrationsCmp)`
   }
   @media screen and (min-width: 600px) {
     .-box {
-      flex: 1 1 300px;
-      margin: 0 1% 20px;
+      ${tw`flex-300 mt-0 mx-1/100 mb-5`}
     }
   }
 `

@@ -20,19 +20,14 @@ const PostContainer = styled('div')`
 `
 
 const Post = styled('div')`
-  ${tw`bg-white rounded-xlg shadow-2xl m-2 float-left h-auto`}
-  width: 30%;
+  ${tw`bg-white rounded-xl shadow-2xl m-2 float-left h-auto w-3/10`}
 
   @media only screen and (max-width: 900px) {
-    ${tw``}
-    width: 90%;
-    display: block;
-    margin-bottom: 20px;
+    ${tw`block mb-5 w-11/12`}
   }
 
   .titleImg {
-    ${tw`block bg-top bg-cover shadow-lg opacity-90 rounded-xlg`}
-    transition: all 0.5s ease;
+    ${tw`block bg-top bg-cover shadow-lg opacity-90 rounded-xl transition-all duration-500 `}
 
     > div {
       ${tw`pb-1/2`}
@@ -97,9 +92,7 @@ const Post = styled('div')`
   }
 
   .linkStyle {
-    :hover {
-      ${tw`underline`}
-    }
+    ${tw`hover:(underline)`}
   }
 `
 

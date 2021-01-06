@@ -34,9 +34,7 @@ const Section = ({ children, ...rest }) => (
 const section = css`
   ${tw`z-0`}
   .inner {
-    ${tw`mx-auto flex flex-wrap items-center`}
-    max-width: ${props => props.theme.maxWidth}px;
-    padding: 5% 10%;
+    ${tw`mx-auto flex flex-wrap items-center max-w-default py-5/100 px-1/10`}
   }
   img {
     ${tw`w-full`}
@@ -44,8 +42,7 @@ const section = css`
   ${belowMobile} {
     .left,
     .right {
-      ${tw`mx-0`}
-      flex: 1 1 100%;
+      ${tw`mx-0 flex-100`}
     }
     .left {
       ${tw`mb-8`}
@@ -55,11 +52,10 @@ const section = css`
 
 const layout = css`
   .left {
-    ${tw`mr-10`}
-    flex: 1 1 300px;
+    ${tw`mr-10 flex-300`}
   }
   .right {
-    flex: 1 1 300px;
+    ${tw`flex-300`}
   }
 `
 
@@ -94,8 +90,7 @@ const SectionTestimonials = styled(Section)`
   }
   ${belowTablet} {
     .testimonial {
-      ${tw`mb-12`}
-      flex: 1 1 100%;
+      ${tw`mb-12 flex-100`}
     }
   }
 `
@@ -133,7 +128,7 @@ const SectionAction = styled(Section)`
     ${tw`flex flex-col text-white text-center shadow-2xl justify-between overflow-hidden self-center`}
     transition: all 0.4s ease-out;
     h4 {
-      margin: 2rem 1rem;
+      ${tw`my-8 mx-4`}
     }
     button {
       ${tw`text-center m-0 p-4 w-full text-xl rounded-none leading-none`}
@@ -169,11 +164,12 @@ const SectionAction = styled(Section)`
       }
     }
     .title {
-      ${tw`font-bold`}
-      padding: 0 20px;
+      ${tw`font-bold px-5`}
+   
     }
     .row {
-      padding: 0px 8px;
+      ${tw`px-2`}
+      
     }
     
 

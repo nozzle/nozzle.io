@@ -30,12 +30,7 @@ const PostH1 = styled(H1)`
 
 const PostContainer = styled('article')`
   .back {
-    ${tw`opacity-60 inline-block mb-8`}
-    transition: all 0.1s ease-out;
-
-    :hover {
-      ${tw`opacity-100`}
-    }
+    ${tw`opacity-60 inline-block mb-8 transition ease-out duration-100 hover:(opacity-100)`}
   }
 
   .info {
@@ -46,26 +41,25 @@ const PostContainer = styled('article')`
     ${tw`text-sm mb-4 leading-none`}
 
     .category {
-      ${tw`inline-block p-3 rounded-xl bg-primary text-white`}
-      margin: 0 0.3rem 0.3rem 0;
+      ${tw`inline-block p-3 rounded-xl bg-primary text-white mr-1.5 mb-1.5`}
     }
   }
 `
 
 const PostStyles = styled('div')`
-  ${tw`mx-auto p-8 max-w-full`}
-  width: 900px;
+  ${tw`mx-auto p-8 max-w-full w-225`}
 
   @media screen and (max-width: 1500px) {
-    width: 800px;
+    ${tw`w-200`}
   }
 
   @media screen and (max-width: 1000px) {
-    width: 650px;
+    ${tw`w-162`}
   }
 
   @media screen and (max-width: 600px) {
-    padding: 0 1rem 1rem;
+    ${tw`px-4 pb-4`}
+
     p {
       ${tw`text-base`}
     }

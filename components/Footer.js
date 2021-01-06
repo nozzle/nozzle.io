@@ -6,8 +6,7 @@ import tw from 'twin.macro'
 const belowMobile = `@media(max-width: ${700}px)`
 
 const FooterStyles = styled('div')`
-  ${tw`relative p-4 bg-primary text-white shadow`}
-  z-index: 1;
+  ${tw`relative p-4 bg-primary text-white shadow z-1`}
 
   ${belowMobile} {
     .container {

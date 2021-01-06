@@ -12,7 +12,7 @@ const Styles = styled(Container)`
   ${tw`text-center`}
 
   h1 {
-    padding: 3rem 1rem;
+    ${tw`py-12 px-4`}
   }
 
   h4 {
@@ -24,9 +24,7 @@ const Styles = styled(Container)`
   }
 
   .form {
-    ${tw`inline-block mx-auto`}
-    width: 500px;
-    padding: 0 1rem;
+    ${tw`inline-block mx-auto px-4 w-125`}
   }
 `
 

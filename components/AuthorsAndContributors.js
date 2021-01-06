@@ -4,8 +4,7 @@ import tw from 'twin.macro'
 import Smackdown from 'components/Smackdown'
 
 const Container = styled('div')`
-  ${tw`relative my-12 p-4 rounded-xl`}
-  background: #e8e8e8;
+  ${tw`relative my-12 p-4 rounded-xl bg-gray-200`}
 `
 
 const Heading = styled('div')`
@@ -21,8 +20,7 @@ const Heading = styled('div')`
 `
 
 const AuthorBio = styled('div')`
-  ${tw`relative p-4 rounded-xl`}
-  background: #f9f9f9;
+  ${tw`relative p-4 rounded-xl bg-white`}
 
   .authorName {
     ${tw`text-4xl pb-4 leading-none`}
@@ -52,10 +50,9 @@ const Contributors = styled('div')`
   }
 
   .nameBox .name {
-    ${tw`invisible w-28 text-white text-center rounded absolute left-1/2`}
+    ${tw`invisible w-28 text-white text-center rounded absolute left-1/2 z-1 `}
     background-color: #2b3640;
     padding: 5px 0;
-    z-index: 1;
     bottom: 120%;
     margin-left: -60px;
   }

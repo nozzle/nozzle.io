@@ -168,8 +168,8 @@ export default function GoogleKeywordRankCheckerTool() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="Google Keyword Rank Checker | Nozzle’s Rank Tracking and SERP Monitoring Tool"
-        description="Nozzle’s Google search website rank tracker tool provides all the SERP data to direct your SEO strategy"
+        title="Google Keyword Rank Checker Tool | Nozzle’s Rank Tracker and SERP Monitoring Tool"
+        description="Nozzle’s Google rank tracker tool provides all the SERP data to direct your SEO strategy. Prepare to have your mind blown!"
       />
       <main>
         <SectionKnowEverything>
@@ -188,7 +188,7 @@ export default function GoogleKeywordRankCheckerTool() {
           <Right>
             <Img
               src={require('public/img/dashboard.png')}
-              alt="Enterprise Keyword Rank Tracker Tool Dashboard"
+              alt="Enterprise website keyword rank tracker tool dashboard"
             />
           </Right>
         </SectionKnowEverything>
@@ -206,7 +206,7 @@ export default function GoogleKeywordRankCheckerTool() {
                 <div className="-image">
                   <Img
                     src={require('public/img/wholeSerp.png')}
-                    alt="Google keyword rank tracker pulls SERP data"
+                    alt="Analyze the whole SERP with Nozzle's Google rank tracker tool"
                   />
                 </div>
                 <div className="content">
@@ -222,7 +222,7 @@ export default function GoogleKeywordRankCheckerTool() {
                 <div className="-image">
                   <Img
                     src={require('public/img/featuredSnippets.jpg')}
-                    alt=""
+                    alt="Track featured snippet competitors with Nozzle's Google search keyword rank checker"
                   />
                 </div>
 
@@ -237,7 +237,7 @@ export default function GoogleKeywordRankCheckerTool() {
               <div className="box">
                 <H4>Extract all industry-related People Also Ask questions</H4>
                 <div className="-image">
-                  <Img src={require('public/img/paaDashboard.jpg')} alt="" />
+                  <Img src={require('public/img/paaDashboard.jpg')} alt="People Also Ask questions pulled by Nozzle's Google rank checker tool" />
                 </div>
                 <div className="content">
                   <div>
@@ -256,7 +256,7 @@ export default function GoogleKeywordRankCheckerTool() {
                 <div className="-image">
                   <Img
                     src={require('public/img/competitorsAds.gif')}
-                    alt="Competitor analysis using Nozzle’s Google keyword rank tracker Google (keyword) rank tracker\checker (tool)"
+                    alt="Competitor analysis using Nozzle’s Google keyword rank tracker"
                   />
                 </div>
 

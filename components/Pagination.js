@@ -6,8 +6,7 @@ const Container = styled('ul')`
   ${tw`pt-4 block pb-16 w-auto m-auto`}
 
   .page {
-    ${tw`text-black float-left no-underline cursor-pointer rounded border border-solid border-gray-300 py-2 px-4 mx-1 my-0 hover:(bg-gray-300)`}
-    transition: background-color 0.3s;
+    ${tw`text-black float-left no-underline cursor-pointer rounded border border-solid border-gray-300 py-2 px-4 mx-1 my-0 transition duration-300 hover:(bg-gray-300)`}
   }
 
   .activePage {

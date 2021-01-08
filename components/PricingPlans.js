@@ -42,11 +42,8 @@ const Plan = styled('div')`
   transition: all 0.4s ease-out;
 
   button {
-    ${tw`text-center text-lg leading-none m-0 p-4 w-full rounded-none`}
+    ${tw`text-center text-lg leading-none m-0 p-4 w-full rounded-none hover:(transform-none shadow-none)`}
     transition: all 0.15s ease-out !important;
-    :hover {
-      ${tw`transform-none shadow-none`}
-    }
   }
   :first-child {
     ${tw`bg-primaryDark rounded-l`}
@@ -67,10 +64,9 @@ const Plan = styled('div')`
     z-index: 2;
   }
   :nth-child(4) {
-    ${tw`bg-primary rounded-r`}
+    ${tw`bg-primary rounded-r z-1`}
     flex: 1 1 22%;
     min-height: 390px;
-    z-index: 1;
   }
   .plan-inner {
     ${tw`flex p-5 justify-between flex-col text-sm leading-none `}
@@ -78,15 +74,13 @@ const Plan = styled('div')`
   }
 
   @media screen and (max-width: 900px) {
-    ${tw`rounded`}
+    ${tw`rounded mt-0 mx-1/100 mb-2.5`}
     flex: 1 1 48% !important;
     min-height: auto !important;
-    margin: 0 1% 10px;
   }
 
   @media screen and (max-width: 500px) {
-    flex: 1 1 100% !important;
-    margin: 0 0 10px;
+    ${tw`flex-100! mt-0 mx-0 mb-2.5`}
   }
 
   @media screen and (min-width: 900px) {
@@ -96,9 +90,7 @@ const Plan = styled('div')`
   }
 `
 const Title = styled(H4)`
-  ${tw`font-bold`}
-  padding: 0 20px;
-  margin: 2rem 1rem;
+  ${tw`font-bold my-8 mx-4 py-0 px-5`}
 `
 const Price = styled('div')`
   ${tw`text-xs leading-none p-2.5`}

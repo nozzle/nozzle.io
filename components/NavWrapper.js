@@ -7,7 +7,7 @@ import Footer from './Footer'
 // import ExitIntent from './ExitIntent'
 
 const PageStyles = styled('div')`
-  min-height: 100%;
+  ${tw`min-h-full`}
 `
 
 const ContentStyled = styled('div')`

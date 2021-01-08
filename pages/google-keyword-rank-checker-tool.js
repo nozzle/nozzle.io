@@ -100,8 +100,10 @@ const SectionFeatures = styled(Section)`
 const SectionBoxes = styled(Section)`
   ${angle('right')};
   ${tw`bg-primaryDarker text-white`}
+  padding-bottom: 2rem;
   .-header {
-    padding: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
     h2 {
       ${tw`mx-auto block text-center my-12 `}
     }
@@ -166,7 +168,7 @@ export default function GoogleKeywordRankCheckerTool() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="Enterprise-level Google Rank Checker"
+        title="Google Keyword Rank Checker | Nozzle’s Rank Tracking and SERP Monitoring Tool"
         description="The tool that interacts seamlessly with Data Studio, Tableau,
               PowerBI, etc. to make your life easier."
       />

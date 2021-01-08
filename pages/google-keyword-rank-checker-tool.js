@@ -175,8 +175,8 @@ export default function GoogleKeywordRankCheckerTool() {
           <Left>
             <H2>Enterprise-level Google Rank Checker</H2>
             <P>
-              The tool that interacts seamlessly with Data Studio, Tableau,
-              PowerBI, etc. to make your life easier.
+              The keyword tracker tool that collects all of the data from every
+              SERP that is important to you
             </P>
             <Link href="/trial">
               <Button color="success" burst>

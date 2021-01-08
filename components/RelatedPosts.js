@@ -39,7 +39,7 @@ const Post = styled('div')`
     transition: all 0.5s ease;
 
     > div {
-      padding-bottom: 50%;
+      ${tw`pb-1/2`}
     }
   }
 
@@ -77,9 +77,7 @@ const Post = styled('div')`
   }
 
   .linkStyle {
-    :hover {
-      ${tw`underline`}
-    }
+    ${tw`hover:(underline)`}
   }
 `
 

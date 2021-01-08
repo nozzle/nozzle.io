@@ -210,8 +210,14 @@ const SectionCustomers = styled(Section)`
   }
 
   img {
-    ${tw`w-40 m-5 opacity-60`}
+    ${tw`w-40 m-5 opacity-60 `}
     -webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%);
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 
   .bigLogo {

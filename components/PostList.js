@@ -92,9 +92,7 @@ const Post = styled('div')`
   }
 
   .linkStyle {
-    :hover {
-      ${tw`underline`}
-    }
+    ${tw`hover:(underline)`}
   }
 `
 

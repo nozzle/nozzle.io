@@ -30,17 +30,14 @@ export const button = props => css`
 export const buttonSize = ({ size = '' }) =>
   size === 'lg'
     ? css`
-        ${tw`text-lg leading-none`}
-        padding: 1rem 1.4rem;
+        ${tw`text-lg leading-none py-4 px-6`}
       `
     : size === 'sm'
     ? css`
-        ${tw`text-sm leading-none`}
-        padding: 0.6rem 1rem;
+        ${tw`text-sm leading-none py-2 px-5`}
       `
     : css`
-        ${tw`text-base leading-none`}
-        padding: 0.8rem 1.2rem;
+        ${tw`text-base leading-none py-3 px-5`}
       `
 
 const full = ({ full }) =>
@@ -188,8 +185,7 @@ export const Table = styled(TableCmp)`
 
   th,
   td {
-    ${tw`overflow-ellipsis overflow-hidden`}
-    padding: 7px 5px;
+    ${tw`overflow-ellipsis overflow-hidden py-2 px-1`}
 
     &:hover {
       ${tw`overflow-visible`}
@@ -199,7 +195,7 @@ export const Table = styled(TableCmp)`
   thead {
     th,
     td {
-      ${tw`bg-white text-darker`}
+      ${tw`bg-white text-darker `}
       font-weight: ${props => props.theme.weights.bold};
       border-right: 1px solid rgba(0, 0, 0, 0.05);
     }

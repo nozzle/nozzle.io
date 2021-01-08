@@ -169,8 +169,7 @@ export default function GoogleKeywordRankCheckerTool() {
     <div style={{ overflow: 'hidden' }}>
       <Head
         title="Google Keyword Rank Checker | Nozzle’s Rank Tracking and SERP Monitoring Tool"
-        description="The tool that interacts seamlessly with Data Studio, Tableau,
-              PowerBI, etc. to make your life easier."
+        description="Nozzle’s Google search website rank tracker tool provides all the SERP data to direct your SEO strategy"
       />
       <main>
         <SectionKnowEverything>

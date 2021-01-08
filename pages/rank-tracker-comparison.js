@@ -41,6 +41,9 @@ const SectionWhyAnother = styled('section')`
   ${section};
   ${angle('right')};
   ${tw`bg-primaryDarker text-white`}
+  a {
+    ${tw`text-primaryLighter hover:(underline)`}
+  }
 `
 
 const TableSection = styled('section')`
@@ -88,8 +91,11 @@ export default function RankTrackerComparison() {
                 every single one along with their strengths and weaknesses. Our
                 findings left us wanting and needing more power and flexibility
                 in a ranking tool that didn't exist yet. As other providers
-                continued to neglect our needs of a modern <a href="https://nozzle.io/google-keyword-rank-checker-tool">Google keyword rank tracker</a>,
-                we were left with only one choice: Build the biggest, baddest,
+                continued to neglect our needs of a modern{' '}
+                <Link href="/google-keyword-rank-checker-tool">
+                  Google keyword rank tracker
+                </Link>
+                , we were left with only one choice: Build the biggest, baddest,
                 seo rank tracker anyone has ever used.
               </P>
             </Center>

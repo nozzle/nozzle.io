@@ -271,16 +271,26 @@ const links = [
   },
   { name: 'Testimonials', path: '/testimonials' },
   {
-    name: 'Blog',
-    path: '/blog',
-  },
-  {
     name: 'About',
     path: '/about',
   },
   {
-    name: 'Research',
-    path: '/nozzle-research',
+    name: 'Resources',
+    path: '',
+    links: [
+      {
+        name: 'Blog',
+        path: '/blog',
+      },
+      {
+        name: 'Research',
+        path: '/nozzle-research',
+      },
+      {
+        name: 'PAA Expansion Deliverable',
+        path: '/paa',
+      },
+    ],
   },
 ]
 

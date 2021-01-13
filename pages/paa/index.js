@@ -230,7 +230,7 @@ export default function PaaDashBoard({ testimonials }) {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="PAA Expansion Deliverable | Nozzle"
+        title="People Also Ask Question Generator | Find Google’s PAA Questions Based on your Keywords with our Keyword Question Tool"
         description="Find the right questions to answer on your website"
       />
       <main>
@@ -273,7 +273,13 @@ export default function PaaDashBoard({ testimonials }) {
                 </Li>
               </Ul>
             </P>
-
+            <P>
+              Knowing the PAA questions served up for your keywords can help you
+              optimize for People Also Ask boxes, give you ideas for blog posts
+              and other content, and guide your SEO strategy. Try our keyword
+              question generator today!
+            </P>
+            <br />
             <P>
               {' '}
               <a
@@ -290,7 +296,10 @@ export default function PaaDashBoard({ testimonials }) {
             <br />
           </div>
           <div className="right">
-            <Img src="img/paaBox.jpg" />
+            <Img
+              src="img/paaBox.jpg"
+              alt="google’s people also ask boxes help find questions related to your keywords"
+            />
             <div>
               <div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />
             </div>

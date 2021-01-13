@@ -33,7 +33,10 @@ const Name = styled('div')`
   ${tw`text-gray-900 font-bold text-3xl mb-2 `}
 
   .company {
-    ${tw`text-gray-600 font-semibold text-lg hover:underline`}
+    ${tw`text-gray-600 font-semibold text-lg `}
+    a {
+      ${tw`hover:(underline)`}
+    }
   }
 `
 
@@ -86,13 +89,19 @@ export default function Testimonials({ testimonial }) {
                             {testimonial.fields.name}
                             {testimonial.fields.companyName ? (
                               <div className="company">
-                                <a
-                                  href={testimonial.fields.companyWebsite}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  {testimonial.fields.companyName}
-                                </a>
+                                {testimonial.fields.companyWebsite ? (
+                                  <a
+                                    href={testimonial.fields.companyWebsite}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    {testimonial.fields.companyName}
+                                  </a>
+                                ) : (
+                                  <div className="company">
+                                    {testimonial.fields.companyName}
+                                  </div>
+                                )}
                               </div>
                             ) : (
                               ''

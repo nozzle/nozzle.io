@@ -75,9 +75,9 @@ const SectionKnowEverything = styled(Section)`
 
   .right {
     flex: 2 1 300px;
+
     img {
-      max-width: 1500px;
-      width: 220%;
+      ${tw`max-w-screen-2xl w-double`}
     }
   }
 `
@@ -90,20 +90,14 @@ const SectionFeatures = styled(Section)`
   p {
     ${tw`max-w-4xl mx-auto`}
   }
-
-  img {
-    ${tw`max-w-full rounded shadow-2xl`}
-    width: 900px;
-  }
 `
 
 const SectionBoxes = styled(Section)`
   ${angle('right')};
-  ${tw`bg-primaryDarker text-white`}
-  padding-bottom: 2rem;
+  ${tw`bg-primaryDarker text-white pb-8`}
+
   .-header {
-    padding-left: 4%;
-    padding-right: 4%;
+    ${tw`px-4/100`}
     h2 {
       ${tw`mx-auto block text-center my-12 `}
     }
@@ -112,12 +106,10 @@ const SectionBoxes = styled(Section)`
     ${tw`max-w-2xl mx-auto mb-10`}
   }
   .boxes {
-    ${tw`flex flex-wrap mx-4`}
-    justify-content: center;
+    ${tw`flex flex-wrap mx-4 justify-center`}
   }
   .box {
-    ${tw`mb-5 bg-white rounded flex flex-col flex-wrap flex-100`}
-    max-width: 475px;
+    ${tw`mb-5 bg-white rounded flex flex-col flex-wrap flex-100 max-w-md`}
     color: initial;
 
     h4 {
@@ -134,9 +126,7 @@ const SectionBoxes = styled(Section)`
           inset 0 -40px 40px -40px rgba(0, 0, 0, 0.3);
       }
       img {
-        ${tw`block mx-auto z-0`};
-        height: 250px;
-        width: 100%;
+        ${tw`block mx-auto z-0 w-full h-60`};
       }
     }
     .content {
@@ -237,7 +227,10 @@ export default function GoogleKeywordRankCheckerTool() {
               <div className="box">
                 <H4>Extract all industry-related People Also Ask questions</H4>
                 <div className="-image">
-                  <Img src={require('public/img/paaDashboard.jpg')} alt="People Also Ask questions pulled by Nozzle's Google rank checker tool" />
+                  <Img
+                    src={require('public/img/paaDashboard.jpg')}
+                    alt="People Also Ask questions pulled by Nozzle's Google rank checker tool"
+                  />
                 </div>
                 <div className="content">
                   <div>

@@ -57,7 +57,7 @@ const SectionProjects = styled(Section)`
   .title {
     ${tw`w-full text-center mb-8`}
   }
-  li {
+  a {
     ${tw`hover:(underline)`}
   }
 `
@@ -76,7 +76,7 @@ const SectionForm = styled(Section)`
   ${section}
 
   .intro {
-    ${tw`mt-4`}
+    ${tw`mt-4 text-center`}
   }
 `
 

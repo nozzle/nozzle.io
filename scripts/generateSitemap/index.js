@@ -49,7 +49,7 @@ function getPages() {
     const files = fs.readdirSync(dir)
     files.forEach(file => {
       // Construct whole file-path & retrieve file's stats
-      const filePath = file == 'index' ? `${dir}` : `${dir}${file}`
+      const filePath = `${dir}${file}`
       const fileStat = fs.statSync(filePath)
 
       if (ignores.some(ignore => filePath.match(ignore))) {
@@ -60,10 +60,11 @@ function getPages() {
         // Recurse one folder deeper
         walkSync(`${filePath}/`)
       } else {
-        // Construct this file's pathname excluding the "pages" folder & its extension
+        // Construct this file's pathname excluding the "pages" folder & its extension and the /index ending
         const fileName = filePath
           .substr(0, filePath.lastIndexOf('.'))
           .replace('pages/', '')
+          .replace('/index', '')
 
         // Add this file to `fileObj`
         fileObj[`/${fileName}`] = {

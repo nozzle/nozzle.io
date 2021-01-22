@@ -60,10 +60,12 @@ function getPages() {
         // Recurse one folder deeper
         walkSync(`${filePath}/`)
       } else {
-        // Construct this file's pathname excluding the "pages" folder & its extension
+        // Construct this file's pathname excluding the "pages" folder & its extension and the /index ending
         const fileName = filePath
           .substr(0, filePath.lastIndexOf('.'))
           .replace('pages/', '')
+          .replace('/index', '')
+          .replace('index', '')
 
         // Add this file to `fileObj`
         fileObj[`/${fileName}`] = {

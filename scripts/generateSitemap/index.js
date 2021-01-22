@@ -49,7 +49,7 @@ function getPages() {
     const files = fs.readdirSync(dir)
     files.forEach(file => {
       // Construct whole file-path & retrieve file's stats
-      const filePath = `${dir}${file}`
+      const filePath = file == 'index' ? `${dir}` : `${dir}${file}`
       const fileStat = fs.statSync(filePath)
 
       if (ignores.some(ignore => filePath.match(ignore))) {

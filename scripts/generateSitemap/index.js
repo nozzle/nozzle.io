@@ -65,6 +65,7 @@ function getPages() {
           .substr(0, filePath.lastIndexOf('.'))
           .replace('pages/', '')
           .replace('/index', '')
+          .replace('index', '')
 
         // Add this file to `fileObj`
         fileObj[`/${fileName}`] = {

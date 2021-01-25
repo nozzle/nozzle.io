@@ -42,7 +42,7 @@ export default function DevBlog({ posts, categories }) {
   return (
     <div>
       <Head
-        title="Blog | Nozzle"
+        title="Nozzle Blog - SEO Data From An Enterprise Level Keyword Rank Tracker Tool"
         description="The Nozzle blog provides SEO tips, strategies, and information for ranking better in the SERPs. Don't forget to monitor your keywords with Nozzle too. :)"
       />
       <main>

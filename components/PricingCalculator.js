@@ -295,7 +295,7 @@ export default function PricingCalculator({ plans, monthly }) {
     totalMonthly += parseInt(row.keywords.monthly || 0)
     totalDevices += parseInt(row.devices)
     totalLocations += parseInt(row.locations)
-    keywords += parseInt(row.keywords.hourly || 0) * 30 * 24 * 5
+    keywords += parseInt(row.keywords.hourly || 0) * 30 * 24 * 2
     keywords += parseInt(row.keywords.daily || 0) * 30
     keywords += parseInt(row.keywords.weekly || 0) * 4
     keywords += parseInt(row.keywords.monthly || 0)

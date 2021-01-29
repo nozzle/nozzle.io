@@ -228,3 +228,19 @@ const normalizePaaTestimonial = testimonial => {
     ...testimonial,
   }
 }
+
+export async function fetchFaqs() {
+  const { items } = await client.getEntries({
+    content_type: 'faq',
+    limit: 1000,
+  })
+  const faqs = items.map(normalizeFaqs)
+  return {
+    faqs: orderBy(faqs, [d => d.fields.question], ['asc']),
+  }
+}
+const normalizeFaqs = faq => {
+  return {
+    ...faq,
+  }
+}

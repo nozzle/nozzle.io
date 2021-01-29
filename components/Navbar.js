@@ -282,13 +282,14 @@ const links = [
         name: 'Blog',
         path: '/blog',
       },
-      {
-        name: 'Research',
-        path: '/nozzle-research',
-      },
+      { name: 'FAQs', path: '/faq' },
       {
         name: 'PAA Expansion Deliverable',
         path: '/paa',
+      },
+      {
+        name: 'Research',
+        path: '/nozzle-research',
       },
     ],
   },

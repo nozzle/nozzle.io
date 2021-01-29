@@ -64,7 +64,7 @@ export default function Faq({ faqs }) {
           <Top>
             <Container>
               <Center>
-                <H1>Faqs</H1>
+                <H1>Frequently Asked Questions</H1>
                 <P>Some common questions that people have about nozzle.</P>
               </Center>
             </Container>

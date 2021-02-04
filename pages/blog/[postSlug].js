@@ -143,7 +143,17 @@ export default function BlogPost({ post, relatedPosts }) {
               {post.fields.template?.fields.name === 'Tweet List' ? (
                 <>
                   <Smackdown source={post.fields.body} />
+                  {post.fields.body2 ? (
+                    <Smackdown source={post.fields.body2} />
+                  ) : (
+                    ''
+                  )}
                   <TweetList tweets={post.fields.tweets} />
+                </>
+              ) : post.fields.body2 ? (
+                <>
+                  <Smackdown source={post.fields.body} />
+                  <Smackdown source={post.fields.body2} />
                 </>
               ) : (
                 <Smackdown source={post.fields.body} />

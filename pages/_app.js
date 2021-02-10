@@ -70,6 +70,10 @@ export default function MyApp({ Component, pageProps }) {
       <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Nozzle">
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="facebook-domain-verification"
+          content="ywyj0bgycebyurwew2ipmicuwphhkq"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

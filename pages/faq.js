@@ -23,7 +23,7 @@ const FaqStyles = styled('div')`
 `
 
 const Box = styled('div')`
-  ${tw`pt-8`}
+  ${tw`pt-16 mt--8`}
 `
 
 const Text = styled('div')`

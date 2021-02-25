@@ -11,7 +11,6 @@ import Head from 'components/Head'
 import Icon from 'components/Icon'
 import Link from 'next/link'
 import Smackdown from 'components/Smackdown'
-import Comments from 'components/Comments'
 
 import { Container, Header } from 'components/Layout'
 import { H1, H3 } from 'components/Html'
@@ -160,10 +159,6 @@ export default function BlogPost({ post, relatedPosts }) {
               )}
               <AuthorsAndContributors post={post} />
 
-              <Comments
-                path={`/blog/${post.fields.slug}`}
-                title={post.fields.title}
-              />
               <H3
                 css={`
                   ${tw`mt-4 text-center`}

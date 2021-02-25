@@ -12,7 +12,6 @@ import Head from 'components/Head'
 import Icon from 'components/Icon'
 import Link from 'next/link'
 import Smackdown from 'components/Smackdown'
-import Comments from 'components/Comments'
 
 import { Container, Header } from 'components/Layout'
 import { H1 } from 'components/Html'
@@ -138,12 +137,7 @@ export default function DevBlogPost({ post }) {
             </PostStyles>
           </Container>
         </PostContainer>
-        <PostStyles>
-          <Comments
-            path={`/devblog/${post.fields.slug}`}
-            title={post.fields.title}
-          />
-        </PostStyles>
+        <PostStyles></PostStyles>
       </main>
     </div>
   )

@@ -293,6 +293,7 @@ const links = [
       },
     ],
   },
+  { name: 'Log In', path: 'https://beta.nozzle.io' },
 ]
 
 export default function Navbar(props) {

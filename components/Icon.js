@@ -61,6 +61,8 @@ const icons = {
   linkedin: 'fab fa-linkedin-in',
   buffer: 'fab fa-buffer',
   facebookLetter: 'fab fa-facebook-f',
+  pinterest: 'fab fa-pinterest-p',
+  youtube: 'fab fa-youtube',
 }
 
 const IStyled = styled('i')`

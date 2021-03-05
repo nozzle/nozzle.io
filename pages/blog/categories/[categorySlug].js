@@ -57,6 +57,7 @@ export default function BlogTag({ category, posts }) {
           </SubMenu>
         </Header>
         <Container>
+          {category.fields.description ? category.fields.description : null}
           <PostList prefix="blog" posts={currentPosts} />
           <Pagination
             postsPerPage={postsPerPage}

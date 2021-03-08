@@ -5,15 +5,16 @@ import Link from 'next/link'
 import Icon from 'components/Icon'
 import Head from 'components/Head'
 import Pagination from 'components/Pagination'
+import Smackdown from 'components/Smackdown'
 
 import { Container, Header, SubMenu } from 'components/Layout'
-import { H1, P } from 'components/Html'
+import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import { fetchBlogPostsByCategorySlug } from '../../../contentful'
 import tw from 'twin.macro'
 
-const BackButton = styled('a')`
-  ${tw`opacity-60 inline-block mb-8 transition ease-out duration-100 hover:(opacity-100)`}
+const DescriptionStyles = styled('div')`
+  ${tw`mx-auto p-8 max-w-full`}
 `
 
 export async function getServerSideProps(req) {
@@ -50,19 +51,23 @@ export default function BlogTag({ category, posts }) {
       <Head title={`${category.fields.name} | Nozzle`} />
       <main>
         <Header>
-          <Link href="/blog">
-            <BackButton>
-              <Icon i="arrow-left" /> Back
-            </BackButton>
-          </Link>
           <H1>Blog - {category.fields.name}</H1>
           <SubMenu>
-            {category.fields.description ? (
-              <P>{category.fields.description}</P>
-            ) : null}
+            <ul>
+              <Link href="/blog/">
+                <a>
+                  <Icon i="arrow-left" /> Back
+                </a>
+              </Link>
+            </ul>
           </SubMenu>
         </Header>
         <Container>
+          {category.fields.description ? (
+            <DescriptionStyles>
+              <Smackdown source={category.fields.description} />
+            </DescriptionStyles>
+          ) : null}
           <PostList prefix="blog" posts={currentPosts} />
           <Pagination
             postsPerPage={postsPerPage}

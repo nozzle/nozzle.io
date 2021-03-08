@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Smackdown from 'components/Smackdown'
 
 const Container = styled('div')`
-  ${tw`relative my-12 p-4 rounded-xl bg-gray-200`}
+  ${tw`relative mt-4 mb-8 p-4 rounded-xl bg-gray-200`}
 `
 
 const Heading = styled('div')`

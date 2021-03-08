@@ -43,6 +43,14 @@ const PostContainer = styled('article')`
       ${tw`inline-block p-3 rounded-xl bg-primary text-white mr-1.5 mb-1.5`}
     }
   }
+
+  .tags {
+    ${tw`text-sm pt-4 leading-none`}
+
+    .tag {
+      ${tw`inline-block p-3 rounded-xl bg-gray-400 text-white mr-1.5 mb-1.5 hover:(opacity-80)`}
+    }
+  }
 `
 
 const PostStyles = styled('div')`
@@ -157,6 +165,17 @@ export default function BlogPost({ post, relatedPosts }) {
               ) : (
                 <Smackdown source={post.fields.body} />
               )}
+              <div className="tags">
+                {post.fields.tags?.map(tag => (
+                  <Link
+                    href="/blog/tags/[tag]"
+                    as={`/blog/tags/${tag.fields.slug}`}
+                    key={tag.fields.slug}
+                  >
+                    <a className="tag">{tag.fields.name}</a>
+                  </Link>
+                ))}
+              </div>
               <AuthorsAndContributors post={post} />
 
               <H3

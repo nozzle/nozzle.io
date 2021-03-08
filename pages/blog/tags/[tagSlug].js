@@ -1,6 +1,8 @@
 import React from 'react'
-//
+import tw from 'twin.macro'
 import styled from 'styled-components'
+//
+
 import Link from 'next/link'
 import Icon from 'components/Icon'
 import Head from 'components/Head'
@@ -10,21 +12,20 @@ import Smackdown from 'components/Smackdown'
 import { Container, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
-import { fetchBlogPostsByCategorySlug } from '../../../contentful'
-import tw from 'twin.macro'
+import { fetchBlogPostsByTagSlug } from '../../../contentful'
 
 const DescriptionStyles = styled('div')`
   ${tw`mx-auto p-8 max-w-full`}
 `
 
 export async function getServerSideProps(req) {
-  const props = await fetchBlogPostsByCategorySlug(req.query.categorySlug)
+  const props = await fetchBlogPostsByTagSlug(req.query.tagSlug)
   return {
     props,
   }
 }
 
-export default function BlogTag({ category, posts }) {
+export default function BlogTag({ tag, posts }) {
   const [currentPage, setCurrentPage] = React.useState(1)
   const postsPerPage = 12
 
@@ -48,10 +49,10 @@ export default function BlogTag({ category, posts }) {
 
   return (
     <div>
-      <Head title={`${category.fields.name} | Nozzle`} />
+      <Head title={`${tag.fields.name} | Nozzle`} />
       <main>
         <Header>
-          <H1>Blog - {category.fields.name}</H1>
+          <H1>Blog - {tag.fields.name}</H1>
           <SubMenu>
             <ul>
               <Link href="/blog/">
@@ -63,9 +64,9 @@ export default function BlogTag({ category, posts }) {
           </SubMenu>
         </Header>
         <Container>
-          {category.fields.description ? (
+          {tag.fields.description ? (
             <DescriptionStyles>
-              <Smackdown source={category.fields.description} />
+              <Smackdown source={tag.fields.description} />
             </DescriptionStyles>
           ) : null}
           <PostList prefix="blog" posts={currentPosts} />

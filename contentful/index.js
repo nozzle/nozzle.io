@@ -42,6 +42,15 @@ const getCategoriesFromPosts = posts =>
     d => d.sys.id
   )
 
+const getTagsFromPosts = posts =>
+  uniq(
+    flatten(
+      posts.map(d => d.fields.tags),
+      d => d.sys.id
+    ),
+    d => d.sys.id
+  )
+
 export async function fetchAuthors() {
   const { items } = await client.getEntries({
     content_type: '1kUEViTN4EmGiEaaeC6ouY',
@@ -121,6 +130,29 @@ export async function fetchBlogPostsByCategorySlug(categorySlug) {
     posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories,
     category,
+  }
+}
+
+export async function fetchBlogPostsByTagSlug(tagSlug) {
+  const {
+    items: [tag],
+  } = await client.getEntries({
+    content_type: 'blogTag',
+    'fields.slug': tagSlug,
+  })
+
+  let { items: posts } = await client.getEntries({
+    content_type: '2wKn6yEnZewu2SCCkus4as',
+    'fields.tags.sys.id': tag.sys.id,
+  })
+
+  posts = posts.map(normalizePost)
+  const tags = getTagsFromPosts(posts)
+
+  return {
+    posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
+    tags,
+    tag,
   }
 }
 

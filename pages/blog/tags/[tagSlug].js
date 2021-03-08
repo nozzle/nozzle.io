@@ -1,29 +1,30 @@
 import React from 'react'
+import tw from 'twin.macro'
 //
-import styled from 'styled-components'
+
 import Link from 'next/link'
 import Icon from 'components/Icon'
 import Head from 'components/Head'
 import Pagination from 'components/Pagination'
+import styled from 'styled-components'
 
 import { Container, Header, SubMenu } from 'components/Layout'
 import { H1, P } from 'components/Html'
 import PostList from 'components/PostList'
-import { fetchBlogPostsByCategorySlug } from '../../../contentful'
-import tw from 'twin.macro'
+import { fetchBlogPostsByTagSlug } from '../../../contentful'
 
 const BackButton = styled('a')`
   ${tw`opacity-60 inline-block mb-8 transition ease-out duration-100 hover:(opacity-100)`}
 `
 
 export async function getServerSideProps(req) {
-  const props = await fetchBlogPostsByCategorySlug(req.query.categorySlug)
+  const props = await fetchBlogPostsByTagSlug(req.query.tagSlug)
   return {
     props,
   }
 }
 
-export default function BlogTag({ category, posts }) {
+export default function BlogTag({ tag, posts }) {
   const [currentPage, setCurrentPage] = React.useState(1)
   const postsPerPage = 12
 
@@ -47,7 +48,7 @@ export default function BlogTag({ category, posts }) {
 
   return (
     <div>
-      <Head title={`${category.fields.name} | Nozzle`} />
+      <Head title={`${tag.fields.name} | Nozzle`} />
       <main>
         <Header>
           <Link href="/blog">
@@ -55,11 +56,10 @@ export default function BlogTag({ category, posts }) {
               <Icon i="arrow-left" /> Back
             </BackButton>
           </Link>
-          <H1>Blog - {category.fields.name}</H1>
+          <H1>Blog - {tag.fields.name}</H1>
+
           <SubMenu>
-            {category.fields.description ? (
-              <P>{category.fields.description}</P>
-            ) : null}
+            {tag.fields.description ? <P>{tag.fields.description}</P> : null}
           </SubMenu>
         </Header>
         <Container>

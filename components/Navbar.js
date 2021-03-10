@@ -293,10 +293,6 @@ const links = [
       },
     ],
   },
-  {
-    name: 'Log In',
-    path: 'https://beta.nozzle.io',
-  },
 ]
 
 export default function Navbar(props) {
@@ -368,6 +364,18 @@ export default function Navbar(props) {
             itemType="http://www.schema.org/SiteNavigationElement"
           >
             {links.map(LinkItem)}
+            <div className="link">
+              <div itemProp="name">
+                <a
+                  href="https://beta.nozzle.io"
+                  itemProp="url"
+                  onClick={closeMenu}
+                  rel="nofollow"
+                >
+                  Log In
+                </a>
+              </div>
+            </div>
           </div>
           <Link href="/trial">
             <a className="trial" onClick={closeMenu}>

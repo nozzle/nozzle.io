@@ -293,7 +293,10 @@ const links = [
       },
     ],
   },
-  { name: 'Log In', path: 'https://beta.nozzle.io' },
+  {
+    name: 'Log In',
+    path: 'https://beta.nozzle.io',
+  },
 ]
 
 export default function Navbar(props) {
@@ -305,7 +308,11 @@ export default function Navbar(props) {
     <div key={i} className="link">
       <div itemProp="name">
         <Link key={i} href={link.path}>
-          <a itemProp="url" onClick={closeMenu}>
+          <a
+            itemProp="url"
+            onClick={closeMenu}
+            rel={link.name == 'Log In' ? 'nofollow' : null}
+          >
             {link.name}
           </a>
         </Link>

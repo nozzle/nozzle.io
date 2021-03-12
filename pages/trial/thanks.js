@@ -35,9 +35,6 @@ const SectionContactUs = styled(Section)`
 export default function Thanks() {
   return (
     <>
-      <Head>
-        <script>fbq('track', 'Lead');</script>
-      </Head>
       <SectionContactUs id="contact">
         <H2 full>Let's start your free trial!</H2>
         <P>Thanks for submitting the form. We'll be in touch shortly.</P>

@@ -6,7 +6,7 @@ import Icon from 'components/Icon'
 
 const ShareFabs = styled('div')`
   .top {
-    ${tw`absolute top-96 right-3`}
+    ${tw`absolute top-100 right-3`}
   }
   .below {
     ${tw`fixed top-24 right-3`}

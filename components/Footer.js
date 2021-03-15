@@ -145,7 +145,7 @@ export default function Footer() {
 
         <Category>
           <div className="header">Follow Us</div>
-          <ul class="inline">
+          <ul className="inline">
             <li>
               <a href="https://twitter.com/nozzleio">
                 <Icon i="twitter" />

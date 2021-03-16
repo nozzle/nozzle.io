@@ -110,6 +110,11 @@ export default function Footer() {
                 Google Rank Checker
               </a>
             </li>
+            <li>
+              <a href=" https://nozzle.io/rank-tracker-comparison">
+                Rank Tracking Software
+              </a>
+            </li>
           </ul>
         </Category>
         <Category>

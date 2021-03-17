@@ -272,7 +272,7 @@ export default function Home() {
     <div style={{ overflow: 'hidden' }}>
       <Head
         title="Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Keyword Rank Tracker - Nozzle"
-        description=" A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want a rank checker with all the data, give Nozzle a test drive today."
+        description=" A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want an SEO rank tracker with all the data, give Nozzle a test drive today."
       />
       <main>
         <SectionKnowEverything>
@@ -355,7 +355,7 @@ export default function Home() {
           <Right>
             <H2>Track all the things!</H2>
             <P>
-              Most keyword rank checker tools just tell you the top ranking page
+              Most keyword rank tracker tools just tell you the top ranking page
               on your website. We monitor your entire brand, including social
               media profiles and unlimited domain matches. There's a difference
               between knowing you're ranking #1 and owning the entire first
@@ -430,7 +430,7 @@ export default function Home() {
           <Left>
             <Img
               src={require('public/img/groupby.png')}
-              alt="Enterprise Keyword Rank Checker Tool Dashboard"
+              alt="Enterprise Keyword Rank Tracker Tool Dashboard"
             />
           </Left>
           <Right>
@@ -510,7 +510,7 @@ export default function Home() {
             Not all keywords are created equal. You're probably paying too much
             to track your long-tail keywords daily or you're only getting weekly
             data for your money making head terms. Say goodbye to those tools
-            and say hello to the online keyword rank checker tool that will
+            and say hello to the online keyword rank tracker tool that will
             become your new best friend. Track your most important keywords
             daily, hourly or even every 5 minutes. Keep an eye on thousands more
             by scheduling them weekly or monthly without breaking the bank.
@@ -540,8 +540,8 @@ export default function Home() {
           <Left>
             <H2>You can't afford to not try Nozzle</H2>
             <H5>
-              A website rank checker with no minimum spend, no qualification
-              calls, white-glove onboarding, & batteries included.
+              An <a href="https://nozzle.io/google-keyword-rank-checker-tool">SEO rank checker</a> with no minimum spend, no qualification
+              calls, customized scheduling options, ALL the SERP data, & batteries included.
             </H5>
             <Link href="/pricing">
               <Button burst>See Our Plans & Pricing</Button>

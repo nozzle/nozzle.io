@@ -10,7 +10,7 @@ import Head from 'components/Head'
 import { Container } from 'components/Layout'
 
 import Link from 'next/link'
-import { H2, H4, P, Ul, Li, Img, Button } from 'components/Html'
+import { H2, H4, H5, P, Ul, Li, Img, Button } from 'components/Html'
 
 const belowMobile = `@media(max-width: ${700}px)`
 
@@ -153,6 +153,11 @@ const SectionBoxes = styled(Section)`
     }
   }
 `
+const SectionCantAfford = styled(Section)`
+  ${section};
+
+  ${tw`bg-primaryDarker text-white`}
+`
 
 export default function GoogleKeywordRankCheckerTool() {
   return (
@@ -291,6 +296,24 @@ export default function GoogleKeywordRankCheckerTool() {
             </Ul>
           </Ul>
         </SectionFeatures>
+        <SectionCantAfford>
+          <Left>
+            <H2>Nozzle is the tool you need</H2>
+            <H5>
+              Take advantage of our{' '}
+              <Link href="/features#data">superior, full SERP data</Link> to
+              boost your Google rankings today!
+            </H5>
+            <Link href="/pricing">
+              <Button burst>See Our Plans & Pricing</Button>
+            </Link>{' '}
+            <Link href="/trial">
+              <Button color="success" burst>
+                Try it out!
+              </Button>
+            </Link>
+          </Left>
+        </SectionCantAfford>
       </main>
     </div>
   )

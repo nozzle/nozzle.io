@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 import Icon from 'components/Icon'
+import Link from 'next/link'
 
 //
 
@@ -44,7 +45,7 @@ const Category = styled('div')`
     li {
       ${tw`inline pr-2 `}
 
-      a {
+      Link {
         ${tw`hover:(no-underline)  `}
       }
     }
@@ -67,32 +68,32 @@ export default function Footer() {
           <div className="header">Explore Nozzle:</div>
           <ul>
             <li>
-              <a href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups">
+              <Link href="/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups">
                 Find Your SEO Competition
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://nozzle.io/blog/track-serp-rankings-for-an-unlimited-amount-of-competitors-with-nozzle">
+              <Link href="/blog/track-serp-rankings-for-an-unlimited-amount-of-competitors-with-nozzle">
                 Unlimited Competitor Keyword Tracking
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://nozzle.io/paa">People Also Ask Deliverable</a>
+              <Link href="/paa">People Also Ask Deliverable</Link>
             </li>
             <li>
-              <a href="https://nozzle.io/blog/nozzles-crackerjack-calculation-of-clickthrough-rate">
+              <Link href="/blog/nozzles-crackerjack-calculation-of-clickthrough-rate">
                 Nozzle's CTR Calculation
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://nozzle.io/blog/hourly-rank-tracking-the-when-the-why-and-the-how">
+              <Link href="/blog/hourly-rank-tracking-the-when-the-why-and-the-how">
                 Hourly Rank Checker Tool
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://nozzle.io/blog/the-functionality-of-side-by-side-serp-html-comparison">
+              <Link href="/blog/the-functionality-of-side-by-side-serp-html-comparison">
                 SERP Comparison Ranking Report
-              </a>
+              </Link>
             </li>
           </ul>
         </Category>
@@ -100,20 +101,23 @@ export default function Footer() {
           <div className="header">Product</div>
           <ul>
             <li>
-              <a href="https://nozzle.io/pricing">Pricing</a>
+              <Link href="/pricing">Pricing</Link>
             </li>
             <li>
-              <a href="https://nozzle.io/faq">FAQs</a>
+              <Link href="/faq">FAQs</Link>
             </li>
             <li>
-              <a href=" https://nozzle.io/google-keyword-rank-checker-tool">
+              <Link href="/google-keyword-rank-checker-tool">
                 Google Rank Checker
-              </a>
+              </Link>
             </li>
             <li>
-              <a href=" https://nozzle.io/rank-tracker-comparison">
+              <Link href="/rank-tracker-comparison">
                 Rank Tracking Software
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/features">Nozzle's SERP Tracking Features</Link>
             </li>
           </ul>
         </Category>
@@ -121,13 +125,13 @@ export default function Footer() {
           <div className="header">Company</div>
           <ul>
             <li>
-              <a href="https://nozzle.io/about">About Us</a>
+              <Link href="/about">About Us</Link>
             </li>
             <li>
-              <a href="https://nozzle.io/blog">Blog</a>
+              <Link href="/blog">Blog</Link>
             </li>
             <li>
-              <a href=" https://nozzle.io/testimonials">Testimonials</a>
+              <Link href="/testimonials">Testimonials</Link>
             </li>
           </ul>
         </Category>
@@ -135,15 +139,15 @@ export default function Footer() {
           <div className="header">Other</div>
           <ul>
             <li>
-              <a href="https://nozzle.io/blog/seo-jokes">SEO Jokes</a>
+              <Link href="/blog/seo-jokes">SEO Jokes</Link>
             </li>
             <li>
-              <a href="https://nozzle.io/blog/is-seo-dead">Is SEO Dead</a>
+              <Link href="/blog/is-seo-dead">Is SEO Dead</Link>
             </li>
             <li>
-              <a href=" https://nozzle.io/blog/the-best-tools-for-unstoppable-competitive-analysis">
+              <Link href="/blog/the-best-tools-for-unstoppable-competitive-analysis">
                 Competitor Analysis Tools
-              </a>
+              </Link>
             </li>
           </ul>
         </Category>
@@ -152,29 +156,29 @@ export default function Footer() {
           <div className="header">Follow Us</div>
           <ul className="inline">
             <li>
-              <a href="https://twitter.com/nozzleio">
+              <Link href="https://twitter.com/nozzleio">
                 <Icon i="twitter" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UC6vTEcp-zzbgN2mJijLx6TA">
+              <Link href="https://www.youtube.com/channel/UC6vTEcp-zzbgN2mJijLx6TA">
                 <Icon i="youtube" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.facebook.com/nozzleio/">
+              <Link href="https://www.facebook.com/nozzleio/">
                 <Icon i="facebookLetter" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.linkedin.com/company/nozzle/">
+              <Link href="https://www.linkedin.com/company/nozzle/">
                 <Icon i="linkedin" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.pinterest.com/nozzleio/_saved/">
+              <Link href="https://www.pinterest.com/nozzleio/_saved/">
                 <Icon i="pinterest" />
-              </a>
+              </Link>
             </li>
           </ul>
         </Category>

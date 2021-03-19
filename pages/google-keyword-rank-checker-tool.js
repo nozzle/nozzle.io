@@ -163,15 +163,15 @@ export default function GoogleKeywordRankCheckerTool() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="Google Keyword Rank Checker Tool | Nozzle’s Rank Tracker and SERP Monitoring Tool"
-        description="Nozzle’s Google rank tracker tool provides all the SERP data to direct your SEO strategy. Prepare to have your mind blown!"
+        title="Google Keyword Rank Checker Tool | Website Ranking Checker | SERP Checker Tool for SEO"
+        description="Nozzle’s Google rank checker tool provides all the SERP data to direct your SEO strategy. Prepare to have your mind blown!"
       />
       <main>
         <SectionKnowEverything>
           <Left>
             <H2>Enterprise-level Google Rank Checker</H2>
             <P>
-              The keyword tracker tool that collects all of the data from every
+              The keyword checker tool that collects all of the data from every
               SERP that is important to you
             </P>
             <Link href="/trial">
@@ -183,7 +183,7 @@ export default function GoogleKeywordRankCheckerTool() {
           <Right>
             <Img
               src={require('public/img/dashboard.png')}
-              alt="Enterprise website keyword rank tracker tool dashboard"
+              alt="Enterprise website keyword rank checker tool dashboard"
             />
           </Right>
         </SectionKnowEverything>
@@ -201,7 +201,7 @@ export default function GoogleKeywordRankCheckerTool() {
                 <div className="-image">
                   <Img
                     src={require('public/img/wholeSerp.png')}
-                    alt="Analyze the whole SERP with Nozzle's Google rank tracker tool"
+                    alt="Analyze the whole SERP with Nozzle's online rank checker tool"
                   />
                 </div>
                 <div className="content">
@@ -254,7 +254,7 @@ export default function GoogleKeywordRankCheckerTool() {
                 <div className="-image">
                   <Img
                     src={require('public/img/competitorsAds.gif')}
-                    alt="Competitor analysis using Nozzle’s Google keyword rank tracker"
+                    alt="Competitor analysis using Nozzle’s Google SERP rank checker"
                   />
                 </div>
 

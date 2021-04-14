@@ -1,4 +1,5 @@
 import React from 'react'
+import Error from 'next/error'
 //
 import styled from 'styled-components'
 import Link from 'next/link'
@@ -24,7 +25,7 @@ export async function getServerSideProps(req) {
   }
 }
 
-export default function BlogTag({ category, posts }) {
+export default function BlogCategory({ category, posts }) {
   const [currentPage, setCurrentPage] = React.useState(1)
   const postsPerPage = 12
 
@@ -44,6 +45,10 @@ export default function BlogTag({ category, posts }) {
   const nextPage = () => {
     setCurrentPage(currentPage + 1)
     window.scrollTo(0, 0)
+  }
+
+  if (category.err) {
+    return <Error statusCode={category.err} />
   }
 
   return (

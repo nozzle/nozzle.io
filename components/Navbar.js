@@ -276,7 +276,7 @@ const links = [
   },
   {
     name: 'Resources',
-    path: '',
+    path: '/blog',
     links: [
       {
         name: 'Blog',

@@ -1,6 +1,7 @@
 import React from 'react'
 import tw from 'twin.macro'
 import styled from 'styled-components'
+import Error from 'next/error'
 //
 
 import Link from 'next/link'
@@ -45,6 +46,10 @@ export default function BlogTag({ tag, posts }) {
   const nextPage = () => {
     setCurrentPage(currentPage + 1)
     window.scrollTo(0, 0)
+  }
+
+  if (tag.err) {
+    return <Error statusCode={tag.err} />
   }
 
   return (

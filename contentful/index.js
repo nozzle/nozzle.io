@@ -118,6 +118,10 @@ export async function fetchBlogPostsByCategorySlug(categorySlug) {
     'fields.slug': categorySlug,
   })
 
+  if (!category) {
+    return { posts: [], category: { err: 404 } }
+  }
+
   let { items: posts } = await client.getEntries({
     content_type: '2wKn6yEnZewu2SCCkus4as',
     'fields.categories.sys.id': category.sys.id,
@@ -140,6 +144,10 @@ export async function fetchBlogPostsByTagSlug(tagSlug) {
     content_type: 'blogTag',
     'fields.slug': tagSlug,
   })
+
+  if (!tag) {
+    return { tag: { err: 404 }, posts: [] }
+  }
 
   let { items: posts } = await client.getEntries({
     content_type: '2wKn6yEnZewu2SCCkus4as',

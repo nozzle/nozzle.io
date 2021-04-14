@@ -69,7 +69,6 @@ const delorianBehindAnimation = keyframes`
 
 const AboutUsDiv = styled('div')`
   ${tw`pt-0 bg-repeat-y bg-cover`}
-  background-image: url('public/img/about/dot-background.jpg');
 
   .intro {
     ${tw`relative text-center flex flex-col items-center justify-center bg-cover bg-top text-white `}

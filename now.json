@@ -11,6 +11,13 @@
       }
     },
     {
+      "src": "/seo-paa-questions",
+      "status": 301,
+      "headers": {
+        "Location": "https://nozzle.io/blog/seo-paa-questions"
+      }
+    },
+    {
       "src": "/(.*)/$",
       "status": 301,
       "headers": {

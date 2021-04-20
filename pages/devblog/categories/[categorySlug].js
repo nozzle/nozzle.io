@@ -10,6 +10,7 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import { fetchDevPostsByCategorySlug } from '../../../contentful'
 import Pagination from 'components/Pagination'
+import { useRouter } from 'next/router'
 
 export async function getServerSideProps(req) {
   const props = await fetchDevPostsByCategorySlug(req.query.categorySlug)
@@ -19,17 +20,14 @@ export async function getServerSideProps(req) {
 }
 
 export default function DevBlogTag({ category, posts }) {
-  const [currentPage, setCurrentPage] = React.useState(1)
+  const router = useRouter()
+  const { page = 1 } = router.query
   const postsPerPage = 12
 
-  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfLastPost = page * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
 
-  const paginate = pageNumber => {
-    setCurrentPage(pageNumber)
-    window.scrollTo(0, 0)
-  }
   return (
     <div>
       <Head title={`${category.fields.name} | Nozzle`} />
@@ -52,9 +50,8 @@ export default function DevBlogTag({ category, posts }) {
           <PostList prefix="devblog" posts={currentPosts} />
           <Pagination
             postsPerPage={postsPerPage}
-            totalPosts={posts}
-            paginate={paginate}
-            currentPage={currentPage}
+            numPosts={posts.length}
+            path={`/blog/categories/${category.fields.slug}`}
           />
         </Container>
       </main>

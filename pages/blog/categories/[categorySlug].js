@@ -13,6 +13,7 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import { fetchBlogPostsByCategorySlug } from '../../../contentful'
 import tw from 'twin.macro'
+import { useRouter } from 'next/router'
 
 const DescriptionStyles = styled('div')`
   ${tw`mx-auto p-8 max-w-full`}
@@ -26,26 +27,13 @@ export async function getServerSideProps(req) {
 }
 
 export default function BlogCategory({ category, posts }) {
-  const [currentPage, setCurrentPage] = React.useState(1)
+  const router = useRouter()
+  const { page = 1 } = router.query
   const postsPerPage = 12
 
-  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfLastPost = page * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
-  const paginate = pageNumber => {
-    setCurrentPage(pageNumber)
-    window.scrollTo(0, 0)
-  }
-  const backPage = () => {
-    setCurrentPage(currentPage - 1)
-    window.scrollTo(0, 0)
-  }
-
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1)
-    window.scrollTo(0, 0)
-  }
 
   if (category.err) {
     return <Error statusCode={category.err} />
@@ -75,12 +63,9 @@ export default function BlogCategory({ category, posts }) {
           ) : null}
           <PostList prefix="blog" posts={currentPosts} />
           <Pagination
+            numPosts={posts.length}
+            path={`/blog/categories/${category.fields.slug}`}
             postsPerPage={postsPerPage}
-            totalPosts={posts}
-            paginate={paginate}
-            currentPage={currentPage}
-            nextPage={nextPage}
-            backPage={backPage}
           />
         </Container>
       </main>

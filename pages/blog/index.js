@@ -7,6 +7,7 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import Pagination from 'components/Pagination'
 import FeaturedPosts from 'components/FeaturedPosts'
+import { useRouter } from 'next/router'
 
 export async function getServerSideProps(req) {
   const props = await fetchBlogPosts()
@@ -16,28 +17,14 @@ export async function getServerSideProps(req) {
   }
 }
 
-export default function DevBlog({ posts, categories }) {
-  const [currentPage, setCurrentPage] = React.useState(1)
+export default function Blog({ posts, categories }) {
+  const router = useRouter()
+  const { page = 1 } = router.query
   const postsPerPage = 12
 
-  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfLastPost = page * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
-  const paginate = pageNumber => {
-    setCurrentPage(pageNumber)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  const backPage = () => {
-    setCurrentPage(currentPage - 1)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
 
   return (
     <div>
@@ -69,12 +56,9 @@ export default function DevBlog({ posts, categories }) {
           <FeaturedPosts prefix="blog" posts={posts} />
           <PostList prefix="blog" posts={currentPosts} />
           <Pagination
+            numPosts={posts.length}
             postsPerPage={postsPerPage}
-            totalPosts={posts}
-            paginate={paginate}
-            backPage={backPage}
-            nextPage={nextPage}
-            currentPage={currentPage}
+            path="/blog"
           />
         </BlogContainer>
       </main>

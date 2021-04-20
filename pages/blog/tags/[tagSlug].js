@@ -3,7 +3,7 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 import Error from 'next/error'
 //
-
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Icon from 'components/Icon'
 import Head from 'components/Head'
@@ -27,26 +27,13 @@ export async function getServerSideProps(req) {
 }
 
 export default function BlogTag({ tag, posts }) {
-  const [currentPage, setCurrentPage] = React.useState(1)
+  const router = useRouter()
+  const { page = 1 } = router.query
   const postsPerPage = 12
 
-  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfLastPost = page * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
-  const paginate = pageNumber => {
-    setCurrentPage(pageNumber)
-    window.scrollTo(0, 0)
-  }
-  const backPage = () => {
-    setCurrentPage(currentPage - 1)
-    window.scrollTo(0, 0)
-  }
-
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1)
-    window.scrollTo(0, 0)
-  }
 
   if (tag.err) {
     return <Error statusCode={tag.err} />
@@ -77,11 +64,8 @@ export default function BlogTag({ tag, posts }) {
           <PostList prefix="blog" posts={currentPosts} />
           <Pagination
             postsPerPage={postsPerPage}
-            totalPosts={posts}
-            paginate={paginate}
-            currentPage={currentPage}
-            nextPage={nextPage}
-            backPage={backPage}
+            numPosts={posts.length}
+            path={`/blog/tags/${tag.fields.slug}`}
           />
         </Container>
       </main>

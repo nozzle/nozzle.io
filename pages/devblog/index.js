@@ -6,6 +6,7 @@ import { BlogContainer, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import Pagination from 'components/Pagination'
+import { useRouter } from 'next/router'
 
 export async function getServerSideProps(req) {
   const props = await fetchDevPosts()
@@ -16,17 +17,13 @@ export async function getServerSideProps(req) {
 }
 
 export default function DevBlog({ posts, categories }) {
-  const [currentPage, setCurrentPage] = React.useState(1)
-  const postsPerPage = 12
+  const router = useRouter()
+  const { page = 1 } = router.query
 
-  const indexOfLastPost = currentPage * postsPerPage
+  const postsPerPage = 12
+  const indexOfLastPost = page * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
-  const paginate = pageNumber => {
-    setCurrentPage(pageNumber)
-    window.scrollTo(0, 0)
-  }
 
   return (
     <div>
@@ -55,9 +52,8 @@ export default function DevBlog({ posts, categories }) {
           <PostList prefix="devblog" posts={currentPosts} />
           <Pagination
             postsPerPage={postsPerPage}
-            totalPosts={posts}
-            paginate={paginate}
-            currentPage={currentPage}
+            numPosts={posts.length}
+            path={`/devblog`}
           />
         </BlogContainer>
       </main>

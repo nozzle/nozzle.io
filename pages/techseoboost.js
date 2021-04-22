@@ -117,10 +117,12 @@ export default function TechSeoBoost() {
             <P tw="mb-6">
               Content teams will love our PAA expansion deliverable. <a href="https://datastudio.google.com/reporting/c603c6cc-2137-49b7-a161-735bf238f46d">In one
               example</a> of 500 camping related keywords, we extracted 419 unique
-              questions from the People Also Ask boxes. 
+              questions from the People Also Ask boxes. </p>
 
-              In another example, we looked at 49,866 SEO related keywords and 
-              found 40,894 unique SEO related questions. Feel free to {' '} <Link href="https://nozzle.io/seo-paa-questions">
+             <P> In another example, we looked at 49,866 SEO related keywords and 
+              found 40,894 unique SEO related questions. </p>
+    
+             <p> Feel free to {' '} <Link href="https://nozzle.io/seo-paa-questions">
               peruse this document</Link> to get ideas for your next SEO related article.
             </P>
             <Img

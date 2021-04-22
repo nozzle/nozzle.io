@@ -120,9 +120,9 @@ export default function TechSeoBoost() {
               questions from the People Also Ask boxes. </p>
 
              <P> In another example, we looked at 49,866 SEO related keywords and 
-              found 40,894 unique SEO related questions. </p>
+              found 40,894 unique SEO related questions. </P>
     
-             <p> Feel free to {' '} <Link href="https://nozzle.io/seo-paa-questions">
+             <P> Feel free to {' '} <Link href="https://nozzle.io/seo-paa-questions">
               peruse this document</Link> to get ideas for your next SEO related article.
             </P>
             <Img
@@ -132,7 +132,7 @@ export default function TechSeoBoost() {
 
             <H3>Nozzle Vision</H3>
             <P tw="mb-6">
-              We recently launched Nozzle Vision, an awesome new featured tool
+              We recently launched Nozzle Vision, an awesome new feature
               that allows you to analyze the SERPs in a more visual manner. We
               rerender the SERP HTML for every keyword that you are tracking and
               then overlay Nozzle Vision on top of that to better help you

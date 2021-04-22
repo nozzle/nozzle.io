@@ -93,7 +93,7 @@ export default function TechSeoBoost() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="People Also Ask Question Generator | Find Google’s PAA Questions Based on your Keywords with our Keyword Question Tool"
+        title="TechSEO Boost Rocks! Give Nozzle A Test Run"
         description="Find the right questions to answer on your website"
       />
       <main>
@@ -106,21 +106,22 @@ export default function TechSeoBoost() {
         </SectionTitle>
         <SectionKnowWhatQuestions>
           <div className="left">
-            <H3>Nozzle</H3>
+            <H3>Come Give Nozzle A Test Run</H3>
             <P>
               Nozzle extracts and stores <span tw="underline">ALL</span> the
               data from each SERP that you’re tracking, allowing you to get your
               hands deep into some geeky detail.
             </P>
             <P>Let’s take a look at three data analysis examples.</P>
-            <H4>PAA Expansion Deliverable</H4>
+            <H3>PAA Expansion Deliverable</H3>
             <P tw="mb-6">
-              Content teams will love our PAA expansion deliverable. In one
-              example of 500 camping related keywords, we extracted 419 unique
-              questions from the People Also Ask boxes. In another example, we
-              looked at 49,000 SEO related keywords and found 276,000 unique SEO
-              related questions. If you want to peruse this document, go to{' '}
-              <Link href="https://nozzle.io/seo-paa-questions">
+              Content teams will love our PAA expansion deliverable. {' '} <Link href="https://datastudio.google.com/reporting/c603c6cc-2137-49b7-a161-735bf238f46d">In one
+              example</Link> of 500 camping related keywords, we extracted 419 unique
+              questions from the People Also Ask boxes. 
+
+              In another example, we looked at 49,000 SEO related keywords and 
+              found 276,000 unique SEO related questions. If you want to peruse 
+              this document, go to{' '} <Link href="https://nozzle.io/seo-paa-questions">
                 https://nozzle.io/seo-paa-questions
               </Link>
               .
@@ -130,7 +131,7 @@ export default function TechSeoBoost() {
               tw="mb-12"
             />
 
-            <H3>PAA Expansion Deliverable</H3>
+            <H3>Nozzle Vision</H3>
             <P tw="mb-6">
               We recently launched Nozzle Vision, an awesome new featured tool
               that allows you to analyze the SERPs in a more visual manner. We

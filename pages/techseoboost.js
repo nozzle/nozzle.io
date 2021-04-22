@@ -120,11 +120,8 @@ export default function TechSeoBoost() {
               questions from the People Also Ask boxes. 
 
               In another example, we looked at 49,866 SEO related keywords and 
-              found 40,894 unique SEO related questions. If you want to peruse 
-              this document, go to{' '} <Link href="https://nozzle.io/seo-paa-questions">
-                https://nozzle.io/seo-paa-questions
-              </Link>
-              .
+              found 40,894 unique SEO related questions. Feel free to {' '} <Link href="https://nozzle.io/seo-paa-questions">
+              peruse this document</Link> to get ideas for your next SEO related article.
             </P>
             <Img
               src={require('public/img/PAAExpansionDeliverable500keywords.jpg')}

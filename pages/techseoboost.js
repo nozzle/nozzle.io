@@ -133,11 +133,11 @@ export default function TechSeoBoost() {
             <H3>Nozzle Vision</H3>
             <P tw="mb-6">
               We recently launched Nozzle Vision, an awesome new feature
-              that allows you to analyze the SERPs in a more visual manner. We
+              that allows you to analyze the SERPs in a more visual manner.</P> <P>We
               rerender the SERP HTML for every keyword that you are tracking and
               then overlay Nozzle Vision on top of that to better help you
               report on, and understand more fully, Nozzle's metrics like Pixels
-              from Top, SERP %, Above the Fold %, CTR, Rank, etc. Nozzle Vision
+              from Top, SERP %, Above the Fold %, CTR, Rank, etc.</P> <P>Nozzle Vision
               also allows you to compare SERPS from different dates, side by
               side.
             </P>
@@ -146,10 +146,10 @@ export default function TechSeoBoost() {
             <H3>Share of Voice Dashboard</H3>
             <P tw="mb-6">
               The Share of Voice Dashboard allows you to analyze your
-              competition in many different ways. Find out which domains or
+              competition in many different ways.</P> <P>Find out which domains or
               URL’s own the most featured snippets, top 10 rankings, top 3
               rankings or even which companies show up the most in local pack
-              results. This is great for reporting on your SEO results over time
+              results.</P> <P>This is great for reporting on your SEO results over time
               compared to the competition and for creating a competitive
               analysis that can guide your SEO strategy.
             </P>

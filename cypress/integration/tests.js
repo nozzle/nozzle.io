@@ -6,13 +6,10 @@ describe('Components are showing up in Post', () => {
   it('RelatedPosts Component is rendering', () => {
     window.cy.get('.RelatedPosts__Post-gudoks-2').should('have.length', 3)
   })
-  // it('Tweets are centered and shown as embeds', () => {
-  //   //Each tweet has class of twitter-tweet which centers it
-  //   window.cy.get('.twitter-tweet').should('have.length', 39)
-
-  //   //Each tweet is shown as a embedded tweet
-  //   // window.cy.get('.twitter-tweet-rendered').should('have.length', 39)
-  // })
+  it('Tweets are centered and shown as embeds', () => {
+    //Each tweet has class of twitter-tweet which centers it and is an iframe when it shows the embedded format
+    window.cy.get('iframe').parent().should('have.class', 'twitter-tweet')
+  })
 })
 
 describe('SiteMap and robots.txt ', () => {
@@ -23,9 +20,6 @@ describe('SiteMap and robots.txt ', () => {
   it('robots.txt does not disallow our site', () => {
     window.cy
       .readFile('public/robots.txt')
-      .should(
-        'eq',
-        'User-agent: *\nDisallow: /l\nDisallow: /paa/success*\nDisallow: /trial/thanks\nsitemap: https://nozzle.io/sitemap.xml'
-      )
+      .should('not.contain', 'Disallow: /\n')
   })
 })

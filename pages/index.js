@@ -253,21 +253,6 @@ const SectionCantAfford = styled(Section)`
 `
 
 export default function Home() {
-  const rankDataImages = [
-    require('public/img/rank.png'),
-    require('public/img/adrank.png'),
-    require('public/img/pixelheight.png'),
-  ]
-
-  const [rankDataImageIndex, setRankDataImageIndex] = React.useState(1)
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setRankDataImageIndex(rankDataImageIndex => (rankDataImageIndex + 1) % 3)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
@@ -421,7 +406,7 @@ export default function Home() {
           </Left>
           <Right>
             <Img
-              src={rankDataImages[rankDataImageIndex]}
+              src={require('public/img/RankData.png')}
               alt="Google Website Keyword Rank Tracker that lists rank, ad adjusted rank, and pixel height"
             />
           </Right>
@@ -540,8 +525,12 @@ export default function Home() {
           <Left>
             <H2>You can't afford to not try Nozzle</H2>
             <H5>
-              An <a href="https://nozzle.io/google-keyword-rank-checker-tool">SEO rank checker</a> with no minimum spend, no qualification
-              calls, customized scheduling options, ALL the SERP data, & batteries included.
+              An{' '}
+              <a href="https://nozzle.io/google-keyword-rank-checker-tool">
+                SEO rank checker
+              </a>{' '}
+              with no minimum spend, no qualification calls, customized
+              scheduling options, ALL the SERP data, & batteries included.
             </H5>
             <Link href="/pricing">
               <Button burst>See Our Plans & Pricing</Button>

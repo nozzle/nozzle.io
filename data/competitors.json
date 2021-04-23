@@ -11,78 +11,7 @@
     "moz": 50
    
   },
-  {
-    "section": "Search Engines",
-    "sectionOrder": 1,
-    "name": "Google",
-    "type": "data",
-    "nozzle": true,
-    "conductor": true,
-    "brightEdge": true,
-    "stat": true,
-    "moz": true
-   
-  },
-  {
-    "section": "Search Engines",
-    "sectionOrder": 1,
-    "name": "Bing",
-    "type": "data",
-    "nozzle": "",
-    "conductor": true,
-    "brightEdge": true,
-    "stat": true,
-    "moz": true
-   
-  },
-  {
-    "section": "Search Engines",
-    "sectionOrder": 1,
-    "name": "Yahoo",
-    "type": "data",
-    "nozzle": "",
-    "conductor": true,
-    "brightEdge": true,
-    "stat": true,
-    "moz": true
-    
-  },
-  {
-    "section": "Search Engines",
-    "sectionOrder": 1,
-    "name": "YouTube",
-    "type": "data",
-    "nozzle": "",
-    "conductor": true,
-    "brightEdge": "",
-    "stat": "",
-    "moz": ""
-    
-  },
-  {
-    "section": "Search Engines",
-    "sectionOrder": 1,
-    "name": "Yandex",
-    "type": "data",
-    "nozzle": "",
-    "conductor": true,
-    "brightEdge": true,
-    "stat": "",
-    "moz": ""
-    
-  },
-  {
-    "section": "Search Engines",
-    "sectionOrder": 1,
-    "name": "Baidu",
-    "type": "data",
-    "nozzle": "",
-    "conductor": true,
-    "brightEdge": true,
-    "stat": "",
-    "moz": ""
-    
-  },
+  
   {
     "section": "Search Types",
     "sectionOrder": 2,
@@ -514,6 +443,78 @@
     "brightEdge": "Unlimited",
     "stat": "Unlimited",
     "moz": "Unlimited"
+    
+  },
+  {
+    "section": "Search Engines",
+    "sectionOrder": 1,
+    "name": "Google",
+    "type": "data",
+    "nozzle": true,
+    "conductor": true,
+    "brightEdge": true,
+    "stat": true,
+    "moz": true
+   
+  },
+  {
+    "section": "Search Engines",
+    "sectionOrder": 1,
+    "name": "Bing",
+    "type": "data",
+    "nozzle": "",
+    "conductor": true,
+    "brightEdge": true,
+    "stat": true,
+    "moz": true
+   
+  },
+  {
+    "section": "Search Engines",
+    "sectionOrder": 1,
+    "name": "Yahoo",
+    "type": "data",
+    "nozzle": "",
+    "conductor": true,
+    "brightEdge": true,
+    "stat": true,
+    "moz": true
+    
+  },
+  {
+    "section": "Search Engines",
+    "sectionOrder": 1,
+    "name": "YouTube",
+    "type": "data",
+    "nozzle": "",
+    "conductor": true,
+    "brightEdge": "",
+    "stat": "",
+    "moz": ""
+    
+  },
+  {
+    "section": "Search Engines",
+    "sectionOrder": 1,
+    "name": "Yandex",
+    "type": "data",
+    "nozzle": "",
+    "conductor": true,
+    "brightEdge": true,
+    "stat": "",
+    "moz": ""
+    
+  },
+  {
+    "section": "Search Engines",
+    "sectionOrder": 1,
+    "name": "Baidu",
+    "type": "data",
+    "nozzle": "",
+    "conductor": true,
+    "brightEdge": true,
+    "stat": "",
+    "moz": ""
     
   },
   {

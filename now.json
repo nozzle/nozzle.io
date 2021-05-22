@@ -10,6 +10,13 @@
         "Location": "https://nozzle.io/blog/pr-strategies-for-businesses"
       }
     },
+     {
+      "src": "/blog/hourly-rank-tracking-the-when-the-why-and-the-how",
+      "status": 301,
+      "headers": {
+        "Location": "https://nozzle.io/blog/hourly-rank-tracking"
+      }
+    },
     {
       "src": "/seo-paa-questions",
       "status": 301,

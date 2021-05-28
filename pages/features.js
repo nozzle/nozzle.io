@@ -462,8 +462,8 @@ const SectionSchedulingCmp = props => (
             real-time schedules
           </Strong>
           . Instead of forcing you to pay the same price to track your long-tail
-          keywords as your head terms, Nozzle let's you split your keywords into
-          as many different scheduling buckets you want.{' '}
+          keywords as your head terms, Nozzle lets you split your keywords into
+          as many different scheduling buckets as you want.{' '}
         </H6>
         <Img
           src={require('public/img/schedules.png')}

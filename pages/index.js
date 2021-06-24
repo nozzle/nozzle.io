@@ -340,7 +340,7 @@ export default function Home() {
           <Right>
             <H2>Track all the things!</H2>
             <P>
-              Most keyword rank tracker tools just tell you the top ranking page
+              Most SEO keyword rank tracker tools just tell you the top ranking page
               on your website. We monitor your entire brand, including social
               media profiles and unlimited domain matches. There's a difference
               between knowing you're ranking #1 and owning the entire first

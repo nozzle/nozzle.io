@@ -104,9 +104,6 @@ export default function Footer() {
               <Link href="/pricing">Pricing</Link>
             </li>
             <li>
-              <Link href="/faq">FAQs</Link>
-            </li>
-            <li>
               <Link href="/google-keyword-rank-checker-tool">
                 Google Rank Checker
               </Link>
@@ -118,6 +115,9 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/features">Nozzle's SERP Tracking Features</Link>
+            </li>
+            <li>
+              <Link href="https://help.nozzle.io">Knowledge Base</Link>
             </li>
           </ul>
         </Category>
@@ -135,9 +135,6 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/contact">Contact Us</Link>
-            </li>
-            <li>
-              <Link href="https://help.nozzle.io">Knowledge Base</Link>
             </li>
           </ul>
         </Category>

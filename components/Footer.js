@@ -136,6 +136,9 @@ export default function Footer() {
             <li>
               <Link href="/contact">Contact Us</Link>
             </li>
+            <li>
+              <Link href="https://help.nozzle.io">Knowledge Base</Link>
+            </li>
           </ul>
         </Category>
         <Category>
@@ -160,27 +163,27 @@ export default function Footer() {
           <ul className="inline">
             <li>
               <Link href="https://twitter.com/nozzleio">
-                <Icon i="twitter" />
+                <Icon i="twitter" tw="hover:(cursor-pointer)" />
               </Link>
             </li>
             <li>
               <Link href="https://www.youtube.com/channel/UC6vTEcp-zzbgN2mJijLx6TA">
-                <Icon i="youtube" />
+                <Icon i="youtube" tw="hover:(cursor-pointer)" />
               </Link>
             </li>
             <li>
               <Link href="https://www.facebook.com/nozzleio/">
-                <Icon i="facebookLetter" />
+                <Icon i="facebookLetter" tw="hover:(cursor-pointer)" />
               </Link>
             </li>
             <li>
               <Link href="https://www.linkedin.com/company/nozzle/">
-                <Icon i="linkedin" />
+                <Icon i="linkedin" tw="hover:(cursor-pointer)" />
               </Link>
             </li>
             <li>
               <Link href="https://www.pinterest.com/nozzleio/_saved/">
-                <Icon i="pinterest" />
+                <Icon i="pinterest" tw="hover:(cursor-pointer)" />
               </Link>
             </li>
           </ul>

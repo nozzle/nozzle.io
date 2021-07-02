@@ -282,7 +282,7 @@ const links = [
         name: 'Blog',
         path: '/blog',
       },
-      { name: 'FAQs', path: '/faq' },
+
       {
         name: 'PAA Expansion Deliverable',
         path: '/paa',

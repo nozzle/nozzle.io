@@ -152,6 +152,18 @@ export default function Footer() {
                 Competitor Analysis Tools
               </Link>
             </li>
+            <li>
+              <Link href="/privacy-policy">Privacy</Link>
+            </li>
+            <li>
+              <Link href="/terms-of-service">Terms of Service</Link>
+            </li>
+            <li>
+              <Link href="/cookie-policy">Cookies</Link>
+            </li>
+            <li>
+              <Link href="/acceptable-use-policy">Acceptable Use</Link>
+            </li>
           </ul>
         </Category>
 

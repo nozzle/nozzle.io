@@ -191,7 +191,6 @@ export default function TermsOfService() {
           </Container>
         </Body>
       </div>
-      )
     </div>
   )
 }

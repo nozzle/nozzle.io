@@ -135,7 +135,6 @@ export default function CookiesPolicy() {
           </Container>
         </Body>
       </div>
-      )
     </div>
   )
 }

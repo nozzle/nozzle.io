@@ -249,7 +249,6 @@ export default function AcceptableUse() {
           </Container>
         </Body>
       </div>
-      )
     </div>
   )
 }

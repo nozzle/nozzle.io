@@ -675,7 +675,6 @@ export default function Privacy() {
           </Container>
         </Body>
       </div>
-      )
     </div>
   )
 }

@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/google-keyword-rank-checker-tool">
-                  Google Rank Checker
+                  Keyword Rank Checker
                 </Link>
               </li>
               <li>

@@ -1,3 +1,64 @@
+# ___________________     ______________________      _______________________       __________________________
+#/NOZZLE HAS LOTS OF \   |NOZZLE HAS LOTS OF NOZ|     |NOZZLE HAS LOTS OF NOZ\      |NOZZLE HAS LOTS OF NOZZLE\
+#|NOZZLE HAS LOTS OF |   |ZLE HAS LOTS OF NOZZLE|     |NOZZLE HAS LOTS OF NOZZ|     |HAS LOTS OF NOZZLE HAS LOT|
+#|NOZZ/------\LE HAS |   |HAS LOTS OF NOZZLE HAS|     |LE HAS LOTS OF NOZZLE H|     |S OF NOZZLE HAS LOTS OF NO|
+#|LOTS|      |OF NOZZ|   |LOTS |-----------------     |AS LOTS|--------|OF NOZ/     |ZZLE HA|----------\LOTS OF|
+#|LE H|      ---------   |OF NO|		      |ZLE HAS|       /LOTS O/      |NOZZLE |           |HAS LO|
+#|LOTS|			 |ZZLE |		      |F NOZZL|      /E HAS /       |TS OF N|           |OZZLE |      
+#|OF N|			 |HAS L|		      |LOTS OF|     /NOZZLE/        |HAS LOT|           |S OF N|
+#|OZZLE\		 |OTS O|		      |HAS LOT|    /S OF N/	    |OZZLE H|           |AS LOT|
+#\HAS LO\		 |F NOZ|		      |OZZLE H|   /AS LOT/	    |S OF NO|           |ZZLE H|
+# \TS OF \		 |ZLE H-------------	      |S OF NO|  /ZZLE H/	    |AS LOTS|          /OF NOZZ/
+#  \NOZZLE\		 |AS LOTS OF NOZZLE|	      |AS LOTS| /OF NOZ/	    |LE HAS L---------/OTS OF /
+#   \HAS LO\		 |HAS LOTS OF NOZZL|	      |ZLE HAS|/LOTS O/		    |NOZZLE HAS LOTS OF NOZZL/
+#    \TS OF \		 |E HAS LOTS OF NOZ|	      |F NOZZLE HAS L/		    |E HAS LOTS OF NOZZLE HA/	
+#     \NOZZLE\		 |ZLE H|------------	      |OTS OF NOZZLE \		    |S LOTS OF NOZZLE HAS L/
+#      \HAS LO\		 |AS LO|		      |HAS LOTS OF NOZ\		    |OTS OF N|-------------
+#       \TS OF \	 |TS OF|		      |ZLE HAS|\LOTS OF\	    |OZZLE HA|
+#        \NOZZLE\	 |NOZZL|		      |NOZZLE | \HAS LOT\	    |S LOTS O|
+#         \HAS LO\	 |E HAS|		      |S OF NO|  \ZZLE HA\	    |F NOZZLE|
+#	   \TS OF \	 |LOTS |		      |S LOTS |   \OF NOZZ\	    |HAS LOTS|
+#	    \NOZZLE\	 |OF NO|		      |LE HAS |    \LOTS OF\	    |OF NOZZL|
+#------      \HAS LO\	 |ZZLE |		      |NOZZLE |     \HAS LOT\	    |E HAS LO|
+#|NOZZL|     |TS OF |	 |HAS L|		      |S OF NO|      \ZZLE HA|	    |TS OF NO|
+#|HAS L|    /NOZZLE |	 |OTS O|_________________     |S LOTS |      |OF NOZZ|	    |ZZLE HAS|
+#|NOZZLE HAS LOTS OF|	 |F NOZZLE HAS LOTS OF N|     |LE HAS |      |LOTS OF|      |LOTS OF |
+#|NOZZLE HAS LOTS OF|	 |OZZLE HAS LOTS OF NOZZ|     |NOZZLE |      |HAS LOT|	    |NOZZLE H|
+#|NOZZLE HAS LOTS OF|	 |LE HAS LOTS OF NOZZLE |     |S OF NO|      |ZZLE HA|	    |AS LOTS |
+#____________________	 ________________________     _________      _________      __________
+#
+#
+#
+#
+#____________________               _______________		________________________	    _______________
+#|NOZZLE HAS LOTS OF\		   /NOZZLE HAS LOTS\		|NOZZLE HAS LOTS OF NOZZ|	   /NOZZLE HAS LOTS\
+#|NOZZLE HAS LOTS OF \		  /OF NOZZLE HAS LOT\		|LE HAS LOTS OF NOZZLE H|	  /OF NOZZLE HAS LOT\
+#|OZZLE HAS LOTS OF NO\		 /S OF NOZZLE HAS LOT\		|AS LOTS OF NOZZLE HAS L|	 /S OF NOZZLE HAS LOT\
+#|ZZLE H|-------\AS LOT\	/S OF NOZZLE HAS LOTS \		--------|OTS OF |--------	/S OF NOZZLE HAS LOTS \
+#|S OF N|       |OZZLE |	|OF NOZ|-------|LE HAS|			|NOZZLE |		|OF NOZ|-------|LE HAS|
+#|HAS LO|       |TS OF |	|LOTS O|       |NOZZLE|			|HAS LOT|		|LOTS O|       |F NOZZ|
+#|NOZZLE|       |HAS LO|	|HAS LO|       |TS OF |			|S OF NO|		|LE HAS|       |LOTS O|
+#|TS OF |       |NOZZLE|	|NOZZLE|       |HAS LO|			|ZZLE HA|		|F NOZZ|       |LE HAS|
+#|HAS LO|       |TS OF |	|TS OF |       |NOZZLE|			|S LOTS |		|LOTS O|       |F NOZZ|
+#|NOZZLE|       |HAS LO|	|HAS LO|-------|TS OF |			|OF NOZZ|		|LE HAS|-------|LOTS O|
+#|TS OF |       |NOZZLE|	|NOZZLE HAS LOTS OF NO|			|LE HAS |		|F NOZZLE HAS LOTS OF |
+#|HAS LO|       |TS OF |	|ZZLE HAS LOTS OF NOZZ|			|LOTS OF|		|NOZZLE HAS LOTS OF NO|
+#|NOZZLE|       |HAS LO|	|LE HAS LOTS OF NOZZLE|			|NOZZLE |		|ZZLE HAS LOTS OF NOZZ|
+#|TS OF |       |NOZZLE|	|HAS LO|-------|TS OF |			|HAS LOT|		|LE HAS|-------|LOTS O|
+#|HAS LO|       |TS OF |	|NOZZLE|       |HAS LO|			|S OF NO|		|F NOZZ|       |LE HAS|
+#|NOZZLE|       |HAS LO|	|TS OF |       |NOZZLE|			|ZZLE HA|		|LOTS O|       |F NOZZ|
+#|TS OF |       |NOZZLE|	|HAS LO|       |TS OF |			|S LOTS |		|LE HAS|       |LOTS O|		
+#|HAS LO|       |TS OF |	|NOZZLE|       |HAS LO|			|OF NOZZ|		|F NOZZ|       |LE HAS|	
+#|NOZZLE|       |HAS LO|	|TS OF |       |NOZZLE|			|LE HAS |		|LOTS O|       |F NOZZ|
+#|TS OF |       |NOZZLE|	|HAS LO|       |TS OF |			|LOTS OF|		|LE HAS|       |LOTS O|
+#|HAS LO|       |TS OF |	|NOZZLE|       |HAS LO|			|NOZZLE |		|F NOZZ|       |LE HAS|	
+#|NOZZLE|       |HAS LO|	|TS OF |       |NOZZLE|			|HAS LOT|		|LOTS O|       |F NOZZ|
+#|TS OF |-------/NOZZLE|	|HAS LO|       |TS OF |			|S OF NO|		|LE HAS|       |LOTS O|
+#|HAS LOTS OF NOZZLE HA|	|NOZZLE|       |HAS LO|			|ZZLE HA|		|F NOZZ|       |LE HAS|
+#|S LOTS OF NOZZLE HAS /	|TS OF |       |NOZZLE|			|S LOTS |		|LOTS O|       |F NOZZ|
+#|LOTS OF NOZZLE HAS L/		|HAS LO|       |TS OF |			|OF NOZZ|		|LE HAS|       |LOTS O|
+#____________________/		________       ________			_________		________       ________
+#
 User-agent: *
 Disallow: /l
 Disallow: /paa/success*

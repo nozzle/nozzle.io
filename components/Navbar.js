@@ -255,10 +255,10 @@ const links = [
         name: 'Agency Tools',
         path: '/features#agencies',
       },
-      {
-        name: 'Reputation Management',
-        path: '/features#reputation',
-      },
+      // {
+      //   name: 'Reputation Management',
+      //   path: '/features#reputation',
+      // },
       {
         name: 'Integrations',
         path: '/features#integrations',

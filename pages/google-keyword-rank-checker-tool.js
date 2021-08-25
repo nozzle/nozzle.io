@@ -163,13 +163,13 @@ export default function GoogleKeywordRankCheckerTool() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="Google Keyword Rank Checker Tool | Website Ranking Checker | SERP Checker Tool for SEO"
+        title="Google Keyword Rank Checker | Website Ranking Checker | SERP Keyword Position Checker Tool for SEO"
         description="Nozzle’s Google rank checker tool provides all the SERP data to direct your SEO strategy. Prepare to have your mind blown!"
       />
       <main>
         <SectionKnowEverything>
           <Left>
-            <H2>Enterprise-level Google Rank Checker</H2>
+            <H2>Enterprise-level Google Keyword Rank Checker</H2>
             <P>
               The keyword checker tool that collects all of the data from every
               SERP that is important to you
@@ -207,7 +207,7 @@ export default function GoogleKeywordRankCheckerTool() {
                 <div className="content">
                   <P>
                     Each SERP contains loads of information that can be useful
-                    in guiding SEO strategy. Nozzle will provide you with all of
+                    in guiding SEO strategy. Nozzle's website ranking checker will provide you with all of
                     Google’s SERP data.
                   </P>
                 </div>
@@ -271,7 +271,7 @@ export default function GoogleKeywordRankCheckerTool() {
           </Container>
         </SectionBoxes>
         <SectionFeatures>
-          <H2 full>Nozzle’s Rank Tracking and Reporting Features</H2>
+          <H2 full>Nozzle’s Rank Checking and Reporting Features</H2>
 
           <Ul>
             <Li>Track unlimited competitors</Li>
@@ -298,7 +298,7 @@ export default function GoogleKeywordRankCheckerTool() {
         </SectionFeatures>
         <SectionCantAfford>
           <Left>
-            <H2>Nozzle is the tool you need</H2>
+            <H2>Nozzle is the keyword position checker tool you need</H2>
             <H5>
               Take advantage of our{' '}
               <Link href="/features#data">superior, full SERP data</Link> to

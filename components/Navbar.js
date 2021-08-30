@@ -377,11 +377,9 @@ export default function Navbar(props) {
               </div>
             </div>
           </div>
-          <Link href="/trial">
-            <a className="trial" onClick={closeMenu}>
-              <Button color="success">Start Trial</Button>
-            </a>
-          </Link>
+          <a className="trial" href="https://app.nozzle.io/sign-up">
+            <Button color="success">Start Trial</Button>
+          </a>
         </nav>
       </div>
     </NavbarStyles>

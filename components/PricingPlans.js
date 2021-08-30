@@ -208,11 +208,11 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[5].overage} Per 1,000 Pulls</SmallBold>
                 </div>
-                <Link href="/trial">
+                <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDarker" burst>
                     Start Trial
                   </Button>
-                </Link>
+                </a>
               </Plan>
               <Plan id={plans[6].value}>
                 <Title>{plans[6].label}</Title>
@@ -244,11 +244,11 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[6].overage} Per 1,000 Pulls</SmallBold>
                 </div>
-                <Link href="/trial">
+                <a href="https://app.nozzle.io/sign-up">
                   <Button color="success" burst>
                     Start Trial
                   </Button>
-                </Link>
+                </a>
               </Plan>
               <Plan id={plans[7].value}>
                 <Title>{plans[7].label}</Title>
@@ -279,11 +279,11 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[7].overage}.00 Per 1,000 Pulls</SmallBold>
                 </div>
-                <Link href="/trial">
+                <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDarker" burst>
                     Start Trial
                   </Button>
-                </Link>
+                </a>
               </Plan>
               <Plan id={plans[0].value}>
                 <Title>{plans[0].label}</Title>
@@ -294,11 +294,11 @@ export default function PricingPlans({
                   {' '}
                   <SmallBold>Contact Us For A Quote</SmallBold>
                 </div>
-                <Link href="/trial">
+                <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDark" burst>
                     Request a Quote
                   </Button>
-                </Link>
+                </a>
               </Plan>
             </Plans>
             <BackButton>
@@ -341,11 +341,11 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[1].overage} Per 1,000 Pulls</SmallBold>
                 </div>
-                <Link href="/trial">
+                <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDarker" burst>
                     Start Trial
                   </Button>
-                </Link>
+                </a>
               </Plan>
               <Plan id={plans[2].value}>
                 <Title>{plans[2].label}</Title>
@@ -376,11 +376,11 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[2].overage} Per 1,000 Pulls</SmallBold>
                 </div>
-                <Link href="/trial">
+                <a href="https://app.nozzle.io/sign-up">
                   <Button color="success" burst>
                     Start Trial
                   </Button>
-                </Link>
+                </a>
               </Plan>
               <Plan id={plans[3].value}>
                 <Title>{plans[3].label}</Title>
@@ -411,11 +411,11 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[3].overage} Per 1,000 Pulls</SmallBold>
                 </div>
-                <Link href="/trial">
+                <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDarker" burst>
                     Start Trial
                   </Button>
-                </Link>
+                </a>
               </Plan>
               <Plan id={plans[4].value}>
                 <Title>{plans[4].label}</Title>
@@ -446,11 +446,11 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[4].overage} Per 1,000 Pulls</SmallBold>
                 </div>
-                <Link href="/trial">
+                <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDark" burst>
                     Start Trial
                   </Button>
-                </Link>
+                </a>
               </Plan>
             </Plans>
             <NextButton>

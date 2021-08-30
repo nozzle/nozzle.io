@@ -195,13 +195,13 @@ const SectionBrandsCmp = props => (
         </Ul>
       </div>
       <Center>
-        <Link href="/trial">
+        <a href="https://app.nozzle.io/sign-up">
           <a>
             <Button color="success" burst>
               Start tracking today!
             </Button>
           </a>
-        </Link>
+        </a>
       </Center>
     </Container>
   </section>
@@ -382,13 +382,11 @@ const SectionCompetitionCmp = props => (
         </div>
       </div>
       <Center>
-        <Link href="/trial">
-          <a>
-            <Button color="success" burst>
-              Show My Competitors
-            </Button>
-          </a>
-        </Link>
+        <a href="https://app.nozzle.io/sign-up">
+          <Button color="success" burst>
+            Show My Competitors
+          </Button>
+        </a>
       </Center>
     </Container>
   </section>
@@ -477,13 +475,11 @@ const SectionSchedulingCmp = props => (
           <Strong>keep an eye on thousands more</Strong> by scheduling them
           weekly or monthly without breaking the bank.
         </P>
-        <Link href="/trial">
-          <a>
-            <Button color="success" burst>
-              Try Flexible Scheduling
-            </Button>
-          </a>
-        </Link>
+        <a href="https://app.nozzle.io/sign-up">
+          <Button color="success" burst>
+            Try Flexible Scheduling
+          </Button>
+        </a>
       </Center>
     </Container>
   </section>
@@ -659,13 +655,11 @@ const SectionDataCmp = props => (
         </div>
       </div>
       <Center>
-        <Link href="/trial">
-          <a>
-            <Button color="success" burst>
-              Get the Datas!
-            </Button>
-          </a>
-        </Link>
+        <a href="https://app.nozzle.io/sign-up">
+          <Button color="success" burst>
+            Get the Datas!
+          </Button>
+        </a>
       </Center>
     </Container>
   </section>
@@ -834,13 +828,11 @@ const SectionAgenciesCmp = props => (
           </Ul>
           <br />
           <br />
-          <Link href="/trial">
-            <a>
-              <Button color="success" burst>
-                Try it out!
-              </Button>
-            </a>
-          </Link>
+          <a href="https://app.nozzle.io/sign-up">
+            <Button color="success" burst>
+              Try it out!
+            </Button>
+          </a>
         </div>
       </div>
     </Container>
@@ -909,13 +901,11 @@ const SectionReputationCmp = props => (
               <Li>Preventative - Catch negative sites before they rank high</Li>
             </Ul>
           </div>
-          <Link href="/trial">
-            <a>
-              <Button color="success" burst>
-                Show My Trends
-              </Button>
-            </a>
-          </Link>
+          <a href="https://app.nozzle.io/sign-up">
+            <Button color="success" burst>
+              Show My Trends
+            </Button>
+          </a>
         </div>
         <div className="two">
           <Img
@@ -1043,13 +1033,11 @@ const SectionIntegrationsCmp = props => (
         </div>
       </div>
       <Center>
-        <Link href="/trial">
-          <a>
-            <Button color="success" burst>
-              Try it out!
-            </Button>
-          </a>
-        </Link>
+        <a href="https://app.nozzle.io/sign-up">
+          <Button color="success" burst>
+            Try it out!
+          </Button>
+        </a>
       </Center>
     </Container>
   </section>
@@ -1099,18 +1087,16 @@ const SectionContactUsCmp = props => (
   <section {...props}>
     <Container>
       <H2 full>Let's start your free trial!</H2>
-      <Link href="/trial">
-        <a>
-          <Button
-            color="success"
-            css={`
-              ${tw`text-2xl rounded p-6`}
-            `}
-          >
-            Get started!
-          </Button>
-        </a>
-      </Link>
+      <a href="https://app.nozzle.io/sign-up">
+        <Button
+          color="success"
+          css={`
+            ${tw`text-2xl rounded p-6`}
+          `}
+        >
+          Get started!
+        </Button>
+      </a>
     </Container>
   </section>
 )

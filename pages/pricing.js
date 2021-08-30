@@ -199,7 +199,7 @@ export default function Pricing() {
           >
             <Center>
               <H2 full>Let's start your free trial!</H2>
-              <Link href="/trial">
+              <a href="https://app.nozzle.io/sign-up">
                 <Button
                   color="success"
                   css={`
@@ -208,7 +208,7 @@ export default function Pricing() {
                 >
                   Get started!
                 </Button>
-              </Link>
+              </a>
             </Center>
           </Container>
         </SectionContactUs>

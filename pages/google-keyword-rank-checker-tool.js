@@ -174,11 +174,11 @@ export default function GoogleKeywordRankCheckerTool() {
               The keyword checker tool that collects all of the data from every
               SERP that is important to you
             </P>
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 Start Free Trial!
               </Button>
-            </Link>
+            </a>
           </Left>
           <Right>
             <Img
@@ -207,8 +207,8 @@ export default function GoogleKeywordRankCheckerTool() {
                 <div className="content">
                   <P>
                     Each SERP contains loads of information that can be useful
-                    in guiding SEO strategy. Nozzle's website ranking checker will provide you with all of
-                    Google’s SERP data.
+                    in guiding SEO strategy. Nozzle's website ranking checker
+                    will provide you with all of Google’s SERP data.
                   </P>
                 </div>
               </div>
@@ -307,11 +307,11 @@ export default function GoogleKeywordRankCheckerTool() {
             <Link href="/pricing">
               <Button burst>See Our Plans & Pricing</Button>
             </Link>{' '}
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 Try it out!
               </Button>
-            </Link>
+            </a>
           </Left>
         </SectionCantAfford>
       </main>

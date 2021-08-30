@@ -269,11 +269,11 @@ export default function Home() {
               tool has ever offered, you've come to the right place. SEO data
               nerds drool over our Google keyword rank tracker tool.
             </P>
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 I'd like a demo!
               </Button>
-            </Link>
+            </a>
           </Left>
           <Right>
             <Img
@@ -340,22 +340,22 @@ export default function Home() {
           <Right>
             <H2>Track all the things!</H2>
             <P>
-              Most SEO keyword rank tracker tools just tell you the top ranking page
-              on your website. We monitor your entire brand, including social
-              media profiles and unlimited domain matches. There's a difference
-              between knowing you're ranking #1 and owning the entire first
-              page!
+              Most SEO keyword rank tracker tools just tell you the top ranking
+              page on your website. We monitor your entire brand, including
+              social media profiles and unlimited domain matches. There's a
+              difference between knowing you're ranking #1 and owning the entire
+              first page!
             </P>
             <P>
               Unlimited access doesn't just refer to today's SERP. We keep all
               your data FOREVER, so 3 years from now, you'll be able to look
               back and see what was ranking for "The Last Dance" in 2020.
             </P>
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 Start tracking today!
               </Button>
-            </Link>{' '}
+            </a>{' '}
             <Link href="/features">
               <Button color="primary" burst>
                 How does it work?
@@ -398,11 +398,11 @@ export default function Home() {
             <Link href="/features/#data">
               <Button burst>See the complete list</Button>
             </Link>{' '}
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 Get the datas!
               </Button>
-            </Link>
+            </a>
           </Left>
           <Right>
             <Img
@@ -440,11 +440,11 @@ export default function Home() {
               and we'll even rewrite history for you. It'll be like you were
               monitoring them from the start!
             </P>
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 Show me my competitors!
               </Button>
-            </Link>{' '}
+            </a>{' '}
             <Link href="/features/#competition">
               <Button color="primary" burst>
                 How does it work?
@@ -469,11 +469,11 @@ export default function Home() {
               tooling when dealing with millions of keywords. Nozzle truly is an
               online keyword rank tracker tool built for the ages.
             </P>
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 Fix me up with 1,000 keywords!
               </Button>
-            </Link>{' '}
+            </a>{' '}
             <Link href="/features/#integration">
               <Button color="primary" burst>
                 Show all integrations
@@ -509,11 +509,11 @@ export default function Home() {
             </Div>
           </Centered>
           <Centered>
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 Give me flexibility, stat!
               </Button>
-            </Link>{' '}
+            </a>{' '}
             <Link href="/features/#scheduling">
               <Button color="primary" burst>
                 Why does it matter?
@@ -535,11 +535,11 @@ export default function Home() {
             <Link href="/pricing">
               <Button burst>See Our Plans & Pricing</Button>
             </Link>{' '}
-            <Link href="/trial">
+            <a href="https://app.nozzle.io/sign-up">
               <Button color="success" burst>
                 Try it out!
               </Button>
-            </Link>
+            </a>
           </Left>
         </SectionCantAfford>
       </main>

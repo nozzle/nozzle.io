@@ -4,8 +4,7 @@ import tw from 'twin.macro'
 //
 import { angle } from 'utils/Styles'
 
-import { H2 } from 'components/Html'
-import HubspotForm from 'components/HubspotForm'
+import { H2, Button } from 'components/Html'
 
 const Section = ({ children, ...rest }) => (
   <section {...rest}>
@@ -36,14 +35,12 @@ export default function Trial() {
   return (
     <SectionContactUs id="contact">
       <H2 full>Let's start your free trial!</H2>
-      <HubspotForm
-        id="45956734-db34-4a7b-ad2e-f84f9ba62a2b"
-        onFormSubmitted={() => {
-          if (typeof window !== 'undefined') {
-            window.dataLayer.push({ event: 'trialSubmit' })
-          }
-        }}
-      />
+
+      <a href="https://app.nozzle.io/sign-up">
+        <Button color="primaryDarker" burst>
+          Start Trial
+        </Button>
+      </a>
     </SectionContactUs>
   )
 }

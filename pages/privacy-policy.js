@@ -352,6 +352,28 @@ export default function Privacy() {
               us serve you content based on preferences you have specified.{' '}
             </P>
             <P>Please refer to our Cookie Policy for more information. </P>
+            <H3>YouTube and Google</H3>
+            <Ul>
+              <Li>
+                To learn more about the terms of service for YouTube click here:{' '}
+                <a
+                  tw="text-blue-500 hover:(underline)"
+                  href="https://www.youtube.com/t/terms"
+                >
+                  YouTube ToS
+                </a>
+              </Li>
+              <Li>
+                To learn more about Google's privacy policy click here:{' '}
+                <a
+                  tw="text-blue-500 hover:(underline)"
+                  href="https://policies.google.com/privacy"
+                >
+                  Google Privacy Policy
+                </a>
+              </Li>
+            </Ul>
+
             <H3>Business Transfers</H3>
             <P>
               If we or our assets are acquired, or in the unlikely event that we

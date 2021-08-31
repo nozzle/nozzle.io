@@ -367,7 +367,7 @@ export default function Navbar(props) {
             <div className="link">
               <div itemProp="name">
                 <a
-                  href="https://beta.nozzle.io"
+                  href="https://app.nozzle.io"
                   itemProp="url"
                   onClick={closeMenu}
                   rel="nofollow"

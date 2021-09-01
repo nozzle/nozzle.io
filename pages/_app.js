@@ -74,6 +74,7 @@ export default function MyApp({ Component, pageProps }) {
           name="facebook-domain-verification"
           content="ywyj0bgycebyurwew2ipmicuwphhkq"
         />
+
         <script
           dangerouslySetInnerHTML={{
             __html: `

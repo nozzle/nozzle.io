@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import Smackdown from 'components/Smackdown'
 import { Container, Center } from 'components/Layout'
 import tw from 'twin.macro'
+import { useYoutube } from '../hooks/useYouTube'
 
 const Top = styled('section')`
   ${angle('left')};
@@ -55,6 +56,48 @@ export async function getServerSideProps() {
   }
 }
 export default function Testimonials({ testimonial }) {
+  function loadVideo() {
+    const players = []
+
+    function youtube_parser(url) {
+      var regExp =
+        /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/
+      var match = url.match(regExp)
+      return match && match[7].length == 11 ? match[7] : false
+    }
+
+    function onYouTubeIframeAPIReady() {
+      const videos = document.querySelectorAll('iframe')
+      const videosArray = Array.prototype.slice
+        .call(videos)
+        .filter(video => video.id === 'youtube')
+
+      for (var i = 0; i < videosArray.length; i++) {
+        var t = new window.YT.Player(youtube_parser(videosArray[i].src), {
+          events: {
+            onStateChange: onPlayerStateChange,
+          },
+        })
+        players.push(t)
+      }
+    }
+    onYouTubeIframeAPIReady()
+
+    function onPlayerStateChange(event) {
+      console.log('now')
+      if (event.data == window.YT.PlayerState.PLAYING) {
+        var temp = event.target.playerInfo.videoUrl
+
+        for (var i = 0; i < players.length; i++) {
+          if (players[i].playerInfo.videoUrl != temp) {
+            players[i].stopVideo()
+          }
+        }
+      }
+    }
+  }
+  useYoutube(loadVideo)
+
   return (
     <div>
       <Head

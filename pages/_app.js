@@ -11,6 +11,7 @@ import reset from 'styled-reset'
 import 'swagger-ui-react/swagger-ui.css'
 
 import Theme, { ThemeContext } from 'utils/Theme'
+import { loadScript } from 'utils/loadScript'
 
 import Head from 'components/Head'
 import NavWrapper from 'components/NavWrapper'
@@ -65,6 +66,60 @@ function ThemeProvider({ children }) {
 }
 
 export default function MyApp({ Component, pageProps }) {
+  React.useEffect(() => {
+    ;(async () => {
+      await loadScript('https://www.youtube.com/iframe_api')
+
+      let players = []
+
+      setInterval(() => {
+        if (!window.YT) {
+          return
+        }
+
+        const videos = document.querySelectorAll('iframe')
+        const videoEls = Array.from(videos).filter(
+          video => video.id === 'youtube'
+        )
+
+        videoEls.forEach(videoEl => {
+          if (players.find(d => d.videoEl === videoEl)) {
+            return
+          }
+
+          console.log(videoEl)
+          const player = new window.YT.Player(youtube_parser(videoEl.src), {
+            events: {
+              onStateChange: event => {
+                if (event.data == window.YT.PlayerState.PLAYING) {
+                  var temp = event.target.playerInfo.videoUrl
+
+                  players.forEach(player => {
+                    if (player.player.playerInfo.videoUrl != temp) {
+                      player.player.stopVideo()
+                    }
+                  })
+                }
+              },
+            },
+          })
+
+          players.push({
+            player,
+            videoEl,
+          })
+        })
+      }, 1000)
+
+      function youtube_parser(url) {
+        var regExp =
+          /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/
+        var match = url.match(regExp)
+        return match && match[7].length == 11 ? match[7] : false
+      }
+    })()
+  }, [])
+
   return (
     <ThemeProvider>
       <Head title="Enterprise Keyword Rank Tracker Tool - Website Ranking Checker - Nozzle">

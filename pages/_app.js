@@ -78,16 +78,18 @@ export default function MyApp({ Component, pageProps }) {
         }
 
         const videos = document.querySelectorAll('iframe')
-        const videoEls = Array.from(videos).filter(video =>
-          video.src.startsWith('https://www.youtube.com')
+        const videoEls = Array.from(videos).filter(
+          video =>
+            video.src.startsWith('http://www.youtube.com') ||
+            video.src.startsWith('https://www.youtube.com')
         )
 
-        videoEls.forEach((videoEl, i) => {
+        videoEls.forEach(videoEl => {
           if (players.find(d => d.videoEl === videoEl)) {
             return
           }
 
-          const player = new window.YT.Player(`youtube${i}`, {
+          const player = new window.YT.Player(youtube_parser(videoEl.src), {
             videoId: youtube_parser(videoEl.src),
             events: {
               onStateChange: event => {

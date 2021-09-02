@@ -61,6 +61,7 @@ export default function Testimonials({ testimonial }) {
         title="Testimonials | Nozzle"
         description="What people are saying about Nozzle."
       />
+
       {testimonial.length ? (
         <div>
           <Center>

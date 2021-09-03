@@ -208,6 +208,9 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[5].overage} Per 1,000 Pulls</SmallBold>
                 </div>
+                <div tw="text-sm">
+                  <Icon i="check" tw="text-green-500" /> All features included
+                </div>
                 <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDarker" burst>
                     Start Trial
@@ -240,9 +243,13 @@ export default function PricingPlans({
 
                   <SmallBold>{number(plans[6].pulls)} Pulls Included</SmallBold>
                 </Price>
+
                 <div className="plan-inner">
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[6].overage} Per 1,000 Pulls</SmallBold>
+                </div>
+                <div tw="text-sm">
+                  <Icon i="check" tw="text-green-500" /> All features included
                 </div>
                 <a href="https://app.nozzle.io/sign-up">
                   <Button color="success" burst>
@@ -279,6 +286,9 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[7].overage}.00 Per 1,000 Pulls</SmallBold>
                 </div>
+                <div tw="text-sm">
+                  <Icon i="check" tw="text-green-500" /> All features included
+                </div>
                 <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDarker" burst>
                     Start Trial
@@ -293,6 +303,9 @@ export default function PricingPlans({
                 <div className="plan-inner">
                   {' '}
                   <SmallBold>Contact Us For A Quote</SmallBold>
+                </div>
+                <div tw="text-sm">
+                  <Icon i="check" tw="text-green-500" /> All features included
                 </div>
                 <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDark" burst>
@@ -341,6 +354,9 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[1].overage} Per 1,000 Pulls</SmallBold>
                 </div>
+                <div tw="text-sm">
+                  <Icon i="check" tw="text-green-500" /> All features included
+                </div>
                 <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDarker" burst>
                     Start Trial
@@ -375,6 +391,9 @@ export default function PricingPlans({
                 <div className="plan-inner">
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[2].overage} Per 1,000 Pulls</SmallBold>
+                </div>
+                <div tw="text-sm">
+                  <Icon i="check" tw="text-green-500" /> All features included
                 </div>
                 <a href="https://app.nozzle.io/sign-up">
                   <Button color="success" burst>
@@ -411,6 +430,9 @@ export default function PricingPlans({
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[3].overage} Per 1,000 Pulls</SmallBold>
                 </div>
+                <div tw="text-sm">
+                  <Icon i="check" tw="text-green-500" /> All features included
+                </div>
                 <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDarker" burst>
                     Start Trial
@@ -445,6 +467,9 @@ export default function PricingPlans({
                 <div className="plan-inner">
                   <Small>Overage Pricing:</Small>
                   <SmallBold>${plans[4].overage} Per 1,000 Pulls</SmallBold>
+                </div>
+                <div tw="text-sm">
+                  <Icon i="check" tw="text-green-500" /> All features included
                 </div>
                 <a href="https://app.nozzle.io/sign-up">
                   <Button color="primaryDark" burst>

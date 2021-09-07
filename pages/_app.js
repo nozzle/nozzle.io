@@ -11,6 +11,7 @@ import reset from 'styled-reset'
 import 'swagger-ui-react/swagger-ui.css'
 
 import Theme, { ThemeContext } from 'utils/Theme'
+import { loadScript } from 'utils/loadScript'
 
 import Head from 'components/Head'
 import NavWrapper from 'components/NavWrapper'
@@ -74,6 +75,7 @@ export default function MyApp({ Component, pageProps }) {
           name="facebook-domain-verification"
           content="ywyj0bgycebyurwew2ipmicuwphhkq"
         />
+
         <script
           dangerouslySetInnerHTML={{
             __html: `

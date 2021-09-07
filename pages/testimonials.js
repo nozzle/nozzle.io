@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import Smackdown from 'components/Smackdown'
 import { Container, Center } from 'components/Layout'
 import tw from 'twin.macro'
+import { loadScript } from '../utils/loadScript'
 
 const Top = styled('section')`
   ${angle('left')};
@@ -55,6 +56,60 @@ export async function getServerSideProps() {
   }
 }
 export default function Testimonials({ testimonial }) {
+  React.useEffect(() => {
+    ;(async () => {
+      await loadScript('https://www.youtube.com/iframe_api')
+
+      let players = []
+      window.onYouTubeIframeAPIReady = setInterval(() => {
+        if (!window.YT.loaded) {
+          return
+        }
+
+        const videos = document.querySelectorAll('iframe')
+        const videoEls = Array.from(videos).filter(
+          video =>
+            video.src.startsWith('http://www.youtube.com') ||
+            video.src.startsWith('https://www.youtube.com')
+        )
+
+        videoEls.forEach(videoEl => {
+          if (players.find(d => d.videoEl.src === videoEl.src)) {
+            return
+          }
+
+          const player = new window.YT.Player(youtube_parser(videoEl.src), {
+            videoId: youtube_parser(videoEl.src),
+            events: {
+              onStateChange: event => {
+                if (event.data == window.YT.PlayerState.PLAYING) {
+                  var temp = event.target.playerInfo.videoUrl
+
+                  players.forEach(player => {
+                    if (player.player.playerInfo.videoUrl != temp) {
+                      player.player.stopVideo()
+                    }
+                  })
+                }
+              },
+            },
+          })
+
+          players.push({
+            player,
+            videoEl,
+          })
+        })
+      }, 1000)
+
+      function youtube_parser(url) {
+        var regExp =
+          /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/
+        var match = url.match(regExp)
+        return match && match[7].length == 11 ? match[7] : false
+      }
+    })()
+  }, [])
   return (
     <div>
       <Head

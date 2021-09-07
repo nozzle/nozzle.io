@@ -4,10 +4,13 @@ export function loadScript(src, attrs = {}) {
       const script = document.createElement('script')
       script.async = true
       script.defer = true
+      script.type = 'text/javascript'
       Object.keys(attrs).forEach(attr => script.setAttribute(attr, attrs[attr]))
       script.src = src
       script.onload = () => resolve()
-      document.body.appendChild(script)
+
+      var firstScriptTag = document.getElementsByTagName('script')[0]
+      firstScriptTag.parentNode.insertBefore(script, firstScriptTag)
     }
   })
 }

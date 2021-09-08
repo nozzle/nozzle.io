@@ -283,7 +283,7 @@ export default function PaaDashBoard({ testimonials }) {
             <P>
               {' '}
               <a
-                href="https://datastudio.google.com/u/1/reporting/c603c6cc-2137-49b7-a161-735bf238f46d/page/T6hmB"
+                href="https://datastudio.google.com/u/0/reporting/2fdfc264-1785-46f6-80e4-149ace7336e6/page/T6hmB"
                 target="blank"
               >
                 <span className="link">

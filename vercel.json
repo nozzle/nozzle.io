@@ -1,5 +1,28 @@
 {
-  "github": {
-    "silent": true
-  }
+  "redirects": [
+    {
+      "source": "/blog/low-cost-pr-for-businesses-a-link-and-brand-building-strategy",
+      "destination": "https://nozzle.io/blog/pr-strategies-for-businesses"
+    },
+     {
+      "source": "/blog/hourly-rank-tracking-the-when-the-why-and-the-how",
+      "destination": "https://nozzle.io/blog/hourly-rank-tracking"  
+    },
+    {
+      "source": "/seo-paa-questions",
+      "destination": "/blog/seo-paa-questions"
+    },
+    {
+      "source": "/paa/trial",
+      "destination": "https://app.nozzle.io/sign-up"
+    },
+   {
+      "source": "/trial",
+      "destination": "https://app.nozzle.io/sign-up"
+    },
+    {
+      "source": "/(.*)/$",
+      "destination": "/$1"
+    }
+  ]
 }

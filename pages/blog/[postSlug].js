@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
+import Error from 'next/error'
 //
 
 import { fetchBlogPostBySlug } from '../../contentful'
@@ -80,6 +81,9 @@ export async function getServerSideProps(req) {
 }
 
 export default function BlogPost({ post, relatedPosts }) {
+  if (post.err) {
+    return <Error statusCode={post.err} />
+  }
   const wordCount = post.fields.body.split(' ').length
 
   return (

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 import { format } from 'date-fns'
+import Error from 'next/error'
 //
 
 import { fetchDevPostBySlug } from '../../contentful'
@@ -72,6 +73,9 @@ export async function getServerSideProps(req) {
 }
 
 export default function DevBlogPost({ post }) {
+  if (post.err) {
+    return <Error statusCode={post.err} />
+  }
   const wordCount = post.fields.body.split(' ').length
 
   return (

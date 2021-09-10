@@ -172,6 +172,10 @@ export async function fetchBlogPostBySlug(slug) {
     'fields.slug[in]': slug,
   })
 
+  if (!post) {
+    return { post: { err: 404 }, relatedPosts: null }
+  }
+
   const category = sample(post.fields.categories)
 
   let { posts: relatedPosts } = await fetchBlogPostsByCategorySlug(
@@ -215,6 +219,10 @@ export async function fetchDevPostBySlug(slug) {
     content_type: 'devPost',
     'fields.slug[in]': slug,
   })
+
+  if (!post) {
+    return { post: { err: 404 }, relatedPosts: null }
+  }
 
   return {
     post: normalizePost(post),

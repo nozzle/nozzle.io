@@ -411,7 +411,7 @@
   {
     "section": "Multi-User / Client Support",
     "sectionOrder": 10,
-    "name": "Support Multiple Teams / Clients",
+    "name": "Support Multiple Projects / Clients",
     "type": "agencies",
     "nozzle": true,
     "conductor": "",

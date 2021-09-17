@@ -822,7 +822,7 @@ const SectionAgenciesCmp = props => (
         <div className="two">
           <H4>Manage your agency like a boss.</H4>
           <Ul className="list">
-            <Li>Segment Teams &amp; Clients</Li>
+            <Li>Segment Projects &amp; Clients</Li>
             <Li>Aggregated views and bulk keyword management</Li>
             <Li>Unlimited users at no extra charge</Li>
           </Ul>

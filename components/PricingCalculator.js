@@ -10,27 +10,9 @@ import { angle } from 'utils/Styles'
 import { Container } from 'components/Layout'
 import { Button, H3, P, Input } from 'components/Html'
 import Icon from 'components/Icon'
+import Select from 'components/Select'
 
 const belowMobile = `@media(max-width: ${700}px)`
-
-const frequencyOptions = [
-  {
-    value: 'hourly',
-    label: 'Hourly',
-  },
-  {
-    value: 'daily',
-    label: 'Daily',
-  },
-  {
-    value: 'weekly',
-    label: 'Weekly',
-  },
-  {
-    value: 'monthly',
-    label: 'Monthly',
-  },
-]
 
 const CalculatorStyles = styled('div')`
   ${angle('right')};
@@ -230,6 +212,14 @@ const DeleteIcon = styled(Icon)`
 export default function PricingCalculator({ plans, monthly }) {
   const [rows, setRows] = React.useState(presets.original)
   const [dirty, setDirty] = React.useState(false)
+  const initCalcState = {
+    first: 'hourly',
+    second: 'daily',
+    third: 'weekly',
+    fourth: 'monthly',
+  }
+
+  const [calcState, setCalcState] = React.useState(initCalcState)
 
   React.useEffect(() => {
     if (rows == presets.original) {
@@ -237,7 +227,7 @@ export default function PricingCalculator({ plans, monthly }) {
     } else {
       setDirty(true)
     }
-  }, [setDirty, rows])
+  }, [setDirty, rows, calcState, initCalcState])
 
   const handleChange = index => e => {
     const { dataset, name, value } = e.target
@@ -262,10 +252,10 @@ export default function PricingCalculator({ plans, monthly }) {
     const item = {
       name: '',
       keywords: {
-        hourly: '',
-        daily: '',
-        weekly: '',
-        monthly: '',
+        first: '',
+        second: '',
+        third: '',
+        fourth: '',
       },
       devices: 1,
       locations: 1,
@@ -279,26 +269,119 @@ export default function PricingCalculator({ plans, monthly }) {
     setRows(newRows)
   }
 
-  let totalHourly = 0
-  let totalDaily = 0
-  let totalWeekly = 0
-  let totalMonthly = 0
+  const getSchedule = schedule => {
+    const multiplier =
+      schedule === 'hourly'
+        ? 30 * 24 * 2
+        : schedule === 'daily'
+        ? 30
+        : schedule.includes('weekly')
+        ? 4
+        : schedule.includes('monthly')
+        ? 1
+        : schedule === 'everyOther'
+        ? 15
+        : schedule === 'threeTimesWeek'
+        ? 10
+        : schedule === 'twiceAMonth'
+        ? 2
+        : 0.25
+    return multiplier
+  }
+  const scheduleOptions = [
+    {
+      label: 'Hourly Keywords',
+      value: 'hourly',
+    },
+    {
+      label: 'Daily Keywords',
+      value: 'daily',
+    },
+    {
+      label: 'Weekly Keywords',
+      value: 'weekly',
+    },
+    {
+      label: 'Monthly Keywords',
+      value: 'monthly',
+    },
+    {
+      label: 'Every Other Day',
+      value: 'everyOther',
+    },
+    {
+      label: 'Every Monday, Wednesday, and Friday',
+      value: 'threeTimesWeek',
+    },
+    {
+      label: 'Weekly on Sunday',
+      value: 'weeklySunday',
+    },
+    {
+      label: 'Weekly on Monday',
+      value: 'weeklyMonday',
+    },
+    {
+      label: 'Weekly on Tuesday',
+      value: 'weeklyTuesday',
+    },
+    {
+      label: 'Weekly on Wednesday',
+      value: 'weeklyWednesday',
+    },
+    {
+      label: 'Weekly on Thursday',
+      value: 'weeklyThursday',
+    },
+    {
+      label: 'Weekly on Friday',
+      value: 'weeklyFriday',
+    },
+    {
+      label: 'Weekly on Saturday',
+      value: 'weeklySaturday',
+    },
+    {
+      label: 'Twice a month on the 1st and 15th',
+      value: 'twiceAMonth',
+    },
+    {
+      label: 'Monthly on the 1st',
+      value: 'monthlyFirst',
+    },
+    {
+      label: 'Monthly on the last day of the month',
+      value: `monthlyLast`,
+    },
+    {
+      label: 'Quarterly',
+      value: 'quarterly',
+    },
+  ]
+
+  let totalFirst = 0
+  let totalSecond = 0
+  let totalThird = 0
+  let totalFourth = 0
   let totalDevices = 0
   let totalLocations = 0
   let totalPulls = 0
 
   rows.forEach(row => {
     let keywords = 0
-    totalHourly += parseInt(row.keywords.hourly || 0)
-    totalDaily += parseInt(row.keywords.daily || 0)
-    totalWeekly += parseInt(row.keywords.weekly || 0)
-    totalMonthly += parseInt(row.keywords.monthly || 0)
+    totalFirst += parseInt(row.keywords.first || 0)
+    totalSecond += parseInt(row.keywords.second || 0)
+    totalThird += parseInt(row.keywords.third || 0)
+    totalFourth += parseInt(row.keywords.fourth || 0)
     totalDevices += parseInt(row.devices)
     totalLocations += parseInt(row.locations)
-    keywords += parseInt(row.keywords.hourly || 0) * 30 * 24 * 2
-    keywords += parseInt(row.keywords.daily || 0) * 30
-    keywords += parseInt(row.keywords.weekly || 0) * 4
-    keywords += parseInt(row.keywords.monthly || 0)
+    keywords += parseInt(row.keywords.first || 0) * getSchedule(calcState.first)
+    keywords +=
+      parseInt(row.keywords.second || 0) * getSchedule(calcState.second)
+    keywords += parseInt(row.keywords.third || 0) * getSchedule(calcState.third)
+    keywords +=
+      parseInt(row.keywords.fourth || 0) * getSchedule(calcState.fourth)
+
     totalPulls += keywords * parseInt(row.devices) * parseInt(row.locations)
   })
 
@@ -326,7 +409,13 @@ export default function PricingCalculator({ plans, monthly }) {
         <Inner>
           <Presets>
             {dirty ? (
-              <Button color="gray" onClick={() => setRows(presets.original)}>
+              <Button
+                color="gray"
+                onClick={() => {
+                  setRows(presets.original)
+                  setCalcState(initCalcState)
+                }}
+              >
                 <Icon i="undo" /> Reset
               </Button>
             ) : (
@@ -352,10 +441,58 @@ export default function PricingCalculator({ plans, monthly }) {
                 <tr>
                   <th></th>
                   <th>Team/Project</th>
-                  <th>Hourly Keywords</th>
-                  <th>Daily Keywords</th>
-                  <th>Weekly Keywords</th>
-                  <th>Monthly Keywords</th>
+                  <th>
+                    <Select
+                      options={scheduleOptions}
+                      onChange={value =>
+                        setCalcState(old => {
+                          return { ...old, first: value }
+                        })
+                      }
+                      value={calcState.first}
+                    >
+                      Hourly Keywords
+                    </Select>
+                  </th>
+                  <th>
+                    <Select
+                      options={scheduleOptions}
+                      onChange={value =>
+                        setCalcState(old => {
+                          return { ...old, second: value }
+                        })
+                      }
+                      value={calcState.second}
+                    >
+                      Daily Keywords
+                    </Select>
+                  </th>
+                  <th>
+                    <Select
+                      options={scheduleOptions}
+                      onChange={value =>
+                        setCalcState(old => {
+                          return { ...old, third: value }
+                        })
+                      }
+                      value={calcState.third}
+                    >
+                      Weekly Keywords
+                    </Select>
+                  </th>
+                  <th>
+                    <Select
+                      options={scheduleOptions}
+                      onChange={value =>
+                        setCalcState(old => {
+                          return { ...old, fourth: value }
+                        })
+                      }
+                      value={calcState.fourth}
+                    >
+                      Monthly Keywords
+                    </Select>
+                  </th>
                   <th>Devices</th>
                   <th>Locations</th>
                 </tr>
@@ -378,18 +515,48 @@ export default function PricingCalculator({ plans, monthly }) {
                         onChange={handleChange(index)}
                       />
                     </td>
-                    {frequencyOptions.map(option => (
-                      <td className="row keywords" key={option.value}>
-                        <Input
-                          name={option.value}
-                          type="number"
-                          value={rows[index].keywords[option.value]}
-                          min="0"
-                          data-nested="nested"
-                          onChange={handleChange(index)}
-                        />
-                      </td>
-                    ))}
+
+                    <td className="row keywords">
+                      <Input
+                        name={'first'}
+                        type="number"
+                        value={rows[index].keywords['first']}
+                        min="0"
+                        data-nested="nested"
+                        onChange={handleChange(index)}
+                      />
+                    </td>
+                    <td className="row keywords">
+                      <Input
+                        name={'second'}
+                        type="number"
+                        value={rows[index].keywords['second']}
+                        min="0"
+                        data-nested="nested"
+                        onChange={handleChange(index)}
+                      />
+                    </td>
+                    <td className="row keywords">
+                      <Input
+                        name={'third'}
+                        type="number"
+                        value={rows[index].keywords['third']}
+                        min="0"
+                        data-nested="nested"
+                        onChange={handleChange(index)}
+                      />
+                    </td>
+                    <td className="row keywords">
+                      <Input
+                        name={'fourth'}
+                        type="number"
+                        value={rows[index].keywords['fourth']}
+                        min="0"
+                        data-nested="nested"
+                        onChange={handleChange(index)}
+                      />
+                    </td>
+
                     <td>
                       <Input
                         type="number"
@@ -428,10 +595,10 @@ export default function PricingCalculator({ plans, monthly }) {
                 <tr>
                   <td></td>
                   <th>Totals</th>
-                  <td>{totalHourly || ''}</td>
-                  <td>{totalDaily || ''}</td>
-                  <td>{totalWeekly || ''}</td>
-                  <td>{totalMonthly || ''}</td>
+                  <td>{totalFirst || ''}</td>
+                  <td>{totalSecond || ''}</td>
+                  <td>{totalThird || ''}</td>
+                  <td>{totalFourth || ''}</td>
                   <td>{totalDevices || ''}</td>
                   <td>{totalLocations || ''}</td>
                 </tr>

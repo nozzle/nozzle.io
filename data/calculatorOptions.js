@@ -2,10 +2,10 @@ export const smallSMBAgency = [
   {
     name: 'Client A',
     keywords: {
-      hourly: '0',
-      daily: '450',
-      weekly: '1000',
-      monthly: '5000',
+      first: '0',
+      second: '450',
+      third: '1000',
+      fourth: '5000',
     },
     devices: 2,
     locations: 1,
@@ -13,10 +13,10 @@ export const smallSMBAgency = [
   {
     name: 'Client B',
     keywords: {
-      hourly: '0',
-      daily: '200',
-      weekly: '4000',
-      monthly: '0',
+      first: '0',
+      second: '200',
+      third: '4000',
+      fourth: '0',
     },
     devices: 2,
     locations: 1,
@@ -24,10 +24,10 @@ export const smallSMBAgency = [
   {
     name: 'Client B - 2nd KW Group',
     keywords: {
-      hourly: '0',
-      daily: '0',
-      weekly: '0',
-      monthly: '3000',
+      first: '0',
+      second: '0',
+      third: '0',
+      fourth: '3000',
     },
     devices: 1,
     locations: 1,
@@ -35,10 +35,10 @@ export const smallSMBAgency = [
   {
     name: 'Client C',
     keywords: {
-      hourly: '0',
-      daily: '40',
-      weekly: '700',
-      monthly: '0',
+      first: '0',
+      second: '40',
+      third: '700',
+      fourth: '0',
     },
     devices: 1,
     locations: 1,
@@ -46,10 +46,10 @@ export const smallSMBAgency = [
   {
     name: 'Client C - 2nd KW Group',
     keywords: {
-      hourly: '0',
-      daily: '0',
-      weekly: '0',
-      monthly: '1000',
+      first: '0',
+      second: '0',
+      third: '0',
+      fourth: '1000',
     },
     devices: 2,
     locations: 1,
@@ -57,10 +57,10 @@ export const smallSMBAgency = [
   {
     name: 'Client D',
     keywords: {
-      hourly: '0',
-      daily: '75',
-      weekly: '0',
-      monthly: '500',
+      first: '0',
+      second: '75',
+      third: '0',
+      fourth: '500',
     },
     devices: 2,
     locations: 1,
@@ -68,10 +68,10 @@ export const smallSMBAgency = [
   {
     name: 'Client D - Multi Location',
     keywords: {
-      hourly: '0',
-      daily: '0',
-      weekly: '0',
-      monthly: '250',
+      first: '0',
+      second: '0',
+      third: '0',
+      fourth: '250',
     },
     devices: 2,
     locations: 25,
@@ -79,10 +79,10 @@ export const smallSMBAgency = [
   {
     name: 'Client E',
     keywords: {
-      hourly: '0',
-      daily: '100',
-      weekly: '500',
-      monthly: '0',
+      first: '0',
+      second: '100',
+      third: '500',
+      fourth: '0',
     },
     devices: 2,
     locations: 1,
@@ -90,10 +90,10 @@ export const smallSMBAgency = [
   {
     name: 'Client F',
     keywords: {
-      hourly: '0',
-      daily: '25',
-      weekly: '200',
-      monthly: '5000',
+      first: '0',
+      second: '25',
+      third: '200',
+      fourth: '5000',
     },
     devices: 1,
     locations: 1,
@@ -104,10 +104,10 @@ export const largerAgency = [
   {
     name: 'Client A',
     keywords: {
-      hourly: '0',
-      daily: '500',
-      weekly: '0',
-      monthly: '4000',
+      first: '0',
+      second: '500',
+      third: '0',
+      fourth: '4000',
     },
     devices: 2,
     locations: 1,
@@ -115,10 +115,10 @@ export const largerAgency = [
   {
     name: 'Client B',
     keywords: {
-      hourly: '0',
-      daily: '350',
-      weekly: '2500',
-      monthly: '4000',
+      first: '0',
+      second: '350',
+      third: '2500',
+      fourth: '4000',
     },
     devices: 2,
     locations: 1,
@@ -126,10 +126,10 @@ export const largerAgency = [
   {
     name: 'Client C',
     keywords: {
-      hourly: '0',
-      daily: '100',
-      weekly: '0',
-      monthly: '0',
+      first: '0',
+      second: '100',
+      third: '0',
+      fourth: '0',
     },
     devices: 2,
     locations: 1,
@@ -137,10 +137,10 @@ export const largerAgency = [
   {
     name: 'Client C - 2nd KW Group',
     keywords: {
-      hourly: '0',
-      daily: '0',
-      weekly: '0',
-      monthly: '20000',
+      first: '0',
+      second: '0',
+      third: '0',
+      fourth: '20000',
     },
     devices: 1,
     locations: 1,
@@ -148,10 +148,10 @@ export const largerAgency = [
   {
     name: 'Client D',
     keywords: {
-      hourly: '0',
-      daily: '25',
-      weekly: '0',
-      monthly: '100',
+      first: '0',
+      second: '25',
+      third: '0',
+      fourth: '100',
     },
     devices: 2,
     locations: 16,
@@ -159,10 +159,10 @@ export const largerAgency = [
   {
     name: '20 Clients - 1 Device',
     keywords: {
-      hourly: '0',
-      daily: '2000',
-      weekly: '0',
-      monthly: '20000',
+      first: '0',
+      second: '2000',
+      third: '0',
+      fourth: '20000',
     },
     devices: 1,
     locations: 1,
@@ -170,10 +170,10 @@ export const largerAgency = [
   {
     name: '35 Clients - 2 Devices',
     keywords: {
-      hourly: '0',
-      daily: '2500',
-      weekly: '0',
-      monthly: '25000',
+      first: '0',
+      second: '2500',
+      third: '0',
+      fourth: '25000',
     },
     devices: 2,
     locations: 1,
@@ -184,10 +184,10 @@ export const largeSiteMultipleLocations = [
   {
     name: 'Country Targeted KWs',
     keywords: {
-      hourly: '0',
-      daily: '5000',
-      weekly: '0',
-      monthly: '30000',
+      first: '0',
+      second: '5000',
+      third: '0',
+      fourth: '30000',
     },
     devices: 2,
     locations: 1,
@@ -195,10 +195,10 @@ export const largeSiteMultipleLocations = [
   {
     name: 'All Geo Locations',
     keywords: {
-      hourly: '0',
-      daily: '75',
-      weekly: '0',
-      monthly: '0',
+      first: '0',
+      second: '75',
+      third: '0',
+      fourth: '0',
     },
     devices: 2,
     locations: 350,
@@ -209,10 +209,10 @@ export const largerSite = [
   {
     name: 'Overall SERP Landscape',
     keywords: {
-      hourly: '0',
-      daily: '0',
-      weekly: '0',
-      monthly: '1000000',
+      first: '0',
+      second: '0',
+      third: '0',
+      fourth: '1000000',
     },
     devices: 2,
     locations: 1,
@@ -220,10 +220,10 @@ export const largerSite = [
   {
     name: 'Most Important KWs',
     keywords: {
-      hourly: '0',
-      daily: '20000',
-      weekly: '0',
-      monthly: '0',
+      first: '0',
+      second: '20000',
+      third: '0',
+      fourth: '0',
     },
     devices: 2,
     locations: 1,
@@ -234,10 +234,10 @@ export const original = [
   {
     name: '',
     keywords: {
-      hourly: '',
-      daily: 200,
-      weekly: 500,
-      monthly: '2500',
+      first: '',
+      second: 200,
+      third: 500,
+      fourth: '2500',
     },
     devices: 2,
     locations: 1,

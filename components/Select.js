@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import useSelect from 'use-select'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { matchSorter } from 'match-sorter'
 import { FixedSizeList } from 'react-window'
 import { Input } from 'components/Html'
@@ -9,6 +9,7 @@ import { FaCaretDown } from 'react-icons/fa'
 
 const StyledInput = styled(Input)`
   ${tw`text-base leading-none w-full hover:(cursor-pointer)`}
+  font-family: "Overpass", "Helvetica", "Georgia", sans-serif;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
 `
 
@@ -38,9 +39,6 @@ const Option = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
-  line-height: 1.3rem;
-  white-space: nowrap;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
   ${({ selected }) =>
     selected &&

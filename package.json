@@ -27,6 +27,7 @@
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",
     "lodash": "^4.17.21",
+    "match-sorter": "^6.3.1",
     "next": "^10.0.0",
     "next-fonts": "^1.0.3",
     "next-optimized-images": "^2.5.7",
@@ -36,13 +37,16 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.13.1",
     "react-form": "^3.5.7",
+    "react-icons": "^4.2.0",
     "react-smackdown": "^0.8.8",
+    "react-window": "^1.8.6",
     "stripe": "^8.126.0",
     "styled-components": "^5.0.1",
     "styled-reset": "^4.1.2",
     "swagger-ui-react": "^3.25.0",
     "tinycolor2": "^1.4.1",
-    "twin.macro": "^2.0.7"
+    "twin.macro": "^2.0.7",
+    "use-select": "^0.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

@@ -20,7 +20,9 @@ const OptionsWrapper = styled.div`
 `
 
 const Options = styled(FixedSizeList)`
-  border: 1px solid black;
+  border-radius: 0.25rem;
+  font-weight: normal;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 `
 
 const Option = styled.div`
@@ -30,13 +32,9 @@ const Option = styled.div`
     bg-white 
     text-black 
   `}
-  :hover {
-    background: ${props => props.theme.colors.primary};
-    color: white;
-  }
+
   min-width: 100%;
   width: auto !important;
-
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -47,20 +45,12 @@ const Option = styled.div`
   ${({ selected }) =>
     selected &&
     tw`
-      bg-gray-400! text-white!
+      bg-gray-400 text-white 
     `};
-
-  ${({ highlighted }) =>
-    highlighted &&
-    tw`
-      bg-blue-500! text-white!
-    `};
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      color: inherit;
-    `};
+  :hover {
+    background: ${props => props.theme.colors.primary};
+    color: white;
+  }
 `
 
 export default function Select({

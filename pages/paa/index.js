@@ -6,20 +6,7 @@ import { fetchPaaTestimonials } from '../../contentful'
 import { angle } from 'utils/Styles'
 import Head from 'components/Head'
 
-import Link from 'next/link'
-import {
-  H1,
-  H2,
-  H4,
-  H5,
-  H6,
-  P,
-  Ul,
-  Li,
-  Span,
-  Img,
-  Button,
-} from 'components/Html'
+import { H1, H2, H6, P, Ul, Li, Img } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 const belowMobile = `@media(max-width: ${700}px)`
@@ -114,91 +101,6 @@ const SectionKnowWhatQuestions = styled(Section)`
         ${tw`w-0`}
       }
     }
-  }
-`
-
-const SectionAction = styled(Section)`
-   ${section}
-
-  .plans {
-    ${tw`flex flex-row flex-wrap mt-7`}
-   
-  }
-  .plan {
-    ${tw`flex flex-col text-white text-center shadow-2xl justify-between overflow-hidden self-center`}
-    transition: all 0.4s ease-out;
-    h4 {
-      ${tw`my-8 mx-4`}
-    }
-    button {
-      ${tw`text-center m-0 p-4 w-full text-xl rounded-none leading-none`}
-
-      transition: all 0.15s ease-out !important;
-      :hover {
-        ${tw`transform-none shadow-none`}
-      }
-    }
-    :first-child {
-      ${tw`rounded-l bg-primaryDark`}
-      flex: 1 1 24%;
-      min-height: 400px;
-      z-index: 2;
-    }
-    :nth-child(2) {
-      ${tw`rounded bg-primaryDarker`}
-      flex: 1 1 27%;
-      min-height: 450px;
-      z-index: 3;
-    }
-    :nth-child(3) {
-      ${tw`rounded-r bg-primaryDark`}
-      flex: 1 1 24%;
-      min-height: 400px;
-      z-index: 3;
-   
-    .plan-inner {
-      ${tw`p-5 flex justify-between flex-col text-sm`}
-      transition: all 0.3s ease-out;
-      h5, p: ;
-        ${tw`m-0`}
-      }
-    }
-    .title {
-      ${tw`font-bold px-5`}
-   
-    }
-    .row {
-      ${tw`px-2`}
-      
-    }
-    
-
-    .price-number {
-      ${tw`text-3xl`}
-      
-    }
-   
-  }
-  @media screen and (max-width: 900px) {
-    .plan {
-      ${tw`rounded`}
-      flex: 1 1 48% !important;
-      min-height: auto !important;
-      margin: 0 1% 10px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .plan {
-      flex: 1 1 100% !important;
-      margin: 0 0 10px;
-    }
-  }
-  @media screen and (min-width: 900px) {
-    .plan:hover button {
-      ${tw`py-5`}
-    }
-  }
-
   }
 `
 
@@ -327,68 +229,6 @@ export default function PaaDashBoard({ testimonials }) {
             )
           })}
         </SectionTestimonials>
-        <SectionAction>
-          <Container>
-            <div className="plans">
-              <div className="plan">
-                <H4 className="title">Garden Hose</H4>
-                <H5>
-                  <Span className="price-number">Free</Span>
-                </H5>
-                <div className="plan-inner">
-                  <div className="row ">
-                    <P>
-                      Give us up to 500 keywords and we'll send you your
-                      deliverable highlighting the top 10 questions for your
-                      keyword list
-                    </P>
-                  </div>
-                </div>
-                <Link href="paa/trial">
-                  <Button color="primaryDarker" burst>
-                    Try it out!
-                  </Button>
-                </Link>
-              </div>
-              <div className="plan">
-                <H4 className="title">Fire Hose</H4>
-                <H5>
-                  <Span className="price-number">$79</Span>
-                </H5>
-                <div className="plan-inner">
-                  <div className="row">
-                    <P>
-                      Give us up to 500 keywords and we'll send you your
-                      deliverable with ALL the questions that your list
-                      generated in the SERPs (typically several hundred)
-                    </P>
-                  </div>
-                </div>
-                <Link href="paa/checkout">
-                  <Button color="success" burst>
-                    Buy Now!
-                  </Button>
-                </Link>
-              </div>
-              <div className="plan">
-                <H4 className="title">Order 10 Deliverables</H4>
-                <H5>
-                  <Span className="price-number">$499</Span>
-                </H5>
-                <div className="plan-inner">
-                  <div className="row">
-                    <P>Discounted pricing per deliverable purchased</P>
-                  </div>
-                </div>
-                <Link href="paa/bulkCheckout">
-                  <Button color="primaryDarker" burst>
-                    Buy Now!
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </Container>
-        </SectionAction>
       </main>
     </div>
   )

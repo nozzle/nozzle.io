@@ -6,7 +6,7 @@ import { fetchPaaTestimonials } from '../../contentful'
 import { angle } from 'utils/Styles'
 import Head from 'components/Head'
 
-import { H1, H2, H6, P, Ul, Li, Img } from 'components/Html'
+import { H1, H2, H6, P, Ul, Li, Img, Button } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 const belowMobile = `@media(max-width: ${700}px)`
@@ -104,6 +104,11 @@ const SectionKnowWhatQuestions = styled(Section)`
   }
 `
 
+const SectionCallToAction = styled(Section)`
+  ${section};
+  text-align: center;
+`
+
 export async function getServerSideProps(ctx) {
   const testimonials = await fetchPaaTestimonials()
 
@@ -156,7 +161,7 @@ export default function PaaDashBoard({ testimonials }) {
               Are you ready to compile a list of all the People Also Ask (PAA)
               questions Google serves up for your unique keyword list?
             </H2>
-            <P>Get a free or paid version of this deliverable below.</P>
+
             <P>What you'll get:</P>
             <P>
               <Ul>
@@ -229,6 +234,20 @@ export default function PaaDashBoard({ testimonials }) {
             )
           })}
         </SectionTestimonials>
+        <SectionCallToAction>
+          <H2 full>Let's start your free trial!</H2>
+
+          <a href="https://app.nozzle.io/sign-up" tw="w-full">
+            <Button
+              color="success"
+              css={`
+                ${tw`text-2xl rounded p-6`}
+              `}
+            >
+              Get started!
+            </Button>
+          </a>
+        </SectionCallToAction>
       </main>
     </div>
   )

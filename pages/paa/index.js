@@ -201,6 +201,16 @@ export default function PaaDashBoard({ testimonials }) {
             </P>
 
             <br />
+            <a href="https://app.nozzle.io/sign-up" tw="w-full">
+              <Button
+                color="success"
+                css={`
+                  ${tw`rounded p-4`}
+                `}
+              >
+                Get started!
+              </Button>
+            </a>
           </div>
           <div className="right">
             <Img
@@ -235,7 +245,7 @@ export default function PaaDashBoard({ testimonials }) {
           })}
         </SectionTestimonials>
         <SectionCallToAction>
-          <H2 full>Let's start your free trial!</H2>
+          <H2 full>Get Your PAA Deliverable Today!</H2>
 
           <a href="https://app.nozzle.io/sign-up" tw="w-full">
             <Button

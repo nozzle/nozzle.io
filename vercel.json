@@ -11,6 +11,11 @@
       "permanent": true
     },
     {
+      "source": "/paa/trial",
+      "destination": "https://app.nozzle.io/sign-up",
+      "permanent": true
+    },
+    {
       "source": "/seo-paa-questions",
       "destination": "/blog/seo-paa-questions",
       "permanent": true

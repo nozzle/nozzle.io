@@ -13,40 +13,26 @@ const Top = styled('section')`
   ${angle('left')};
   ${tw`text-white bg-primaryDarker py-4/100 px-5/100`}
 `
-const Wrap = styled('div')`
-  ${tw`flex flex-nowrap m-2 w-auto`}
-`
+
+const belowTablet = `@media(max-width: ${1000}px)`
+const belowMobile = `@media(max-width: ${700}px)`
 const TestimonialStyles = styled('div')`
-  ${tw`flex flex-wrap flex-auto m-2 justify-center`}
-`
+  column-count: 3;
 
-const Box = styled('div')`
-  ${tw`p-5 mb-5 pt-16 mt--12 h-auto lg:(flex flex-grow flex-shrink-0 w-600)`}
-`
-const Thumbnail = styled('img')`
-  ${tw`h-48 rounded-full shadow-md mb-5 lg:(h-40)`}
-`
-const Text = styled('div')`
-  ${tw`flex flex-col leading-normal lg:(text-left pl-5)`}
-`
+  ${belowTablet} {
+    column-count: 2;
+  }
 
-const Name = styled('div')`
-  ${tw`text-gray-900 font-bold text-3xl mb-2 `}
-
-  .company {
-    ${tw`text-gray-600 font-semibold text-lg `}
-    a {
-      ${tw`hover:(underline)`}
-    }
+  ${belowMobile} {
+    column-count: 1;
   }
 `
 
 const Testimonial = styled('div')`
-  ${tw`text-gray-700 text-base`}
-
-  iframe {
-    ${tw`w-80 md:(w-125)`}
-  }
+  ${tw`shadow-lg rounded-lg flex justify-center items-center flex-wrap bg-white m-4`}
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 `
 
 export async function getServerSideProps() {
@@ -118,7 +104,7 @@ export default function Testimonials({ testimonial }) {
       />
 
       {testimonial.length ? (
-        <div>
+        <div tw="mb-16">
           <Center>
             <Top>
               <H1>Testimonials & Shout-outs</H1>
@@ -127,54 +113,57 @@ export default function Testimonials({ testimonial }) {
           </Center>
           <Container>
             <Center>
-              <Wrap>
+              <div>
                 <TestimonialStyles>
                   {testimonial.map(testimonial => {
                     return (
-                      <Box key={testimonial.fields.name}>
-                        {testimonial.fields.image ? (
-                          <Thumbnail
-                            src={testimonial.fields.image.fields.file.url}
-                            alt={testimonial.fields.name}
+                      <Testimonial key={testimonial.fields.name}>
+                        <div tw="w-full p-4">
+                          <Smackdown
+                            source={testimonial.fields.testimonial}
+                            css="img{margin: 0;}"
                           />
-                        ) : (
-                          ''
-                        )}
-                        <Text>
-                          <Name>
-                            {testimonial.fields.name}
-                            {testimonial.fields.companyName ? (
-                              <div className="company">
-                                {testimonial.fields.companyWebsite ? (
-                                  <a
-                                    href={testimonial.fields.companyWebsite}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                  >
-                                    {testimonial.fields.companyName}
-                                  </a>
-                                ) : (
-                                  <div className="company">
-                                    {testimonial.fields.companyName}
-                                  </div>
-                                )}
-                              </div>
-                            ) : (
-                              ''
-                            )}
-                          </Name>
+                        </div>
 
-                          <Testimonial>
-                            <Smackdown
-                              source={testimonial.fields.testimonial}
-                            />
-                          </Testimonial>
-                        </Text>
-                      </Box>
+                        <div>
+                          <div tw="text-gray-900 font-bold flex gap-2 pb-8">
+                            {testimonial.fields.image ? (
+                              <img
+                                tw="h-12 rounded-full shadow-md "
+                                src={testimonial.fields.image.fields.file.url}
+                                alt={testimonial.fields.name}
+                              />
+                            ) : null}
+                            <div tw="text-left">
+                              <div tw="text-xl">{testimonial.fields.name}</div>
+                              {testimonial.fields.companyName ? (
+                                <div tw="text-gray-600 font-semibold text-lg">
+                                  {testimonial.fields.companyWebsite ? (
+                                    <a
+                                      href={testimonial.fields.companyWebsite}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      tw="hover:(underline)"
+                                    >
+                                      {testimonial.fields.companyName}
+                                    </a>
+                                  ) : (
+                                    <div tw="text-gray-600 font-semibold text-lg ">
+                                      {testimonial.fields.companyName}
+                                    </div>
+                                  )}
+                                </div>
+                              ) : (
+                                ''
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </Testimonial>
                     )
                   })}
                 </TestimonialStyles>
-              </Wrap>
+              </div>
             </Center>
           </Container>
         </div>

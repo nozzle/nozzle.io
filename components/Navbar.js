@@ -9,8 +9,8 @@ import { Button } from './Html'
 
 import useClickOutside from '../hooks/useClickOutside'
 
-const belowBreakpoint = `@media(max-width: ${700}px)`
-const aboveBreakpoint = `@media(min-width: ${701}px)`
+const belowBreakpoint = `@media(max-width: ${800}px)`
+const aboveBreakpoint = `@media(min-width: ${801}px)`
 const toggleSize = 20
 const toggleBarHeight = Math.round(toggleSize * 0.15)
 

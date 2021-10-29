@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { number } from 'utils/Format'
 
 import { Container, Center } from 'components/Layout'
-import { Button, H4, H5, Span } from 'components/Html'
+import { Button, H4, H5, H6, Span } from 'components/Html'
 import Icon from 'components/Icon'
 
 const belowTablet = `@media(max-width: ${1000}px)`
@@ -140,6 +140,7 @@ export default function PricingPlans({
   setMonthly,
   enterprise,
   setEnterprise,
+  deal,
 }) {
   return (
     <StyledPlans>
@@ -184,21 +185,68 @@ export default function PricingPlans({
                 <Price>
                   {monthly ? (
                     <>
-                      <H5>
-                        <PriceNumber>${number(plans[5].monthly)}</PriceNumber> /
-                        mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[5].monthly)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[5].monthly * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[5].monthly * 0.5)
+                              : number(plans[5].monthly * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[5].monthly)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed monthly</Small>
                     </>
                   ) : (
                     <>
-                      <H5>
-                        {' '}
-                        <PriceNumber>
-                          ${number(plans[5].annually)}
-                        </PriceNumber>{' '}
-                        / mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[5].annually)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[5].annually * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[5].annually * 0.5)
+                              : number(plans[5].annually * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[5].annually)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed yearly</Small>
                     </>
                   )}
@@ -222,21 +270,68 @@ export default function PricingPlans({
                 <Price>
                   {monthly ? (
                     <>
-                      <H5>
-                        <PriceNumber>${number(plans[6].monthly)}</PriceNumber> /
-                        mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[6].monthly)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[6].monthly * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[6].monthly * 0.5)
+                              : number(plans[6].monthly * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[6].monthly)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed monthly</Small>
                     </>
                   ) : (
                     <>
-                      <H5>
-                        {' '}
-                        <PriceNumber>
-                          ${number(plans[6].annually)}
-                        </PriceNumber>{' '}
-                        / mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[6].annually)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[6].annually * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[6].annually * 0.5)
+                              : number(plans[6].annually * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[6].annually)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed yearly</Small>
                     </>
                   )}
@@ -262,21 +357,68 @@ export default function PricingPlans({
                 <Price>
                   {monthly ? (
                     <>
-                      <H5>
-                        <PriceNumber>${number(plans[7].monthly)}</PriceNumber> /
-                        mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[7].monthly)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[7].monthly * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[7].monthly * 0.5)
+                              : number(plans[7].monthly * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[7].monthly)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed monthly</Small>
                     </>
                   ) : (
                     <>
-                      <H5>
-                        {' '}
-                        <PriceNumber>
-                          ${number(plans[7].annually)}
-                        </PriceNumber>{' '}
-                        / mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[7].annually)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[7].annually * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[7].annually * 0.5)
+                              : number(plans[7].annually * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[7].annually)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed yearly</Small>
                     </>
                   )}
@@ -330,21 +472,68 @@ export default function PricingPlans({
                 <Price>
                   {monthly ? (
                     <>
-                      <H5>
-                        <PriceNumber>${number(plans[1].monthly)}</PriceNumber> /
-                        mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[1].monthly)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[1].monthly * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[1].monthly * 0.5)
+                              : number(plans[1].monthly * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[1].monthly)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed monthly</Small>
                     </>
                   ) : (
                     <>
-                      <H5>
-                        {' '}
-                        <PriceNumber>
-                          ${number(plans[1].annually)}
-                        </PriceNumber>{' '}
-                        / mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[1].annually)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[1].annually * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[1].annually * 0.5)
+                              : number(plans[1].annually * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[1].annually)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed yearly</Small>
                     </>
                   )}
@@ -368,21 +557,68 @@ export default function PricingPlans({
                 <Price>
                   {monthly ? (
                     <>
-                      <H5>
-                        <PriceNumber>${number(plans[2].monthly)}</PriceNumber> /
-                        mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[2].monthly)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[2].monthly * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[2].monthly * 0.5)
+                              : number(plans[2].monthly * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[2].monthly)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed monthly</Small>
                     </>
                   ) : (
                     <>
-                      <H5>
-                        {' '}
-                        <PriceNumber>
-                          ${number(plans[2].annually)}
-                        </PriceNumber>{' '}
-                        / mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[2].annually)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[2].annually * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[2].annually * 0.5)
+                              : number(plans[2].annually * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[2].annually)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed yearly</Small>
                     </>
                   )}
@@ -406,21 +642,68 @@ export default function PricingPlans({
                 <Price>
                   {monthly ? (
                     <>
-                      <H5>
-                        <PriceNumber>${number(plans[3].monthly)}</PriceNumber> /
-                        mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[3].monthly)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[3].monthly * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[3].monthly * 0.5)
+                              : number(plans[3].monthly * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[3].monthly)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed monthly</Small>
                     </>
                   ) : (
                     <>
-                      <H5>
-                        {' '}
-                        <PriceNumber>
-                          ${number(plans[3].annually)}
-                        </PriceNumber>{' '}
-                        / mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[3].annually)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[3].annually * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[3].annually * 0.5)
+                              : number(plans[3].annually * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[3].annually)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed yearly</Small>
                     </>
                   )}{' '}
@@ -444,21 +727,68 @@ export default function PricingPlans({
                 <Price>
                   {monthly ? (
                     <>
-                      <H5>
-                        <PriceNumber>${number(plans[4].monthly)}</PriceNumber> /
-                        mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[4].monthly)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[4].monthly * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[4].monthly * 0.5)
+                              : number(plans[4].monthly * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[4].monthly)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed monthly</Small>
                     </>
                   ) : (
                     <>
-                      <H5>
-                        {' '}
-                        <PriceNumber>
-                          ${number(plans[4].annually)}
-                        </PriceNumber>{' '}
-                        / mo{' '}
-                      </H5>
+                      {deal ? (
+                        <>
+                          <H5>
+                            {' '}
+                            <PriceNumber tw="line-through">
+                              ${number(plans[4].annually)}
+                            </PriceNumber>{' '}
+                            / mo{' '}
+                          </H5>
+                          <H6>
+                            <div>
+                              Year 1: ${number(plans[4].annually * 0.5)} / mo
+                            </div>
+                            Year 2: $
+                            {deal == 'rankMath'
+                              ? number(plans[4].annually * 0.5)
+                              : number(plans[4].annually * 0.75)}{' '}
+                            / mo
+                          </H6>{' '}
+                        </>
+                      ) : (
+                        <H5>
+                          {' '}
+                          <PriceNumber>
+                            ${number(plans[4].annually)}
+                          </PriceNumber>{' '}
+                          / mo{' '}
+                        </H5>
+                      )}
                       <Small>billed yearly</Small>
                     </>
                   )}

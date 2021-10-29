@@ -199,7 +199,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[5].monthly * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[5].monthly * 0.5)
                               : number(plans[5].monthly * 0.75)}{' '}
                             / mo
@@ -232,7 +232,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[5].annually * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[5].annually * 0.5)
                               : number(plans[5].annually * 0.75)}{' '}
                             / mo
@@ -284,7 +284,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[6].monthly * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[6].monthly * 0.5)
                               : number(plans[6].monthly * 0.75)}{' '}
                             / mo
@@ -317,7 +317,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[6].annually * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[6].annually * 0.5)
                               : number(plans[6].annually * 0.75)}{' '}
                             / mo
@@ -371,7 +371,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[7].monthly * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[7].monthly * 0.5)
                               : number(plans[7].monthly * 0.75)}{' '}
                             / mo
@@ -404,7 +404,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[7].annually * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[7].annually * 0.5)
                               : number(plans[7].annually * 0.75)}{' '}
                             / mo
@@ -486,7 +486,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[1].monthly * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[1].monthly * 0.5)
                               : number(plans[1].monthly * 0.75)}{' '}
                             / mo
@@ -519,7 +519,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[1].annually * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[1].annually * 0.5)
                               : number(plans[1].annually * 0.75)}{' '}
                             / mo
@@ -571,7 +571,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[2].monthly * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[2].monthly * 0.5)
                               : number(plans[2].monthly * 0.75)}{' '}
                             / mo
@@ -604,7 +604,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[2].annually * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[2].annually * 0.5)
                               : number(plans[2].annually * 0.75)}{' '}
                             / mo
@@ -656,7 +656,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[3].monthly * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[3].monthly * 0.5)
                               : number(plans[3].monthly * 0.75)}{' '}
                             / mo
@@ -689,7 +689,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[3].annually * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[3].annually * 0.5)
                               : number(plans[3].annually * 0.75)}{' '}
                             / mo
@@ -741,7 +741,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[4].monthly * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[4].monthly * 0.5)
                               : number(plans[4].monthly * 0.75)}{' '}
                             / mo
@@ -774,7 +774,7 @@ export default function PricingPlans({
                               Year 1: ${number(plans[4].annually * 0.5)} / mo
                             </div>
                             Year 2: $
-                            {deal == 'rankMath'
+                            {deal == 'RankMath'
                               ? number(plans[4].annually * 0.5)
                               : number(plans[4].annually * 0.75)}{' '}
                             / mo

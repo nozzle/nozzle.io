@@ -188,7 +188,7 @@ export default function BlackFriday() {
         <div tw="text-center py-4/100 ">
           <div tw="mb-4 text-xl md:(text-6xl)">2 Year Discount!</div>
           <div tw="text-base md:(text-2xl) mb-12">
-            Get 50% off year 1 and {utm_source == 'rankMath' ? '50%' : '25%'}{' '}
+            Get 50% off year 1 and {utm_source == 'RankMath' ? '50%' : '25%'}{' '}
             off year 2 in this amazing deal!
           </div>
           <Container>
@@ -199,7 +199,7 @@ export default function BlackFriday() {
               <Li>Enter Card</Li>
               <Li>
                 Enter discount code:{' '}
-                {utm_source == 'rankMath'
+                {utm_source == 'RankMath'
                   ? 'rankmath5050'
                   : 'nozzleblackfriday'}{' '}
               </Li>
@@ -209,7 +209,7 @@ export default function BlackFriday() {
 
         <PricingPlans
           plans={plans}
-          deal={utm_source == 'rankMath' ? 'rankMath' : 'blackFriday'}
+          deal={utm_source == 'RankMath' ? 'RankMath' : 'blackFriday'}
           monthly={monthly}
           setMonthly={value => setMonthly(value)}
           enterprise={enterprise}

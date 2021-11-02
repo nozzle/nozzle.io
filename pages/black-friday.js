@@ -20,7 +20,7 @@ const SectionCustomers = styled(Section)`
     ${tw`mx-auto flex flex-wrap items-center justify-center max-w-default py-0 px-5/100`}
   }
   .vs {
-    ${tw`z-0 flex items-center justify-center text-white text-xl font-bold leading-none `}
+    ${tw`z-0 flex items-center justify-center text-white text-xl font-bold leading-none overflow-hidden `}
     flex: 0 0 100%;
 
     span {

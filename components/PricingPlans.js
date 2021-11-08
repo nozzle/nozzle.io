@@ -196,7 +196,7 @@ export default function PricingPlans({
             <Plans>
               {plans.map((plan, i) =>
                 i > 4 ? (
-                  <Plan id={plans[i].value}>
+                  <Plan id={plans[i].value} key={plans[i].value}>
                     <Title>{plans[i].label}</Title>
                     <Price>
                       {monthly ? (
@@ -319,7 +319,7 @@ export default function PricingPlans({
             <Plans>
               {plans.map((plan, i) =>
                 i > 0 && i < 5 ? (
-                  <Plan id={plans[i].value}>
+                  <Plan id={plans[i].value} key={plans[i].value}>
                     <Title>{plans[i].label}</Title>
                     <Price>
                       {monthly ? (

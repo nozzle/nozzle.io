@@ -80,6 +80,7 @@ export default styled(El)`
 
   iframe {
     ${tw`w-full resize-y border-0!`}
+    transform: translate3d(0, 0, 0);
   }
 
   img {

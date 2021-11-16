@@ -273,6 +273,12 @@ export default function PricingCalculator({ plans, monthly }) {
     const multiplier =
       schedule === 'hourly'
         ? 30 * 24 * 2
+        : schedule === 'hourly6'
+        ? 30 * 4 * 2
+        : schedule === 'hourly8'
+        ? 30 * 3 * 2
+        : schedule === 'hourly12'
+        ? 30 * 2 * 2
         : schedule === 'daily'
         ? 30
         : schedule.includes('weekly')
@@ -292,6 +298,18 @@ export default function PricingCalculator({ plans, monthly }) {
     {
       label: 'Hourly Keywords',
       value: 'hourly',
+    },
+    {
+      label: 'Every 6 Hours',
+      value: 'hourly6',
+    },
+    {
+      label: 'Every 8 Hours',
+      value: 'hourly8',
+    },
+    {
+      label: 'Every 12 Hours',
+      value: 'hourly12',
     },
     {
       label: 'Daily Keywords',

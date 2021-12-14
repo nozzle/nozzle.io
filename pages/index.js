@@ -407,7 +407,7 @@ export default function Home() {
           <Right>
             <Img
               src={require('public/img/RankData.png')}
-              alt="Google Website Keyword Rank Tracker that lists rank, ad adjusted rank, and pixel height"
+              alt="Google Website SEO Keyword Rank Tracker that lists rank, ad adjusted rank, and pixel height"
             />
           </Right>
         </SectionRankData>
@@ -415,7 +415,7 @@ export default function Home() {
           <Left>
             <Img
               src={require('public/img/groupby.png')}
-              alt="Enterprise Keyword Rank Tracker Tool Dashboard"
+              alt="Enterprise Online SEO Keyword Rank Tracker Tool Dashboard"
             />
           </Left>
           <Right>
@@ -456,7 +456,7 @@ export default function Home() {
           <div className="csv">
             <Img
               src={require('public/img/csv.png')}
-              alt="Download keywords position data to CSV"
+              alt="Download online SEO keywords position data to CSV"
             />
           </div>
           <div className="main">
@@ -483,7 +483,7 @@ export default function Home() {
           <div className="sql">
             <Img
               src={require('public/img/sql.png')}
-              alt="Access your Google search ranking data with SQL"
+              alt="Access your Google SEO keyword rank tracker data with SQL"
             />
           </div>
         </SectionDataJunkie>

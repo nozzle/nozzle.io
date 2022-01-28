@@ -16,7 +16,7 @@
       "permanent": true
     },
     {
-      "source": "/paa/*",
+      "source": "/paa/bulkCheckout",
       "destination": "https://nozzle.io/paa",
       "permanent": true
     },

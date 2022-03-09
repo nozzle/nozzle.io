@@ -114,10 +114,6 @@ const SectionKnowEverything = styled(Section)`
 
   .right {
     flex: 2 1 300px;
-    img {
-      max-width: 1500px;
-      width: 220%;
-    }
   }
 `
 const SectionTrackAllTheThings = styled(Section)`
@@ -145,12 +141,7 @@ const SectionTrackAllTheThings = styled(Section)`
 const SectionRankData = styled(Section)`
   ${section};
   ${layoutLeftHalf};
-  .right {
-    img {
-      ${tw`opacity-100 rounded shadow-2xl max-w-4xl`}
-      width: 140%;
-    }
-  }
+
   .left {
     p {
       strong {
@@ -278,64 +269,72 @@ export default function Home() {
             </a>
           </Left>
           <Right>
-            <img
-              src={require('public/img/dashboard.png')}
-              alt="Enterprise Keyword Rank Tracker Tool Dashboard"
-            />
+            <div css={tw`block w-[200%] max-w-[1500px] `}>
+              <Img
+                src={require('public/img/dashboard.png')}
+                alt="Enterprise Keyword Rank Tracker Tool Dashboard"
+                layout="responsive"
+                width="1280"
+                height="760"
+              />
+            </div>
           </Right>
         </SectionKnowEverything>
         <SectionCustomers>
           <Img
             src={require('public/img/mayoClinic.png')}
             alt="Mayo Clinic"
-            width={160}
-            height={160}
+            width="160"
+            height="160"
           />
 
           <Img
             src={require('public/img/homeDepot.png')}
             alt="Home Depot"
-            width={160}
-            height={34}
+            width="160"
+            height="34"
           />
 
           <Img
             src={require('public/img/apartmentsdotcom.png')}
             alt="Apartments.com"
-            width={160}
-            height={24}
+            width="160"
+            height="24"
           />
 
           <Img
             src={require('public/img/bankrate.svg')}
             alt="Bankrate"
             className="bigLogo"
-            width={90}
-            height={90}
+            width="90"
+            height="90"
           />
 
           <Img
             src={require('public/img/turo.png')}
             alt="Turo"
             className="bigLogo"
-            width={90}
-            height={46}
+            width="90"
+            height="46"
           />
           <Img
             src={require('public/img/locomotiveAgency.png')}
             className="bigLogo"
             alt="Locomotive Agency"
-            width={90}
-            height={80}
+            width="90"
+            height="80"
           />
         </SectionCustomers>
         <SectionTrackAllTheThings>
-          <img
-            className="allthethings"
-            src={require('public/img/allthethings-white.png')}
-            alt="cheering seo guy"
-          />
-
+          <div css={tw`absolute bottom-0 right-0`}>
+            <Img
+              className="allthethings"
+              src={require('public/img/allthethings-white.png')}
+              alt="cheering seo guy"
+              width="384"
+              height="380"
+            />
+          </div>
           <Left>
             <Centered>
               <H4>Don't just track the top result.</H4>
@@ -344,8 +343,8 @@ export default function Home() {
               <Img
                 src={require('public/img/the-matrix-organic-result-listing.JPG')}
                 alt="Online SERP listing for The Matrix - Online SEO rank tracker tool"
-                width={600}
-                height={100}
+                width="600"
+                height="100"
               />
             </Div>
             <Div>
@@ -429,18 +428,30 @@ export default function Home() {
             </a>
           </Left>
           <Right>
-            <img
-              src={require('/public/img/RankData.png')}
-              alt="Google Website SEO Keyword Rank Tracker that lists rank, ad adjusted rank, and pixel height"
-            />
+            <div
+              css={tw`w-[140%] block opacity-100 rounded shadow-2xl max-w-4xl`}
+            >
+              <Img
+                src={require('/public/img/RankData.png')}
+                alt="Google Website SEO Keyword Rank Tracker that lists rank, ad adjusted rank, and pixel height"
+                layout="responsive"
+                width="580"
+                height="470"
+              />
+            </div>
           </Right>
         </SectionRankData>
         <SectionCompetitors>
           <Left>
-            <img
-              src={require('/public/img/groupby.png')}
-              alt="Enterprise Online SEO Keyword Rank Tracker Tool Dashboard"
-            />
+            <div css={tw`block w-[160%]  opacity-100 rounded shadow-2xl`}>
+              <Img
+                src={require('/public/img/groupby.png')}
+                alt="Enterprise Online SEO Keyword Rank Tracker Tool Dashboard"
+                layout="responsive"
+                width="680"
+                height="400"
+              />
+            </div>
           </Left>
           <Right>
             <H3>
@@ -481,8 +492,8 @@ export default function Home() {
             <Img
               src={require('public/img/csv.png')}
               alt="Download online SEO keywords position data to CSV"
-              width={250}
-              height={215}
+              width="250"
+              height="215"
             />
           </div>
           <div className="main">
@@ -533,8 +544,8 @@ export default function Home() {
               <Img
                 src={require('public/img/schedules.png')}
                 alt="SEO keyword rank tracker with customized scheduling feature"
-                width={835}
-                height={456}
+                width="835"
+                height="456"
               />
             </Div>
           </Centered>

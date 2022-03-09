@@ -89,7 +89,7 @@ export default function PostList({ prefix, posts }) {
         <PostContainer>
           {posts.map(post => {
             return (
-              <Post key={post.fields.slug}>
+              <Post key={post.fields.slug} id="relatedPost">
                 <article>
                   {post.fields.featuredImage ? (
                     <Link

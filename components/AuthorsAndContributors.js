@@ -74,7 +74,7 @@ const Contributors = styled('div')`
 
 export default function AuthorsAndContributors({ post }) {
   return (
-    <Container>
+    <Container id="AuthorsAndContributors">
       {post.fields.contributors?.length ? (
         <Heading>Authors & Contributors</Heading>
       ) : post.fields.author.length > 1 ? (

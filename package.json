@@ -6,9 +6,6 @@
     "generateSitemap": "babel-node scripts/generateSitemap/",
     "now-build": "yarn build && yarn generateSitemap"
   },
-   "engines": {
-    "node": "12.x"
-  },
   "babelMacros": {
     "twin": {
       "preset": "styled-components"

@@ -335,12 +335,10 @@ export default function Navbar(props) {
           >
             <span>
               <span className="hide">Home</span>
-              <Img
+              <img
                 src={require('public/img/logo-small.svg')}
                 alt="Enterprise Keyword Rank Tracker Tool For Your Website"
                 itemProp="logo"
-                width={120}
-                height={96}
               />
             </span>
           </a>

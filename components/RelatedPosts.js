@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import tw from 'twin.macro'
+import { Img } from './Html'
 //
 
 const PostListStyled = styled('div')`
@@ -131,7 +132,10 @@ export default function PostList({ prefix, posts }) {
                         return (
                           <div className="author" key={author.fields.name}>
                             {profilePhotoURL ? (
-                              <img src={profilePhotoURL} alt="Author" />
+                              <Img
+                                src={`https:${profilePhotoURL}`}
+                                alt="Author"
+                              />
                             ) : null}
                             <div>{author.fields.name}</div>
                           </div>

@@ -5,6 +5,7 @@ import { Form, Text } from 'react-form'
 //
 import encodeFormData from 'utils/encodeFormData'
 import { Button } from 'components/Html'
+import { Img } from '../components/Html'
 
 function Matrix({ speed = 100, size = 18, ...rest }) {
   const ref = React.useRef()
@@ -14,9 +15,10 @@ function Matrix({ speed = 100, size = 18, ...rest }) {
 
     //chinese characters - taken from the unicode charset
     //converting the string into an array of single characters
-    let chinese = '田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑'.split(
-      ''
-    )
+    let chinese =
+      '田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑'.split(
+        ''
+      )
 
     const { width, height } = ref.current.getBoundingClientRect()
 
@@ -128,7 +130,7 @@ export default function Trial() {
               padding: 6rem 0;
             `}
           >
-            <img
+            <Img
               src={require('public/img/red-pill.png')}
               css={`
                 width: 80%;
@@ -148,7 +150,7 @@ export default function Trial() {
               padding: 6rem 0;
             `}
           >
-            <img
+            <Img
               src={require('public/img/blue-pill.png')}
               css={`
                 width: 80%;
@@ -265,12 +267,12 @@ export default function Trial() {
                   'https://nozzle.io/',
                   encodeFormData({
                     'form-name': 'smx2019',
-                    ...values
+                    ...values,
                   }),
                   {
                     headers: {
-                      'Content-Type': 'application/x-www-form-urlencoded'
-                    }
+                      'Content-Type': 'application/x-www-form-urlencoded',
+                    },
                   }
                 )
                 setSubmitted(true)

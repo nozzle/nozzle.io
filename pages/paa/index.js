@@ -144,48 +144,29 @@ export default function PaaDashBoard({ testimonials }) {
         <SectionTitle>
           <Container>
             <Center>
-              <H1>
-                Generate Months of Content Ideas Without any Brainstorming
-                Sessions
-              </H1>
-              <P>
-                A huge list of the ACTUAL questions your target audience is
-                asking.
-              </P>
+              <H1>People Also Ask (PAA) Keyword Question Tool</H1>
             </Center>
           </Container>
         </SectionTitle>
         <SectionKnowWhatQuestions>
           <div className="left">
             <H2 color="primaryDark">
-              Are you ready to compile a list of all the People Also Ask (PAA)
-              questions Google serves up for your unique keyword list?
+              Generate Months of Content Ideas Without any Brainstorming
+              Sessions
             </H2>
 
             <P>What you'll get:</P>
             <P>
               <Ul>
                 <Li>
-                  200-800 questions from the People Also Ask boxes related to
-                  your specific keyword list
-                </Li>
-                <Li>The ability to filter by keyword group</Li>
-                <Li>
-                  A drill down of your ranking URLs and where they rank for the
-                  phrases that generated the questions
-                </Li>
-                <Li>
-                  The percentage of time PAA boxes show up for your whole
-                  keyword set and each of your keyword groups
+                  An emailed link to a Google Data Studio dashboard containing a
+                  list of hundreds to thousands of People Also Ask questions
+                  related to your target keyword list (depending on how many
+                  keywords you input).
                 </Li>
               </Ul>
             </P>
-            <P>
-              Knowing the PAA questions served up for your keywords can help you
-              optimize for People Also Ask boxes, give you ideas for blog posts
-              and other content, and guide your SEO strategy. Try our keyword
-              question generator today!
-            </P>
+
             <br />
             <P>
               {' '}
@@ -214,29 +195,39 @@ export default function PaaDashBoard({ testimonials }) {
           </div>
           <div className="right">
             <Img
-              src="img/paaBox.jpg"
+              src="/img/paaBox.jpg"
               alt="google’s people also ask boxes help find questions related to your keywords"
+              width="516"
+              height="327"
             />
             <div>
               <div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />
             </div>
           </div>
         </SectionKnowWhatQuestions>
-
+        {/* <div tw="w-full min-h-screen text-center">
+          <iframe
+            title="PAA sign up"
+            src="https://dev.nozzle.io/paa"
+            width="50%"
+            height="1000rem"
+          />
+        </div> */}
         <SectionTestimonials>
           <H2 className="title">What People Are Saying</H2>
 
           {testimonials.map(testimonial => {
             return (
               <div className="testimonial" key={testimonial.fields.name}>
-                <Img
-                  src={
+                <img
+                  src={`https:${
                     testimonial.fields.image
                       ? testimonial.fields.image.fields.file.url
                       : 'img/blankPerson.png'
-                  }
+                  }`}
                   alt={testimonial.fields.name}
                 />
+
                 <H6>{testimonial.fields.name}</H6>
                 <div className="company">{testimonial.fields.companyName}</div>
                 <P>"{testimonial.fields.testimonial}"</P>
@@ -246,17 +237,22 @@ export default function PaaDashBoard({ testimonials }) {
         </SectionTestimonials>
         <SectionCallToAction>
           <H2 full>Get Your PAA Deliverable Today!</H2>
-
-          <a href="https://app.nozzle.io/sign-up" tw="w-full">
-            <Button
-              color="success"
-              css={`
-                ${tw`text-2xl rounded p-6`}
-              `}
-            >
-              Get started!
-            </Button>
-          </a>
+          <div
+            css={`
+              ${tw`w-full `}
+            `}
+          >
+            <a href="https://app.nozzle.io/sign-up">
+              <Button
+                color="success"
+                css={`
+                  ${tw`text-2xl rounded p-6 `}
+                `}
+              >
+                Get started!
+              </Button>
+            </a>
+          </div>
         </SectionCallToAction>
       </main>
     </div>

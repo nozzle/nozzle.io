@@ -177,7 +177,10 @@ export default function FeaturedPosts({ prefix, posts }) {
                             return (
                               <div className="author" key={author.fields.name}>
                                 {profilePhotoURL ? (
-                                  <img src={profilePhotoURL} alt="Author" />
+                                  <img
+                                    src={`https:${profilePhotoURL}`}
+                                    alt="Author"
+                                  />
                                 ) : null}
                                 <div>{author.fields.name}</div>
                               </div>

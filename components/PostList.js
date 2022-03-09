@@ -5,6 +5,7 @@ import Link from 'next/link'
 import ReadTime from 'utils/ReadTime'
 import Smackdown from './Smackdown'
 import tw from 'twin.macro'
+import { Img } from './Html'
 
 const PostListStyled = styled('div')`
   ${tw`flex flex-nowrap m-2 w-auto`}
@@ -170,7 +171,10 @@ export default function PostList({ prefix, posts }) {
                         return (
                           <div className="author" key={author.fields.name}>
                             {profilePhotoURL ? (
-                              <img src={profilePhotoURL} alt="Author" />
+                              <img
+                                src={`https:${profilePhotoURL}`}
+                                alt="Author"
+                              />
                             ) : null}
                             <div>{author.fields.name}</div>
                           </div>

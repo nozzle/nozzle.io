@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 import Smackdown from 'react-smackdown'
-import javascript from 'react-syntax-highlighter/dist/languages/hljs/javascript'
-import bash from 'react-syntax-highlighter/dist/languages/hljs/bash'
-import atomOneDark from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark'
+import javascript from 'react-syntax-highlighter/dist/cjs/languages/hljs/javascript'
+import bash from 'react-syntax-highlighter/dist/cjs/languages/hljs/bash'
+import atomOneDark from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark'
 //
 
 import { H1, H2, H3, H4, H5, H6 } from './Html'

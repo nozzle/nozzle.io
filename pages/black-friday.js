@@ -159,7 +159,7 @@ export default function BlackFriday() {
       <Center>
         <div tw="pt-1/10">
           <div tw=" flex md:(gap-4) gap-2 justify-center items-center">
-            <img
+            <Img
               src={require('public/img/logo-blue.png')}
               alt="Enterprise Keyword Rank Tracker Tool For Your Website"
               itemProp="logo"

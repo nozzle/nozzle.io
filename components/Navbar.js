@@ -5,7 +5,7 @@ import tw from 'twin.macro'
 import Link from 'next/link'
 //
 
-import { Button } from './Html'
+import { Button, Img } from './Html'
 
 import useClickOutside from '../hooks/useClickOutside'
 
@@ -335,10 +335,12 @@ export default function Navbar(props) {
           >
             <span>
               <span className="hide">Home</span>
-              <img
+              <Img
                 src={require('public/img/logo-small.svg')}
                 alt="Enterprise Keyword Rank Tracker Tool For Your Website"
                 itemProp="logo"
+                width={120}
+                height={96}
               />
             </span>
           </a>

@@ -8,6 +8,7 @@ import Smackdown from 'components/Smackdown'
 import { Container, Center } from 'components/Layout'
 import tw from 'twin.macro'
 import { loadScript } from '../utils/loadScript'
+import { Img } from '../components/Html'
 
 const Top = styled('section')`
   ${angle('left')};
@@ -42,6 +43,7 @@ export async function getServerSideProps() {
   }
 }
 export default function Testimonials({ testimonial }) {
+  console.log(testimonial)
   React.useEffect(() => {
     ;(async () => {
       await loadScript('https://www.youtube.com/iframe_api')
@@ -128,9 +130,9 @@ export default function Testimonials({ testimonial }) {
                         <div>
                           <div tw="text-gray-900 font-bold flex gap-2 pb-8">
                             {testimonial.fields.image ? (
-                              <img
+                              <Img
                                 tw="h-12 rounded-full shadow-md "
-                                src={testimonial.fields.image.fields.file.url}
+                                src={`https:${testimonial.fields.image.fields.file.url}`}
                                 alt={testimonial.fields.name}
                               />
                             ) : null}

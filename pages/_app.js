@@ -1,6 +1,7 @@
 import React from 'react'
 import App from 'next/app'
 import tw from 'twin.macro'
+import Script from 'next/script'
 import {
   createGlobalStyle,
   ThemeProvider as StyledThemeProvider,
@@ -11,7 +12,6 @@ import reset from 'styled-reset'
 import 'swagger-ui-react/swagger-ui.css'
 
 import Theme, { ThemeContext } from 'utils/Theme'
-import { loadScript } from 'utils/loadScript'
 
 import Head from 'components/Head'
 import NavWrapper from 'components/NavWrapper'
@@ -75,34 +75,21 @@ export default function MyApp({ Component, pageProps }) {
           name="facebook-domain-verification"
           content="ywyj0bgycebyurwew2ipmicuwphhkq"
         />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+      </Head>
+      <Script
+        dangerouslySetInnerHTML={{
+          __html: `
                   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-PPH2PX');
                 `,
-          }}
-        />
-        <link
-          href="//fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700"
-          rel="stylesheet"
-        />
+        }}
+      />
 
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-          rel="stylesheet"
-        />
+      <Script src="https://platform.twitter.com/widgets.js" />
 
-        <script src="https://platform.twitter.com/widgets.js" />
-      </Head>
       <GlobalStyles />
       <NavWrapper>
         <Component {...pageProps} />

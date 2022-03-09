@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import tw from 'twin.macro'
+
 //
 import Color from 'utils/Color'
 import { angle } from 'utils/Styles'
@@ -206,11 +207,12 @@ const SectionDataJunkie = styled(Section)`
 const SectionCustomers = styled(Section)`
   ${tw`z-0`}
   .inner {
-    ${tw`mx-auto flex flex-wrap items-center justify-center max-w-default py-0 px-5/100`}
+    ${tw`mx-auto flex gap-10 flex-wrap items-center justify-center max-w-default py-2 px-5/100`}
   }
 
   img {
-    ${tw`w-40 m-5 opacity-60 `}
+    ${tw`opacity-60 `}
+
     -webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%);
     user-drag: none;
     user-select: none;
@@ -257,7 +259,7 @@ export default function Home() {
     <div style={{ overflow: 'hidden' }}>
       <Head
         title="Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker - Nozzle"
-        description=" A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want an SEO rank tracker with all the data, give Nozzle a test drive today."
+        description="A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want an SEO rank tracker with all the data, give Nozzle a test drive today."
       />
       <main>
         <SectionKnowEverything>
@@ -276,44 +278,64 @@ export default function Home() {
             </a>
           </Left>
           <Right>
-            <Img
+            <img
               src={require('public/img/dashboard.png')}
               alt="Enterprise Keyword Rank Tracker Tool Dashboard"
             />
           </Right>
         </SectionKnowEverything>
         <SectionCustomers>
-          <Img src={require('public/img/mayoClinic.png')} alt="Mayo Clinic" />
+          <Img
+            src={require('public/img/mayoClinic.png')}
+            alt="Mayo Clinic"
+            width={160}
+            height={160}
+          />
 
-          <Img src={require('public/img/homeDepot.png')} alt="Home Depot" />
+          <Img
+            src={require('public/img/homeDepot.png')}
+            alt="Home Depot"
+            width={160}
+            height={34}
+          />
 
           <Img
             src={require('public/img/apartmentsdotcom.png')}
             alt="Apartments.com"
+            width={160}
+            height={24}
           />
 
           <Img
             src={require('public/img/bankrate.svg')}
             alt="Bankrate"
             className="bigLogo"
+            width={90}
+            height={90}
           />
 
           <Img
             src={require('public/img/turo.png')}
             alt="Turo"
             className="bigLogo"
+            width={90}
+            height={46}
           />
           <Img
             src={require('public/img/locomotiveAgency.png')}
             className="bigLogo"
             alt="Locomotive Agency"
+            width={90}
+            height={80}
           />
         </SectionCustomers>
         <SectionTrackAllTheThings>
-          <Img
+          <img
             className="allthethings"
             src={require('public/img/allthethings-white.png')}
+            alt="cheering seo guy"
           />
+
           <Left>
             <Centered>
               <H4>Don't just track the top result.</H4>
@@ -322,6 +344,8 @@ export default function Home() {
               <Img
                 src={require('public/img/the-matrix-organic-result-listing.JPG')}
                 alt="Online SERP listing for The Matrix - Online SEO rank tracker tool"
+                width={600}
+                height={100}
               />
             </Div>
             <Div>
@@ -405,16 +429,16 @@ export default function Home() {
             </a>
           </Left>
           <Right>
-            <Img
-              src={require('public/img/RankData.png')}
+            <img
+              src={require('/public/img/RankData.png')}
               alt="Google Website SEO Keyword Rank Tracker that lists rank, ad adjusted rank, and pixel height"
             />
           </Right>
         </SectionRankData>
         <SectionCompetitors>
           <Left>
-            <Img
-              src={require('public/img/groupby.png')}
+            <img
+              src={require('/public/img/groupby.png')}
               alt="Enterprise Online SEO Keyword Rank Tracker Tool Dashboard"
             />
           </Left>
@@ -457,6 +481,8 @@ export default function Home() {
             <Img
               src={require('public/img/csv.png')}
               alt="Download online SEO keywords position data to CSV"
+              width={250}
+              height={215}
             />
           </div>
           <div className="main">
@@ -484,6 +510,8 @@ export default function Home() {
             <Img
               src={require('public/img/sql.png')}
               alt="Access your Google SEO keyword rank tracker data with SQL"
+              width={250}
+              height={215}
             />
           </div>
         </SectionDataJunkie>
@@ -505,6 +533,8 @@ export default function Home() {
               <Img
                 src={require('public/img/schedules.png')}
                 alt="SEO keyword rank tracker with customized scheduling feature"
+                width={835}
+                height={456}
               />
             </Div>
           </Centered>

@@ -7,7 +7,7 @@
     "now-build": "yarn build && yarn generateSitemap"
   },
   "engines": {
-    "node": "16.x"
+    "node": "14.x"
   },
   "babelMacros": {
     "twin": {

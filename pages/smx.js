@@ -79,8 +79,8 @@ export default function Trial() {
   return (
     <>
       <Head
-        title="Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker - Nozzle"
-        description="A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want an SEO rank tracker with all the data, give Nozzle a test drive today."
+        title="SMX page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
+        description="SMX page for Nozzle - A keyword rank tracker offering you more enterprise level SERP data than ever before."
       />
       <div
         css={`

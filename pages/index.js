@@ -10,6 +10,7 @@ import Head from 'components/Head'
 
 import Link from 'next/link'
 import {
+  H1,
   H2,
   H3,
   H4,
@@ -255,7 +256,7 @@ export default function Home() {
       <main>
         <SectionKnowEverything>
           <Left>
-            <H2>Know everything Google knows</H2>
+            <H1>Know everything Google knows</H1>
             <H4>And deal with it.</H4>
             <P>
               If you want access to more enterprise level SERP data than any
@@ -276,6 +277,7 @@ export default function Home() {
                 layout="responsive"
                 width="1280"
                 height="760"
+                priority={true}
               />
             </div>
           </Right>

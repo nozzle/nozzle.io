@@ -142,7 +142,7 @@ export const Div = styled('div')`
   ${weight};
 `
 export const Img = styled(({ children, ...rest }) => (
-  <Image alt="" width="500" height="400" {...rest} />
+  <Image width="500" height="400" {...rest} />
 ))`
   ${tw`max-w-full w-auto h-auto`}
 `

@@ -5,7 +5,7 @@ import tw from 'twin.macro'
 import Link from 'next/link'
 //
 
-import { Button } from './Html'
+import { Button, Img } from './Html'
 
 import useClickOutside from '../hooks/useClickOutside'
 

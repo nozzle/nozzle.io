@@ -131,7 +131,7 @@ export default function Research() {
             <br />
           </div>
           <div className="right">
-            <Img src="img/research.png" />
+            <Img src="/img/research.png" height="542" width="516" />
           </div>
         </SectionMain>
         <SectionProjects>

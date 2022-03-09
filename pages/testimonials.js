@@ -104,7 +104,7 @@ export default function Testimonials({ testimonial }) {
       />
 
       {testimonial.length ? (
-        <div tw="mb-16">
+        <div css={tw`mb-16`}>
           <Center>
             <Top>
               <H1>Testimonials & Shout-outs</H1>
@@ -118,7 +118,7 @@ export default function Testimonials({ testimonial }) {
                   {testimonial.map(testimonial => {
                     return (
                       <Testimonial key={testimonial.fields.name}>
-                        <div tw="w-full p-4">
+                        <div css={tw`w-full p-4`}>
                           <Smackdown
                             source={testimonial.fields.testimonial}
                             css="img{margin: 0;}"
@@ -126,29 +126,37 @@ export default function Testimonials({ testimonial }) {
                         </div>
 
                         <div>
-                          <div tw="text-gray-900 font-bold flex gap-2 pb-8">
+                          <div
+                            css={tw`text-gray-900 font-bold flex gap-2 pb-8`}
+                          >
                             {testimonial.fields.image ? (
                               <img
-                                tw="h-12 rounded-full shadow-md "
-                                src={testimonial.fields.image.fields.file.url}
+                                css={tw`h-12 rounded-full shadow-md`}
+                                src={`https:${testimonial.fields.image.fields.file.url}`}
                                 alt={testimonial.fields.name}
                               />
                             ) : null}
-                            <div tw="text-left">
-                              <div tw="text-xl">{testimonial.fields.name}</div>
+                            <div css={tw`text-left`}>
+                              <div css={tw`text-xl`}>
+                                {testimonial.fields.name}
+                              </div>
                               {testimonial.fields.companyName ? (
-                                <div tw="text-gray-600 font-semibold text-lg">
+                                <div
+                                  css={tw`text-gray-600 font-semibold text-lg`}
+                                >
                                   {testimonial.fields.companyWebsite ? (
                                     <a
                                       href={testimonial.fields.companyWebsite}
                                       target="_blank"
                                       rel="noreferrer"
-                                      tw="hover:(underline)"
+                                      css={tw`hover:(underline)`}
                                     >
                                       {testimonial.fields.companyName}
                                     </a>
                                   ) : (
-                                    <div tw="text-gray-600 font-semibold text-lg ">
+                                    <div
+                                      css={tw`text-gray-600 font-semibold text-lg`}
+                                    >
                                       {testimonial.fields.companyName}
                                     </div>
                                   )}

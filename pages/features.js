@@ -139,8 +139,11 @@ const SectionBrandsCmp = props => (
           <H4>Other Search Engine Position Trackers</H4>
           <div className="domain">
             <div className="img">
-              <Img src={require('public/img/domainEdit.png')} />
-              <Img
+              <img
+                src={require('public/img/domainEdit.png')}
+                alt="SERP listing for CNN other position trackers"
+              />
+              <img
                 src={require('public/img/cnn-small.png')}
                 alt="SERP listing for CNN other position trackers"
               />
@@ -151,11 +154,14 @@ const SectionBrandsCmp = props => (
           <Span>VS</Span>
         </div>
         <div className="brand-wrap">
-          <Img src={require('public/img/logo-blue.png')} />
+          <img src={require('public/img/logo-blue.png')} alt="nozzle logo" />
           <div className="brand">
             <div className="img">
-              <Img src={require('public/img/brandEdit.png')} />
-              <Img
+              <img
+                src={require('public/img/brandEdit.png')}
+                alt="SERP result for CNN nozzle tracking"
+              />
+              <img
                 src={require('public/img/cnn.png')}
                 alt="SERP result for CNN nozzle tracking"
               />
@@ -342,7 +348,11 @@ const SectionCompetitionCmp = props => (
   <section {...props}>
     <Container>
       <H2>
-        <Img src={require('public/img/competitorWaves.png')} />
+        <Img
+          src={require('public/img/competitorWaves.png')}
+          width="256"
+          height="45"
+        />
         <div>Competitive Analysis</div>
       </H2>
       <div className="one">
@@ -350,6 +360,8 @@ const SectionCompetitionCmp = props => (
           <Img
             src={require('public/img/brands.png')}
             alt="SERP tracking tool detailed competitors analysis"
+            width="611"
+            height="335"
           />
         </div>
         <div className="right">
@@ -367,6 +379,8 @@ const SectionCompetitionCmp = props => (
           <Img
             src={require('public/img/domains.png')}
             alt="Unknown competitors analysis with historical data rewriting"
+            width="611"
+            height="335"
           />
         </div>
         <div className="right">
@@ -451,7 +465,11 @@ const SectionSchedulingCmp = props => (
   <section {...props}>
     <Container>
       <Center>
-        <Img src={require('public/img/scheduleDots.png')} />
+        <Img
+          src={require('public/img/scheduleDots.png')}
+          width="256"
+          height="23"
+        />
         <H2>Flexible Scheduling</H2>
         <H6>
           Not all keywords are created equal. Thankfully, Nozzle is{' '}
@@ -467,6 +485,8 @@ const SectionSchedulingCmp = props => (
           src={require('public/img/schedules.png')}
           className="scheduleImg"
           alt="Monitor keyword rankings with customized scheduling feature"
+          width="750"
+          height="409"
         />
         <P>
           This way, you can{' '}
@@ -511,7 +531,7 @@ const SectionDataCmp = props => (
     <Container>
       <div className="-header">
         <H2 className="-one">Serp</H2>
-        <Img src={require('public/img/serp.png')} />
+        <img src={require('public/img/serp.png')} alt="serp funnel" />
         <H2 className="-two">Data</H2>
       </div>
       <Center>
@@ -530,7 +550,11 @@ const SectionDataCmp = props => (
             <Icon i="gauge" /> Metrics
           </H4>
           <div className="-image">
-            <Img src={require('public/img/metrics.png')} />
+            <Img
+              src={require('public/img/metrics.png')}
+              width="408"
+              height="191"
+            />
           </div>
           <div className="content">
             <ul>
@@ -549,7 +573,11 @@ const SectionDataCmp = props => (
             <Icon i="trophy" /> Rank
           </H4>
           <div className="-image">
-            <Img src={require('public/img/rank-wide.png')} />
+            <Img
+              src={require('public/img/rank-wide.png')}
+              width="408"
+              height="191"
+            />
           </div>
           <div className="content">
             <ul>
@@ -571,7 +599,11 @@ const SectionDataCmp = props => (
             <Icon i="bullseye" /> Keyword Groups
           </H4>
           <div className="-image">
-            <Img src={require('public/img/keywordGroups.png')} />
+            <Img
+              src={require('public/img/keywordGroups.png')}
+              width="408"
+              height="191"
+            />
           </div>
           <div className="content">
             <ul>
@@ -598,7 +630,11 @@ const SectionDataCmp = props => (
             <Icon i="marker" /> Global &amp; Local
           </H4>
           <div className="-image">
-            <Img src={require('public/img/location.png')} />
+            <Img
+              src={require('public/img/location.png')}
+              width="408"
+              height="191"
+            />
           </div>
           <div className="content">
             <ul>
@@ -618,7 +654,11 @@ const SectionDataCmp = props => (
             <Icon i="mobile" /> Devices &amp; OS
           </H4>
           <div className="-image">
-            <Img src={require('public/img/devices.png')} />
+            <Img
+              src={require('public/img/devices.png')}
+              width="408"
+              height="191"
+            />
           </div>
           <div className="content">
             <ul>
@@ -639,7 +679,7 @@ const SectionDataCmp = props => (
             <Icon i="dollar" /> Ads
           </H4>
           <div className="-image">
-            <Img src={require('public/img/abs.png')} />
+            <Img src={require('public/img/abs.png')} width="408" height="191" />
           </div>
           <div className="content">
             <ul>
@@ -810,13 +850,15 @@ const SectionData = styled(SectionDataCmp)`
 const SectionAgenciesCmp = props => (
   <section {...props}>
     <Container>
-      <Img src={require('public/img/agency.png')} />
+      <img src={require('public/img/agency.png')} alt="Agency Tools" />
       <H2>Agency Tools</H2>
       <div className="wrap">
         <div className="one">
           <Img
             src={require('public/img/teams.png')}
             alt="Bulk serp tracker for agency management"
+            width="384"
+            height="288"
           />
         </div>
         <div className="two">
@@ -968,7 +1010,10 @@ const SectionReputation = styled(SectionReputationCmp)`
 const SectionIntegrationsCmp = props => (
   <section {...props}>
     <Container>
-      <Img src={require('public/img/integrations.png')} />
+      <img
+        src={require('public/img/integrations.png')}
+        alt="Integrations & Export"
+      />
       <H2>Integrations &amp; Export</H2>
       <P>
         We've made sure that all of the data you pay for is truly yours to

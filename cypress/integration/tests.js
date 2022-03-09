@@ -1,10 +1,10 @@
 describe('Components are showing up in Post', () => {
   it('AuthorsAndContributors Component is rendering', () => {
     window.cy.visit('/blog/seo-humor-from-the-twitterverse/')
-    window.cy.get('.AuthorsAndContributors__Container-sc-1wovwrc-0')
+    window.cy.get('[id=AuthorsAndContributors]')
   })
   it('RelatedPosts Component is rendering', () => {
-    window.cy.get('.RelatedPosts__Post-gudoks-2').should('have.length', 3)
+    window.cy.get('[id=relatedPost]').should('have.length', 3)
   })
   it('Tweets are centered and shown as embeds', () => {
     //Each tweet has class of twitter-tweet which centers it and is an iframe when it shows the embedded format

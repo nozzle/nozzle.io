@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import tw from 'twin.macro'
+import { Img } from './Html'
 //
 
 const PostListStyled = styled('div')`
@@ -88,7 +89,7 @@ export default function PostList({ prefix, posts }) {
         <PostContainer>
           {posts.map(post => {
             return (
-              <Post key={post.fields.slug}>
+              <Post key={post.fields.slug} id="relatedPost">
                 <article>
                   {post.fields.featuredImage ? (
                     <Link
@@ -131,7 +132,12 @@ export default function PostList({ prefix, posts }) {
                         return (
                           <div className="author" key={author.fields.name}>
                             {profilePhotoURL ? (
-                              <img src={profilePhotoURL} alt="Author" />
+                              <img
+                                src={`https:${profilePhotoURL}`}
+                                alt="Author"
+                                height="32"
+                                width="32"
+                              />
                             ) : null}
                             <div>{author.fields.name}</div>
                           </div>

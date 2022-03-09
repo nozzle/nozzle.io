@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 import Smackdown from 'components/Smackdown'
+import { Img } from './Html'
 
 const Container = styled('div')`
   ${tw`relative mt-4 mb-8 p-4 rounded-xl bg-gray-200`}
@@ -73,7 +74,7 @@ const Contributors = styled('div')`
 
 export default function AuthorsAndContributors({ post }) {
   return (
-    <Container>
+    <Container id="AuthorsAndContributors">
       {post.fields.contributors?.length ? (
         <Heading>Authors & Contributors</Heading>
       ) : post.fields.author.length > 1 ? (
@@ -94,7 +95,7 @@ export default function AuthorsAndContributors({ post }) {
           return biography ? (
             <AuthorBio key={author.sys.id}>
               {profilePhotoURL ? (
-                <AuthorPic src={profilePhotoURL} alt="Author" />
+                <AuthorPic src={`https:${profilePhotoURL}`} alt="Author" />
               ) : null}
               <BioText>
                 <div className="authorName">{author.fields.name} </div>
@@ -119,7 +120,7 @@ export default function AuthorsAndContributors({ post }) {
               <div className="contributor" key={contributor.fields.name}>
                 {profilePhotoURL ? (
                   <div className="nameBox">
-                    <img src={profilePhotoURL} alt="Contributor" />
+                    <Img src={`https:${profilePhotoURL}`} alt="Contributor" />
                     <div className="name">{contributor.fields.name}</div>
                   </div>
                 ) : null}

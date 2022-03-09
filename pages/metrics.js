@@ -76,7 +76,7 @@ export default function Metrics({ metrics }) {
               </P>
             </Title>
             <Screenshot>
-              <img src="img/metricsScreenshot.png" alt="Nozzle Metrics" />
+              <img src="/img/metricsScreenshot.png" alt="Nozzle Metrics" />
             </Screenshot>
           </Top>
           <Container>
@@ -90,7 +90,7 @@ export default function Metrics({ metrics }) {
                         id={metric.fields.fieldId}
                       >
                         <Thumbnail
-                          src={metric.fields.thumbnail.fields.file.url}
+                          src={`https:${metric.fields.thumbnail.fields.file.url}`}
                           alt={metric.fields.name}
                         />
                         <Text>

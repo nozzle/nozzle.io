@@ -202,6 +202,8 @@ export default function GoogleKeywordRankCheckerTool() {
                   <Img
                     src={require('public/img/wholeSerp.png')}
                     alt="Analyze the whole SERP with Nozzle's online rank checker tool"
+                    width="448"
+                    height="240"
                   />
                 </div>
                 <div className="content">
@@ -218,6 +220,8 @@ export default function GoogleKeywordRankCheckerTool() {
                   <Img
                     src={require('public/img/featuredSnippets.jpg')}
                     alt="Track featured snippet competitors with Nozzle's Google search keyword rank checker"
+                    width="448"
+                    height="240"
                   />
                 </div>
 
@@ -235,6 +239,8 @@ export default function GoogleKeywordRankCheckerTool() {
                   <Img
                     src={require('public/img/paaDashboard.jpg')}
                     alt="People Also Ask questions pulled by Nozzle's Google rank checker tool"
+                    width="448"
+                    height="240"
                   />
                 </div>
                 <div className="content">
@@ -255,6 +261,8 @@ export default function GoogleKeywordRankCheckerTool() {
                   <Img
                     src={require('public/img/competitorsAds.gif')}
                     alt="Competitor analysis using Nozzle’s Google SERP rank checker"
+                    width="448"
+                    height="240"
                   />
                 </div>
 

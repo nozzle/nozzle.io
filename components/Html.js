@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import tw from 'twin.macro'
+import Image from 'next/image'
 //
 import Easing from 'utils/Easing'
 
@@ -141,7 +142,7 @@ export const Div = styled('div')`
   ${weight};
 `
 export const Img = styled(({ children, ...rest }) => (
-  <img alt="" {...rest} width="500" height="400" />
+  <Image alt="" width="500" height="400" {...rest} />
 ))`
   ${tw`max-w-full w-auto h-auto`}
 `

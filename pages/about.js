@@ -369,7 +369,10 @@ export default function About() {
 
             <div className="delorianSide">
               <div>
-                <Img src={require('public/img/about/delorianSide.png')} />
+                <img
+                  src={require('public/img/about/delorianSide.png')}
+                  alt="delorian"
+                />
               </div>
             </div>
 
@@ -379,7 +382,12 @@ export default function About() {
 
             <div className="event">
               <div className="left">
-                <Img src={require('public/img/about/seo.png')} />
+                <Img
+                  src={require('public/img/about/seo.png')}
+                  alt="seo.com"
+                  width="384"
+                  height="84"
+                />
               </div>
               <div className="connector" />
               <div className="right">
@@ -402,13 +410,23 @@ export default function About() {
               </div>
               <div className="connector" />
               <div className="right">
-                <Img src={require('public/img/about/competitors.png')} />
+                <img
+                  src={require('public/img/about/competitors.png')}
+                  width="384"
+                  height="169"
+                  alt="competitors"
+                />
               </div>
             </div>
 
             <div className="event">
               <div className="left">
-                <Img src={require('public/img/logo-blue.png')} />
+                <Img
+                  src={require('public/img/logo-blue.png')}
+                  width="384"
+                  height="105"
+                  alt="nozzle"
+                />
               </div>
               <div className="connector" />
               <div className="right">
@@ -429,16 +447,20 @@ export default function About() {
               <div className="right">
                 <Img
                   src={require('public/img/about/firstCustomer.png')}
-                  style={{
-                    width: '300px',
-                  }}
+                  width="300"
+                  height="196"
                 />
               </div>
             </div>
 
             <div className="event">
               <div className="left">
-                <Img src={require('public/img/about/billion.png')} />
+                <Img
+                  src={require('public/img/about/billion.png')}
+                  width="384"
+                  height="304"
+                  alt="Billion data points"
+                />
               </div>
               <div className="connector" />
               <div className="right">
@@ -457,13 +479,21 @@ export default function About() {
               </div>
               <div className="connector" />
               <div className="right">
-                <Img src={require('public/img/about/schedulesMini.png')} />
+                <Img
+                  src={require('public/img/about/schedulesMini.png')}
+                  width="384"
+                  height="243"
+                />
               </div>
             </div>
 
             <div className="event">
               <div className="left">
-                <Img src={require('public/img/about/techstars.png')} />
+                <Img
+                  src={require('public/img/about/techstars.png')}
+                  width="384"
+                  height="253"
+                />
               </div>
               <div className="connector" />
               <div className="right">
@@ -496,7 +526,11 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Img src={require('public/img/about/chartjs.png')} />
+                  <Img
+                    src={require('public/img/about/chartjs.png')}
+                    width="384"
+                    height="220"
+                  />
                 </a>
               </div>
             </div>
@@ -508,7 +542,11 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Img src={require('public/img/about/jumpsuit.png')} />
+                  <Img
+                    src={require('public/img/about/jumpsuit.png')}
+                    width="384"
+                    height="220"
+                  />
                 </a>
               </div>
               <div className="connector" />
@@ -534,14 +572,22 @@ export default function About() {
               </div>
               <div className="connector" />
               <div className="right">
-                <Img src={require('public/img/about/smx.png')} />
+                <Img
+                  src={require('public/img/about/smx.png')}
+                  width="384"
+                  height="182"
+                />
               </div>
             </div>
 
             <H2 className="roads">Where we're going, we don't need roads...</H2>
 
             <div className="delorianBack">
-              <Img src={require('public/img/about/delorianBack.png')} />
+              <Img
+                src={require('public/img/about/delorianBack.png')}
+                width="384"
+                height="185"
+              />
             </div>
           </section>
 

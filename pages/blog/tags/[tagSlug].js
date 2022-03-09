@@ -41,7 +41,13 @@ export default function BlogTag({ tag, posts }) {
 
   return (
     <div>
-      <Head title={`${tag.fields.name} | Nozzle`} />
+      <Head
+        title={`${tag.fields.name} | Nozzle`}
+        description={`${
+          tag.fields.metaDescription ||
+          "The Nozzle blog provides SEO tips, strategies, and information for ranking better in the SERPs. Don't forget to monitor your keywords with Nozzle too. :)"
+        }`}
+      />
       <main>
         <Header>
           <H1>Blog - {tag.fields.name}</H1>

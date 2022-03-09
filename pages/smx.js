@@ -2,6 +2,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Form, Text } from 'react-form'
+import Head from '../components/Head'
 //
 import encodeFormData from 'utils/encodeFormData'
 import { Button } from 'components/Html'
@@ -76,272 +77,277 @@ export default function Trial() {
   const [submitted, setSubmitted] = React.useState(false)
 
   return (
-    <div
-      css={`
-        position: relative;
-        background: #001319;
-        min-height: 150vh;
-        color: white;
-        padding-bottom: 10rem;
-      `}
-    >
-      <Matrix
-        css={`
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 80vh;
-          z-index: 0;
-          opacity: 0.7;
-        `}
-      />
-      <div
-        css={`
-          position: absolute;
-          top: 50vh;
-          left: 0;
-          width: 100%;
-          height: 30vh;
-          background: linear-gradient(to bottom, transparent, #001319);
-          z-index: 1;
-        `}
+    <>
+      <Head
+        title="Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker - Nozzle"
+        description="A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want an SEO rank tracker with all the data, give Nozzle a test drive today."
       />
       <div
         css={`
           position: relative;
-          z-index: 2;
+          background: #001319;
+          min-height: 150vh;
+          color: white;
+          padding-bottom: 10rem;
         `}
       >
+        <Matrix
+          css={`
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80vh;
+            z-index: 0;
+            opacity: 0.7;
+          `}
+        />
         <div
           css={`
-            display: flex;
+            position: absolute;
+            top: 50vh;
+            left: 0;
+            width: 100%;
+            height: 30vh;
+            background: linear-gradient(to bottom, transparent, #001319);
+            z-index: 1;
+          `}
+        />
+        <div
+          css={`
             position: relative;
+            z-index: 2;
           `}
         >
           <div
             css={`
-              flex: 1;
               display: flex;
-              align-items: center;
-              justify-content: center;
-              min-height: 100vh;
-              padding: 6rem 0;
+              position: relative;
             `}
           >
-            <img
-              src={require('public/img/red-pill.png')}
+            <div
               css={`
-                width: 80%;
-                max-width: 300px;
-                background: rgba(0, 0, 0, 0.6);
-                border-radius: 100rem;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 6rem 0;
               `}
-            />
+            >
+              <img
+                src={require('public/img/red-pill.png')}
+                css={`
+                  width: 80%;
+                  max-width: 300px;
+                  background: rgba(0, 0, 0, 0.6);
+                  border-radius: 100rem;
+                `}
+              />
+            </div>
+            <div
+              css={`
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 6rem 0;
+              `}
+            >
+              <img
+                src={require('public/img/blue-pill.png')}
+                css={`
+                  width: 80%;
+                  max-width: 300px;
+                  background: rgba(0, 0, 0, 0.6);
+                  border-radius: 100rem;
+                `}
+              />
+            </div>
           </div>
           <div
             css={`
-              flex: 1;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              min-height: 100vh;
-              padding: 6rem 0;
-            `}
-          >
-            <img
-              src={require('public/img/blue-pill.png')}
-              css={`
-                width: 80%;
-                max-width: 300px;
-                background: rgba(0, 0, 0, 0.6);
-                border-radius: 100rem;
-              `}
-            />
-          </div>
-        </div>
-        <div
-          css={`
-            font-size: 0.8rem;
-            text-align: center;
-            opacity: 0.15;
-            margin: -5rem auto 5rem;
-            max-width: 80%;
-          `}
-        >
-          * any reversal of pill coloring is strictly for branding purposes
-        </div>
-        <div />
-        <div>
-          <div
-            css={`
+              font-size: 0.8rem;
               text-align: center;
-              font-size: 5vw;
-              line-height: 6vw;
+              opacity: 0.15;
+              margin: -5rem auto 5rem;
+              max-width: 80%;
             `}
           >
+            * any reversal of pill coloring is strictly for branding purposes
+          </div>
+          <div />
+          <div>
             <div
               css={`
-                font-weight: lighter;
+                text-align: center;
+                font-size: 5vw;
+                line-height: 6vw;
               `}
             >
-              Google is evolving.
+              <div
+                css={`
+                  font-weight: lighter;
+                `}
+              >
+                Google is evolving.
+              </div>
+              <div
+                css={`
+                  font-weight: lighter;
+                `}
+              >
+                SERPS are changing.
+              </div>
+              <div
+                css={`
+                  font-weight: bolder;
+                `}
+              >
+                So should your rank tracker.
+              </div>
             </div>
-            <div
-              css={`
-                font-weight: lighter;
-              `}
-            >
-              SERPS are changing.
-            </div>
-            <div
+          </div>
+          <div
+            css={`
+              margin: 10vw auto 0;
+              font-size: 3vw;
+              line-height: 3.4vw;
+              width: 600px;
+              text-align: center;
+              max-width: 80%;
+              font-weight: lighter;
+            `}
+          >
+            Come by{' '}
+            <strong
               css={`
                 font-weight: bolder;
               `}
             >
-              So should your rank tracker.
-            </div>
+              booth #47 at SMX
+            </strong>{' '}
+            (or fill out the form below) to enter to win a new pair of
           </div>
-        </div>
-        <div
-          css={`
-            margin: 10vw auto 0;
-            font-size: 3vw;
-            line-height: 3.4vw;
-            width: 600px;
-            text-align: center;
-            max-width: 80%;
-            font-weight: lighter;
-          `}
-        >
-          Come by{' '}
-          <strong
+          <div
             css={`
+              margin: 3vw auto 0;
+              padding: 8rem 0;
+              font-size: 4vw;
+              line-height: 5vw;
+              width: 600px;
+              text-align: center;
+              max-width: 80%;
               font-weight: bolder;
+              background-image: url('/img/bose-headphones.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              text-shadow: 0 3px 5px black;
             `}
           >
-            booth #47 at SMX
-          </strong>{' '}
-          (or fill out the form below) to enter to win a new pair of
-        </div>
-        <div
-          css={`
-            margin: 3vw auto 0;
-            padding: 8rem 0;
-            font-size: 4vw;
-            line-height: 5vw;
-            width: 600px;
-            text-align: center;
-            max-width: 80%;
-            font-weight: bolder;
-            background-image: url('/img/bose-headphones.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            text-shadow: 0 3px 5px black;
-          `}
-        >
-          BOSE QuietComfort 35 Wireless Headphones II
-        </div>
-        <div
-          css={`
-            margin: 0 auto;
-            font-size: 1rem;
-            opacity: 0.5;
-            line-height: 1.6rem;
-            width: 600px;
-            text-align: center;
-            max-width: 80%;
-            font-weight: lighter;
-          `}
-        >
-          Announced on 5/31/2019 - Ends on 6/5/2019
-        </div>
-        {!submitted ? (
-          <Form
-            onSubmit={async values => {
-              window.dataLayer.push({ event: 'smxSubmit' })
-              try {
-                await axios.post(
-                  'https://nozzle.io/',
-                  encodeFormData({
-                    'form-name': 'smx2019',
-                    ...values,
-                  }),
-                  {
-                    headers: {
-                      'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                  }
-                )
-                setSubmitted(true)
-              } catch (err) {
-                window.alert(
-                  'There was a problem submitting your form! Try again or reload the page :)'
-                )
-                setSubmitted(true)
-              }
-            }}
+            BOSE QuietComfort 35 Wireless Headphones II
+          </div>
+          <div
+            css={`
+              margin: 0 auto;
+              font-size: 1rem;
+              opacity: 0.5;
+              line-height: 1.6rem;
+              width: 600px;
+              text-align: center;
+              max-width: 80%;
+              font-weight: lighter;
+            `}
           >
-            {({ submitForm }) => (
-              <form
-                name="smx2019"
-                data-netlify="true"
-                onSubmit={submitForm}
-                css={`
-                  width: 400px;
-                  max-width: 80%;
-                  margin: 5rem auto 0;
-                `}
-              >
-                <Text
-                  field="name"
-                  name="name"
-                  placeholder="Name..."
+            Announced on 5/31/2019 - Ends on 6/5/2019
+          </div>
+          {!submitted ? (
+            <Form
+              onSubmit={async values => {
+                window.dataLayer.push({ event: 'smxSubmit' })
+                try {
+                  await axios.post(
+                    'https://nozzle.io/',
+                    encodeFormData({
+                      'form-name': 'smx2019',
+                      ...values,
+                    }),
+                    {
+                      headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                      },
+                    }
+                  )
+                  setSubmitted(true)
+                } catch (err) {
+                  window.alert(
+                    'There was a problem submitting your form! Try again or reload the page :)'
+                  )
+                  setSubmitted(true)
+                }
+              }}
+            >
+              {({ submitForm }) => (
+                <form
+                  name="smx2019"
+                  data-netlify="true"
+                  onSubmit={submitForm}
                   css={`
-                    margin: 1rem auto 0;
-                    width: 100%;
-                    font-size: 1.4rem;
-                    background: rgba(255, 255, 255, 0.05);
-                    border: solid 2px rgba(255, 255, 255, 0.2);
-                    border-radius: 0.3rem;
-                    padding: 1rem;
-                    color: white;
+                    width: 400px;
+                    max-width: 80%;
+                    margin: 5rem auto 0;
                   `}
-                />
-                <Text
-                  field="email"
-                  name="email"
-                  placeholder="Email address..."
-                  css={`
-                    margin: 1rem auto 0;
-                    width: 100%;
-                    font-size: 1.4rem;
-                    background: rgba(255, 255, 255, 0.05);
-                    border: solid 2px rgba(255, 255, 255, 0.2);
-                    border-radius: 0.3rem;
-                    padding: 1rem;
-                    color: white;
-                  `}
-                />
-                <Text
-                  field="twitter"
-                  name="twitter"
-                  placeholder="Twitter handle..."
-                  css={`
-                    margin: 1rem auto 0;
-                    width: 100%;
-                    font-size: 1.4rem;
-                    background: rgba(255, 255, 255, 0.05);
-                    border: solid 2px rgba(255, 255, 255, 0.2);
-                    border-radius: 0.3rem;
-                    padding: 1rem;
-                    color: white;
-                  `}
-                />
-                <Button
-                  type="submit"
-                  css={`
+                >
+                  <Text
+                    field="name"
+                    name="name"
+                    placeholder="Name..."
+                    css={`
+                      margin: 1rem auto 0;
+                      width: 100%;
+                      font-size: 1.4rem;
+                      background: rgba(255, 255, 255, 0.05);
+                      border: solid 2px rgba(255, 255, 255, 0.2);
+                      border-radius: 0.3rem;
+                      padding: 1rem;
+                      color: white;
+                    `}
+                  />
+                  <Text
+                    field="email"
+                    name="email"
+                    placeholder="Email address..."
+                    css={`
+                      margin: 1rem auto 0;
+                      width: 100%;
+                      font-size: 1.4rem;
+                      background: rgba(255, 255, 255, 0.05);
+                      border: solid 2px rgba(255, 255, 255, 0.2);
+                      border-radius: 0.3rem;
+                      padding: 1rem;
+                      color: white;
+                    `}
+                  />
+                  <Text
+                    field="twitter"
+                    name="twitter"
+                    placeholder="Twitter handle..."
+                    css={`
+                      margin: 1rem auto 0;
+                      width: 100%;
+                      font-size: 1.4rem;
+                      background: rgba(255, 255, 255, 0.05);
+                      border: solid 2px rgba(255, 255, 255, 0.2);
+                      border-radius: 0.3rem;
+                      padding: 1rem;
+                      color: white;
+                    `}
+                  />
+                  <Button
+                    type="submit"
+                    css={`
                     color: white;
                     appearance: none;
                     border-radius: 0.4rem;
@@ -352,27 +358,28 @@ export default function Trial() {
                     display: block;
                     text-align: center;
                   `}
-                >
-                  Submit!
-                </Button>
-              </form>
-            )}
-          </Form>
-        ) : (
-          <div
-            css={`
-              margin: 2rem auto;
-              font-size: 4vw;
-              line-height: 3.4vw;
-              width: 600px;
-              text-align: center;
-              max-width: 80%;
-            `}
-          >
-            Thank you for submitting!
-          </div>
-        )}
+                  >
+                    Submit!
+                  </Button>
+                </form>
+              )}
+            </Form>
+          ) : (
+            <div
+              css={`
+                margin: 2rem auto;
+                font-size: 4vw;
+                line-height: 3.4vw;
+                width: 600px;
+                text-align: center;
+                max-width: 80%;
+              `}
+            >
+              Thank you for submitting!
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   )
 }

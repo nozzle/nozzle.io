@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
+import Head from '../../components/Head'
 
 //
 import { angle } from 'utils/Styles'
@@ -35,6 +36,10 @@ const SectionContactUs = styled(Section)`
 export default function Thanks() {
   return (
     <>
+      <Head
+        title="Thank you for signing up"
+        description="Thank you for signing up for Nozzle, the Keyword Rank Tracker Tool, Google SEO Rank Tracker and Online Website Enterprise Keyword Rank Checker"
+      />
       <SectionContactUs id="contact">
         <H2 full>Let's start your free trial!</H2>
         <P>Thanks for submitting the form. We'll be in touch shortly.</P>

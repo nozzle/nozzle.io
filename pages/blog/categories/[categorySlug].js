@@ -41,7 +41,13 @@ export default function BlogCategory({ category, posts }) {
 
   return (
     <div>
-      <Head title={`${category.fields.name} | Nozzle`} />
+      <Head
+        title={`${category.fields.name} | Nozzle`}
+        description={`${
+          category.fields.metaDescription ||
+          "The Nozzle blog provides SEO tips, strategies, and information for ranking better in the SERPs. Don't forget to monitor your keywords with Nozzle too. :)"
+        }`}
+      />
       <main>
         <Header>
           <H1>Blog - {category.fields.name}</H1>

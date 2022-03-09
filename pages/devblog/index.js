@@ -27,7 +27,10 @@ export default function DevBlog({ posts, categories }) {
 
   return (
     <div>
-      <Head title="Dev Blog | Nozzle" />
+      <Head
+        title="Dev Blog | Nozzle"
+        description="The Nozzle blog provides SEO tips, strategies, and information for ranking better in the SERPs. Don't forget to monitor your keywords with Nozzle too. :)"
+      />
       <main>
         <Header>
           <H1>Blog</H1>

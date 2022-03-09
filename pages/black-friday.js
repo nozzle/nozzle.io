@@ -17,7 +17,7 @@ const Section = ({ children, ...rest }) => (
 const SectionCustomers = styled(Section)`
   ${tw`z-0`}
   .inner {
-    ${tw`mx-auto flex flex-wrap items-center justify-center max-w-default py-0 px-5/100`}
+    ${tw`mx-auto flex gap-10 flex-wrap items-center justify-center max-w-default  `}
   }
   .vs {
     ${tw`z-0 flex items-center justify-center text-white text-xl font-bold leading-none overflow-hidden `}
@@ -157,20 +157,21 @@ export default function BlackFriday() {
         description="Nozzle Black Friday Deal"
       />
       <Center>
-        <div tw="pt-1/10">
-          <div tw=" flex md:(gap-4) gap-2 justify-center items-center">
+        <div css={tw`pt-1/10`}>
+          <div css={tw`flex md:(gap-4) gap-2 justify-center items-center`}>
             <Img
               src={require('public/img/logo-blue.png')}
               alt="Enterprise Keyword Rank Tracker Tool For Your Website"
               itemProp="logo"
-              tw="h-8 md:(h-24)"
+              width="350"
+              height="96"
             />
-            <div tw="text-black font-bold text-xl md:(text-6xl) ">
+            <div css={tw`text-black font-bold text-xl md:(text-6xl)`}>
               Black Friday Deal
             </div>
           </div>{' '}
           {utm_source == 'RankMath' ? (
-            <div tw="md:(text-xl) mt-2">
+            <div css={tw`md:(text-xl) mt-2`}>
               A deal with{' '}
               <a
                 href="https://rankmath.com/"
@@ -185,16 +186,16 @@ export default function BlackFriday() {
         </div>
       </Center>
       <Container>
-        <div tw="text-center py-4/100 ">
-          <div tw="mb-4 text-xl md:(text-6xl)">2 Year Discount!</div>
-          <div tw="text-base md:(text-2xl) mb-12">
+        <div css={tw`text-center py-4/100`}>
+          <div css={tw`mb-4 text-xl md:(text-6xl)`}>2 Year Discount!</div>
+          <div css={tw`text-base md:(text-2xl) mb-12`}>
             Get 50% off year 1 and {utm_source == 'RankMath' ? '50%' : '25%'}{' '}
             off year 2 in this amazing deal!
           </div>
           <Container>
-            <H3 tw="underline ">How to Redeem:</H3>
+            <H3 css={tw`underline`}>How to Redeem:</H3>
             <Ol>
-              <Li tw="">Click the Start Trial button below</Li>
+              <Li>Click the Start Trial button below</Li>
               <Li>Go to Billing page</Li>
               <Li>Enter Card</Li>
               <Li>
@@ -216,28 +217,48 @@ export default function BlackFriday() {
           setEnterprise={value => setEnterprise(value)}
           id="plans"
         />
-        <div tw="text-center mt-12 mb-24">
+        <div css={tw`text-center mt-12 mb-24`}>
           *Effective from November 1 to November 30, 2021. For new users only.
         </div>
         <SectionCustomers>
           <div className="vs">
             <Span>Trusted By</Span>
           </div>
-          <Img src={require('public/img/mayoClinic.png')} alt="Mayo Clinic" />
-          <Img src={require('public/img/homeDepot.png')} alt="Home Depot" />
+          <Img
+            src={require('public/img/mayoClinic.png')}
+            alt="Mayo Clinic"
+            width={160}
+            height={160}
+          />
+
+          <Img
+            src={require('public/img/homeDepot.png')}
+            alt="Home Depot"
+            width={160}
+            height={34}
+          />
+
           <Img
             src={require('public/img/apartmentsdotcom.png')}
             alt="Apartments.com"
+            width={160}
+            height={24}
           />
+
           <Img
             src={require('public/img/bankrate.svg')}
             alt="Bankrate"
             className="bigLogo"
+            width={90}
+            height={90}
           />
+
           <Img
             src={require('public/img/turo.png')}
             alt="Turo"
             className="bigLogo"
+            width={90}
+            height={46}
           />
         </SectionCustomers>
       </Container>

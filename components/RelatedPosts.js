@@ -132,9 +132,11 @@ export default function PostList({ prefix, posts }) {
                         return (
                           <div className="author" key={author.fields.name}>
                             {profilePhotoURL ? (
-                              <Img
+                              <img
                                 src={`https:${profilePhotoURL}`}
                                 alt="Author"
+                                height="32"
+                                width="32"
                               />
                             ) : null}
                             <div>{author.fields.name}</div>

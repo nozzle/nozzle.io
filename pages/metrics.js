@@ -7,7 +7,6 @@ import styled from 'styled-components'
 import Smackdown from 'components/Smackdown'
 import { Container, Center } from 'components/Layout'
 import tw from 'twin.macro'
-import { Img } from '../components/Html'
 
 const Top = styled('section')`
   ${angle('left')};
@@ -77,7 +76,7 @@ export default function Metrics({ metrics }) {
               </P>
             </Title>
             <Screenshot>
-              <Img src="img/metricsScreenshot.png" alt="Nozzle Metrics" />
+              <img src="/img/metricsScreenshot.png" alt="Nozzle Metrics" />
             </Screenshot>
           </Top>
           <Container>

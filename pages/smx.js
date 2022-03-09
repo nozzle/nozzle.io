@@ -5,7 +5,6 @@ import { Form, Text } from 'react-form'
 //
 import encodeFormData from 'utils/encodeFormData'
 import { Button } from 'components/Html'
-import { Img } from '../components/Html'
 
 function Matrix({ speed = 100, size = 18, ...rest }) {
   const ref = React.useRef()
@@ -130,7 +129,7 @@ export default function Trial() {
               padding: 6rem 0;
             `}
           >
-            <Img
+            <img
               src={require('public/img/red-pill.png')}
               css={`
                 width: 80%;
@@ -150,7 +149,7 @@ export default function Trial() {
               padding: 6rem 0;
             `}
           >
-            <Img
+            <img
               src={require('public/img/blue-pill.png')}
               css={`
                 width: 80%;

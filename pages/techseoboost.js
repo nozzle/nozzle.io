@@ -125,8 +125,10 @@ export default function TechSeoBoost() {
             </P>
             <Img
               src={require('public/img/PAAExpansionDeliverable500keywords.jpg')}
-              tw="mb-12"
+              width="436"
+              height="242"
             />
+            <div css={tw`mb-12`} />
             <H3>Nozzle Vision</H3>
             <P tw="mb-6">
               We recently launched Nozzle Vision, an awesome new feature that
@@ -142,7 +144,12 @@ export default function TechSeoBoost() {
               Nozzle Vision also allows you to compare SERPS from different
               dates, side by side.
             </P>
-            <Img src={require('public/img/NozzleVision.gif')} tw="mb-12" />
+            <Img
+              src={require('public/img/NozzleVision.gif')}
+              width="436"
+              height="320"
+            />
+            <div css={tw`mb-12`} />
             <H3>Share of Voice Dashboard</H3>
             <P tw="mb-6">
               The Share of Voice Dashboard allows you to analyze your
@@ -161,7 +168,10 @@ export default function TechSeoBoost() {
             <Img
               src={require('public/img/ShareOfVoiceDashboard.png')}
               tw="mb-12"
+              width="436"
+              height="232"
             />
+            <div css={tw`mb-12`} />
             <P>
               To sign up for a free trial with Nozzle, fill out the form to the
               right and we will get you set up with a workspace for your

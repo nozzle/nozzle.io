@@ -6,25 +6,17 @@ import { BlogContainer, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import Pagination from 'components/Pagination'
-import { useRouter } from 'next/router'
 
-export async function getServerSideProps(req) {
-  const props = await fetchDevPosts()
+export async function getServerSideProps({ query }) {
+  const page = query.page || 1
+  const props = await fetchDevPosts(page)
 
   return {
     props,
   }
 }
 
-export default function DevBlog({ posts, categories }) {
-  const router = useRouter()
-  const { page = 1 } = router.query
-
-  const postsPerPage = 12
-  const indexOfLastPost = page * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
+export default function DevBlog({ posts, categories, total }) {
   return (
     <div>
       <Head
@@ -52,12 +44,8 @@ export default function DevBlog({ posts, categories }) {
           ) : null}
         </Header>
         <BlogContainer>
-          <PostList prefix="devblog" posts={currentPosts} />
-          <Pagination
-            postsPerPage={postsPerPage}
-            numPosts={posts.length}
-            path={`/devblog`}
-          />
+          <PostList prefix="devblog" posts={posts} />
+          <Pagination postsPerPage={12} numPosts={total} path={`/devblog`} />
         </BlogContainer>
       </main>
     </div>

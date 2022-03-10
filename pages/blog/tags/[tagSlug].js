@@ -3,7 +3,7 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 import Error from 'next/error'
 //
-import { useRouter } from 'next/router'
+
 import Link from 'next/link'
 import Icon from 'components/Icon'
 import Head from 'components/Head'
@@ -19,22 +19,15 @@ const DescriptionStyles = styled('div')`
   ${tw`mx-auto p-8 max-w-full`}
 `
 
-export async function getServerSideProps(req) {
-  const props = await fetchBlogPostsByTagSlug(req.query.tagSlug)
+export async function getServerSideProps({ query }) {
+  const page = query.page || 1
+  const props = await fetchBlogPostsByTagSlug(query.tagSlug, page)
   return {
     props,
   }
 }
 
-export default function BlogTag({ tag, posts }) {
-  const router = useRouter()
-  const { page = 1 } = router.query
-  const postsPerPage = 12
-
-  const indexOfLastPost = page * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
+export default function BlogTag({ tag, posts, total }) {
   if (tag.err) {
     return <Error statusCode={tag.err} />
   }
@@ -67,10 +60,10 @@ export default function BlogTag({ tag, posts }) {
               <Smackdown source={tag.fields.description} />
             </DescriptionStyles>
           ) : null}
-          <PostList prefix="blog" posts={currentPosts} />
+          <PostList prefix="blog" posts={posts} />
           <Pagination
-            postsPerPage={postsPerPage}
-            numPosts={posts.length}
+            postsPerPage={12}
+            numPosts={total}
             path={`/blog/tags/${tag.fields.slug}`}
           />
         </Container>

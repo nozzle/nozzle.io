@@ -59,10 +59,11 @@ export async function fetchAuthors() {
   return items
 }
 
-export async function fetchDevPosts() {
-  const { items } = await client.getEntries({
+export async function fetchDevPosts(page) {
+  const { items, total } = await client.getEntries({
     content_type: 'devPost',
-    limit: 1000,
+    limit: 12,
+    skip: (page - 1) * 12,
   })
 
   const posts = items.map(normalizePost)
@@ -70,13 +71,39 @@ export async function fetchDevPosts() {
   return {
     posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories: getCategoriesFromPosts(posts),
+    total,
   }
 }
 
-export async function fetchBlogPosts() {
+export async function fetchBlogPosts(page) {
+  const { items, total } = await client.getEntries({
+    content_type: '2wKn6yEnZewu2SCCkus4as',
+    limit: 12,
+    skip: (page - 1) * 12,
+  })
+
+  const posts = items.map(normalizePost)
+
+  return {
+    posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
+    categories: getCategoriesFromPosts(posts),
+    total,
+  }
+}
+
+export async function fetchBlogCateogries() {
+  const { items: categories } = await client.getEntries({
+    content_type: 'blogCategory',
+  })
+  return {
+    categories,
+  }
+}
+
+export async function fetchFeaturedBlogPosts() {
   const { items } = await client.getEntries({
     content_type: '2wKn6yEnZewu2SCCkus4as',
-    limit: 1000,
+    'fields.featuredPost': true,
   })
 
   const posts = items.map(normalizePost)
@@ -87,7 +114,7 @@ export async function fetchBlogPosts() {
   }
 }
 
-export async function fetchDevPostsByCategorySlug(categorySlug) {
+export async function fetchDevPostsByCategorySlug(categorySlug, page) {
   const {
     items: [category],
   } = await client.getEntries({
@@ -95,9 +122,11 @@ export async function fetchDevPostsByCategorySlug(categorySlug) {
     'fields.slug': categorySlug,
   })
 
-  let { items: posts } = await client.getEntries({
+  let { items: posts, total } = await client.getEntries({
     content_type: 'devPost',
     'fields.categories.sys.id': category.sys.id,
+    limit: 12,
+    skip: (page - 1) * 12 || 0,
   })
 
   posts = posts.map(normalizePost)
@@ -107,10 +136,11 @@ export async function fetchDevPostsByCategorySlug(categorySlug) {
     posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories,
     category,
+    total,
   }
 }
 
-export async function fetchBlogPostsByCategorySlug(categorySlug) {
+export async function fetchBlogPostsByCategorySlug(categorySlug, page) {
   const {
     items: [category],
   } = await client.getEntries({
@@ -122,9 +152,11 @@ export async function fetchBlogPostsByCategorySlug(categorySlug) {
     return { posts: [], category: { err: 404 } }
   }
 
-  let { items: posts } = await client.getEntries({
+  let { items: posts, total } = await client.getEntries({
     content_type: '2wKn6yEnZewu2SCCkus4as',
     'fields.categories.sys.id': category.sys.id,
+    limit: 12,
+    skip: (page - 1) * 12 || 0,
   })
 
   posts = posts.map(normalizePost)
@@ -134,10 +166,11 @@ export async function fetchBlogPostsByCategorySlug(categorySlug) {
     posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories,
     category,
+    total,
   }
 }
 
-export async function fetchBlogPostsByTagSlug(tagSlug) {
+export async function fetchBlogPostsByTagSlug(tagSlug, page) {
   const {
     items: [tag],
   } = await client.getEntries({
@@ -149,9 +182,11 @@ export async function fetchBlogPostsByTagSlug(tagSlug) {
     return { tag: { err: 404 }, posts: [] }
   }
 
-  let { items: posts } = await client.getEntries({
+  let { items: posts, total } = await client.getEntries({
     content_type: '2wKn6yEnZewu2SCCkus4as',
     'fields.tags.sys.id': tag.sys.id,
+    limit: 12,
+    skip: (page - 1) * 12,
   })
 
   posts = posts.map(normalizePost)
@@ -161,6 +196,7 @@ export async function fetchBlogPostsByTagSlug(tagSlug) {
     posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     tags,
     tag,
+    total,
   }
 }
 

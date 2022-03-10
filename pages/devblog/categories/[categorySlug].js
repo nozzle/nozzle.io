@@ -10,24 +10,16 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import { fetchDevPostsByCategorySlug } from '../../../contentful'
 import Pagination from 'components/Pagination'
-import { useRouter } from 'next/router'
 
-export async function getServerSideProps(req) {
-  const props = await fetchDevPostsByCategorySlug(req.query.categorySlug)
+export async function getServerSideProps({ query }) {
+  const page = query.page || 1
+  const props = await fetchDevPostsByCategorySlug(query.categorySlug, page)
   return {
     props,
   }
 }
 
-export default function DevBlogTag({ category, posts }) {
-  const router = useRouter()
-  const { page = 1 } = router.query
-  const postsPerPage = 12
-
-  const indexOfLastPost = page * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
+export default function DevBlogTag({ category, posts, total }) {
   return (
     <div>
       <Head
@@ -53,10 +45,10 @@ export default function DevBlogTag({ category, posts }) {
           </SubMenu>
         </Header>
         <Container>
-          <PostList prefix="devblog" posts={currentPosts} />
+          <PostList prefix="devblog" posts={posts} />
           <Pagination
-            postsPerPage={postsPerPage}
-            numPosts={posts.length}
+            postsPerPage={12}
+            numPosts={total}
             path={`/blog/categories/${category.fields.slug}`}
           />
         </Container>

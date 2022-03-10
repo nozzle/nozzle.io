@@ -13,28 +13,20 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import { fetchBlogPostsByCategorySlug } from '../../../contentful'
 import tw from 'twin.macro'
-import { useRouter } from 'next/router'
 
 const DescriptionStyles = styled('div')`
   ${tw`mx-auto p-8 max-w-full`}
 `
 
-export async function getServerSideProps(req) {
-  const props = await fetchBlogPostsByCategorySlug(req.query.categorySlug)
+export async function getServerSideProps({ query }) {
+  const page = query.page || 1
+  const props = await fetchBlogPostsByCategorySlug(query.categorySlug, page)
   return {
     props,
   }
 }
 
-export default function BlogCategory({ category, posts }) {
-  const router = useRouter()
-  const { page = 1 } = router.query
-  const postsPerPage = 12
-
-  const indexOfLastPost = page * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
+export default function BlogCategory({ category, posts, total }) {
   if (category.err) {
     return <Error statusCode={category.err} />
   }
@@ -67,11 +59,11 @@ export default function BlogCategory({ category, posts }) {
               <Smackdown source={category.fields.description} />
             </DescriptionStyles>
           ) : null}
-          <PostList prefix="blog" posts={currentPosts} />
+          <PostList prefix="blog" posts={posts} />
           <Pagination
-            numPosts={posts.length}
+            numPosts={total}
             path={`/blog/categories/${category.fields.slug}`}
-            postsPerPage={postsPerPage}
+            postsPerPage={12}
           />
         </Container>
       </main>

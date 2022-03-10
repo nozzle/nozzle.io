@@ -5,7 +5,6 @@ import Link from 'next/link'
 import ReadTime from 'utils/ReadTime'
 import Smackdown from './Smackdown'
 import tw from 'twin.macro'
-import { Img } from './Html'
 
 const PostListStyled = styled('div')`
   ${tw`flex flex-nowrap m-2 w-auto`}

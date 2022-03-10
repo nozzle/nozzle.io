@@ -1,5 +1,9 @@
 import React from 'react'
-import { fetchBlogPosts } from '../../contentful'
+import {
+  fetchBlogCateogries,
+  fetchBlogPosts,
+  fetchFeaturedBlogPosts,
+} from '../../contentful'
 import Link from 'next/link'
 import Head from 'components/Head'
 import { BlogContainer, Header, SubMenu } from 'components/Layout'
@@ -7,25 +11,20 @@ import { H1 } from 'components/Html'
 import PostList from 'components/PostList'
 import Pagination from 'components/Pagination'
 import FeaturedPosts from 'components/FeaturedPosts'
-import { useRouter } from 'next/router'
 
-export async function getServerSideProps(req) {
-  const props = await fetchBlogPosts()
+export async function getServerSideProps({ query }) {
+  const page = query.page || 1
+
+  const props = await fetchBlogPosts(page)
+  const featuredPosts = await fetchFeaturedBlogPosts()
+  const categories = await fetchBlogCateogries()
 
   return {
-    props,
+    props: { ...props, featuredPosts, categories: categories.categories },
   }
 }
 
-export default function Blog({ posts, categories }) {
-  const router = useRouter()
-  const { page = 1 } = router.query
-  const postsPerPage = 12
-
-  const indexOfLastPost = page * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
+export default function Blog({ posts, categories, total, featuredPosts }) {
   return (
     <div>
       <Head
@@ -53,13 +52,9 @@ export default function Blog({ posts, categories }) {
           ) : null}
         </Header>
         <BlogContainer>
-          <FeaturedPosts prefix="blog" posts={posts} />
-          <PostList prefix="blog" posts={currentPosts} />
-          <Pagination
-            numPosts={posts.length}
-            postsPerPage={postsPerPage}
-            path="/blog"
-          />
+          <FeaturedPosts prefix="blog" posts={featuredPosts.posts} />
+          <PostList prefix="blog" posts={posts} />
+          <Pagination numPosts={total} postsPerPage={12} path="/blog" />
         </BlogContainer>
       </main>
     </div>

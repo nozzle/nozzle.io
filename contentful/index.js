@@ -63,7 +63,7 @@ export async function fetchDevPosts(page) {
   const { items, total } = await client.getEntries({
     content_type: 'devPost',
     limit: 12,
-    skip: (page - 1) * 12,
+    skip: (page - 1) * 12 || 0,
   })
 
   const posts = items.map(normalizePost)
@@ -79,7 +79,7 @@ export async function fetchBlogPosts(page) {
   const { items, total } = await client.getEntries({
     content_type: '2wKn6yEnZewu2SCCkus4as',
     limit: 12,
-    skip: (page - 1) * 12,
+    skip: (page - 1) * 12 || 0,
   })
 
   const posts = items.map(normalizePost)
@@ -186,7 +186,7 @@ export async function fetchBlogPostsByTagSlug(tagSlug, page) {
     content_type: '2wKn6yEnZewu2SCCkus4as',
     'fields.tags.sys.id': tag.sys.id,
     limit: 12,
-    skip: (page - 1) * 12,
+    skip: (page - 1) * 12 || 0,
   })
 
   posts = posts.map(normalizePost)

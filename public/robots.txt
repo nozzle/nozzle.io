@@ -61,6 +61,4 @@
 #
 User-agent: *
 Disallow: /l
-Disallow: /paa/success*
-Disallow: /trial/thanks
 sitemap: https://nozzle.io/sitemap.xml

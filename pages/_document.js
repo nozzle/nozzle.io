@@ -34,11 +34,11 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            href="//fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800"
+            href="//fonts.googleapis.com/css?family=Overpass:200,300,400,400i,600,700,800&display=swap"
             rel="stylesheet"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700"
+            href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700&display=swap"
             rel="stylesheet"
           />
           <link

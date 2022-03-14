@@ -276,7 +276,7 @@ export default function Home() {
                 alt="Enterprise Keyword Rank Tracker Tool Dashboard"
                 layout="responsive"
                 width="1280"
-                height="760"
+                height="778"
                 priority={true}
               />
             </div>
@@ -381,7 +381,7 @@ export default function Home() {
                 Start tracking today!
               </Button>
             </a>{' '}
-            <Link href="/features">
+            <Link href="/features" prefetch={false}>
               <Button color="primary" burst>
                 How does it work?
               </Button>

@@ -303,7 +303,7 @@ export default function Navbar(props) {
   const LinkItem = (link, i) => (
     <div key={i} className="link">
       <div itemProp="name">
-        <Link key={i} href={link.path}>
+        <Link key={i} href={link.path} prefetch={false}>
           <a
             itemProp="url"
             onClick={closeMenu}

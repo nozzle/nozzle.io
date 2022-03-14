@@ -7,7 +7,6 @@ const withOptimizedImages = require('next-optimized-images')
 // })
 
 const baseConfig = {
-  target: 'serverless',
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   images: {
     disableStaticImages: true,

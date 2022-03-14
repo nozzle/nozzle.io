@@ -12,22 +12,14 @@
     }
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "@stripe/stripe-js": "^1.11.0",
-    "@typeform/embed": "^0.9.4",
     "babel-plugin-macros": "^2.8.0",
     "contentful": "^7.14.2",
     "date-fns": "^2.11.1",
-    "dotenv": "^8.2.0",
-    "emotion-theming": "^10.0.27",
     "lodash": "^4.17.21",
     "match-sorter": "^6.3.1",
     "next": "^12.1.0",
     "next-fonts": "^1.0.3",
     "next-optimized-images": "^2.5.7",
-    "raf": "^3.4.1",
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^17.0.2",
@@ -35,7 +27,6 @@
     "react-icons": "^4.2.0",
     "react-smackdown": "^0.8.8",
     "react-window": "^1.8.6",
-    "stripe": "^8.126.0",
     "styled-components": "^5.0.1",
     "styled-reset": "^4.1.2",
     "swagger-ui-react": "^3.25.0",
@@ -62,8 +53,6 @@
     "fs-extra": "^9.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
-    "imagemin-svgo": "^7.1.0",
-    "tailwindcss": "^2.0.2",
-    "xvfb": "^0.3.0"
+    "imagemin-svgo": "^7.1.0"
   }
 }

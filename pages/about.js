@@ -410,7 +410,7 @@ export default function About() {
               </div>
               <div className="connector" />
               <div className="right">
-                <img
+                <Img
                   src={require('public/img/about/competitors.png')}
                   width="384"
                   height="169"

@@ -1,6 +1,6 @@
 import React from 'react'
 import { fetchTestimonials } from '../contentful'
-import { H1, P } from 'components/Html'
+import { H1, P, Img } from 'components/Html'
 import Head from 'components/Head'
 import { angle } from 'utils/Styles'
 import styled from 'styled-components'
@@ -130,10 +130,12 @@ export default function Testimonials({ testimonial }) {
                             css={tw`text-gray-900 font-bold flex gap-2 pb-8`}
                           >
                             {testimonial.fields.image ? (
-                              <img
-                                css={tw`h-12 rounded-full shadow-md`}
+                              <Img
+                                css={tw`rounded-full shadow-md`}
                                 src={`https:${testimonial.fields.image.fields.file.url}`}
                                 alt={testimonial.fields.name}
+                                height="50"
+                                width="50"
                               />
                             ) : null}
                             <div css={tw`text-left`}>

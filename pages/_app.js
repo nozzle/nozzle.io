@@ -2,6 +2,7 @@ import React from 'react'
 import App from 'next/app'
 import tw from 'twin.macro'
 import Script from 'next/script'
+
 import {
   createGlobalStyle,
   ThemeProvider as StyledThemeProvider,

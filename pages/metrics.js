@@ -1,6 +1,6 @@
 import React from 'react'
 import { fetchMetrics } from '../contentful'
-import { H1, P } from 'components/Html'
+import { H1, P, Img } from 'components/Html'
 import Head from 'components/Head'
 import { angle } from 'utils/Styles'
 import styled from 'styled-components'
@@ -76,7 +76,16 @@ export default function Metrics({ metrics }) {
               </P>
             </Title>
             <Screenshot>
-              <img src="/img/metricsScreenshot.png" alt="Nozzle Metrics" />
+              <div css={tw`block w-[180%] max-w-[1500px] `}>
+                <Img
+                  src={'/img/metricsScreenshot.png'}
+                  alt="Nozzle Metrics"
+                  layout="responsive"
+                  width="1280"
+                  height="760"
+                  priority={true}
+                />
+              </div>
             </Screenshot>
           </Top>
           <Container>

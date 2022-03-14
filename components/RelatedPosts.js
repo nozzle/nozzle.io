@@ -63,11 +63,7 @@ const Post = styled('div')`
     ${tw`flex flex-wrap items-center`}
   }
   .author {
-    ${tw`flex items-center`}
-
-    img {
-      ${tw`w-8 h-8 rounded-full mr-2 shadow-2xl`}
-    }
+    ${tw`flex items-center gap-2`}
   }
 
   .image {
@@ -132,11 +128,12 @@ export default function PostList({ prefix, posts }) {
                         return (
                           <div className="author" key={author.fields.name}>
                             {profilePhotoURL ? (
-                              <img
+                              <Img
                                 src={`https:${profilePhotoURL}`}
                                 alt="Author"
                                 height="32"
                                 width="32"
+                                css={tw`rounded-full`}
                               />
                             ) : null}
                             <div>{author.fields.name}</div>

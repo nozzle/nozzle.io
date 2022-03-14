@@ -219,14 +219,18 @@ export default function PaaDashBoard({ testimonials }) {
           {testimonials.map(testimonial => {
             return (
               <div className="testimonial" key={testimonial.fields.name}>
-                <img
-                  src={`https:${
-                    testimonial.fields.image
-                      ? testimonial.fields.image.fields.file.url
-                      : 'img/blankPerson.png'
-                  }`}
-                  alt={testimonial.fields.name}
-                />
+                <div css={tw`mb-8`}>
+                  <Img
+                    src={`https:${
+                      testimonial.fields.image
+                        ? testimonial.fields.image.fields.file.url
+                        : 'img/blankPerson.png'
+                    }`}
+                    alt={testimonial.fields.name}
+                    height="160"
+                    width="160"
+                  />
+                </div>
 
                 <H6>{testimonial.fields.name}</H6>
                 <div className="company">{testimonial.fields.companyName}</div>

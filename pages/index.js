@@ -1,7 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import tw from 'twin.macro'
-
+import LiteYouTubeEmbed from 'react-lite-youtube-embed'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 //
 import Color from 'utils/Color'
 import { angle } from 'utils/Styles'
@@ -129,10 +130,6 @@ const SectionTrackAllTheThings = styled(Section)`
 
   img {
     ${tw`opacity-100 rounded shadow-2xl`}
-  }
-
-  iframe {
-    ${tw`w-full h-96`}
   }
 
   .allthethings {
@@ -354,13 +351,7 @@ export default function Home() {
                 <H4>Get unlimited access to the entire SERP</H4>
               </Centered>
             </Div>
-            <iframe
-              title="Get unlimited access to the entire SERP"
-              src="https://www.youtube.com/embed/Yz1hrFUF1gM?rel=0"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="allowFullScreen"
-            ></iframe>
+            <LiteYouTubeEmbed id="Yz1hrFUF1gM" poster="maxresdefault" />
           </Left>
           <Right>
             <H2>Track all the things!</H2>

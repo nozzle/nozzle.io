@@ -5503,6 +5503,11 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-lite-youtube-embed@^2.2.1-a:
+  version "2.2.1-a"
+  resolved "https://registry.yarnpkg.com/react-lite-youtube-embed/-/react-lite-youtube-embed-2.2.1-a.tgz#ec56269349ced080a9bb7e70ef3cc6c9cb8b8a5a"
+  integrity sha512-Gi/MKquU8e6J1oMnF1/RzrNEymjdgZLfcCGq4OM3cNKAB3G4YmAvc0moFMc0yhKU6hn43aRowAyn4K2wgjrbIg==
+
 react-motion@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.2.tgz#0dd3a69e411316567927917c6626551ba0607316"

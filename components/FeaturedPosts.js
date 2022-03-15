@@ -29,10 +29,6 @@ const Post = styled('div')`
 
   .titleImg {
     ${tw`block bg-top bg-cover shadow-lg opacity-90 rounded-xl transition-all duration-500 `}
-
-    > div {
-      ${tw`pb-1/2`}
-    }
   }
 
   :hover {
@@ -103,21 +99,24 @@ export default function FeaturedPosts({ prefix, posts }) {
             return (
               <React.Fragment key={post.fields.slug}>
                 {post.fields.featuredPost ? (
-                  <Post>
+                  <Post css={tw`hover:(all:(opacity-100))`}>
                     <article>
                       {post.fields.featuredImage ? (
                         <Link
                           as={`/${prefix}/${post.fields.slug}/`}
                           href={`/${prefix}/[postSlug]`}
                         >
-                          <a
-                            className="titleImg"
-                            style={{
-                              backgroundImage: `url(${post.fields.featuredImage.fields.file.url})`,
-                            }}
+                          <div
+                            css={tw`block shadow-lg opacity-80 rounded-xl transition-all duration-500`}
                           >
-                            <div />
-                          </a>
+                            <Img
+                              src={`http:${post.fields.featuredImage.fields.file.url}`}
+                              layout="responsive"
+                              width="300"
+                              height="150"
+                              css={tw`rounded-xl`}
+                            />
+                          </div>
                         </Link>
                       ) : null}
                       <div className="content">

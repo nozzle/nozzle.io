@@ -101,21 +101,24 @@ export default function PostList({ prefix, posts }) {
           {posts.map(post => {
             const wordCount = post.fields.body.split(' ').length
             return (
-              <Post key={post.fields.slug}>
+              <Post key={post.fields.slug} css={tw`hover:(all:(opacity-100))`}>
                 <article>
                   {post.fields.featuredImage ? (
                     <Link
                       as={`/${prefix}/${post.fields.slug}/`}
                       href={`/${prefix}/[postSlug]`}
                     >
-                      <a
-                        className="titleImg"
-                        style={{
-                          backgroundImage: `url(${post.fields.featuredImage.fields.file.url})`,
-                        }}
+                      <div
+                        css={tw`block shadow-lg opacity-80 rounded-xl transition-all duration-500`}
                       >
-                        <div />
-                      </a>
+                        <Img
+                          src={`http:${post.fields.featuredImage.fields.file.url}`}
+                          layout="responsive"
+                          width="300"
+                          height="150"
+                          css={tw`rounded-xl`}
+                        />
+                      </div>
                     </Link>
                   ) : null}
                   <div className="content">

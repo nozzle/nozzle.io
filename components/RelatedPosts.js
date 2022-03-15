@@ -92,14 +92,17 @@ export default function PostList({ prefix, posts }) {
                       as={`/${prefix}/${post.fields.slug}/`}
                       href={`/${prefix}/[postSlug]`}
                     >
-                      <a
-                        className="titleImg"
-                        style={{
-                          backgroundImage: `url(${post.fields.featuredImage.fields.file.url})`,
-                        }}
+                      <div
+                        css={tw`block opacity-90 rounded-xl transition-all duration-500`}
                       >
-                        <div />
-                      </a>
+                        <Img
+                          src={`http:${post.fields.featuredImage.fields.file.url}`}
+                          layout="responsive"
+                          width="300"
+                          height="150"
+                          css={tw`rounded-xl`}
+                        />
+                      </div>
                     </Link>
                   ) : null}
                   <div className="content">

@@ -32,10 +32,6 @@ const AuthorBio = styled('div')`
   }
 `
 
-const AuthorPic = styled('img')`
-  ${tw`float-left mt-4 mr-4 object-cover rounded-full h-32 w-32 `}
-`
-
 const BioText = styled('div')`
   ${tw`pt-4 overflow-auto`}
 `
@@ -95,7 +91,15 @@ export default function AuthorsAndContributors({ post }) {
           return biography ? (
             <AuthorBio key={author.sys.id}>
               {profilePhotoURL ? (
-                <AuthorPic src={`https:${profilePhotoURL}`} alt="Author" />
+                <div css={tw`float-left mt-4 mr-4 object-cover `}>
+                  <Img
+                    src={`https:${profilePhotoURL}`}
+                    alt="Author"
+                    width="128"
+                    height="128"
+                    css={tw`rounded-full`}
+                  />
+                </div>
               ) : null}
               <BioText>
                 <div className="authorName">{author.fields.name} </div>

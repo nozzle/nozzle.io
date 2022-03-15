@@ -181,10 +181,16 @@ export default function GoogleKeywordRankCheckerTool() {
             </a>
           </Left>
           <Right>
-            <Img
-              src={require('public/img/dashboard.png')}
-              alt="Enterprise website keyword rank checker tool dashboard"
-            />
+            <div css={tw`block w-[200%] max-w-[1500px] `}>
+              <Img
+                src={require('public/img/dashboard.png')}
+                alt="Enterprise Keyword Rank Tracker Tool Dashboard"
+                layout="responsive"
+                width="1280"
+                height="778"
+                priority={true}
+              />
+            </div>
           </Right>
         </SectionKnowEverything>
         <SectionBoxes>

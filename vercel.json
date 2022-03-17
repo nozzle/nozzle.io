@@ -1,4 +1,7 @@
 {
+  "github": {
+    "silent": true
+  },
   "redirects": [
     {
       "source": "/blog/low-cost-pr-for-businesses-a-link-and-brand-building-strategy",

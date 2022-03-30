@@ -122,6 +122,10 @@ export async function fetchDevPostsByCategorySlug(categorySlug, page) {
     'fields.slug': categorySlug,
   })
 
+  if (!category) {
+    return { category: { err: 404 }, posts: [] }
+  }
+
   let { items: posts, total } = await client.getEntries({
     content_type: 'devPost',
     'fields.categories.sys.id': category.sys.id,

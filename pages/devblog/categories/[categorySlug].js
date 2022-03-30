@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'components/Head'
 import Icon from 'components/Icon'
+import Error from 'next/error'
 
 import { Container, Header, SubMenu } from 'components/Layout'
 import { H1 } from 'components/Html'
@@ -19,7 +20,10 @@ export async function getServerSideProps({ query }) {
   }
 }
 
-export default function DevBlogTag({ category, posts, total }) {
+export default function DevBlogCategory({ category, posts, total }) {
+  if (category.err) {
+    return <Error statusCode={category.err} />
+  }
   return (
     <div>
       <Head

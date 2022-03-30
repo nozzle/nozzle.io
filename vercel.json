@@ -23,6 +23,11 @@
       "destination": "https://nozzle.io/paa",
       "permanent": true
     },
+      {
+      "source": "/paa/checkout",
+      "destination": "https://nozzle.io/paa",
+      "permanent": true
+    },
     {
       "source": "/seo-paa-questions",
       "destination": "/blog/seo-paa-questions",

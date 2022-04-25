@@ -75,11 +75,41 @@ export async function fetchDevPosts(page) {
   }
 }
 
+export async function fetchAllDevPosts() {
+  const { items, total } = await client.getEntries({
+    content_type: 'devPost',
+    limit: 10000,
+  })
+
+  const posts = items.map(normalizePost)
+
+  return {
+    posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
+    categories: getCategoriesFromPosts(posts),
+    total,
+  }
+}
+
 export async function fetchBlogPosts(page) {
   const { items, total } = await client.getEntries({
     content_type: '2wKn6yEnZewu2SCCkus4as',
     limit: 12,
     skip: (page - 1) * 12 || 0,
+  })
+
+  const posts = items.map(normalizePost)
+
+  return {
+    posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
+    categories: getCategoriesFromPosts(posts),
+    total,
+  }
+}
+
+export async function fetchAllBlogPosts() {
+  const { items, total } = await client.getEntries({
+    content_type: '2wKn6yEnZewu2SCCkus4as',
+    limit: 10000,
   })
 
   const posts = items.map(normalizePost)

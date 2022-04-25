@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
 import path from 'path'
-import { fetchDevPosts, fetchBlogPosts } from '../../contentful'
+import { fetchAllDevPosts, fetchAllBlogPosts } from '../../contentful'
 
 const siteRoot = 'https://nozzle.io'
 const ignores = ['_app', '_document', '/l/', /[\[\]]/]
@@ -84,17 +84,13 @@ function getPages() {
 
 async function getDynamicPages() {
   const pages = {}
-  const blogPostsPromise = fetchBlogPosts()
-  const devBlogPostsPromise = fetchDevPosts()
+  const blogPostsPromise = fetchAllBlogPosts()
+  const devBlogPostsPromise = fetchAllDevPosts()
 
-  const {
-    posts: blogPosts,
-    categories: blogCategories,
-  } = await blogPostsPromise
-  const {
-    posts: devBlogPosts,
-    categories: devBlogCategories,
-  } = await devBlogPostsPromise
+  const { posts: blogPosts, categories: blogCategories } =
+    await blogPostsPromise
+  const { posts: devBlogPosts, categories: devBlogCategories } =
+    await devBlogPostsPromise
 
   blogPosts.forEach(blogPost => {
     pages[`/blog/${blogPost.fields.slug}`] = {

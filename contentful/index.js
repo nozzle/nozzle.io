@@ -78,7 +78,7 @@ export async function fetchDevPosts(page) {
 export async function fetchAllDevPosts() {
   const { items, total } = await client.getEntries({
     content_type: 'devPost',
-    limit: 10000,
+    limit: 1000,
   })
 
   const posts = items.map(normalizePost)
@@ -109,7 +109,7 @@ export async function fetchBlogPosts(page) {
 export async function fetchAllBlogPosts() {
   const { items, total } = await client.getEntries({
     content_type: '2wKn6yEnZewu2SCCkus4as',
-    limit: 10000,
+    limit: 1000,
   })
 
   const posts = items.map(normalizePost)

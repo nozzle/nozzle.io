@@ -126,6 +126,20 @@ async function getDynamicPages() {
     }
   })
 
+  blogTags.forEach(tag => {
+    pages[`/blog/tags/${tag.fields.slug}`] = {
+      page: `/blog/tags/${tag.fields.slug}`,
+      lastModified: new Date(),
+    }
+  })
+
+  devBlogTags.forEach(tag => {
+    pages[`/devblog/tags/${tag.fields.slug}`] = {
+      page: `/devblog/tags/${tag.fields.slug}`,
+      lastModified: new Date(),
+    }
+  })
+
   return pages
 }
 

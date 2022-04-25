@@ -86,6 +86,7 @@ export async function fetchAllDevPosts() {
   return {
     posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories: getCategoriesFromPosts(posts),
+    tags: getTagsFromPosts(posts),
     total,
   }
 }
@@ -117,6 +118,7 @@ export async function fetchAllBlogPosts() {
   return {
     posts: orderBy(posts, [d => d.fields.date || d.sys.createdAt], ['desc']),
     categories: getCategoriesFromPosts(posts),
+    tags: getTagsFromPosts(posts),
     total,
   }
 }

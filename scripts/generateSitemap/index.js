@@ -87,10 +87,16 @@ async function getDynamicPages() {
   const blogPostsPromise = fetchAllBlogPosts()
   const devBlogPostsPromise = fetchAllDevPosts()
 
-  const { posts: blogPosts, categories: blogCategories } =
-    await blogPostsPromise
-  const { posts: devBlogPosts, categories: devBlogCategories } =
-    await devBlogPostsPromise
+  const {
+    posts: blogPosts,
+    categories: blogCategories,
+    tags: blogTags,
+  } = await blogPostsPromise
+  const {
+    posts: devBlogPosts,
+    categories: devBlogCategories,
+    tags: devBlogTags,
+  } = await devBlogPostsPromise
 
   blogPosts.forEach(blogPost => {
     pages[`/blog/${blogPost.fields.slug}`] = {

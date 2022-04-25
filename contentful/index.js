@@ -28,7 +28,11 @@ const normalizePost = post => {
 
   return {
     ...post,
-    fields: { ...post.fields, categories: post.fields.categories || [] },
+    fields: {
+      ...post.fields,
+      categories: post.fields.categories,
+      tags: post.fields.tags || [],
+    },
     images,
   }
 }

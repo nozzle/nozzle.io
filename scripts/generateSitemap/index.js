@@ -92,6 +92,7 @@ async function getDynamicPages() {
     categories: blogCategories,
     tags: blogTags,
   } = await blogPostsPromise
+
   const {
     posts: devBlogPosts,
     categories: devBlogCategories,
@@ -134,8 +135,8 @@ async function getDynamicPages() {
   })
 
   devBlogTags.forEach(tag => {
-    pages[`/devblog/tags/${tag.fields.slug}`] = {
-      page: `/devblog/tags/${tag.fields.slug}`,
+    pages[`/devblog/tags/${tag}`] = {
+      page: `/devblog/tags/${tag}`,
       lastModified: new Date(),
     }
   })

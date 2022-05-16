@@ -45,6 +45,10 @@ const PostContainer = styled('article')`
     }
   }
 
+  .disclaimer {
+    ${tw`opacity-50 text-sm mb-4`}
+  }
+
   .tags {
     ${tw`text-sm pt-4 leading-none`}
 
@@ -136,6 +140,12 @@ export default function BlogPost({ post, relatedPosts }) {
               &bull; {ReadTime(wordCount)} min read
               <time dateTime={post.sys.createdAt} itemProp="datePublished" />
             </div>
+            {post.fields.guestPost ? (
+              <div className="disclaimer">
+                <Icon i="info" /> The author's views are entirely his or her own
+                and may not always reflect the views of Nozzle.
+              </div>
+            ) : null}
             <div className="categories">
               {post.fields.categories.map(category => (
                 <Link

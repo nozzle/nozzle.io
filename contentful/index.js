@@ -100,6 +100,7 @@ export async function fetchBlogPosts(page) {
     content_type: '2wKn6yEnZewu2SCCkus4as',
     limit: 12,
     skip: (page - 1) * 12 || 0,
+    order: '-sys.createdAt',
   })
 
   const posts = items.map(normalizePost)

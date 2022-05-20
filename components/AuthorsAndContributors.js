@@ -124,7 +124,12 @@ export default function AuthorsAndContributors({ post }) {
               <div className="contributor" key={contributor.fields.name}>
                 {profilePhotoURL ? (
                   <div className="nameBox">
-                    <Img src={`https:${profilePhotoURL}`} alt="Contributor" />
+                    <Img
+                      src={`https:${profilePhotoURL}`}
+                      height="50"
+                      width="50"
+                      alt="Contributor"
+                    />
                     <div className="name">{contributor.fields.name}</div>
                   </div>
                 ) : null}

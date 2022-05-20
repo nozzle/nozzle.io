@@ -7,7 +7,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { angle } from 'utils/Styles'
 import Head from 'components/Head'
 
-import { H1, H2, H3, H4, H6, P, Img, Button } from 'components/Html'
+import { H1, H2, H3, H4, H6, P, Img, Button, Ul, Li } from 'components/Html'
 import { Container, Center } from 'components/Layout'
 
 const belowMobile = `@media(max-width: ${700}px)`
@@ -157,7 +157,7 @@ export default function PaaDashBoard({ testimonials }) {
             <div css={tw` md:(w-1/2) mx-auto text-left`}>
               <div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />
             </div>
-            <div css={tw`md:(w-1/2 text-right gap-12 pl-4)`}>
+            <div css={tw`md:(w-1/2  gap-20 pl-16)`}>
               <H3 color="primaryDark">What you'll get</H3>
               <P>
                 An emailed link to a Google Data Studio dashboard containing a
@@ -165,7 +165,6 @@ export default function PaaDashBoard({ testimonials }) {
                 related to your target keyword list (depending on how many
                 keywords you input).
               </P>
-
               <br />
               <P>
                 {' '}
@@ -179,6 +178,16 @@ export default function PaaDashBoard({ testimonials }) {
                   </span>
                 </a>{' '}
               </P>
+              <H6>How to Get Started </H6>
+              <Ul>
+                <Li>
+                  Create a Nozzle account (So we have somewhere to run your
+                  keywords. You can opt out of Nozzle marketing emails.)
+                </Li>
+
+                <Li>Input your name, email address, company name and domain</Li>
+                <Li>Input your target keyword list (10,000 keywords max)</Li>
+              </Ul>
 
               <br />
               <AnchorLink href="#signup">

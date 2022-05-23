@@ -278,7 +278,7 @@ export default function PaaDashBoard({ testimonials }) {
               title="Paa Sign Up"
               src="https://app.nozzle.io/paa"
               width="90%"
-              height="2500rem"
+              height="2000rem"
             />
           </div>
         </SectionCallToAction>

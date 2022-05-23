@@ -268,7 +268,6 @@ export default function PaaDashBoard({ testimonials }) {
           })}
         </SectionTestimonials>
         <SectionCallToAction id="signup">
-          <H2 full>Get Your PAA Deliverable Today!</H2>
           <div
             css={`
               ${tw`w-full`}

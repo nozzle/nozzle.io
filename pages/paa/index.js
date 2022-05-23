@@ -84,7 +84,7 @@ const SectionCallToAction = styled(Section)`
   ${section};
   ${angle('right')};
   text-align: center;
-  ${tw`text-white`}
+  ${tw`text-white h-full`}
 
   background: rgba(2,21,28,1);
 `
@@ -275,10 +275,11 @@ export default function PaaDashBoard({ testimonials }) {
             `}
           >
             <iframe
+              id="iframe"
               title="Paa Sign Up"
               src="https://app.nozzle.io/paa"
               width="90%"
-              height="1000rem"
+              height="2500rem"
             />
           </div>
         </SectionCallToAction>

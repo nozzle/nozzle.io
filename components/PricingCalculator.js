@@ -112,7 +112,7 @@ const Top = styled('div')`
       }
 
       td:nth-of-type(2):before {
-        content: 'Team/Project';
+        content: 'Project';
       }
       td:nth-of-type(3):before {
         content: 'Hourly Keywords';
@@ -458,7 +458,7 @@ export default function PricingCalculator({ plans, monthly }) {
               <thead>
                 <tr>
                   <th></th>
-                  <th>Team/Project</th>
+                  <th>Project</th>
                   <th>
                     <Select
                       options={scheduleOptions}

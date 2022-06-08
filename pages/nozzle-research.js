@@ -150,6 +150,11 @@ export default function Research() {
                 Internal Link Optimization with TIPR by Kevin Indig
               </a>
             </Li>
+            <Li>
+              <a href="https://nozzle.io/blog/seo-paa-questions">
+                The Ultimate List of SEO Questions by Boyd Norwood
+              </a>
+            </Li>
           </Ul>
         </SectionProjects>
         <SectionForm>

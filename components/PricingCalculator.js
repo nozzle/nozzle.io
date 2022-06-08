@@ -291,7 +291,7 @@ export default function PricingCalculator({ plans, monthly }) {
         ? 10
         : schedule === 'twiceAMonth'
         ? 2
-        : 0.25
+        : 0.3333333333333
     return multiplier
   }
   const scheduleOptions = [

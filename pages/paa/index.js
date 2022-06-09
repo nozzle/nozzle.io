@@ -158,7 +158,7 @@ export default function PaaDashBoard({ testimonials }) {
               <div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />
             </div>
             <div css={tw`md:(w-1/2  gap-20 pl-16)`}>
-              <H3 color="primaryDark">What you'll get</H3>
+              <H3 color="primaryDark">What You'll Get</H3>
               <P>
                 An emailed link to a Google Data Studio dashboard containing a
                 list of hundreds to thousands of People Also Ask questions
@@ -178,11 +178,13 @@ export default function PaaDashBoard({ testimonials }) {
                   </span>
                 </a>{' '}
               </P>
-              <H6>How to Get Started </H6>
+              <br />
+              <H3 color="primaryDark">How to Get Started </H3>
               <Ul>
                 <Li>
-                  Create a Nozzle account (So we have somewhere to run your
-                  keywords. You can opt out of Nozzle marketing emails.)
+                  Create a Nozzle account (This creates a workspace on the back
+                  end so we have a place to run your keywords through our
+                  question generator.)
                 </Li>
 
                 <Li>Input your name, email address, company name and domain</Li>
@@ -209,7 +211,7 @@ export default function PaaDashBoard({ testimonials }) {
           <div css={tw`md:(w-1/3)`}>
             <div css={tw`md:(px-6)`}>
               <H6 css={tw`font-bold`}>
-                Discover the questions your audience is asking
+                Discover the Questions Your Audience Is Asking
               </H6>
               <P css={tw`text-sm`}>
                 For your content to be effective, it must answer your audience's
@@ -220,7 +222,7 @@ export default function PaaDashBoard({ testimonials }) {
           </div>
           <div css={tw`md:(w-1/3)`}>
             <div css={tw`md:(px-6)`}>
-              <H6 css={tw`font-bold`}>See how often questions appear</H6>
+              <H6 css={tw`font-bold`}>See How Often Questions Appear</H6>
               <P css={tw`text-sm`}>
                 Our PAA deliverable shows how often questions appeared in PAA
                 when people searched your keywords, guiding you to the popular
@@ -230,7 +232,7 @@ export default function PaaDashBoard({ testimonials }) {
           </div>
           <div css={tw`md:(w-1/3)`}>
             <div css={tw`md:(px-6)`}>
-              <H6 css={tw`font-bold`}>PAA frequency by keyword group</H6>
+              <H6 css={tw`font-bold`}>See PAA Frequency by Keyword Group</H6>
               <P css={tw`text-sm`}>
                 If you provide keyword groups with your keyword list, our
                 deliverable will show you how often keyword groups show PAA

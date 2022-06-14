@@ -230,25 +230,7 @@ export default function Trial() {
             </strong>{' '}
             (or fill out the form below) to enter to win a new pair of
           </div>
-          <div
-            css={`
-              margin: 3vw auto 0;
-              padding: 8rem 0;
-              font-size: 4vw;
-              line-height: 5vw;
-              width: 600px;
-              text-align: center;
-              max-width: 80%;
-              font-weight: bolder;
-              background-image: url('/img/bose-headphones.png');
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: center;
-              text-shadow: 0 3px 5px black;
-            `}
-          >
-            BOSE QuietComfort 35 Wireless Headphones II
-          </div>
+          
           <div
             css={`
               margin: 0 auto;

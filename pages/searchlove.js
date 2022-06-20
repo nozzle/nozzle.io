@@ -210,13 +210,33 @@ export default function Trial() {
               </div>
             </div>
           </div>
+          <div
+            css={`
+              width: 800px;
+              font-size: 1.6rem;
+              opacity: 0.9;
+              line-height: 1.4;
+              font-weight: lighter;
+              max-width: 100%;
+              padding: 0 2rem;
+              margin: 0 auto 2rem;
+              text-align: center;
+            `}
+          >
+            “SearchLove attendees get 50% off your first year with Nozzle when
+            you sign up before July 31st, 2022. Take the blue pill and start
+            your Nozzle trial by filling out the form below.”
+          </div>
           <iframe
-            src="https://app.nozzle.io/sign-up?hubspotListId=274"
+            src={`https://app.nozzle.io/sign-up?${new URLSearchParams({
+              hubspotListId: 276,
+              redirect: 'https://app.nozzle.io',
+            }).toString()}`}
             title="Nozzle Signup"
             css={`
               width: 1023px;
               max-width: 100%;
-              height: 80vh;
+              height: 5000px;
               margin: 0 auto;
               display: block;
             `}

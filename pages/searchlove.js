@@ -79,8 +79,8 @@ export default function Trial() {
   return (
     <>
       <Head
-        title="SMX page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
-        description="SMX page for Nozzle - A keyword rank tracker offering you more enterprise level SERP data than ever before."
+        title="Searchlove page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
+        description="searchlove page for Nozzle - A keyword rank tracker offering you more enterprise level SERP data than ever before."
       />
       <div
         css={`
@@ -184,6 +184,7 @@ export default function Trial() {
                 text-align: center;
                 font-size: 5vw;
                 line-height: 6vw;
+                margin-bottom: 2rem;
               `}
             >
               <div
@@ -209,136 +210,17 @@ export default function Trial() {
               </div>
             </div>
           </div>
-          {/* placeholder for content */}
-          <div
+          <iframe
+            src="https://app.nozzle.io/sign-up?hubspotListId=274"
+            title="Nozzle Signup"
             css={`
+              width: 1023px;
+              max-width: 100%;
+              height: 80vh;
               margin: 0 auto;
-              font-size: 1rem;
-              opacity: 0.5;
-              line-height: 1.6rem;
-              width: 600px;
-              text-align: center;
-              max-width: 80%;
-              font-weight: lighter;
+              display: block;
             `}
-          >
-            Announced on 5/31/2019 - Ends on 6/5/2019
-          </div>
-          {!submitted ? (
-            <Form
-              onSubmit={async values => {
-                window.dataLayer.push({ event: 'smxSubmit' })
-                try {
-                  await axios.post(
-                    'https://nozzle.io/',
-                    encodeFormData({
-                      'form-name': 'smx2019',
-                      ...values,
-                    }),
-                    {
-                      headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                      },
-                    }
-                  )
-                  setSubmitted(true)
-                } catch (err) {
-                  window.alert(
-                    'There was a problem submitting your form! Try again or reload the page :)'
-                  )
-                  setSubmitted(true)
-                }
-              }}
-            >
-              {({ submitForm }) => (
-                <form
-                  name="smx2019"
-                  data-netlify="true"
-                  onSubmit={submitForm}
-                  css={`
-                    width: 400px;
-                    max-width: 80%;
-                    margin: 5rem auto 0;
-                  `}
-                >
-                  <Text
-                    field="name"
-                    name="name"
-                    placeholder="Name..."
-                    css={`
-                      margin: 1rem auto 0;
-                      width: 100%;
-                      font-size: 1.4rem;
-                      background: rgba(255, 255, 255, 0.05);
-                      border: solid 2px rgba(255, 255, 255, 0.2);
-                      border-radius: 0.3rem;
-                      padding: 1rem;
-                      color: white;
-                    `}
-                  />
-                  <Text
-                    field="email"
-                    name="email"
-                    placeholder="Email address..."
-                    css={`
-                      margin: 1rem auto 0;
-                      width: 100%;
-                      font-size: 1.4rem;
-                      background: rgba(255, 255, 255, 0.05);
-                      border: solid 2px rgba(255, 255, 255, 0.2);
-                      border-radius: 0.3rem;
-                      padding: 1rem;
-                      color: white;
-                    `}
-                  />
-                  <Text
-                    field="twitter"
-                    name="twitter"
-                    placeholder="Twitter handle..."
-                    css={`
-                      margin: 1rem auto 0;
-                      width: 100%;
-                      font-size: 1.4rem;
-                      background: rgba(255, 255, 255, 0.05);
-                      border: solid 2px rgba(255, 255, 255, 0.2);
-                      border-radius: 0.3rem;
-                      padding: 1rem;
-                      color: white;
-                    `}
-                  />
-                  <Button
-                    type="submit"
-                    css={`
-                    color: white;
-                    appearance: none;
-                    border-radius: 0.4rem;
-                    font-size: 1.6rem;
-                    padding: 1rem 1.5rem;
-                    margin: 1rem auto 0
-                    width: 100%;
-                    display: block;
-                    text-align: center;
-                  `}
-                  >
-                    Submit!
-                  </Button>
-                </form>
-              )}
-            </Form>
-          ) : (
-            <div
-              css={`
-                margin: 2rem auto;
-                font-size: 4vw;
-                line-height: 3.4vw;
-                width: 600px;
-                text-align: center;
-                max-width: 80%;
-              `}
-            >
-              Thank you for submitting!
-            </div>
-          )}
+          />
         </div>
       </div>
     </>

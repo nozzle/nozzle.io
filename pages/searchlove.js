@@ -7,6 +7,7 @@ import HubspotForm from '../components/HubspotForm'
 //
 import encodeFormData from 'utils/encodeFormData'
 import { Button } from 'components/Html'
+import tw from 'twin.macro'
 
 function Matrix({ speed = 100, size = 18, ...rest }) {
   const ref = React.useRef()
@@ -85,122 +86,96 @@ export default function Trial() {
       />
       <div
         css={`
-          text-align: center;
-          font-size: 5vw;
-          line-height: 6vw;
-          margin-top: 10rem;
-          margin-bottom: 4rem;
+          padding: 2rem;
         `}
       >
         <div
-          css={`
-            font-weight: lighter;
+          css={tw`text-center text-4xl leading-normal mt-8 mb-16
+          lg:(text-6xl)
           `}
         >
-          Google is evolving.
+          <div
+            css={`
+              font-weight: lighter;
+            `}
+          >
+            Google is evolving.
+            <br />
+            SERPS are changing.
+          </div>
+          <div
+            css={`
+              font-weight: bolder;
+            `}
+          >
+            So should your rank tracker.
+          </div>
+        </div>
+        <div>
+          <div
+            css={tw`text-center text-2xl mb-8
+            lg:(text-4xl)
+            `}
+          >
+            What can you do with Nozzle data?
+          </div>
+          <ul
+            css={tw`list-disc pl-4 text-xl leading-normal font-bold max-w-full w-[550px] mx-auto mb-12
+            space-y-4
+            lg:(text-2xl space-y-8)
+            `}
+          >
+            {[
+              <a
+                href="https://nozzle.io/paa"
+                css={`
+                  color: ${props => props.theme.colors.primary};
+                  text-decoration: underline;
+                `}
+              >
+                Generate a list of all the questions that appear in the People
+                Also Ask box for all your target keywords
+              </a>,
+              <a
+                href="https://nozzle.io/blog/featured-snippet-competitor-analysis"
+                css={`
+                  color: ${props => props.theme.colors.primary};
+                  text-decoration: underline;
+                `}
+              >
+                See how many featured snippets each of your competitors own
+              </a>,
+              <a
+                href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
+                css={`
+                  color: ${props => props.theme.colors.primary};
+                  text-decoration: underline;
+                `}
+              >
+                Discover how many top ten rankings each of your competitors own
+              </a>,
+            ].map((d, i) => (
+              <li key={i}>{d}</li>
+            ))}
+          </ul>
+        </div>
+        <div
+          css={tw`w-[600px] text-xl opacity-90 leading-normal font-light max-w-full mb-4 text-center mx-auto
+        
+          `}
+        >
+          SearchLove attendees who fill out the form below get 50% of your first
+          year with Nozzle when you sign up before July 31st, 2022!
         </div>
         <div
           css={`
-            font-weight: lighter;
+            width: 500px;
+            max-width: 100%;
+            margin: 0 auto;
           `}
         >
-          SERPS are changing.
+          <HubspotForm id="2684e92d-ba12-479b-bf0b-abedce78a608" />
         </div>
-        <div
-          css={`
-            font-weight: bolder;
-          `}
-        >
-          So should your rank tracker.
-        </div>
-      </div>
-      <div>
-        <div
-          css={`
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 4rem;
-          `}
-        >
-          What can you do with Nozzle data?
-        </div>
-        <ul
-          css={`
-            list-style-type: disc;
-            padding-left: 2rem;
-            font-size: 1.8rem;
-            line-height: 1.4;
-            font-weight: 900;
-            max-width: 95%;
-            width: 700px;
-            margin: 0 auto 6rem;
-          `}
-        >
-          {[
-            <a
-              href="https://nozzle.io/paa"
-              css={`
-                color: ${props => props.theme.colors.primary};
-                text-decoration: underline;
-              `}
-            >
-              Generate a list of all the questions that appear in the People
-              Also Ask box for all your target keywords
-            </a>,
-            <a
-              href="https://nozzle.io/blog/featured-snippet-competitor-analysis"
-              css={`
-                color: ${props => props.theme.colors.primary};
-                text-decoration: underline;
-              `}
-            >
-              See how many featured snippets each of your competitors own
-            </a>,
-            <a
-              href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
-              css={`
-                color: ${props => props.theme.colors.primary};
-                text-decoration: underline;
-              `}
-            >
-              Discover how many top ten rankings each of your competitors own
-            </a>,
-          ].map((d, i) => (
-            <li
-              key={i}
-              css={`
-                margin-bottom: 2rem;
-              `}
-            >
-              {d}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div
-        css={`
-          width: 800px;
-          font-size: 1.9rem;
-          opacity: 0.9;
-          line-height: 1.4;
-          font-weight: lighter;
-          max-width: 100%;
-          padding: 0 2rem;
-          margin: 0 auto 2rem;
-          text-align: center;
-        `}
-      >
-        SearchLove attendees who fill out the form below get 50% of your first
-        year with Nozzle when you sign up before July 31st, 2022!
-      </div>
-      <div
-        css={`
-          width: 500px;
-          max-width: 100%;
-          margin: 0 auto;
-        `}
-      >
-        <HubspotForm id="2684e92d-ba12-479b-bf0b-abedce78a608" />
       </div>
       {/* <iframe
         src={`https://app.nozzle.io/sign-up?${new URLSearchParams({

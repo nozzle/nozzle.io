@@ -258,6 +258,7 @@ export default function PaaDashBoard({ testimonials }) {
             </a>
           </div>
         </SectionCallToAction>
+        {/* Hello world */}
       </main>
     </div>
   )

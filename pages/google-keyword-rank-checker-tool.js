@@ -163,7 +163,7 @@ export default function GoogleKeywordRankCheckerTool() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="Google Keyword Rank Checker | Website Ranking Checker | SERP Keyword Position Checker Tool for SEO"
+        title="Google Keyword Rank Checker | Website Ranking Checker | Google SERP Keyword Position Checker Tool for SEO"
         description="Nozzle’s Google rank checker tool provides all the SERP data to direct your SEO strategy. Prepare to have your mind blown!"
       />
       <main>

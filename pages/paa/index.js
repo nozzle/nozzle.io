@@ -201,7 +201,14 @@ export default function PaaDashBoard({ testimonials }) {
               height="327"
             />
             <div>
-              <div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />
+              {/*<div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />*/}
+              <iframe width="560" 
+                      height="315" 
+                      src="https://www.youtube.com/embed/EKNef5jI7QI" 
+                      title="YouTube video player" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
             </div>
           </div>
         </SectionKnowWhatQuestions>

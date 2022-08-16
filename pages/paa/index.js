@@ -240,7 +240,7 @@ export default function PaaDashBoard({ testimonials }) {
           })}
         </SectionTestimonials>
         <SectionCallToAction>
-          <H2 full>Get Your PAA Deliverable Today!</H2>
+          <H2 full>Get Your PAA Deliverable Tomorrow!</H2>
           <div
             css={`
               ${tw`w-full `}

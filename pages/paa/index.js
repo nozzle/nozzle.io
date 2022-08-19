@@ -96,6 +96,21 @@ const SectionKnowWhatQuestions = styled(Section)`
     ${tw`text-primaryLighter underline`}
   }
 
+  .youtube-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+
+  .youtube-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
   ${belowMobile} {
     .right {
       img {
@@ -201,7 +216,7 @@ export default function PaaDashBoard({ testimonials }) {
               width="516"
               height="327"
             />
-            <div>
+            <div className="youtube-responsive">
               {/*<div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />*/}
               <iframe width="560" 
                       height="315" 

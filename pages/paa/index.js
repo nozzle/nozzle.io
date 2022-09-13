@@ -127,7 +127,8 @@ export default function PaaDashBoard({ testimonials }) {
     <div style={{ overflow: 'hidden' }}>
       <Head
         title="People Also Ask Question Generator | Find Google’s PAA Questions Based on your Keywords with our Keyword Question Tool"
-        description="Find the right questions to answer on your website"
+        description="With Nozzle's People Also Ask (PAA) Keyword Question Tool, you get a Google Data Studio dashboard to help find the right questions to answer on your website."
+        path="https://nozzle.io/paa"
       />
       <main>
         <SectionTitle>
@@ -155,7 +156,7 @@ export default function PaaDashBoard({ testimonials }) {
             <div css={tw`ml-auto`}>
               <Img
                 src="/img/paaBox.jpg"
-                alt="google’s people also ask boxes help find questions related to your keywords"
+                alt="Nozzle's Keyword Question Tool uses Google’s People Also Ask boxes to help you find questions related to your keywords."
                 width="516"
                 height="327"
               />
@@ -171,7 +172,8 @@ export default function PaaDashBoard({ testimonials }) {
                       title="YouTube video player" 
                       frameborder="0" 
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowfullscreen></iframe>
+                      allowfullscreen>
+                </iframe>
             </div>
             <div css={tw`md:(w-1/2  gap-20 pl-16)`}>
               <H3 color="primaryDark">What You'll Get</H3>
@@ -198,12 +200,11 @@ export default function PaaDashBoard({ testimonials }) {
               <H3 color="primaryDark">How to Get Started </H3>
               <Ul>
                 <Li>
-                Create a Nozzle account (This creates a workspace on the back
-                  end so we have a place to run your keywords through our
-                  question generator.)
+                Visit the <AnchorLink href="#signup" css={tw`text-primaryLighter underline`}>form</AnchorLink> below
                 </Li>
                 <Li>Input your name, email address, company name and domain</Li>
                 <Li>Input your target keyword list (10,000 keywords max)</Li>
+                <Li>Input your location (the search origin for the keywords in your list)</Li>
               </Ul>
               <br />
               <AnchorLink href="#signup">
@@ -268,7 +269,7 @@ export default function PaaDashBoard({ testimonials }) {
                         ? testimonial.fields.image.fields.file.url
                         : 'img/blankPerson.png'
                     }`}
-                    alt={testimonial.fields.name}
+                    alt={testimonial.fields.imageAlt}
                     height="160"
                     width="160"
                   />

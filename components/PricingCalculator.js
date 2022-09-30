@@ -419,7 +419,7 @@ export default function PricingCalculator({ plans, monthly }) {
   return (
     <CalculatorStyles>
       <Container>
-        <Title>How many pulls do I need per month?</Title>
+        <Title>How many SERPs do I need per month?</Title>
         <SubTitle>
           Not sure where to start? Try using one of our preset options to find
           the right plan for you.
@@ -633,7 +633,7 @@ export default function PricingCalculator({ plans, monthly }) {
                     ${tw`p-2 mb-4 text-2xl`}
                   `}
                 >
-                  pulls
+                  SERPs
                 </div>
                 <Suggested>Suggested Plan:</Suggested>
                 <SuggestedPlan>

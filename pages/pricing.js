@@ -96,20 +96,20 @@ const plans = [
 
 const faqs = [
   {
-    q: `What is a pull?`,
-    a: `A pull is used whenever we retrieve data for a keyword-engine-language-device-location combination. This combination is commonly referred to as a SERP (Search Engine Results Page). We pull data for the first 100 results. One pull = top 100 results for each unique search. `,
+    q: `What is a SERP?`,
+    a: `In this context, a SERP is a retrieval of data for a keyword-engine-language-device-location combination. We pull data for the first 100 results. One SERP = top 100 results for each unique search. `,
   },
   {
-    q: `How many pulls do I need?`,
-    a: `The number of pulls you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, and locations you want to monitor. Use the calculator above to figure out how many pulls you will need for your specific situation.`,
+    q: `How many SERPs do I need?`,
+    a: `The number of SERPs you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, and locations you want to monitor. Use the calculator above to figure out how many SERPs you will need for your specific situation.`,
   },
   {
-    q: `How long are pulls good for?`,
-    a: `Pulls expire at the end of the month.`,
+    q: `How long are SERPs good for?`,
+    a: `SERPs expire at the end of the month.`,
   },
   {
     q: `What are overage charges and when are they billed?`,
-    a: `Each plan comes with a total number of pulls included each month. Overage charges are accrued when you exceed your plan’s monthly limit. If you exceed your number of pulls in a given month, we charge you for those in arrears.`,
+    a: `Each plan comes with a total number of SERPs included each month. Overage charges are accrued when you exceed your plan’s monthly limit. If you exceed your number of SERPs in a given month, we charge you for those in arrears.`,
   },
   {
     q: `Do I have to sign a contract?`,
@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     q: `Are there any other charges I should be aware of?`,
-    a: `There are no setup fees, charges for API access, or charges for additional users. The only exception to the one pull = one SERP pricing is for expedited data. SERPs requested under the regular pricing structure are fulfilled by the end of day, but some of our customers need data populated more rapidly. For example, some of our customers need data fulfilled hourly or they place last minute one-time pull data requests that they need as soon as possible. These priority requests are billed at double the price of a normal pull.  `,
+    a: `There are no setup fees, charges for API access, or charges for additional users. `,
   },
   {
     q: `Does Nozzle offer custom plans?`,

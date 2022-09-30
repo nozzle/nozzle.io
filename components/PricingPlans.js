@@ -268,12 +268,12 @@ export default function PricingPlans({
                         </>
                       )}
                       <SmallBold>
-                        {number(plans[i].pulls)} Pulls Included
+                        {number(plans[i].pulls)} SERPs Included
                       </SmallBold>
                     </Price>
                     <div className="plan-inner">
                       <Small>Overage Pricing:</Small>
-                      <SmallBold>${plans[i].overage} Per 1,000 Pulls</SmallBold>
+                      <SmallBold>${plans[i].overage} Per 1,000 SERPs</SmallBold>
                     </div>
                     <div tw="text-sm">
                       <Icon i="check" tw="text-green-500" /> All features
@@ -391,12 +391,12 @@ export default function PricingPlans({
                         </>
                       )}
                       <SmallBold>
-                        {number(plans[i].pulls)} Pulls Included
+                        {number(plans[i].pulls)} SERPs Included
                       </SmallBold>
                     </Price>
                     <div className="plan-inner">
                       <Small>Overage Pricing:</Small>
-                      <SmallBold>${plans[i].overage} Per 1,000 Pulls</SmallBold>
+                      <SmallBold>${plans[i].overage} Per 1,000 SERPs</SmallBold>
                     </div>
                     <div tw="text-sm">
                       <Icon i="check" tw="text-green-500" /> All features

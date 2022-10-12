@@ -3,6 +3,7 @@ import React from 'react'
 import axios from 'axios'
 import { Form, Text } from 'react-form'
 import Head from '../components/Head'
+import HubspotForm from '../components/HubspotForm'
 //
 import encodeFormData from 'utils/encodeFormData'
 import { Button } from 'components/Html'
@@ -220,16 +221,10 @@ export default function Trial() {
               font-weight: lighter;
             `}
           >
-            Come by{' '}
-            <strong
-              css={`
-                font-weight: bolder;
-              `}
-            >
-              booth #47 at SMX
-            </strong>{' '}
-            (or fill out the form below) to enter to win a new pair of
+            SearchLove London attendees who fill out the form below get 50% off your first year with Nozzle!
+            <HubspotForm id="79560591-52a7-455f-a2fb-d3ced96a38b4" />
           </div>
+          {/*
           <div
             css={`
               margin: 3vw auto 0;
@@ -249,6 +244,7 @@ export default function Trial() {
           >
             BOSE QuietComfort 35 Wireless Headphones II
           </div>
+  
           <div
             css={`
               margin: 0 auto;
@@ -263,6 +259,7 @@ export default function Trial() {
           >
             Announced on 5/31/2019 - Ends on 6/5/2019
           </div>
+          
           {!submitted ? (
             <Form
               onSubmit={async values => {
@@ -378,6 +375,7 @@ export default function Trial() {
               Thank you for submitting!
             </div>
           )}
+          */}
         </div>
       </div>
     </>

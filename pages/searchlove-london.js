@@ -81,8 +81,8 @@ export default function Trial() {
   return (
     <>
       <Head
-        title="SMX page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
-        description="SMX page for Nozzle - A keyword rank tracker offering you more enterprise level SERP data than ever before."
+        title="Searchlove London page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
+        description="Searchlove London page for Nozzle - A keyword rank tracker offering you more enterprise level SERP data than ever before."
       />
       <div
         css={`
@@ -223,7 +223,8 @@ export default function Trial() {
               padding-bottom: 2.5vw;
             `}
           >
-            SearchLove London attendees who fill out the form below will get 50% off the first year with Nozzle!*
+            SearchLove London attendees who fill out the form below will get 50%
+            off the first year with Nozzle!*
           </div>
           <div
             css={`
@@ -236,64 +237,65 @@ export default function Trial() {
               font-weight: lighter;
             `}
           >
-            *Discount will be applied when you sign up before November 30th, 2022.
+            *Discount will be applied when you sign up before November 30th,
+            2022.
             <HubspotForm id="79560591-52a7-455f-a2fb-d3ced96a38b4" />
           </div>
-          <div
-            css={tw`px-10`}>
-          <div
-            css={tw`text-center text-2xl mt-20 mb-8
+          <div css={tw`px-10`}>
+            <div
+              css={tw`text-center text-2xl mt-20 mb-8
             lg:(text-4xl)
             `}
-          >
-            What can you do with Nozzle data?
-          </div>
-          <ul
-            css={tw`list-disc pl-4 text-xl leading-normal font-bold max-w-full w-[550px] mx-auto mb-12
+            >
+              What can you do with Nozzle data?
+            </div>
+            <ul
+              css={tw`list-disc pl-4 text-xl leading-normal font-bold max-w-full w-[550px] mx-auto mb-12
             space-y-4
             lg:(text-2xl space-y-8)
             `}
-          >
-            {[
-              <a
-                href="https://nozzle.io/paa"
-                css={`
-                  color: ${props => props.theme.colors.primaryLighter};
-                  text-decoration: underline;
-                  font-size: 1.1rem;
-                  line-height: 1.3rem;
-                `}
-              >
-                Generate a list of all the questions that appear in the People
-                Also Ask box for all your target keywords
-              </a>,
-              <a
-                href="https://nozzle.io/blog/featured-snippet-competitor-analysis"
-                css={`
-                  color: ${props => props.theme.colors.primaryLighter};
-                  text-decoration: underline;
-                  font-size: 1.1rem;
-                  line-height: 1.3rem;
-                `}
-              >
-                See how many featured snippets each of your competitors own
-              </a>,
-              <a
-                href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
-                css={`
-                  color: ${props => props.theme.colors.primaryLighter};
-                  text-decoration: underline;
-                  font-size: 1.1rem;
-                  line-height: 1.3rem;
-                `}
-              >
-                Discover how many top ten rankings each of your competitors own
-              </a>,
-            ].map((d, i) => (
-              <li key={i}>{d}</li>
-            ))}
-          </ul>
-        </div>
+            >
+              {[
+                <a
+                  href="https://nozzle.io/paa"
+                  css={`
+                    color: ${props => props.theme.colors.primaryLighter};
+                    text-decoration: underline;
+                    font-size: 1.1rem;
+                    line-height: 1.3rem;
+                  `}
+                >
+                  Generate a list of all the questions that appear in the People
+                  Also Ask box for all your target keywords
+                </a>,
+                <a
+                  href="https://nozzle.io/blog/featured-snippet-competitor-analysis"
+                  css={`
+                    color: ${props => props.theme.colors.primaryLighter};
+                    text-decoration: underline;
+                    font-size: 1.1rem;
+                    line-height: 1.3rem;
+                  `}
+                >
+                  See how many featured snippets each of your competitors own
+                </a>,
+                <a
+                  href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
+                  css={`
+                    color: ${props => props.theme.colors.primaryLighter};
+                    text-decoration: underline;
+                    font-size: 1.1rem;
+                    line-height: 1.3rem;
+                  `}
+                >
+                  Discover how many top ten rankings each of your competitors
+                  own
+                </a>,
+              ].map((d, i) => (
+                <li key={i}>{d}</li>
+              ))}
+            </ul>
+          </div>
 
           {/*
           <div

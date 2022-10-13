@@ -126,7 +126,7 @@ export default function PaaDashBoard({ testimonials }) {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="People Also Ask Question Generator | Find Google’s PAA Questions Based on your Keywords with our Keyword Question Tool"
+        title="People Also Ask Keyword Question Tool | Generate Content Ideas Using Google's PAA Boxes and Your Keywords | Nozzle"
         description="With Nozzle's People Also Ask (PAA) Keyword Question Tool, you get a Google Data Studio dashboard to help find the right questions to answer on your website."
         path="https://nozzle.io/paa"
       />

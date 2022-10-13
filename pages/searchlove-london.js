@@ -3,9 +3,11 @@ import React from 'react'
 import axios from 'axios'
 import { Form, Text } from 'react-form'
 import Head from '../components/Head'
+import HubspotForm from '../components/HubspotForm'
 //
 import encodeFormData from 'utils/encodeFormData'
 import { Button } from 'components/Html'
+import tw from 'twin.macro'
 
 function Matrix({ speed = 100, size = 18, ...rest }) {
   const ref = React.useRef()
@@ -88,7 +90,7 @@ export default function Trial() {
           background: #001319;
           min-height: 150vh;
           color: white;
-          padding-bottom: 10rem;
+          padding-bottom: 3rem;
         `}
       >
         <Matrix
@@ -182,8 +184,8 @@ export default function Trial() {
             <div
               css={`
                 text-align: center;
-                font-size: 5vw;
-                line-height: 6vw;
+                font-size: 6vw;
+                line-height: 8vw;
               `}
             >
               <div
@@ -211,25 +213,89 @@ export default function Trial() {
           </div>
           <div
             css={`
-              margin: 10vw auto 0;
-              font-size: 3vw;
-              line-height: 3.4vw;
+              margin: 5vw auto 0;
+              font-size: 1.8rem;
+              line-height: 2.6rem;
+              width: 600px;
+              text-align: center;
+              max-width: 90%;
+              font-weight: lighter;
+              padding-bottom: 2.5vw;
+            `}
+          >
+            SearchLove London attendees who fill out the form below will get 50% off the first year with Nozzle!*
+          </div>
+          <div
+            css={`
+              margin: 1vw auto 0;
+              font-size: 1rem;
+              line-height: 1.6rem;
               width: 600px;
               text-align: center;
               max-width: 80%;
               font-weight: lighter;
             `}
           >
-            Come by{' '}
-            <strong
-              css={`
-                font-weight: bolder;
-              `}
-            >
-              booth #47 at SMX
-            </strong>{' '}
-            (or fill out the form below) to enter to win a new pair of
+            *Discount will be applied when you sign up before November 30th, 2022.
+            <HubspotForm id="79560591-52a7-455f-a2fb-d3ced96a38b4" />
           </div>
+          <div
+            css={tw`px-10`}>
+          <div
+            css={tw`text-center text-2xl mt-20 mb-8
+            lg:(text-4xl)
+            `}
+          >
+            What can you do with Nozzle data?
+          </div>
+          <ul
+            css={tw`list-disc pl-4 text-xl leading-normal font-bold max-w-full w-[550px] mx-auto mb-12
+            space-y-4
+            lg:(text-2xl space-y-8)
+            `}
+          >
+            {[
+              <a
+                href="https://nozzle.io/paa"
+                css={`
+                  color: ${props => props.theme.colors.primaryLighter};
+                  text-decoration: underline;
+                  font-size: 1.1rem;
+                  line-height: 1.3rem;
+                `}
+              >
+                Generate a list of all the questions that appear in the People
+                Also Ask box for all your target keywords
+              </a>,
+              <a
+                href="https://nozzle.io/blog/featured-snippet-competitor-analysis"
+                css={`
+                  color: ${props => props.theme.colors.primaryLighter};
+                  text-decoration: underline;
+                  font-size: 1.1rem;
+                  line-height: 1.3rem;
+                `}
+              >
+                See how many featured snippets each of your competitors own
+              </a>,
+              <a
+                href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
+                css={`
+                  color: ${props => props.theme.colors.primaryLighter};
+                  text-decoration: underline;
+                  font-size: 1.1rem;
+                  line-height: 1.3rem;
+                `}
+              >
+                Discover how many top ten rankings each of your competitors own
+              </a>,
+            ].map((d, i) => (
+              <li key={i}>{d}</li>
+            ))}
+          </ul>
+        </div>
+
+          {/*
           <div
             css={`
               margin: 3vw auto 0;
@@ -249,6 +315,7 @@ export default function Trial() {
           >
             BOSE QuietComfort 35 Wireless Headphones II
           </div>
+  
           <div
             css={`
               margin: 0 auto;
@@ -263,6 +330,7 @@ export default function Trial() {
           >
             Announced on 5/31/2019 - Ends on 6/5/2019
           </div>
+          
           {!submitted ? (
             <Form
               onSubmit={async values => {
@@ -378,6 +446,7 @@ export default function Trial() {
               Thank you for submitting!
             </div>
           )}
+          */}
         </div>
       </div>
     </>

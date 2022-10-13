@@ -23,6 +23,7 @@ module.exports = {
         success: '#60BD68',
         warning: '#e4b000',
         white: 'white',
+        searchloveblue: '#c2dae2',
         stable: Color.mix(primary, 'black', 40).toString(),
         lighter: 'rgba(255, 255, 255, 0.8)',
         light: 'rgba(255, 255, 255, 0.6)',

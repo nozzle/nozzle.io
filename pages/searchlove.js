@@ -81,116 +81,376 @@ export default function Trial() {
   return (
     <>
       <Head
-        title="Searchlove page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
-        description="searchlove page for Nozzle - A keyword rank tracker offering you more enterprise level SERP data than ever before."
+        title="Searchlove London page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
+        description="Searchlove London page for Nozzle - A keyword rank tracker offering you more enterprise level SERP data than ever before."
       />
       <div
         css={`
-          padding: 2rem;
+          position: relative;
+          background: #001319;
+          min-height: 150vh;
+          color: white;
+          padding-bottom: 3rem;
         `}
       >
+        <Matrix
+          css={`
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80vh;
+            z-index: 0;
+            opacity: 0.7;
+          `}
+        />
         <div
-          css={tw`text-center text-4xl leading-normal mt-8 mb-16
-          lg:(text-6xl)
+          css={`
+            position: absolute;
+            top: 50vh;
+            left: 0;
+            width: 100%;
+            height: 30vh;
+            background: linear-gradient(to bottom, transparent, #001319);
+            z-index: 1;
+          `}
+        />
+        <div
+          css={`
+            position: relative;
+            z-index: 2;
           `}
         >
           <div
             css={`
+              display: flex;
+              position: relative;
+            `}
+          >
+            <div
+              css={`
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 6rem 0;
+              `}
+            >
+              <img
+                src={require('public/img/red-pill.png')}
+                css={`
+                  width: 80%;
+                  max-width: 300px;
+                  background: rgba(0, 0, 0, 0.6);
+                  border-radius: 100rem;
+                `}
+              />
+            </div>
+            <div
+              css={`
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 6rem 0;
+              `}
+            >
+              <img
+                src={require('public/img/blue-pill.png')}
+                css={`
+                  width: 80%;
+                  max-width: 300px;
+                  background: rgba(0, 0, 0, 0.6);
+                  border-radius: 100rem;
+                `}
+              />
+            </div>
+          </div>
+          <div
+            css={`
+              font-size: 0.8rem;
+              text-align: center;
+              opacity: 0.15;
+              margin: -5rem auto 5rem;
+              max-width: 80%;
+            `}
+          >
+            * any reversal of pill coloring is strictly for branding purposes
+          </div>
+          <div />
+          <div>
+            <div
+              css={`
+                text-align: center;
+                font-size: 6vw;
+                line-height: 8vw;
+              `}
+            >
+              <div
+                css={`
+                  font-weight: lighter;
+                `}
+              >
+                Google is evolving.
+              </div>
+              <div
+                css={`
+                  font-weight: lighter;
+                `}
+              >
+                SERPS are changing.
+              </div>
+              <div
+                css={`
+                  font-weight: bolder;
+                `}
+              >
+                So should your rank tracker.
+              </div>
+            </div>
+          </div>
+          <div
+            css={`
+              margin: 5vw auto 0;
+              font-size: 1.8rem;
+              line-height: 2.6rem;
+              width: 600px;
+              text-align: center;
+              max-width: 90%;
+              font-weight: lighter;
+              padding-bottom: 2.5vw;
+            `}
+          >
+            SearchLove London attendees who fill out the form below will get 50%
+            off the first year with Nozzle!*
+          </div>
+          <div
+            css={`
+              margin: 1vw auto 0;
+              font-size: 1rem;
+              line-height: 1.6rem;
+              width: 600px;
+              text-align: center;
+              max-width: 80%;
               font-weight: lighter;
             `}
           >
-            Google is evolving.
-            <br />
-            SERPS are changing.
+            *Discount will be applied when you sign up before November 30th,
+            2022.
+            <HubspotForm id="79560591-52a7-455f-a2fb-d3ced96a38b4" />
           </div>
-          <div
-            css={`
-              font-weight: bolder;
-            `}
-          >
-            So should your rank tracker.
-          </div>
-        </div>
-        <div>
-          <div
-            css={tw`text-center text-2xl mb-8
+          <div css={tw`px-10`}>
+            <div
+              css={tw`text-center text-2xl mt-20 mb-8
             lg:(text-4xl)
             `}
-          >
-            What can you do with Nozzle data?
-          </div>
-          <ul
-            css={tw`list-disc pl-4 text-xl leading-normal font-bold max-w-full w-[550px] mx-auto mb-12
+            >
+              What can you do with Nozzle data?
+            </div>
+            <ul
+              css={tw`list-disc pl-4 text-xl leading-normal font-bold max-w-full w-[550px] mx-auto mb-12
             space-y-4
             lg:(text-2xl space-y-8)
             `}
+            >
+              {[
+                <a
+                  href="https://nozzle.io/paa"
+                  css={`
+                    color: ${props => props.theme.colors.primaryLighter};
+                    text-decoration: underline;
+                    font-size: 1.1rem;
+                    line-height: 1.3rem;
+                  `}
+                >
+                  Generate a list of all the questions that appear in the People
+                  Also Ask box for all your target keywords
+                </a>,
+                <a
+                  href="https://nozzle.io/blog/featured-snippet-competitor-analysis"
+                  css={`
+                    color: ${props => props.theme.colors.primaryLighter};
+                    text-decoration: underline;
+                    font-size: 1.1rem;
+                    line-height: 1.3rem;
+                  `}
+                >
+                  See how many featured snippets each of your competitors own
+                </a>,
+                <a
+                  href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
+                  css={`
+                    color: ${props => props.theme.colors.primaryLighter};
+                    text-decoration: underline;
+                    font-size: 1.1rem;
+                    line-height: 1.3rem;
+                  `}
+                >
+                  Discover how many top ten rankings each of your competitors
+                  own
+                </a>,
+              ].map((d, i) => (
+                <li key={i}>{d}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/*
+          <div
+            css={`
+              margin: 3vw auto 0;
+              padding: 8rem 0;
+              font-size: 4vw;
+              line-height: 5vw;
+              width: 600px;
+              text-align: center;
+              max-width: 80%;
+              font-weight: bolder;
+              background-image: url('/img/bose-headphones.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              text-shadow: 0 3px 5px black;
+            `}
           >
-            {[
-              <a
-                href="https://nozzle.io/paa"
-                css={`
-                  color: ${props => props.theme.colors.primary};
-                  text-decoration: underline;
-                `}
-              >
-                Generate a list of all the questions that appear in the People
-                Also Ask box for all your target keywords
-              </a>,
-              <a
-                href="https://nozzle.io/blog/featured-snippet-competitor-analysis"
-                css={`
-                  color: ${props => props.theme.colors.primary};
-                  text-decoration: underline;
-                `}
-              >
-                See how many featured snippets each of your competitors own
-              </a>,
-              <a
-                href="https://nozzle.io/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups"
-                css={`
-                  color: ${props => props.theme.colors.primary};
-                  text-decoration: underline;
-                `}
-              >
-                Discover how many top ten rankings each of your competitors own
-              </a>,
-            ].map((d, i) => (
-              <li key={i}>{d}</li>
-            ))}
-          </ul>
-        </div>
-        <div
-          css={tw`w-[600px] text-xl opacity-90 leading-normal font-light max-w-full mb-4 text-center mx-auto
-        
-          `}
-        >
-          SearchLove attendees who fill out the form below get 50% of your first
-          year with Nozzle when you sign up before July 31st, 2022!
-        </div>
-        <div
-          css={`
-            width: 500px;
-            max-width: 100%;
-            margin: 0 auto;
-          `}
-        >
-          <HubspotForm id="2684e92d-ba12-479b-bf0b-abedce78a608" />
+            BOSE QuietComfort 35 Wireless Headphones II
+          </div>
+  
+          <div
+            css={`
+              margin: 0 auto;
+              font-size: 1rem;
+              opacity: 0.5;
+              line-height: 1.6rem;
+              width: 600px;
+              text-align: center;
+              max-width: 80%;
+              font-weight: lighter;
+            `}
+          >
+            Announced on 5/31/2019 - Ends on 6/5/2019
+          </div>
+          
+          {!submitted ? (
+            <Form
+              onSubmit={async values => {
+                window.dataLayer.push({ event: 'smxSubmit' })
+                try {
+                  await axios.post(
+                    'https://nozzle.io/',
+                    encodeFormData({
+                      'form-name': 'smx2019',
+                      ...values,
+                    }),
+                    {
+                      headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                      },
+                    }
+                  )
+                  setSubmitted(true)
+                } catch (err) {
+                  window.alert(
+                    'There was a problem submitting your form! Try again or reload the page :)'
+                  )
+                  setSubmitted(true)
+                }
+              }}
+            >
+              {({ submitForm }) => (
+                <form
+                  name="smx2019"
+                  data-netlify="true"
+                  onSubmit={submitForm}
+                  css={`
+                    width: 400px;
+                    max-width: 80%;
+                    margin: 5rem auto 0;
+                  `}
+                >
+                  <Text
+                    field="name"
+                    name="name"
+                    placeholder="Name..."
+                    css={`
+                      margin: 1rem auto 0;
+                      width: 100%;
+                      font-size: 1.4rem;
+                      background: rgba(255, 255, 255, 0.05);
+                      border: solid 2px rgba(255, 255, 255, 0.2);
+                      border-radius: 0.3rem;
+                      padding: 1rem;
+                      color: white;
+                    `}
+                  />
+                  <Text
+                    field="email"
+                    name="email"
+                    placeholder="Email address..."
+                    css={`
+                      margin: 1rem auto 0;
+                      width: 100%;
+                      font-size: 1.4rem;
+                      background: rgba(255, 255, 255, 0.05);
+                      border: solid 2px rgba(255, 255, 255, 0.2);
+                      border-radius: 0.3rem;
+                      padding: 1rem;
+                      color: white;
+                    `}
+                  />
+                  <Text
+                    field="twitter"
+                    name="twitter"
+                    placeholder="Twitter handle..."
+                    css={`
+                      margin: 1rem auto 0;
+                      width: 100%;
+                      font-size: 1.4rem;
+                      background: rgba(255, 255, 255, 0.05);
+                      border: solid 2px rgba(255, 255, 255, 0.2);
+                      border-radius: 0.3rem;
+                      padding: 1rem;
+                      color: white;
+                    `}
+                  />
+                  <Button
+                    type="submit"
+                    css={`
+                    color: white;
+                    appearance: none;
+                    border-radius: 0.4rem;
+                    font-size: 1.6rem;
+                    padding: 1rem 1.5rem;
+                    margin: 1rem auto 0
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                  `}
+                  >
+                    Submit!
+                  </Button>
+                </form>
+              )}
+            </Form>
+          ) : (
+            <div
+              css={`
+                margin: 2rem auto;
+                font-size: 4vw;
+                line-height: 3.4vw;
+                width: 600px;
+                text-align: center;
+                max-width: 80%;
+              `}
+            >
+              Thank you for submitting!
+            </div>
+          )}
+          */}
         </div>
       </div>
-      {/* <iframe
-        src={`https://app.nozzle.io/sign-up?${new URLSearchParams({
-          hubspotListId: 276,
-          redirect: 'https://app.nozzle.io',
-        }).toString()}`}
-        title="Nozzle Signup"
-        css={`
-          width: 1023px;
-          max-width: 100%;
-          height: 5000px;
-          margin: 0 auto;
-          display: block;
-        `}
-      /> */}
     </>
   )
 }

@@ -291,10 +291,36 @@ export default function Trial() {
                   Discover how many top ten rankings each of your competitors
                   own
                 </a>,
+                <a
+                  href="https://nozzle.io/blog/the-power-of-flexible-scheduling"
+                  css={`
+                    color: ${props => props.theme.colors.primaryLighter};
+                    text-decoration: underline;
+                    font-size: 1.1rem;
+                    line-height: 1.3rem;
+                  `}
+                >
+                  The Power of Flexible Scheduling & Custom Keyword Tracking
+                  with Nozzle
+                </a>,
               ].map((d, i) => (
                 <li key={i}>{d}</li>
               ))}
             </ul>
+          </div>
+          <div css={tw`flex items-center justify-center`}>
+            <div css={tw``}>
+              {/*<div className="wistia_embed wistia_async_ggfgo9uxfs videoFoam=true" />*/}
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/zFi5QnIM9EU"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
 
           {/*

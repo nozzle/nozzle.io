@@ -351,7 +351,7 @@ export default function Home() {
                 <H4>Get unlimited access to the entire SERP</H4>
               </Centered>
             </Div>
-            <LiteYouTubeEmbed id="Yz1hrFUF1gM" poster="maxresdefault" />
+            <LiteYouTubeEmbed id="Yz1hrFUF1gM" poster="maxresdefault" params="enablejsapi=1" />
           </Left>
           <Right>
             <H2>Track all the things!</H2>

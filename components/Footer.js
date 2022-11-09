@@ -86,7 +86,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/paa">People Also Ask Deliverable</Link>
+                <Link href="/paa">PAA Content Idea Report</Link>
               </li>
               <li>
                 <Link href="/blog/nozzles-crackerjack-calculation-of-clickthrough-rate">

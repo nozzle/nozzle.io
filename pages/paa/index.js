@@ -191,7 +191,7 @@ export default function PaaDashBoard({ testimonials }) {
                   target="blank"
                 >
                   <span css={tw`text-primaryLighter underline`}>
-                    Click to view a PAA Expansion Deliverable example in Data
+                    Click to view a PAA Content Idea Report example in Data
                     Studio.
                   </span>
                 </a>{' '}
@@ -229,7 +229,7 @@ export default function PaaDashBoard({ testimonials }) {
               </H6>
               <P css={tw`text-sm`}>
                 For your content to be effective, it must answer your audience's
-                questions. Our PAA deliverable does the work of finding those
+                questions. Our PAA Content Idea Report does the work of finding those
                 questions for you.
               </P>
             </div>
@@ -238,7 +238,7 @@ export default function PaaDashBoard({ testimonials }) {
             <div css={tw`md:(px-6)`}>
               <H6 css={tw`font-bold`}>See How Often Questions Appear</H6>
               <P css={tw`text-sm`}>
-                Our PAA deliverable shows how often questions appeared in PAA
+                Our PAA report shows how often questions appeared in PAA
                 when people searched your keywords, guiding you to the popular
                 questions you should answer first.
               </P>
@@ -249,7 +249,7 @@ export default function PaaDashBoard({ testimonials }) {
               <H6 css={tw`font-bold`}>See PAA Frequency by Keyword Group</H6>
               <P css={tw`text-sm`}>
                 If you provide keyword groups with your keyword list, our
-                deliverable will show you how often keyword groups show PAA
+                report will show you how often keyword groups show PAA
                 boxes, letting your content team know which groups to focus on
                 first.
               </P>
@@ -283,7 +283,7 @@ export default function PaaDashBoard({ testimonials }) {
           })}
         </SectionTestimonials>
         <SectionCallToAction id="signup">
-          <H2>Get Your PAA Deliverable Today!</H2>
+          <H2>Get Your PAA Content Idea Report Today!</H2>
           <div
             css={`
               ${tw`w-full`}

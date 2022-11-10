@@ -34,12 +34,13 @@ const GlobalStyles = createGlobalStyle`
   ${reset};
   html, body, body, [data-reactroot] {
     ${tw`min-h-full w-full`}
-   
   }
   html, body {
     ${tw`bg-primaryDarker text-base leading-none font-normal`}
     font-family: "Overpass", "Helvetica", "Georgia", sans-serif;
     color: #3d556b;
+    scroll-padding-top: 70px;
+    scroll-behavior: smooth;
   }
   * {
     ${tw`box-border`}

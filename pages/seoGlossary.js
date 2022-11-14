@@ -6,45 +6,26 @@ import styled from 'styled-components'
 import Smackdown from 'components/Smackdown'
 import { Container, Center } from 'components/Layout'
 import tw from 'twin.macro'
+import { Input } from '../components/Html'
 
-const Top = styled('section')`
-  ${angle('left')};
-  ${tw`lg:(flex) mb-4 items-center overflow-hidden text-white bg-primaryDarker py-5/100 px-3/20 relative z-0`}
+const Top = styled('div')`
+  ${'' /* ${angle('left')}; */}
+  ${tw` w-auto mb-4 items-center overflow-hidden text-white bg-primaryDarker py-5/100 px-3/20 relative z-0 text-center`}
 `
 const Wrap = styled('div')`
-  ${tw`flex flex-nowrap m-2 w-auto`}
+  ${tw`flex flex-nowrap m-2 w-auto text-left`}
 `
 const MetricStyles = styled('div')`
-  ${tw`flex flex-wrap flex-auto m-2 justify-center`}
-`
-const Title = styled('div')`
-  ${tw`lg:w-1/3 lg:(text-right pr-10) text-center`};
-`
-const Screenshot = styled('div')`
-  ${tw`lg:(w-1/2)`}
-  img {
-    ${tw`rounded-md max-w-screen-xl w-double`}
-  }
+  ${tw`flex flex-wrap flex-auto m-2 justify-center w-full`}
 `
 const Box = styled('div')`
-  ${tw`p-5 mb-5 pt-16 mt--12 h-auto lg:(flex flex-grow flex-shrink-0 w-600)`}
-`
-const Thumbnail = styled('img')`
-  ${tw`h-48 lg:(h-40) rounded-lg shadow-md mb-5`}
+  ${tw`p-5 mb-5 pt-16 mt--12 h-auto w-full lg:(flex flex-grow flex-shrink-0 w-600)`}
 `
 const Text = styled('div')`
   ${tw`flex flex-col leading-normal lg:(text-left pl-5)`}
 `
-
 const Name = styled('div')`
   ${tw`text-gray-900 font-bold text-3xl mb-2 hover:cursor-default`}
-
-  &:before {
-    content: '';
-    display: block;
-    height: 70px;
-    margin: -70px 0 0;
-  }
 
   .number {
     ${tw`inline-block pl-2 invisible opacity-30`}
@@ -54,33 +35,43 @@ const Name = styled('div')`
     ${tw`visible`}
   }
 `
-
 const Shortcuts = styled('div')`
   ${tw`
-    text-sm leading-none fixed left-0 top-0 bottom-0 flex items-center z-10
-    lg:text-lg lg:font-bold
+    text-sm leading-none fixed left-0 top-10 bottom-0 flex items-center z-10
+    md:(text-lg font-bold)
   `}
 
   > div {
     ${tw`
-      flex flex-col bg-white p-1 rounded-r-lg shadow-lg
-      lg:px-2
+      flex flex-col bg-gray-200 opacity-90 p-1 ml-1 rounded-2xl shadow-lg
+			hover:(opacity-100 ease-in-out duration-75)
     `}
+		@media (min-height: 875px) {
+			font-size: 1rem;
+		}
   }
 `
-
 const AlphabetLetter = styled('a')`
   ${tw`
-    text-center hover:cursor-pointer
+    text-center 
+		hover:cursor-pointer
   `}
+
+  @media (max-width: 765px) {
+    padding-top: 4px;
+  }
 
   ${props => props.disabled && tw`opacity-40`}
 `
-
 const Description = styled('div')`
   ${tw`text-gray-700 text-base`}
 
   .link {
+    ${tw`hover:(underline)`}
+  }
+`
+const Smackdowntest = styled(Smackdown)`
+  > div > p > a {
     ${tw`hover:(underline)`}
   }
 `
@@ -95,10 +86,9 @@ export default function Glossary() {
         description="A definition of SEO key terms and phrases."
       />
       <Top>
-        <Title>
-          <H1>SEO Glossary</H1>
-          <P>The definitions of SEO key terms and phrases.</P>
-        </Title>
+        <H1>SEO Glossary</H1>
+        <P>The definitions of SEO key terms and phrases.</P>
+				{/* <input onChange={handleChange} placeholder="Search"/> */}
       </Top>
       <Shortcuts>
         <div>
@@ -116,29 +106,27 @@ export default function Glossary() {
         </div>
       </Shortcuts>
       <Container>
-        <Center>
-          <Wrap>
-            <MetricStyles>
-              {terms.map((term, i) => {
-                return (
-                  <Box>
-                    <Text>
-                      <Name id={term.id}>
-                        {term.name}
-                        <a className="number" href={`#${term.id}`}>
-                          #
-                        </a>
-                      </Name>
-                      <Description>
-                        <Smackdown source={term.definition} />
-                      </Description>
-                    </Text>
-                  </Box>
-                )
-              })}
-            </MetricStyles>
-          </Wrap>
-        </Center>
+        <Wrap>
+          <MetricStyles>
+            {terms.map((term, i) => {
+              return (
+                <Box>
+                  <Text>
+                    <Name id={term.id}>
+                      {term.name}
+                      <a className="number" href={`#${term.id}`}>
+                        #
+                      </a>
+                    </Name>
+                    <Description>
+                      <Smackdowntest source={term.definition} />
+                    </Description>
+                  </Text>
+                </Box>
+              )
+            })}
+          </MetricStyles>
+        </Wrap>
       </Container>
     </div>
   )
@@ -279,7 +267,7 @@ Algorithm Refresh: The search engine re-runs an existing algorithm using the exa
     },
     {
       name: 'Bot',
-      definition: `See Spider`,
+      definition: `See <a className="link" href="#Spider">Spider</a>`,
     },
     {
       name: 'Bounce Rate',
@@ -299,7 +287,7 @@ The structure is simple. It is organized by starting with the home page and list
     },
     {
       name: 'Bridge Page',
-      definition: `See Doorway Page.`,
+      definition: `See <a href="#Doorway-Page">Doorway Page.</a>`,
     },
     {
       name: 'Broken Link',
@@ -431,7 +419,7 @@ Cumulative Layout Shift (CLS) – visual stability.`,
     },
     {
       name: 'Crawler',
-      definition: `See Spider.`,
+      definition: `See <a className="link" href="#Spider">Spider.</a>`,
     },
     {
       name: 'Crawling',
@@ -630,7 +618,7 @@ Query Deserves Freshness (QDF) is part of the Google algorithm that determines w
     },
     {
       name: 'Gateway Page',
-      definition: `See also: Doorway Page. A web page that offers very little value to human visitors because they are designed almost entirely for the search engines. Its sole purpose is to drive traffic to another page.`,
+      definition: `See also: <a href="#Doorway-Page">Doorway Page.</a> A web page that offers very little value to human visitors because they are designed almost entirely for the search engines. Its sole purpose is to drive traffic to another page.`,
     },
     {
       name: 'Google',
@@ -811,7 +799,7 @@ Government TLD domains are tightly regulated and trusted sources of information.
     },
     {
       name: 'Hyperlinks',
-      definition: `See Links. `,
+      definition: `See <a href="#Link">Links.</a> `,
     },
     {
       name: 'Inbound Links',
@@ -863,7 +851,7 @@ Government TLD domains are tightly regulated and trusted sources of information.
     },
     {
       name: 'Key Phrase (or Keyword Phrase)',
-      definition: `See Keyword `,
+      definition: `See <a href="#Keyword">Keyword.</a> `,
     },
     {
       name: 'Keyword',
@@ -1036,7 +1024,7 @@ Nofollow is now considered a ‘hint’ which means they may still use some info
     },
     {
       name: 'Mozilla Firefox',
-      definition: `See Firefox. `,
+      definition: `See <a href="#Firefox">Firefox.</a> `,
     },
     {
       name: 'MSN (Bing)',
@@ -1109,7 +1097,7 @@ Nofollow is now considered a ‘hint’ which means they may still use some info
 
     {
       name: 'Page Title',
-      definition: `See Title Tags`,
+      definition: `See <a href="#Title-Tag">Title Tag.</a>`,
     },
     {
       name: 'Pagejacking',
@@ -1261,7 +1249,7 @@ Also known as: Ranking Signal.`,
     },
     {
       name: 'Robot',
-      definition: `See Spider.`,
+      definition: `See <a href="#Spider">Spider.</a>`,
     },
     {
       name: 'Robots.txt',
@@ -1341,7 +1329,7 @@ Also known as: Ranking Signal.`,
     },
     {
       name: 'Session',
-      definition: `See User Session.`,
+      definition: `See <a href="#User-Session">User Session.</a>`,
     },
     {
       name: 'Share of Voice',
@@ -1561,7 +1549,7 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
     },
     {
       name: 'Web Analytics',
-      definition: `See Analytics`,
+      definition: `See <a href="#Analytics">Analytics.</a>`,
     },
     {
       name: 'Web Browser',
@@ -1706,3 +1694,7 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
 function toSlug(str) {
   return str.replace(/([^a-zA-Z0-9.])/gm, '-')
 }
+
+// const handleChange = (e) => {
+// 	e.preventDefault();
+// }

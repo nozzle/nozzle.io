@@ -29,7 +29,7 @@ const Wrap = styled('div')`
   ${tw`flex flex-nowrap m-2 w-auto text-left justify-center`}
 `
 const GlossaryTermStyles = styled('div')`
-  ${tw`flex flex-wrap flex-auto m-2 justify-center max-w-4xl place-content-center`}
+  ${tw`flex flex-wrap flex-auto m-2 max-w-4xl justify-start`}
 `
 const Box = styled('div')`
   ${tw`p-5 mb-5 pt-16 mt--12 h-auto w-full 
@@ -1764,7 +1764,6 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
     ]
 
     if (searchInput.length > 0) {
-      console.log(searchInput)
       baseTerms.filter(term => {
         return term.name.match(searchInput) && term.name.length > 1
       })

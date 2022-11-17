@@ -11,6 +11,20 @@ const Top = styled('div')`
   ${'' /* ${angle('left')}; */}
   ${tw` w-auto mb-4 items-center overflow-hidden text-white bg-primaryDarker pt-5/100 pb-10 px-3/20 relative z-0 text-center`}
 `
+const SearchBar = styled('div')`
+  ${tw`bg-white w-11/12 m-auto flex rounded-2xl px-2 items-center
+	xl:w-5/12
+	md:w-9/12`}
+  > input {
+    ${tw` text-primaryDarker text-2xl rounded-2xl border-none w-10/12 
+		focus-visible:outline-none`}
+  }
+`
+const SearchBarIcon = styled(Icon)`
+  ${tw`text-primaryDarker w-10 text-xl
+		hover:(cursor-pointer text-primaryLight)
+	`}
+`
 const Wrap = styled('div')`
   ${tw`flex flex-nowrap m-2 w-auto text-left justify-center`}
 `
@@ -50,19 +64,16 @@ const Shortcuts = styled('div')`
     @media (min-height: 875px) {
       font-size: 1rem;
     }
-
     @media (max-height: 500px) {
       display: none;
     }
   }
 `
-
 const AlphabetSectionHeader = styled('div')`
   ${tw`font-bold text-7xl w-full text-primaryDarker`}
   border-bottom: 1px solid;
   border-color: primaryDarker;
 `
-
 const AlphabetLetter = styled('a')`
   ${tw`
     text-center text-gray-50
@@ -70,20 +81,16 @@ const AlphabetLetter = styled('a')`
 		lg:(text-xl pl-0.5 pr-0.5)
 		xl:(text-[1.6rem] leading-8 pt-0.5 pb-0.5)
   `}
-
   @media (max-height: 1010px) {
     font-size: 1.25rem;
     line-height: 1.65rem;
   }
-
   @media (max-height: 865px) {
     line-height: 1.5rem;
   }
-
   @media (max-height: 680px) {
     line-height: 1.4rem;
   }
-
   ${props => props.disabled && tw`opacity-40`}
 `
 const DefinitionWrapper = styled('div')`
@@ -97,22 +104,6 @@ const Definition = styled(Smackdown)`
   > div > p > a {
     ${tw`hover:(underline)`}
   }
-`
-
-const SearchBar = styled('div')`
-  ${tw`bg-white w-11/12 m-auto flex rounded-2xl px-2 items-center
-	xl:w-5/12
-	md:w-9/12`}
-  > input {
-    ${tw` text-primaryDarker text-2xl rounded-2xl border-none w-10/12 
-		focus-visible:outline-none`}
-  }
-`
-
-const SearchBarIcon = styled(Icon)`
-  ${tw`text-primaryDarker w-10 text-xl
-		hover:(cursor-pointer text-primaryLight)
-	`}
 `
 
 export default function Glossary() {

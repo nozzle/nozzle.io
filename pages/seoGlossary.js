@@ -57,6 +57,12 @@ const Shortcuts = styled('div')`
   }
 `
 
+const AlphabetSectionHeader = styled('div')`
+  ${tw`font-bold text-7xl w-full text-primaryDarker`}
+  border-bottom: 1px solid;
+  border-color: primaryDarker;
+`
+
 const AlphabetLetter = styled('a')`
   ${tw`
     text-center text-gray-50
@@ -148,6 +154,7 @@ export default function Glossary() {
         <div>
           {Object.keys(termsByLetter).map(letter => {
             const term = termsByLetter[letter]
+            console.log(termsByLetter)
             letter = letter.toUpperCase()
 
             if (!term) {
@@ -163,7 +170,11 @@ export default function Glossary() {
         <Wrap>
           <GlossaryTermStyles>
             {terms.map((term, i) => {
-              return (
+              return term.name.length === 1 ? (
+                <AlphabetSectionHeader id={term.id} href={`#${term.id}`}>
+                  {term.name}
+                </AlphabetSectionHeader>
+              ) : (
                 <Box>
                   <Text>
                     <Name id={term.id}>
@@ -191,6 +202,10 @@ export default function Glossary() {
 
   function generateTerms() {
     const baseTerms = [
+      {
+        name: 'A',
+        definition: '',
+      },
       {
         name: 'Absolute Link',
         definition: `A hyperlink containing the full URL. An absolute link specifies the complete transfer protocol, domain name, and file name.`,
@@ -261,6 +276,9 @@ Algorithm Refresh: The search engine re-runs an existing algorithm using the exa
       {
         name: 'Authority',
         definition: `The combination of signals search engines use to assess importance or weight given to websites and webpages for the purposes of ranking.`,
+      },
+      {
+        name: 'B',
       },
       {
         name: 'B2B',
@@ -356,6 +374,9 @@ The structure is simple. It is organized by starting with the home page and list
 • The domain’s content management system changed
 
 Most large websites will have some broken links on their site, but if there are too many of them it will interfere with the user experience and tell the search engines that the site is outdated and less relevant, which can damage its rankings.`,
+      },
+      {
+        name: 'C',
       },
       {
         name: 'Cache',
@@ -495,6 +516,9 @@ Cumulative Layout Shift (CLS) – visual stability.`,
         definition: `All of the potential moments (or touchpoints) at which a prospect is exposed to or engages with a brand. All of these interactions are designed to eventually persuade, influence, and convert that prospect to become a customer, client, or subscriber. Typically made up of four main stages: Awareness, Consideration, Decision, Retention.`,
       },
       {
+        name: 'D',
+      },
+      {
         name: 'Database-driven',
         definition: `Refers to a website that is connected to a database. The web page content is based, at least in part, on information that is contained in the database.`,
       },
@@ -573,6 +597,9 @@ A score, between 0-100, was developed by SEO software company Moz. It’s used t
         definition: `Content that can change over time, or to serve different content to different users based on their behavior or interests. It usually uses a dynamic language to help render the page.`,
       },
       {
+        name: 'E',
+      },
+      {
         name: 'E-A-T',
         definition: `Expertise, Authoritativeness, and Trustworthiness is a concept taken from the Google Search Quality Evaluator Guidelines that has become known as E-A-T.
 
@@ -617,6 +644,9 @@ Also known as a natural link.`,
       {
         name: 'External Link',
         definition: `A link that points to another domain. Contrary to what many people believe, linking to outside, related resources is a good way to help search engines understand your site. If you are linking to high quality content, it can reflect well on your own site.`,
+      },
+      {
+        name: 'F',
       },
       {
         name: 'Favicon',
@@ -672,6 +702,9 @@ Query Deserves Freshness (QDF) is part of the Google algorithm that determines w
       {
         name: 'FTP',
         definition: `File Transfer Protocol. This protocol allows users to transfer data between computers. There are many free or cheap FTP programs, and many content management systems include FTP capabilities. These can make it much easier to exchange or update content.`,
+      },
+      {
+        name: 'G',
       },
       {
         name: 'Gateway Page',
@@ -777,6 +810,9 @@ Government TLD domains are tightly regulated and trusted sources of information.
         definition: `A popular link building tactic that involves developing content for other websites in exchange for a backlink pointing at your own page.`,
       },
       {
+        name: 'H',
+      },
+      {
         name: 'Hallway Page',
         definition: `A web page that is used as an index to a group of other pages you want to make sure the search engine spiders find. The spider starts by indexing the hallway page and then follows all the links to those other pages.`,
       },
@@ -859,6 +895,9 @@ Government TLD domains are tightly regulated and trusted sources of information.
         definition: `See <a href="#Link">Links.</a> `,
       },
       {
+        name: 'I',
+      },
+      {
         name: 'Inbound Links',
         definition: `Also called “backlinks”. A link from an off-site page to the website. They are used to determine a site’s link popularity. `,
       },
@@ -895,12 +934,18 @@ Government TLD domains are tightly regulated and trusted sources of information.
         definition: `Internet Service Provider. An ISP can provide a wide range of different services related to the internet. Some common services include internet connections, email, web hosting, and more. While most often thought of as a commercial business that charges a monthly fee, an ISP can be any entity (such as a school, university, or government organization) that provides access to the internet. `,
       },
       {
+        name: 'J',
+      },
+      {
         name: 'Java Applets',
         definition: `Smaller programs that are written in the Java programming language. These programs are then embedded into web pages. These programs run on a user’s computer rather than the web server. Most browsers have discontinued Java applet support, so it is important to note that if the website navigation or content is in an applet, it will be invisible to the search engines. `,
       },
       {
         name: 'JavaScript',
         definition: `A scripting language that is used to develop interactive elements on a web page. `,
+      },
+      {
+        name: 'K',
       },
       {
         name: 'Key Performance Indicators (KPIs)',
@@ -951,6 +996,9 @@ Keyword stemming is Google’s ability to understand the variations of a keyword
       {
         name: 'Knowledge Panel',
         definition: `A box that appears at the top of, or on the right side (desktop only), of page 1 of Google’s search results for relevant queries. This panel contains facts and information on people, places, and things, as well as links to related websites or Google searches. `,
+      },
+      {
+        name: 'L',
       },
       {
         name: 'Landing Page',
@@ -1039,6 +1087,9 @@ Nofollow is now considered a ‘hint’ which means they may still use some info
         definition: `Longer, more specific keyword phrases that tend to generate less traffic but produce a higher conversion rate. For example, someone searching for "red [brand name] shoes" has a specific product in mind and is probably ready to make a purchase. Someone searching for "shoes", on the other hand, is probably still shopping around and considering a lot of different options. `,
       },
       {
+        name: 'M',
+      },
+      {
         name: 'Machine Learning',
         definition: `A subset of Artificial Intelligence in which a system uses data to learn and adjust a complex process without human intervention. `,
       },
@@ -1088,6 +1139,9 @@ Nofollow is now considered a ‘hint’ which means they may still use some info
         definition: `Can refer to Microsoft Network and their search engine. Now, though, the search engine provided by Microsoft is called "Bing." `,
       },
       {
+        name: 'N',
+      },
+      {
         name: 'Navigation Bar (Nav Bar)',
         definition: `The navigation links on a website, usually arranged in a row along the top or down the side of the page. Intuitive navigation is a crucial component of a website because it will help lead visitors deeper into the site and direct search engine spiders to the most important content. `,
       },
@@ -1124,6 +1178,9 @@ Nofollow is now considered a ‘hint’ which means they may still use some info
         definition: `After search engines moved to secure search in 2011, keyword data was removed from Google Analytics, replaced with “not provided”, thus making it impossible to know which queries were responsible for visitors finding a website. `,
       },
       {
+        name: 'O',
+      },
+      {
         name: 'Off-Page SEO',
         definition: `Demand generation and brand awareness activities that take place outside of a website. In addition to link building, promotion tactics can include social media marketing, content marketing, email marketing, influencer marketing, and even offline marketing channels (e.g., TV, radio, billboards). `,
       },
@@ -1151,7 +1208,9 @@ Nofollow is now considered a ‘hint’ which means they may still use some info
         name: 'Outbound Links',
         definition: `A link on a website that points to a website on a different domain.`,
       },
-
+      {
+        name: 'P',
+      },
       {
         name: 'Page Title',
         definition: `See <a href="#Title-Tag">Title Tag.</a>`,
@@ -1219,6 +1278,9 @@ Also known as: Buyer Persona, Marketing Persona`,
         definition: `See: Rank`,
       },
       {
+        name: 'Q',
+      },
+      {
         name: 'QDF',
         definition: `Stands for query deserves freshness, where a search engine might decide to show newer webpages in search results (rather than older pages) if a particular search term is trending, perhaps because a news event has resulted in a surge in searches on that topic.`,
       },
@@ -1233,6 +1295,9 @@ Also known as: Buyer Persona, Marketing Persona`,
       {
         name: 'Query',
         definition: `The keyword or phrase that a user enters into a search engine database. `,
+      },
+      {
+        name: 'R',
       },
       {
         name: 'Rank',
@@ -1319,6 +1384,9 @@ Also known as: Ranking Signal.`,
       {
         name: 'RSS',
         definition: `Real Simple Syndication. A method of syndicating information through a feed reader or other software that allows users to set up subscriptions to the content they are interested in.`,
+      },
+      {
+        name: 'S',
       },
       {
         name: 'Safari',
@@ -1469,6 +1537,9 @@ Also known as: A/B Testing.`,
         definition: `Pages in Google’s supplemental index. These pages will only be shown after normal results. Pages end up in this index for various reasons, including a loss of inbound link popularity or the search engine deciding that the page is just duplicate content.`,
       },
       {
+        name: 'T',
+      },
+      {
         name: 'Tagging, Tags',
         definition: `Word descriptions that can be associated with a piece of information.`,
       },
@@ -1537,6 +1608,9 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
         definition: `Generally applies to the history of a domain (e.g., whether it cites or features expert sources, builds a positive reputation, adheres to webmaster Guidelines).`,
       },
       {
+        name: 'U',
+      },
+      {
         name: 'Unethical SEO',
         definition: `Techniques that are considered unscrupulous and will often result in the perpetrator being banned from the search engines. See also: Black Hat SEO, SPAM, Doorway Page, Keyword Stuffing.`,
       },
@@ -1581,6 +1655,9 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
         definition: `When an internet user accesses a website for a given interval. A user session is usually considered to be finished after a chosen period of inactivity).`,
       },
       {
+        name: 'V',
+      },
+      {
         name: 'Vertical Search',
         definition: `A specialized type of search where the focus is only on a specific topic, type of content, or media. For example, YouTube (video), Amazon (shopping), Kayak (travel), Yelp (business reviews).`,
       },
@@ -1603,6 +1680,9 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
       {
         name: 'Voice Search',
         definition: `A type of voice-activated technology that allows users to speak into a device (usually a smartphone) to ask questions or conduct an online search.`,
+      },
+      {
+        name: 'W',
       },
       {
         name: 'Web Analytics',
@@ -1665,6 +1745,9 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
         definition: `An open source web publishing and Content Management System (CMS). It is most often used as a blogging platform and has been designed for managing content that is frequently updated.`,
       },
       {
+        name: 'X',
+      },
+      {
         name: 'XHTML',
         definition: `Extensible HyperText Markup Language. A class of specifications that can move HTML so that it conforms to XML formatting.`,
       },
@@ -1675,6 +1758,9 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
       {
         name: 'XML Sitemap',
         definition: `An XML file that lists all the available URLs on a site. The purpose of the page is to notify search engines about the URLs that are available for indexing, and it can include information about the pages, like when it was added or updated and how important it is in the context of the site. From an SEO standpoint, your site should already be completely accessible to the search engines, but there are times (like sites that are filled with Flash or AJAX) when a sitemap can be a huge benefit.`,
+      },
+      {
+        name: 'Y',
       },
       {
         name: 'Yahoo!',
@@ -1689,7 +1775,7 @@ Also known as: gTLD (Generic Top-Level Domain); Domain Extension.`,
     if (searchInput.length > 0) {
       console.log(searchInput)
       baseTerms.filter(term => {
-        return term.name.match(searchInput)
+        return term.name.match(searchInput) && term.name.length > 1
       })
     }
 

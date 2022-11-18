@@ -284,7 +284,7 @@ const links = [
       },
 
       {
-        name: 'PAA Expansion Deliverable',
+        name: 'PAA Content Idea Report',
         path: '/paa',
       },
       {

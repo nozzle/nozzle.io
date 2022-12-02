@@ -247,7 +247,7 @@ export default function Home() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Head
-        title="Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Tracker - Nozzle"
+        title="SEO Enterprise Rank Tracker - A Keyword Rank Tracking Tool Like No Other - Nozzle.io"
         description="A keyword rank tracker offering you more enterprise level SERP data than ever before. If you want an SEO rank tracker with all the data, give Nozzle a test drive today."
       />
       <main>

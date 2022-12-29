@@ -174,7 +174,7 @@ export default function Pricing() {
           setEnterprise={value => setEnterprise(value)}
           id="plans"
         />
-        <PricingCalculator plans={plans} monthly={monthly} id="calculator" />
+        <PricingCalculator id="calculator" />
         <SectionFaq id="faq">
           <Container>
             <Center>

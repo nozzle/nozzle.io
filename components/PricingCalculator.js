@@ -23,9 +23,12 @@ export default function PricingCalculator() {
 
   React.useEffect(() => {
     const callback = event => {
-      if (event.data && event.data.type === 'nz-size') {
-        ref.current.style.height = event.data.size + 'px'
-      }
+      try {
+        const data = JSON.parse(event.data)
+        if (data && data.type === 'nz-size') {
+          ref.current.style.height = data.size + 'px'
+        }
+      } catch (err) {}
     }
 
     window.addEventListener('message', callback, false)

@@ -104,10 +104,6 @@ const faqs = [
     a: `The number of SERPs you’ll need depends on how many keywords you track & how frequently you refresh the data, as well as the number of devices, and locations you want to monitor. Use the calculator above to figure out how many SERPs you will need for your specific situation.`,
   },
   {
-    q: `How long are SERPs good for?`,
-    a: `SERPs expire at the end of the month.`,
-  },
-  {
     q: `What are overage charges and when are they billed?`,
     a: `Each plan comes with a total number of SERPs included each month. Overage charges are accrued when you exceed your plan’s monthly limit. If you exceed your number of SERPs in a given month, we charge you for those in arrears.`,
   },

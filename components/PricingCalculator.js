@@ -38,7 +38,6 @@ export default function PricingCalculator() {
   return (
     <CalculatorStyles>
       <Container>
-        <Title>How many SERPs do I need per month?</Title>
         <Iframe
           ref={ref}
           // src="https://app.nozzle.io/usage-calculator?disableHubspot=true&showIntro=true"

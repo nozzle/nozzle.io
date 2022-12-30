@@ -19,12 +19,30 @@ const Iframe = styled('iframe')`
 `
 
 export default function PricingCalculator() {
+  const ref = React.useRef()
+
+  React.useEffect(() => {
+    const callback = event => {
+      if (event.data && event.data.type === 'nz-size') {
+        ref.current.style.height = event.data.size + 'px'
+      }
+    }
+
+    window.addEventListener('message', callback, false)
+
+    return () => {
+      window.removeEventListener('message', callback, false)
+    }
+  }, [])
+
   return (
     <CalculatorStyles>
       <Container>
         <Title>How many SERPs do I need per month?</Title>
         <Iframe
-          src="https://app.nozzle.io/usage-calculator?disableHubspot=true&showIntro=true"
+          ref={ref}
+          // src="https://app.nozzle.io/usage-calculator?disableHubspot=true&showIntro=true"
+          src="http://localhost:3000/usage-calculator?disableHubspot=true&showIntro=true"
           title="Pricing Calculator"
           id="pricing-calculator-embed"
         />

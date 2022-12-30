@@ -43,8 +43,8 @@ export default function PricingCalculator() {
       <Container>
         <Iframe
           ref={ref}
-          // src="https://app.nozzle.io/usage-calculator?disableHubspot=true&showIntro=true"
-          src="http://localhost:3000/usage-calculator?disableHubspot=true&showIntro=true"
+          src="https://app.nozzle.io/usage-calculator?disableHubspot=true&showIntro=true"
+          // src="http://localhost:3000/usage-calculator?disableHubspot=true&showIntro=true"
           title="Pricing Calculator"
           id="pricing-calculator-embed"
         />

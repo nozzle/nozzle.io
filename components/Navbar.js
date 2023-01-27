@@ -282,6 +282,10 @@ const links = [
         name: 'Blog',
         path: '/blog',
       },
+      {
+        name: 'Help Center',
+        path: 'https://help.nozzle.io/',
+      },
 
       {
         name: 'PAA Content Idea Report',

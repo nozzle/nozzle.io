@@ -10,8 +10,6 @@ import {
 import reset from 'styled-reset'
 //
 
-import 'swagger-ui-react/swagger-ui.css'
-
 import Theme, { ThemeContext } from 'utils/Theme'
 
 import Head from 'components/Head'

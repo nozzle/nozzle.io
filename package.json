@@ -27,6 +27,7 @@
     "react-icons": "^4.2.0",
     "react-lite-youtube-embed": "^2.2.1-a",
     "react-smackdown": "^0.8.8",
+    "react-syntax-highlighter": "15",
     "react-window": "^1.8.6",
     "styled-components": "^5.0.1",
     "styled-reset": "^4.1.2",

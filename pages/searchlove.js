@@ -81,7 +81,7 @@ export default function Trial() {
   return (
     <>
       <Head
-        title="Searchlove London page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
+        title="Searchlove San Diego page for Nozzle - Keyword Rank Tracker Tool - Google SEO Rank Tracker - Online Website Enterprise Keyword Rank Checker"
         description="Searchlove London page for Nozzle - A keyword rank tracker offering you more enterprise level SERP data than ever before."
       />
       <div
@@ -223,7 +223,7 @@ export default function Trial() {
               padding-bottom: 2.5vw;
             `}
           >
-            SearchLove London attendees who fill out the form below will get 50%
+            SearchLove San Diego attendees who fill out the form below will get 50%
             off the first year with Nozzle!*
           </div>
           <div
@@ -237,9 +237,9 @@ export default function Trial() {
               font-weight: lighter;
             `}
           >
-            *Discount will be applied when you sign up before November 30th,
-            2022.
-            <HubspotForm id="79560591-52a7-455f-a2fb-d3ced96a38b4" />
+            *Discount will be applied when you sign up before April 30th,
+            2023.
+            <HubspotForm id="847242c9-34ba-4d75-94d4-8e0cc816bb03" />
           </div>
           <div css={tw`px-10`}>
             <div

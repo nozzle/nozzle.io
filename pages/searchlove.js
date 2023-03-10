@@ -200,7 +200,7 @@ export default function Trial() {
                   font-weight: lighter;
                 `}
               >
-                SERPS are changing.
+                SERPs are changing.
               </div>
               <div
                 css={`

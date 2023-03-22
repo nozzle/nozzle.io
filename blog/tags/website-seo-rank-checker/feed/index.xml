@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/tags/website-seo-rank-checker/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Fri, 03 Mar 2023 05:05:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Find Your Top SERP Competitors Across All Your Keyword Groups</title>
+		<link>/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups</link>
+					<comments>/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Tue, 25 May 2021 19:58:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[SERP Keyword Checker]]></category>
+		<category><![CDATA[Website Rankings Checker]]></category>
+		<category><![CDATA[Website SEO Rank Checker]]></category>
+		<guid isPermaLink="false">/?p=11494</guid>
+
+					<description><![CDATA[How to use Nozzle to easily find your top competitors in the SERPs.]]></description>
+		
+					<wfw:commentRss>/blog/finding-your-top-serp-competitors-across-all-your-keyword-groups/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>The Best Tools for Unstoppable Competitive Analysis</title>
+		<link>/blog/the-best-tools-for-unstoppable-competitive-analysis</link>
+					<comments>/blog/the-best-tools-for-unstoppable-competitive-analysis#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Tue, 02 Feb 2021 21:09:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[SERP Checker Tool]]></category>
+		<category><![CDATA[Website Rankings Checker]]></category>
+		<category><![CDATA[Website SEO Rank Checker]]></category>
+		<guid isPermaLink="false">/?p=11500</guid>
+
+					<description><![CDATA[80+ SEOs weigh in on competitive analysis tools that can be used in conjunction with Nozzle.]]></description>
+		
+					<wfw:commentRss>/blog/the-best-tools-for-unstoppable-competitive-analysis/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Nozzle’s Crackerjack Calculation of Clickthrough Rate</title>
+		<link>/blog/nozzles-crackerjack-calculation-of-clickthrough-rate</link>
+					<comments>/blog/nozzles-crackerjack-calculation-of-clickthrough-rate#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Mon, 18 Jan 2021 20:01:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Search Engine Rank Check]]></category>
+		<category><![CDATA[SEO Ranking Monitor]]></category>
+		<category><![CDATA[Website SEO Rank Checker]]></category>
+		<guid isPermaLink="false">/?p=11392</guid>
+
+					<description><![CDATA[Take a look at the foolproof methods Nozzle uses to calculate clickthrough rate.]]></description>
+		
+					<wfw:commentRss>/blog/nozzles-crackerjack-calculation-of-clickthrough-rate/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/tags/seo-ranking-monitor/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Sun, 26 Feb 2023 01:08:16 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How to Use Nozzle to Track Video Rankings</title>
+		<link>/blog/video-rank-tracker</link>
+					<comments>/blog/video-rank-tracker#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Wed, 02 Jun 2021 17:23:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[YouTube]]></category>
+		<category><![CDATA[Search Rank Tracking Software]]></category>
+		<category><![CDATA[SEO Ranking Monitor]]></category>
+		<category><![CDATA[SERP Keyword Checker]]></category>
+		<guid isPermaLink="false">/?p=11377</guid>
+
+					<description><![CDATA[It's time to learn how to monitor videos in the SERPs--you'll thank us later]]></description>
+		
+					<wfw:commentRss>/blog/video-rank-tracker/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Hourly Rank Tracking: the When, the Why, and the How</title>
+		<link>/blog/hourly-rank-tracking</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Mon, 22 Feb 2021 19:41:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Google SERP Tracker]]></category>
+		<category><![CDATA[Search Rank Tracking Software]]></category>
+		<category><![CDATA[SEO Ranking Monitor]]></category>
+		<guid isPermaLink="false">/?p=11270</guid>
+
+					<description><![CDATA[Some scenarios require you to track your keywords more than once a day. Find out what they are]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Nozzle’s Crackerjack Calculation of Clickthrough Rate</title>
+		<link>/blog/nozzles-crackerjack-calculation-of-clickthrough-rate</link>
+					<comments>/blog/nozzles-crackerjack-calculation-of-clickthrough-rate#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Mon, 18 Jan 2021 20:01:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Search Engine Rank Check]]></category>
+		<category><![CDATA[SEO Ranking Monitor]]></category>
+		<category><![CDATA[Website SEO Rank Checker]]></category>
+		<guid isPermaLink="false">/?p=11392</guid>
+
+					<description><![CDATA[Take a look at the foolproof methods Nozzle uses to calculate clickthrough rate.]]></description>
+		
+					<wfw:commentRss>/blog/nozzles-crackerjack-calculation-of-clickthrough-rate/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Track SERP Rankings for an Unlimited Amount of Competitors with Nozzle</title>
+		<link>/blog/track-serp-rankings-for-an-unlimited-amount-of-competitors-with-nozzle</link>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Thu, 26 Mar 2020 15:58:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Google Site Rank Checker]]></category>
+		<category><![CDATA[SEO Ranking Monitor]]></category>
+		<category><![CDATA[SERP Checker Tool]]></category>
+		<guid isPermaLink="false">/?p=11235</guid>
+
+					<description><![CDATA[Why does Nozzle allow you to track an unlimited amount of competitors? Because we can. :)]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

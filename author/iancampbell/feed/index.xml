@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/iancampbell/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Mon, 27 Feb 2023 21:21:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Social Media in Google: Where Do Social Results Rank in the SERPs?</title>
+		<link>/blog/social-media-serp-statistics</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 04 Aug 2022 15:43:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11231</guid>
+
+					<description><![CDATA[Social media results do appear in organic Google search results. But are they worth optimizing for? See the data yourself.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>The Power of Flexible Scheduling</title>
+		<link>/blog/the-power-of-flexible-scheduling</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Wed, 15 Jun 2022 18:38:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<guid isPermaLink="false">/?p=11268</guid>
+
+					<description><![CDATA[It's time to optimize your rank tracking strategy! Flexible scheduling with Nozzle gives you the opportunity to pay only for the data granularity you need without waste.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Introducing Nozzle&#8217;s Google Search Console Dashboard</title>
+		<link>/blog/introducing-nozzles-google-search-console-dashboard</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Wed, 15 Jun 2022 18:21:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11265</guid>
+
+					<description><![CDATA[Nozzle's Google Search Console Overview dashboard pulls live data from your Google Search Console account so you can see more ranking data in one place.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Use the Wayback Machine’s “Changes” Tool for SEO</title>
+		<link>/blog/wayback-machines-changes-tool-seo</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 26 May 2022 18:52:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11274</guid>
+
+					<description><![CDATA[The Wayback Machine's "Changes" tool is an overlooked SEO tool that's great for analyzing your own or your competitors' on-site optimization efforts.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>HARO: Worth It or Waste of Time?</title>
+		<link>/blog/haro-worth-it-or-waste-of-time</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Mon, 20 Dec 2021 19:06:00 +0000</pubDate>
+				<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11257</guid>
+
+					<description><![CDATA[Is HARO worth the effort? Here's our experience with HARO as a Source and as a Journalist.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Local Pack Competitor Analysis with Nozzle</title>
+		<link>/blog/google-local-rank-tracking</link>
+					<comments>/blog/google-local-rank-tracking#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 03 Jun 2021 19:19:00 +0000</pubDate>
+				<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Google SERP Tracker]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[SERP Checker Tool]]></category>
+		<guid isPermaLink="false">/?p=11478</guid>
+
+					<description><![CDATA[Time to get local]]></description>
+		
+					<wfw:commentRss>/blog/google-local-rank-tracking/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to Use Nozzle to Track Video Rankings</title>
+		<link>/blog/video-rank-tracker</link>
+					<comments>/blog/video-rank-tracker#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Wed, 02 Jun 2021 17:23:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[YouTube]]></category>
+		<category><![CDATA[Search Rank Tracking Software]]></category>
+		<category><![CDATA[SEO Ranking Monitor]]></category>
+		<category><![CDATA[SERP Keyword Checker]]></category>
+		<guid isPermaLink="false">/?p=11377</guid>
+
+					<description><![CDATA[It's time to learn how to monitor videos in the SERPs--you'll thank us later]]></description>
+		
+					<wfw:commentRss>/blog/video-rank-tracker/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Featured Snippet Competitor Analysis with Nozzle</title>
+		<link>/blog/featured-snippet-competitor-analysis</link>
+					<comments>/blog/featured-snippet-competitor-analysis#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Tue, 01 Jun 2021 20:02:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<guid isPermaLink="false">/?p=11496</guid>
+
+					<description><![CDATA[Analyzing the domains, URLs, webpages, and keywords of your competitors' featured snippets]]></description>
+		
+					<wfw:commentRss>/blog/featured-snippet-competitor-analysis/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Do I Need a Rank Tracker?</title>
+		<link>/blog/do-i-need-a-rank-tracker</link>
+					<comments>/blog/do-i-need-a-rank-tracker#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 20 May 2021 19:16:00 +0000</pubDate>
+				<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[Search Rank Tracking Software]]></category>
+		<guid isPermaLink="false">/?p=11476</guid>
+
+					<description><![CDATA[Do you really need a rank tracker? Read on to find out]]></description>
+		
+					<wfw:commentRss>/blog/do-i-need-a-rank-tracker/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Unlimited Keyword Rank Tracking with Nozzle</title>
+		<link>/blog/unlimited-keyword-rank-tracking</link>
+					<comments>/blog/unlimited-keyword-rank-tracking#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 08 Apr 2021 16:57:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[Search Rank Tracking Software]]></category>
+		<category><![CDATA[SERP Keyword Checker]]></category>
+		<guid isPermaLink="false">/?p=11360</guid>
+
+					<description><![CDATA[Nozzle was made to handle all the keywords you can throw at it]]></description>
+		
+					<wfw:commentRss>/blog/unlimited-keyword-rank-tracking/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

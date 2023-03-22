@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <filter id="Ellipse_288" x="341" y="255" width="210" height="210" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-_Switcher_Style_1_">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="_Switcher_Style_1_" data-name=" Switcher Style 1 " clip-path="url(#clip-_Switcher_Style_1_)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_544" data-name="Rectangle 544" width="208" height="66" rx="33" transform="translate(420 317)" fill="#888"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_288)">
+      <circle id="Ellipse_288-2" data-name="Ellipse 288" cx="60" cy="60" r="60" transform="translate(386 290)" fill="#fff"/>
+    </g>
+    <text id="Abc" transform="translate(210 371)" fill="#888" font-size="60" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">ABC</tspan></text>
+    <text id="Xyz" transform="translate(678 371)" fill="#888" font-size="60" font-family="Poppins-SemiBold, Poppins" font-weight="600" opacity="0.5"><tspan x="0" y="0">XYZ</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Pin_Center_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Pin_Center_Style_2" data-name="Pin Center Style 2" clip-path="url(#clip-Pin_Center_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g id="Ellipse_298" data-name="Ellipse 298" transform="translate(483 566)" fill="#888" stroke="#888" stroke-width="5">
+      <circle cx="17" cy="17" r="17" stroke="none"/>
+      <circle cx="17" cy="17" r="14.5" fill="none"/>
+    </g>
+    <line id="Line_98" data-name="Line 98" y2="456" transform="translate(500.5 137.5)" fill="none" stroke="#888" stroke-width="5"/>
+    <path id="angle-double-down" d="M12.723,109.878.272,97.528a1.01,1.01,0,0,1,0-1.43l1.666-1.666a1.01,1.01,0,0,1,1.43,0l10.07,9.969,10.07-9.969a1.01,1.01,0,0,1,1.43,0L26.6,96.1a1.01,1.01,0,0,1,0,1.43l-12.451,12.35A1.01,1.01,0,0,1,12.723,109.878Zm1.43-13.461L26.6,84.067a1.01,1.01,0,0,0,0-1.43l-1.666-1.666a1.01,1.01,0,0,0-1.43,0l-10.07,9.969L3.367,80.972a1.01,1.01,0,0,0-1.43,0L.272,82.637a1.01,1.01,0,0,0,0,1.43l12.451,12.35A1.01,1.01,0,0,0,14.153,96.418Z" transform="translate(487.025 19.325)" fill="#888"/>
+    <path id="layer-group" d="M.38,4.555,7.56,7.813a.789.789,0,0,0,.656,0L15.4,4.555a.689.689,0,0,0,0-1.234L8.217.064a.789.789,0,0,0-.656,0L.38,3.321A.689.689,0,0,0,.38,4.555ZM15.4,7.277l-1.791-.812L8.624,8.724a1.777,1.777,0,0,1-1.471,0L2.171,6.465.38,7.277a.688.688,0,0,0,0,1.233l7.18,3.255a.792.792,0,0,0,.656,0L15.4,8.51a.688.688,0,0,0,0-1.233Zm0,3.939-1.784-.809L8.624,12.669a1.777,1.777,0,0,1-1.471,0L2.164,10.407.38,11.216a.688.688,0,0,0,0,1.233L7.56,15.7a.792.792,0,0,0,.656,0L15.4,12.449A.688.688,0,0,0,15.4,11.216Z" transform="translate(492.211 575.019)" fill="#f2f2f2"/>
+    <g id="Rectangle_627" data-name="Rectangle 627" transform="translate(439 289)" fill="#d5d5d5" stroke="#888" stroke-width="3">
+      <rect width="122" height="122" stroke="none"/>
+      <rect x="1.5" y="1.5" width="119" height="119" fill="none"/>
+    </g>
+    <g id="Home" transform="translate(475.709 325.282)">
+      <path id="Path_7084" data-name="Path 7084" d="M45.254,49.431H30.425a.826.826,0,0,1-.824-.824V34.6H21.363V48.607a.825.825,0,0,1-.824.824H5.709a.825.825,0,0,1-.824-.824V23.068H1.323a.823.823,0,0,1-.547-1.44L24.389.62A.826.826,0,0,1,25.459.6l5.79,4.752V.824A.825.825,0,0,1,32.073,0h8.239a.824.824,0,0,1,.824.824V13.859l8.131,7.79a.824.824,0,0,1-.57,1.419H46.078V48.607A.825.825,0,0,1,45.254,49.431Z" transform="translate(-0.499 0)" fill="#888"/>
+    </g>
+  </g>
+</svg>

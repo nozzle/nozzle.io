@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Timeline_-_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Timeline_-_Style_2" data-name="Timeline - Style 2" clip-path="url(#clip-Timeline_-_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g id="Rectangle_622" data-name="Rectangle 622" transform="translate(189 166)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="1">
+      <rect width="226" height="164" stroke="none"/>
+      <rect x="0.5" y="0.5" width="225" height="163" fill="none"/>
+    </g>
+    <g id="Rectangle_623" data-name="Rectangle 623" transform="translate(585.934 425)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="1">
+      <rect width="226" height="164" stroke="none"/>
+      <rect x="0.5" y="0.5" width="225" height="163" fill="none"/>
+    </g>
+    <g id="Ellipse_298" data-name="Ellipse 298" transform="translate(487 574)" fill="#888" stroke="#888" stroke-width="5">
+      <circle cx="13" cy="13" r="13" stroke="none"/>
+      <circle cx="13" cy="13" r="10.5" fill="none"/>
+    </g>
+    <g id="Notification" transform="translate(537.232 161)">
+      <path id="Union_25" data-name="Union 25" d="M31.6,71.5a5,5,0,0,1-5-5V10a5,5,0,0,1,5-5H223.858a5,5,0,0,1,5,5V25.352l15.331,12-15.331,13.02V66.5a5,5,0,0,1-5,5Z" transform="translate(271.578 76.501) rotate(180)" fill="#888"/>
+      <text id="_26-6-2018" data-name="26-6-2018" transform="translate(62.768 52)" fill="#fff" font-size="35" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">26-6-2018</tspan></text>
+    </g>
+    <g id="Notification-2" data-name="Notification" transform="translate(176.232 434)">
+      <path id="Union_25-2" data-name="Union 25" d="M31.6,71.5a5,5,0,0,1-5-5V50.324L11.326,37.356,26.6,25.4V10a5,5,0,0,1,5-5H223.858a5,5,0,0,1,5,5V66.5a5,5,0,0,1-5,5Z" transform="translate(271.578 76.501) rotate(180)" fill="#888"/>
+      <text id="_26-6-2018-2" data-name="26-6-2018" transform="translate(62.768 52)" fill="#fff" font-size="35" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">26-6-2018</tspan></text>
+    </g>
+    <line id="Line_98" data-name="Line 98" y2="464" transform="translate(500.5 129.5)" fill="none" stroke="#888" stroke-width="5"/>
+    <line id="Line_1" data-name="Line 1" x2="184.831" transform="translate(209.425 271.61)" fill="none" stroke="#f2f2f2" stroke-width="8"/>
+    <line id="Line_107" data-name="Line 107" x1="184.831" transform="translate(606.677 530.609)" fill="none" stroke="#f2f2f2" stroke-width="8"/>
+    <line id="Line_2" data-name="Line 2" x2="145.565" transform="translate(248.988 290.287)" fill="none" stroke="#f2f2f2" stroke-width="8"/>
+    <line id="Line_108" data-name="Line 108" x1="145.565" transform="translate(606.381 549.287)" fill="none" stroke="#f2f2f2" stroke-width="8"/>
+    <line id="Line_5" data-name="Line 5" x2="136.492" transform="translate(258.14 205.289)" fill="none" stroke="#888" stroke-width="15"/>
+    <line id="Line_105" data-name="Line 105" x1="136.492" transform="translate(606.301 464.289)" fill="none" stroke="#888" stroke-width="15"/>
+    <g id="Ellipse_294" data-name="Ellipse 294" transform="translate(461 161)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="5">
+      <circle cx="39.5" cy="39.5" r="39.5" stroke="none"/>
+      <circle cx="39.5" cy="39.5" r="37" fill="none"/>
+    </g>
+    <g id="Ellipse_296" data-name="Ellipse 296" transform="translate(461 425)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="5">
+      <circle cx="39.5" cy="39.5" r="39.5" stroke="none"/>
+      <circle cx="39.5" cy="39.5" r="37" fill="none"/>
+    </g>
+    <g id="Home" transform="translate(486.901 187.48)">
+      <path id="Path_7084" data-name="Path 7084" d="M24.6,26.615H16.612a.445.445,0,0,1-.444-.444V18.63H11.732v7.541a.444.444,0,0,1-.444.444H3.3a.444.444,0,0,1-.444-.444V12.42H.943a.443.443,0,0,1-.295-.775L13.362.334a.445.445,0,0,1,.576-.012l3.117,2.559V.444A.444.444,0,0,1,17.5,0h4.436a.444.444,0,0,1,.444.444V7.462l4.378,4.194a.443.443,0,0,1-.307.764H25.04V26.171A.444.444,0,0,1,24.6,26.615Z" transform="translate(-0.499 0)" fill="#888"/>
+    </g>
+    <g id="Home-2" data-name="Home" transform="translate(486.901 451.48)">
+      <path id="Path_7084-2" data-name="Path 7084" d="M24.6,26.615H16.612a.445.445,0,0,1-.444-.444V18.63H11.732v7.541a.444.444,0,0,1-.444.444H3.3a.444.444,0,0,1-.444-.444V12.42H.943a.443.443,0,0,1-.295-.775L13.362.334a.445.445,0,0,1,.576-.012l3.117,2.559V.444A.444.444,0,0,1,17.5,0h4.436a.444.444,0,0,1,.444.444V7.462l4.378,4.194a.443.443,0,0,1-.307.764H25.04V26.171A.444.444,0,0,1,24.6,26.615Z" transform="translate(-0.499 0)" fill="#888"/>
+    </g>
+    <path id="angle-double-down" d="M7.766,98.523.156,90.975a.618.618,0,0,1,0-.874l1.018-1.018a.618.618,0,0,1,.874,0L8.2,95.176l6.155-6.093a.618.618,0,0,1,.874,0L16.25,90.1a.618.618,0,0,1,0,.874L8.64,98.523A.618.618,0,0,1,7.766,98.523ZM8.64,90.3l7.61-7.548a.618.618,0,0,0,0-.874l-1.018-1.018a.618.618,0,0,0-.874,0L8.2,86.949,2.048,80.856a.618.618,0,0,0-.874,0L.156,81.874a.618.618,0,0,0,0,.874L7.766,90.3A.618.618,0,0,0,8.64,90.3Z" transform="translate(492.025 19.325)" fill="#888"/>
+    <path id="layer-group" d="M.288,3.462,5.748,5.938a.6.6,0,0,0,.5,0l5.459-2.477a.524.524,0,0,0,0-.938L6.247.047a.6.6,0,0,0-.5,0L.288,2.523A.524.524,0,0,0,.288,3.462ZM11.706,5.531l-1.361-.617L6.556,6.631a1.351,1.351,0,0,1-1.118,0L1.65,4.914.288,5.531a.523.523,0,0,0,0,.937L5.748,8.943a.6.6,0,0,0,.5,0l5.46-2.475a.523.523,0,0,0,0-.937Zm0,3L10.35,7.911,6.556,9.631a1.351,1.351,0,0,1-1.118,0L1.645,7.911.288,8.526a.523.523,0,0,0,0,.937l5.459,2.475a.6.6,0,0,0,.5,0l5.46-2.475A.523.523,0,0,0,11.706,8.526Z" transform="translate(494.003 581.008)" fill="#f2f2f2"/>
+    <line id="Line_104" data-name="Line 104" x2="59.036" transform="translate(334.805 241.845)" fill="none" stroke="#f2f2f2" stroke-width="2"/>
+    <line id="Line_106" data-name="Line 106" x1="59.036" transform="translate(607.093 500.845)" fill="none" stroke="#f2f2f2" stroke-width="2"/>
+    <g id="Path_7106" data-name="Path 7106" transform="translate(440.934 197.158) rotate(90)" fill="#d5d5d5">
+      <path d="M 18.04275131225586 26.50376319885254 L 0.5000050663948059 26.50376319885254 L 0.5000050663948059 1.57911479473114 L 18.04275131225586 26.50376319885254 Z" stroke="none"/>
+      <path d="M 0.9999942779541016 3.158227920532227 L 0.9999942779541016 26.00376319885254 L 17.07939720153809 26.00376319885254 L 0.9999942779541016 3.158227920532227 M -5.7220458984375e-06 1.9073486328125e-06 L 19.00608444213867 27.00376319885254 L -5.7220458984375e-06 27.00376319885254 L -5.7220458984375e-06 1.9073486328125e-06 Z" stroke="none" fill="#d5d5d5"/>
+    </g>
+    <g id="Path_7107" data-name="Path 7107" transform="translate(587.004 456.158) rotate(90)" fill="#d5d5d5">
+      <path d="M 0.4999997019767761 25.42476844787598 L 0.4999997019767761 0.5000030994415283 L 18.04252433776855 0.5000030994415283 L 0.4999997019767761 25.42476844787598 Z" stroke="none"/>
+      <path d="M 0.9999997019767761 23.84563446044922 L 17.07919120788574 1.000003099441528 L 0.9999997019767761 1.000003099441528 L 0.9999997019767761 23.84563446044922 M -3.12499992105586e-07 27.00390243530273 L -3.12499992105586e-07 3.12499992105586e-06 L 19.005859375 3.12499992105586e-06 L -3.12499992105586e-07 27.00390243530273 Z" stroke="none" fill="#d5d5d5"/>
+    </g>
+  </g>
+</svg>

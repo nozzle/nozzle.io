@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Audio_Player_-_Style_1">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Audio_Player_-_Style_1" data-name="Audio Player - Style 1" clip-path="url(#clip-Audio_Player_-_Style_1)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_547" data-name="Rectangle 547" width="800" height="233" rx="5" transform="translate(100 234)" fill="#888"/>
+    <path id="play" d="M28.8,14.6,4.912.478A3.239,3.239,0,0,0,0,3.28V31.513a3.254,3.254,0,0,0,4.912,2.8L28.8,20.2A3.254,3.254,0,0,0,28.8,14.6Z" transform="translate(484.16 338.969)" fill="#fff"/>
+    <path id="forward" d="M24.4,72.154l-9.359-7.8a1.562,1.562,0,0,0-2.559,1.2v15.6a1.561,1.561,0,0,0,2.559,1.2l9.359-7.8A1.565,1.565,0,0,0,24.4,72.154Zm-12.479,0-9.359-7.8A1.562,1.562,0,0,0,0,65.554v15.6a1.561,1.561,0,0,0,2.559,1.2l9.359-7.8A1.565,1.565,0,0,0,11.918,72.154Z" transform="translate(540.163 283.42)" fill="#d5d5d5"/>
+    <path id="backward" d="M.584,74.508l9.357,7.8a1.56,1.56,0,0,0,2.559-1.2v-15.6a1.56,1.56,0,0,0-2.559-1.2L.584,72.11A1.565,1.565,0,0,0,.584,74.508Zm12.476,0,9.357,7.8a1.56,1.56,0,0,0,2.559-1.2v-15.6a1.56,1.56,0,0,0-2.559-1.2l-9.357,7.8A1.565,1.565,0,0,0,13.061,74.508Z" transform="translate(433.41 283.465)" fill="#d5d5d5"/>
+    <line id="Line_98" data-name="Line 98" x1="643" transform="translate(169.5 433.5)" fill="none" stroke="#d5d5d5" stroke-width="5"/>
+    <g id="Ellipse_298" data-name="Ellipse 298" transform="translate(159 423)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="5">
+      <circle cx="11" cy="11" r="11" stroke="none"/>
+      <circle cx="11" cy="11" r="8.5" fill="none"/>
+    </g>
+    <path id="volume-down" d="M13.569,65.443,7.954,71.057H1.514A1.514,1.514,0,0,0,0,72.571v9.087a1.514,1.514,0,0,0,1.514,1.514h6.44l5.614,5.613a1.515,1.515,0,0,0,2.585-1.071v-21.2A1.516,1.516,0,0,0,13.569,65.443Zm7.774,6.82a1.515,1.515,0,0,0-1.461,2.654,2.488,2.488,0,0,1,0,4.394,1.515,1.515,0,1,0,1.461,2.654,5.518,5.518,0,0,0,0-9.7Z" transform="translate(851 356.773)" fill="#d5d5d5"/>
+    <path id="list-ul" d="M2.352,48A2.352,2.352,0,1,0,4.7,50.352,2.352,2.352,0,0,0,2.352,48Zm0,7.839A2.352,2.352,0,1,0,4.7,58.19a2.352,2.352,0,0,0-2.352-2.352Zm0,7.839A2.352,2.352,0,1,0,4.7,66.029a2.352,2.352,0,0,0-2.352-2.352Zm21.949.784H8.623a.784.784,0,0,0-.784.784v1.568a.784.784,0,0,0,.784.784H24.3a.784.784,0,0,0,.784-.784V65.245A.784.784,0,0,0,24.3,64.461Zm0-15.678H8.623a.784.784,0,0,0-.784.784v1.568a.784.784,0,0,0,.784.784H24.3a.784.784,0,0,0,.784-.784V49.568A.784.784,0,0,0,24.3,48.784Zm0,7.839H8.623a.784.784,0,0,0-.784.784v1.568a.784.784,0,0,0,.784.784H24.3a.784.784,0,0,0,.784-.784V57.407A.784.784,0,0,0,24.3,56.623Z" transform="translate(849.853 228.938)" fill="#d5d5d5"/>
+    <line id="Line_6" data-name="Line 6" x2="229" transform="translate(338.5 287.5)" fill="none" stroke="#fff" stroke-width="15"/>
+    <line id="Line_7" data-name="Line 7" x2="82.192" transform="translate(580.308 287.078)" fill="none" stroke="#d5d5d5" stroke-width="12"/>
+  </g>
+</svg>

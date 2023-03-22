@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-_Switcher_Style_4">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="_Switcher_Style_4" data-name=" Switcher Style 4" clip-path="url(#clip-_Switcher_Style_4)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <path id="Rectangle_545" data-name="Rectangle 545" d="M67.5,0H269a0,0,0,0,1,0,0V135a0,0,0,0,1,0,0H67.5A67.5,67.5,0,0,1,0,67.5v0A67.5,67.5,0,0,1,67.5,0Z" transform="translate(231 283)" fill="#888"/>
+    <path id="Rectangle_546" data-name="Rectangle 546" d="M0,0H201.5A67.5,67.5,0,0,1,269,67.5v0A67.5,67.5,0,0,1,201.5,135H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(500 283)" fill="#d5d5d5"/>
+    <text id="Abc" transform="translate(303 372)" fill="#fff" font-size="60" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">ABC</tspan></text>
+    <text id="Xyz" transform="translate(578 372)" fill="#fff" font-size="60" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">XYZ</tspan></text>
+  </g>
+</svg>

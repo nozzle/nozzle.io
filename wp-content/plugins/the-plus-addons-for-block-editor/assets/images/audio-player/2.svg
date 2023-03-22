@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Audio_Player_-_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Audio_Player_-_Style_2" data-name="Audio Player - Style 2" clip-path="url(#clip-Audio_Player_-_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_547" data-name="Rectangle 547" width="800" height="107" rx="5" transform="translate(100 297)" fill="#888"/>
+    <path id="play" d="M24.013,12.178,4.1.4A2.7,2.7,0,0,0,0,2.74V26.284a2.713,2.713,0,0,0,4.1,2.337L24.013,16.852A2.713,2.713,0,0,0,24.013,12.178Z" transform="translate(148.209 335.739)" fill="#fff"/>
+    <line id="Line_98" data-name="Line 98" x1="579" transform="translate(226.5 350.5)" fill="none" stroke="#d5d5d5" stroke-width="5"/>
+    <g id="Ellipse_298" data-name="Ellipse 298" transform="translate(212 340)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="5">
+      <circle cx="11" cy="11" r="11" stroke="none"/>
+      <circle cx="11" cy="11" r="8.5" fill="none"/>
+    </g>
+    <path id="volume-down" d="M13.569,65.443,7.954,71.057H1.514A1.514,1.514,0,0,0,0,72.571v9.087a1.514,1.514,0,0,0,1.514,1.514h6.44l5.614,5.613a1.515,1.515,0,0,0,2.585-1.071v-21.2A1.516,1.516,0,0,0,13.569,65.443Zm7.774,6.82a1.515,1.515,0,0,0-1.461,2.654,2.488,2.488,0,0,1,0,4.394,1.515,1.515,0,1,0,1.461,2.654,5.518,5.518,0,0,0,0-9.7Z" transform="translate(828 273.773)" fill="#fff"/>
+  </g>
+</svg>

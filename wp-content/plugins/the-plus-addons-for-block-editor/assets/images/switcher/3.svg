@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-_Switcher_Style_3">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="_Switcher_Style_3" data-name=" Switcher Style 3" clip-path="url(#clip-_Switcher_Style_3)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <text id="Abc" transform="translate(331 362)" fill="#888" font-size="60" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">ABC</tspan></text>
+    <text id="Xyz" transform="translate(595 362)" fill="#888" font-size="60" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">XYZ</tspan></text>
+    <line id="Line_54" data-name="Line 54" x2="205" transform="translate(291.5 400.5)" fill="none" stroke="#888" stroke-width="15"/>
+  </g>
+</svg>

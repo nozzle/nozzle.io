@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Audio_Player_-_Style_8">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Audio_Player_-_Style_8" data-name="Audio Player - Style 8" clip-path="url(#clip-Audio_Player_-_Style_8)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_547" data-name="Rectangle 547" width="800" height="500" rx="5" transform="translate(100 100)" fill="#d5d5d5"/>
+    <path id="image" d="M346.619,350.857H35.857A35.857,35.857,0,0,1,0,315V99.857A35.857,35.857,0,0,1,35.857,64H346.619a35.857,35.857,0,0,1,35.857,35.857V315A35.857,35.857,0,0,1,346.619,350.857ZM83.667,105.833A41.833,41.833,0,1,0,125.5,147.667,41.833,41.833,0,0,0,83.667,105.833ZM47.81,303.048H334.667V219.381l-65.376-65.376a8.965,8.965,0,0,0-12.678,0L155.381,255.238,113.91,213.767a8.965,8.965,0,0,0-12.678,0L47.81,267.191Z" transform="translate(309 142.625)" fill="#888" opacity="0.207"/>
+    <path id="forward" d="M24.4,72.154l-9.359-7.8a1.562,1.562,0,0,0-2.559,1.2v15.6a1.561,1.561,0,0,0,2.559,1.2l9.359-7.8A1.565,1.565,0,0,0,24.4,72.154Zm-12.479,0-9.359-7.8A1.562,1.562,0,0,0,0,65.554v15.6a1.561,1.561,0,0,0,2.559,1.2l9.359-7.8A1.565,1.565,0,0,0,11.918,72.154Z" transform="translate(850.164 400.42)" fill="#888"/>
+    <path id="backward" d="M.584,74.508l9.357,7.8a1.56,1.56,0,0,0,2.559-1.2v-15.6a1.56,1.56,0,0,0-2.559-1.2L.584,72.11A1.565,1.565,0,0,0,.584,74.508Zm12.476,0,9.357,7.8a1.56,1.56,0,0,0,2.559-1.2v-15.6a1.56,1.56,0,0,0-2.559-1.2l-9.357,7.8A1.565,1.565,0,0,0,13.061,74.508Z" transform="translate(132.41 400.465)" fill="#888"/>
+    <line id="Line_98" data-name="Line 98" x1="736" transform="translate(139.5 516.5)" fill="none" stroke="#fff" stroke-width="5"/>
+    <g id="Ellipse_298" data-name="Ellipse 298" transform="translate(129 506)" fill="#fff" stroke="#fff" stroke-width="5">
+      <circle cx="11" cy="11" r="11" stroke="none"/>
+      <circle cx="11" cy="11" r="8.5" fill="none"/>
+    </g>
+    <line id="Line_6" data-name="Line 6" x2="229" transform="translate(385.5 358.5)" fill="none" stroke="#888" stroke-width="15"/>
+    <line id="Line_7" data-name="Line 7" x2="134" transform="translate(433.5 390.5)" fill="none" stroke="#fff" stroke-width="8"/>
+    <text id="_00:00" data-name="00:00" transform="translate(129 572)" fill="#fff" font-size="25" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500"><tspan x="0" y="0">00:00</tspan></text>
+    <rect id="Rectangle_624" data-name="Rectangle 624" width="64" height="62" rx="31" transform="translate(468 433)" fill="#f2f2f2"/>
+    <path id="play" d="M21.662,10.989,3.7.367A2.436,2.436,0,0,0,0,2.475V23.713a2.448,2.448,0,0,0,3.7,2.108L21.662,15.2A2.447,2.447,0,0,0,21.662,10.989Z" transform="translate(488.16 450.969)" fill="#888"/>
+    <rect id="Rectangle_547-2" data-name="Rectangle 547" width="152" height="147" rx="73.5" transform="translate(424 160)" fill="#f2f2f2"/>
+    <path id="image-2" data-name="image" d="M62.445,115.679H6.46A6.46,6.46,0,0,1,0,109.219V70.46A6.46,6.46,0,0,1,6.46,64H62.445a6.46,6.46,0,0,1,6.46,6.46v38.759A6.46,6.46,0,0,1,62.445,115.679ZM15.073,71.537a7.537,7.537,0,1,0,7.537,7.537A7.537,7.537,0,0,0,15.073,71.537Zm-6.46,35.529H60.292V91.993L48.514,80.215a1.615,1.615,0,0,0-2.284,0L27.993,98.453l-7.471-7.471a1.615,1.615,0,0,0-2.284,0l-9.624,9.625Z" transform="translate(466 144)" fill="#888"/>
+  </g>
+</svg>

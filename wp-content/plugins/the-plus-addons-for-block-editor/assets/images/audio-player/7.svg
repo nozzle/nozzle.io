@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Audio_Player_-_Style_7">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Audio_Player_-_Style_7" data-name="Audio Player - Style 7" clip-path="url(#clip-Audio_Player_-_Style_7)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_547" data-name="Rectangle 547" width="800" height="190" rx="5" transform="translate(100 255)" fill="#888"/>
+    <path id="play" d="M28.8,14.6,4.912.478A3.239,3.239,0,0,0,0,3.28V31.513a3.254,3.254,0,0,0,4.912,2.8L28.8,20.2A3.254,3.254,0,0,0,28.8,14.6Z" transform="translate(485.16 280.969)" fill="#fff"/>
+    <path id="forward" d="M24.4,72.154l-9.359-7.8a1.562,1.562,0,0,0-2.559,1.2v15.6a1.561,1.561,0,0,0,2.559,1.2l9.359-7.8A1.565,1.565,0,0,0,24.4,72.154Zm-12.479,0-9.359-7.8A1.562,1.562,0,0,0,0,65.554v15.6a1.561,1.561,0,0,0,2.559,1.2l9.359-7.8A1.565,1.565,0,0,0,11.918,72.154Z" transform="translate(850.164 225.42)" fill="#d5d5d5"/>
+    <path id="backward" d="M.584,74.508l9.357,7.8a1.56,1.56,0,0,0,2.559-1.2v-15.6a1.56,1.56,0,0,0-2.559-1.2L.584,72.11A1.565,1.565,0,0,0,.584,74.508Zm12.476,0,9.357,7.8a1.56,1.56,0,0,0,2.559-1.2v-15.6a1.56,1.56,0,0,0-2.559-1.2l-9.357,7.8A1.565,1.565,0,0,0,13.061,74.508Z" transform="translate(132.41 225.465)" fill="#d5d5d5"/>
+    <line id="Line_98" data-name="Line 98" x1="736" transform="translate(139.5 361.5)" fill="none" stroke="#fff" stroke-width="5"/>
+    <g id="Ellipse_298" data-name="Ellipse 298" transform="translate(129 351)" fill="#fff" stroke="#fff" stroke-width="5">
+      <circle cx="11" cy="11" r="11" stroke="none"/>
+      <circle cx="11" cy="11" r="8.5" fill="none"/>
+    </g>
+    <line id="Line_6" data-name="Line 6" x2="229" transform="translate(338.5 407.5)" fill="none" stroke="#d5d5d5" stroke-width="15"/>
+    <line id="Line_7" data-name="Line 7" x2="82.192" transform="translate(580.309 407.078)" fill="none" stroke="#f2f2f2" stroke-width="12"/>
+    <text id="_00:00" data-name="00:00" transform="translate(129 417)" fill="#fff" font-size="25" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">00:00</tspan></text>
+  </g>
+</svg>

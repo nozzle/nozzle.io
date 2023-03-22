@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/categories/seo/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Sat, 04 Mar 2023 00:44:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How is Big Data Impacting Search Engine Optimization?</title>
+		<link>/blog/how-is-big-data-impacting-search-engine-optimization</link>
+		
+		<dc:creator><![CDATA[Dmytro Sokhach]]></dc:creator>
+		<pubDate>Fri, 10 Feb 2023 19:47:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=12316</guid>
+
+					<description><![CDATA[Researchers have described Big Data as the “oil” that has helped optimize the digital ecosystem over the last decade. See the pros and cons of Big Data and how it impacts SEO. ]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>8 Most Effective SEO Tactics for a Website</title>
+		<link>/blog/8-most-effective-seo-tactics-for-a-website</link>
+		
+		<dc:creator><![CDATA[Neha Pande]]></dc:creator>
+		<pubDate>Thu, 09 Feb 2023 18:15:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=12309</guid>
+
+					<description><![CDATA[These SEO tactics can help websites stand out in the search results and attract more relevant traffic.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Top 5 Things To Look at When Doing a Content Audit</title>
+		<link>/blog/top-5-things-to-look-at-when-doing-a-content-audit</link>
+		
+		<dc:creator><![CDATA[Louise Persson]]></dc:creator>
+		<pubDate>Wed, 25 Jan 2023 21:29:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11512</guid>
+
+					<description><![CDATA[One can say that the content audit is the secret ingredient to an impactful content recipe. This article will jog your memory as to why that is, and highlight the top 5 things to consider when performing one.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>12 Captioning and Transcribing Techniques to Boost Video SEO</title>
+		<link>/blog/12-captioning-and-transcribing-techniques-to-boost-video-seo</link>
+					<comments>/blog/12-captioning-and-transcribing-techniques-to-boost-video-seo#respond</comments>
+		
+		<dc:creator><![CDATA[Cosmas Mwirigi]]></dc:creator>
+		<pubDate>Mon, 29 Aug 2022 19:13:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<category><![CDATA[YouTube]]></category>
+		<guid isPermaLink="false">/?p=11472</guid>
+
+					<description><![CDATA[The benefits of captioning and transcribing your videos and some of the best techniques for doing so. ]]></description>
+		
+					<wfw:commentRss>/blog/12-captioning-and-transcribing-techniques-to-boost-video-seo/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Helpful Features 6 Nozzle Clients Love</title>
+		<link>/blog/helpful-features-6-nozzle-clients-love</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Thu, 28 Jul 2022 15:00:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[People Also Ask]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11226</guid>
+
+					<description><![CDATA[Feedback from several of our customers sharing what they value and use the most with Nozzle.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Introducing Nozzle&#8217;s Google Search Console Dashboard</title>
+		<link>/blog/introducing-nozzles-google-search-console-dashboard</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Wed, 15 Jun 2022 18:21:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11265</guid>
+
+					<description><![CDATA[Nozzle's Google Search Console Overview dashboard pulls live data from your Google Search Console account so you can see more ranking data in one place.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Use the Wayback Machine’s “Changes” Tool for SEO</title>
+		<link>/blog/wayback-machines-changes-tool-seo</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 26 May 2022 18:52:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11274</guid>
+
+					<description><![CDATA[The Wayback Machine's "Changes" tool is an overlooked SEO tool that's great for analyzing your own or your competitors' on-site optimization efforts.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>7 Search Term Organizing Methods Used by Professional Keyword Services</title>
+		<link>/blog/7-search-term-organizing-methods-used-by-professional-keyword-services</link>
+		
+		<dc:creator><![CDATA[Soumita Moitra]]></dc:creator>
+		<pubDate>Mon, 16 May 2022 22:25:00 +0000</pubDate>
+				<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11331</guid>
+
+					<description><![CDATA[Powerful keyword organization techniques used by keyword services.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Your Guide to Getting Started with Google Analytics</title>
+		<link>/blog/your-guide-to-getting-started-with-google-analytics</link>
+		
+		<dc:creator><![CDATA[Madeline Miller]]></dc:creator>
+		<pubDate>Tue, 26 Apr 2022 18:15:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11261</guid>
+
+					<description><![CDATA[If you don’t analyze your data, then you are missing out on important opportunities to grow your business. This is your guide to getting started with Google Analytics.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Why Aren’t My Google Reviews Showing Up? 10 Possible Reasons Why</title>
+		<link>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why</link>
+					<comments>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why#respond</comments>
+		
+		<dc:creator><![CDATA[Patty Malowney]]></dc:creator>
+		<pubDate>Tue, 22 Mar 2022 18:59:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11461</guid>
+
+					<description><![CDATA[These are the biggest reasons why your Google reviews aren’t showing up.]]></description>
+		
+					<wfw:commentRss>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

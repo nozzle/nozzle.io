@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/categories/serps/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 01 Mar 2023 18:12:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>People Also Ask Appearances on Desktop Decline Dramatically</title>
+		<link>/blog/people-also-ask-appearances-on-desktop-decline-dramatically</link>
+					<comments>/blog/people-also-ask-appearances-on-desktop-decline-dramatically#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2022 19:33:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11486</guid>
+
+					<description><![CDATA[Google appears to have all but eliminated any instances of the People Also Ask boxes on desktop SERPs where the settings have been set to show more than 10 results per page. This began on October 11th.]]></description>
+		
+					<wfw:commentRss>/blog/people-also-ask-appearances-on-desktop-decline-dramatically/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Optimizing Nozzle: Why You Should Track ALL the Keywords</title>
+		<link>/blog/optimizing-nozzle-why-you-should-track-all-the-keywords</link>
+					<comments>/blog/optimizing-nozzle-why-you-should-track-all-the-keywords#respond</comments>
+		
+		<dc:creator><![CDATA[Andy Eliason]]></dc:creator>
+		<pubDate>Fri, 12 Aug 2022 21:16:00 +0000</pubDate>
+				<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11441</guid>
+
+					<description><![CDATA[Why do we track search engine rankings so closely and in such detail? Every company and agency will have a different spin on this answer, of course, but in general it is because effective keyword monitoring will help you see exactly where your SEO efforts have delivered results and where you might need to refocus [&#8230;]]]></description>
+		
+					<wfw:commentRss>/blog/optimizing-nozzle-why-you-should-track-all-the-keywords/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Social Media in Google: Where Do Social Results Rank in the SERPs?</title>
+		<link>/blog/social-media-serp-statistics</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 04 Aug 2022 15:43:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11231</guid>
+
+					<description><![CDATA[Social media results do appear in organic Google search results. But are they worth optimizing for? See the data yourself.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Google SERP Features: Insights From 2.4 Million Searches</title>
+		<link>/blog/nozzle-analyzed-1-2-million-google-serp-features</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Wed, 29 Jun 2022 22:08:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11616</guid>
+
+					<description><![CDATA[We analyzed about 2.4 million Google SERPs to see how often various SERP features like Featured Snippets and PAA displayed, and where they ranked. ]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Calculate How Many of Your Title Tags Google Is Actually Using in the SERPs</title>
+		<link>/blog/calculate-how-many-of-your-title-tags-google-is-actually-using-in-the-serps</link>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Fri, 10 Jun 2022 16:02:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11238</guid>
+
+					<description><![CDATA[To help you identify and analyze which titles Google is changing, here is an overview of how to export this information from Nozzle and convert it to a pivot chart on your excel spreadsheet.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>7 Ways Website Flippers Can Use Nozzle SERP Rank Tracker</title>
+		<link>/blog/7-ways-website-flippers-can-use-nozzle-serp-rank-tracker</link>
+					<comments>/blog/7-ways-website-flippers-can-use-nozzle-serp-rank-tracker#respond</comments>
+		
+		<dc:creator><![CDATA[Mushfiq Sarker]]></dc:creator>
+		<pubDate>Thu, 19 May 2022 21:31:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<guid isPermaLink="false">/?p=11447</guid>
+
+					<description><![CDATA[In this article, you’ll discover how website flippers can use Nozzle to acquire, build, and sell websites — making it an easier and safer experience.`]]></description>
+		
+					<wfw:commentRss>/blog/7-ways-website-flippers-can-use-nozzle-serp-rank-tracker/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Why Aren’t My Google Reviews Showing Up? 10 Possible Reasons Why</title>
+		<link>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why</link>
+					<comments>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why#respond</comments>
+		
+		<dc:creator><![CDATA[Patty Malowney]]></dc:creator>
+		<pubDate>Tue, 22 Mar 2022 18:59:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11461</guid>
+
+					<description><![CDATA[These are the biggest reasons why your Google reviews aren’t showing up.]]></description>
+		
+					<wfw:commentRss>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Get One Step Ahead Of Your Competitors &#8211; 5 Tools To Help You Track Their Movements</title>
+		<link>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them</link>
+					<comments>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them#respond</comments>
+		
+		<dc:creator><![CDATA[Peter Bray]]></dc:creator>
+		<pubDate>Fri, 11 Mar 2022 19:47:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<guid isPermaLink="false">/?p=11453</guid>
+
+					<description><![CDATA[The tools needed to monitor and track the performance of competitor websites.]]></description>
+		
+					<wfw:commentRss>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to rank better in Google Maps in 2022</title>
+		<link>/blog/how-to-rank-better-in-google-maps-in-2022</link>
+					<comments>/blog/how-to-rank-better-in-google-maps-in-2022#respond</comments>
+		
+		<dc:creator><![CDATA[Patty Malowney]]></dc:creator>
+		<pubDate>Mon, 07 Feb 2022 20:04:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11465</guid>
+
+					<description><![CDATA[This is how to rank better in Google Maps in 2022.]]></description>
+		
+					<wfw:commentRss>/blog/how-to-rank-better-in-google-maps-in-2022/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Who to Look for to Lead Your SEO Team</title>
+		<link>/blog/who-to-look-for-to-lead-your-seo-team</link>
+		
+		<dc:creator><![CDATA[Luke Williams]]></dc:creator>
+		<pubDate>Wed, 19 Jan 2022 20:49:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11307</guid>
+
+					<description><![CDATA[When choosing someone to lead your SEO team, a deep understanding of content creation is important.]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/nathan-blair/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Mon, 27 Feb 2023 22:34:16 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Google SERP Features: Insights From 2.4 Million Searches</title>
+		<link>/blog/nozzle-analyzed-1-2-million-google-serp-features</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Wed, 29 Jun 2022 22:08:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11616</guid>
+
+					<description><![CDATA[We analyzed about 2.4 million Google SERPs to see how often various SERP features like Featured Snippets and PAA displayed, and where they ranked. ]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>What Are People Also Ask Boxes and How Do You Rank in Them?</title>
+		<link>/blog/what-are-people-also-ask-boxes-and-how-do-you-rank-in-them</link>
+					<comments>/blog/what-are-people-also-ask-boxes-and-how-do-you-rank-in-them#respond</comments>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Wed, 08 Jun 2022 19:48:00 +0000</pubDate>
+				<category><![CDATA[People Also Ask]]></category>
+		<category><![CDATA[SERP Features]]></category>
+		<guid isPermaLink="false">/?p=11488</guid>
+
+					<description><![CDATA[Learn about People Also Ask boxes and what you can do to optimize your content to rank in them.]]></description>
+		
+					<wfw:commentRss>/blog/what-are-people-also-ask-boxes-and-how-do-you-rank-in-them/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

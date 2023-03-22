@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/categories/serp-features/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Tue, 28 Feb 2023 21:24:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>People Also Ask Appearances on Desktop Decline Dramatically</title>
+		<link>/blog/people-also-ask-appearances-on-desktop-decline-dramatically</link>
+					<comments>/blog/people-also-ask-appearances-on-desktop-decline-dramatically#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2022 19:33:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11486</guid>
+
+					<description><![CDATA[Google appears to have all but eliminated any instances of the People Also Ask boxes on desktop SERPs where the settings have been set to show more than 10 results per page. This began on October 11th.]]></description>
+		
+					<wfw:commentRss>/blog/people-also-ask-appearances-on-desktop-decline-dramatically/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Helpful Features 6 Nozzle Clients Love</title>
+		<link>/blog/helpful-features-6-nozzle-clients-love</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Thu, 28 Jul 2022 15:00:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[People Also Ask]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11226</guid>
+
+					<description><![CDATA[Feedback from several of our customers sharing what they value and use the most with Nozzle.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Will Your Keywords Trigger Important SERP Features?</title>
+		<link>/blog/will-your-keywords-trigger-important-serp-features</link>
+		
+		<dc:creator><![CDATA[Andy Eliason]]></dc:creator>
+		<pubDate>Mon, 25 Jul 2022 16:10:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[People Also Ask]]></category>
+		<guid isPermaLink="false">/?p=11242</guid>
+
+					<description><![CDATA[You can get your brand in front of more eyes when you begin to broaden your horizons and track the entire SERP rather than just traditional organic rankings. Your keywords might be serving up a wide range of SERP features (PAAs, Featured Snippets, etc.). User your data to create a strategy that will get you into these features.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Google SERP Features: Insights From 2.4 Million Searches</title>
+		<link>/blog/nozzle-analyzed-1-2-million-google-serp-features</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Wed, 29 Jun 2022 22:08:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11616</guid>
+
+					<description><![CDATA[We analyzed about 2.4 million Google SERPs to see how often various SERP features like Featured Snippets and PAA displayed, and where they ranked. ]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>What Are People Also Ask Boxes and How Do You Rank in Them?</title>
+		<link>/blog/what-are-people-also-ask-boxes-and-how-do-you-rank-in-them</link>
+					<comments>/blog/what-are-people-also-ask-boxes-and-how-do-you-rank-in-them#respond</comments>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Wed, 08 Jun 2022 19:48:00 +0000</pubDate>
+				<category><![CDATA[People Also Ask]]></category>
+		<category><![CDATA[SERP Features]]></category>
+		<guid isPermaLink="false">/?p=11488</guid>
+
+					<description><![CDATA[Learn about People Also Ask boxes and what you can do to optimize your content to rank in them.]]></description>
+		
+					<wfw:commentRss>/blog/what-are-people-also-ask-boxes-and-how-do-you-rank-in-them/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>SERP Features Every SEO Should Work on Obtaining</title>
+		<link>/blog/serp-features-every-seo-should-work-on-obtaining</link>
+		
+		<dc:creator><![CDATA[Karissa Graham-Blackman]]></dc:creator>
+		<pubDate>Wed, 27 Jan 2021 18:59:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[Google SERP Tracker]]></category>
+		<category><![CDATA[SERP Keyword Checker]]></category>
+		<guid isPermaLink="false">/?p=11244</guid>
+
+					<description><![CDATA[SERP features you should be using in your SEO strategy]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

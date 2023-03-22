@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Countdown_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Countdown_Style_2" data-name="Countdown Style 2" clip-path="url(#clip-Countdown_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_8" data-name="Line 8" x2="309" transform="translate(147 425.5)" fill="none" stroke="#888" stroke-width="10"/>
+    <line id="Line_93" data-name="Line 93" x2="309" transform="translate(544 425.5)" fill="none" stroke="#888" stroke-width="10"/>
+    <text id="_56" data-name="56" transform="translate(199.5 351)" fill="#888" font-size="179" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">56</tspan></text>
+    <text id="_30" data-name="30" transform="translate(596.5 351)" fill="#888" font-size="179" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">30</tspan></text>
+    <text id="Minutes" transform="translate(162.5 519)" fill="#888" font-size="65" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">MINUTES</tspan></text>
+    <text id="Seconds" transform="translate(553.5 519)" fill="#888" font-size="65" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">SECONDS</tspan></text>
+  </g>
+</svg>

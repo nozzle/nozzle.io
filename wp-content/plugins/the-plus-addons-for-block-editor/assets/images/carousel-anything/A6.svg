@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Carousal_Arrows_Style_5_1)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g transform="translate(306 397) rotate(-90)" fill="#888">
+      <path d="M 92.73429870605469 43.5 L 1.265703082084656 43.5 L 47 0.6849135756492615 L 92.73429870605469 43.5 Z" stroke="none"/>
+      <path d="M 47 1.369827270507813 L 2.531402587890625 43 L 91.46859741210938 43 L 47 1.369827270507813 M 47 0 L 94 44 L 0 44 L 47 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <g transform="translate(695 303) rotate(90)" fill="#888">
+      <path d="M 92.73429870605469 43.5 L 1.265703082084656 43.5 L 47 0.6849135756492615 L 92.73429870605469 43.5 Z" stroke="none"/>
+      <path d="M 47 1.369827270507813 L 2.531402587890625 43 L 91.46859741210938 43 L 47 1.369827270507813 M 47 0 L 94 44 L 0 44 L 47 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <line x2="100.305" transform="translate(550.848 350.287)" fill="none" stroke="#888" stroke-width="10"/>
+    <line x2="100.305" transform="translate(350.421 350.287)" fill="none" stroke="#888" stroke-width="10"/>
+  </g>
+</svg>

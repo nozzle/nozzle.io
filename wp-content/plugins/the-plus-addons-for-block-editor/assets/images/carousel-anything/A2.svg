@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Carousal_Arrows_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <path d="M-19.153,0-88.437,73.384l69.284,67.634" transform="translate(418.5 279)" fill="none" stroke="#888" stroke-width="10"/>
+    <path d="M-19.153,0-88.437,73.384l69.284,67.634" transform="translate(580.911 420.018) rotate(180)" fill="none" stroke="#888" stroke-width="10"/>
+  </g>
+</svg>

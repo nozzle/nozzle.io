@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Chart_-_Bar_Chart">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Chart_-_Bar_Chart" data-name="Advanced Chart - Bar Chart" clip-path="url(#clip-Advanced_Chart_-_Bar_Chart)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_160" data-name="Line 160" y2="482" transform="translate(155.5 100.5)" fill="none" stroke="#707070" stroke-width="2"/>
+    <line id="Line_161" data-name="Line 161" x2="763.5" transform="translate(136.5 562.5)" fill="none" stroke="#888" stroke-width="2"/>
+    <line id="Line_162" data-name="Line 162" x2="763.007" transform="translate(136.5 471.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <line id="Line_163" data-name="Line 163" x2="763.007" transform="translate(136.5 380.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <line id="Line_164" data-name="Line 164" x2="763.007" transform="translate(136.5 289.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <line id="Line_165" data-name="Line 165" x2="763.007" transform="translate(136.5 198.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <line id="Line_170" data-name="Line 170" x2="763.007" transform="translate(136.746 99.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <text id="_0" data-name="0" transform="translate(121 570)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0</tspan></text>
+    <text id="_1995" data-name="1995" transform="translate(221 602)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">1995</tspan></text>
+    <text id="_2000" data-name="2000" transform="translate(407 602)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">2000</tspan></text>
+    <text id="_2005" data-name="2005" transform="translate(593 602)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">2005</tspan></text>
+    <text id="_2010" data-name="2010" transform="translate(779 602)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">2010</tspan></text>
+    <text id="_50" data-name="50" transform="translate(111 479)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">50</tspan></text>
+    <text id="_100" data-name="100" transform="translate(100 388)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">100</tspan></text>
+    <text id="_150" data-name="150" transform="translate(100 297)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">150</tspan></text>
+    <text id="_200" data-name="200" transform="translate(100 206)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">200</tspan></text>
+    <text id="_250" data-name="250" transform="translate(100.246 107)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">250</tspan></text>
+    <rect id="Rectangle_657" data-name="Rectangle 657" width="32" height="92" transform="translate(210 470)" fill="#d5d5d5"/>
+    <rect id="Rectangle_659" data-name="Rectangle 659" width="32" height="235" transform="translate(396 329)" fill="#d5d5d5"/>
+    <rect id="Rectangle_661" data-name="Rectangle 661" width="32" height="464" transform="translate(582 100)" fill="#d5d5d5"/>
+    <rect id="Rectangle_664" data-name="Rectangle 664" width="32" height="223" transform="translate(768 341)" fill="#d5d5d5"/>
+    <rect id="Rectangle_658" data-name="Rectangle 658" width="32" height="183" transform="translate(242 379)" fill="#888"/>
+    <rect id="Rectangle_660" data-name="Rectangle 660" width="32" height="366" transform="translate(428 198)" fill="#888"/>
+    <rect id="Rectangle_662" data-name="Rectangle 662" width="32" height="324" transform="translate(614 240)" fill="#888"/>
+    <rect id="Rectangle_663" data-name="Rectangle 663" width="32" height="138" transform="translate(800 426)" fill="#888"/>
+  </g>
+</svg>

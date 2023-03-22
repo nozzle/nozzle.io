@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Chart_-_Bubble_Chart">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Chart_-_Bubble_Chart" data-name="Advanced Chart - Bubble Chart" clip-path="url(#clip-Advanced_Chart_-_Bubble_Chart)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_160" data-name="Line 160" y2="482" transform="translate(155.5 100.5)" fill="none" stroke="#707070" stroke-width="2"/>
+    <line id="Line_171" data-name="Line 171" y2="482" transform="translate(262 100)" fill="none" stroke="#d5d5d5" stroke-width="2"/>
+    <line id="Line_172" data-name="Line 172" y2="482" transform="translate(369 100)" fill="none" stroke="#d5d5d5" stroke-width="2"/>
+    <line id="Line_173" data-name="Line 173" y2="482" transform="translate(476 100)" fill="none" stroke="#d5d5d5" stroke-width="2"/>
+    <line id="Line_174" data-name="Line 174" y2="482" transform="translate(583 100)" fill="none" stroke="#d5d5d5" stroke-width="2"/>
+    <line id="Line_175" data-name="Line 175" y2="482" transform="translate(690 100)" fill="none" stroke="#d5d5d5" stroke-width="2"/>
+    <line id="Line_176" data-name="Line 176" y2="482" transform="translate(797 100)" fill="none" stroke="#d5d5d5" stroke-width="2"/>
+    <line id="Line_177" data-name="Line 177" y2="482" transform="translate(900 100)" fill="none" stroke="#d5d5d5" stroke-width="2"/>
+    <line id="Line_161" data-name="Line 161" x2="763.5" transform="translate(136.5 562.5)" fill="none" stroke="#888" stroke-width="2"/>
+    <line id="Line_162" data-name="Line 162" x2="763.007" transform="translate(136.5 471.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <line id="Line_163" data-name="Line 163" x2="763.007" transform="translate(136.5 380.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <line id="Line_164" data-name="Line 164" x2="763.007" transform="translate(136.5 289.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <line id="Line_165" data-name="Line 165" x2="763.007" transform="translate(136.5 198.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <line id="Line_170" data-name="Line 170" x2="763.007" transform="translate(136.746 99.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <text id="_0" data-name="0" transform="translate(121 570)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0</tspan></text>
+    <text id="_10" data-name="10" transform="translate(252 606)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">10</tspan></text>
+    <text id="_15" data-name="15" transform="translate(359 606)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">15</tspan></text>
+    <text id="_20" data-name="20" transform="translate(466 606)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">20</tspan></text>
+    <text id="_25" data-name="25" transform="translate(573 606)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">25</tspan></text>
+    <text id="_30" data-name="30" transform="translate(680 606)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">30</tspan></text>
+    <text id="_35" data-name="35" transform="translate(787 606)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">35</tspan></text>
+    <text id="_40" data-name="40" transform="translate(890 606)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">40</tspan></text>
+    <text id="_05" data-name="05" transform="translate(146 606)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">05</tspan></text>
+    <text id="_50" data-name="50" transform="translate(111 479)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">50</tspan></text>
+    <text id="_100" data-name="100" transform="translate(100 388)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">100</tspan></text>
+    <text id="_150" data-name="150" transform="translate(100 297)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">150</tspan></text>
+    <text id="_200" data-name="200" transform="translate(100 206)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">200</tspan></text>
+    <text id="_250" data-name="250" transform="translate(100.246 107)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">250</tspan></text>
+    <g id="Polygon_17" data-name="Polygon 17" transform="translate(140 412)" fill="#888">
+      <path d="M 31.1384105682373 27.5 L 0.8615876436233521 27.5 L 15.99999904632568 1.007779955863953 L 31.1384105682373 27.5 Z" stroke="none"/>
+      <path d="M 15.99999904632568 2.015560150146484 L 1.723176956176758 27 L 30.27682113647461 27 L 15.99999904632568 2.015560150146484 M 15.99999904632568 0 L 32 28 L -1.9073486328125e-06 28 L 15.99999904632568 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <g id="Polygon_18" data-name="Polygon 18" transform="translate(358 551)" fill="#888">
+      <path d="M 22.1357364654541 19.5 L 0.8642629981040955 19.5 L 11.5 1.003066062927246 L 22.1357364654541 19.5 Z" stroke="none"/>
+      <path d="M 11.5 2.006139755249023 L 1.728530883789062 19 L 21.27146911621094 19 L 11.5 2.006139755249023 M 11.5 0 L 23 20 L 0 20 L 11.5 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <g id="Polygon_19" data-name="Polygon 19" transform="translate(359 372)" fill="#888">
+      <path d="M 19.15024185180664 17.5 L 0.8497577905654907 17.5 L 10 1.029564023017883 L 19.15024185180664 17.5 Z" stroke="none"/>
+      <path d="M 10 2.059127807617188 L 1.699516296386719 17 L 18.30048370361328 17 L 10 2.059127807617188 M 10 0 L 20 18 L 0 18 L 10 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <g id="Polygon_20" data-name="Polygon 20" transform="translate(464 279)" fill="#888">
+      <path d="M 23.1384105682373 20.5 L 0.8615885972976685 20.5 L 12 1.007779955863953 L 23.1384105682373 20.5 Z" stroke="none"/>
+      <path d="M 12 2.015560150146484 L 1.723176956176758 20 L 22.27682304382324 20 L 12 2.015560150146484 M 12 0 L 24 21 L 0 21 L 12 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <g id="Polygon_21" data-name="Polygon 21" transform="translate(574 187)" fill="#888">
+      <path d="M 18.12162780761719 15.5 L 0.87837153673172 15.5 L 9.5 0.9793626070022583 L 18.12162780761719 15.5 Z" stroke="none"/>
+      <path d="M 9.5 1.958708763122559 L 1.756732940673828 15 L 17.24326705932617 15 L 9.5 1.958708763122559 M 9.5 0 L 19 16 L 0 16 L 9.5 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <g id="Polygon_22" data-name="Polygon 22" transform="translate(789 191)" fill="#888">
+      <path d="M 16.1419677734375 14.5 L 0.8580323457717896 14.5 L 8.5 1.014174699783325 L 16.1419677734375 14.5 Z" stroke="none"/>
+      <path d="M 8.5 2.028339385986328 L 1.716058731079102 14 L 15.2839412689209 14 L 8.5 2.028339385986328 M 8.5 0 L 17 15 L 0 15 L 8.5 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <g id="Polygon_23" data-name="Polygon 23" transform="translate(888 280)" fill="#888">
+      <path d="M 23.11689949035645 19.5 L 0.8830999732017517 19.5 L 12 0.971833348274231 L 23.11689949035645 19.5 Z" stroke="none"/>
+      <path d="M 12 1.943649291992188 L 1.766189575195312 19 L 22.23381042480469 19 L 12 1.943649291992188 M 12 0 L 24 20 L 0 20 L 12 0 Z" stroke="none" fill="#888"/>
+    </g>
+    <g id="Polygon_24" data-name="Polygon 24" transform="translate(893 410)" fill="#888">
+      <path d="M 14.16491603851318 13.5 L 0.8350850939750671 13.5 L 7.500000476837158 1.05882465839386 L 14.16491603851318 13.5 Z" stroke="none"/>
+      <path d="M 7.500000476837158 2.117649078369141 L 1.670169830322266 13 L 13.32983112335205 13 L 7.500000476837158 2.117649078369141 M 7.500000476837158 0 L 15 14 L 9.5367431640625e-07 14 L 7.500000476837158 0 Z" stroke="none" fill="#888"/>
+    </g>
+  </g>
+</svg>

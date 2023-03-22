@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Carousal_Arrows_Style_4)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g transform="translate(325 275)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="150" height="150" stroke="none"/>
+      <rect x="0.5" y="0.5" width="149" height="149" fill="none"/>
+    </g>
+    <g transform="translate(525 275)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="150" height="150" stroke="none"/>
+      <rect x="0.5" y="0.5" width="149" height="149" fill="none"/>
+    </g>
+    <path d="M-53.5,0-88.437,37l34.937,34.1" transform="translate(470.5 314.909)" fill="none" stroke="#fff" stroke-width="10"/>
+    <path d="M-53.5,0-88.437,37l34.937,34.1" transform="translate(528.563 386.018) rotate(180)" fill="none" stroke="#fff" stroke-width="10"/>
+  </g>
+</svg>

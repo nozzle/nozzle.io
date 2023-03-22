@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Carousal_Dots_Style_5)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g transform="translate(190 335)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="220" height="30" stroke="none"/>
+      <rect x="0.5" y="0.5" width="219" height="29" fill="none"/>
+    </g>
+    <g transform="translate(460 335)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="150" height="30" stroke="none"/>
+      <rect x="0.5" y="0.5" width="149" height="29" fill="none"/>
+    </g>
+    <g transform="translate(660 335)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="150" height="30" stroke="none"/>
+      <rect x="0.5" y="0.5" width="149" height="29" fill="none"/>
+    </g>
+  </g>
+</svg>

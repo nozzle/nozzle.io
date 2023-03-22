@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Filter_-_Style_3">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Filter_-_Style_3" data-name="Filter - Style 3" clip-path="url(#clip-Filter_-_Style_3)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <text id="ALL" transform="translate(430 447)" fill="#888" font-size="80" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">ALL</tspan></text>
+    <g id="Notification" transform="translate(324.232 233.144)">
+      <path id="Union_25" data-name="Union 25" d="M5,111.831a5,5,0,0,1-5-5V24.9a5,5,0,0,1,5-5H62.53L78.126,0,92.505,19.9h59.338a5,5,0,0,1,5,5v81.934a5,5,0,0,1-5,5Z" transform="translate(254.611 108.831) rotate(180)" fill="#888"/>
+      <text id="_10" data-name="10" transform="translate(142.767 65.856)" fill="#fff" font-size="58" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">10</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Chart_-_Radar_Chart">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Chart_-_Radar_Chart" data-name="Advanced Chart - Radar Chart" clip-path="url(#clip-Advanced_Chart_-_Radar_Chart)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_160" data-name="Line 160" y2="482" transform="translate(155.5 100.5)" fill="none" stroke="#707070" stroke-width="2"/>
+    <line id="Line_161" data-name="Line 161" x2="763.5" transform="translate(136.5 562.5)" fill="none" stroke="#888" stroke-width="2"/>
+    <text id="_0" data-name="0" transform="translate(121 570)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0</tspan></text>
+    <text id="_0.2" data-name="0.2" transform="translate(106 479)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.2</tspan></text>
+    <text id="_0.1" data-name="0.1" transform="translate(106 525)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.1</tspan></text>
+    <text id="_0.3" data-name="0.3" transform="translate(106 426)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.3</tspan></text>
+    <text id="_0.4" data-name="0.4" transform="translate(106 373)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.4</tspan></text>
+    <text id="_0.5" data-name="0.5" transform="translate(106 320)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.5</tspan></text>
+    <text id="_0.6" data-name="0.6" transform="translate(106 267)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.6</tspan></text>
+    <text id="_0.7" data-name="0.7" transform="translate(106 214)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.7</tspan></text>
+    <text id="_0.8" data-name="0.8" transform="translate(106 161)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.8</tspan></text>
+    <text id="_0.9" data-name="0.9" transform="translate(106 108)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">0.9</tspan></text>
+    <text id="Jan" transform="translate(141 602)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Jan</tspan></text>
+    <text id="Jan-2" data-name="Jan" transform="translate(506.25 176.593)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Jan</tspan></text>
+    <text id="Feb" transform="translate(505 595)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Feb</tspan></text>
+    <text id="Feb-2" data-name="Feb" transform="translate(703.25 497.593)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Feb</tspan></text>
+    <text id="Mar" transform="translate(881 595)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Mar</tspan></text>
+    <text id="Mar-2" data-name="Mar" transform="translate(303.25 497.593)" fill="#888" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Mar</tspan></text>
+    <g id="Polygon_13" data-name="Polygon 13" transform="translate(343.25 188.593)" fill="none">
+      <path d="M176,0,352,305H0Z" stroke="none"/>
+      <path d="M 176 2.00079345703125 L 1.731597900390625 304 L 350.2684020996094 304 L 176 2.00079345703125 M 176 0 L 352 305 L 0 305 L 176 0 Z" stroke="none" fill="#e2e2e2"/>
+    </g>
+    <g id="Polygon_14" data-name="Polygon 14" transform="translate(373.25 222.593)" fill="none">
+      <path d="M146,0,292,253H0Z" stroke="none"/>
+      <path d="M 146 2.00067138671875 L 1.73162841796875 252 L 290.2683715820312 252 L 146 2.00067138671875 M 146 0 L 292 253 L 0 253 L 146 0 Z" stroke="none" fill="#e2e2e2"/>
+    </g>
+    <g id="Polygon_15" data-name="Polygon 15" transform="translate(405.25 259.593)" fill="none">
+      <path d="M114,0,228,197H0Z" stroke="none"/>
+      <path d="M 114 1.996551513671875 L 1.734039306640625 196 L 226.2659606933594 196 L 114 1.996551513671875 M 114 0 L 228 197 L 0 197 L 114 0 Z" stroke="none" fill="#e2e2e2"/>
+    </g>
+    <rect id="Rectangle_665" data-name="Rectangle 665" width="29" height="24" transform="translate(506 185)" fill="#eaeaea"/>
+    <rect id="Rectangle_666" data-name="Rectangle 666" width="29" height="24" transform="translate(506 216)" fill="#eaeaea"/>
+    <rect id="Rectangle_667" data-name="Rectangle 667" width="29" height="24" transform="translate(505 250)" fill="#eaeaea"/>
+    <rect id="Rectangle_668" data-name="Rectangle 668" width="29" height="24" transform="translate(505 281)" fill="#d5d5d5"/>
+    <rect id="Rectangle_669" data-name="Rectangle 669" width="29" height="24" transform="translate(505 312)" fill="#d5d5d5"/>
+    <text id="_50" data-name="50" transform="translate(512.5 202.5)" fill="#888" font-size="14" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">50</tspan></text>
+    <text id="_40" data-name="40" transform="translate(512.5 233.5)" fill="#888" font-size="14" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">40</tspan></text>
+    <text id="_30" data-name="30" transform="translate(511.5 267.5)" fill="#888" font-size="14" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">30</tspan></text>
+    <text id="_20" data-name="20" transform="translate(511.5 298.5)" fill="#888" font-size="14" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">20</tspan></text>
+    <text id="_10" data-name="10" transform="translate(511.5 329.5)" fill="#888" font-size="14" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">10</tspan></text>
+    <g id="Polygon_16" data-name="Polygon 16" transform="translate(450.25 222.593)" fill="#eaeaea">
+      <path d="M 137.298583984375 199.5 L 0.7014108896255493 199.5 L 69 1.533074975013733 L 137.298583984375 199.5 Z" stroke="none"/>
+      <path d="M 69 3.066177368164062 L 1.40283203125 199 L 136.59716796875 199 L 69 3.066177368164062 M 69 0 L 138 200 L 0 200 L 69 0 Z" stroke="none" fill="#c7c7c7"/>
+    </g>
+    <g id="Path_7112" data-name="Path 7112" transform="matrix(-0.574, -0.819, 0.819, -0.574, 398.584, 573.46)" fill="#c7c7c7" opacity="0.798">
+      <path d="M 171.4185791015625 268.4885864257812 L 16.87570762634277 240.9687805175781 L 96.90381622314453 3.934107542037964 L 171.4185791015625 268.4885864257812 Z" stroke="none"/>
+      <path d="M 96.86064910888672 5.625030517578125 L 17.53520202636719 240.5783996582031 L 170.7210845947266 267.8565063476562 L 96.86064910888672 5.625030517578125 M 96.94699096679688 2.24310302734375 L 172.1160278320312 269.12060546875 L 16.21612548828125 241.3592224121094 L 96.94699096679688 2.24310302734375 Z" stroke="none" fill="#bab9b9"/>
+    </g>
+    <g id="Path_7113" data-name="Path 7113" transform="matrix(-0.574, -0.819, 0.819, -0.574, 398.584, 606.163)" fill="#888" opacity="0.54">
+      <path d="M -74.09066009521484 306.0684814453125 L 122.0418472290039 119.8772735595703 L 151.7945861816406 250.5536193847656 L 51.10956954956055 278.4983520507812 L -74.09066009521484 306.0684814453125 Z" stroke="none"/>
+      <path d="M 121.7492599487305 120.8444519042969 L -72.44291687011719 305.1936340332031 L 50.98855590820312 278.0130004882812 L 151.2011108398438 250.1994171142578 L 121.7492599487305 120.8444519042969 M 122.3344421386719 118.9100646972656 L 152.3880004882812 250.9078216552734 L 51.23044586181641 278.9837036132812 L -75.73843383789062 306.9432983398438 L 122.3344421386719 118.9100646972656 Z" stroke="none" fill="#6c6c6c"/>
+    </g>
+    <path id="times" d="M6.941,101.726l3.671-3.671.757-.757a.286.286,0,0,0,0-.4l-.81-.81a.286.286,0,0,0-.4,0l-4.428,4.428L1.3,96.084a.286.286,0,0,0-.4,0l-.81.81a.286.286,0,0,0,0,.4l4.428,4.428L.084,106.154a.286.286,0,0,0,0,.4l.81.81a.286.286,0,0,0,.4,0l4.428-4.428L9.4,106.612l.757.757a.286.286,0,0,0,.4,0l.81-.81a.286.286,0,0,0,0-.4Z" transform="translate(340.25 388.866)" fill="#888"/>
+    <path id="times-2" data-name="times" d="M6.941,101.726l3.671-3.671.757-.757a.286.286,0,0,0,0-.4l-.81-.81a.286.286,0,0,0-.4,0l-4.428,4.428L1.3,96.084a.286.286,0,0,0-.4,0l-.81.81a.286.286,0,0,0,0,.4l4.428,4.428L.084,106.154a.286.286,0,0,0,0,.4l.81.81a.286.286,0,0,0,.4,0l4.428-4.428L9.4,106.612l.757.757a.286.286,0,0,0,.4,0l.81-.81a.286.286,0,0,0,0-.4Z" transform="translate(423.25 334.866)" fill="#888"/>
+    <path id="times-3" data-name="times" d="M6.941,101.726l3.671-3.671.757-.757a.286.286,0,0,0,0-.4l-.81-.81a.286.286,0,0,0-.4,0l-4.428,4.428L1.3,96.084a.286.286,0,0,0-.4,0l-.81.81a.286.286,0,0,0,0,.4l4.428,4.428L.084,106.154a.286.286,0,0,0,0,.4l.81.81a.286.286,0,0,0,.4,0l4.428-4.428L9.4,106.612l.757.757a.286.286,0,0,0,.4,0l.81-.81a.286.286,0,0,0,0-.4Z" transform="translate(511.524 236.866)" fill="#888"/>
+    <path id="times-4" data-name="times" d="M6.941,101.726l3.671-3.671.757-.757a.286.286,0,0,0,0-.4l-.81-.81a.286.286,0,0,0-.4,0l-4.428,4.428L1.3,96.084a.286.286,0,0,0-.4,0l-.81.81a.286.286,0,0,0,0,.4l4.428,4.428L.084,106.154a.286.286,0,0,0,0,.4l.81.81a.286.286,0,0,0,.4,0l4.428-4.428L9.4,106.612l.757.757a.286.286,0,0,0,.4,0l.81-.81a.286.286,0,0,0,0-.4Z" transform="translate(444.981 320.866)" fill="#888"/>
+    <path id="times-5" data-name="times" d="M6.941,101.726l3.671-3.671.757-.757a.286.286,0,0,0,0-.4l-.81-.81a.286.286,0,0,0-.4,0l-4.428,4.428L1.3,96.084a.286.286,0,0,0-.4,0l-.81.81a.286.286,0,0,0,0,.4l4.428,4.428L.084,106.154a.286.286,0,0,0,0,.4l.81.81a.286.286,0,0,0,.4,0l4.428-4.428L9.4,106.612l.757.757a.286.286,0,0,0,.4,0l.81-.81a.286.286,0,0,0,0-.4Z" transform="translate(687.733 391.866)" fill="#888"/>
+    <path id="times-6" data-name="times" d="M6.941,101.726l3.671-3.671.757-.757a.286.286,0,0,0,0-.4l-.81-.81a.286.286,0,0,0-.4,0l-4.428,4.428L1.3,96.084a.286.286,0,0,0-.4,0l-.81.81a.286.286,0,0,0,0,.4l4.428,4.428L.084,106.154a.286.286,0,0,0,0,.4l.81.81a.286.286,0,0,0,.4,0l4.428-4.428L9.4,106.612l.757.757a.286.286,0,0,0,.4,0l.81-.81a.286.286,0,0,0,0-.4Z" transform="translate(582.524 320.866)" fill="#888"/>
+    <path id="times-7" data-name="times" d="M6.941,101.726l3.671-3.671.757-.757a.286.286,0,0,0,0-.4l-.81-.81a.286.286,0,0,0-.4,0l-4.428,4.428L1.3,96.084a.286.286,0,0,0-.4,0l-.81.81a.286.286,0,0,0,0,.4l4.428,4.428L.084,106.154a.286.286,0,0,0,0,.4l.81.81a.286.286,0,0,0,.4,0l4.428-4.428L9.4,106.612l.757.757a.286.286,0,0,0,.4,0l.81-.81a.286.286,0,0,0,0-.4Z" transform="translate(513.524 178.866)" fill="#888"/>
+    <path id="times-8" data-name="times" d="M6.941,101.726l3.671-3.671.757-.757a.286.286,0,0,0,0-.4l-.81-.81a.286.286,0,0,0-.4,0l-4.428,4.428L1.3,96.084a.286.286,0,0,0-.4,0l-.81.81a.286.286,0,0,0,0,.4l4.428,4.428L.084,106.154a.286.286,0,0,0,0,.4l.81.81a.286.286,0,0,0,.4,0l4.428-4.428L9.4,106.612l.757.757a.286.286,0,0,0,.4,0l.81-.81a.286.286,0,0,0,0-.4Z" transform="translate(513.524 126.593)" fill="#888"/>
+  </g>
+</svg>

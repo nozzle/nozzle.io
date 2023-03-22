@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Countdown_Style_3">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Countdown_Style_3" data-name="Countdown Style 3" clip-path="url(#clip-Countdown_Style_3)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g id="Rectangle_609" data-name="Rectangle 609" transform="translate(100 277)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="157" height="260" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="156" height="259" rx="4.5" fill="none"/>
+    </g>
+    <g id="Rectangle_613" data-name="Rectangle 613" transform="translate(100 407)" fill="#a2a2a2" stroke="#a2a2a2" stroke-width="1">
+      <path d="M0,0H157a0,0,0,0,1,0,0V125a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1,.5H156a.5.5,0,0,1,.5.5V125a4.5,4.5,0,0,1-4.5,4.5H5A4.5,4.5,0,0,1,.5,125V1A.5.5,0,0,1,1,.5Z" fill="none"/>
+    </g>
+    <g id="Rectangle_612" data-name="Rectangle 612" transform="translate(551 277)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="157" height="260" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="156" height="259" rx="4.5" fill="none"/>
+    </g>
+    <g id="Rectangle_615" data-name="Rectangle 615" transform="translate(551 407)" fill="#a2a2a2" stroke="#a2a2a2" stroke-width="1">
+      <path d="M0,0H157a0,0,0,0,1,0,0V125a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1,.5H156a.5.5,0,0,1,.5.5V125a4.5,4.5,0,0,1-4.5,4.5H5A4.5,4.5,0,0,1,.5,125V1A.5.5,0,0,1,1,.5Z" fill="none"/>
+    </g>
+    <g id="Rectangle_611" data-name="Rectangle 611" transform="translate(743 277)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="157" height="260" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="156" height="259" rx="4.5" fill="none"/>
+    </g>
+    <g id="Rectangle_616" data-name="Rectangle 616" transform="translate(743 407)" fill="#a2a2a2" stroke="#a2a2a2" stroke-width="1">
+      <path d="M0,0H157a0,0,0,0,1,0,0V125a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1,.5H156a.5.5,0,0,1,.5.5V125a4.5,4.5,0,0,1-4.5,4.5H5A4.5,4.5,0,0,1,.5,125V1A.5.5,0,0,1,1,.5Z" fill="none"/>
+    </g>
+    <g id="Rectangle_610" data-name="Rectangle 610" transform="translate(292 277)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="157" height="260" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="156" height="259" rx="4.5" fill="none"/>
+    </g>
+    <g id="Rectangle_614" data-name="Rectangle 614" transform="translate(292 407)" fill="#a2a2a2" stroke="#a2a2a2" stroke-width="1">
+      <path d="M0,0H157a0,0,0,0,1,0,0V125a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1,.5H156a.5.5,0,0,1,.5.5V125a4.5,4.5,0,0,1-4.5,4.5H5A4.5,4.5,0,0,1,.5,125V1A.5.5,0,0,1,1,.5Z" fill="none"/>
+    </g>
+    <g id="Ellipse_275" data-name="Ellipse 275" transform="matrix(0.017, 1, -1, 0.017, 514.396, 329.718)" fill="#888" stroke="#888" stroke-width="5">
+      <ellipse cx="15.222" cy="15.222" rx="15.222" ry="15.222" stroke="none"/>
+      <ellipse cx="15.222" cy="15.222" rx="12.722" ry="12.722" fill="none"/>
+    </g>
+    <g id="Ellipse_277" data-name="Ellipse 277" transform="matrix(0.017, 1, -1, 0.017, 514.105, 453.303)" fill="#888" stroke="#888" stroke-width="5">
+      <ellipse cx="15.222" cy="15.222" rx="15.222" ry="15.222" stroke="none"/>
+      <ellipse cx="15.222" cy="15.222" rx="12.722" ry="12.722" fill="none"/>
+    </g>
+    <text id="Minutes" transform="translate(135.5 225)" fill="#888" font-size="65" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">MINUTES</tspan></text>
+    <text id="Seconds" transform="translate(579.5 225)" fill="#888" font-size="65" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">SECONDS</tspan></text>
+    <text id="_0" data-name="0" transform="translate(114 484)" fill="#fff" font-size="223" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">0</tspan></text>
+    <text id="_0-2" data-name="0" transform="translate(307 484)" fill="#fff" font-size="223" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">0</tspan></text>
+    <text id="_0-3" data-name="0" transform="translate(565 484)" fill="#fff" font-size="223" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">0</tspan></text>
+    <text id="_0-4" data-name="0" transform="translate(758 484)" fill="#fff" font-size="223" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">0</tspan></text>
+    <line id="Line_94" data-name="Line 94" x2="157" transform="translate(100.5 407.5)" fill="none" stroke="#888" stroke-width="2"/>
+    <line id="Line_95" data-name="Line 95" x2="157" transform="translate(292.5 407.5)" fill="none" stroke="#888" stroke-width="2"/>
+    <line id="Line_96" data-name="Line 96" x2="157" transform="translate(551.5 407.5)" fill="none" stroke="#888" stroke-width="2"/>
+    <line id="Line_97" data-name="Line 97" x2="157" transform="translate(743 407.5)" fill="none" stroke="#888" stroke-width="2"/>
+  </g>
+</svg>

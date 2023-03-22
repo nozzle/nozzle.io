@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Team_Member_-_Style_1">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Team_Member_-_Style_1" data-name="Team Member - Style 1" clip-path="url(#clip-Team_Member_-_Style_1)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="439" height="350" rx="5" transform="translate(281 100)" fill="#d5d5d5"/>
+    <path id="Union_38" data-name="Union 38" d="M0,117V102.377C0,86.286,26.325,73.123,58.5,73.123S117,86.286,117,102.377V117ZM29.247,29.253A29.25,29.25,0,1,1,58.5,58.5,29.253,29.253,0,0,1,29.247,29.253Z" transform="translate(442 217)" fill="#f2f2f2"/>
+    <line id="Line_6" data-name="Line 6" x2="297.41" transform="translate(351.5 516.102)" fill="none" stroke="#888" stroke-width="20"/>
+    <line id="Line_7" data-name="Line 7" x2="208.33" transform="translate(396.5 552.078)" fill="none" stroke="#d5d5d5" stroke-width="12"/>
+  </g>
+</svg>

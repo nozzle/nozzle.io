@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Filter_-_Style_4">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Filter_-_Style_4" data-name="Filter - Style 4" clip-path="url(#clip-Filter_-_Style_4)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <text id="FILTERS" transform="translate(301 374)" fill="#888" font-size="60" font-family="Roboto-Medium, Roboto" font-weight="500" letter-spacing="0.05em"><tspan x="0" y="0">FILTERS</tspan></text>
+    <g id="Arrow-RightinCircle" transform="translate(649.599 312)">
+      <g id="icomoon-ignore">
+        <line id="Line_44" data-name="Line 44" transform="translate(0.4)" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path id="Path_239" data-name="Path 239" d="M25.676,13.906a2.619,2.619,0,1,0-4.548,2.6L38.03,35.4l-16.9,17.53A2.619,2.619,0,0,0,23.4,56.843c.909,0,2.277-1.32,2.277-1.32L43.322,36.693a2.614,2.614,0,0,0,0-2.6L25.676,13.906Z" transform="translate(6.44 3.9)" fill="#888"/>
+    </g>
+    <path id="Path_241" data-name="Path 241" d="M0,0H121.19" transform="translate(570.98 350.499)" fill="none" stroke="#888" stroke-linecap="round" stroke-width="5"/>
+  </g>
+</svg>

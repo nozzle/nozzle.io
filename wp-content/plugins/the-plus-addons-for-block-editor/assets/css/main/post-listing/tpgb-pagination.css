@@ -1,0 +1,40 @@
+/*--theplus pagination --*/
+.tpgb-pagination {
+    margin: 2em auto 2em;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+.tpgb-pagination a, .tpgb-pagination span {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 4px 8px;
+    margin: 0 5px;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    -webkit-transition: all .3s linear;
+	-moz-transition: all .3s linear;
+	-ms-transition: all .3s linear;
+	-o-transition: all .3s linear;
+	transition: all .3s linear;
+}
+.tpgb-pagination > a:hover,.tpgb-pagination > a:focus,.tpgb-pagination > span.current{
+	border-bottom-color: #ff214f;
+}
+.tpgb-pagination .paginate-prev a > i.fa {
+    margin-right: 5px;
+}
+.tpgb-pagination .paginate-next a > i.fa {
+    margin-left: 5px;
+}
+.tpgb-pagination .paginate-next {
+    margin-left: 10px;
+}
+.tpgb-pagination .paginate-prev {
+    margin-right: 10px;
+}
+.tpgb-pagination .paginate-prev,.tpgb-pagination .paginate-next{
+    display: inline-block;
+}

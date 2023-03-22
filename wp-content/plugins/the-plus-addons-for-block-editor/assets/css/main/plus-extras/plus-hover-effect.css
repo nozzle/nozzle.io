@@ -1,0 +1,204 @@
+@keyframes tpgb-pulse {
+    0%,to {
+        transform: scale(.95);
+        opacity: 1
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes tpgb-pulse {
+    0%,to {
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+        opacity: .7
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes tpgb-floating {
+    0%,to {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(4%)
+    }
+}
+
+@-webkit-keyframes tpgb-floating {
+    0%,to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    50% {
+        -webkit-transform: translateY(4%);
+        transform: translateY(4%)
+    }
+}
+
+@keyframes tpgb-tossing {
+    0%,to {
+        transform: rotate(-15deg)
+    }
+
+    50% {
+        transform: rotate(15deg)
+    }
+}
+
+@-webkit-keyframes tpgb-tossing {
+    0%,to {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg)
+    }
+}
+
+@keyframes tpgb-continue-rotating {
+    0% {
+        transform: rotate(0deg) translate(-10px) rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg) translate(-10px) rotate(-360deg)
+    }
+}
+
+@-webkit-keyframes tpgb-continue-rotating {
+    0% {
+        -webkit-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        transform: rotate(0deg) translate(-10px) rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        transform: rotate(360deg) translate(-10px) rotate(-360deg)
+    }
+}
+
+@-webkit-keyframes tpgb-rotating {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes tpgb-rotating {
+    0% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes tpgb-rotating {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes continue-drop-waves {
+    0% {
+        opacity: .8
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4)
+    }
+}
+
+@keyframes continue-drop-waves {
+    0% {
+        opacity: .8
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.4)
+    }
+}
+
+.tpgb-floating,.tpgb-pulse {
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+}
+
+.tpgb-hover-pulse:hover,.tpgb-pulse {
+    animation-name: tpgb-pulse;
+}
+
+.tpgb-drop_waves::after,.tpgb-hover-drop_waves::after,.tpgb-hover-floating:hover,.tpgb-hover-pulse:hover,.tpgb-hover-tossing:hover,.tpgb-tossing {
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+}
+
+.tpgb-floating,.tpgb-hover-floating:hover {
+    animation-name: tpgb-floating;
+}
+
+.tpgb-hover-tossing:hover,.tpgb-tossing {
+    animation-name: tpgb-tossing;
+}
+
+.tpgb-hover-rotating:hover,.tpgb-rotating {
+    animation-name: tpgb-rotating
+}
+
+.tpgb-rotating-continue {
+    animation-name: tpgb-continue-rotating;
+}
+
+.tpgb-hover-rotating:hover,.tpgb-rotating,.tpgb-rotating-continue {
+    animation-timing-function: linear;
+    transform-origin: center center;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.tpgb-drop_waves::after,.tpgb-hover-drop_waves::after {
+    content: "";
+    background: #ff214f;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.tpgb-drop_waves::after,.tpgb-hover-drop_waves:hover::after {
+    animation-name: continue-drop-waves
+}

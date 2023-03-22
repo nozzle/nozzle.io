@@ -1,0 +1,179 @@
+/*Content hover Effect*/
+.tpgb_cnt_hvr_effect.cnt_hvr_grow {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition: transform 0.3s;
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_grow:hover {
+    transform: scale(1.1);
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_push {
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_push:hover {
+    animation: hvr-push 0.3s linear 1;
+}
+
+@keyframes hvr-push {
+    50% {
+        transform: scale(.8)
+    }
+    100% {
+        transform: scale(1)
+    }
+}		
+.tpgb_cnt_hvr_effect.cnt_hvr_bounce-in {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.5s;
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_bounce-in:hover {
+    transform: scale(1.1);
+    transition-timing-function: cubic-bezier(.47,2.02,.31,-.36);
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_float {
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition: transform 0.3s ease-out;
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_float:hover {
+    transform: translateY(-8px);
+}
+
+.tpgb_cnt_hvr_effect.cnt_hvr_wobble_horizontal {
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_wobble_horizontal:hover {
+    animation: hvr-wobble-horizontal 1s ease-in-out 1;
+}
+
+@keyframes hvr-wobble-horizontal {
+    16.65% {
+        transform: translateX(8px)
+    }
+    33.3% {
+        transform: translateX(-6px)
+    }
+    49.95% {
+        transform: translateX(4px)
+    }
+    66.6% {
+        transform: translateX(-2px)
+    }
+    83.25% {
+        transform: translateX(1px)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.tpgb_cnt_hvr_effect.cnt_hvr_wobble_vertical {
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_wobble_vertical:hover {
+    animation: hvr-wobble-vertical 1s ease-in-out 1;
+}
+
+@keyframes hvr-wobble-vertical {
+    16.65% {
+        transform: translateY(8px)
+    }
+    33.3% {
+        transform: translateY(-6px)
+    }
+    49.95% {
+        transform: translateY(4px)
+    }
+    66.6% {
+        transform: translateY(-2px)
+    }
+    83.25% {
+        transform: translateY(1px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.tpgb_cnt_hvr_effect.cnt_hvr_float_shadow {
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	transition: transform 0.3s;
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_float_shadow:before,.tpgb_cnt_hvr_effect.cnt_hvr_radial:before{
+	content:'';
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_float_shadow:before{
+	pointer-events: none;
+	position: absolute;			
+	top: 100%;
+	left: 5%;
+	content:'';
+	height: 10px;
+	width: 90%;
+	opacity: 0;
+	background: radial-gradient(ellipse at center, #00000059 0%, rgba(0, 0, 0, 0) 80%);
+	transition: transform 0.3s, opacity 0.3s;
+}		
+.tpgb_cnt_hvr_effect.cnt_hvr_float_shadow:hover {
+	transform: translateY(-5px);
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_float_shadow:hover:before{
+	opacity: 1;
+	transform: translateY(5px);
+}
+
+.tpgb_cnt_hvr_effect.cnt_hvr_grow_shadow {
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition: box-shadow 0.3s, transform 0.3s;
+}	
+.tpgb_cnt_hvr_effect.cnt_hvr_grow_shadow:hover {
+	box-shadow: 0 10px 10px -10px #00000080;
+	transform: scale(1.1);
+}
+
+.tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial{
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	transition-duration:0.3s;
+}		
+.tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:hover:before, .tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:focus:before, .tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:active:before, .tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:hover:after, .tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:focus:after, .tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:active:after{
+	opacity:1;
+}
+
+.tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:before,.tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:after {
+	pointer-events: none;
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    height: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:after{
+    top: 100%;
+    background: radial-gradient(ellipse at 50% -50%, #00000099 0%, rgba(0, 0, 0, 0) 80%);
+}
+.tpgb_cnt_hvr_effect.cnt_hvr_shadow_radial:before{
+    bottom: 100%;
+    background: radial-gradient(ellipse at 50% 150%, #00000099 0%, rgba(0, 0, 0, 0) 80%);
+}

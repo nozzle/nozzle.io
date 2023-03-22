@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advertisement_Banner_Style_6">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advertisement_Banner_Style_6" data-name="Advertisement Banner Style 6" clip-path="url(#clip-Advertisement_Banner_Style_6)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_6" data-name="Line 6" x2="299.5" transform="translate(601.5 427.246)" fill="none" stroke="rgba(136,136,136,0.5)" stroke-width="15"/>
+    <line id="Line_8" data-name="Line 8" x2="343" transform="translate(558.5 484.336)" fill="none" stroke="#888" stroke-width="25"/>
+    <line id="Line_11" data-name="Line 11" x2="183" transform="translate(718.5 572.336)" fill="none" stroke="#888" stroke-width="50"/>
+  </g>
+</svg>

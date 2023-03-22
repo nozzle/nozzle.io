@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Social_Sharing_-_Horizontal-_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Social_Sharing_-_Horizontal-_Style_2" data-name="Social Sharing - Horizontal- Style 2" clip-path="url(#clip-Social_Sharing_-_Horizontal-_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="378" height="228" rx="10" transform="translate(100 236)" fill="#888"/>
+    <rect id="Rectangle_617" data-name="Rectangle 617" width="378" height="228" rx="10" transform="translate(522 236)" fill="#888"/>
+    <g id="Facebook" transform="translate(272 282.726)">
+      <path id="Path_1" data-name="Path 1" d="M102.46,66.274V36.083h10.309L114.242,24.3H102.46V16.937c0-3.314,1.1-5.891,5.891-5.891h6.259V.368c-1.473,0-5.155-.368-9.2-.368-8.837,0-15.1,5.523-15.1,15.464V24.3H80V36.083H90.309V66.274Z" transform="translate(-80 0)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+    <text id="Facebook-2" data-name="Facebook" transform="translate(189 406)" fill="#fff" font-size="46" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Facebook</tspan></text>
+    <text id="Pinterest" transform="translate(617 406)" fill="#fff" font-size="46" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Pinterest</tspan></text>
+    <path id="pinterest-p" d="M27.5,6.5C13.668,6.5,0,15.72,0,30.641,0,40.13,5.338,45.522,8.573,45.522c1.334,0,2.1-3.72,2.1-4.772,0-1.254-3.195-3.922-3.195-9.139,0-10.837,8.249-18.52,18.924-18.52,9.179,0,15.973,5.216,15.973,14.8,0,7.157-2.871,20.582-12.171,20.582a5.985,5.985,0,0,1-6.227-5.9c0-5.1,3.558-10.028,3.558-15.285,0-8.923-12.657-7.306-12.657,3.478A15.835,15.835,0,0,0,16.175,37.6c-1.86,8.006-5.661,19.935-5.661,28.184,0,2.548.364,5.055.607,7.6.458.512.229.458.93.2,6.793-9.3,6.551-11.12,9.624-23.292,1.658,3.154,5.944,4.852,9.341,4.852,14.315,0,20.744-13.951,20.744-26.527C51.759,15.234,40.194,6.5,27.5,6.5Z" transform="translate(686 276.226)" fill="#fff"/>
+  </g>
+</svg>

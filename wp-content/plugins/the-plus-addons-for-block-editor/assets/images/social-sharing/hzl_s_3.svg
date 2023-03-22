@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Social_Sharing_-_Horizontal-_Style_3">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Social_Sharing_-_Horizontal-_Style_3" data-name="Social Sharing - Horizontal- Style 3" clip-path="url(#clip-Social_Sharing_-_Horizontal-_Style_3)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="378" height="228" rx="10" transform="translate(100 236)" fill="#888"/>
+    <g id="Rectangle_617" data-name="Rectangle 617" transform="translate(522 236)" fill="#f2f2f2" stroke="#d5d5d5" stroke-width="1">
+      <rect width="378" height="228" rx="10" stroke="none"/>
+      <rect x="0.5" y="0.5" width="377" height="227" rx="9.5" fill="none"/>
+    </g>
+    <g id="Facebook" transform="translate(272 282.726)">
+      <path id="Path_1" data-name="Path 1" d="M102.46,66.274V36.083h10.309L114.242,24.3H102.46V16.937c0-3.314,1.1-5.891,5.891-5.891h6.259V.368c-1.473,0-5.155-.368-9.2-.368-8.837,0-15.1,5.523-15.1,15.464V24.3H80V36.083H90.309V66.274Z" transform="translate(-80 0)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+    <text id="Facebook-2" data-name="Facebook" transform="translate(189 406)" fill="#fff" font-size="46" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Facebook</tspan></text>
+    <text id="Share" transform="translate(651 406)" fill="#888" font-size="46" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Share</tspan></text>
+    <text id="_5" data-name="5" transform="translate(694 347)" fill="#888" font-size="62" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">5</tspan></text>
+  </g>
+</svg>

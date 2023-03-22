@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Style_5">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Style_5" data-name="Style 5" clip-path="url(#clip-Style_5)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="800" height="190" rx="10" transform="translate(100 255)" fill="#888"/>
+    <text id="Facebook" transform="translate(623 372)" fill="#fff" font-size="55" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Facebook</tspan></text>
+    <text id="Share" transform="translate(397 372)" fill="#fff" font-size="55" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Share</tspan></text>
+    <text id="_108" data-name="108" transform="translate(261 372)" fill="#fff" font-size="55" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">108</tspan></text>
+    <g id="Facebook-2" data-name="Facebook" transform="translate(137.716 322.234)">
+      <path id="Path_1" data-name="Path 1" d="M99.407,57.266V31.178h8.908L109.587,21H99.407V14.635c0-2.863.954-5.09,5.09-5.09h5.408V.318c-1.273,0-4.454-.318-7.954-.318C94.316,0,88.908,4.772,88.908,13.362V21H80V31.178h8.908V57.266Z" transform="translate(-80 0)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+    <line id="Line_114" data-name="Line 114" y2="48" transform="translate(220.5 326.5)" fill="none" stroke="#fff" stroke-width="2"/>
+    <line id="Line_115" data-name="Line 115" y2="48" transform="translate(582.5 326.5)" fill="none" stroke="#fff" stroke-width="2"/>
+  </g>
+</svg>

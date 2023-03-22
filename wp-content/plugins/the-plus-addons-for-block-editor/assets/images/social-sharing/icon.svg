@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Social_Sharing_-_Layout_1-_Icon">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Social_Sharing_-_Layout_1-_Icon" data-name="Social Sharing - Layout 1- Icon" clip-path="url(#clip-Social_Sharing_-_Layout_1-_Icon)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="248" height="230" rx="10" transform="translate(376 235)" fill="#888"/>
+    <g id="Facebook" transform="translate(469.445 292.497)">
+      <path id="Path_1" data-name="Path 1" d="M118.9,114.795V62.5H136.76l2.551-20.408H118.9V29.336c0-5.74,1.913-10.2,10.2-10.2h10.842V.638C137.4.638,131.02,0,124,0,108.7,0,97.857,9.566,97.857,26.785V42.091H80V62.5H97.857v52.3Z" transform="translate(-79.999 0)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

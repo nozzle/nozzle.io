@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Style_4">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Style_4" data-name="Style 4" clip-path="url(#clip-Style_4)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="487" height="284" rx="10" transform="translate(257 208)" fill="#888"/>
+    <text id="Share" transform="translate(489 441)" fill="#fff" font-size="73" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Share</tspan></text>
+    <text id="_108" data-name="108" transform="translate(489 315)" fill="#fff" font-size="73" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">108</tspan></text>
+    <g id="Facebook" transform="translate(320.91 314.184)">
+      <path id="Path_1" data-name="Path 1" d="M114.743,102.52v-46.7H130.69l2.278-18.226H114.743V26.2c0-5.126,1.709-9.113,9.113-9.113h9.682V.57C131.26.57,125.564,0,119.3,0,105.63,0,95.948,8.543,95.948,23.921V37.59H80V55.816H95.948v46.7Z" transform="translate(-80 0)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

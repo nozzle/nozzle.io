@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Social_Sharing_-_Layout_5_-_Icon_Text">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Social_Sharing_-_Layout_5_-_Icon_Text" data-name="Social Sharing - Layout 5 - Icon Text" clip-path="url(#clip-Social_Sharing_-_Layout_5_-_Icon_Text)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="604" height="190" rx="10" transform="translate(198 255)" fill="#888"/>
+    <text id="Facebook" transform="translate(390 377)" fill="#fff" font-size="73" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Facebook</tspan></text>
+    <g id="Facebook-2" data-name="Facebook" transform="translate(287.91 315.234)">
+      <path id="Path_1" data-name="Path 1" d="M102.526,66.469V36.189h10.34l1.477-11.817H102.526V16.986c0-3.323,1.108-5.908,5.908-5.908h6.278V.369c-1.477,0-5.17-.369-9.232-.369C96.617,0,90.34,5.539,90.34,15.509v8.862H80V36.189H90.34v30.28Z" transform="translate(-80 0)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

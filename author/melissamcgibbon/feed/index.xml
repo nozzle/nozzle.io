@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/melissamcgibbon/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 01 Mar 2023 19:11:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Evolution of the Google SERP</title>
+		<link>/blog/evolution-google-serp</link>
+		
+		<dc:creator><![CDATA[Melissa McGibbon]]></dc:creator>
+		<pubDate>Thu, 02 Apr 2020 20:13:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11327</guid>
+
+					<description><![CDATA[SERP stands for Search Engine Results Page. When you enter a search term into Google, the search engine will return a list of matching results based on their algorithms.  During its early days, Google simply returned a set of 10 links per page for users to browse through. Since then, Google has radically changed the way users find information.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>9 Features to Love About the Rank Math SEO Plugin</title>
+		<link>/blog/9-features-love-rank-math-seo-plugin</link>
+					<comments>/blog/9-features-love-rank-math-seo-plugin#respond</comments>
+		
+		<dc:creator><![CDATA[Melissa McGibbon]]></dc:creator>
+		<pubDate>Wed, 19 Feb 2020 21:18:00 +0000</pubDate>
+				<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11412</guid>
+
+					<description><![CDATA[The Rank Math SEO plugin for WordPress offers the same functionality of Yoast Pro, Yoast Local, and WooCommerce for FREE.]]></description>
+		
+					<wfw:commentRss>/blog/9-features-love-rank-math-seo-plugin/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

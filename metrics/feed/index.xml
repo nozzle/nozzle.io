@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/metrics/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 22 Feb 2023 23:34:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Above the Fold %</title>
+		<link>/metrics/above-the-fold-percentage</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Sun, 12 Feb 2023 18:37:13 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12065</guid>
+
+					<description><![CDATA[This is the percentage of SERP real estate you own above the fold in terms of pixel coverage. When applied to a group of keywords, it's the average Above the Fold % of the whole group.
+<br>
+Since we render the SERP and measure the height and width of each result, we're able to calculate the percentage of pixel coverage each result has per SERP. We also take into account the pixel coverage of all the white space surrounding each listing.
+<br>
+For Above the Fold %, we render a common resolution for desktop and mobile, then measure what pixels are visible without scrolling to calculate the percentage.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Click-Through Rate (CTR)</title>
+		<link>/metrics/click-through-rate-ctr</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Sat, 11 Feb 2023 19:42:59 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12096</guid>
+
+					<description><![CDATA[Our Click-Through Rate calculation starts with a base CTR curve unique to each device type based off of recent research and clickstream data. Then we look at SERP position, type of SERP feature, and surrounding features that appear within each specific SERP to estimate each results CTR.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Estimated Traffic</title>
+		<link>/metrics/estimated-traffic</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Fri, 10 Feb 2023 21:57:01 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12143</guid>
+
+					<description><![CDATA[An estimate of monthly search traffic to each domain based on monthly search volume and per SERP click through rates. It is summed across however many results appear in the same SERP for each domain.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Keywords</title>
+		<link>/metrics/keywords</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Thu, 09 Feb 2023 22:20:51 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12145</guid>
+
+					<description><![CDATA[This is a count of how many unique keywords each domain ranks at least once for in the top 100 by default. You can filter down and only show top 10 or 20 results for example.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>PPC Value</title>
+		<link>/metrics/ppc-value</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Wed, 08 Feb 2023 22:22:52 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12147</guid>
+
+					<description><![CDATA[An estimate of the amount of money you would have to spend on PPC ads to get the same search traffic calculated by Estimated Traffic * Cost Per Click.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Pixels from Top</title>
+		<link>/metrics/pixels-from-top</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Tue, 07 Feb 2023 22:25:07 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12149</guid>
+
+					<description><![CDATA[Pixels from Top is the average pixel distance from the top of the SERP to the highest ranking result. If you rank multiple times for the same search, we only return the best measurement, since you shouldn't be penalized for multiple listings.
+<br>
+To correctly aggregate across SERPs where you don't rank, we use 30,000 pixels to average into your results, to remove noise for sites that only rank well for one or two keywords.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Rank</title>
+		<link>/metrics/rank</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Mon, 06 Feb 2023 22:27:08 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12151</guid>
+
+					<description><![CDATA[This is the average rank for the top ranking result on each SERP. We don't average all ranks, because we don't want to penalize your average ranking because you happen to rank in positions 1, 3, and 25 for the same SERP.
+<br>
+It's also important to average correctly across SERPs where you may not rank. Since we track the top 100 results, we use 101 as the average rank so that a site that only ranks in position 5 for a couple SERPs out of thousands that you track doesn't show up as being one of the top ranking.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Results</title>
+		<link>/metrics/results</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Sun, 05 Feb 2023 22:39:49 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12153</guid>
+
+					<description><![CDATA[This is a count of how many individual results appear for each domain. Any link on the SERP, no matter how small, represents a result. So if your organic result contains two additional sitelinks and you also rank an image in an image pack for one search query, that would be 4 Unique Results.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>SERP %</title>
+		<link>/metrics/serp</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Sat, 04 Feb 2023 22:41:14 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12155</guid>
+
+					<description><![CDATA[This is the percentage of SERP real estate you own in terms of pixel coverage. When applied to a group of keywords, it's the average SERP % of the whole group.
+<br>
+Since we render the SERP and measure the height and width of each result, we're able to calculate the percentage of pixel coverage each result has per SERP. We also take into account the pixel coverage of all the white space surrounding each listing.
+<br>
+SERP % is the pixel coverage of each result compared to the pixel coverage of all results on a SERP, unweighted for position.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>STAT Base Rank</title>
+		<link>/metrics/stat-base-rank</link>
+		
+		<dc:creator><![CDATA[Nathan Blair]]></dc:creator>
+		<pubDate>Fri, 03 Feb 2023 22:42:38 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=metrics#038;p=12157</guid>
+
+					<description><![CDATA[This only counts traditional organic results and featured snippets and ignores other SERP features like People Also Ask boxes, for example.]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

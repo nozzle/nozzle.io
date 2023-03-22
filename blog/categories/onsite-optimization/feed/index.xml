@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/categories/onsite-optimization/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Fri, 03 Mar 2023 23:57:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Calculate How Many of Your Title Tags Google Is Actually Using in the SERPs</title>
+		<link>/blog/calculate-how-many-of-your-title-tags-google-is-actually-using-in-the-serps</link>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Fri, 10 Jun 2022 16:02:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11238</guid>
+
+					<description><![CDATA[To help you identify and analyze which titles Google is changing, here is an overview of how to export this information from Nozzle and convert it to a pivot chart on your excel spreadsheet.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Use the Wayback Machine’s “Changes” Tool for SEO</title>
+		<link>/blog/wayback-machines-changes-tool-seo</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 26 May 2022 18:52:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11274</guid>
+
+					<description><![CDATA[The Wayback Machine's "Changes" tool is an overlooked SEO tool that's great for analyzing your own or your competitors' on-site optimization efforts.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>7 Search Term Organizing Methods Used by Professional Keyword Services</title>
+		<link>/blog/7-search-term-organizing-methods-used-by-professional-keyword-services</link>
+		
+		<dc:creator><![CDATA[Soumita Moitra]]></dc:creator>
+		<pubDate>Mon, 16 May 2022 22:25:00 +0000</pubDate>
+				<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11331</guid>
+
+					<description><![CDATA[Powerful keyword organization techniques used by keyword services.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>6 Factors that Companies Need to Consider when Thinking About Outsourcing Link Building</title>
+		<link>/blog/6-factors-companies-need-to-consider-outsourcing-link-building</link>
+		
+		<dc:creator><![CDATA[Matt Tutt]]></dc:creator>
+		<pubDate>Mon, 16 May 2022 19:20:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<guid isPermaLink="false">/?p=11280</guid>
+
+					<description><![CDATA[6 factors to consider when trying to find genuine, good link builders online.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>The Impact of UI/UX Developers on Websites in 2022</title>
+		<link>/blog/the-impact-of-ui-ux-developers-on-websites-in-2022</link>
+		
+		<dc:creator><![CDATA[Anastasia Stefanuk]]></dc:creator>
+		<pubDate>Tue, 26 Apr 2022 19:15:00 +0000</pubDate>
+				<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11276</guid>
+
+					<description><![CDATA[UX and UI Trends in Website Development in 2022]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Who to Look for to Lead Your SEO Team</title>
+		<link>/blog/who-to-look-for-to-lead-your-seo-team</link>
+		
+		<dc:creator><![CDATA[Luke Williams]]></dc:creator>
+		<pubDate>Wed, 19 Jan 2022 20:49:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11307</guid>
+
+					<description><![CDATA[When choosing someone to lead your SEO team, a deep understanding of content creation is important.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>8 Rules to Follow to Guarantee a Natural Backlink Profile</title>
+		<link>/blog/8-rules-to-follow-to-guarantee-a-natural-backlink-profile</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Fri, 07 Jan 2022 19:45:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11272</guid>
+
+					<description><![CDATA[Build a near perfect backlink profile for SEO.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>7 Tips for Ranking Higher in the Search Results</title>
+		<link>/blog/7-tips-for-ranking-higher-in-the-search-results</link>
+		
+		<dc:creator><![CDATA[Rob Powell]]></dc:creator>
+		<pubDate>Mon, 27 Dec 2021 20:53:00 +0000</pubDate>
+				<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11311</guid>
+
+					<description><![CDATA[Seven tips for ranking higher in the SERPs]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Mistakes in SEO that can Lead to Google Rank Drop</title>
+		<link>/blog/mistakes-in-seo-that-can-lead-to-google-ranking-drop</link>
+		
+		<dc:creator><![CDATA[Stephanie Long]]></dc:creator>
+		<pubDate>Thu, 23 Dec 2021 21:00:00 +0000</pubDate>
+				<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11315</guid>
+
+					<description><![CDATA[The most common mistakes that can lead to a drop in the Search Engine Results Page.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>2- Underutilized Onsite Optimization Strategies</title>
+		<link>/blog/2-underutilized-onsite-optimization-strategies</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 30 Nov 2021 23:38:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<guid isPermaLink="false">/?p=11341</guid>
+
+					<description><![CDATA[This is what the experts say are the most underutilized SEO strategies regarding onsite optimization.]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

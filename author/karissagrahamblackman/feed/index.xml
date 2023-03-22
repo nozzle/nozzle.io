@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/karissagrahamblackman/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Mon, 27 Feb 2023 21:28:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>SERP Features Every SEO Should Work on Obtaining</title>
+		<link>/blog/serp-features-every-seo-should-work-on-obtaining</link>
+		
+		<dc:creator><![CDATA[Karissa Graham-Blackman]]></dc:creator>
+		<pubDate>Wed, 27 Jan 2021 18:59:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[Google SERP Tracker]]></category>
+		<category><![CDATA[SERP Keyword Checker]]></category>
+		<guid isPermaLink="false">/?p=11244</guid>
+
+					<description><![CDATA[SERP features you should be using in your SEO strategy]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Understanding the Power of Featured Snippets</title>
+		<link>/blog/what-are-featured-snippets</link>
+					<comments>/blog/what-are-featured-snippets#respond</comments>
+		
+		<dc:creator><![CDATA[Karissa Graham-Blackman]]></dc:creator>
+		<pubDate>Sat, 16 Jan 2021 20:09:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Content Marketing]]></category>
+		<guid isPermaLink="false">/?p=11396</guid>
+
+					<description><![CDATA[Rank for Google Featured Snippets 2021]]></description>
+		
+					<wfw:commentRss>/blog/what-are-featured-snippets/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

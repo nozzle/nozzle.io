@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/pattymalowney/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Tue, 28 Feb 2023 21:12:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Why Aren’t My Google Reviews Showing Up? 10 Possible Reasons Why</title>
+		<link>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why</link>
+					<comments>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why#respond</comments>
+		
+		<dc:creator><![CDATA[Patty Malowney]]></dc:creator>
+		<pubDate>Tue, 22 Mar 2022 18:59:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11461</guid>
+
+					<description><![CDATA[These are the biggest reasons why your Google reviews aren’t showing up.]]></description>
+		
+					<wfw:commentRss>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to rank better in Google Maps in 2022</title>
+		<link>/blog/how-to-rank-better-in-google-maps-in-2022</link>
+					<comments>/blog/how-to-rank-better-in-google-maps-in-2022#respond</comments>
+		
+		<dc:creator><![CDATA[Patty Malowney]]></dc:creator>
+		<pubDate>Mon, 07 Feb 2022 20:04:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11465</guid>
+
+					<description><![CDATA[This is how to rank better in Google Maps in 2022.]]></description>
+		
+					<wfw:commentRss>/blog/how-to-rank-better-in-google-maps-in-2022/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/lukewilliams/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Tue, 28 Feb 2023 20:55:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Who to Look for to Lead Your SEO Team</title>
+		<link>/blog/who-to-look-for-to-lead-your-seo-team</link>
+		
+		<dc:creator><![CDATA[Luke Williams]]></dc:creator>
+		<pubDate>Wed, 19 Jan 2022 20:49:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11307</guid>
+
+					<description><![CDATA[When choosing someone to lead your SEO team, a deep understanding of content creation is important.]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

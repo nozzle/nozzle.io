@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/tags/how-to-check-keyword-ranking/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Mon, 27 Feb 2023 18:31:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Local Pack Competitor Analysis with Nozzle</title>
+		<link>/blog/google-local-rank-tracking</link>
+					<comments>/blog/google-local-rank-tracking#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 03 Jun 2021 19:19:00 +0000</pubDate>
+				<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Google SERP Tracker]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[SERP Checker Tool]]></category>
+		<guid isPermaLink="false">/?p=11478</guid>
+
+					<description><![CDATA[Time to get local]]></description>
+		
+					<wfw:commentRss>/blog/google-local-rank-tracking/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Featured Snippet Competitor Analysis with Nozzle</title>
+		<link>/blog/featured-snippet-competitor-analysis</link>
+					<comments>/blog/featured-snippet-competitor-analysis#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Tue, 01 Jun 2021 20:02:00 +0000</pubDate>
+				<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<guid isPermaLink="false">/?p=11496</guid>
+
+					<description><![CDATA[Analyzing the domains, URLs, webpages, and keywords of your competitors' featured snippets]]></description>
+		
+					<wfw:commentRss>/blog/featured-snippet-competitor-analysis/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Do I Need a Rank Tracker?</title>
+		<link>/blog/do-i-need-a-rank-tracker</link>
+					<comments>/blog/do-i-need-a-rank-tracker#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 20 May 2021 19:16:00 +0000</pubDate>
+				<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[Search Rank Tracking Software]]></category>
+		<guid isPermaLink="false">/?p=11476</guid>
+
+					<description><![CDATA[Do you really need a rank tracker? Read on to find out]]></description>
+		
+					<wfw:commentRss>/blog/do-i-need-a-rank-tracker/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Pixels From Top &#8211; A Nozzle Feature</title>
+		<link>/blog/pixels-from-top-a-nozzle-feature</link>
+		
+		<dc:creator><![CDATA[Nozzle Bot]]></dc:creator>
+		<pubDate>Tue, 23 Jun 2020 22:28:00 +0000</pubDate>
+				<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<guid isPermaLink="false">/?p=11335</guid>
+
+					<description><![CDATA[New metric that rocks the casbah!]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

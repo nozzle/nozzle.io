@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/ryanmendenhall/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 01 Mar 2023 16:52:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>YouTube Best Practices for Beginners</title>
+		<link>/blog/youtube-best-practices-for-beginners</link>
+		
+		<dc:creator><![CDATA[Ryan Mendenhall]]></dc:creator>
+		<pubDate>Tue, 18 Feb 2020 20:29:00 +0000</pubDate>
+				<category><![CDATA[YouTube]]></category>
+		<guid isPermaLink="false">/?p=11290</guid>
+
+					<description><![CDATA[Why your business should be using YouTube as part of your marketing mix.]]></description>
+		
+		
+		
+		<media:content url="https://www.youtube.com/embed/Io4ugroDedo" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/Io4ugroDedo" />
+			<media:title type="plain">How to Do a Basic Backlink Analysis on Your Competitors</media:title>
+			<media:description type="html"><![CDATA[You need backlinks to rank high in Google, which all starts with doing a backlink analysis. This video shows you how to do basic backlink research using Ahre...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2023/01/how-to-do-a-basic-backlink-analy.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
+	</channel>
+</rss>

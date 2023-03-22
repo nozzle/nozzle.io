@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/tykilgore/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 15 Feb 2023 23:04:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Creating User Personas In Your Marketing &#8211; Why Most Companies Get It Wrong</title>
+		<link>/blog/creating-user-personas-in-your-marketing-why-most-companies-get-it-wrong</link>
+					<comments>/blog/creating-user-personas-in-your-marketing-why-most-companies-get-it-wrong#respond</comments>
+		
+		<dc:creator><![CDATA[Ty Kilgore]]></dc:creator>
+		<pubDate>Wed, 04 Mar 2020 18:41:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<guid isPermaLink="false">/?p=11389</guid>
+
+					<description><![CDATA[You need to spend the time to create in-depth personas for the people who will be buying from you.]]></description>
+		
+					<wfw:commentRss>/blog/creating-user-personas-in-your-marketing-why-most-companies-get-it-wrong/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<media:content url="https://www.youtube.com/embed/SfxixxZUC8I" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/SfxixxZUC8I" />
+			<media:title type="plain">Creating User Personas In Your Marketing   Why Most Companies Get It Wrong</media:title>
+			<media:description type="html"><![CDATA[Find out why so many companies don&#039;t understand who they are serving. Instead, they create content and market their product or service with what THEY think t...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2023/02/creating-user-personas-in-your-m.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/elizabethluther/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Sat, 04 Mar 2023 00:20:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>10 Actionable Local SEO Tips &#038; Tricks In 2021</title>
+		<link>/blog/10-actionable-local-seo-tips-and-tricks-in-2021</link>
+					<comments>/blog/10-actionable-local-seo-tips-and-tricks-in-2021#respond</comments>
+		
+		<dc:creator><![CDATA[Elizabeth Luther]]></dc:creator>
+		<pubDate>Tue, 29 Jun 2021 17:15:00 +0000</pubDate>
+				<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11369</guid>
+
+					<description><![CDATA[Stay on top of your game with these 10 local SEO tips]]></description>
+		
+					<wfw:commentRss>/blog/10-actionable-local-seo-tips-and-tricks-in-2021/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

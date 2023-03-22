@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/nozzlebot/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Mon, 27 Feb 2023 18:31:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Pixels From Top &#8211; A Nozzle Feature</title>
+		<link>/blog/pixels-from-top-a-nozzle-feature</link>
+		
+		<dc:creator><![CDATA[Nozzle Bot]]></dc:creator>
+		<pubDate>Tue, 23 Jun 2020 22:28:00 +0000</pubDate>
+				<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<guid isPermaLink="false">/?p=11335</guid>
+
+					<description><![CDATA[New metric that rocks the casbah!]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

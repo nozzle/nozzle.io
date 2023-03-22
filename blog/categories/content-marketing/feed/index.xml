@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/categories/content-marketing/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Tue, 28 Feb 2023 03:41:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Top 5 Things To Look at When Doing a Content Audit</title>
+		<link>/blog/top-5-things-to-look-at-when-doing-a-content-audit</link>
+		
+		<dc:creator><![CDATA[Louise Persson]]></dc:creator>
+		<pubDate>Wed, 25 Jan 2023 21:29:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11512</guid>
+
+					<description><![CDATA[One can say that the content audit is the secret ingredient to an impactful content recipe. This article will jog your memory as to why that is, and highlight the top 5 things to consider when performing one.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>A Comprehensive Guide to Keyword Clustering</title>
+		<link>/blog/a-comprehensive-guide-to-keyword-clustering</link>
+		
+		<dc:creator><![CDATA[Rick Seidl]]></dc:creator>
+		<pubDate>Wed, 27 Jul 2022 20:19:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<guid isPermaLink="false">/?p=11504</guid>
+
+					<description><![CDATA[How to make and use keyword clusters properly.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>6 Factors that Companies Need to Consider when Thinking About Outsourcing Link Building</title>
+		<link>/blog/6-factors-companies-need-to-consider-outsourcing-link-building</link>
+		
+		<dc:creator><![CDATA[Matt Tutt]]></dc:creator>
+		<pubDate>Mon, 16 May 2022 19:20:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<guid isPermaLink="false">/?p=11280</guid>
+
+					<description><![CDATA[6 factors to consider when trying to find genuine, good link builders online.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Get One Step Ahead Of Your Competitors &#8211; 5 Tools To Help You Track Their Movements</title>
+		<link>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them</link>
+					<comments>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them#respond</comments>
+		
+		<dc:creator><![CDATA[Peter Bray]]></dc:creator>
+		<pubDate>Fri, 11 Mar 2022 19:47:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<guid isPermaLink="false">/?p=11453</guid>
+
+					<description><![CDATA[The tools needed to monitor and track the performance of competitor websites.]]></description>
+		
+					<wfw:commentRss>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to rank better in Google Maps in 2022</title>
+		<link>/blog/how-to-rank-better-in-google-maps-in-2022</link>
+					<comments>/blog/how-to-rank-better-in-google-maps-in-2022#respond</comments>
+		
+		<dc:creator><![CDATA[Patty Malowney]]></dc:creator>
+		<pubDate>Mon, 07 Feb 2022 20:04:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11465</guid>
+
+					<description><![CDATA[This is how to rank better in Google Maps in 2022.]]></description>
+		
+					<wfw:commentRss>/blog/how-to-rank-better-in-google-maps-in-2022/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>8 Rules to Follow to Guarantee a Natural Backlink Profile</title>
+		<link>/blog/8-rules-to-follow-to-guarantee-a-natural-backlink-profile</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Fri, 07 Jan 2022 19:45:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11272</guid>
+
+					<description><![CDATA[Build a near perfect backlink profile for SEO.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>7 Tips for Ranking Higher in the Search Results</title>
+		<link>/blog/7-tips-for-ranking-higher-in-the-search-results</link>
+		
+		<dc:creator><![CDATA[Rob Powell]]></dc:creator>
+		<pubDate>Mon, 27 Dec 2021 20:53:00 +0000</pubDate>
+				<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11311</guid>
+
+					<description><![CDATA[Seven tips for ranking higher in the SERPs]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>HARO: Worth It or Waste of Time?</title>
+		<link>/blog/haro-worth-it-or-waste-of-time</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Mon, 20 Dec 2021 19:06:00 +0000</pubDate>
+				<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11257</guid>
+
+					<description><![CDATA[Is HARO worth the effort? Here's our experience with HARO as a Source and as a Journalist.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Content Marketing For Small Businesses And Coaches [2022 Edition]</title>
+		<link>/blog/content-marketing-for-small-businesses-and-coaches-2022-edition</link>
+		
+		<dc:creator><![CDATA[Thomas Anthony]]></dc:creator>
+		<pubDate>Wed, 15 Dec 2021 20:36:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<category><![CDATA[YouTube]]></category>
+		<guid isPermaLink="false">/?p=11298</guid>
+
+					<description><![CDATA[A break down of everything you need to do to launch an effective content marketing strategy even if you’re a coach or small business.]]></description>
+		
+		
+		
+		<media:content url="https://www.youtube.com/embed/rpStGznWoLM" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/rpStGznWoLM" />
+			<media:title type="plain">How to Tell If She Likes You or If She’s Just Being Nice: Does She Try to Get Close to You? #Shorts</media:title>
+			<media:description type="html"><![CDATA[Watch this short for another great tip that she’s into you and doesn’t think of you as just a friend. Check out the full video in my channel “How to Tell If ...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2023/01/how-to-tell-if-she-likes-you-or-.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
+		<item>
+		<title>4 Ways To Find Zero Search Volume Keywords That Bring Traffic</title>
+		<link>/blog/4-ways-to-find-zero-search-volume-keywords-that-bring-traffic</link>
+		
+		<dc:creator><![CDATA[Kate Parish]]></dc:creator>
+		<pubDate>Tue, 07 Dec 2021 21:05:00 +0000</pubDate>
+				<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<guid isPermaLink="false">/?p=11319</guid>
+
+					<description><![CDATA[Discussing why and how to locate low-competition keywords and target them.]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/dmytrosokhach/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 01 Mar 2023 22:59:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How is Big Data Impacting Search Engine Optimization?</title>
+		<link>/blog/how-is-big-data-impacting-search-engine-optimization</link>
+		
+		<dc:creator><![CDATA[Dmytro Sokhach]]></dc:creator>
+		<pubDate>Fri, 10 Feb 2023 19:47:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=12316</guid>
+
+					<description><![CDATA[Researchers have described Big Data as the “oil” that has helped optimize the digital ecosystem over the last decade. See the pros and cons of Big Data and how it impacts SEO. ]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

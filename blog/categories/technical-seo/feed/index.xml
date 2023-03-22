@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/categories/technical-seo/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 01 Mar 2023 18:58:34 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>8 Most Effective SEO Tactics for a Website</title>
+		<link>/blog/8-most-effective-seo-tactics-for-a-website</link>
+		
+		<dc:creator><![CDATA[Neha Pande]]></dc:creator>
+		<pubDate>Thu, 09 Feb 2023 18:15:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=12309</guid>
+
+					<description><![CDATA[These SEO tactics can help websites stand out in the search results and attract more relevant traffic.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>The Impact of UI/UX Developers on Websites in 2022</title>
+		<link>/blog/the-impact-of-ui-ux-developers-on-websites-in-2022</link>
+		
+		<dc:creator><![CDATA[Anastasia Stefanuk]]></dc:creator>
+		<pubDate>Tue, 26 Apr 2022 19:15:00 +0000</pubDate>
+				<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11276</guid>
+
+					<description><![CDATA[UX and UI Trends in Website Development in 2022]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Your Guide to Getting Started with Google Analytics</title>
+		<link>/blog/your-guide-to-getting-started-with-google-analytics</link>
+		
+		<dc:creator><![CDATA[Madeline Miller]]></dc:creator>
+		<pubDate>Tue, 26 Apr 2022 18:15:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11261</guid>
+
+					<description><![CDATA[If you don’t analyze your data, then you are missing out on important opportunities to grow your business. This is your guide to getting started with Google Analytics.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Why Aren’t My Google Reviews Showing Up? 10 Possible Reasons Why</title>
+		<link>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why</link>
+					<comments>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why#respond</comments>
+		
+		<dc:creator><![CDATA[Patty Malowney]]></dc:creator>
+		<pubDate>Tue, 22 Mar 2022 18:59:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11461</guid>
+
+					<description><![CDATA[These are the biggest reasons why your Google reviews aren’t showing up.]]></description>
+		
+					<wfw:commentRss>/blog/why-arent-my-google-reviews-showing-up-10-possible-reasons-why/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Voice Search Optimization Checklist</title>
+		<link>/blog/voice-search-optimization-checklist</link>
+					<comments>/blog/voice-search-optimization-checklist#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 22 Feb 2022 19:50:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<category><![CDATA[YouTube]]></category>
+		<guid isPermaLink="false">/?p=11457</guid>
+
+					<description><![CDATA[Optimizing your site for voice search will help increase your traffic and decrease your bounce rate. This is a check list to help evaluate your voice search optimization.]]></description>
+		
+					<wfw:commentRss>/blog/voice-search-optimization-checklist/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>44 Underutilized SEO Strategies and Tactics</title>
+		<link>/blog/44-underutilized-seo-strategies-and-tactics</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 30 Nov 2021 19:12:04 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<guid isPermaLink="false">/?p=11259</guid>
+
+					<description><![CDATA[In response to the query, "What is the most underutilized SEO strategy?" I received over 100 responses, and here they are organized into 8 categories.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>#5- Underutilized Technical SEO Strategies</title>
+		<link>/blog/5-underutilized-technical-seo-strategies</link>
+					<comments>/blog/5-underutilized-technical-seo-strategies#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 30 Nov 2021 16:07:00 +0000</pubDate>
+				<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11349</guid>
+
+					<description><![CDATA[This is what the experts say are the most underutilized SEO strategies regarding technical SEO.]]></description>
+		
+					<wfw:commentRss>/blog/5-underutilized-technical-seo-strategies/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Best SEO-Friendly Technologies for Building Super-Fast and Responsive Websites in 2022</title>
+		<link>/blog/best-seo-friendly-technologies-for-building-super-fast-and-responsive-websites-in-2022</link>
+					<comments>/blog/best-seo-friendly-technologies-for-building-super-fast-and-responsive-websites-in-2022#respond</comments>
+		
+		<dc:creator><![CDATA[Thomas Wilsom]]></dc:creator>
+		<pubDate>Wed, 24 Nov 2021 18:08:00 +0000</pubDate>
+				<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11365</guid>
+
+					<description><![CDATA[Best SEO-Friendly Technologies for Building Super-Fast and Responsive Websites in 2022]]></description>
+		
+					<wfw:commentRss>/blog/best-seo-friendly-technologies-for-building-super-fast-and-responsive-websites-in-2022/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Have Fun And Be Creative With robots.txt</title>
+		<link>/blog/have-fun-and-be-creative-with-robots-txt</link>
+					<comments>/blog/have-fun-and-be-creative-with-robots-txt#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Mon, 23 Aug 2021 17:00:00 +0000</pubDate>
+				<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11362</guid>
+
+					<description><![CDATA[You know that person who is always funny and seems to have an endless repertoire of clever things to say? Every company has them, maybe you're that person in your company and you let it seep through to your work, benefiting your company. We are highlighting a few of those companies whose employees brought out their humor, creativity and wit in a usually boring place, their robot.txt files. Who but the SEO nerds would even look for these?]]></description>
+		
+					<wfw:commentRss>/blog/have-fun-and-be-creative-with-robots-txt/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>CORE WEB VITALS: The Dos and Don&#8217;ts</title>
+		<link>/blog/core-web-vitals-the-dos-and-donts</link>
+					<comments>/blog/core-web-vitals-the-dos-and-donts#respond</comments>
+		
+		<dc:creator><![CDATA[Carter Stroup]]></dc:creator>
+		<pubDate>Sun, 16 May 2021 17:32:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<guid isPermaLink="false">/?p=11383</guid>
+
+					<description><![CDATA[CORE WEB VITALS: The Dos And Don'ts]]></description>
+		
+					<wfw:commentRss>/blog/core-web-vitals-the-dos-and-donts/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

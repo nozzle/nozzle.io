@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/deepali/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Mon, 27 Feb 2023 18:30:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Top 7 Marketing Strategies to Use In 2023</title>
+		<link>/blog/top-7-marketing-strategies-to-use-in-2023</link>
+					<comments>/blog/top-7-marketing-strategies-to-use-in-2023#respond</comments>
+		
+		<dc:creator><![CDATA[Deepali]]></dc:creator>
+		<pubDate>Mon, 05 Dec 2022 21:24:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<guid isPermaLink="false">/?p=11508</guid>
+
+					<description><![CDATA[Seven cutting-edge trends and strategies ruling the marketing landscape today and will continue to do so in 2023.]]></description>
+		
+					<wfw:commentRss>/blog/top-7-marketing-strategies-to-use-in-2023/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

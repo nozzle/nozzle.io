@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/categories/digital-marketing/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Tue, 28 Feb 2023 22:04:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Top 5 Things To Look at When Doing a Content Audit</title>
+		<link>/blog/top-5-things-to-look-at-when-doing-a-content-audit</link>
+		
+		<dc:creator><![CDATA[Louise Persson]]></dc:creator>
+		<pubDate>Wed, 25 Jan 2023 21:29:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11512</guid>
+
+					<description><![CDATA[One can say that the content audit is the secret ingredient to an impactful content recipe. This article will jog your memory as to why that is, and highlight the top 5 things to consider when performing one.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Brand Reputation and A.I. Content</title>
+		<link>/blog/brand-reputation-and-a-i-content</link>
+					<comments>/blog/brand-reputation-and-a-i-content#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Fri, 23 Dec 2022 21:13:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<guid isPermaLink="false">/?p=11502</guid>
+
+					<description><![CDATA[Will your brand reputation be compromised by using A.I. tools?]]></description>
+		
+					<wfw:commentRss>/blog/brand-reputation-and-a-i-content/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Top 7 Marketing Strategies to Use In 2023</title>
+		<link>/blog/top-7-marketing-strategies-to-use-in-2023</link>
+					<comments>/blog/top-7-marketing-strategies-to-use-in-2023#respond</comments>
+		
+		<dc:creator><![CDATA[Deepali]]></dc:creator>
+		<pubDate>Mon, 05 Dec 2022 21:24:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<guid isPermaLink="false">/?p=11508</guid>
+
+					<description><![CDATA[Seven cutting-edge trends and strategies ruling the marketing landscape today and will continue to do so in 2023.]]></description>
+		
+					<wfw:commentRss>/blog/top-7-marketing-strategies-to-use-in-2023/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Use Nozzle for Past Client Follow-Up</title>
+		<link>/blog/use-nozzle-for-past-client-follow-up</link>
+					<comments>/blog/use-nozzle-for-past-client-follow-up#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Thu, 25 Aug 2022 19:23:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<guid isPermaLink="false">/?p=11480</guid>
+
+					<description><![CDATA[Continue monitoring past clients' progress using Nozzle to verify the lost ground in their ranking, verifying the work you were doing for them.]]></description>
+		
+					<wfw:commentRss>/blog/use-nozzle-for-past-client-follow-up/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>6 Factors that Companies Need to Consider when Thinking About Outsourcing Link Building</title>
+		<link>/blog/6-factors-companies-need-to-consider-outsourcing-link-building</link>
+		
+		<dc:creator><![CDATA[Matt Tutt]]></dc:creator>
+		<pubDate>Mon, 16 May 2022 19:20:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<guid isPermaLink="false">/?p=11280</guid>
+
+					<description><![CDATA[6 factors to consider when trying to find genuine, good link builders online.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Your Guide to Getting Started with Google Analytics</title>
+		<link>/blog/your-guide-to-getting-started-with-google-analytics</link>
+		
+		<dc:creator><![CDATA[Madeline Miller]]></dc:creator>
+		<pubDate>Tue, 26 Apr 2022 18:15:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11261</guid>
+
+					<description><![CDATA[If you don’t analyze your data, then you are missing out on important opportunities to grow your business. This is your guide to getting started with Google Analytics.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Voice Search Optimization Checklist</title>
+		<link>/blog/voice-search-optimization-checklist</link>
+					<comments>/blog/voice-search-optimization-checklist#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 22 Feb 2022 19:50:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<category><![CDATA[YouTube]]></category>
+		<guid isPermaLink="false">/?p=11457</guid>
+
+					<description><![CDATA[Optimizing your site for voice search will help increase your traffic and decrease your bounce rate. This is a check list to help evaluate your voice search optimization.]]></description>
+		
+					<wfw:commentRss>/blog/voice-search-optimization-checklist/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Google Data Studio: An Ultimate User Guide</title>
+		<link>/blog/google-data-studio-an-ultimate-user-guide</link>
+		
+		<dc:creator><![CDATA[Jignesh Gohel]]></dc:creator>
+		<pubDate>Fri, 18 Feb 2022 20:43:00 +0000</pubDate>
+				<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<guid isPermaLink="false">/?p=11303</guid>
+
+					<description><![CDATA[An ultimate guide to Google Data Studio, this article explains a step-by-step guide on how to use Google data studio. Take your data visualization to the next level with data studio.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>How to rank better in Google Maps in 2022</title>
+		<link>/blog/how-to-rank-better-in-google-maps-in-2022</link>
+					<comments>/blog/how-to-rank-better-in-google-maps-in-2022#respond</comments>
+		
+		<dc:creator><![CDATA[Patty Malowney]]></dc:creator>
+		<pubDate>Mon, 07 Feb 2022 20:04:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11465</guid>
+
+					<description><![CDATA[This is how to rank better in Google Maps in 2022.]]></description>
+		
+					<wfw:commentRss>/blog/how-to-rank-better-in-google-maps-in-2022/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Who to Look for to Lead Your SEO Team</title>
+		<link>/blog/who-to-look-for-to-lead-your-seo-team</link>
+		
+		<dc:creator><![CDATA[Luke Williams]]></dc:creator>
+		<pubDate>Wed, 19 Jan 2022 20:49:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<guid isPermaLink="false">/?p=11307</guid>
+
+					<description><![CDATA[When choosing someone to lead your SEO team, a deep understanding of content creation is important.]]></description>
+		
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/author/sarahnorwood/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Sat, 04 Mar 2023 00:13:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Brand Reputation and A.I. Content</title>
+		<link>/blog/brand-reputation-and-a-i-content</link>
+					<comments>/blog/brand-reputation-and-a-i-content#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Fri, 23 Dec 2022 21:13:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<guid isPermaLink="false">/?p=11502</guid>
+
+					<description><![CDATA[Will your brand reputation be compromised by using A.I. tools?]]></description>
+		
+					<wfw:commentRss>/blog/brand-reputation-and-a-i-content/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>What SEO Agencies Should Include in Client&#8217;s Reports</title>
+		<link>/blog/what-seo-agencies-should-include-in-clients-reports</link>
+					<comments>/blog/what-seo-agencies-should-include-in-clients-reports#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Mon, 26 Sep 2022 19:26:00 +0000</pubDate>
+				<category><![CDATA[Stats]]></category>
+		<guid isPermaLink="false">/?p=11482</guid>
+
+					<description><![CDATA[We asked 78 agencies what the top 2-3 items in your reports do their clients find most valuable, and here are the statistics of what they said.]]></description>
+		
+					<wfw:commentRss>/blog/what-seo-agencies-should-include-in-clients-reports/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Use Nozzle for Past Client Follow-Up</title>
+		<link>/blog/use-nozzle-for-past-client-follow-up</link>
+					<comments>/blog/use-nozzle-for-past-client-follow-up#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Thu, 25 Aug 2022 19:23:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<guid isPermaLink="false">/?p=11480</guid>
+
+					<description><![CDATA[Continue monitoring past clients' progress using Nozzle to verify the lost ground in their ranking, verifying the work you were doing for them.]]></description>
+		
+					<wfw:commentRss>/blog/use-nozzle-for-past-client-follow-up/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Helpful Features 6 Nozzle Clients Love</title>
+		<link>/blog/helpful-features-6-nozzle-clients-love</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Thu, 28 Jul 2022 15:00:00 +0000</pubDate>
+				<category><![CDATA[SERP Features]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[People Also Ask]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11226</guid>
+
+					<description><![CDATA[Feedback from several of our customers sharing what they value and use the most with Nozzle.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Voice Search Optimization Checklist</title>
+		<link>/blog/voice-search-optimization-checklist</link>
+					<comments>/blog/voice-search-optimization-checklist#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 22 Feb 2022 19:50:00 +0000</pubDate>
+				<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<category><![CDATA[YouTube]]></category>
+		<guid isPermaLink="false">/?p=11457</guid>
+
+					<description><![CDATA[Optimizing your site for voice search will help increase your traffic and decrease your bounce rate. This is a check list to help evaluate your voice search optimization.]]></description>
+		
+					<wfw:commentRss>/blog/voice-search-optimization-checklist/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>8 Rules to Follow to Guarantee a Natural Backlink Profile</title>
+		<link>/blog/8-rules-to-follow-to-guarantee-a-natural-backlink-profile</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Fri, 07 Jan 2022 19:45:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">/?p=11272</guid>
+
+					<description><![CDATA[Build a near perfect backlink profile for SEO.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>3- Underutilized Content Strategies</title>
+		<link>/blog/3-underutilized-content-strategies</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 30 Nov 2021 23:42:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<guid isPermaLink="false">/?p=11343</guid>
+
+					<description><![CDATA[This is what the experts say are the most underutilized SEO strategies regarding content.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>2- Underutilized Onsite Optimization Strategies</title>
+		<link>/blog/2-underutilized-onsite-optimization-strategies</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 30 Nov 2021 23:38:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<guid isPermaLink="false">/?p=11341</guid>
+
+					<description><![CDATA[This is what the experts say are the most underutilized SEO strategies regarding onsite optimization.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>1- Underutilized Keyword Research Strategies</title>
+		<link>/blog/1-underutilized-keyword-research-strategies</link>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 30 Nov 2021 23:33:00 +0000</pubDate>
+				<category><![CDATA[Keyword Research]]></category>
+		<guid isPermaLink="false">/?p=11338</guid>
+
+					<description><![CDATA[This is what the experts say are the most underutilized SEO strategies regarding keyword research.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>#6- Underutilized Local SEO strategies</title>
+		<link>/blog/6-underutilized-local-seo-strategies</link>
+					<comments>/blog/6-underutilized-local-seo-strategies#respond</comments>
+		
+		<dc:creator><![CDATA[Sarah Norwood]]></dc:creator>
+		<pubDate>Tue, 30 Nov 2021 19:53:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<guid isPermaLink="false">/?p=11459</guid>
+
+					<description><![CDATA[This is what the experts say are the most underutilized SEO strategies regarding Local SEO.]]></description>
+		
+					<wfw:commentRss>/blog/6-underutilized-local-seo-strategies/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

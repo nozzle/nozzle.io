@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/tags/search-engine-ranking-report-software/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Thu, 23 Feb 2023 02:52:36 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Introducing Nozzle Vision</title>
+		<link>/blog/introducing-nozzle-vision</link>
+					<comments>/blog/introducing-nozzle-vision#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Tue, 09 Mar 2021 20:30:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<category><![CDATA[Search Engine Ranking Report Software]]></category>
+		<guid isPermaLink="false">/?p=11484</guid>
+
+					<description><![CDATA[Up your SEO reporting game!]]></description>
+		
+					<wfw:commentRss>/blog/introducing-nozzle-vision/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<media:content url="https://www.youtube.com/embed/ZGQpPhfS_4c" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/ZGQpPhfS_4c" />
+			<media:title type="plain">Nozzle Vision Walkthrough   Google Keyword Rank Checker Feature</media:title>
+			<media:description type="html"><![CDATA[Nozzle Vision is an awesome new feature that allows you to analyze the SERPs in a more visual manner.We rerender the SERP HTML for every keyword that you are...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2023/02/nozzle-vision-walkthrough-google.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
+		<item>
+		<title>The Functionality of Side-by-Side SERP HTML Comparison</title>
+		<link>/blog/the-functionality-of-side-by-side-serp-html-comparison</link>
+					<comments>/blog/the-functionality-of-side-by-side-serp-html-comparison#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Mon, 08 Feb 2021 20:54:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[Search Engine Rank Check]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<category><![CDATA[Search Engine Ranking Report Software]]></category>
+		<guid isPermaLink="false">/?p=11492</guid>
+
+					<description><![CDATA[Find out the amazing things you can do with this SERP comparison feature. Here's how to use it]]></description>
+		
+					<wfw:commentRss>/blog/the-functionality-of-side-by-side-serp-html-comparison/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<media:content url="https://www.youtube.com/embed/bFEP-NChJ28" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/bFEP-NChJ28" />
+			<media:title type="plain">Side-by-Side SERP HTML Comparisons</media:title>
+			<media:description type="html"><![CDATA[Nozzle gives you the ability to see multiple historical SERPs for your keywords at once so you can easily compare and contrast the SERP changes that may be a...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2023/02/side-by-side-serp-html-compariso.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
+	</channel>
+</rss>

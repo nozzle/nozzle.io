@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Nozzle</title>
+	<atom:link href="/blog/categories/seo-tools/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Tue, 28 Feb 2023 22:04:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/02/cropped-nozzfav-80x80.jpg</url>
+	<title>Nozzle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Introducing Nozzle&#8217;s Google Search Console Dashboard</title>
+		<link>/blog/introducing-nozzles-google-search-console-dashboard</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Wed, 15 Jun 2022 18:21:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11265</guid>
+
+					<description><![CDATA[Nozzle's Google Search Console Overview dashboard pulls live data from your Google Search Console account so you can see more ranking data in one place.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Use the Wayback Machine’s “Changes” Tool for SEO</title>
+		<link>/blog/wayback-machines-changes-tool-seo</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 26 May 2022 18:52:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11274</guid>
+
+					<description><![CDATA[The Wayback Machine's "Changes" tool is an overlooked SEO tool that's great for analyzing your own or your competitors' on-site optimization efforts.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>7 Search Term Organizing Methods Used by Professional Keyword Services</title>
+		<link>/blog/7-search-term-organizing-methods-used-by-professional-keyword-services</link>
+		
+		<dc:creator><![CDATA[Soumita Moitra]]></dc:creator>
+		<pubDate>Mon, 16 May 2022 22:25:00 +0000</pubDate>
+				<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Onsite Optimization]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11331</guid>
+
+					<description><![CDATA[Powerful keyword organization techniques used by keyword services.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Your Guide to Getting Started with Google Analytics</title>
+		<link>/blog/your-guide-to-getting-started-with-google-analytics</link>
+		
+		<dc:creator><![CDATA[Madeline Miller]]></dc:creator>
+		<pubDate>Tue, 26 Apr 2022 18:15:00 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Technical SEO]]></category>
+		<guid isPermaLink="false">/?p=11261</guid>
+
+					<description><![CDATA[If you don’t analyze your data, then you are missing out on important opportunities to grow your business. This is your guide to getting started with Google Analytics.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Get One Step Ahead Of Your Competitors &#8211; 5 Tools To Help You Track Their Movements</title>
+		<link>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them</link>
+					<comments>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them#respond</comments>
+		
+		<dc:creator><![CDATA[Peter Bray]]></dc:creator>
+		<pubDate>Fri, 11 Mar 2022 19:47:00 +0000</pubDate>
+				<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Keyword Research]]></category>
+		<category><![CDATA[Local SEO]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Video SEO]]></category>
+		<guid isPermaLink="false">/?p=11453</guid>
+
+					<description><![CDATA[The tools needed to monitor and track the performance of competitor websites.]]></description>
+		
+					<wfw:commentRss>/blog/get-one-step-ahead-of-your-competitors-5-tools-to-help-you-track-them/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Google Data Studio: An Ultimate User Guide</title>
+		<link>/blog/google-data-studio-an-ultimate-user-guide</link>
+		
+		<dc:creator><![CDATA[Jignesh Gohel]]></dc:creator>
+		<pubDate>Fri, 18 Feb 2022 20:43:00 +0000</pubDate>
+				<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Digital Marketing]]></category>
+		<guid isPermaLink="false">/?p=11303</guid>
+
+					<description><![CDATA[An ultimate guide to Google Data Studio, this article explains a step-by-step guide on how to use Google data studio. Take your data visualization to the next level with data studio.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>HARO: Worth It or Waste of Time?</title>
+		<link>/blog/haro-worth-it-or-waste-of-time</link>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Mon, 20 Dec 2021 19:06:00 +0000</pubDate>
+				<category><![CDATA[Link Building]]></category>
+		<category><![CDATA[Content Marketing]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<guid isPermaLink="false">/?p=11257</guid>
+
+					<description><![CDATA[Is HARO worth the effort? Here's our experience with HARO as a Source and as a Journalist.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Do I Need a Rank Tracker?</title>
+		<link>/blog/do-i-need-a-rank-tracker</link>
+					<comments>/blog/do-i-need-a-rank-tracker#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Thu, 20 May 2021 19:16:00 +0000</pubDate>
+				<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[How To Check Keyword Ranking]]></category>
+		<category><![CDATA[Search Rank Tracking Software]]></category>
+		<guid isPermaLink="false">/?p=11476</guid>
+
+					<description><![CDATA[Do you really need a rank tracker? Read on to find out]]></description>
+		
+					<wfw:commentRss>/blog/do-i-need-a-rank-tracker/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Introducing Nozzle Vision</title>
+		<link>/blog/introducing-nozzle-vision</link>
+					<comments>/blog/introducing-nozzle-vision#respond</comments>
+		
+		<dc:creator><![CDATA[Boyd Norwood]]></dc:creator>
+		<pubDate>Tue, 09 Mar 2021 20:30:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[Nozzle Feature]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<category><![CDATA[Search Engine Ranking Report Software]]></category>
+		<guid isPermaLink="false">/?p=11484</guid>
+
+					<description><![CDATA[Up your SEO reporting game!]]></description>
+		
+					<wfw:commentRss>/blog/introducing-nozzle-vision/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<media:content url="https://www.youtube.com/embed/ZGQpPhfS_4c" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/ZGQpPhfS_4c" />
+			<media:title type="plain">Nozzle Vision Walkthrough   Google Keyword Rank Checker Feature</media:title>
+			<media:description type="html"><![CDATA[Nozzle Vision is an awesome new feature that allows you to analyze the SERPs in a more visual manner.We rerender the SERP HTML for every keyword that you are...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2023/02/nozzle-vision-walkthrough-google.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
+		<item>
+		<title>The Functionality of Side-by-Side SERP HTML Comparison</title>
+		<link>/blog/the-functionality-of-side-by-side-serp-html-comparison</link>
+					<comments>/blog/the-functionality-of-side-by-side-serp-html-comparison#respond</comments>
+		
+		<dc:creator><![CDATA[Ian Campbell]]></dc:creator>
+		<pubDate>Mon, 08 Feb 2021 20:54:00 +0000</pubDate>
+				<category><![CDATA[SERPs]]></category>
+		<category><![CDATA[Keyword Rank Tracking Tool]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[SEO Tools]]></category>
+		<category><![CDATA[Best Keyword Rank Tracker]]></category>
+		<category><![CDATA[Search Engine Rank Check]]></category>
+		<category><![CDATA[Search Engine Ranking Analysis]]></category>
+		<category><![CDATA[Search Engine Ranking Report Software]]></category>
+		<guid isPermaLink="false">/?p=11492</guid>
+
+					<description><![CDATA[Find out the amazing things you can do with this SERP comparison feature. Here's how to use it]]></description>
+		
+					<wfw:commentRss>/blog/the-functionality-of-side-by-side-serp-html-comparison/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<media:content url="https://www.youtube.com/embed/bFEP-NChJ28" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/bFEP-NChJ28" />
+			<media:title type="plain">Side-by-Side SERP HTML Comparisons</media:title>
+			<media:description type="html"><![CDATA[Nozzle gives you the ability to see multiple historical SERPs for your keywords at once so you can easily compare and contrast the SERP changes that may be a...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2023/02/side-by-side-serp-html-compariso.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Blog_Listing_-_Style_3">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Blog_Listing_-_Style_3" data-name="Blog Listing - Style 3" clip-path="url(#clip-Blog_Listing_-_Style_3)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_628" data-name="Rectangle 628" width="335" height="313" rx="5" transform="translate(100 194)" fill="#d5d5d5"/>
+    <line id="Line_16" data-name="Line 16" x2="273.5" transform="translate(481 377.629)" fill="none" stroke="#888" stroke-width="20"/>
+    <line id="Line_112" data-name="Line 112" x2="96.5" transform="translate(481 305.629)" fill="none" stroke="#888" stroke-width="10"/>
+    <line id="Line_111" data-name="Line 111" x1="26" y2="43" transform="translate(606.5 283.5)" fill="none" stroke="#888" stroke-width="6"/>
+    <path id="image" d="M182.156,214.75H18.844A18.844,18.844,0,0,1,0,195.906V82.844A18.844,18.844,0,0,1,18.844,64H182.156A18.844,18.844,0,0,1,201,82.844V195.906A18.844,18.844,0,0,1,182.156,214.75ZM43.969,85.984a21.984,21.984,0,1,0,21.984,21.984A21.984,21.984,0,0,0,43.969,85.984ZM25.125,189.625h150.75V145.656L141.519,111.3a4.711,4.711,0,0,0-6.662,0l-53.2,53.2L59.862,142.706a4.711,4.711,0,0,0-6.662,0L25.125,170.781Z" transform="translate(167 211.625)" fill="#888" opacity="0.207"/>
+    <text id="October_16_2018" data-name="October 16, 2018" transform="translate(652 318)" fill="#888" font-size="32" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">October 16, 2018</tspan></text>
+    <line id="Line_103" data-name="Line 103" x2="202.367" transform="translate(481.044 489.58)" fill="none" stroke="#888" stroke-width="5"/>
+    <text id="New" transform="translate(481 255)" fill="#888" font-size="42" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">New</tspan></text>
+    <text id="Read_More" data-name="Read More" transform="translate(481 472)" fill="#888" font-size="42" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Read More</tspan></text>
+  </g>
+</svg>

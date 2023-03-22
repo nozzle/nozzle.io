@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Heading_Text_Animation_Style_5)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <text transform="translate(192 361)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Hello W</tspan></text>
+    <text transform="translate(591 367)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">o</tspan></text>
+    <text transform="translate(658 391)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">r</tspan></text>
+    <text transform="translate(707 421)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">l</tspan></text>
+    <text transform="translate(744 430)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">d</tspan></text>
+  </g>
+</svg>

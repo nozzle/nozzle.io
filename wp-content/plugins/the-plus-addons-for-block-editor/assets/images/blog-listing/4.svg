@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Blog_Listing_-_Style_4">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Blog_Listing_-_Style_4" data-name="Blog Listing - Style 4" clip-path="url(#clip-Blog_Listing_-_Style_4)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_628" data-name="Rectangle 628" width="800" height="500" rx="5" transform="translate(100 100)" fill="#d5d5d5"/>
+    <path id="image" d="M372.016,371.875H38.484A38.484,38.484,0,0,1,0,333.391V102.484A38.484,38.484,0,0,1,38.484,64H372.016A38.484,38.484,0,0,1,410.5,102.484V333.391A38.484,38.484,0,0,1,372.016,371.875ZM89.8,108.9a44.9,44.9,0,1,0,44.9,44.9A44.9,44.9,0,0,0,89.8,108.9ZM51.313,320.563H359.188v-89.8L289.022,160.6a9.622,9.622,0,0,0-13.607,0L166.766,269.25l-44.51-44.51a9.622,9.622,0,0,0-13.607,0L51.313,282.078Z" transform="translate(276 131.625)" fill="#888" opacity="0.207"/>
+    <line id="Line_16" data-name="Line 16" x2="273.5" transform="translate(161 386.629)" fill="none" stroke="#888" stroke-width="20"/>
+    <line id="Line_112" data-name="Line 112" x2="96.5" transform="translate(161 516.629)" fill="none" stroke="#888" stroke-width="10"/>
+    <line id="Line_111" data-name="Line 111" x1="26" y2="43" transform="translate(286.5 494.5)" fill="none" stroke="#888" stroke-width="2"/>
+    <text id="October_16_2018" data-name="October 16, 2018" transform="translate(342 529)" fill="#888" font-size="35" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">October 16, 2018</tspan></text>
+    <line id="Line_102" data-name="Line 102" x2="256.956" transform="translate(161.043 423.801)" fill="none" stroke="#fff" stroke-width="8"/>
+    <line id="Line_103" data-name="Line 103" x2="202.367" transform="translate(161.043 446.58)" fill="none" stroke="#fff" stroke-width="8"/>
+    <text id="New" transform="translate(161 315)" fill="#888" font-size="42" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">New</tspan></text>
+  </g>
+</svg>

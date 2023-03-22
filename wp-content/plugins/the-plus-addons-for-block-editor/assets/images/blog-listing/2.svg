@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d5d5d5"/>
+      <stop offset="0.251" stop-color="#d5d5d5"/>
+      <stop offset="1" stop-color="#343434"/>
+    </linearGradient>
+    <clipPath id="clip-Blog_Listing_-_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Blog_Listing_-_Style_2" data-name="Blog Listing - Style 2" clip-path="url(#clip-Blog_Listing_-_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_628" data-name="Rectangle 628" width="800" height="500" rx="5" transform="translate(100 100)" fill="#d5d5d5"/>
+    <path id="Rectangle_629" data-name="Rectangle 629" d="M0,0H800a0,0,0,0,1,0,0V221a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V0A0,0,0,0,1,0,0Z" transform="translate(100 374)" fill="url(#linear-gradient)"/>
+    <line id="Line_16" data-name="Line 16" x2="273.5" transform="translate(161 426.629)" fill="none" stroke="#888" stroke-width="20"/>
+    <line id="Line_112" data-name="Line 112" x2="96.5" transform="translate(172 556.629)" fill="none" stroke="#f2f2f2" stroke-width="10"/>
+    <line id="Line_111" data-name="Line 111" x1="26" y2="43" transform="translate(297.5 534.5)" fill="none" stroke="#fff" stroke-width="2"/>
+    <path id="image" d="M249.37,270.375H25.8A25.8,25.8,0,0,1,0,244.578V89.8A25.8,25.8,0,0,1,25.8,64H249.37a25.8,25.8,0,0,1,25.8,25.8V244.578A25.8,25.8,0,0,1,249.37,270.375ZM60.193,94.1a30.1,30.1,0,1,0,30.1,30.1A30.1,30.1,0,0,0,60.193,94.1ZM34.4,235.979H240.771V175.786l-47.034-47.034a6.45,6.45,0,0,0-9.121,0l-72.83,72.83L81.951,171.748a6.45,6.45,0,0,0-9.121,0L34.4,210.182Z" transform="translate(362 103.625)" fill="#888" opacity="0.207"/>
+    <text id="October_16_2018" data-name="October 16, 2018" transform="translate(353 569)" fill="#fff" font-size="35" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">October 16, 2018</tspan></text>
+    <line id="Line_102" data-name="Line 102" x2="256.956" transform="translate(161.044 463.801)" fill="none" stroke="#fff" stroke-width="8"/>
+    <line id="Line_103" data-name="Line 103" x2="202.367" transform="translate(161.044 486.58)" fill="none" stroke="#fff" stroke-width="8"/>
+    <line id="Line_113" data-name="Line 113" x2="800" transform="translate(100.5 517.5)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <path id="Union_25" data-name="Union 25" d="M5,19.9h98.843a5,5,0,0,1,5,5V74.831a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V24.9A5,5,0,0,1,5,19.9Z" transform="translate(269.844 228.975) rotate(180)" fill="#888"/>
+    <text id="New" transform="translate(174 193)" fill="#fff" font-size="42" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">New</tspan></text>
+  </g>
+</svg>

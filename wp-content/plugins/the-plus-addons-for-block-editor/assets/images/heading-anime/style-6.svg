@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Heading_Text_Animation_Style_6)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <text transform="translate(176 325)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Hello</tspan></text>
+    <text transform="translate(544.027 398.049) rotate(25)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">o</tspan></text>
+    <text transform="translate(454.05 363.269) rotate(17)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">W</tspan></text>
+    <text transform="translate(612.672 423.857) rotate(22)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">r</tspan></text>
+    <text transform="matrix(0.914, 0.407, -0.407, 0.914, 654.994, 446.008)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">l</tspan></text>
+    <text transform="matrix(0.883, 0.469, -0.469, 0.883, 688.678, 456.475)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">d</tspan></text>
+  </g>
+</svg>

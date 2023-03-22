@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Heading_Text_Animation_Style_1)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <text transform="translate(186 395)" fill="#888" font-size="115" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Hello World </tspan></text>
+    <line y2="152" transform="translate(814.5 274.5)" fill="none" stroke="#707070" stroke-width="5"/>
+  </g>
+</svg>

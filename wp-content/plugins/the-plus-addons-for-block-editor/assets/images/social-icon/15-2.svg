@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Social_Icon_-_Style_15_-_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect width="799" height="147" rx="10" transform="translate(101 187)" fill="#888"/>
+    <rect width="799" height="147" rx="10" transform="translate(101 366)" fill="#d5d5d5"/>
+    <text transform="translate(380 282)" fill="#fff" font-size="55" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Facebook</tspan></text>
+    <text transform="translate(380 461)" fill="#fff" font-size="55" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Facebook</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Social_Icon_-_Style_9)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g transform="translate(222.52 262.997)">
+      <path d="M138.825,173.582V94.506h27l3.857-30.859H138.825V44.36c0-8.679,2.893-15.43,15.43-15.43h16.394V.964C166.791.964,157.148,0,146.54,0,123.4,0,107,14.465,107,40.5V63.647H80V94.506h27v79.076Z" transform="translate(-66.209 0.003)" fill="#d5d5d5" fill-rule="evenodd"/>
+    </g>
+    <g transform="translate(533.52 262.997)">
+      <path d="M138.825,173.582V94.506h27l3.857-30.859H138.825V44.36c0-8.679,2.893-15.43,15.43-15.43h16.394V.964C166.791.964,157.148,0,146.54,0,123.4,0,107,14.465,107,40.5V63.647H80V94.506h27v79.076Z" transform="translate(-66.209 0.003)" fill="#888" fill-rule="evenodd"/>
+    </g>
+    <line x1="20" y2="20" transform="translate(716.5 237.5)" fill="none" stroke="#707070" stroke-width="5"/>
+    <line x2="20" y2="20" transform="translate(473.5 228.5)" fill="none" stroke="#707070" stroke-width="5"/>
+    <line x1="29" transform="translate(726.5 357.5)" fill="none" stroke="#707070" stroke-width="5"/>
+    <line x1="29" transform="translate(446.5 350.5)" fill="none" stroke="#707070" stroke-width="5"/>
+    <line x1="23" y2="18" transform="translate(483.5 452.5)" fill="none" stroke="#707070" stroke-width="5"/>
+    <line x2="19" y2="18" transform="translate(706.5 457.5)" fill="none" stroke="#707070" stroke-width="5"/>
+    <line y2="29" transform="translate(592.5 482.5)" fill="none" stroke="#707070" stroke-width="5"/>
+    <line y2="29" transform="translate(605.5 192.5)" fill="none" stroke="#707070" stroke-width="5"/>
+  </g>
+</svg>

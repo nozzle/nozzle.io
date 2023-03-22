@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Social_Icon_-_Style_3)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g transform="translate(350 200)" fill="#fff" stroke="#707070" stroke-width="8" stroke-dasharray="15">
+      <circle cx="150.5" cy="150.5" r="150.5" stroke="none"/>
+      <circle cx="150.5" cy="150.5" r="146.5" fill="none"/>
+    </g>
+    <g transform="translate(388 238)" fill="#888" stroke="#888" stroke-width="1">
+      <circle cx="112.5" cy="112.5" r="112.5" stroke="none"/>
+      <circle cx="112.5" cy="112.5" r="112" fill="none"/>
+    </g>
+    <g transform="translate(465.52 309.723)">
+      <path d="M107.121,80.029V43.571H119.57l1.778-14.227H107.121V20.452c0-4,1.334-7.114,7.114-7.114h7.558V.445C120.014.445,115.568,0,110.678,0,100.007,0,92.449,6.669,92.449,18.673V29.344H80V43.571H92.449V80.029Z" transform="translate(-66.209 0.003)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

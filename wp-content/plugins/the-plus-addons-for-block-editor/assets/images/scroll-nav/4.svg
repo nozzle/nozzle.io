@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Scroll_Navigation_Style_4)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line x2="62" transform="translate(649.5 127.5)" fill="none" stroke="#707070" stroke-width="10"/>
+    <line x2="62" transform="translate(649.5 247.5)" fill="none" stroke="#707070" stroke-width="10"/>
+    <line x2="62" transform="translate(649.5 466.5)" fill="none" stroke="#707070" stroke-width="10"/>
+    <line x2="62" transform="translate(649.5 572.5)" fill="none" stroke="#707070" stroke-width="10"/>
+    <line x2="146" transform="translate(565.5 346.5)" fill="none" stroke="#707070" stroke-width="10"/>
+    <g transform="translate(244.232 308)">
+      <path d="M21.6,76.5a5,5,0,0,1-5-5V50.365L0,37.356,16.6,25.362V5a5,5,0,0,1,5-5H241.578a5,5,0,0,1,5,5V71.5a5,5,0,0,1-5,5Z" transform="translate(290.578 76.501) rotate(180)" fill="#888"/>
+      <text transform="translate(133.768 52)" fill="#fff" font-size="35" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Home</tspan></text>
+      <g transform="translate(89.669 24.48)">
+        <path d="M24.6,26.615H16.612a.445.445,0,0,1-.444-.444V18.63H11.732v7.541a.444.444,0,0,1-.444.444H3.3a.444.444,0,0,1-.444-.444V12.42H.943a.443.443,0,0,1-.295-.775L13.362.334a.445.445,0,0,1,.576-.012l3.117,2.559V.444A.444.444,0,0,1,17.5,0h4.436a.444.444,0,0,1,.444.444V7.462l4.378,4.194a.443.443,0,0,1-.307.764H25.04V26.171A.444.444,0,0,1,24.6,26.615Z" transform="translate(-0.499 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

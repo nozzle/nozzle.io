@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Social_Icon_-_Style_7)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g transform="translate(221 245)" fill="#f2f2f2" stroke="#d5d5d5" stroke-width="1">
+      <rect width="227" height="211" rx="10" stroke="none"/>
+      <rect x="0.5" y="0.5" width="226" height="210" rx="9.5" fill="none"/>
+    </g>
+    <g transform="translate(491 216)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="289" height="268" rx="10" stroke="none"/>
+      <rect x="0.5" y="0.5" width="288" height="267" rx="9.5" fill="none"/>
+    </g>
+    <g transform="translate(300.52 311.723)">
+      <path d="M106.26,77.489v-35.3h12.054l1.722-13.776H106.26V19.8c0-3.874,1.292-6.888,6.888-6.888h7.318V.43C118.744.43,114.439,0,109.7,0c-10.332,0-17.65,6.457-17.65,18.081V28.413H80V42.188H92.054v35.3Z" transform="translate(-66.209 0.003)" fill="#888" fill-rule="evenodd"/>
+    </g>
+    <g transform="translate(609.737 285.638)">
+      <path d="M122.989,126.854V69.065h19.733l2.819-22.552H122.989V32.418c0-6.343,2.114-11.276,11.276-11.276h11.981V.7c-2.819,0-9.866-.7-17.619-.7C111.714,0,99.733,10.571,99.733,29.6V46.513H80V69.065H99.733v57.789Z" transform="translate(-80 0)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

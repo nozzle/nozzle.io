@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Breadcrumb_-_Style_1">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Breadcrumb_-_Style_1" data-name="Breadcrumb - Style 1" clip-path="url(#clip-Breadcrumb_-_Style_1)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_1" data-name="Line 1" x2="170" transform="translate(172.5 350.5)" fill="none" stroke="#888" stroke-width="30"/>
+    <line id="Line_23" data-name="Line 23" x2="170" transform="translate(452.5 350.5)" fill="none" stroke="#888" stroke-width="30"/>
+    <line id="Line_24" data-name="Line 24" x2="170" transform="translate(732.5 350.5)" fill="none" stroke="#888" stroke-width="30"/>
+    <g id="Home" transform="translate(100 328)">
+      <g id="icomoon-ignore">
+        <line id="Line_26" data-name="Line 26" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path id="Path_225" data-name="Path 225" d="M40.491,44.446H27.157a.743.743,0,0,1-.741-.741V31.112H19.009V43.705a.742.742,0,0,1-.741.741H4.934a.742.742,0,0,1-.741-.741V20.741H.991A.74.74,0,0,1,.5,19.447L21.731.557a.743.743,0,0,1,.962-.019L27.9,4.811V.741A.742.742,0,0,1,28.639,0h7.408a.741.741,0,0,1,.741.741v11.72l7.311,7a.741.741,0,0,1-.513,1.276H41.232V43.705A.742.742,0,0,1,40.491,44.446Z" transform="translate(-0.065 0)" fill="#888"/>
+    </g>
+    <g id="Arrow-Forward2" transform="translate(661.162 331)">
+      <g id="icomoon-ignore-2" data-name="icomoon-ignore">
+        <line id="Line_27" data-name="Line 27" transform="translate(-0.162 0.233)" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path id="Path_226" data-name="Path 226" d="M16.788,38.28H7.526a1.234,1.234,0,0,1-.838-2.141L24.27,19.872,6.649,2.1A1.235,1.235,0,0,1,7.525,0h9.261a1.236,1.236,0,0,1,.877.365L36.185,19.042a1.233,1.233,0,0,1-.038,1.776L17.626,37.951A1.225,1.225,0,0,1,16.788,38.28Zm-6.107-2.469h5.625L33.534,19.875l-17.26-17.4H10.491L26.927,19.043a1.235,1.235,0,0,1-.038,1.777L10.681,35.811Z" transform="translate(-2.277 0)" fill="#888"/>
+    </g>
+    <g id="Arrow-Forward2-2" data-name="Arrow-Forward2" transform="translate(378.162 331)">
+      <g id="icomoon-ignore-3" data-name="icomoon-ignore">
+        <line id="Line_27-2" data-name="Line 27" transform="translate(-0.162 0.233)" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path id="Path_226-2" data-name="Path 226" d="M16.788,38.28H7.526a1.234,1.234,0,0,1-.838-2.141L24.27,19.872,6.649,2.1A1.235,1.235,0,0,1,7.525,0h9.261a1.236,1.236,0,0,1,.877.365L36.185,19.042a1.233,1.233,0,0,1-.038,1.776L17.626,37.951A1.225,1.225,0,0,1,16.788,38.28Zm-6.107-2.469h5.625L33.534,19.875l-17.26-17.4H10.491L26.927,19.043a1.235,1.235,0,0,1-.038,1.777L10.681,35.811Z" transform="translate(-2.277 0)" fill="#888"/>
+    </g>
+  </g>
+</svg>

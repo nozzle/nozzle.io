@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Scroll_Navigation_Style_5)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g transform="translate(593 100)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="1">
+      <rect width="90" height="90" rx="10" stroke="none"/>
+      <rect x="0.5" y="0.5" width="89" height="89" rx="9.5" fill="none"/>
+    </g>
+    <g transform="translate(593 510)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="1">
+      <rect width="90" height="90" rx="10" stroke="none"/>
+      <rect x="0.5" y="0.5" width="89" height="89" rx="9.5" fill="none"/>
+    </g>
+    <g transform="translate(593 305)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="90" height="90" rx="10" stroke="none"/>
+      <rect x="0.5" y="0.5" width="89" height="89" rx="9.5" fill="none"/>
+    </g>
+    <g transform="translate(619.929 121.26)">
+      <path d="M51.43,20.1a1.011,1.011,0,0,0-.884-.52H33.985V3.041c0-.456-.1-.853-.543-.976a.882.882,0,0,0-1.034.462L16.175,30.171a1.9,1.9,0,0,0,.019,1.42c.178.313.538.91.9.91H32.369v15.35a1.016,1.016,0,0,0,.729.971.937.937,0,0,0,.281.039,1.009,1.009,0,0,0,.855-.472L51.4,21.123A1.01,1.01,0,0,0,51.43,20.1Z" transform="translate(-16.046 -2.031)" fill="#fff"/>
+    </g>
+    <g transform="translate(619.929 531.591)">
+      <path d="M51.43,20.1a1.011,1.011,0,0,0-.884-.52H33.985V3.041c0-.456-.1-.853-.543-.976a.882.882,0,0,0-1.034.462L16.175,30.171a1.9,1.9,0,0,0,.019,1.42c.178.313.538.91.9.91H32.369v15.35a1.016,1.016,0,0,0,.729.971.937.937,0,0,0,.281.039,1.009,1.009,0,0,0,.855-.472L51.4,21.123A1.01,1.01,0,0,0,51.43,20.1Z" transform="translate(-16.046 -2.031)" fill="#fff"/>
+    </g>
+    <g transform="translate(619.929 325.78)">
+      <path d="M51.43,20.1a1.011,1.011,0,0,0-.884-.52H33.985V3.041c0-.456-.1-.853-.543-.976a.882.882,0,0,0-1.034.462L16.175,30.171a1.9,1.9,0,0,0,.019,1.42c.178.313.538.91.9.91H32.369v15.35a1.016,1.016,0,0,0,.729.971.937.937,0,0,0,.281.039,1.009,1.009,0,0,0,.855-.472L51.4,21.123A1.01,1.01,0,0,0,51.43,20.1Z" transform="translate(-16.046 -2.031)" fill="#fff"/>
+    </g>
+    <g transform="translate(272.232 312)">
+      <path d="M21.6,76.5a5,5,0,0,1-5-5V50.365L0,37.356,16.6,25.362V5a5,5,0,0,1,5-5H241.578a5,5,0,0,1,5,5V71.5a5,5,0,0,1-5,5Z" transform="translate(290.578 76.501) rotate(180)" fill="#888"/>
+      <text transform="translate(133.768 52)" fill="#fff" font-size="35" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Home</tspan></text>
+      <g transform="translate(89.669 24.48)">
+        <path d="M24.6,26.615H16.612a.445.445,0,0,1-.444-.444V18.63H11.732v7.541a.444.444,0,0,1-.444.444H3.3a.444.444,0,0,1-.444-.444V12.42H.943a.443.443,0,0,1-.295-.775L13.362.334a.445.445,0,0,1,.576-.012l3.117,2.559V.444A.444.444,0,0,1,17.5,0h4.436a.444.444,0,0,1,.444.444V7.462l4.378,4.194a.443.443,0,0,1-.307.764H25.04V26.171A.444.444,0,0,1,24.6,26.615Z" transform="translate(-0.499 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

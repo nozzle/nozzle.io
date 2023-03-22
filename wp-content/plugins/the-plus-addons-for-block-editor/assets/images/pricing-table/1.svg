@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Pricing_Table_-_Style_1)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect width="800" height="500" transform="translate(100 100)" fill="#f2f2f2"/>
+    <line x2="140" transform="translate(430.5 169.5)" fill="none" stroke="#888" stroke-width="30"/>
+    <line x2="126" transform="translate(437.5 306.5)" fill="none" stroke="#d5d5d5" stroke-width="10"/>
+    <line x2="164" transform="translate(267.5 397.5)" fill="none" stroke="#d5d5d5" stroke-width="10"/>
+    <line x2="164" transform="translate(267.5 456.5)" fill="none" stroke="#d5d5d5" stroke-width="10"/>
+    <line x2="164" transform="translate(267.5 515.5)" fill="none" stroke="#d5d5d5" stroke-width="10"/>
+    <text transform="translate(431 208)" fill="#888" font-size="50" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="45">$ </tspan></text>
+    <g transform="translate(155 350)" fill="none" stroke="#d5d5d5" stroke-width="2">
+      <rect width="686" height="211" rx="5" stroke="none"/>
+      <rect x="1" y="1" width="684" height="209" rx="4" fill="none"/>
+    </g>
+    <g transform="translate(205 384.187)">
+      <path d="M13.393,26.793A13.393,13.393,0,1,1,20.618,2.125a.914.914,0,0,1-.987,1.538A11.565,11.565,0,1,0,24.959,13.4c0-.381-.018-.759-.054-1.13a.913.913,0,1,1,1.818-.177q.062.645.062,1.306A13.408,13.408,0,0,1,13.393,26.793Zm0,0" transform="translate(0 0)" fill="#888"/>
+      <path d="M155.731,36.566a.906.906,0,0,1-.645-.268l-5.479-5.479a.913.913,0,1,1,1.292-1.292l4.834,4.834,12.746-12.746a.913.913,0,0,1,1.292,1.292L156.378,36.3A.915.915,0,0,1,155.731,36.566Zm0,0" transform="translate(-140.817 -20.122)" fill="#888"/>
+    </g>
+    <g transform="translate(205 443.187)">
+      <path d="M13.393,26.793A13.393,13.393,0,1,1,20.618,2.125a.914.914,0,0,1-.987,1.538A11.565,11.565,0,1,0,24.959,13.4c0-.381-.018-.759-.054-1.13a.913.913,0,1,1,1.818-.177q.062.645.062,1.306A13.408,13.408,0,0,1,13.393,26.793Zm0,0" transform="translate(0 0)" fill="#888"/>
+      <path d="M155.731,36.566a.906.906,0,0,1-.645-.268l-5.479-5.479a.913.913,0,1,1,1.292-1.292l4.834,4.834,12.746-12.746a.913.913,0,0,1,1.292,1.292L156.378,36.3A.915.915,0,0,1,155.731,36.566Zm0,0" transform="translate(-140.817 -20.122)" fill="#888"/>
+    </g>
+    <g transform="translate(205 502.187)">
+      <path d="M13.393,26.793A13.393,13.393,0,1,1,20.618,2.125a.914.914,0,0,1-.987,1.538A11.565,11.565,0,1,0,24.959,13.4c0-.381-.018-.759-.054-1.13a.913.913,0,1,1,1.818-.177q.062.645.062,1.306A13.408,13.408,0,0,1,13.393,26.793Zm0,0" transform="translate(0 0)" fill="#888"/>
+      <path d="M155.731,36.566a.906.906,0,0,1-.645-.268l-5.479-5.479a.913.913,0,1,1,1.292-1.292l4.834,4.834,12.746-12.746a.913.913,0,0,1,1.292,1.292L156.378,36.3A.915.915,0,0,1,155.731,36.566Zm0,0" transform="translate(-140.817 -20.122)" fill="#888"/>
+    </g>
+  </g>
+</svg>

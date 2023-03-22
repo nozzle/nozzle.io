@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Breadcrumb_-_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Breadcrumb_-_Style_2" data-name="Breadcrumb - Style 2" clip-path="url(#clip-Breadcrumb_-_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="270" height="100" rx="10" transform="translate(100 300)" fill="#888"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="197" height="100" rx="10" transform="translate(400 300)" fill="#888"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="274" height="100" rx="10" transform="translate(626 300)" fill="#ff5a6e"/>
+    <line id="Line_1" data-name="Line 1" x2="140" transform="translate(194.5 350.5)" fill="none" stroke="#fff" stroke-width="20"/>
+    <line id="Line_28" data-name="Line 28" x2="137.525" transform="translate(430.763 350.5)" fill="none" stroke="#fff" stroke-width="20"/>
+    <line id="Line_29" data-name="Line 29" x2="199" transform="translate(663.5 350.5)" fill="none" stroke="#fff" stroke-width="20"/>
+    <g id="Home" transform="translate(136 333)">
+      <g id="icomoon-ignore">
+        <line id="Line_26" data-name="Line 26" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path id="Path_225" data-name="Path 225" d="M31.33,34.328h-10.3a.574.574,0,0,1-.572-.572V24.029H14.738v9.726a.573.573,0,0,1-.572.572H3.868a.573.573,0,0,1-.572-.572V16.02H.822a.572.572,0,0,1-.38-1L16.84.43a.573.573,0,0,1,.743-.015l4.021,3.3V.572A.573.573,0,0,1,22.176,0H27.9a.572.572,0,0,1,.572.572V9.624l5.647,5.41a.572.572,0,0,1-.4.985H31.9V33.756A.573.573,0,0,1,31.33,34.328Z" transform="translate(-0.107 0)" fill="#f2f2f2"/>
+    </g>
+  </g>
+</svg>

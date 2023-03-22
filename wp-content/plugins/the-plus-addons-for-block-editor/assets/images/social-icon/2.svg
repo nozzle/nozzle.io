@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Social_Icon_-_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect width="462" height="147" rx="10" transform="translate(261 277)" fill="#888"/>
+    <g transform="translate(322.521 322.723)">
+      <path d="M98.691,55.155V30.029h8.58l1.226-9.805H98.691V14.1c0-2.758.919-4.9,4.9-4.9H108.8V.306c-1.226,0-4.29-.306-7.66-.306C93.789,0,88.58,4.6,88.58,12.869v7.354H80v9.805h8.58V55.155Z" transform="translate(-66.209 0.003)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+    <text transform="translate(407 372)" fill="#fff" font-size="55" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Facebook</tspan></text>
+  </g>
+</svg>

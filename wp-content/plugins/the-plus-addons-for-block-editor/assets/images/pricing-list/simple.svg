@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Pricing_List_-_Modern_Style)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line x2="547.472" transform="translate(97.5 294.201)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="582.676" transform="translate(97.5 328.893)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="582.676" transform="translate(97.5 363.586)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="582.676" transform="translate(97.5 433.404)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="524.693" transform="translate(97.5 398.277)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="524.693" transform="translate(97.5 468.098)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="311" transform="translate(97.5 150.246)" fill="none" stroke="#d5d5d5" stroke-width="15"/>
+    <line x2="357" transform="translate(97.5 207.336)" fill="none" stroke="#888" stroke-width="25"/>
+    <text transform="translate(98 559)" fill="#888" font-size="57" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">$ 0.00</tspan></text>
+  </g>
+</svg>

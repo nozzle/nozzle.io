@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Pricing_List_-_Classic_Style)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect width="161" height="146" transform="translate(100 182)" fill="#d5d5d5"/>
+    <line x2="547.472" transform="translate(317.5 344.201)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="582.676" transform="translate(317.5 378.893)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="582.676" transform="translate(317.5 413.586)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="582.676" transform="translate(317.5 483.404)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="524.693" transform="translate(317.5 448.277)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="524.693" transform="translate(317.5 518.098)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line x2="241" transform="translate(317.5 200.246)" fill="none" stroke="#d5d5d5" stroke-width="15"/>
+    <line x2="308" transform="translate(317.5 257.336)" fill="none" stroke="#888" stroke-width="25"/>
+    <g transform="translate(135.166 214.461)">
+      <g>
+        <line transform="translate(-0.166 -0.461)" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path d="M76.622,32.96a1.73,1.73,0,0,0-1.513-.891H46.757V3.761c0-.78-.174-1.461-.929-1.671a1.509,1.509,0,0,0-1.77.791L16.266,50.206a3.257,3.257,0,0,0,.033,2.431c.3.537.921,1.557,1.543,1.557H43.991V80.473a1.739,1.739,0,0,0,1.248,1.662,1.6,1.6,0,0,0,.481.066,1.728,1.728,0,0,0,1.463-.808l29.39-46.678a1.729,1.729,0,0,0,.05-1.756Z" transform="translate(-4.95 -0.627)" fill="#fff"/>
+    </g>
+    <text transform="translate(729 273)" fill="#888" font-size="57" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">$ 0.00</tspan></text>
+  </g>
+</svg>

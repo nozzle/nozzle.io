@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <filter id="Ellipse_296" x="464" y="235" width="184" height="184" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Filter_-_Style_1">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Filter_-_Style_1" data-name="Filter - Style 1" clip-path="url(#clip-Filter_-_Style_1)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <text id="ALL" transform="translate(397 409)" fill="#888" font-size="80" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">ALL</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_296)">
+      <g id="Ellipse_296-2" data-name="Ellipse 296" transform="translate(509 270)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="5">
+        <circle cx="47" cy="47" r="47" stroke="none"/>
+        <circle cx="47" cy="47" r="44.5" fill="none"/>
+      </g>
+    </g>
+    <text id="_10" data-name="10" transform="translate(526 337)" fill="#888" font-size="53" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">10</tspan></text>
+  </g>
+</svg>

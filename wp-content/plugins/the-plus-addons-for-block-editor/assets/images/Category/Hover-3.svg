@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Filter_Hover_-_Style_3">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Filter_Hover_-_Style_3" data-name="Filter Hover - Style 3" clip-path="url(#clip-Filter_Hover_-_Style_3)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <text id="ALL" transform="translate(430 381)" fill="#888" font-size="80" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">ALL</tspan></text>
+    <text id="_" data-name="]" transform="translate(612 381)" fill="#888" font-size="80" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">]</tspan></text>
+    <text id="_2" data-name="[" transform="translate(366 381)" fill="#888" font-size="80" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">[</tspan></text>
+  </g>
+</svg>

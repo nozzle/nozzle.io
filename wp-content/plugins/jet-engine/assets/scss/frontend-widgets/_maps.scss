@@ -1,0 +1,161 @@
+.jet-map-marker {
+	font-size: 40px;
+	cursor: pointer;
+	max-width: 100%;
+	max-height: 100%;
+
+	&.is-svg-icon {
+		display: inline-flex;
+
+		.e-font-icon-svg {
+			fill: currentColor;
+		}
+
+		svg {
+			width: 1em;
+			height: 1em;
+			.leaflet-marker-icon & {
+				width: 100%;
+				height: auto;
+			}
+		}
+		img {
+			width: 1em;
+			height: auto;
+			.leaflet-marker-icon & {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+.brxe-jet-engine-maps-listing {
+	width: 100%;
+}
+
+.jet-map-listing {
+	.leaflet-marker-icon {
+		background: none;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.leaflet-popup-content-wrapper {
+		padding: 0;
+	}
+	.leaflet-popup-content {
+		margin: 0;
+		min-height: 40px;
+	}
+}
+
+.jet-map-box {
+	&.mapboxgl-popup {
+		padding: 25px 0 0 0;
+		.mapboxgl-popup-content {
+			padding: 0;
+		}
+	}
+	.popup-has-pin & {
+		&:after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			left: 50%;
+			margin: 0 0 0 -10px;
+			border-width: 10px 10px 0 10px;
+			border-color: transparent;
+			border-top-color: #fff;
+		}
+	}
+	.jet-map-listing & img {
+		max-width: 100%;
+	}
+	.jet-map-close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+		z-index: 9999;
+	}
+	.jet-map-preloader {
+		width: 100%;
+		padding: 20px 0;
+		box-sizing: border-box;
+		background: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.jet-map-loader {
+			display: block;
+			width: 24px;
+			height: 24px;
+			margin: 0 auto;
+			border: 3px solid currentColor;
+			border-top-color: transparent;
+			border-radius: 50%;
+			animation: jet-engine-map-spin 1s infinite linear;
+		}
+	}
+}
+
+.jet-map-marker-wrap {
+	padding: 5px;
+	position: relative;
+	margin: 0 0 10px;
+	background: #fff;
+	z-index: 999;
+	cursor: pointer;
+	text-align: center;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		left: 50%;
+		margin: 0 0 0 -10px;
+		border-width: 10px 10px 0 10px;
+		border-color: transparent;
+		border-top-color: #fff;
+	}
+}
+
+.jet-map-listing {
+	.gm-svpc {
+		img {
+			max-width: none;
+		}
+	}
+}
+
+.jet-map-box button.mapboxgl-popup-close-button {
+	padding: 5px;
+	font-size: 16px;
+	line-height: 12px;
+	font-weight: normal;
+	color: #333;
+}
+
+@keyframes jet-engine-map-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+
+// Context Bricks
+.brxe-jet-engine-maps-listing {
+	.jet-map-listing {
+		height: 500px;
+	}
+}

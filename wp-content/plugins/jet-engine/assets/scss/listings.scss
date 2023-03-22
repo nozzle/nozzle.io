@@ -1,0 +1,255 @@
+@import 'variables';
+
+.jet-listings-popup {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	&.jet-listings-popup-active {
+		display: flex !important;
+	}
+	&__overlay {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba( 0, 0, 0, .8 );
+		transition: opacity 200ms linear;
+		opacity: 0;
+		z-index: 1000;
+		.jet-listings-popup-active & {
+			opacity: 1;
+		}
+	}
+	&__close {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		width: 24px;
+		height: 24px;
+		cursor: pointer;
+		opacity: .5;
+		&:hover {
+			opacity: 1;
+		}
+		.jet-listings-video-popup & {
+			right: 15px;
+			top: 17px;
+		}
+	}
+	&__content {
+		background: #fff;
+		padding: 40px;
+		width: 590px;
+		position: relative;
+		transition: opacity 200ms linear;
+		opacity: 0;
+		z-index: 1001;
+		iframe {
+			display: block;
+		}
+		.jet-listings-popup-active & {
+			opacity: 1;
+		}
+		.jet-listings-video-popup & {
+			width: 560px;
+			padding: 0;
+		}
+	}
+	&__heading {
+		margin: 0 0 20px;
+		.jet-listings-video-popup & {
+			margin: 0;
+			padding: 20px;
+		}
+	}
+	&__form {
+		&-cols {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			align-items: flex-end;
+		}
+		&-col {
+			flex: 0 0 45%;
+		}
+		&-delimiter {
+			padding: 0 0 11px;
+		}
+		&-row {
+			padding: 0 0 20px;
+			&.jet-template-listing {
+				display: none;
+				&.jet-template-act {
+					display: block;
+				}
+			}
+			label {
+				display: block;
+				padding: 0 0 4px;
+			}
+			input,
+			select {
+				width: 100%;
+				max-width: 100%;
+				padding: 10px 20px;
+				line-height: 20px;
+				height: auto;
+			}
+		}
+		&-actions {
+			padding-top: 5px;
+			button {
+				width: 100%;
+				&.elementor-button-default {
+					padding: 12px;
+					font-size: 14px;
+				}
+			}
+			&-group {
+				display: flex;
+				justify-content: space-between;
+				gap: 10px;
+				.button.button-hero {
+					padding: 0;
+					width: 100%;
+					.spinner {
+						//display: none;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+	&__error {
+		border-color: #dc3232;
+	}
+	&__group {
+		&-title {
+			font-weight: 500;
+			font-size: 16px;
+			list-style: 22px;
+			padding: 15px 0 10px;
+			margin: 10px 0 0 0;
+			border-top: 1px solid #e1e1e1;
+			&:first-child {
+				border-top: none;
+				margin-top: 0;
+				padding-top: 0;
+			}
+		}
+	}
+	&__check {
+		&-group {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0;
+			margin: 0 -5px;
+			&-item {
+				background: #f9f9f9;
+				border: 1px solid #e1e1e1;
+				padding: 8px 10px;
+				width: 190px;
+				flex: 0 0 190px;
+				box-sizing: border-box;
+				margin: 0 5px 10px;
+				transition: all 150ms linear;
+				&:hover {
+					box-shadow: 0 1px 4px rgba(0,0,0,.15);
+				}
+				&.fullwidth-item {
+					width: 590px;
+					flex: 0 0 590px;
+				}
+			}
+		}
+	}
+	&__actions {
+		padding: 15px 0 0 0;
+	}
+}
+
+
+
+.jet-conditions {
+	display: flex;
+	align-items: center;
+	&-active {
+		margin-left: 10px;
+		color: $editor-success;
+	}
+}
+
+.jet-engine-import {
+	&__form {
+		display: none;
+		margin: 15px 0 0 0;
+		padding: 30px;
+		background: #f9f9f9;
+		border: 1px solid #e1e1e1;
+		max-width: 500px;
+		text-align: center;
+
+		&.import-active {
+			display: block;
+		}
+	}
+	&__notice {
+		margin: 0 0 20px;
+		font-size: 16px;
+	}
+	&__log {
+		display: block;
+		max-width: 100%;
+		border: 1px solid #3ba956;
+		padding: 15px;
+		margin: 15px 0 0 0;
+		border-radius: 4px;
+		background: rgba( 59, 169, 86, .1 );
+		color: #3ba956;
+		max-width: 400px;
+		&-title {
+			margin: 0 0 10px;
+		}
+		&-label {
+			font-weight: bold;
+		}
+	}
+}
+
+.jet_engine_dashboard_tabs {
+	padding: 0 !important;
+}
+
+.wp-list-table {
+	.type-jet-engine {
+		.jet-engine-listing-edit-settings {
+			margin: 0 0 0 15px;
+			display: none;
+			.spinner {
+				visibility: visible;
+				margin: 4px 0 0 5px;
+				background-size: 16px 16px;
+				width: 16px;
+				height: 16px;
+				display: none;
+			}
+			&--is-loading {
+				.spinner {
+					display: block;
+				}
+			}
+		}
+		&:hover {
+			.jet-engine-listing-edit-settings {
+				display: inline-block;
+			}
+		}
+	}
+}

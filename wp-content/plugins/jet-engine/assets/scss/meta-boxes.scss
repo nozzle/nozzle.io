@@ -1,0 +1,314 @@
+#ui-datepicker-div {
+	display: none;
+	&.jet-engine-datepicker.ui-datepicker {
+		background: #fff;
+		box-shadow: 0 2px 6px rgba(35, 40, 45, 0.07);
+		border-radius: 6px;
+		padding: 10px;
+		z-index: 20 !important;
+		.ui-datepicker-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			text-align: center;
+			padding: 0 0 5px;
+		}
+		.ui-datepicker-prev {
+			order: 0;
+		}
+		.ui-datepicker-title {
+			order: 1;
+			line-height: 22px;
+			padding: 3px 0 2px;
+			font-weight: bold;
+			text-align: center;
+		}
+		.ui-datepicker-next {
+			order: 2;
+		}
+		.ui-datepicker-prev,
+		.ui-datepicker-next {
+			cursor: pointer;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			width: 30px;
+			height: 30px;
+			border: none;
+			.ui-icon {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+				font-size: 17px;
+				line-height: 21px;
+				text-indent: -5px;
+				letter-spacing: -5px;
+				background: none;
+				border: none;
+			}
+		}
+		.ui-datepicker-calendar {
+			border-collapse: collapse;
+			width: 100%;
+			th {
+				border: 1px solid #eee;
+				background: #eee;
+				padding: 4px 6px;
+			}
+			td {
+				border: 1px solid #eee;
+				padding: 0;
+				a {
+					padding: 4px 6px;
+					display: block;
+					text-align: center;
+					text-decoration: none;
+					margin: 0;
+					&.ui-state-default {
+						color: #555d66;
+					}
+					&.ui-state-hover {
+						color: #1e8cbe;
+					}
+					&.ui-state-highlight {
+						background: #f1f1f1;
+					}
+					&.ui-state-active {
+						color: #fff;
+						background: #1e8cbe;
+					}
+				}
+			}
+		}
+		.ui-timepicker-div {
+			dl {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				padding: 0 10px;
+				margin: 0 0 5px;
+				dt {
+					width: 25%;
+					margin: 0;
+					padding: 5px 0;
+				}
+				dd {
+					width: 70%;
+					margin: 0;
+					padding: 5px 0;
+					.ui_tpicker_time_input {
+						border: none;
+						background: #F4F4F5;
+						border-radius: 4px;
+					}
+				}
+			}
+			.ui-slider {
+				width: 100%;
+				height: 12px;
+				border-radius: 6px;
+				position: relative;
+				background: #CCE5F1;
+				.ui-slider-handle {
+					width: 18px;
+					height: 18px;
+					border-radius: 9px;
+					background: #007CBA;
+					box-shadow: 0px 1px 4px rgba(35, 40, 45, 0.24);
+					position: absolute;
+					top: -3px;
+					margin: 0 0 0 -5px;
+				}
+			}
+		}
+		.ui-datepicker-calendar + .ui-timepicker-div {
+			margin-top: 10px;
+		}
+		.ui-datepicker-buttonpane {
+			button {
+				cursor: pointer;
+				padding: 7px 14px 9px;
+				box-shadow: 0 4px 4px rgba(35, 40, 45, 0.24);
+				border-radius: 4px;
+				font-size: 13px;
+				line-height: 16px;
+				font-weight: 500;
+				border: none;
+				margin: 5px;
+				&.ui-priority-secondary {
+					background: #F4F4F5;
+					color: #007CBA;
+				}
+				&.ui-priority-primary {
+					background: #007CBA;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.jet-engine-meta-wrap,
+.jet-engine-user-meta-wrap .cx-settings__content,
+.cx-form .settings_top > .cx-settings__content {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		height: 2px;
+		background: #fff;
+		content: '';
+	}
+	.cx-control,
+	.cx-html {
+		max-width: 100%;
+		flex: 0 0 100%;
+		box-sizing: border-box;
+	}
+	.cx-component.cx-tab,
+	.cx-component.cx-accordion {
+		width: 100%;
+		border-top: none;
+		.cx-tab__body {
+			box-shadow: none;
+		}
+		.cx-settings {
+			box-shadow: none !important;
+		}
+		.cx-settings__content.show {
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			&:before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				height: 2px;
+				background: #fff;
+				content: '';
+			}
+		}
+		+ .cx-control {
+			border-top: none;
+		}
+	}
+
+	.je-field-name {
+		font-size: 1em;
+		padding: 1px 3px;
+
+		&:hover {
+			cursor: copy;
+		}
+	}
+
+	.cx-ui-repeater-item .je-field-name {
+		font-size: 12px;
+	}
+
+	.cx-control__description ul {
+		word-break: break-word;
+		overflow-wrap: break-word;
+	}
+}
+
+.jet-engine-meta-wrap {
+	.cx-component.cx-tab,
+	.cx-component.cx-accordion {
+		padding: 10px 0 0 0;
+
+		+ .cx-control {
+			margin-top: 20px;
+		}
+	}
+}
+
+.jet-engine-term-meta-wrap {
+	width: 95%;
+	background-color: #fff;
+	border-radius: 4px;
+	position: relative;
+
+	.cherry-term-meta-wrap & {
+		@media screen and (max-width: 728px) {
+			width: 100%;
+		}
+	}
+	.jet-engine-edit-box-link {
+		position: absolute;
+		right: -25px;
+		top: 0;
+		border: none;
+		text-decoration: none;
+	}
+
+	.cx-check-radio-group--horizontal {
+		grid-template-columns: 1fr 1fr;
+
+		.cx-checkbox-add-button {
+			grid-column-end: 3;
+		}
+	}
+}
+
+.postbox {
+	.jet-engine-meta-wrap {
+		.jet-engine-edit-box-link {
+			position: absolute;
+			top: -35px;
+			right: 80px;
+			border: none;
+			text-decoration: none;
+
+			.rtl & {
+				left: 80px;
+				right: auto;
+			}
+
+			.block-editor-page & {
+				top: -38px;
+				right: 120px;
+			}
+
+			.block-editor-page.rtl & {
+				left: 120px;
+				right: auto;
+			}
+		}
+	}
+}
+
+.cx-section .cx-section__title {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.jet-engine-edit-box-link {
+		border: none;
+		text-decoration: none;
+		.dashicons {
+			font-size: 30px;
+			width: auto;
+			margin: 0;
+		}
+
+		.rtl & {
+			.dashicons {
+				margin: 0;
+			}
+		}
+	}
+}

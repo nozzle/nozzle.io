@@ -1,0 +1,11 @@
+.jet-section {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	&--layout-boxed {
+		.jet-section__content {
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+}

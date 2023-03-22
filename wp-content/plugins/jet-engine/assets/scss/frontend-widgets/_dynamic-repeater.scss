@@ -1,0 +1,40 @@
+.jet-listing-dynamic-repeater {
+	&__items {
+		display: flex;
+	}
+	&__item {
+		> *:not(td):not(.jet-engine-gallery-grid) {
+			display: flex;
+			align-items: center;
+		}
+		.has-counter & {
+			display: flex;
+		}
+		.has-counter.counter--above & {
+			flex-direction: column;
+		}
+	}
+	&__body {
+		flex-wrap: wrap;
+		flex: 1 1 auto;
+		position: relative;
+		z-index: 1;
+		> * {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+	&__counter {
+		position: relative;
+		box-sizing: border-box !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		.has-counter.counter--at-right & {
+			order: 2;
+		}
+	}
+	&__delimiter {
+		white-space: pre;
+	}
+}

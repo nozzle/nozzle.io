@@ -1,0 +1,57 @@
+.jet-profile-menu {
+	display: flex;
+
+	&.layout--horizontal {
+		flex-direction: row;
+	}
+	&.layout--vertical {
+		flex-direction: column;
+	}
+
+	// Tablet
+	&.layout-tablet--horizontal {
+		@media ( max-width: 1024px ) {
+			flex-direction: row;
+		}
+
+		body[data-elementor-device-mode="tablet"] & {
+			flex-direction: row;
+		}
+	}
+	&.layout-tablet--vertical {
+		@media ( max-width: 1024px ) {
+			flex-direction: column;
+		}
+
+		body[data-elementor-device-mode="tablet"] & {
+			flex-direction: column;
+		}
+	}
+
+	// Mobile
+	&.layout-mobile--horizontal {
+		@media ( max-width: 767px ) {
+			flex-direction: row;
+		}
+
+		body[data-elementor-device-mode="mobile"] & {
+			flex-direction: row;
+		}
+	}
+	&.layout-mobile--vertical {
+		@media ( max-width: 767px ) {
+			flex-direction: column;
+		}
+
+		body[data-elementor-device-mode="mobile"] & {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		&-link {
+			display: block;
+			padding: 5px 10px;
+		}
+	}
+}

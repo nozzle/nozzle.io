@@ -1,0 +1,86 @@
+@font-face {
+	font-family: 'JetEngine-widgets';
+	src:  url('/wp-content/plugins/jet-engine/assets/lib/jetengine-icons/fonts/JetEngine-widgets.eot?j2l6ev');
+	src:  url('/wp-content/plugins/jet-engine/assets/lib/jetengine-icons/fonts/JetEngine-widgets.eot?j2l6ev#iefix') format('embedded-opentype'),
+	url('/wp-content/plugins/jet-engine/assets/lib/jetengine-icons/fonts/JetEngine-widgets.ttf?j2l6ev') format('truetype'),
+	url('/wp-content/plugins/jet-engine/assets/lib/jetengine-icons/fonts/JetEngine-widgets.woff?j2l6ev') format('woff'),
+	url('/wp-content/plugins/jet-engine/assets/lib/jetengine-icons/fonts/JetEngine-widgets.svg?j2l6ev#JetEngine-widgets') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class*="jet-engine-icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'JetEngine-widgets' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Booking-availability-calendar:before {
+	content: "\e900";
+}
+.jet-engine-icon-listing-calendar:before {
+	content: "\e901";
+}
+.jet-engine-icon-check-mark:before {
+	content: "\e902";
+}
+.jet-engine-icon-data-store-button:before {
+	content: "\e903";
+}
+.jet-engine-icon-dynamic-chart:before {
+	content: "\e904";
+}
+.jet-engine-icon-dynamic-field:before {
+	content: "\e905";
+}
+.jet-engine-icon-dynamic-image:before {
+	content: "\e906";
+}
+.jet-engine-icon-dynamic-link:before {
+	content: "\e907";
+}
+.jet-engine-icon-dynamic-meta:before {
+	content: "\e908";
+}
+.jet-engine-icon-dynamic-repeater:before {
+	content: "\e909";
+}
+.jet-engine-icon-dynamic-table:before {
+	content: "\e90a";
+}
+.jet-engine-icon-dynamic-terms:before {
+	content: "\e90b";
+}
+.jet-engine-icon-forms:before {
+	content: "\e90c";
+}
+.jet-engine-icon-listing-grid:before {
+	content: "\e90d";
+}
+.jet-engine-icon-map-listing:before {
+	content: "\e90e";
+}
+.jet-engine-icon-profile-menu:before {
+	content: "\e90f";
+}
+.jet-engine-icon-profile-content:before {
+	content: "\e910";
+}
+
+.jet-engine-icon-user-geolocation:before {
+	content: "\e910";
+}
+
+.category-jetsmartfilters .bricks-add-element .element-icon {
+	font-size: 26px;
+}

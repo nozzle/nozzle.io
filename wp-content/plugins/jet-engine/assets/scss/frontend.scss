@@ -1,0 +1,23 @@
+@import "lib/slick";
+@import "frontend-widgets/dynamic-field";
+@import "frontend-widgets/dynamic-image";
+@import "frontend-widgets/dynamic-repeater";
+@import "frontend-widgets/dynamic-link";
+@import "frontend-widgets/dynamic-terms";
+@import "frontend-widgets/dynamic-meta";
+@import "frontend-widgets/grid";
+@import "frontend-widgets/calendar";
+@import "frontend-widgets/booking-form";
+@import "frontend-widgets/profile-menu";
+@import "frontend-widgets/maps";
+@import "frontend-widgets/data-store-button";
+@import "frontend-widgets/container";
+@import "frontend-widgets/section";
+
+// Dynamic Visibility Module
+.jedv-resize-columns.elementor-section {
+	> .elementor-container > .elementor-column, // for compat with Elementor 3.0
+	> .elementor-container > .elementor-row > .elementor-column {
+		flex-grow: 1;
+	}
+}

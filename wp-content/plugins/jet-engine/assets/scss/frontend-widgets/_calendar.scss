@@ -1,0 +1,152 @@
+.jet-calendar-loading {
+	opacity: .5 !important;
+	pointer-event: none !important;
+}
+
+.jet-calendar-grid {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: separate;
+}
+.jet-calendar-caption {
+	max-width: 100%;
+	&__wrap {
+		display: flex;
+		align-items: center;
+		&.wrap-layout-3 {
+			justify-content: center;
+		}
+		&.wrap-layout-4 {
+			justify-content: space-between;
+		}
+	}
+	&__name {
+		font-weight: bold;
+		flex: 1 1 auto;
+		text-align: left;
+		.wrap-layout-2 & {
+			text-align: right;
+			order: 2;
+		}
+		.wrap-layout-3 &,
+		.wrap-layout-4 & {
+			flex: 0 0 auto;
+			text-align: center;
+			order: 2;
+		}
+	}
+}
+.jet-calendar-nav {
+	&__link {
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			height: 1em;
+			fill: currentColor;
+		}
+
+
+		&.nav-link-prev {
+			.wrap-layout-3 &,
+			.wrap-layout-4 & {
+				order: 1;
+			}
+
+			.rtl & svg {
+				transform: scaleX(-1);
+			}
+		}
+		&.nav-link-next {
+			.wrap-layout-3 &,
+			.wrap-layout-4 & {
+				order: 3;
+			}
+
+			body:not(.rtl) & svg {
+				transform: scaleX(-1);
+			}
+		}
+	}
+}
+.jet-calendar-header {
+	&__week {
+		&-day {
+			width: 14.2857%;
+			text-align: center;
+			padding: 10px;
+			background: #fafafa;
+			&.day-pad {
+				opacity: .5;
+			}
+		}
+	}
+}
+
+.jet-calendar-week {
+	&__day {
+		width: 14.2857%;
+		vertical-align: top;
+		&-wrap {
+			position: relative;
+		}
+		&-header {
+			display: flex;
+			position: relative;
+			z-index: 3;
+		}
+		&-date {
+			display: flex;
+			align-items: center;
+		}
+		&-mobile-wrap {
+			display: none;
+			@media ( max-width: 1025px ) {
+				display: flex;
+			}
+		}
+		&-mobile-overlay {
+			cursor: pointer;
+			position: absolute;
+			z-index: 20;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&-mobile-trigger {
+			width: 24px;
+			height: 24px;
+			cursor: pointer;
+		}
+		&-content {
+			padding: 10px;
+			min-height: 100px;
+			@media ( max-width: 1025px ) {
+				display: none;
+			}
+		}
+	}
+}
+
+
+// Context Bricks
+.brxe-jet-listing-calendar {
+	.jet-calendar-week__day {
+		padding: 0;
+	}
+
+	.jet-calendar-week__day-date {
+		display: block;
+		text-align: center;
+	}
+	
+	.jet-calendar-nav__link svg {
+		width: 1em;
+		height: 1em;
+	}
+}

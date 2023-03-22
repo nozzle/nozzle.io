@@ -1,0 +1,70 @@
+.jet-listing-dynamic-link {
+	display: flex;
+	flex-direction: column;
+	&__icon {
+		&.is-svg-icon {
+			display: inline-flex;
+			svg {
+				width: 1em;
+				height: 1em;
+			}
+		}
+	}
+	&__link {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		align-self: flex-start;
+	}
+	&__icon {
+		order: 1;
+	}
+	&__label {
+		order: 2;
+	}
+
+	form.cart {
+		display: flex;
+
+		.quantity {
+			display: inline-flex;
+
+			.qty {
+				width: 100%;
+			}
+		}
+	}
+
+	.button.jet-woo-add-to-cart {
+		display: inline-flex;
+
+		&.added::after {
+			order: 3;
+		}
+
+		+ .added_to_cart.wc-forward {
+			display: none !important;
+		}
+	}
+}
+
+.jet-remove-from-store.is-hidden {
+	display: none !important;
+}
+
+.jet-add-to-cart + .added_to_cart.wc-forward {
+	display: none !important;
+}
+
+
+// Context Bricks
+.brxe-jet-engine-listing-dynamic-link {
+	.jet-listing-dynamic-link {
+		flex-direction: row;
+	}
+
+	.jet-listing-dynamic-link__icon :is(svg, path) {
+		fill: currentColor;
+	}
+
+}

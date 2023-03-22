@@ -1,0 +1,470 @@
+.jet-listing-grid {
+
+	&[data-lazy-load] {
+		min-height: 1px;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		width: calc(100% + 20px);
+
+		body.wp-admin.block-editor-page .jet-listing-grid__slider & {
+			flex-wrap: nowrap;
+		}
+
+		@for $i from 1 through 10 {
+			&.grid-col-desk-#{$i} {
+				--columns: #{$i};
+			}
+		}
+
+		@media ( max-width: 1024px ) {
+			@for $i from 1 through 10 {
+				&.grid-col-tablet-#{$i} {
+					--columns: #{$i};
+				}
+			}
+		}
+
+		@media ( max-width: 767px ) {
+			@for $i from 1 through 10 {
+				&.grid-col-mobile-#{$i} {
+					--columns: #{$i};
+				}
+			}
+		}
+	}
+
+	&__masonry {
+		align-items: flex-start;
+	}
+
+	&__item {
+		padding: 10px;
+		box-sizing: border-box;
+
+		.jet-listing-grid__items > & {
+			max-width: calc(100%/var(--columns));
+			flex: 0 0 calc(100%/var(--columns));
+		}
+
+		&.colspan-1 {
+			max-width: 100% !important;
+			flex: 0 0 100% !important;
+		}
+
+		@for $i from 2 through 6 {
+			@for $j from $i+1 through 10 {
+				&.colspan-#{$i}-#{$j} {
+					max-width: percentage($i/$j) !important;
+					flex: 0 0 percentage($i/$j) !important;
+				}
+			}
+		}
+	}
+	&__slider {
+		position: relative;
+		body.wp-admin.block-editor-page & {
+			overflow: hidden;
+		}
+
+		&[dir="rtl"] {
+			.slick-slide {
+				float: right;
+			}
+		}
+
+		&-icon.slick-arrow {
+			position: absolute;
+			top: 50%;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 30px;
+			color: #fff;
+			background-color: #111;
+			left: 0;
+			margin-top: -25px;
+			cursor: pointer;
+			text-align: center;
+			z-index: 90;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&.next-arrow {
+				left: auto;
+				right: 0;
+				transform: scaleX(-1);
+			}
+			svg {
+				height: 30px;
+				width: auto;
+				path {
+					fill: currentColor;
+				}
+			}
+		}
+		> .jet-listing-grid__items:not(.slick-initialized) {
+			> .jet-listing-grid__item {
+				display: none;
+				&:first-of-type {
+					display: block;
+				}
+				body.wp-admin.block-editor-page & {
+					display: block;
+				}
+			}
+		}
+		.jet-slick-dots {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			margin: 10px 0;
+			padding: 0;
+
+			li {
+				width: 12px;
+				height: 12px;
+				border-radius: 100%;
+				text-indent: -50px;
+				overflow: hidden;
+				cursor: pointer;
+				background: #eee;
+				margin: 3px;
+
+				&:hover,
+				&.slick-active {
+					background: #111;
+				}
+			}
+		}
+
+		&[dir="rtl"] {
+			.jet-slick-dots li {
+				text-indent: 50px;
+			}
+		}
+	}
+
+	.jet-engine-listing-overlay {
+		&-wrap {
+			position: relative;
+			cursor: pointer;
+		}
+		&-link {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+	}
+
+	&__loader {
+		--spinner-color: rgba(100, 100, 100, 0.8);
+		--spinner-size: 36px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		visibility: hidden;
+
+		.jet-listing-grid-loading & {
+			visibility: visible;
+		}
+
+		&-spinner {
+			width: var( --spinner-size );
+			height:var( --spinner-size );
+			border: 4px solid var( --spinner-color );
+			border-top-color: transparent;
+			border-radius: 50%;
+			animation: jet-engine-spin 1s infinite linear;
+		}
+	}
+}
+
+// Fix a slider width inside e-container.
+.elementor-widget.elementor-widget-jet-listing-grid {
+	max-width: 100%;
+	flex-basis: 100%;
+}
+
+// Scroll Slider
+@each $device in desktop, laptop, tablet_extra, tablet, mobile_extra, mobile {
+	body[data-elementor-device-mode="#{$device}"] .jet-listing-grid__scroll-slider-#{$device} {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+
+		> .jet-listing-grid__items {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+// Scroll Slider for Gutenberg
+@media ( min-width: 1025px ) {
+	.jet-listing-grid--blocks .jet-listing-grid__scroll-slider-desktop {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+
+		> .jet-listing-grid__items {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+
+@media ( min-width: 768px ) and ( max-width: 1024px ) {
+	.jet-listing-grid--blocks .jet-listing-grid__scroll-slider-tablet {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+
+		> .jet-listing-grid__items {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+@media ( max-width: 767px ) {
+	.jet-listing-grid--blocks .jet-listing-grid__scroll-slider-mobile {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+
+		> .jet-listing-grid__items {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+
+// Start Scroll Slider for Bricks
+@media ( max-width: 767px ) {
+	.brxe-jet-engine-listing-grid .jet-listing-grid__scroll-slider-mobile {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+
+		> .jet-listing-grid__items {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+@media ( max-width: 991px ) {
+	.brxe-jet-engine-listing-grid .jet-listing-grid__scroll-slider-tablet {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+
+		> .jet-listing-grid__items {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+.brxe-jet-engine-listing-grid .jet-listing-grid__scroll-slider-desktop {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+
+	> .jet-listing-grid__items {
+		flex-wrap: nowrap;
+	}
+}
+
+
+// End Scroll Slider for Bricks
+
+
+.jet-listing-grid__item {
+	&.jet-equal-columns {
+		> * {
+			height: 100%;
+		}
+		> .elementor {
+			height: 100%;
+			> .elementor-inner {
+				height: 100%;
+				> .elementor-section-wrap {
+					height: 100%;
+					> .elementor-section {
+						height: 100%;
+					}
+				}
+			}
+
+			// For compat with E. v3.0
+			> .elementor-section-wrap {
+				height: 100%;
+				> .elementor-section {
+					height: 100%;
+				}
+			}
+
+			// For compat with E. v3.6
+			> :is( .elementor-section, .e-container, .e-con ) {
+				height: 100%;
+			}
+
+		}
+		.jet-engine-listing-overlay-wrap {
+			height: 100%;
+			
+			> .elementor {
+				height: 100%;
+				> .elementor-inner {
+					height: 100%;
+					> .elementor-section-wrap {
+						height: 100%;
+						> .elementor-section {
+							height: 100%;
+						}
+					}
+				}
+
+				// For compat with E. v3.0
+				> .elementor-section-wrap {
+					height: 100%;
+					> .elementor-section {
+						height: 100%;
+					}
+				}
+
+				// For compat with E. v3.6
+				> :is( .elementor-section, .e-container, .e-con ) {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+.jet-listing-grid__items.jet-equal-columns__wrapper {
+	.slick-track {
+		display: flex;
+		align-items: stretch;
+	}
+
+	.slick-slide {
+		float: none;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+
+		img {
+			object-fit: cover;
+			flex-grow: 1;
+		}
+
+		> *,
+		.jet-equal-columns{
+			height: 100%;
+		}
+	}
+}
+
+.jet-listing-not-found {
+	text-align: center;
+	display: block;
+	margin: 0;
+	width: 100%;
+}
+
+@keyframes jet-engine-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+
+// Context Bricks
+.brxe-jet-engine-listing-grid {
+	.jet-listing-grid__items {
+		width: auto;
+		margin: 0;
+		--column-gap: 20px;
+		--row-gap: 20px;
+		gap: var(--row-gap) var(--column-gap);
+		--item-width: calc( ( 100% - ( var(--columns) - 1 ) * var(--column-gap) ) / var(--columns) );
+
+		&.slick-slider .slick-list {
+			margin-right: calc(var(--column-gap)/-2);
+			margin-left: calc(var(--column-gap)/-2);
+		}
+
+		> .jet-listing-grid__item {
+			max-width: var(--item-width);
+			flex: 0 0 var(--item-width);
+
+			@for $i from 2 through 6 {
+				@for $j from $i+1 through 10 {
+					&.colspan-#{$i}-#{$j} {
+						--colspan-width: calc( 100% - var(--item-width) * ( #{$j} - #{$i} ) - var(--column-gap) * ( #{$j} - #{$i} ) );
+						max-width: var(--colspan-width) !important;
+						flex: 0 0 var(--colspan-width) !important;
+					}
+				}
+			}
+		}
+	}
+
+	.jet-listing-grid__item {
+		padding: 0;
+
+		&.slick-slide {
+			padding: calc(var(--row-gap)/2) calc(var(--column-gap)/2);
+		}
+	}
+
+	.jet-slick-dots {
+		gap: 8px;
+
+		li {
+			margin: 0;
+		}
+	}
+
+	.jet-listing-grid__scroll-slider {
+		&::-webkit-scrollbar-button {
+			width: 0;
+			height: 0;
+		}
+
+		&::-webkit-scrollbar-track {
+			border: none;
+		}
+
+		&::-webkit-scrollbar-corner {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border: none;
+		}
+	}
+
+	.jet-listing-grid__slider-icon svg {
+		width: 1em;
+		height: 1em;
+	}
+}
+
+div.brxe-jet-engine-listing-grid {
+	width: 100%;
+	> div.jet-listing-grid {
+		width: 100%;
+	}
+}

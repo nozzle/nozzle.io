@@ -1,0 +1,442 @@
+.jet-template-library {
+
+	.manage-column {
+		display: flex;
+		align-items: center;
+	}
+
+	&__popup {
+		.cx-vui-popup__body {
+			width: 850px;
+			max-height: calc(100% - 160px);
+			padding: 40px;
+
+			@media (max-width: 1439px) {
+				width: 700px;
+			}
+		}
+
+		&.create-template-popup,
+		&.import-template-popup {
+			.cx-vui-popup__body {
+				width: 500px;
+			}
+		}
+
+		&.condition-manager-popup {
+			.cx-vui-popup__body {
+				width: 850px;
+				overflow-y: scroll;
+			}
+		}
+	}
+
+	&__template-conditions {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__template-conditions-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	&__template-conditions-item {
+		display: flex;
+		gap: 3px;
+
+		&.undefined-conditions {
+
+			svg {
+				width: 20px;
+			}
+
+			span {
+				line-height: 1.7;
+			}
+		}
+
+		&.active-structure {
+			color: #39b54a;
+			margin-bottom: 10px;
+		}
+
+		&.match-condition {
+			padding-left: 23px;
+
+			.dashicons {
+				font-size: 12px;
+			}
+		}
+
+		&.exclude {
+			color: #b32d2e;
+		}
+
+		.dashicons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__template-edit-conditions {
+		display: flex;
+		align-items: center;
+		gap: 3px;
+		color: #2271b1;
+		margin-top: 10px;
+	}
+
+	&__page-templates {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__page-templates-alert {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__page-templates-list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 5px;
+	}
+
+	&__page-templates-item {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0 10px;
+
+		.page-template-name {
+			min-width: 100%;
+		}
+
+		i {
+			font-size: 11px;
+			color: #7B7E81;
+		}
+	}
+
+	&__icon {
+		width: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__message,
+	&__action {
+		display: flex;
+		align-items: center;
+		gap: 3px;
+	}
+
+	&__theme-location-info-label {
+		display: flex;
+		align-items: center;
+		gap: 3px;
+		cursor: pointer;
+	}
+
+}
+
+.jet-template-library-form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: 24px;
+	}
+
+	&__header-icon {
+		margin-bottom: 16px;
+
+		svg {
+			width: 30px;
+			height: auto;
+		}
+	}
+
+	&__header-title {
+		font-size: 21px;
+		font-weight: 500;
+		text-align: center;
+		color: #23282D;
+		margin-bottom: 10px;
+	}
+
+	&__header-sub-title {
+		text-align: center;
+		color: #7B7E81;
+		max-width: 670px;
+	}
+
+	&__body {
+		margin-bottom: 32px;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 16px;
+
+		&.center-align {
+			justify-content: center;
+		}
+	}
+
+	&.theme-location-warning {
+		.jet-template-library-form__body {
+			text-align: center;
+		}
+
+		.jet-template-library-form__footer {
+			justify-content: center;
+		}
+	}
+
+	.cx-vui-component.cx-vui-component--vertical-fullwidth {
+		padding: 0;
+		margin-bottom: 24px;
+		border: none;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.cx-vui-component__meta {
+			padding: 0;
+			margin: 0 0 5px 0;
+			border: none;
+		}
+	}
+}
+
+.type-jet-theme-core {
+	.column-type {
+		a {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+
+			.type-icon {
+				width: 20px;
+				display: flex;
+				align-items: center;
+
+				svg {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		.jet-template-library-column__template-not-editable {
+			display: flex;
+			gap: 6px;
+			margin-top: 10px;
+			color: #fcb92c;
+		}
+	}
+}
+
+.jet-theme-core-conditions-manager {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	&__container {
+		flex: 1 1 auto;
+		padding-right: 10px;
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 16px;
+		margin-top: 16px;
+		padding-top: 32px;
+		border-top: 1px solid #E0E0E0;
+	}
+
+	&__blank {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding-bottom: 32px;
+
+		&-title {
+			font-style: normal;
+			font-size: 21px;
+			color: #23282D;
+			margin-bottom: 8px;
+		}
+
+		&-message {
+			display: flex;
+			flex-direction: column;
+			font-size: 13px;
+			line-height: 23px;
+			color: #7b7e81;
+			max-width: 570px;
+		}
+	}
+
+	&__list {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&__list-inner {
+		width: 100%;
+		margin-bottom: 16px;
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: 16px;
+
+			> .ivu-card {
+				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__add-condition {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+
+		.svg-icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__item {
+		display: flex;
+		width: 100%;
+		gap: 8px;
+		box-sizing: border-box;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&__item-control {
+		display: flex;
+		align-items: flex-start;
+
+		&.select-type {
+			flex: 1 1 auto;
+		}
+
+		.cx-vui-component-raw {
+			width: 100%;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-left: 0;
+		}
+
+		.cx-vui-input, .cx-vui-select {
+			width: 100%;
+			min-width: 100%;
+		}
+	}
+
+	&__item-delete {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding-left: 10px;
+		cursor: pointer;
+
+		svg {
+			margin-top: 3px;
+		}
+	}
+
+	.cx-vui-f-select__selected {
+		gap: 5px;
+	}
+
+	.cx-vui-f-select__selected-not-empty {
+		margin-bottom: 5px !important;
+	}
+
+	.cx-vui-f-select__selected-option {
+		margin: 0;
+	}
+}
+
+.cx-vui-f-select {
+	.cx-vui-f-select__selected-not-empty {
+		margin: 0;
+	}
+
+	.cx-vui-f-select__results {
+		max-height: 210px;
+		overflow-y: scroll;
+	}
+}
+
+.progress-state {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.cx-vui-notices {
+	z-index: 10000;
+}
+
+.cx-popup-enter-active,
+.cx-popup-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.cx-popup-enter-from,
+.cx-popup-leave-to {
+	opacity: 0;
+}
+
+.conditions-list-anim-enter-active, .conditions-list-leave-active {
+	transition: all .4s;
+}
+.conditions-list-anim-enter, .conditions-list-anim-leave-to {
+	opacity: 0;
+	transform: scale(.95);
+}

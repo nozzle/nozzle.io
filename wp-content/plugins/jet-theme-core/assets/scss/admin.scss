@@ -1,0 +1,117 @@
+.jet-theme-core-settings-page {
+
+	.cx-vui-subtitle {
+		font-size: 15px;
+	}
+
+	.kava-theme {
+		display: flex;
+		justify-content: flex-start;
+		gap: 20px;
+		border-bottom: 1px solid #ececec;
+		padding-bottom: 20px;
+
+		&__thumb {
+			max-width: 400px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&__details {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 40px;
+			flex: 1 1 auto;
+
+			b {
+				color: #23282d;
+				font-weight: 500;
+			}
+
+			.main-theme {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				gap: 10px;
+			}
+
+			.child-theme {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				gap: 10px;
+			}
+
+			.theme-details {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+
+			.theme-name {
+				font-size: 16px;
+				color: #23282d;
+				font-weight: 500;
+			}
+
+			.theme-version {
+				font-size: 12px;
+				font-weight: 500;
+				color: white;
+				padding: 0 4px;
+				margin: 0;
+				border-radius: 2px;
+				background-color: #46B450;
+				white-space: nowrap;
+
+				&.update-avaliable {
+					background-color: #D6336C;
+				}
+			}
+
+			.theme-status {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				font-size: 12px;
+				color: #7b7e81;
+
+			}
+		}
+	}
+
+	.kava-theme-backup {
+		padding-top: 20px;
+
+		&__table {
+			.cell--file {
+				width: 250px;
+			}
+
+			.cell--created {
+				width: 250px;
+			}
+
+			.cell--actions {
+				flex: 1 1 auto;
+
+				> div {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					gap: 15px;
+				}
+			}
+		}
+
+		&__actions {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			padding-top: 20px;
+		}
+	}
+}

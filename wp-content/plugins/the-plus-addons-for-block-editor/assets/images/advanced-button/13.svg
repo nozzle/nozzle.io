@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Button_-_Style_13">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Button_-_Style_13" data-name="Advanced Button - Style 13" clip-path="url(#clip-Advanced_Button_-_Style_13)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_169" data-name="Line 169" y2="483" transform="translate(900 100)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="538.572" height="144.064" rx="72.032" transform="translate(230.714 146.924)" fill="#888"/>
+    <rect id="Rectangle_688" data-name="Rectangle 688" width="538.572" height="144.064" rx="72.032" transform="translate(230.714 391.924)" fill="#888"/>
+    <rect id="Rectangle_413" data-name="Rectangle 413" width="276.777" height="21.828" rx="5" transform="translate(361.611 208.042)" fill="#fff"/>
+    <rect id="Rectangle_689" data-name="Rectangle 689" width="83.716" height="21.828" rx="5" transform="translate(361.611 453.042)" fill="#fff"/>
+    <rect id="Rectangle_690" data-name="Rectangle 690" width="181.777" height="21.828" rx="5" transform="translate(456.611 453.042)" fill="#fff"/>
+    <path id="Path_7117" data-name="Path 7117" d="M4.582,0H338.821L301.9,55.151H-31.672Z" transform="translate(477 121.849)" fill="#d5d5d5"/>
+    <path id="Path_7118" data-name="Path 7118" d="M4.582,0H338.821L301.9,55.151H-31.672Z" transform="translate(477 366.849)" fill="#d5d5d5"/>
+    <rect id="Rectangle_686" data-name="Rectangle 686" width="203.777" height="17.828" rx="5" transform="translate(528.686 140.511)" fill="#888"/>
+    <rect id="Rectangle_687" data-name="Rectangle 687" width="203.777" height="17.828" rx="5" transform="translate(528.686 385.511)" fill="#888"/>
+  </g>
+</svg>

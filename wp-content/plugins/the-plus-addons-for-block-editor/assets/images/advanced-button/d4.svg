@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Button_-_Download_Style_4">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Button_-_Download_Style_4" data-name="Advanced Button - Download Style – 4" clip-path="url(#clip-Advanced_Button_-_Download_Style_4)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect width="313.478" height="24.937" rx="5" transform="translate(232.68 337.532)" fill="#888"/>
+    <g transform="translate(590 296)" fill="#888" stroke="#707070" stroke-width="1">
+      <rect width="108" height="108" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="107" height="107" rx="4.5" fill="none"/>
+    </g>
+    <path d="M26.56,0H36.4a2.944,2.944,0,0,1,2.951,2.951V23.609H50.132A2.455,2.455,0,0,1,51.865,27.8l-18.7,18.715a2.382,2.382,0,0,1-3.357,0L11.079,27.8a2.455,2.455,0,0,1,1.734-4.193h10.8V2.951A2.944,2.944,0,0,1,26.56,0Zm36.4,46.234V60.005a2.944,2.944,0,0,1-2.951,2.951H2.951A2.944,2.944,0,0,1,0,60.005V46.234a2.944,2.944,0,0,1,2.951-2.951H20.99l6.025,6.025a6.3,6.3,0,0,0,8.927,0l6.025-6.025H60.005A2.944,2.944,0,0,1,62.957,46.234ZM47.709,57.054a2.459,2.459,0,1,0-2.459,2.459A2.466,2.466,0,0,0,47.709,57.054Zm7.87,0a2.459,2.459,0,1,0-2.459,2.459A2.466,2.466,0,0,0,55.579,57.054Z" transform="translate(612.522 318.522)" fill="#fff"/>
+  </g>
+</svg>

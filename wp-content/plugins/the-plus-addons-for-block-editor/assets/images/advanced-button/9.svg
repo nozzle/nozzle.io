@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Button_-_Style_9">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Button_-_Style_9" data-name="Advanced Button - Style 9" clip-path="url(#clip-Advanced_Button_-_Style_9)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_169" data-name="Line 169" y2="483" transform="translate(900 100)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="412.034" height="138.182" rx="69.091" transform="translate(293.983 100)" fill="#888"/>
+    <rect id="Rectangle_678" data-name="Rectangle 678" width="412.034" height="138.182" rx="69.091" transform="translate(293.983 385.229)" fill="#888"/>
+    <rect id="Rectangle_413" data-name="Rectangle 413" width="265.478" height="20.937" rx="5" transform="translate(367.681 158.623)" fill="#fff"/>
+    <rect id="Rectangle_679" data-name="Rectangle 679" width="265.477" height="20.937" rx="5" transform="translate(367.68 443.852)" fill="#fff"/>
+    <text id="Do_It_" data-name="Do It!" transform="matrix(0.891, -0.454, 0.454, 0.891, 281.542, 377.263)" fill="#888" font-size="31" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Do It!</tspan></text>
+    <text id="Do_It_2" data-name="Do It!" transform="translate(462.5 341)" fill="#888" font-size="32" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Do It!</tspan></text>
+    <text id="Do_It_3" data-name="Do It!" transform="translate(653.4 340.271) rotate(20)" fill="#888" font-size="27" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Do It!</tspan></text>
+    <text id="Do_It_4" data-name="Do It!" transform="matrix(0.921, -0.391, 0.391, 0.921, 708.308, 561.246)" fill="#888" font-size="27" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Do It!</tspan></text>
+    <text id="Do_It_5" data-name="Do It!" transform="translate(495.41 585.692)" fill="#888" font-size="31" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Do It!</tspan></text>
+    <text id="Do_It_6" data-name="Do It!" transform="translate(299 559) rotate(29)" fill="#888" font-size="26" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Do It!</tspan></text>
+  </g>
+</svg>

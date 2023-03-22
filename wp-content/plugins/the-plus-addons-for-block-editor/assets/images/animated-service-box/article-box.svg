@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Animated_Service_Boxes_-_Article_Box">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Animated_Service_Boxes_-_Article_Box" data-name="Animated Service Boxes - Article Box" clip-path="url(#clip-Animated_Service_Boxes_-_Article_Box)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_644" data-name="Rectangle 644" width="380" height="380" rx="5" transform="translate(100 150)" fill="#f2f2f2"/>
+    <rect id="Rectangle_645" data-name="Rectangle 645" width="380" height="380" rx="5" transform="translate(520 150)" fill="#f2f2f2"/>
+    <path id="image" d="M112.95,157.476H11.685A11.684,11.684,0,0,1,0,145.792V75.684A11.684,11.684,0,0,1,11.685,64H112.95a11.684,11.684,0,0,1,11.685,11.685v70.107A11.684,11.684,0,0,1,112.95,157.476ZM27.264,77.632A13.632,13.632,0,1,0,40.9,91.264,13.632,13.632,0,0,0,27.264,77.632ZM15.579,141.9h93.476V114.633l-21.3-21.3a2.921,2.921,0,0,0-4.131,0L50.633,126.317,37.119,112.8a2.921,2.921,0,0,0-4.131,0L15.579,130.212Z" transform="translate(227.683 229.262)" fill="#888" opacity="0.399"/>
+    <path id="image-2" data-name="image" d="M112.95,157.476H11.685A11.684,11.684,0,0,1,0,145.792V75.684A11.684,11.684,0,0,1,11.685,64H112.95a11.684,11.684,0,0,1,11.685,11.685v70.107A11.684,11.684,0,0,1,112.95,157.476ZM27.264,77.632A13.632,13.632,0,1,0,40.9,91.264,13.632,13.632,0,0,0,27.264,77.632ZM15.579,141.9h93.476V114.633l-21.3-21.3a2.921,2.921,0,0,0-4.131,0L50.633,126.317,37.119,112.8a2.921,2.921,0,0,0-4.131,0L15.579,130.212Z" transform="translate(647.683 229.262)" fill="#888" opacity="0.399"/>
+    <rect id="Rectangle_646" data-name="Rectangle 646" width="210" height="51" rx="5" transform="translate(129 452)" fill="#888"/>
+    <rect id="Rectangle_647" data-name="Rectangle 647" width="284" height="187" rx="5" transform="translate(551 316)" fill="#888"/>
+    <line id="Line_142" data-name="Line 142" x2="135" transform="translate(166.5 477.5)" fill="none" stroke="#fff" stroke-width="10"/>
+    <line id="Line_1" data-name="Line 1" x2="210.536" transform="translate(587.732 388.22)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line id="Line_2" data-name="Line 2" x2="210.536" transform="translate(587.732 411.147)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line id="Line_6" data-name="Line 6" x2="97.536" transform="translate(587.732 357.875)" fill="none" stroke="#fff" stroke-width="10"/>
+    <line id="Line_11" data-name="Line 11" x2="113" transform="translate(587.732 461.125)" fill="none" stroke="#fff" stroke-width="25"/>
+  </g>
+</svg>

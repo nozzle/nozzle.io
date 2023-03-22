@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Animated_Service_Boxes_-_Image_Accordians">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Animated_Service_Boxes_-_Image_Accordians" data-name="Animated Service Boxes - Image Accordians" clip-path="url(#clip-Animated_Service_Boxes_-_Image_Accordians)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_635" data-name="Rectangle 635" width="800" height="500" rx="5" transform="translate(100 100)" fill="#f2f2f2"/>
+    <rect id="Rectangle_642" data-name="Rectangle 642" width="215" height="500" rx="5" transform="translate(470 100)" fill="#d5d5d5"/>
+    <rect id="Rectangle_643" data-name="Rectangle 643" width="215" height="500" rx="5" transform="translate(685 100)" fill="#888"/>
+    <path id="image" d="M112.95,157.476H11.685A11.684,11.684,0,0,1,0,145.792V75.684A11.684,11.684,0,0,1,11.685,64H112.95a11.684,11.684,0,0,1,11.685,11.685v70.107A11.684,11.684,0,0,1,112.95,157.476ZM27.264,77.632A13.632,13.632,0,1,0,40.9,91.264,13.632,13.632,0,0,0,27.264,77.632ZM15.579,141.9h93.476V114.633l-21.3-21.3a2.921,2.921,0,0,0-4.131,0L50.633,126.317,37.119,112.8a2.921,2.921,0,0,0-4.131,0L15.579,130.212Z" transform="translate(218 239.262)" fill="#888" opacity="0.514"/>
+    <path id="image-2" data-name="image" d="M70.234,122.125H7.266A7.266,7.266,0,0,1,0,114.859V71.266A7.266,7.266,0,0,1,7.266,64H70.234A7.266,7.266,0,0,1,77.5,71.266v43.594A7.266,7.266,0,0,1,70.234,122.125ZM16.953,72.477a8.477,8.477,0,1,0,8.477,8.477A8.477,8.477,0,0,0,16.953,72.477ZM9.688,112.438H67.813V95.484L54.566,82.237a1.817,1.817,0,0,0-2.569,0L31.484,102.75l-8.4-8.4a1.817,1.817,0,0,0-2.569,0L9.688,105.172Z" transform="translate(538.75 256.938)" fill="#888" opacity="0.514"/>
+    <path id="image-3" data-name="image" d="M70.234,122.125H7.266A7.266,7.266,0,0,1,0,114.859V71.266A7.266,7.266,0,0,1,7.266,64H70.234A7.266,7.266,0,0,1,77.5,71.266v43.594A7.266,7.266,0,0,1,70.234,122.125ZM16.953,72.477a8.477,8.477,0,1,0,8.477,8.477A8.477,8.477,0,0,0,16.953,72.477ZM9.688,112.438H67.813V95.484L54.566,82.237a1.817,1.817,0,0,0-2.569,0L31.484,102.75l-8.4-8.4a1.817,1.817,0,0,0-2.569,0L9.688,105.172Z" transform="translate(753.75 256.938)" fill="#f2f2f2" opacity="0.506"/>
+    <line id="Line_141" data-name="Line 141" x2="85" transform="translate(133.5 143.75)" fill="none" stroke="#888" stroke-width="15" opacity="0.7"/>
+  </g>
+</svg>

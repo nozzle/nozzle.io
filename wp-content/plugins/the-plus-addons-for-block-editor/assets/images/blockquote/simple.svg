@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Blockquote_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Blockquote_Style_2" data-name="Blockquote Style 2" clip-path="url(#clip-Blockquote_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_90" data-name="Line 90" x2="583.941" transform="translate(213.548 240.147)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line id="Line_89" data-name="Line 89" x2="628.266" transform="translate(213.548 283.828)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line id="Line_88" data-name="Line 88" x2="628.266" transform="translate(213.548 327.509)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line id="Line_87" data-name="Line 87" x2="628.266" transform="translate(213.548 415.417)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line id="Line_86" data-name="Line 86" x2="555.26" transform="translate(213.548 371.189)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line id="Line_85" data-name="Line 85" x2="555.26" transform="translate(213.548 459.098)" fill="none" stroke="#d5d5d5" stroke-width="8"/>
+    <line id="Line_62" data-name="Line 62" y2="238" transform="translate(157.5 231.5)" fill="none" stroke="#888" stroke-width="8"/>
+  </g>
+</svg>

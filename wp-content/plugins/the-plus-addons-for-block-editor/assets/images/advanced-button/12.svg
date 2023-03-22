@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Button_-_Style_12">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Button_-_Style_12" data-name="Advanced Button - Style 12" clip-path="url(#clip-Advanced_Button_-_Style_12)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_169" data-name="Line 169" y2="483" transform="translate(900 100)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="429.572" height="144.064" rx="72.032" transform="translate(285.213 145.924)" fill="#888"/>
+    <rect id="Rectangle_676" data-name="Rectangle 676" width="429.572" height="144.064" rx="72.032" transform="translate(276.59 411.786) rotate(-9)" fill="#888"/>
+    <rect id="Rectangle_413" data-name="Rectangle 413" width="276.777" height="21.828" rx="5" transform="translate(362.048 207.042)" fill="#fff"/>
+    <rect id="Rectangle_677" data-name="Rectangle 677" width="276.777" height="21.828" rx="5" transform="translate(362.039 460.132) rotate(-9)" fill="#fff"/>
+  </g>
+</svg>

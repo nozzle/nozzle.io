@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Button_-_Download_Style_2">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Button_-_Download_Style_2" data-name="Advanced Button - Download Style – 2" clip-path="url(#clip-Advanced_Button_-_Download_Style_2)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect width="313.478" height="24.937" rx="5" transform="translate(232.68 337.532)" fill="#888"/>
+    <g transform="translate(590 286)" fill="#d5d5d5" stroke="#d5d5d5" stroke-width="1">
+      <circle cx="64" cy="64" r="64" stroke="none"/>
+      <circle cx="64" cy="64" r="63.5" fill="none"/>
+    </g>
+    <path d="M59.443,60.232,56.88,57.669a1.555,1.555,0,0,0-2.2,0L34.6,77.746V33.553A1.558,1.558,0,0,0,33.049,32H29.425a1.558,1.558,0,0,0-1.553,1.553V77.746L7.795,57.669a1.555,1.555,0,0,0-2.2,0L3.031,60.232a1.555,1.555,0,0,0,0,2.2L30.137,89.538a1.555,1.555,0,0,0,2.2,0L59.443,62.432A1.555,1.555,0,0,0,59.443,60.232Z" transform="translate(622.763 289.003)" fill="#888"/>
+  </g>
+</svg>

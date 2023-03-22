@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Animated_Service_Boxes_-_Sliding_Boxes">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Animated_Service_Boxes_-_Sliding_Boxes" data-name="Animated Service Boxes - Sliding Boxes" clip-path="url(#clip-Animated_Service_Boxes_-_Sliding_Boxes)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_644" data-name="Rectangle 644" width="259" height="248" rx="5" transform="translate(100 226)" fill="#f2f2f2"/>
+    <path id="Rectangle_653" data-name="Rectangle 653" d="M5,0H265a0,0,0,0,1,0,0V248a0,0,0,0,1,0,0H5a5,5,0,0,1-5-5V5A5,5,0,0,1,5,0Z" transform="translate(376 226)" fill="#f2f2f2"/>
+    <path id="Rectangle_654" data-name="Rectangle 654" d="M0,0H254a5,5,0,0,1,5,5V243a5,5,0,0,1-5,5H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(641 226)" fill="#d5d5d5"/>
+    <path id="image" d="M71.147,122.88H7.36A7.36,7.36,0,0,1,0,115.52V71.36A7.36,7.36,0,0,1,7.36,64H71.147a7.36,7.36,0,0,1,7.36,7.36v44.16A7.36,7.36,0,0,1,71.147,122.88ZM17.173,72.587a8.587,8.587,0,1,0,8.587,8.587A8.587,8.587,0,0,0,17.173,72.587Zm-7.36,40.48h58.88V95.893L55.275,82.474a1.84,1.84,0,0,0-2.6,0L31.893,103.253l-8.512-8.512a1.84,1.84,0,0,0-2.6,0L9.813,105.707Z" transform="translate(190 257)" fill="#888" opacity="0.399"/>
+    <path id="image-2" data-name="image" d="M71.147,122.88H7.36A7.36,7.36,0,0,1,0,115.52V71.36A7.36,7.36,0,0,1,7.36,64H71.147a7.36,7.36,0,0,1,7.36,7.36v44.16A7.36,7.36,0,0,1,71.147,122.88ZM17.173,72.587a8.587,8.587,0,1,0,8.587,8.587A8.587,8.587,0,0,0,17.173,72.587Zm-7.36,40.48h58.88V95.893L55.275,82.474a1.84,1.84,0,0,0-2.6,0L31.893,103.253l-8.512-8.512a1.84,1.84,0,0,0-2.6,0L9.813,105.707Z" transform="translate(469 257)" fill="#888" opacity="0.399"/>
+    <line id="Line_1" data-name="Line 1" x2="182.846" transform="translate(689.464 328.72)" fill="none" stroke="#888" stroke-width="8" opacity="0.503"/>
+    <line id="Line_2" data-name="Line 2" x2="182.846" transform="translate(689.464 351.647)" fill="none" stroke="#888" stroke-width="8" opacity="0.503"/>
+    <line id="Line_6" data-name="Line 6" x2="97.536" transform="translate(689.464 298.375)" fill="none" stroke="#888" stroke-width="10"/>
+    <line id="Line_11" data-name="Line 11" x2="113" transform="translate(689.464 401.625)" fill="none" stroke="#888" stroke-width="25"/>
+  </g>
+</svg>

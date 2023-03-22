@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Animated_Service_Boxes_-_Hover_Section">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Animated_Service_Boxes_-_Hover_Section" data-name="Animated Service Boxes - Hover Section" clip-path="url(#clip-Animated_Service_Boxes_-_Hover_Section)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_641" data-name="Rectangle 641" width="800" height="500" rx="5" transform="translate(100 100)" fill="#f2f2f2"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="74" height="67" transform="translate(644 223.25)" fill="#888"/>
+    <line id="Line_1" data-name="Line 1" x2="249.996" transform="translate(556.218 370.095)" fill="none" stroke="#888" stroke-width="8" opacity="0.5"/>
+    <line id="Line_2" data-name="Line 2" x2="266.071" transform="translate(547.999 393.022)" fill="none" stroke="#888" stroke-width="8" opacity="0.5"/>
+    <line id="Line_3" data-name="Line 3" x2="266.071" transform="translate(547.999 415.949)" fill="none" stroke="#888" stroke-width="8" opacity="0.5"/>
+    <line id="Line_6" data-name="Line 6" x2="135" transform="translate(613.5 330.75)" fill="none" stroke="#888" stroke-width="10"/>
+    <line id="Line_140" data-name="Line 140" x2="135" transform="translate(228.5 330.75)" fill="none" stroke="#888" stroke-width="10"/>
+    <line id="Line_11" data-name="Line 11" x2="113" transform="translate(624.5 476.75)" fill="none" stroke="#888" stroke-width="30"/>
+    <g id="Flash" transform="translate(664.629 238.168)">
+      <g id="icomoon-ignore" transform="translate(0)">
+        <line id="Line_13" data-name="Line 13" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path id="Path_217" data-name="Path 217" d="M44.068,16.338a.8.8,0,0,0-.7-.412H30.252V2.831c0-.361-.081-.676-.43-.773A.7.7,0,0,0,29,2.424L16.148,24.316a1.507,1.507,0,0,0,.015,1.125c.141.248.426.72.714.72h12.1V38.316a.8.8,0,0,0,.577.769.742.742,0,0,0,.223.031.8.8,0,0,0,.677-.374l13.6-21.592A.8.8,0,0,0,44.068,16.338Z" transform="translate(-10.914 -1.381)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

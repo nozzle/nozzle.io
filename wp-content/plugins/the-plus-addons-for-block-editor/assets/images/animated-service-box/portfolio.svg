@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Animated_Service_Boxes_-_Portfolio">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Animated_Service_Boxes_-_Portfolio" data-name="Animated Service Boxes - Portfolio" clip-path="url(#clip-Animated_Service_Boxes_-_Portfolio)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_644" data-name="Rectangle 644" width="380" height="276" rx="5" transform="translate(100 151)" fill="#f2f2f2"/>
+    <rect id="Rectangle_655" data-name="Rectangle 655" width="380" height="398" rx="5" transform="translate(520 151)" fill="#d5d5d5"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="74" height="67" transform="translate(157.464 204.114)" fill="#888"/>
+    <rect id="Rectangle_656" data-name="Rectangle 656" width="74" height="67" transform="translate(577.464 204.114)" fill="#888"/>
+    <line id="Line_1" data-name="Line 1" x2="249.996" transform="translate(156.964 350.959)" fill="none" stroke="#888" stroke-width="8" opacity="0.5"/>
+    <line id="Line_154" data-name="Line 154" x2="249.996" transform="translate(576.964 350.959)" fill="none" stroke="#888" stroke-width="8" opacity="0.5"/>
+    <line id="Line_156" data-name="Line 156" x2="197.036" transform="translate(577.464 447.092)" fill="none" stroke="#888" stroke-width="8"/>
+    <line id="Line_157" data-name="Line 157" x2="218.202" transform="translate(577.464 503.092)" fill="none" stroke="#888" stroke-width="8"/>
+    <line id="Line_2" data-name="Line 2" x2="266.071" transform="translate(156.964 373.886)" fill="none" stroke="#888" stroke-width="8" opacity="0.5"/>
+    <line id="Line_155" data-name="Line 155" x2="266.071" transform="translate(576.964 373.886)" fill="none" stroke="#888" stroke-width="8" opacity="0.5"/>
+    <line id="Line_6" data-name="Line 6" x2="135" transform="translate(156.964 311.614)" fill="none" stroke="#888" stroke-width="10"/>
+    <line id="Line_153" data-name="Line 153" x2="135" transform="translate(576.964 311.614)" fill="none" stroke="#888" stroke-width="10"/>
+    <g id="Flash" transform="translate(177.838 218.747)">
+      <g id="icomoon-ignore" transform="translate(0)">
+        <line id="Line_13" data-name="Line 13" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path id="Path_217" data-name="Path 217" d="M44.068,16.338a.8.8,0,0,0-.7-.412H30.252V2.831c0-.361-.081-.676-.43-.773A.7.7,0,0,0,29,2.424L16.148,24.316a1.507,1.507,0,0,0,.015,1.125c.141.248.426.72.714.72h12.1V38.316a.8.8,0,0,0,.577.769.742.742,0,0,0,.223.031.8.8,0,0,0,.677-.374l13.6-21.592A.8.8,0,0,0,44.068,16.338Z" transform="translate(-10.914 -1.381)" fill="#fff"/>
+    </g>
+    <g id="Flash-2" data-name="Flash" transform="translate(597.838 218.747)">
+      <g id="icomoon-ignore-2" data-name="icomoon-ignore" transform="translate(0)">
+        <line id="Line_13-2" data-name="Line 13" stroke="#449fdb" stroke-width="1"/>
+      </g>
+      <path id="Path_217-2" data-name="Path 217" d="M44.068,16.338a.8.8,0,0,0-.7-.412H30.252V2.831c0-.361-.081-.676-.43-.773A.7.7,0,0,0,29,2.424L16.148,24.316a1.507,1.507,0,0,0,.015,1.125c.141.248.426.72.714.72h12.1V38.316a.8.8,0,0,0,.577.769.742.742,0,0,0,.223.031.8.8,0,0,0,.677-.374l13.6-21.592A.8.8,0,0,0,44.068,16.338Z" transform="translate(-10.914 -1.381)" fill="#fff"/>
+    </g>
+    <line id="Line_158" data-name="Line 158" x2="265.071" transform="translate(577.464 475.092)" fill="none" stroke="#a5a5a5" stroke-width="1"/>
+    <line id="Line_159" data-name="Line 159" x2="265.071" transform="translate(577.464 419.092)" fill="none" stroke="#a5a5a5" stroke-width="1"/>
+  </g>
+</svg>

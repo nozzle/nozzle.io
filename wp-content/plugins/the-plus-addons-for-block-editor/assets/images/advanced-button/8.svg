@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Button_-_Style_8">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Button_-_Style_8" data-name="Advanced Button - Style 8" clip-path="url(#clip-Advanced_Button_-_Style_8)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <line id="Line_169" data-name="Line 169" y2="483" transform="translate(900 100)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="412.034" height="138.182" rx="69.091" transform="translate(293.983 116.851)" fill="#888"/>
+    <rect id="Rectangle_678" data-name="Rectangle 678" width="412.034" height="138.182" rx="69.091" transform="translate(293.983 444.967)" fill="#888"/>
+    <rect id="Rectangle_413" data-name="Rectangle 413" width="265.477" height="20.937" rx="5" transform="translate(367.68 175.474)" fill="#fff"/>
+    <rect id="Rectangle_679" data-name="Rectangle 679" width="265.477" height="20.937" rx="5" transform="translate(367.68 503.59)" fill="#fff"/>
+    <text id="_" data-name="👇🏿" transform="translate(325 419.738)" fill="#888" font-size="81" font-family="SegoeUIEmoji, Segoe UI Emoji" opacity="0.8"><tspan x="0" y="0">👇🏿</tspan></text>
+    <text id="_2" data-name="👇🏿" transform="translate(460 419.738)" fill="#888" font-size="81" font-family="SegoeUIEmoji, Segoe UI Emoji" opacity="0.8"><tspan x="0" y="0">👇🏿</tspan></text>
+    <text id="_3" data-name="👇🏿" transform="translate(595 419.738)" fill="#888" font-size="81" font-family="SegoeUIEmoji, Segoe UI Emoji" opacity="0.8"><tspan x="0" y="0">👇🏿</tspan></text>
+  </g>
+</svg>

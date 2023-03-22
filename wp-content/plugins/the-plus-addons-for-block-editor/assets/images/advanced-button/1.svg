@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Advanced_Button_-_Style_1">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Advanced_Button_-_Style_1" data-name="Advanced Button - Style 1" clip-path="url(#clip-Advanced_Button_-_Style_1)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g id="Rectangle_675" data-name="Rectangle 675" transform="translate(333 375)" fill="#fff" stroke="#707070" stroke-width="2">
+      <rect width="335" height="102" rx="50" stroke="none"/>
+      <rect x="1" y="1" width="333" height="100" rx="49" fill="none"/>
+    </g>
+    <line id="Line_169" data-name="Line 169" y2="483" transform="translate(900 100)" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+    <g id="Ellipse_274" data-name="Ellipse 274" transform="translate(339 224)" fill="none" stroke="#707070" stroke-width="2">
+      <circle cx="51.5" cy="51.5" r="51.5" stroke="none"/>
+      <circle cx="51.5" cy="51.5" r="50.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="271" height="25" rx="5" transform="translate(390 263)" fill="#888"/>
+    <rect id="Rectangle_674" data-name="Rectangle 674" width="271" height="25" rx="5" transform="translate(365 413)" fill="#888"/>
+  </g>
+</svg>

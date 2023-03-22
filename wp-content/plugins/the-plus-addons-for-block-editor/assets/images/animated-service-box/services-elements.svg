@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Animated_Service_Boxes_-_Services_Elements">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Animated_Service_Boxes_-_Services_Elements" data-name="Animated Service Boxes - Services Elements" clip-path="url(#clip-Animated_Service_Boxes_-_Services_Elements)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_641" data-name="Rectangle 641" width="800" height="500" rx="5" transform="translate(100 100)" fill="#f2f2f2"/>
+    <path id="image" d="M462.655,446.887H47.861A47.86,47.86,0,0,1,0,399.026V111.861A47.86,47.86,0,0,1,47.861,64H462.655a47.86,47.86,0,0,1,47.861,47.861V399.026A47.86,47.86,0,0,1,462.655,446.887ZM111.675,119.838a55.838,55.838,0,1,0,55.838,55.838A55.838,55.838,0,0,0,111.675,119.838ZM63.814,383.073H446.7V271.4L359.44,184.136a11.966,11.966,0,0,0-16.922,0L207.4,319.258,152.043,263.9a11.966,11.966,0,0,0-16.922,0L63.814,335.212Z" transform="translate(244.742 94.556)" fill="#888" opacity="0.083"/>
+    <line id="Line_140" data-name="Line 140" x2="173" transform="translate(413.5 258.5)" fill="none" stroke="#b1b1b1" stroke-width="20"/>
+    <line id="Line_150" data-name="Line 150" x2="269" transform="translate(365.5 319.5)" fill="none" stroke="#525252" stroke-width="20"/>
+    <line id="Line_151" data-name="Line 151" x2="206" transform="translate(397 380.5)" fill="none" stroke="#b1b1b1" stroke-width="20"/>
+    <line id="Line_152" data-name="Line 152" x2="239" transform="translate(380.5 441.5)" fill="none" stroke="#b1b1b1" stroke-width="20"/>
+  </g>
+</svg>

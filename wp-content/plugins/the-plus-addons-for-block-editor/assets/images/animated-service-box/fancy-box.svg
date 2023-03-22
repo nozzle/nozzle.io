@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Animated_Service_Boxes_-_Fancy_Box">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Animated_Service_Boxes_-_Fancy_Box" data-name="Animated Service Boxes - Fancy Box" clip-path="url(#clip-Animated_Service_Boxes_-_Fancy_Box)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_647" data-name="Rectangle 647" width="380" height="380" rx="5" transform="translate(100 156)" fill="#d5d5d5"/>
+    <rect id="Rectangle_651" data-name="Rectangle 651" width="380" height="380" rx="5" transform="translate(520 156)" fill="#f2f2f2"/>
+    <path id="image" d="M103.8,149.9H10.738A10.738,10.738,0,0,1,0,139.165V74.738A10.738,10.738,0,0,1,10.738,64H103.8a10.738,10.738,0,0,1,10.738,10.738v64.427A10.738,10.738,0,0,1,103.8,149.9ZM25.055,76.527A12.527,12.527,0,1,0,37.582,89.055,12.527,12.527,0,0,0,25.055,76.527ZM14.317,135.586h85.9V110.531L80.642,90.953a2.685,2.685,0,0,0-3.8,0L46.531,121.269,34.112,108.85a2.685,2.685,0,0,0-3.8,0l-16,16Z" transform="translate(232.731 243.049)" fill="#888" opacity="0.15"/>
+    <path id="image-2" data-name="image" d="M103.8,149.9H10.738A10.738,10.738,0,0,1,0,139.165V74.738A10.738,10.738,0,0,1,10.738,64H103.8a10.738,10.738,0,0,1,10.738,10.738v64.427A10.738,10.738,0,0,1,103.8,149.9ZM25.055,76.527A12.527,12.527,0,1,0,37.582,89.055,12.527,12.527,0,0,0,25.055,76.527ZM14.317,135.586h85.9V110.531L80.642,90.953a2.685,2.685,0,0,0-3.8,0L46.531,121.269,34.112,108.85a2.685,2.685,0,0,0-3.8,0l-16,16Z" transform="translate(652.731 243.049)" fill="#888" opacity="0.15"/>
+    <line id="Line_1" data-name="Line 1" x2="196.768" transform="translate(136.732 279.22)" fill="none" stroke="#888" stroke-width="8" opacity="0.598"/>
+    <line id="Line_146" data-name="Line 146" x2="196.768" transform="translate(556.732 279.22)" fill="none" stroke="#888" stroke-width="8" opacity="0.598"/>
+    <line id="Line_2" data-name="Line 2" x2="210.768" transform="translate(136.732 302.147)" fill="none" stroke="#888" stroke-width="8" opacity="0.598"/>
+    <line id="Line_147" data-name="Line 147" x2="210.768" transform="translate(556.732 302.147)" fill="none" stroke="#888" stroke-width="8" opacity="0.598"/>
+    <line id="Line_144" data-name="Line 144" x2="231.768" transform="translate(136.732 325.073)" fill="none" stroke="#888" stroke-width="8" opacity="0.598"/>
+    <line id="Line_148" data-name="Line 148" x2="231.768" transform="translate(556.732 325.073)" fill="none" stroke="#888" stroke-width="8" opacity="0.598"/>
+    <line id="Line_6" data-name="Line 6" x2="112.768" transform="translate(136.732 246.875)" fill="none" stroke="#888" stroke-width="15"/>
+    <line id="Line_145" data-name="Line 145" x2="112.768" transform="translate(556.732 246.875)" fill="none" stroke="#888" stroke-width="15"/>
+    <line id="Line_11" data-name="Line 11" x2="113" transform="translate(136.732 471.125)" fill="none" stroke="#888" stroke-width="25"/>
+    <line id="Line_149" data-name="Line 149" x2="113" transform="translate(556.732 471.125)" fill="none" stroke="#888" stroke-width="25"/>
+    <path id="Rectangle_652" data-name="Rectangle 652" d="M0,0H380a0,0,0,0,1,0,0V8a5,5,0,0,1-5,5H5A5,5,0,0,1,0,8V0A0,0,0,0,1,0,0Z" transform="translate(520 523)" fill="#888"/>
+  </g>
+</svg>

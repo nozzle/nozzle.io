@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Carousel_Remote_Style_-_Swithcer">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g data-name="Carousel Remote Style - Swithcer" clip-path="url(#clip-Carousel_Remote_Style_-_Swithcer)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect width="325" height="93" rx="5" transform="translate(338 515)" fill="#f2f2f2"/>
+    <rect width="249" height="213" rx="5" transform="translate(231 93)" fill="#d5d5d5"/>
+    <rect width="249" height="213" rx="5" transform="translate(520 93)" fill="#d5d5d5"/>
+    <path d="M10,0H180a0,0,0,0,1,0,0V91a0,0,0,0,1,0,0H10A10,10,0,0,1,0,81V10A10,10,0,0,1,10,0Z" transform="translate(320 366)" fill="#888"/>
+    <path d="M0,0H171a10,10,0,0,1,10,10V81a10,10,0,0,1-10,10H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(500 366)" fill="#d5d5d5"/>
+    <text transform="translate(368 426)" fill="#fff" font-size="40" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">ABC</tspan></text>
+    <text transform="translate(553 426)" fill="#fff" font-size="40" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">XYZ</tspan></text>
+    <text transform="translate(364 589)" fill="#888" font-size="70" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Swithcer</tspan></text>
+  </g>
+</svg>

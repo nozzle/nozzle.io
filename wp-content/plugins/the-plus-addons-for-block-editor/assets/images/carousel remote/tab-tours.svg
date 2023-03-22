@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Carousel_Remote_-_Tab_Tours">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Carousel_Remote_-_Tab_Tours)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect width="473" height="93" rx="5" transform="translate(264 493)" fill="#f2f2f2"/>
+    <g transform="translate(365.25 115)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="107" height="107" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="106" height="106" rx="4.5" fill="none"/>
+    </g>
+    <rect width="107" height="107" rx="5" transform="translate(527.25 115)" fill="#d5d5d5"/>
+    <path d="M-63.6,0-88.437,26.308-63.6,50.555" transform="translate(494.256 143.73)" fill="none" stroke="#fff" stroke-width="10"/>
+    <path d="M24.838,0,0,26.308,24.838,50.555" transform="translate(592.849 194.285) rotate(180)" fill="none" stroke="#fff" stroke-width="10"/>
+    <text transform="translate(358.75 355)" fill="#888" font-size="60" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">ABC</tspan></text>
+    <text transform="translate(567.75 355)" fill="#888" font-size="60" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">XYZ</tspan></text>
+    <line x2="205" transform="translate(319.25 393.5)" fill="none" stroke="#888" stroke-width="15"/>
+    <text transform="translate(299 567)" fill="#888" font-size="70" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Tabs &amp; Tours</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath>
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-Carousel_Remote_Style_-_Carousel)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <g transform="translate(376 359)" fill="#888" stroke="#888" stroke-width="1">
+      <rect width="107" height="107" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="106" height="106" rx="4.5" fill="none"/>
+    </g>
+    <rect width="107" height="107" rx="5" transform="translate(518 359)" fill="#d5d5d5"/>
+    <path d="M-63.6,0-88.437,26.308-63.6,50.555" transform="translate(505.006 387.73)" fill="none" stroke="#fff" stroke-width="10"/>
+    <path d="M24.838,0,0,26.308,24.838,50.555" transform="translate(583.599 438.285) rotate(180)" fill="none" stroke="#fff" stroke-width="10"/>
+    <rect width="151" height="158" rx="5" transform="translate(676 113)" fill="#d5d5d5"/>
+    <rect width="151" height="158" rx="5" transform="translate(174 113)" fill="#d5d5d5"/>
+    <rect width="249" height="213" rx="5" transform="translate(376 85)" fill="#d5d5d5"/>
+    <rect width="325" height="93" rx="5" transform="translate(338 523)" fill="#f2f2f2"/>
+    <text transform="translate(361 596)" fill="#888" font-size="70" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Carousel</tspan></text>
+  </g>
+</svg>

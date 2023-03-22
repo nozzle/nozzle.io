@@ -1,0 +1,32 @@
+{
+	"name": "jet-engine-relations",
+	"version": "1.0.0",
+	"license": "GPL-2.0-or-later",
+	"main": "js/admin-controls.js",
+	"devDependencies": {
+		"@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+		"babel-core": "^6.25.0",
+		"babel-loader": "^7.1.5",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-plugin-transform-react-jsx": "^6.24.1",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-env": "^1.6.0",
+		"babel-preset-latest": "^6.24.1",
+		"cross-env": "^7.0.3",
+		"css-loader": "^6.7.2",
+		"file-loader": "^6.2.0",
+		"node-sass": "^8.0.0",
+		"sass-loader": "^13.2.0",
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.0"
+	},
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development webpack --progress -w",
+		"build": "cross-env NODE_ENV=production webpack --progress -w"
+	},
+	"dependencies": {
+		"@wordpress/icons": "^9.13.0",
+		"html-react-parser": "^3.0.4",
+		"react-select": "^5.2.1"
+	}
+}

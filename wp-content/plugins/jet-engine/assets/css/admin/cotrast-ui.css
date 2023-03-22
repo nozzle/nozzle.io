@@ -1,0 +1,23 @@
+body select.cx-vui-select:not(:focus),
+body textarea.cx-vui-textarea:not(:focus),
+body input.cx-vui-input:not(:focus) {
+	box-shadow: inset 0 0 0 2px currentColor;
+}
+
+body .cx-vui-switcher__trigger {
+	background: #7b7e81;
+}
+
+body .cx-vui-f-select__selected-option {
+	background: #7b7e81;
+	color: #fff;
+}
+
+body .cx-vui-f-select__result.is-selected {
+	background: #7b7e81;
+	color: #fff;
+}
+
+body .cx-vui-repeater-item__handle svg line {
+	stroke: #7b7e81;
+}

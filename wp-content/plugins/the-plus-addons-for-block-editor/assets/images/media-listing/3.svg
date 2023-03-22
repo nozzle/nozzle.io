@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Media_Listing_-_Style_3">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Media_Listing_-_Style_3" data-name="Media Listing - Style 3" clip-path="url(#clip-Media_Listing_-_Style_3)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_628" data-name="Rectangle 628" width="800" height="500" rx="5" transform="translate(100 100)" fill="#d5d5d5"/>
+    <path id="image" d="M289.644,303.705H29.963A29.963,29.963,0,0,1,0,273.742V93.963A29.963,29.963,0,0,1,29.963,64h259.68a29.963,29.963,0,0,1,29.963,29.963V273.742A29.963,29.963,0,0,1,289.644,303.705ZM69.914,98.957a34.957,34.957,0,1,0,34.957,34.957A34.957,34.957,0,0,0,69.914,98.957Zm-29.963,164.8H279.656V193.84l-54.63-54.63a7.491,7.491,0,0,0-10.594,0L129.84,223.8,95.186,189.149a7.491,7.491,0,0,0-10.594,0L39.951,233.791Z" transform="translate(340 166.295)" fill="#888" opacity="0.499"/>
+    <rect id="Rectangle_630" data-name="Rectangle 630" width="800" height="500" rx="5" transform="translate(100 100)" fill="#888" opacity="0.618"/>
+    <line id="Line_16" data-name="Line 16" x2="363" transform="translate(318.5 448.5)" fill="none" stroke="#fff" stroke-width="25"/>
+    <path id="search-plus" d="M71.243,45v7.5a2.82,2.82,0,0,1-2.812,2.812H55.307V68.431a2.82,2.82,0,0,1-2.812,2.812H45a2.82,2.82,0,0,1-2.812-2.812V55.307H29.06a2.82,2.82,0,0,1-2.812-2.812V45a2.82,2.82,0,0,1,2.812-2.812H42.183V29.06A2.82,2.82,0,0,1,45,26.247h7.5a2.82,2.82,0,0,1,2.812,2.812V42.183H68.431A2.82,2.82,0,0,1,71.243,45Zm47.1,66.72-6.632,6.632a5.6,5.6,0,0,1-7.945,0L80.383,94.983A5.62,5.62,0,0,1,78.742,91v-3.82a48.723,48.723,0,1,1,8.437-8.437H91a5.62,5.62,0,0,1,3.984,1.64l23.365,23.365A5.672,5.672,0,0,1,118.348,111.716ZM80.617,48.745A31.872,31.872,0,1,0,48.745,80.617,31.845,31.845,0,0,0,80.617,48.745Z" transform="translate(440 252)" fill="#fff"/>
+  </g>
+</svg>

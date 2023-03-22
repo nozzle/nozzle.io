@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <defs>
+    <clipPath id="clip-Media_Listing_-_Style_4">
+      <rect width="1000" height="700"/>
+    </clipPath>
+  </defs>
+  <g id="Media_Listing_-_Style_4" data-name="Media Listing - Style 4" clip-path="url(#clip-Media_Listing_-_Style_4)">
+    <rect width="1000" height="700" fill="#fcfcff"/>
+    <rect id="Rectangle_628" data-name="Rectangle 628" width="448" height="337" rx="5" transform="translate(276 121)" fill="#d5d5d5"/>
+    <line id="Line_16" data-name="Line 16" x2="253" transform="translate(373.5 523.5)" fill="none" stroke="#888" stroke-width="25"/>
+    <line id="Line_116" data-name="Line 116" x2="364.5" transform="translate(318 578.629)" fill="none" stroke="#d5d5d5" stroke-width="25"/>
+    <path id="image" d="M199.977,229.5H20.687A20.687,20.687,0,0,1,0,208.811V84.687A20.687,20.687,0,0,1,20.687,64h179.29a20.687,20.687,0,0,1,20.687,20.687V208.811A20.687,20.687,0,0,1,199.977,229.5ZM48.27,88.135A24.135,24.135,0,1,0,72.405,112.27,24.135,24.135,0,0,0,48.27,88.135ZM27.583,201.915h165.5v-48.27l-37.718-37.718a5.172,5.172,0,0,0-7.314,0l-58.4,58.4L65.719,150.406a5.172,5.172,0,0,0-7.314,0L27.583,181.228Z" transform="translate(390 142.625)" fill="#888" opacity="0.298"/>
+  </g>
+</svg>

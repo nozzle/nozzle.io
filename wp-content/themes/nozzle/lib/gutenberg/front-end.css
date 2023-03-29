@@ -274,7 +274,8 @@
 .site-container .wp-block-pullquote,
 .site-container .wp-block-quote {
 	border: none;
-	margin: 76px 32px 76px;
+	margin: 40px 32px 40px;
+	padding-bottom: 1px;
 }
 
 .site-container .wp-block-quote:not(.is-large):not(.is-style-large) {
@@ -287,7 +288,8 @@
 	color: #063544;
 	font-size: 18px;
 	font-style: italic;
-	margin-bottom: 28px;
+	margin-bottom: 1px;
+	padding-top: 1px;
 }
 
 .site-container .wp-block-pullquote p,
@@ -318,7 +320,7 @@
 	display: block;
 	font-size: 18px;
 	font-style: italic;
-	margin-top: -12px;
+	margin-top: 12px;
 	text-align: inherit;
 	text-transform: none;
 	font-weight: 600;

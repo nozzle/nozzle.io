@@ -4,6 +4,90 @@
 		<loc>/blog</loc>
 	</url>
 	<url>
+		<loc>/blog/nozzle-analyzed-1-2-million-google-serp-features</loc>
+		<lastmod>2023-03-28T11:53:25-06:00</lastmod>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Related_Searches_feature_v3_Final.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Related_Searches_mix.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/People_Also_Ask_Feature_v2_Final.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Where_in_SERP_Does_PAA_Appear.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/How_many_questions_in_paa_boxes.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Featured_Snippets_Feature_v3_Final.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Featured_Snippet_-_Oak_Trees.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/featured_snippets_by_position.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Element_in_Featured_Snippets_Final.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Sitelinks_Feature_Final.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Screen_Shot_2022-06-16_at_12.05.09_PM.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Screen_Shot_2022-06-16_at_1.00.17_PM.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Sitelinks_vs_expanded_sitelinks.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/People_Also_Search_For_feature_Final.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/PASF_by_position.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Products_Feature_Final.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/product_packs_by_position-1.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Twitter_Packs_and_Results-1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Screen_Shot_2022-06-24_at_11.40.06_AM-1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Mobile_Twitter_Result.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Twitter_Packs_by_Position.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Top_Stories_feature_Final.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Screen_Shot_2022-06-24_at_1.29.34_PM.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>/blog/how-google-engineers-decide-what-changes-to-make-to-the-algorithm</loc>
+		<lastmod>2023-03-27T11:04:31-06:00</lastmod>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/02/Panda_Comparison_Side_by_Side-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>/blog/hourly-rank-tracking</loc>
+		<lastmod>2023-03-27T10:58:11-06:00</lastmod>
+	</url>
+	<url>
 		<loc>/blog/youtube-and-wistia-watching-hacks-keyboard-shortcuts-and-more</loc>
 		<lastmod>2023-03-13T15:00:37-06:00</lastmod>
 		<image:image>
@@ -1011,79 +1095,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>/blog/nozzle-analyzed-1-2-million-google-serp-features</loc>
-		<lastmod>2023-02-24T14:31:28-07:00</lastmod>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Related_Searches_feature_v3_Final.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Related_Searches_mix.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/People_Also_Ask_Feature_v2_Final.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Where_in_SERP_Does_PAA_Appear.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/How_many_questions_in_paa_boxes.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Featured_Snippets_Feature_v3_Final.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Featured_Snippet_-_Oak_Trees.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/featured_snippets_by_position.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Element_in_Featured_Snippets_Final.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Sitelinks_Feature_Final.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Screen_Shot_2022-06-16_at_12.05.09_PM.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Screen_Shot_2022-06-16_at_1.00.17_PM.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Sitelinks_vs_expanded_sitelinks.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/People_Also_Search_For_feature_Final.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/PASF_by_position.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Products_Feature_Final.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/product_packs_by_position-1.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Twitter_Packs_and_Results-1.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Screen_Shot_2022-06-24_at_11.40.06_AM-1.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Mobile_Twitter_Result.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Twitter_Packs_by_Position.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Top_Stories_feature_Final.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Screen_Shot_2022-06-24_at_1.29.34_PM.png</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>/blog/brand-reputation-and-a-i-content</loc>
 		<lastmod>2023-02-24T13:20:52-07:00</lastmod>
 		<image:image>
@@ -1493,13 +1504,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>/blog/how-google-engineers-decide-what-changes-to-make-to-the-algorithm</loc>
-		<lastmod>2023-02-21T20:18:07-07:00</lastmod>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/02/Panda_Comparison_Side_by_Side-scaled.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>/blog/helpful-features-6-nozzle-clients-love</loc>
 		<lastmod>2023-02-21T20:12:20-07:00</lastmod>
 		<image:image>
@@ -1657,10 +1661,6 @@
 	<url>
 		<loc>/blog/creating-user-personas-in-your-marketing-why-most-companies-get-it-wrong</loc>
 		<lastmod>2023-02-15T16:04:50-07:00</lastmod>
-	</url>
-	<url>
-		<loc>/blog/hourly-rank-tracking</loc>
-		<lastmod>2023-02-14T20:14:47-07:00</lastmod>
 	</url>
 	<url>
 		<loc>/blog/video-rank-tracker</loc>
